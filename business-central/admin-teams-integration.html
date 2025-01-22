@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Verwalten der Microsoft Teams-Integration in Business Central | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Verwalten der Microsoft Teams-Integration in Business Central | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="managing-microsoft-teams-integration-with-">Verwalten der Microsoft Teams-Integration mit Business Central</h1>
+
+<p><strong>GILT FÜR:</strong> Business Central Online</p>
+<p>Dieser Artikel bietet einen Überblick darüber, was Sie als Administrator zur Steuerung der Microsoft Teams-Integration in Business Central unternehmen können.</p>
+<h2 id="in-microsoft-teams">In Microsoft Teams</h2>
+<h3 id="minimum-requirements">Mindestanforderungen</h3>
+<p>In diesem Abschnitt werden die Mindestanforderungen für die Verwendung der Business Central-App-Funktionen in Teams beschrieben.</p>
+<ul>
+<li><p>Erforderliche Lizenzen</p>
+<p>  Die Business Central-App erfordert eine Teams-Lizenz über ein Microsoft 365 Business- oder Enterprise-Abonnement. Eigenständige Teams-Abonnements wie Microsoft Teams (kostenlos) oder Microsoft Teams Essentials werden nicht unterstützt.</p>
+<p>  Die meisten Funktionen der Business Central-App für Teams erfordern außerdem eine Business Central-Lizenz, wie in der folgenden Tabelle gezeigt.</p>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Business Central Lizenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suchen Sie nach Business Central-Kontakten.</td>
+<td><img src="media/check.png" alt="Häkchen" title="Aktivieren"></td>
+</tr>
+<tr>
+<td>Einen Link zu einem Business Central-Datensatz in eine Unterhaltung einfügen und ihn als Karte versenden.</td>
+<td><img src="media/check.png" alt="Häkchen" title="Aktivieren"></td>
+</tr>
+<tr>
+<td>Geben Sie einen Link von einer Seite in Business Central an die Teams Unterhaltung weiter.</td>
+<td><img src="media/check.png" alt="Häkchen" title="Aktivieren"></td>
+</tr>
+<tr>
+<td>Eine Karte eines Business Central-Datensatzes in einer Unterhaltung anzeigen.</td>
+<td></td>
+</tr>
+<tr>
+<td>Weitere Details für eine Karte eines Business Central-Datensatzes in einer Unterhaltung anzeigen.</td>
+<td><img src="media/check.png" alt="Häkchen" title="Aktivieren"></td>
+</tr>
+<tr>
+<td>Öffnen Sie einen Seitenlink in Business Central aus einer Unterhaltung heraus.</td>
+<td><img src="media/check.png" alt="Häkchen" title="Aktivieren"></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>URL-Vorschau zulassen</p>
+<p>  Die Richtlinieneinstellung <strong>URL-Vorschau zulassen</strong> muss aktiviert sein. Andernfalls kann keine Karte für Business Central Links generiert werden, die in eine Teams-Unterhaltung eingefügt werden. Weitere Informationen zu dieser Einstellung finden Sie unter  <a href="https://learn.microsoft.com/de-de/microsoftteams/messaging-policies-in-teams">Nachrichtenrichtlinien in Teams verwalten</a>.</p>
+</li>
+</ul>
+<h3 id="managing-the--app-optional">Verwalten der Business Central App (optional)</h3>
+<p>Als Teams-Administrator können Sie alle Apps für Ihre Organisation verwalten, einschließlich der Business Central-App. Sie können die Business Central-App für Ihr Unternehmen genehmigen oder installieren, die Installation der App durch Benutzer blockieren und vieles mehr.</p>
+<p>Weitere Informationen finden Sie in der Microsoft Teams Dokumentation unter:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/MicrosoftTeams/manage-apps">Ihre Apps im Microsoft Teams Admin Center verwalten</a></li>
+<li><a href="https://learn.microsoft.com/de-de/microsoftteams/teams-app-setup-policies">App-Einrichtungsrichtlinien in Microsoft Teams verwalten</a></li>
+</ul>
+<h2 id="in-">In Business Central</h2>
+<h3 id="minimum-requirements-1">Mindestanforderungen</h3>
+<ul>
+<li><p>Business Central-Version:</p>
+<p>  Business Central 2021 Veröffentlichungszyklus 1 oder höher. Die Teams-Integration wird nur für Business Central Online unterstützt, nicht für On-Premises.</p>
+</li>
+<li><p>Codeunit <strong>2718 Seitenzusammenfassungsanbieter</strong> wird als Webdienst veröffentlicht:</p>
+<p>  Diese Codeunit wird standardmäßig als Webdienst veröffentlicht. Die Codeunit ist Teil der Business Central-Systemanwendung. Sie wird verwendet, um die Felddaten für eine Business Central-Seite abzurufen, die einer Teams-Unterhaltung hinzugefügt wurde. Weitere Informationen zum Veröffentlichen von Webdiensten finden Sie unter  <a href="across-how-publish-web-service.html">Einen Webdienst veröffentlichen</a>.</p>
+</li>
+<li><p><a name="permissions"></a>Benutzerberechtigungen:</p>
+<p>  Die Kontaktsuche, Seiten und Daten, die Benutzer in einer Teams-Unterhaltung anzeigen und bearbeiten können, werden größtenteils durch deren Berechtigungen in Business Central gesteuert.</p>
+<ul>
+<li>Um nach Kontakten zu suchen, müssen Benutzer mindestens über Leseberechtigung zur Tabelle <strong>Kontakte</strong> verfügen. </li>
+<li>Um einen Business Central-Link in eine Teams-Unterhaltung einzufügen und diesen zu einer Karte zu erweitern, müssen Benutzer mindestens über die Leseberechtigung für die Seite und ihre Daten verfügen.</li>
+<li>Sobald eine Karte in eine Unterhaltung übermittelt wurde, kann jeder Benutzer in dieser Unterhaltung diese Karte ohne Berechtigungen für Business Central anzeigen.</li>
+<li>Um weitere Details für eine Karte anzuzeigen oder den Datensatz in Business Central zu öffnen, müssen Benutzer über Leseberechtigung für die Seite und ihre Daten verfügen.</li>
+<li><p>Um Daten zu ändern, benötigen Benutzer Änderungsberechtigungen.</p>
+<p>Weitere Informationen finden Sie unter  <a href="ui-define-granular-permissions.html">Berechtigungen an Benutzer und Gruppen zuweisen</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="installing-the-business-central-app-by-using-centralized-deployment">Installieren der Business Central-App mit Hilfe der zentralen Bereitstellung</h2>
+<p>Im Admin Center Microsoft Teams konfigurieren Sie die Richtlinien für die Einrichtung der Apps von Teams für das Unternehmen. Im Admin Center von Teams können Sie die Funktion Zentrale Bereitstellung verwenden, um die Business Central-App in Teams automatisch für alle Benutzer in Ihrem Unternehmen, für bestimmte Gruppen oder für einzelne Benutzer bereitzustellen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um die zentralisierte Bereitstellung einzurichten, muss Ihr Teams-Konto mindestens über die Rolle [Teams-Administrator](<a href="https://learn.microsoft.com/de-de/entra/identity/role-based-access-control/permissions-reference#teams-Administrator">https://learn.microsoft.com/de-de/entra/identity/role-based-access-control/permissions-reference#teams-Administrator</a>] verfügen.</p>
+</div>
+<ol>
+<li>Wählen Sie in Business Central die <img src="media/ui-search/search_small.png" alt="Lupe, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren?">. Symbol, geben Sie <strong>Teams App Zentrale Bereitstellung</strong> ein und wählen Sie dann den entsprechenden Link. Oder wählen Sie <a href="https://businesscentral.dynamics.com/?page=1833">hier</a>, um die Seite direkt zu öffnen.</li>
+<li>Lesen Sie die Informationen auf der Seite <strong>Einrichten der Business Central-App für Teams</strong> und wählen Sie dann <strong>Weiter</strong>, wenn Sie bereit sind.</li>
+<li><p>Öffnen Sie das <a href="https://go.microsoft.com/fwlink/?linkid=2163970">Teams Admin Center</a> und führen Sie die folgenden Schritte aus.</p>
+<ol>
+<li>Gehen Sie zu <strong>Teams Apps</strong> &gt; <strong>Richtlinien einrichten</strong>.</li>
+<li>Erstellen Sie eine neue Richtlinie oder wählen Sie die Richtlinie aus, die Sie für die Installation der Business Central-App verwenden möchten, und wählen Sie dann <strong>Apps hinzufügen</strong>.</li>
+<li>Suchen Sie auf der Seite <strong>Installierte Apps hinzufügen</strong> nach <strong>Business Central</strong> und wählen Sie diese aus.</li>
+<li><p>Wählen Sie <strong>Hinzufügen</strong>.</p>
+<p>Business Central sollte nun unter <strong>Installierte Apps</strong> für die Richtlinie erscheinen.</p>
+</li>
+<li><p>Konfigurieren Sie weitere Einstellungen und wählen Sie dann <strong>Speichern</strong>.</p>
+<p>Weitere Informationen finden Sie unter  <a href="https://learn.microsoft.com/de-de/MicrosoftTeams/teams-app-setup-policies">Richtlinien zum Verwalten der App-Einrichtung Microsoft Teams</a> in der Teams-Dokumentation.</p>
+</li>
+</ol>
+</li>
+<li>Gehen Sie zurück zu <strong>Teams App Zentrale Bereitstellung</strong> in Business Central und wählen Sie <strong>Fertig</strong>.</li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Es kann bis zu 24 Stunden dauern, bis die Richtlinie für die Einrichtung der App festgelegt ist und die App den Benutzern bereitgestellt wird.</p>
+</div>
+<h2 id="managing-privacy-and-compliance">Datenschutz und Compliance verwalten</h2>
+<p>Microsoft Teams bietet umfassende Kontrollen für die Einhaltung und Verwaltung sensibler oder persönlich identifizierbarer Daten&mdash;einschließlich Daten, die von der Business Central App zu Chats und Kanälen hinzugefügt wurde.</p>
+<h3 id="understanding-where--cards-are-stored">Verstehen wo Business Central Karten gespeichert werden</h3>
+<p>Nachdem eine Karte an einen Chat gesendet wurde, werden die Karte und die auf der Karte angezeigten Felder in Teams kopiert. Diese Informationen unterliegen den Teamrichtlinien für Ihr Unternehmen, z. B. Richtlinien zur Aufbewahrung von Daten. Bei der Anzeige von Kartendetails werden keine Daten im Detailfenster in Teams gespeichert. Die Daten bleiben in Business Central gespeichert und wird nur von Teams abgerufen, wenn der Benutzer die Details anzeigen möchte. </p>
+<ul>
+<li>Erfahren Sie mehr darüber, wo Teams diese Daten speichert: <a href="https://learn.microsoft.com/de-de/microsoftteams/location-of-data-in-teams">Speicherort der Daten in Microsoft Teams</a>.</li>
+<li>Weitere Informationen zu Aufbewahrungsrichtlinien in Teams finden Sie unter  <a href="https://learn.microsoft.com/de-de/microsoftteams/retention-policies">Aufbewahrungsrichtlinien in Microsoft Teams</a>.</li>
+</ul>
+<h3 id="restricting-sharing-of-cards">Beschränken des Kartenaustauschs</h3>
+<p>Sie verhindern, dass bestimmte Benutzer oder Gruppen Karten an Chats oder Kanäle senden, indem Sie Nahrichten-Richtlinien einrichten, die die Einstellung <strong>URL-Vorschau</strong> deaktivieren. Weitere Informationen zu dieser Einstellung finden Sie unter <a href="https://learn.microsoft.com/de-de/microsoftteams/messaging-policies-in-teams">Nachrichtenrichtlinien in Teams verwalten</a>. </p>
+<p>Sie können auch Informationssperren verwenden, um zu verhindern, dass Einzelpersonen oder Gruppen miteinander kommunizieren. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/microsoftteams/information-barriers-in-teams">Informationssperren in Microsoft Teams</a>.</p>
+<p>Funktionen zur Verhinderung von Datenverlust im Microsoft 365 Security &amp; Compliance Center können nicht speziell auf Karten angewendet werden. Sie können jedoch auf die Chat-Nachrichten angewendet werden, die die Karten enthalten.</p>
+<h3 id="responding-to-data-requests">Antworten auf Datenenanforderungen</h3>
+<p>Sie ermöglichen Teammitgliedern und Teambesitzern, Nachrichten mit vertraulichen Karten zu löschen, indem Sie Nachrichtenrichtlinien einrichten, wie <strong>Besitzer können gesendete Nachrichten löschen</strong> und <strong>Benutzer können gesendete Nachrichten löschen</strong>. Weitere Informationen finden Sie unter  <a href="https://learn.microsoft.com/de-de/microsoftteams/messaging-policies-in-teams">Messaging-Richtlinien in Teams verwalten</a>.</p>
+<p>Inhaltssuche und eDiscovery Compliance-Funktionen im Microsoft 365 Security &amp; Compliance Center können nicht auch auf Karten angewendet werden.</p>
+<p>Weil Kartendaten in Teams eine Kopie der Daten in Business Central sind, können Sie auch Business Central Funktionen zum Exportieren der Kundendaten sofern erforderlich verwenden. Weitere Informationen zum Datenschutz finden Sie  Business Central in den  <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/security/privacyfaq">FAQs zum Datenschutz für Business Central-Kunden</a>.</p>
+<h2 id="show-or-hide-record-data-on-cards">Datensatzdaten auf Karten ein- oder ausblenden</h2>
+<p>Wenn ein Datensatz mit anderen in einem Teams-Chat oder -Kanal geteilt wird, wird eine Karte mit Feldern angezeigt, die Daten über den Datensatz enthalten. Alle Empfänger können diese Daten (oder die Datensatzzusammenfassung) standardmäßig anzeigen, unabhängig von ihrer Lizenz oder ihren Berechtigungen in Business Central. Wenn Sie ein Administrator sind, können Sie die <strong>Karteneinstellungen</strong> unterstützte Einrichtungsanleitung verwenden, um zu verhindern, dass die Datensatzzusammenfassung auf Karten in Teams angezeigt wird. Durch das Ausblenden der Datensatzzusammenfassung werden alle Felder und Bilder entfernt, die Schaltfläche <strong>Details</strong> und andere Nicht-Datensatzinformationen werden jedoch weiterhin auf der Karte angezeigt.</p>
+<table>
+<thead>
+<tr>
+<th>Zusammenfassung aktivieren</th>
+<th>Zusammenfassung deaktivieren</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="media/card-settings-example-on.png" alt="Bild, das eine Karte in Teams zeigt, wenn die Datensatzzusammenfassung aktiviert ist."></td>
+<td><img src="media/card-settings-example-off.png" alt="Bild, das eine Karte in Teams zeigt, wenn die Datensatzzusammenfassung deaktiviert ist."></td>
+</tr>
+</tbody>
+</table>
+<p>Sie konfigurieren die Einstellung pro Umgebung. Wenn Sie also die Datensatzzusammenfassung ein- oder ausschalten, wirkt sich dies auf alle Unternehmen in der Umgebung aus.</p>
+<ol>
+<li><p>Öffnen Sie in Business Central die Umgebung, die Sie ändern möchten.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wählen Sie zum Wechseln der Umgebung <kbd>Strg</kbd>+<kbd>O</kbd>.</p>
+</div>
+</li>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Lupe, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol, geben Sie <strong>Karteneinstellungen</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Lesen Sie die Informationen zu den <strong>Karteneinstellungen</strong> und wählen Sie dann <strong>Weiter</strong>, wenn Sie fertig sind.</li>
+<li>Auf der <strong>Datensichtbarkeit</strong>-Seite, schalten Sie die <strong>Datensatzzusammenfassung anzeigen</strong> an, um Daten auf den Karten anzuzeigen, oder aus, um die Daten auszublenden.</li>
+<li>Wählen Sie <strong>Nächste</strong> und befolgen Sie die Anweisungen, um die Einrichtungsanleitung abzuschließen.</li>
+</ol>
+<h2 id="related-information">Ähnliche Informationen</h2>
+<p><a href="across-teams-overview.html">Business Central und Microsoft Teams Integration Übersicht</a><br><a href="across-install-app-for-teams.html">Die App Business Central für Microsoft Teams installieren</a><br><a href="teams-faq.html">Häufig gestellte Fragen zu Teams</a><br><a href="admin-teams-troubleshooting.html">Teams Problembehebung</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-develop-for-teams">Entwickeln für Teams Integration</a>  </p>
+<h2 id="includeprodshortincludesfreetrialmdmd">Starten Sie eine <a href="https://go.microsoft.com/fwlink/?linkid=847861">kostenlose Testversion!</a></h2>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

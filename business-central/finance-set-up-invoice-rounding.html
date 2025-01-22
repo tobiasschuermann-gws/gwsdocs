@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Rechnungsrundung einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Rechnungsrundung einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-invoice-rounding">Rechnungsrundung einrichten</h1>
+
+<p>Wenn Sie beim Erstellen von Rechnungen Rechnungsbeträge runden müssen, können Sie die automatische Rundungsfunktion verwenden. Nach dem Runden einer Rechnung wird eine zusätzliche Zeile mit dem Rundungsbetrag eingefügt, die zusammen mit den anderen Rechnungszeilen gebucht wird.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Aufgrund gesetzlicher Vorgaben oder üblicher Vorgehensweisen muss die Rechnungsrundung möglicherweise auf eine bestimmte Weise erfolgen. Beispielsweise auf einen Betrag, der durch 0,05 teilbar ist.  </p>
+</div>
+<p>Zum Verwenden der automatischen Rechnungsrundung müssen folgende Aktionen ausgeführt werden:  </p>
+<ul>
+<li>Geben Sie die Sachkonten zum Buchen der Rundungsdifferenzen an.  </li>
+<li>Richten Sie Regeln für das Runden von Rechnungen in Mandanten- und Fremdwährung an.  </li>
+<li>Aktivieren Sie die Funktion.  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p> Zusätzlich zu den Rechnungsrundungsfeatures besteht auch die Möglichkeit, Beträge in Rechnungen mithilfe der Stückpreisrundung und der Betragsrundung zu runden.  </p>
+</div>
+<h2 id="set-up-general-ledger-accounts-for-invoice-rounding-differences">Sachkonten für Rechnungsrundungsdifferenzen einrichten</h2>
+<p>Um die automatische Rundung zu nutzen, müssen Sie Sachkonten einrichten, auf die Rundungsdifferenzen gebucht werden. Bevor Sie dies tun können, müssen Sie die MwSt.-Produktbuchungsgruppen einrichten. Weitere Informationen finden Sie unter <a href="finance-setup-vat.html">MwSt. einrichten</a>.  </p>
+<h3 id="to-set-up-general-ledger-accounts-for-invoice-rounding-differences">Sachkonten für Rechnungsrundungsdifferenzen einrichten:</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kontenplan</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Richten Sie das Konto im Fenster <strong>Kontenplan</strong> ein, und benennen Sie es mit <strong>Rechnungsrundung</strong> oder mit einem ähnlichen Namen. Business Central verwendet den Kontonamen als Text in gerundeten Rechnungen.  </li>
+<li>Abhängig davon, ob Sie Mehrwertsteuer oder Verkaufssteuer verwenden, wählen Sie in den Feldern <strong>Steuer-Produktbuchungsgruppe</strong> oder <strong>MwSt.-Produktbuchungsgruppe</strong> eine Buchungsgruppe für Rundungsbeträge aus. Es empfiehlt sich, eine neuen Gruppencode einzurichten, der für die Rechnungsrundung verwendet werden kann.</li>
+<li>Lassen Sie die Felder <strong>Buchungsart</strong> und <strong>Steuer-Produktbuchungsgruppe</strong> oder <strong>MwSt.-Produktbuchungsgruppe</strong> leer. <!-- Why do we say to leave these blank, when there are a lot of other fields we also leave blank but don't mention? -->  </li>
+</ol>
+<p>Jetzt können Sie das Rechnungsrundungskonto den Buchungsgruppen auf der Seite <strong>Kreditorenbuchungsgruppen</strong> zuordnen.  <!-- Why only the vendor posting groups? --></p>
+<h2 id="set-up-rounding-for-foreign-and-local-currencies">Rundungsregeln für Fremdwährungen und lokale Währungen einrichten</h2>
+<p>Damit Sie die automatische Rechnungsrundungsfunktion verwenden können, müssen Sie Rundungsregeln für Fremdwährungen und lokale Währungen einrichten.</p>
+<h3 id="to-set-up-rounding-for-foreign-currencies">Einrichten von Rundungsregeln für Fremdwährungen</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Währungen</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Füllen Sie auf der Seite <strong>Währungen</strong> die Fremdwährung aus, um die <strong>Währungskarte</strong> zu öffnen, und füllen Sie dann die Felder <strong>Betragsrundungspräzision</strong>, <strong>Stückpreisrundungspräzision</strong>, <strong>Rechnungsrundungspräzision</strong> und <strong>Rechnungsrundungsmethode</strong> aus.</li>
+</ol>
+<h3 id="to-set-up-rounding-for-your-local-currency">Einrichten der Rundung für Ihre lokale Währung</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Hauptbuchhaltung Einrichtung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Füllen Sie auf der Seite <strong>Finanzbuchhaltungs-Einrichtung:</strong> auf dem Inforegister <strong>Allgemein</strong> die Felder <strong>Rechnungsrundungspräz.</strong> und <strong>Rechnungsrundungsmethode</strong> aus.  </li>
+</ol>
+<h2 id="activate-the-invoice-rounding-function">Aktivieren der Rechnungsrundungsfunktion</h2>
+<p>Damit die Anwendung Einkaufs- und Verkaufsrechnungen automatisch gerundet werden, müssen Sie die Rechnungsrundungsfunktion aktivieren. Beachten Sie, dass Sie die Rechnungsrundung einzeln für Verkaufsrechnungen und Einkaufsrechnungen aktivieren können.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einrichtung Debitoren &amp; Verkauf Einr.</strong> oder <strong>Einrichtung Debitoren &amp; Einkauf Einr.</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Markieren Sie im Inforegister <strong>Allgemein</strong> das Kontrollkästchen <strong>Rechnungsrundung</strong>.  </li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="sales-how-invoice-sales.html">Fakturieren eines Verkaufs</a><br><a href="purchasing-how-record-purchases.html">Erfassen eines Einkaufs</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Arbeiten mit Dimensionen zum Verfolgen und Analysieren von Daten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Arbeiten mit Dimensionen zum Verfolgen und Analysieren von Daten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="work-with-dimensions">Arbeiten mit Dimensionen</h1>
+
+<p>Dimensionen sind Attribute und Werte, die Posten kategorisieren, sodass Sie sie auf Dokumenten wie Verkaufsaufträgen verfolgen und analysieren können. Dimensionen können beispielsweise angegeben, aus welchem Projekt oder aus welcher Abteilung ein Posten stammt.  </p>
+<p>Anstatt also für jede Abteilung und jedes Projekt separate Sachkonten einzurichten, können Sie Dimensionen als Grundlage für die Analyse verwenden und müssen keinen komplizierten Kontenplan erstellen. Erfahren Sie mehr unter <a href="bi.html">Business Intelligence</a>.</p>
+<p>Ein weiteres Beispiel ist die Festlegung einer Dimension mit dem Namen <em>Abteilung</em>, die Sie dann beim Buchen von Verkaufsbelegen verwenden. Auf diese Weise können Sie Business Intelligence Tools verwenden, um zu sehen, welche Abteilung welche Artikel verkauft hat. Je mehr Dimensionen Sie verwenden, desto detaillierter sind die Berichte, auf die Sie Ihre Geschäftsentscheidungen stützen. Ein einziger Verkaufseintrag kann nämlich Informationen aus mehreren Dimensionen enthalten, wie z.B.:  </p>
+<ul>
+<li>Das Konto, auf das der Verkauf des Artikels gebucht wurde.  </li>
+<li>Wo das Element verkauft wurde.</li>
+<li>Wer ihn verkauft hat.</li>
+<li>Welcher Kunde ihn gekauft hat.</li>
+</ul>
+<h2 id="analyze-by-dimensions">Analysieren nach Dimensionen</h2>
+<p>Dimensionen spielen eine wichtige Rolle in der Business Intelligence, wie auch beim Definieren von Analyseansichten. Erfahren Sie mehr unter <a href="bi-how-analyze-data-dimension.html">Daten nach Dimensionen analysieren</a>.</p>
+<div class="TIP"><h5>Tipp</h5><p>Eine schnelle Möglichkeit, Transaktionsdaten nach Dimensionen zu analysieren, ist die Aktion <strong>Dimensionsfilter festlegen</strong>, mit der Sie Summen im Kontenplan und auf Buchungsseiten nach Dimensionen filtern können.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Analyseansichten verwenden oft Daten aus Dimensionen. Wenn Sie feststellen, dass bei gebuchten Sachkontenbuchungen eine falsche Dimension verwendet wurde, können Sie die Dimensionswerte korrigieren und Ihre Analyseansichten aktualisieren. Dies trägt dazu bei, dass Ihre Finanzberichte und Analysen korrekt bleiben. Erfahren Sie mehr unter <a href="finance-troubleshooting-correcting-dimensions.html#changing-dimension-assignments-after-posting">Problembehandlung und Korrektur von Dimensionen</a>.</p>
+</div>
+<h2 id="dimension-sets">Dimensionen-Sets</h2>
+<p>Ein Dimensionssatz ist eine eindeutige Kombination von Dimensionswerten. Sie werden als Dimensionssatz-Einträge in der Datenbank gespeichert. Jeder Dimensionssatzposten stellt einen einzelnen Dimensionswert dar. Außerdem wird jedes Dimensionen-Set und jeder Dimensionen-Set-Eintrag darin durch eine allgemeine Dimensionen-Set-ID identifiziert.  </p>
+<p>Wenn Sie eine neue Buch.-Blattzeile, einen Belegkopf oder eine Belegzeile erstellen, können Sie eine Kombination von Dimensionswerten angeben. Anstatt jeden Dimensionswert explizit in der Datenbank zu speichern, wird eine Dimensionssatz-ID der Buch.-Blattzeile, dem Belegkopf oder der Belegzeile zugewiesen, um den Dimensionssatz anzugeben.  </p>
+<h2 id="set-up-dimensions">Dimensionen einrichten</h2>
+<p>Sie können Dimensionen und Dimensionswerte definieren, um Erfassungen und Dokumente wie Verkaufsaufträge und Bestellungen zu kategorisieren. Sie errichten Dimensionen auf der Seite <strong>Dimensionen</strong>, wo Sie eine Zeile für jede Dimension erstellen, wie <em>Projekt</em>, <em>Abteilung</em>, <em>Bereich</em> und <em>Verkäufer</em>.</p>
+<p>Sie erstellen auch Einrichtungswerte für Dimensionen. Nehmen wir an, die Werte repräsentieren die Abteilungen Ihrer Firma. Die Werte der Dimensionen können in einer hierarchischen Struktur festgelegt werden, die dem Kontenplan ähnelt. Das bedeutet, dass die Daten in verschiedene Granularitätsebenen aufgeschlüsselt werden können und Teilmengen von Dimensionswerten summiert werden können. Sie können beliebig viele Dimensionen und Dimensionswerte in Ihrem Mandanten definieren und Sie können eine unbegrenzte Anzahl von Dimensionswerten für jede Dimension festlegen.</p>
+<p>Wenn die Dimensionen und Werte festgelegt sind, können Sie auf der Seite <strong>Hauptbuchhaltung Einrichtung</strong> globale und Verknüpfungsdimensionen definieren. Diese Dimensionen stehen Ihnen dann jederzeit zur Auswahl als Felder in Buchungsblattzeilen, Belegzeilen und Sachkonteneinträgen zur Verfügung, ohne dass Sie die Seite <strong>Dimensionen</strong> öffnen müssen. Mehr dazu erfahren Sie im Abschnitt <a href="finance-dimensions.html#to-set-up-global-and-shortcut-dimensions">Zum Festlegen von globalen Dimensionen und Verknüpfungen</a>.</p>
+<ul>
+<li><strong>Globale Dimensionen</strong> werden als Filter beispielsweise in Berichten und XMLports und Stapelverarbeitungen verwendet. Sie können nur zwei globale Dimensionen verwenden. Wählen Sie daher Dimensionen aus, die Sie häufig verwenden.</li>
+<li><strong>Shortcutdimensionen</strong> sind verfügbar als Felder in Buch.-Blättern, Belegzeilen und Belegeinträgen. Sie können bis zu acht davon erstellen.  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Nachdem Sie eine neue Dimension in einem Eintrag verwendet haben, z. B. in einer Zeile oder einem neuen Datensatz, können Sie die Dimension nicht löschen, selbst wenn Sie den Eintrag nicht buchen. Dies ist darauf zurückzuführen, dass Business Central sofort einen Dimensionssatz für die Zeile oder den Datensatz erstellt. Weitere Informationen finden Sie im Abschnitt <a href="finance-dimensions.html#dimension-sets">Dimensions-Sets</a>.</p>
+</div>
+<h3 id="to-set-up-default-dimensions-for-customers-vendors-and-other-accounts">So richten Sie Standarddimensionen für Debitoren, Kreditoren und andere Konten ein</h3>
+<p>Sie können eine Standarddimension für ein bestimmtes Konto einrichten. Die Dimension wird in das Journal oder den Beleg kopiert, wenn Sie die Kontonummer in eine Zeile eingeben, aber Sie können den Code in der Zeile löschen oder ändern, falls erforderlich. Sie können auch eine Dimension für die Buchung einer Buchung auf einem bestimmten Kontotyp verlangen. &gt; </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Standarddimensionsprioritäten eröffnen sich für Szenarien in Verkäufen und Einkäufen, denen Sie besondere Aufmerksamkeit schenken sollten. Wenn Sie standardmäßige Dimensionsprioritäten für Verkaufs- und Einkaufsbelege verwenden, betrachtet Business Central die Dimensionen in der Kopfzeile immer als vom Debitor oder Kreditor stammend. Dies gilt für Dimensionen, die Sie manuell oder standardmäßig festlegen, und ist besonders relevant, wenn Sie Standarddimensionen für Standorte und Artikel, aber nicht für Debitoren oder Kreditoren verwenden.</p>
+<p><strong>Beispiel</strong></p>
+<p>Sie haben ein Szenario mit den folgenden Dimensionseinstellungen:</p>
+<ul>
+<li>Ein Kunde ohne Standarddimensionen</li>
+<li>Ein Artikel mit ADM als Dimensionswert für die Dimension DEPARTMENT</li>
+<li>Ein Lagerort mit PROD als Dimensionswert für die Dimension DEPARTMENT</li>
+<li>Standarddimensionsprioritäten sind als Debitor &gt; Artikel &gt; Lagerort festgelegt</li>
+</ul>
+<p>Wenn Sie in diesem Szenario einen neuen Beleg erstellen, werden Dimensionen wie folgt verwendet:</p>
+<ul>
+<li><p>Wenn Sie einen neuen Beleg erstellen und einen Lagerort hinzufügen, ist der Standardwert für neue Zeilen PROD. Wenn Sie Zeilen mit Artikeln hinzufügen, behält Business Central PROD bei, da es aus der Kopfzeile des Belegs stammt.</p>
+</li>
+<li><p>Wenn Sie einen neuen Beleg erstellen und Elemente mit dem ADM-Dimensionswert hinzufügen und dann eine Position in der Kopfzeile des Belegs angeben, fragt Business Central, ob Sie die vorhandenen Zeilen überschreiben möchten, da ein Konflikt besteht.</p>
+</li>
+</ul>
+<p>Wir empfehlen Ihnen, Ihre standardmäßige Dimensionseinrichtung, Dimensionsprioritäten und die Reihenfolge, in der Sie Daten in Belege eingeben, zu testen.  </p>
+</div>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Dimensionen</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie auf der Seite <strong>Dimensionen</strong> die entsprechende Dimension aus und wählen Sie dann die Aktion <strong>Kontotyp Standarddim</strong>.  </li>
+<li>Füllen Sie für jede neue Vorgabedimension eine eigene Zeile aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie eine Dimension benötigen, aber der Dimension keinen Standardwert zuweisen möchten, lassen Sie das Feld <strong>Dimensionswertcode</strong> leer und wählen Sie dann <strong>Code obligatorisch</strong> im Feld <strong>Wertbuchung</strong>.  </p>
+</div>
+<div class="WARNING"><h5>Warnung</h5><p>Wenn ein Konto in einem Batchauftrag <strong>Wechselkurse anpassen</strong> oder <strong>Lagerkosten ins Hauptbuch buchen</strong> verwendet wird, wählen Sie nicht <strong>Code obligatorisch</strong> oder <strong>Gleicher Code</strong>. Diese Stapelverarbeitungen können keine Dimensionscodes verwenden.  </p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn ein Konto eine andere Dimension haben muss als die Standarddimension, die der Kontoart zugewiesen ist, müssen Sie eine neue Standarddimension für das Konto festlegen. Die Standarddimension für das Konto ersetzt dann die Vorgabedimension für die Tabelle.  </p>
+</div>
+<h3 id="to-set-up-default-dimension-priorities">Prioritäten für Standarddimensionen einrichten:</h3>
+<p>Verschiedene Kontotypen, wie z.B. ein Kundenkonto und ein Artikelkonto, können unterschiedliche Standarddimensionen haben. Folglich kann ein Eintrag mehr als eine vorgeschlagene Standarddimension haben. Um solche Konflikte zu vermeiden, können Sie in den verschiedenen Quellen Prioritätsregeln hinterlegen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Vorgabedimension Prioritäten</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Auf der Seite <strong>Vorgabedimension Prioritäten</strong> geben Sie in das Feld <strong>Herkunftscode</strong> den Herkunftscode für die Eintragstabelle ein, für die die Prioritäten der Vorgabedimensionen gelten sollen.  </li>
+<li>Füllen Sie für jede Vorgabedimension Prioritäten, die Sie für den ausgewählten Quellcode wünschen, eine Zeile aus.</li>
+<li>Wiederholen Sie den Vorgang für jeden Quellcode, für den Sie Vorgabedimensions Prioritäten festlegen möchten.  </li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Wenn Sie zwei Tabellen mit der gleichen Priorität für denselben Quellcode festlegen, wird mit Business Central immer die Tabelle mit der niedrigsten Tabellen-ID ausgewählt.  </p>
+</div>
+<h3 id="to-set-up-dimension-combinations">Dimensionskombinationen einrichten:</h3>
+<p>Um das Buchen von Posten mit widersprüchlichen oder irrelevanten Dimensionen zu vermeiden, können Sie bestimmte Kombinationen von Dimensionen sperren oder einschränken. Eine gesperrte Dimensionskombination bedeutet, dass Sie unabhängig von den Dimensionswerten nicht beide Dimensionen auf denselben Eintrag buchen können. Im Gegensatz dazu bedeutet eine eingeschränkte Dimensionskombination, dass Sie beide Dimensionen auf denselben Eintrag buchen können, allerdings nur für bestimmte Kombinationen von Dimensionswerten.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Dimensionskombinationen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li><p>Auf der Seite <strong>Dimensionskombinationen</strong> wählen Sie das gewünschte Feld für die Dimensionskombination aus den folgenden Optionen.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Keine Einschränkungen</strong></td>
+<td>Diese Dimension hat keine Einschränkungen. Alle Dimensionswerte sind erlaubt.</td>
+</tr>
+<tr>
+<td><strong>Eingeschränkt</strong></td>
+<td>Diese Dimensionskombination hat, abhängig von den Dimensionswerten, die Sie eingeben, Beschränkungen. Sie müssen die Einschränkungen auf der Seite <strong>Dimensionswert Kombinationen</strong> festlegen.</td>
+</tr>
+<tr>
+<td><strong>Gesperrt</strong></td>
+<td>Diese Dimensionskombination ist nicht zulässig.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wenn Sie die Option <strong>Eingeschränkt</strong> wählen, müssen Sie angeben, welche Dimensionskombinationen gesperrt sind. Wählen Sie dazu das Feld, in dem Sie die Kombination der Dimensionswerte definieren.  </p>
+</li>
+<li>Wählen Sie anschließend die Kombination von Dimensionswerten aus, die gesperrt werden soll, und geben Sie im Feld die Option <strong>Blockiert</strong> an. Ein leeres Feld bedeutet, dass die Dimensionswertkombination zugelassen ist. Wiederholen Sie diesen Vorgang, um mehrere Kombinationen zu sperren.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Die gleichen Dimensionen werden sowohl in den Zeilen als auch in den Spalten angezeigt, d.h. alle Dimensionskombinationen erscheinen zweimal. Business Central zeigt automatisch die Einstellung in beiden Feldern an. In den Feldern von links oben und unten können Sie nichts auswählen, da diese Felder sowohl in den Zeilen als auch in den Spalten dieselbe Dimension aufweisen.  </p>
+<p>Die gewählte Option wird erst beim Verlassen des Feldes sichtbar.  </p>
+<p>Um anstelle des Codes den Namen der Dimension anzeigen zu lassen, wählen Sie das Feld <strong>Spaltennamen anzeigen</strong>.</p>
+</div>
+<h3 id="to-set-up-global-and-shortcut-dimensions">So richten Sie globale und Shortcut-Dimensionen ein</h3>
+<p>Globale und Shortcut-Dimensionen können überall in Business Central als Filter verwendet werden, auch in Berichten, Batchaufträgen, Posten und Analyseansichten. Globale Dimensionen und Verknüpfungen können direkt eingefügt werden, ohne dass Sie die Seite <strong>Dimensionen</strong> öffnen müssen. In Buch.-Blattzeilen und Belegzeilen können Sie globale und Shortcutdimensionen in einem Feld der Zeile auswählen. Sie können zwei globale und acht Shortcutdimensionen einrichten. Wählen Sie die Dimensionen, die Sie am häufigsten verwenden.</p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Wenn Sie eine globale oder Verknüpfungsdimension ändern, müssen alle Einträge, die mit dieser Dimension gebucht wurden, aktualisiert werden. Um eine globale Dimension zu ändern, können Sie die Funktion <strong>Globale Dimensionen ändern</strong> verwenden, aber das kann zeitaufwändig sein, die Leistung beeinträchtigen und die Tabellen können während der Aktualisierung gesperrt sein. Stellen Sie sicher, dass Sie Ihre globalen und Verknüpfungsdimensionen sorgfältig auswählen, damit Sie sie später nicht ändern müssen. Verwenden Sie die Aktion <strong>Dimension ändern</strong>, um eine Verknüpfungsdimension zu ändern.</p>
+<p>Mehr dazu erfahren Sie im Abschnitt <a href="finance-dimensions.html#to-change-global-dimensions">Zum Ändern globaler Dimensionen</a>.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie eine globale oder Verknüpfungsdimension hinzufügen oder ändern, werden Sie automatisch ab- und wieder angemeldet, so dass der neue Wert für die Verwendung vorbereitet ist.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Hauptbuchhaltung Einrichtung</strong> ein und wählen Sie dann den entsprechenden Link.</li>
+<li>Füllen Sie die Felder im Inforegister <strong>Dimensionen</strong> aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<h4 id="to-change-global-dimensions">So ändern Sie globale Dimensionen</h4>
+<p>Wenn Sie eine globale oder verkürzte Dimension ändern, werden alle mit dieser Dimension gebuchten Einträge aktualisiert. Da dieser Prozess zeitaufwändig sein und die Leistung beeinträchtigen kann, stehen zwei verschiedene Modi zur Verfügung, um den Prozess an die Größe der Datenbank anzupassen.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Hauptbuchhaltung Einrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Globale Dimensionen ändern</strong> aus.</li>
+<li><p>Wählen Sie oben auf der Seite einen der beiden folgenden Modi, um den Batchauftrag auszuführen.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sequenziell</strong></td>
+<td>(Standard) Die gesamte Dimensionsänderung wird in einer Transaktion durchgeführt, wobei alle Einträge auf die Dimensionen zurückgesetzt werden, die sie vor der Änderung hatten.<br><br>Diese Option empfiehlt sich, wenn die Firma nur relativ wenige gebuchte Einträge hat. In diesem Fall dauert der Batchauftrag am wenigsten lange. Der Vorgang sperrt mehrere Tabellen und blockiert andere Benutzer, bis es Fertig ist. Beachten Sie, dass bei großen Datenbanken der Vorgang in diesem Modus möglicherweise nicht abgeschlossen wird. Verwenden Sie in diesem Fall die Option <strong>Parallel</strong>.</td>
+</tr>
+<tr>
+<td><strong>Parallel</strong></td>
+<td>Die Dimensionsänderung erfolgt in mehreren Hintergrundsitzungen und der Vorgang wird in mehrere Transaktionen aufgeteilt. Um diese Option zu verwenden, aktivieren Sie die Umschaltung <strong>Parallelverarbeitung</strong>. <br><br>Diese Option empfehlen wir für große Datenbanken oder Unternehmen mit zahlreichen Einträgen, da sie die kürzeste Zeit in Anspruch nimmt. Beachten Sie, dass in diesem Modus der Aktualisierungsvorgang nicht gestartet wird, wenn mehr als eine aktive Datenbanksitzung vorhanden ist.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Geben Sie in den Feldern <strong>Globaler Dimensionscode 1</strong> und/oder <strong>Globaler Dimensionscode 2</strong> die neue(n) Dimension(en) ein. Die aktuellen Dimensionen werden hinter den Feldern grau dargestellt.</p>
+</li>
+<li><p>Führen Sie je nach Modus einen der folgenden Schritte aus:</p>
+<ul>
+<li>Im Modus <strong>Sequenziell</strong> wählen Sie die <strong>Start</strong> Aktion.</li>
+<li><p>Im Modus <strong>Parallel</strong> wählen Sie die <strong>Vorbereiten</strong> Aktion.</p>
+<p>Die Registerkarte <strong>Protokolleinträge</strong> ist mit Informationen über die zu ändernden Dimensionen gefüllt.</p>
+</li>
+</ul>
+</li>
+<li>Melden Sie sich von Business Central ab und dann wieder an.</li>
+<li>Wählen Sie die Aktion <strong>Start</strong>, um die parallele Verarbeitung der Änderungen an den Dimensionen zu beginnen.</li>
+</ol>
+<h3 id="example-of-dimension-setup">Beispiel für die Einrichtung von Dimensionen</h3>
+<p>Nehmen wir an, Ihre Firma möchte Transaktionen auf der Grundlage der Organisationsstruktur und der geografischen Standorte verfolgen. Zu diesem Zweck legen Sie auf der Seite <strong>Dimensionen</strong> zwei Dimensionen fest:</p>
+<ul>
+<li><strong>BEREICH</strong>  </li>
+<li><strong>ABTEILUNG</strong>  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Code Caption</th>
+<th>Filter Caption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BEREICH</td>
+<td>Ursprungs- / Bestimmungsregion</td>
+<td>Gebietscode</td>
+<td>Filter &quot;Bereich&quot;</td>
+</tr>
+<tr>
+<td>ABTEILUNG</td>
+<td>Abteilung</td>
+<td>Abteilungscode</td>
+<td>Kostenstellenfilter</td>
+</tr>
+</tbody>
+</table>
+<p>Für <strong>AREA</strong> fügen Sie die folgenden Dimensionen hinzu:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Dimensionswertart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>Amerika</td>
+<td>Von-Summe</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Nordamerika</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Pazifik</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Südamerika</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Amerika, gesamt</td>
+<td>Bis-Summe</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Europa</td>
+<td>Von-Summe</td>
+</tr>
+<tr>
+<td>70</td>
+<td>EU</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Nicht-EU</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Europa, gesamt</td>
+<td>Bis-Summe</td>
+</tr>
+</tbody>
+</table>
+<p>Um die beiden hauptgeografischen Gebiete Amerika und Europa, fügen Sie bei Bedarf Unterkategorien für Bereiche hinzu, indem Sie die Dimensionswerte einrücken. So können Sie über Umsätze oder Spesen in Regionen berichten und Summen für die größeren geografischen Gebiete erhalten. Sie können auch Länder, Regionen, Landkreise oder Städte als Dimensionswerte verwenden, je nach Ihrem Geschäft.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um eine Hierarchie einzurichten, muss der Code in alphabetischer Reihenfolge sein. Dazu gehören auch die Codes der in Business Central angegebenen Dimensionswerte.  </p>
+</div>
+<p>Für <strong>ABTEILUNG</strong> fügen Sie die folgenden Dimensionswerte hinzu:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Dimensionswertart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADMIN</td>
+<td>Verwaltung</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>PROD</td>
+<td>Produktion</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>VERKAUF</td>
+<td>Verkauf</td>
+<td>Standard</td>
+</tr>
+</tbody>
+</table>
+<p>Mit dieser Einrichtung können Sie Ihre beiden Dimensionen als die beiden globalen Dimensionen auf der Seite <strong>Hauptbuchhaltung Einrichtung</strong> hinzufügen. Das bedeutet, dass Sie BEREICH und ABTEILUNG als Filter für Hauptbuch-Einträge sowie in allen Berichten verwenden können. Beide globalen Dimensionen stehen auch als Shortcutdimensionen in Buch.-Blattzeilen und Belegköpfen zur Verfügung.</p>
+<h2 id="getting-an-overview-of-dimensions-used-multiple-times">Einen Überblick über mehrfach verwendete Dimensionen erhalten</h2>
+<p>Die Seite <strong>Standarddimensionen-Mehrfach</strong> gibt an, wie eine Gruppe von Konten Dimensionen und Dimensionswerte verwendet. Sie können dies festlegen, indem Sie mehrere Konten markieren und dann die Standarddimensionen und Dimensionswerte für diese Konten festlegen. Danach schlägt die Anwendung diese Dimensionen und Dimensionswerte immer dann vor, wenn eines dieser Konten verwendet wird, z.B. in einer Buchungsblattzeile. Dies vereinfacht das Buchen für den Anwender, da die Anwendung die Dimensionsfelder automatisch ausfüllt. Beachten Sie jedoch auch, dass die vorgeschlagenen Dimensionen z.B. in einer Buchungsblattzeile geändert werden können.</p>
+<p>Die Seite <strong>Vorgabedimensionen - Mehrfach</strong> enthält die folgenden Felder:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dimensionscode</strong></td>
+<td>Zeigt alle Dimensionen an, die als Standarddimensionen für ein oder mehrere markierte Konten definiert sind. Wenn Sie dieses Feld auswählen, sehen Sie eine Liste aller verfügbaren Dimensionen. Wenn Sie eine Dimension auswählen, wird diese Dimension als Standarddimension für alle markierten Konten definiert.</td>
+</tr>
+<tr>
+<td><strong>Dimensionswertcode</strong></td>
+<td>Zeigt entweder einen einzelnen Dimensionswert oder den Ausdruck (Konflikt) an. Wenn eine Dimensionswert in dem Feld angezeigt wird, dann haben alle markierten Konten denselben Vorgabedimensionswert für eine Dimension. Wenn in dem Feld der Begriff (Konflikt) angezeigt wird, dann haben nicht alle markierten Konten denselben Standardwert für eine Dimension. Wenn Sie das Feld <strong>Dimensionscode</strong> auswählen, sehen Sie eine Liste aller verfügbaren Dimensionswerte für eine Dimension. Wenn Sie einen Dimensionswert auswählen, wird dieser als Standard-Dimensionswert für alle markierten Konten definiert.</td>
+</tr>
+<tr>
+<td><strong>Dimensionswertbuchung</strong></td>
+<td>Zeigt entweder eine einzelne Dimensionswertbuchung oder den Ausdruck (Konflikt) an. Wenn eine Dimensionswertbuchungsregel in dem Feld angezeigt wird, dann haben alle markierten Konten dieselbe Dimensionswertbuchungsregel für eine Dimensionswertbuchung. Wenn in dem Feld der Begriff (Konflikt) angezeigt wird, gilt nicht für alle markierten Konten die gleiche Buchungsregel für einen Dimensionswert. Wenn Sie das Feld <strong>Wertbuchung</strong> auswählen, sehen Sie eine Liste der Wertbuchungsregeln für eine Dimension. Wenn Sie eine Wertbuchungsregel auswählen, wird diese auf alle markierten Konten angewendet.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="use-dimensions">Dimensionen verwenden</h2>
+<p>In einem Beleg, z. B. einem Verkaufsauftrag, können Sie Dimensionsinformationen sowohl für eine einzelne Belegzeile als auch für den Beleg selbst hinzufügen. So könnten Sie auf der Seite <strong>Verkaufsauftrag</strong> Dimensionswerte für die ersten beiden Verknüpfungsdimensionen der einzelnen Verkaufszeilen eingeben und dann weitere Dimensionsinformationen hinzufügen, wenn Sie die Schaltfläche <strong>Dimensionen</strong> wählen.  </p>
+<p>Wenn Sie stattdessen in einem Buch.-Blatt arbeiten, können Sie auf dieselbe Art und Weise Dimensionsinformationen hinzufügen, wenn Sie Shortcutdimensionen direkt als Felder in Buch.-Blattzeilen eingerichtet haben.  </p>
+<p>Sie können auch Standarddimensionen für Konten oder Kontoarten festlegen, so dass Dimensionen und Dimensionswerte automatisch ausgefüllt werden.</p>
+<h3 id="to-view-global-dimensions-in-ledger-entry-pages">Einsehen von Globalen Dimensionen in Postenseiten</h3>
+<p>Globale Dimensionen sind immer firmenbezogen und nach Unternehmen benannt. Um die globalen Dimensionen für das Unternehmen anzuzeigen, öffnen Sie die Seite <strong>Finanzbuchhaltung Einrichtung</strong>.</p>
+<p>Auf einer Postenseite können Sie sehen, ob für Posten globale Dimensionen vorhanden sind. Die beiden globalen Dimensionen unterscheiden sich von Ihren anderen Dimensionen, da Sie sie als Filter an beliebiger Stelle in Business Central verwenden können.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Kontenplan</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie auf der Seite <strong>Kontenplan</strong> die <strong>Ressourcenposten</strong>-Aktion aus.  </li>
+<li>Um nur Einträge zu sehen, die relevant sind, legen Sie einen oder mehrere Filter auf der Seite fest.  </li>
+<li>Um alle Dimensionen für einen Eintrag zu sehen, markieren Sie den Eintrag und wählen Sie dann die Aktion <strong>Dimensionen</strong>.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Auf der Seite <strong>Sachkonto Dimensionen</strong> werden die Dimensionen für jeweils einen Sachkontoeintrag angezeigt. Sie werden sehen, dass sich der Inhalt der Seite <strong>Sachkonto Dimensionen</strong> entsprechend ändert, wenn Sie durch die Ledgereinträge blättern.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="bi.html">Business Intelligence</a><br><a href="finance.html">Finanzen</a><br><a href="bi-how-analyze-data-dimension.html">Daten nach Dimensionen analysieren</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>    </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

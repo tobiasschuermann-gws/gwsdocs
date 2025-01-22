@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Scenario 3 - Foreign Payment (LCY to FCY) [NL] </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Scenario 3 - Foreign Payment (LCY to FCY) [NL] ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="payment-scenario-3---foreign-payment-lcy--to-fcy-in-the-dutch-version">Payment Scenario 3 - Foreign Payment (LCY  to FCY) in the Dutch Version</h1>
+
+<p>You can use telebanking for trade with domestic and foreign customers and vendors. This topic describes a scenario where the trade is with foreign customers and vendors that use a different currency than your local currency.  </p>
+<ol>
+<li>Create Vendor/Customer.  </li>
+<li>Create Vendor/Customer Bank Account.  </li>
+<li>Create and Post Purchase Invoice for Vendor or Sales Invoice for Customer.  </li>
+<li>Create Proposal.  </li>
+<li>Create Payment History.  </li>
+<li>Export Payment History.  </li>
+<li>Import Bank Statement.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p> In the examples below some standard CRONUS data is being used. Likewise instead of creating a vendor/customer and a vendor/customer bank account you could use existing data.  </p>
+</div>
+<h2 id="create-vendorcustomer">Create Vendor/Customer</h2>
+<p> Create vendor/customer and enter all necessary information. Special attention should be paid to the following fields:  </p>
+<ul>
+<li><strong>Currency Code</strong>: Set it to the foreign currency (FCY).  </li>
+<li><strong>Transaction Mode</strong>: Select an appropriate, default transaction mode - i.e. one that can deal with foreign currency payments for your local bank.  </li>
+<li><strong>Preferred Bank Account</strong>: Select an appropriate, default vendor/customer bank account having the same Currency Code as the vendor/customer itself.  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p> In order to be able to enter a bank account in the <strong>Bank Account</strong> vendor/customer bank accounts must be available. See below.  </p>
+</div>
+<h3 id="example">Example</h3>
+<p>Hernandez Ortiz (code <strong>ORTIZ</strong>) is one of our Mexican vendors. Purchase invoices will be paid through our national bank account (code <strong>ABN</strong>) to their bank account (code <strong>HOBA</strong>). While our bank account ABN is denominated in local currency (LCY), Hernandez Ortiz&#39;s bank account HOBA is denominated in Mexican peso (MXN). Therefore, on Hernandez Ortiz&#39;s vendor card, we set the <strong>Currency Code</strong> field to <strong>MXN</strong>, fill the <strong>Transaction Mode</strong> field with <strong>ABN</strong> that is linked to our bank account, ABN, and set the <strong>Bank Account</strong> field to <strong>HOBA</strong>.  </p>
+<h2 id="create-vendorcustomer-bank-account">Create Vendor/Customer Bank Account</h2>
+<p>Create vendor/customer bank account and enter all necessary information. Special attention should be paid to the following fields:  </p>
+<ul>
+<li><strong>Preferred Bank Account</strong>: Enter a valid bank account number.  </li>
+<li><strong>Currency Code</strong>: Set it to the foreign currency (FCY).  </li>
+<li><strong>Owner Information</strong>: Be sure all owner information has been entered.  </li>
+</ul>
+<h3 id="example-1">Example</h3>
+<p>Hernandez Ortiz&#39;s bank account (code <strong>HOBA</strong>) is denominated in <strong>MXN</strong>. Therefore, on Hernandez Ortiz&#39;s vendor bank account card, we enter a valid number in the <strong>Bank Account No.</strong> field, set the <strong>Currency Code</strong> field to <strong>MXN</strong>, and fill the fields on the <strong>Owner Information</strong> FastTab with appropriate values.  </p>
+<h2 id="create-and-post-purchase-invoice-for-vendor-or-sales-invoice-for-customer">Create and Post Purchase Invoice for Vendor or Sales Invoice for Customer</h2>
+<p>Create a purchase/sales invoice and enter all necessary information. Special attention should be paid to the following fields:  </p>
+<ul>
+<li><strong>Currency Code</strong>: Set it to the foreign currency (FCY).  </li>
+<li><strong>Transaction Mode</strong>: Select an appropriate, default transaction mode - i.e. one that can deal with local currency payments for your local bank.  </li>
+<li><strong>Preferred Bank Account</strong>: Select an appropriate, default vendor/customer bank account having the same Currency Code is the vendor/customer itself.  </li>
+</ul>
+<p>By default these three fields will be populated with values taken from the vendor/customer card.  </p>
+<p>When the invoice is finished it can be posted.  </p>
+<h3 id="example-2">Example</h3>
+<p>When creating a purchase invoice for Hernandez Ortiz we enter <strong>ORTIZ</strong> in the <strong>Buy-from Vendor No.</strong> field. By default, the <strong>Currency Code</strong>, <strong>Transaction Mode</strong>, and <strong>Bank Account</strong> fields will be populated with values taken from the Hernandez Ortiz&#39;s vendor card. Therefore, the <strong>Currency Code</strong>, <strong>Transaction Mode</strong>, and <strong>Bank Account</strong> fields will be <strong>MXN</strong>, <strong>ABN</strong>, and <strong>HOBA</strong> respectively. Nevertheless, these values can be changed.  </p>
+<h2 id="create-proposal">Create Proposal</h2>
+<p>Open the <strong>Telebank - Bank Overview</strong> page and browse to the bank through which we want to perform our payment. Open the <strong>Proposal</strong> page and generate payment proposals using the <strong>Get Proposal Entries</strong> batch job.  </p>
+<h3 id="example-3">Example</h3>
+<p>Through the <strong>Telebank - Bank Overview</strong> page, we open the <strong>Proposal</strong> page for our bank, ABN. Using the batch job, one proposal line will be created for the purchase invoice we just created and posted for the vendor ORTIZ. The amount of the payment will be in local currency (LCY).  </p>
+<h2 id="create-payment-history">Create Payment History</h2>
+<p>From the <strong>Proposal</strong> page, we process our proposal into a payment history. The proposal will disappear and can be found on the <strong>Payment History Overview</strong> page for the same bank.  </p>
+<h3 id="example-4">Example</h3>
+<p>We process our proposal concerning the payment to the vendor ORTIZ and open the <strong>Payment History Overview</strong> page for our bank, ABN. The last payment history is the one we just created.  </p>
+<h2 id="export-payment-history">Export Payment History</h2>
+<p>Open the <strong>Payment History Overview</strong> page, browse to the relevant payment history and then choose the <strong>Export</strong> action. The export batch job will appear for the export protocol that is linked to this payment. For this export the system already has entered appropriate filters. Check, if wanted, any of the fields on the <strong>Options</strong> FastTab, and choose the <strong>OK</strong> button to export the payment. The system will generate a text file using a filename as defined in the <strong>Default File Names Field</strong> field of the export protocol, which now is ready to be sent to our bank.  </p>
+<h3 id="example-5">Example</h3>
+<p>As the transaction mode associated with our payment is <strong>ABN</strong>, the <strong>BBV</strong> or <strong>PAYMUL</strong> batch job will appear.  </p>
+<h2 id="import-bank-statement">Import Bank Statement</h2>
+<p>After receiving electronic bank statements from our bank we can import them by running the appropriate import protocol from the <strong>Import Protocol List</strong> page.  </p>
+<h3 id="example-6">Example</h3>
+<p>The bank statement containing our payment to Hernandez Ortiz will be sent to us by our bank, ABN. Therefore, we should chose <strong>OFFICE NET EXTRA</strong> as the appropriate import protocol.  </p>
+<h2 id="see-also">See Also</h2>
+<p> <a href="how-to-create-proposals.html">Create Proposals</a><br> <a href="how-to-create-and-export-payment-history.html">Create and Export Payment History</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

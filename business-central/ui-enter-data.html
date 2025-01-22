@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Daten in Business Central eingeben </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Daten in Business Central eingeben ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="entering-data">Eingeben von Daten</h1>
+
+<p>Es gibt viele allgemeine Funktionen, die Ihnen helfen, Daten einfacher, schneller und präziser einzugeben. Die Grundprinzipien und erweiterten Funktionen für die Eingabe von Daten werden in diesem Artikel beschrieben.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Nutzen Sie kostenlose E-Learning-Inhalte über die Business Central-Benutzeroberfläche unter <a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs">Microsoft Schulungen</a>.</p>
+</div>
+<p>Die Beispiele in diesen Artikel verwendet die Demodaten.</p>
+<h2 id="work-with-editable-fields">Mit bearbeitbaren Feldern arbeiten</h2>
+<p>Felder in Business Central können verschiedene bearbeitbare Daten enthalten, z. B. Text oder Währungsbeträge. Bearbeitbare Felder zeigen in der Regel ein Eingabefeld an, in das Sie einen Wert eingeben bzw. aus dem Sie einen Wert auswählen können. Nicht bearbeitbare Felder werden normalerweise mit einem grauem Hintergrund angezeigt.   </p>
+<p>Einige bearbeitbare Felder bieten eine Auswahl, anhand derer Sie einen Wert festlegen können.  </p>
+<!-- TODO: Add illustrations or images of each picker -->
+<table>
+<thead>
+<tr>
+<th><strong>Kommissionierer</strong></th>
+<th><strong>So können Sie einen Wert festlegen</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datumsauswahl</td>
+<td>Diese Auswahl zeigt einen Kalender an, der auf Ihren aktuellen regionalen Einstellungen basiert. Dieser ermöglicht die Auswahl eines einzelnen Datums.</td>
+</tr>
+<tr>
+<td>Dropdownliste</td>
+<td>Dropdownlisten bieten eine Auswahl an festen Werten oder Referenzdatensätzen aus einer anderen Tabelle.</td>
+</tr>
+<tr>
+<td>Schalter oder Kontrollkästchen</td>
+<td>Einige Felder bieten eine einfache Auswahl von <em>Ja</em>- oder <em>Nein</em>-Werten. Dieser Wert wird mit dem Schalter festgelegt und in Listen immer als Kontrollkästchen angezeigt.</td>
+</tr>
+<tr>
+<td>AssistEdit</td>
+<td>Einige Felder bieten benutzerdefinierte Auswahlfelder zum Suchen und Auswählen des besten Werts für dieses Feld, z. B. ein Popup-Fenster.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifying-a-field-value">Ändern eines Feldwerts</h3>
+<p>Um den Wert eines Felds zu ändern, müssen Sie zuerst den Fokus auf dieses Feld legen. Führen Sie dazu die folgenden Aktionen aus:</p>
+<ul>
+<li>Verwenden Sie die <kbd>TAB</kbd>-Taste. Die Aktion wählt den gesamten Wert aus.</li>
+<li>Klicken Sie mit der linken Maustaste oder einem ähnlichen Eingabegerät. Diese Aktion wählt nur den gesamten Feldwert aus, wenn sich das Feld in einer Liste befindet.  </li>
+</ul>
+<p>Wenn Sie mit Feldern in der Benutzeroberfläche interagieren, bevorzugt Business Central in der Regel die Auswahl des gesamten Feldwerts, damit Sie diesen Wert leichter ersetzen können.</p>
+<p>Gehen Sie wie folgt vor, wenn der gesamte Feldwert ausgewählt ist:</p>
+<ul>
+<li>Ersetzen Sie den Wert einfach durch die Eingabe eines neuen Werts, um diesen festzulegen. Wenn das Feld eine Auswahl bietet, können Sie diese mit der Tastenkombination <kbd>Alt</kbd>+<kbd>Pfeil nach unten</kbd> aktivieren.</li>
+<li>Verwenden Sie die Taste <kbd>Löschen</kbd> oder die <kbd>Rücktaste</kbd>, um den Wert zu löschen.</li>
+</ul>
+<p>Wählen Sie die Taste <kbd>F2</kbd> aus, um zwischen der Auswahl des gesamten Feldwerts oder der Platzierung des Cursors hinter dem Wert des Felds umzuschalten. Wenn Sie den Cursor am Ende des Werts platzieren, können Sie ihn leichter an den vorhandenen Wert anhängen.</p>
+<p>Wenn der Cursor am Ende des Feldwerts angezeigt wird:</p>
+<ul>
+<li>Fügen Sie den Wert hinzu, indem Sie ihn einfach eingeben.</li>
+<li>Verwenden Sie die Tasten <kbd>Pos1</kbd>, <kbd>Ende</kbd>, <kbd>Pfeil nach links</kbd> und <kbd>Pfeil nach rechts</kbd>, um den Cursor innerhalb des Werts zu bewegen. Wenn Sie beim Bearbeiten eines Felds in einer Liste die <kbd>Pfeil nach links</kbd> Taste erneut auswählen, wenn sich der Cursor am Anfang des Werts befindet, wird der Fokus wieder auf das vorherige Feld gelegt. Wenn Sie die Taste <kbd>Pfeil nach rechts</kbd> erneut auswählen, während sich der Cursor am Ende des Werts befindet, wird der Fokus entsprechend auf das nächste Feld gelegt.</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Nachdem Sie einen Wert angegeben haben, überprüft Business Central dessen Gültigkeit erst, wenn Sie außerhalb des Felds klicken oder den Fokus auf ein anderes Element wie das nächste Feld legen.  </p>
+</div>
+<h2 id="check-data-in-documents-and-journals-while-you-work">Daten in Belegen und Buch.-Blätter während der Arbeit überprüfen</h2>
+<p>Ihre Administrierenden können Business Central für die Validierung der von Ihnen in Belegen und Buch.-Blättern eingegebenen Daten in Echtzeit aktivieren.</p>
+<p>Wenn Sie das Feature aktivieren, zeigt der Infoboxbereich entweder die Infobox <strong>Beleg prüfen</strong> oder <strong>Erfassung prüfen</strong>, je nach dem Belegtyp, den Sie gerade bearbeiten. In der Infobox sind die Fehler aufgelistet, damit Sie diese schnell beheben können.</p>
+<p>Um das Feature zu aktivieren, aktivieren Sie auf der Seite <strong>Meine Benachrichtigungen</strong> die folgenden Kontrollkästchen:</p>
+<ul>
+<li>Aktivieren Sie für Buch.-Blätter das Kontrollkästchen <strong>Aktiviert</strong> für <strong>Datenprüfung aktivieren</strong>.</li>
+<li>Aktivieren Sie bei Belegen das Kontrollkästchen <strong>Aktiviert</strong> für <strong>Infobox „Belegüberprüfung“ anzeigen</strong>.</li>
+</ul>
+<p>Das folgende Video erklärt die Datenüberprüfung in Echtzeit.</p>
+<div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RW1l0pR" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="keyboard-shortcuts">Tastenkombinationen</h2>
+<p>Es gibt verschiedene Tastenkombinationen, mit denen Sie ohne Maus arbeiten und die Dateneingabe beschleunigen können. Diese Tastenkombinationen sind besonders hilfreich bei umfangreichen Einträgen und wiederkehrenden Eingabeaufgaben.</p>
+<p>Weitere Informationen zu diesen Tastenkombinationen finden Sie unter <a href="keyboard-shortcuts.html">Tastenkombinationen</a>. Einige der Tastenkombinationen werden in diesem Artikel erläutert.</p>
+<h2 id="QuickEntry">Beschleunigende der Dateneingabe mithilfe der Schnelleingabe</h2>
+<p>Die Schnelleingabe ist eine Funktion für die Dateneingabe bei Verwendung der Tastatur. Schnelleingabe funktioniert bei Feldern (wie in Kartenseiten) und in Listen (Zeilen und Spalten). Dies ist hilfreich, wenn Sie sich wiederholende Eingabeaufgaben ausführen, bei denen mehrere Datensätze nacheinander erstellt werden müssen. Beispiele hierfür sind eine Gruppe von Kundenaufträgen oder die Registrierung neuer Artikel.</p>
+<p>Mit der TAB-TASTE können Sie von einem Feld einer Seite zum nächsten bearbeitbaren Feld navigieren. Der Nachteil der Anwendung von TAB ist, dass sie stets fortlaufend zum nächsten Feld navigiert. <!-- even if the field is non-editable or seldom filled it in.-->Mit Schnelleintrag können Sie den Pfad ändern. Bei der Schnelleingabe können Sie die <kbd>Eingabetaste</kbd> verwenden, um nur durch die Felder zu navigieren, die Sie interessieren. Die Schnelleingabe überspringt nicht bearbeitbare Felder sowie Felder, die Sie in der Regel nicht ausfüllen. Sie haben dieses Verhalten möglicherweise bereits auf einigen Seiten bemerkt. Der Grund für dieses Verhalten besteht darin, dass vordefiniert ist, welche Felder beim Drücken der EINGABETASTE einbezogen und welche übersprungen werden sollen. Sie können die Schnelleingabe anpassen, indem Sie den Arbeitsbereich personalisieren und optimieren, wie Sie Daten auf jeder Seite eingeben.</p>
+<h3 id="how-quick-entry-works">So funktioniert die Schnelleingabe</h3>
+<p>Jedes Feld kann als <em>in Schnelleingabe enthalten</em> oder <em>aus Schnelleingabe ausgeschlossen</em> markiert werden. Felder, die in die Schnelleingabe eingeschlossen sind, werden in den Pfad aufgenommen, wenn Sie die <kbd>Eingabetaste</kbd> auswählen. Felder, die von der Schnelleingabe ausgeschlossen sind, hingegen nicht.</p>
+<p>Wenn Sie die Dateneingabe in einem Feld beendet haben, wählen Sie einfach die <kbd>Eingabetaste</kbd> aus, um die Änderungen zu bestätigen und zum nächsten Feld zu wechseln. Wenn Sie die Richtung umkehren und zum vorherigen Feld gehen möchten, wählen Sie <kbd>Umschalt</kbd>+<kbd>Eingabetaste</kbd> aus. Weitere Informationen zu diesen Tastenkombinationen unter <a href="keyboard-shortcuts.html#QuickEntry">Tastenkombinationen der Schnelleingabe für Felder</a>.</p>
+<h4 id="tips-and-tricks">Tipps und Tricks</h4>
+<p>Nachfolgend sind einige nützliche Informationen zur Anwendung der Schnelleingabe aufgeführt.</p>
+<ul>
+<li>Sie ist für alle bearbeitbaren Felder verfügbar.</li>
+<li>Sie funktioniert auch über Spalten und Zeilen hinweg.</li>
+<li>Sie verhindert nicht den Zugriff auf andere Elemente einer Seite wie Aktionen. Auf diese Elemente kann noch mit <kbd>Tabulatortaste</kbd> und <kbd>Umschalt</kbd>+<kbd>Tabulator</kbd> zugegriffen werden.  </li>
+<li>Es ist nicht erforderlich, dass Inforegister erweitert werden, damit die Schnelleingabe funktioniert. Wenn sich das nächste Feld der Schnelleingabe in einem reduzierten Inforegister befindet, wird das Inforegister automatisch mit Fokus auf dem ausgewählten Feld erweitert. Business Central erweitert das Inforegister automatisch beim nächsten Besuch der Seite.  </li>
+<li>Schnelleingabe funktioniert unabhängig davon, ob Felder erforderlich sind. Daher ist es vorteilhaft, sicherzustellen, dass erforderliche Felder in der Schnelleingabe enthalten sind.</li>
+<li>Standardmäßig sind die meisten Felder automatisch im der Schnelleingabe enthalten. Daher wird die Aufgabe höchstwahrscheinlich zunächst darin bestehen, Felder aus der Schnelleingabe auszuschließen.</li>
+</ul>
+<h3 id="to-change-quick-entry-fields">Um Felder der Schnelleingabe zu ändern</h3>
+<p>Verwenden Sie die Personalisierung, um die Schnelleingabe für Felder einzurichten.</p>
+<ol>
+<li>Starten Sie die Personalisierung, indem Sie das Symbol <img src="media/ui-experience/settings_icon_small.png" alt="Einstellungen." title="Einstellungssymbol für Rollenzentrum"> Symbol und dann die Aktion <strong>Personalisieren</strong>.</li>
+<li>Wählen Sie ein Feld aus, das Sie ändern möchten. Wählen Sie in Listen die entsprechende Spaltenüberschrift aus. Wählen Sie dann <strong>In Schnelleingabe einschließen</strong> oder <strong>Von der Schnelleingabe ausschließen</strong> aus.</li>
+</ol>
+<p>Weitere Informationen zur Personalisierung finden Sie unter <a href="ui-personalization-user.html">Personalisieren Ihres Arbeitsbereichs</a>.</p>
+<h2 id="mandatory-fields">Pflichtfelder</h2>
+<p>Wenn Sie Daten auf Seiten in eingeben, werden bestimmte Felder mit einem roten Sternchen markiert. Das rote Sternchen bedeutet, dass das Feld ausgefüllt werden muss, um einen bestimmten Vorgang abzuschließen. Ein Beispiel wäre, wenn Sie eine Transaktion buchen, die den Wert in dem Feld verwendet.  </p>
+<p>Auch wenn ein Feld obligatorisch ist, sind Sie nicht gezwungen, das Feld auszufüllen, bevor Sie mit anderen Feldern fortfahren oder die Seite schließen. Das rote Sternchen dient nur als Erinnerung, dass Sie daran gehindert wurden, einen bestimmten Prozess zu beenden.  </p>
+<h2 id="finding-data-as-you-type">Suchen von Daten bei der Eingabe</h2>
+<p> Wenn Sie mit der Eingabe von Zeichen in einem Feld beginnen, wird eine Dropdownliste mit möglichen Feldwerten angezeigt. Die Anzeige der Dropdownliste ändert sich bei Eingabe weiterer Zeichen, und Sie können den korrekten Wert auswählen, wenn dieser angezeigt wird.  </p>
+<p> Viele Felder haben eine Schaltfläche mit einem nach unten zeigenden Pfeil, den Sie auswählen können. Durch Klicken auf diesen Pfeil wird eine Liste der Daten angezeigt, die in das Feld eingegeben werden können. Die Schaltfläche bietet abhängig vom Feldtyp zwei Funktionen:  </p>
+<ul>
+<li><p>Lookup – Zeigt Informationen aus einer anderen Tabelle an, die im Feld eingegeben werden können. Es kann jeweils ein Datenelement ausgewählt werden.  </p>
+</li>
+<li><p>Dropdown – Zeigt die Optionen an, die für das Feld verfügbar sind. Sie können nur eine der Optionen auswählen.  </p>
+</li>
+</ul>
+<h2 id="copying-and-pasting-faq-fields-and-lines">FAQ Felder und Zeilen kopieren und einfügen</h2>
+<p>Sie können eine oder mehrere Zeilen aus einer Liste oder einem einzelnen Feld auf einer Seite kopieren. Fügen Sie dann die kopierten Daten in dieselbe Seite, in eine andere Seite oder in ein externes Dokument ein. Sie können Daten beispielsweise in Microsoft Excel oder in eine Outlook-E-Mail einfügen. Kurz gesagt, wählen Sie zum Kopieren <kbd>Strg</kbd>+<kbd>C</kbd> (cmd+C in Mac Os) auf Ihrer Tastatur. Zum Einfügen wählen Sie <kbd>Strg</kbd>+<kbd>V</kbd> oder <kbd>cmd+V</kbd> bei macOS.</p>
+<p>Um das Feld in einer Liste in der gleichen Spalte der Zeile darüber zu kopieren, und es in die aktuelle Zeile einzufügen, wählen Sie einfach <kbd>F8</kbd>.</p>
+<p>Weitere Informationen finden Sie unter <a href="faq-copy-paste.yml">FAQ zum Kopieren und Einfügen</a>.</p>
+<h2 id="filtering-line-items">Filtern von Positionsartikel</h2>
+<p>Um mit dem Filtern zu beginnen, wählen Sie das <img src="media/open-filter-pane-icon.png" alt="Filterbereichssymbol" title="Filterbereichssymbol"> in der Liste oben aus, oder wählen Sie auf <kbd>Umschalt</kbd>+<kbd>F3</kbd>, um den Filterbereich zu öffnen. Sie arbeiten mit Filterbereich, wie in jeder anderen Liste. Weitere Informationen finden Sie unter <a href="ui-enter-criteria-filters.html#filtering">Filterung</a>.</p>
+<p>Die Filterung ist besonders dann hilfreich, wenn längere Belege angezeigt und analysiert werden. Stellen Sie sich vor, Sie öffnen eine gebuchte Verkaufsrechnung. Anschließend filtern Sie die Positionen, um alle Positionen mit einem individuellen Rabatt von mehr als 5 % anzuzeigen. Oder Sie filtern die Positionen, sodass nur Fahrradzubehör, dessen Name „Pro“ enthält, angezeigt wird.</p>
+<h2 id="Focus">Fokussieren auf Positionsartikel</h2>
+<p>Wenn Sie an Dokumenten arbeiten, die einen Positionsartikelteil enthalten, können Sie die Ansicht so ändern, dass der Fokus nur auf die Positionsartikel gelegt wird. Beispieldokumente sind Verkaufsauftrags- oder Rechnungsseite. Der Positionsartikelteil wird erweitert, sodass er fast den gesamten Arbeitsbereich einnimmt. Es verdeckt andere Teile der Seite, mit Ausnahme des Aktionsbereichs am oberen Rand. Dieses Layout ermöglicht Ihnen einen besseren Überblick über die Positionsartikel und bietet mehr Platz, um daran zu arbeiten.</p>
+<p>Dies ist besonders hilfreich, wenn Sie mit großen Positionsartikellisten arbeiten und Daten schnell eingeben möchten. Diese Funktion bietet auch erweiterte Filterfunktionen. Wie bei anderen Listen wird das Durchsuchen von Positionsartikeln noch einfacher.</p>
+<h3 id="switching-the-focus-on-and-off">Den Fokus zwischen An- und Ausschalten wechseln</h3>
+<p>Um den Fokus auf die Elemente der Zeile zu setzen, wählen Sie eine beliebige Stelle im Teil der Zeile aus und wählen dann das Symbol <img src="media/focus-mode.png" alt="Fokusmodus." title="Fokusmodus-Symbol"> in der oberen rechten Ecke, oder wählen Sie <kbd>Strg</kbd>+<kbd>Umschalt</kbd>+<kbd>F12</kbd>.</p>
+<p>Um wieder in die normale Ansicht zu wechseln, wählen Sie <img src="media/focus-mode.png" alt="Fokusmodus Symbol." title="Fokusmodus-Symbol"> oder wählen Sie erneut <kbd>Strg</kbd>+<kbd>Umschalt</kbd>+<kbd>F12</kbd>.</p>
+<h2 id="multitasking-across-multiple-pages">Multitasking über mehrere Seiten</h2>
+<p>Sie können eine Karten- oder Dokumentseite in einem neuen Fenster öffnen. Wenn Sie ein neues Fenster öffnen, können Sie:</p>
+<ul>
+<li>an mehreren Aufgaben gleichzeitig arbeiten</li>
+<li>Unterbrechungen der aktuellen Aufgabe verwalten, z. B. einen eingehenden Anruf annehmen</li>
+<li>ein Fenster für eine laufende Aufgabe geöffnet lassen, während Sie eine andere Aufgabe in Fenstern starten oder abschließen</li>
+</ul>
+<p>Um die aktuelle Karte oder den aktuellen Beleg in einem neuen Fenster zu öffnen, wählen Sie <img src="media/open-new-window-icon.png" alt="Neues Fenster öffnen." title="Symbol „Neues Fenster öffnen“"> in der oberen rechten Ecke, oder wählen Sie <kbd>Alt</kbd>+<kbd>Umschalt</kbd>+<kbd>W</kbd>.</p>
+<!--
+When working on multiple tasks at a time or when managing interruptions to the current task, such as taking an incoming call, you can open a card or document page in a new window. This allows you to keep a window open for an ongoing task while you start or complete another task in one or more other windows.
+-->
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie andere Seiten von einer Karte oder einem Beleg öffnen, der in einem neuen Fenster geöffnet ist, werden diese Seiten in einem neuen Fenster geöffnet, auch wenn Sie nicht <img src="media/open-new-window-icon.png" alt="Neues Fenster öffnen." title="Symbol „Neues Fenster öffnen“"> wählen.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie im Safari-Browser arbeiten, kann ein Popupblocker dazu führen, dass das neue Fenster nicht geöffnet wird. In diesem Fall geben Sie die Produkt-URL als zulässige Website an. Weitere Informationen finden Sie unter <a href="https://go.microsoft.com/fwlink/?LinkId=2102965">Ändern Sie die Einstellungen in Safari</a>.<br><br>
+Das Gleiche kann auch in anderen Browsern wie Firefox passieren. Weitere Informationen finden Sie unter <a href="https://go.microsoft.com/fwlink/?LinkId=2116400">Popupblocker-Einstellungen in Firefox</a>.  </p>
+</div>
+<p>Eine andere Möglichkeit, Multitasking zu betreiben, besteht darin, die Business Central auf zwei oder mehr Browser-Registerkarten zu öffnen. Wenn Sie dies tun, sollten Sie eine neue Registerkarte erstellen und dann die URL der ursprünglichen Registerkarte in die neue Registerkarte kopieren/einfügen. Dadurch wird eine neue Sitzung erstellt.   </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Verwenden Sie nicht die Funktion <strong>Duplizieren</strong> des Browsers, um die neue Registerkarte zu erstellen, da dies dazu führen kann, dass Aktionen auf einer Registerkarte Aktionen auf anderen Registern blockieren, weil sie Teil derselben Sitzung sind.</p>
+</div>
+<h2 id="entering-quantities-by-calculation">Eingeben von Mengen durch Berechnung</h2>
+<p>Beim Eingeben von Zahlen in die Mengenfelder, beispielsweise in das Feld <strong>Menge</strong> in einer Artikel Buch.-Blattzeile, kann anstelle der Summenmenge die Formel eingegeben werden.  </p>
+<h3 id="examples">Beispiele</h3>
+<ul>
+<li><p>Bei Eingabe von 19+19 wird im Feld als Wert 38 angezeigt.  </p>
+</li>
+<li><p>Bei Eingabe von 41-9 wird im Feld als Wert 32 angezeigt.  </p>
+</li>
+<li><p>Bei Eingabe von 12*4 wird im Feld als Wert 48 angezeigt.  </p>
+</li>
+<li><p>Bei Eingabe von 12/4 wird im Feld als Wert 3 angezeigt.  </p>
+</li>
+</ul>
+<h2 id="entering-negative-numbers">Eingeben von negativen Zahlen</h2>
+<p>Sie können negative Zahlen auf zwei Arten eingeben. Die Zahl. -20,5 kann so eingegeben werden:  </p>
+<ul>
+<li><p>-20.5  </p>
+<p>Oder</p>
+</li>
+<li>20.5-  </li>
+</ul>
+<p>In beiden Fällen wird der Betrag als -20,5 erfasst.  </p>
+<p>Wenn das letzte Zeichen des Ausdrucks <strong>+</strong> oder <strong>-</strong> ist, wird der gesamte Ausdruck mit diesem Vorzeichen erfasst. Ein Beispiel, <strong>10-20+</strong> ergibt 10 und nicht -10.  </p>
+<h2 id="entering-dates-and-times">Daten und Zeit eingeben</h2>
+<p>Datums- und Uhrzeitwerte können in alle Felder eingegeben werden, die für Datumswerte vorgesehen sind (Datumsfelder). Datumswerte können mit oder ohne Trennzeichen eingegeben werden.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wie Sie Daten und Uhrzeiten eingeben, hängt von Ihren Einstellungen in Ihrer <strong>Region</strong> ab. Weitere Informationen finden Sie unter <a href="ui-change-basic-settings.html">Ändern der Grundeinstellungen</a>.  </p>
+</div>
+<h3 id="entering-dates">Eingeben von Datumswerten</h3>
+<p>Sie können entweder die Datenauswahl verwenden, um ein Datum aus einem Kalender auszuwählen, oder Sie können Daten manuell eingeben. Dieser Abschnitt bietet eine kurze Übersicht über die Dateneingabe. Weitere Informationen finden Sie unter <a href="ui-enter-date-ranges.html">Mit Datumsangaben und Uhrzeiten in Kalendern arbeiten</a>.</p>
+<p>Für manuelle Eingabe von Datumsangaben können zwei-, vier-, sechs- oder achtstellige Werte eingegeben werden:  </p>
+<ul>
+<li><p>Zwei Ziffern werden als Tag interpretiert. Der Monat und das Jahr des Arbeitsdatums werden hinzugefügt.  </p>
+</li>
+<li><p>Vier Ziffern werden als Tag und Monat interpretiert. Das Jahr des Arbeitsdatums wird hinzugefügt.  </p>
+</li>
+<li><p>Wenn das gewünschte Datum im Bereich vom 01.01.1950 bis zum 31.12.2049 liegt, geben Sie das Jahr zweistellig ein. Andernfalls geben Sie das Jahr vierstellig ein.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie Business Central lokal verwenden, kann der zweistellige Jahresbereich abweichen. Administratoren können den Bereich ändern, indem sie die <strong>CalendarTwoDigitYearMax</strong>-Einstellung des Business Central-Servers ändern. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/configure-server-instance#General">Konfigurieren von Business Central Server</a>.</p>
+</div>
+</li>
+</ul>
+<p>Sie können auch ein Datum als Wochentag gefolgt von einer Wochennummer eingeben. Oder Sie können ein Jahr eingeben. Beispielsweise bedeutet Mo25 oder mo25 Montag in der 25. Woche  </p>
+<p>Anstatt ein bestimmtes Datum direkt einzugeben, können Sie auch einen dieser Codes verwenden.  </p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h</td>
+<td>Gibt das heutige Datum (das Systemdatum des Computers) an.</td>
+</tr>
+<tr>
+<td>p</td>
+<td>Gibt eine Buchhaltungsperiode an, wobei p die erste Buchhaltungsperiode bezeichnet, p2 die zweite Buchhaltungsperiode angibt usw.</td>
+</tr>
+<tr>
+<td>a</td>
+<td>Gibt das Arbeitsdatum an, das in der Anwendung eingerichtet wird. Um das Arbeitsdatum zu ändern, siehe <a href="ui-change-basic-settings.html">Ändern von grundlegenden Einstellungen</a>. Die Verwendung des Arbeitsdatums ist hilfreich, wenn eine Vielzahl von Transaktionen zu einem Datum ausgeführt werden müssen, das vom Systemdatum abweicht.</td>
+</tr>
+<tr>
+<td>a</td>
+<td>Gibt an, dass das Datum nach a ein Abschlussdatum ist, beispielsweise A31.12.01.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="entering-times">Eingeben von Uhrzeiten</h2>
+<p>Beim Eingeben von Uhrzeiten kann zwischen den Zeiteinheiten ein beliebiges Trennzeichen (oder auch kein Trennzeichen) verwendet werden. Die Angabe von Minuten, Sekunden oder AM/PM ist nicht erforderlich.  </p>
+<p>In der folgenden Tabelle finden Sie eine Übersicht über die Möglichkeiten zum Angeben von Uhrzeiten sowie die Interpretation der jeweiligen Angabe.  </p>
+<table>
+<thead>
+<tr>
+<th>Eingabe</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>05:00:00</td>
+</tr>
+<tr>
+<td>5:30</td>
+<td>05:30:00</td>
+</tr>
+<tr>
+<td>0530</td>
+<td>05:30:00</td>
+</tr>
+<tr>
+<td>5:30:5</td>
+<td>05:30:05</td>
+</tr>
+<tr>
+<td>053005</td>
+<td>05:30:05</td>
+</tr>
+<tr>
+<td>5:30:05:50</td>
+<td>05:30:05:50</td>
+</tr>
+<tr>
+<td>053005050</td>
+<td>05:30:05.05</td>
+</tr>
+</tbody>
+</table>
+<p> Wird kein Trennzeichen verwendet, müssen für jede Zeiteinheit zwei Zeichen eingegeben werden.  </p>
+<h2 id="entering-combined-datetimes">Eingeben kombinierter Datums‑ und Zeitangaben</h2>
+<p>Wenn Sie Datums-/Uhrzeitangaben eingeben, die aus einem kombinierten Datum und einer Uhrzeit in einem Feld bestehen, müssen Sie ein Leerzeichen zwischen dem Datum und der Uhrzeit eingeben. Der Datumsteil kann nur Stellen in Form von den offiziellen Datumstrennzeichen Ihrer Regionseinstellung enthalten. Die Uhrzeit kann Stellen um die AM/AM-Angabe enthalten in relevanten regionalen Einstellungen.</p>
+<!--It is also possible to enter only a date in a datetime field, but it is not possible to enter only a time.-->
+<p>In der folgenden Tabelle finden Sie eine Übersicht über die Möglichkeiten zum Eingeben von Datums-/Uhrzeitangaben sowie die Interpretation der jeweiligen Angabe.  </p>
+<table>
+<thead>
+<tr>
+<th>Eingabe</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08-01-2022 05:48:12 PM</td>
+<td>08-01-2022 05:48:12 PM</td>
+</tr>
+<tr>
+<td>131222 132455</td>
+<td>13-12-22 13:24:55</td>
+</tr>
+<tr>
+<td>1-12-22 10</td>
+<td>01-12-22 10:00:00</td>
+</tr>
+<tr>
+<td>1.12.22 5</td>
+<td>01-12-22 05:00:00</td>
+</tr>
+<tr>
+<td>1.12.22</td>
+<td>01-12-22 00:00:00</td>
+</tr>
+<tr>
+<td>11 12</td>
+<td>11.aktueller Monat.aktuelles Jahr 12:00:00</td>
+</tr>
+<tr>
+<td>1112 12</td>
+<td>11-12-aktuelles Jahr 12:00:00</td>
+</tr>
+<tr>
+<td>&quot;h&quot; für heute</td>
+<td>heutiges Datum 00:00:00</td>
+</tr>
+<tr>
+<td>t Zeit</td>
+<td>heutiges Datum aktuelle Zeit</td>
+</tr>
+<tr>
+<td>h 10:30</td>
+<td>heutiges Datum 10:30:00</td>
+</tr>
+<tr>
+<td>h 3:3:3</td>
+<td>heutiges Datum 03:03:03</td>
+</tr>
+<tr>
+<td>&quot;a&quot; oder &quot;Arbeitsdatum&quot;</td>
+<td>das Arbeitsdatum 00:00:00</td>
+</tr>
+<tr>
+<td>&quot;m&quot; oder &quot;Montag&quot;</td>
+<td>Montag der aktuellen Woche 00:00:00</td>
+</tr>
+<tr>
+<td>&quot;d&quot; oder &quot;Dienstag&quot;</td>
+<td>Dienstag der aktuellen Woche 00:00:00</td>
+</tr>
+<tr>
+<td>&quot;mi&quot; oder &quot;Mittwoch&quot;</td>
+<td>Mittwoch der aktuellen Woche 00:00:00</td>
+</tr>
+<tr>
+<td>&quot;do&quot; oder &quot;Donnerstag&quot;</td>
+<td>Donnerstag der aktuellen Woche 00:00:00</td>
+</tr>
+<tr>
+<td>&quot;f&quot; oder &quot;Freitag&quot;</td>
+<td>Freitag der aktuellen Woche 00:00:00</td>
+</tr>
+<tr>
+<td>&quot;s&quot; oder &quot;Sonnabend&quot;</td>
+<td>Samstag der aktuellen Woche 00:00:00</td>
+</tr>
+<tr>
+<td>&quot;so&quot; oder &quot;Sonntag&quot;</td>
+<td>Sonntag der aktuellen Woche 00:00:00</td>
+</tr>
+<tr>
+<td>di 10:30</td>
+<td>Dienstag der aktuellen Woche 10:30:00</td>
+</tr>
+<tr>
+<td>di 3:3:3</td>
+<td>Dienstag der aktuellen Woche 03:03:03</td>
+</tr>
+<tr>
+<td>d23 h</td>
+<td>Dienstag der Woche 23 des Jahres des Arbeitsdatums, aktuelle Uhrzeit</td>
+</tr>
+<tr>
+<td>d23</td>
+<td>Dienstag von Woche 23 des Arbeitsjahres</td>
+</tr>
+<tr>
+<td>d 23</td>
+<td>Heute 23:00:00</td>
+</tr>
+<tr>
+<td>d-1</td>
+<td>Dienstag von Woche 1 des Arbeitsjahres</td>
+</tr>
+</tbody>
+</table>
+<h2 id="entering-duration">Eingeben von Terminen</h2>
+<p>Zeiträume können als Zahl gefolgt von der entsprechenden Einheit eingegeben werden.  </p>
+<p>Hier folgen einige Beispiele.  </p>
+<table>
+<thead>
+<tr>
+<th>Termine</th>
+<th>Einheit**</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 Std.</td>
+<td>2 Stunden</td>
+</tr>
+<tr>
+<td>6 Std. 30 Min.</td>
+<td>6 Stunden 30 Minuten</td>
+</tr>
+<tr>
+<td>6,5 Std.</td>
+<td>6 Stunden 30 Minuten</td>
+</tr>
+<tr>
+<td>90 Min.</td>
+<td>1 Stunde 30 Minuten</td>
+</tr>
+<tr>
+<td>2 T 6 Std. 30 Min.</td>
+<td>2 Tage 6 Stunden 30 Minuten</td>
+</tr>
+<tr>
+<td>2d 6h 30m 56s 600ms</td>
+<td>2 Tage 6 Stunden 30 Minuten 56 SeDebitoren 600 MilliseDebitoren</td>
+</tr>
+</tbody>
+</table>
+<p> Sie haben auch die Möglichkeit, eine Zahl einzugeben, die dann automatisch in einen Zeitraum umgewandelt wird. Die eingegebene Zahl wird entsprechend der Standardeinheit konvertiert, die im Feld &quot;Dauer&quot; definiert ist.  </p>
+<p> Geben Sie zum Anzeigen der Einheit, die für ein Feld vom Typ „Dauer“ verwendet wird, eine Zahl ein. Am Ergebnis können Sie ablesen, in welche Einheit diese konvertiert wird.  </p>
+<p> Die Zahl 5 wird in 5 Std. konvertiert, wenn Stunden als Einheit angegeben wurden.  </p>
+<h2 id="decimal">Festlegen des Dezimaltrennzeichens, das von numerischen Tastaturen verwendet wird</h2>
+<p>Wenn Sie bei der Eingabe von Daten die <kbd>Dezimaltrennzeichen</kbd>-Taste auf einem Ziffernblock verwenden, wird das tatsächliche Dezimaltrennzeichen, das in das Feld eingegeben wird, durch die Regionseinstellung in Business Central bestimmt. Die meisten Regionen verwenden das Symbol Punkt (.) oder Komma (,) als Trennzeichen für Dezimalwerte, wie Sie es normalerweise in Währungsbeträgen sehen würden. Die Dezimaltaste auf Ihrer Tastatur passt sich Ihrer Region an. Sie unterscheidet sich oft von den Punkt- oder Kommatasten auf dem Rest Ihrer Tastatur. Sie legen die Region in Business Central auf der Seite <strong>Meine Einstellungen</strong> fest.</p>
+<p>Nehmen wir zum Beispiel an, Sie verwenden eine numerische Tastatur, die einen Punkt (.) als <kbd>Dezimaltrennzeichen</kbd> verwendet. Sie geben aber Daten für eine regionale Sprache ein, die ein Komma (<strong>,</strong>) als Dezimaltrennzeichen verwendet, wie z.B. Französisch (Frankreich). Sie möchten also, dass Dezimalzahlen wie „1.23“ als „1,23“ eingegeben werden. In diesem Fall können Sie auf die Seite <strong>Meine Einstellungen</strong> gehen und die <strong>Region</strong> auf die regionale Zielsprache festlegen, wie <strong>Französisch (Frankreich)</strong>. Weitere Informationen finden Sie unter <a href="ui-change-basic-settings.html#region">Grundeinstellungen ändern</a>.</p>
+<div class="TIP"><h5>Tipp</h5><p>Es kann vorkommen, dass Sie das Dezimaltrennzeichen verwenden möchten, um einen Punkt (.) einzugeben. Angenommen, Sie geben einen Datumsbereich in einen Filter ein, z. B. <code>01/01/2022..04/01/2022</code> oder irgendetwas, das einen Punkt erfordert. Um diesen Fall zu berücksichtigen, wählen Sie die Tasten <kbd>Alt</kbd>+<kbd>Dezimaltrennzeichen</kbd> auf der numerischen Tastatur. Diese Tastenkombination schaltet das Dezimaltrennzeichen zwischen der Ausgabe eines Punktes und dem durch die <strong>Region</strong>-Einstellung festgelegten Dezimaltrennzeichen um.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="ui-enter-criteria-filters.html">Sortieren, Durchsuchen und Filtern von Listen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

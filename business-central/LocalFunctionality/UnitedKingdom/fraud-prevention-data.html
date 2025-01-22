@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Send Fraud Prevention Data (UK) </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Send Fraud Prevention Data (UK) ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="send-fraud-prevention-data-in-the-united-kingdom">Send Fraud Prevention Data in the United Kingdom</h1>
+
+<p>Communication with His Majesty&#39;s Revenue and Customs (HMRC) without fraud prevention headers is not allowed, starting in 2021. Business Central communicates with HMRC through Making Tax Digital and supports the requirement to submit data that can help prevent fraud.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Make sure that you have the latest version of the Making Tax Digital app. For more information, see <a href="making-tax-digital-submit-vat-return.html">Making Tax Digital in the United Kingdom</a>.</p>
+</div>
+<p>The admin of the company that transmits VAT data together with fraud prevention parameters must consent one time for each web application that is used for interoperation with the HMRC VAT APIs. Otherwise, data that is collected from the user devices that are used to submit the VAT requests cannot be transmitted.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>We recommend that it&#39;s always the same person who submits data to HMRC from the same device. This way, the fraud prevention headers contain consistent information about the device.</p>
+</div>
+<h2 id="fraud-prevention-headers">Fraud prevention headers</h2>
+<p>Fraud prevention headers are sent to HMRC whenever there is communication with the APIs at HMRC. In other words, this information is sent when one of the following actions are chosen in Business Central:</p>
+<ul>
+<li>Get VAT return periods</li>
+<li>Submit VAT return</li>
+<li>Get status of submitted VAT return</li>
+</ul>
+<p>When you start one of these processes, you are presented with the current header content and asked for consent before the any data is sent. If you choose to cancel, no information is sent to HMRC.</p>
+<h3 id="headers">Headers</h3>
+<p>In this section, we provide a list of fraud prevention headers. The content is intended to help you identify any issues with fraud prevention headers for your company.  </p>
+<p>The set of HTTP headers that must be transmitted for fraud prevention varies, depending on the architecture of the environment that is used by the company that is interoperating with MTD for VAT. The <strong>Gov-Client-Connection-Method</strong> header must represent the connection method that is used for the request that the company makes. It&#39;s assumed that most companies that use Business Central online use the <strong>WEB_APP_VIA_SERVER</strong> connection method.  </p>
+<p>The <strong>WEB_APP_VIA_SERVER</strong> connection method assumes transmission of headers as outlined in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP header</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gov-Client-Public-IP</td>
+<td>The public IP address (IPv4 or IPv6) that the originating device makes the request from.</td>
+</tr>
+<tr>
+<td>Gov-Client-Public-Port</td>
+<td>The public TCP port that the originating device uses when it initiates the request.</td>
+</tr>
+<tr>
+<td>Gov-Client-Device-ID</td>
+<td>An identifier that is unique to an originating device.</td>
+</tr>
+<tr>
+<td>Gov-Client-User-IDs</td>
+<td>A key-value data structure that contains the user identifiers.</td>
+</tr>
+<tr>
+<td>Gov-Client-Timezone</td>
+<td>The local time zone of the originating device.</td>
+</tr>
+<tr>
+<td>Gov-Client-Local-IPs</td>
+<td>A list of all local IP addresses (IPv4 and IPv6) that are available to the originating device.</td>
+</tr>
+<tr>
+<td>Gov-Client-Screens</td>
+<td>Information that is related to the originating device&#39;s screens. The following fields are included:<ul><li><strong>width</strong> – The reported width of the screen, in pixels</li><li><strong>height</strong> – The reported height of the screen, in pixels</li><li><strong>scaling-factor</strong> – The reported scaling factor of the screen. For example, a high-pixel density screen could have a scaling factor of 2, while a standard definition screen could have a scaling factor of 1.</li><li><strong>color-depth</strong> – The color depth of the screen, in bits.</li></ul></td>
+</tr>
+<tr>
+<td>Gov-Client-Window-Size</td>
+<td>The number of pixels of the window on the originating device where the user initiated (directly or indirectly) the API call to HMRC.</td>
+</tr>
+<tr>
+<td>Gov-Client-Browser-Plugins</td>
+<td>A list of browser plug-ins on the originating device.</td>
+</tr>
+<tr>
+<td>Gov-Client-Browser-JS-User-Agent</td>
+<td>The JavaScript-reported user agent string from the originating device.</td>
+</tr>
+<tr>
+<td>Gov-Client-Browser-Do-Not-Track</td>
+<td>A value that indicates whether the <strong>Do Not Track</strong> option is turned on in the browser.</td>
+</tr>
+<tr>
+<td>Gov-Client-Multi-Factor</td>
+<td>A list of key-value data structures that contains details of the multifactor authentication (MFA) statuses that are related to the API call.</td>
+</tr>
+<tr>
+<td>Gov-Vendor-Version</td>
+<td>A key-value data structure of the software versions that are involved in handling a request.</td>
+</tr>
+<tr>
+<td>Gov-Vendor-License-IDs</td>
+<td>A key-value data structure of hashed license keys that are related to the vendor software that initiated the API request on the originating device.</td>
+</tr>
+<tr>
+<td>Gov-Vendor-Public-IP</td>
+<td>The public IP address of the servers that the originating device sent its requests to.</td>
+</tr>
+<tr>
+<td>Gov-Vendor-Forwarded</td>
+<td>A list that details the hops over the internet between services that terminate Transport Layer Security (TLS).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="populating-headers">Populating headers</h2>
+<p>The following table explaines how to identify all automatically populated headers. The guidance is based on an example from one of our reselling partners in the UK. The content is intended to help you set up fraud prevention headers for your company.  </p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Description</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gov-Client-Browser-Do-Not-Track</td>
+<td><code>true</code> or <code>false</code>, depending on your browser&#39;s setting for tracking.</td>
+<td><code>Gov-Client-Browser-Do-Not-Track: false</code></td>
+<td><code>false</code> by default. Check the value in your browser&#39;s settings. You can also search online for <em>do not track option in (name of browser)</em>.</td>
+</tr>
+<tr>
+<td>Gov-Client-Browser-JS-User-Agent</td>
+<td>JavaScript-reported user agent string from the originating device. Pass the value as reported by the browser, usually in this format:<code>product / product-version (system-information) platform (platform-details) extensions</code></td>
+<td><code>Gov-Client-Browser-JS-User-Agent: Mozilla/5.0 (iPad; U; CPU OS 3 2_1 like Mac OS X; en-us) (KHTML, like Gecko) Mobile/7B405</code></td>
+<td>Search for <em>device information online</em> to get the information about the device and the browser. Combine the values using the described format.</td>
+</tr>
+<tr>
+<td>Gov-Client-Browser-Plugins</td>
+<td>A list of browser plugins on the originating device. Every value in the list must be percent encoded (opens in a new tab), not percent encode separators (commas).</td>
+<td><code>Gov-Client-Browser-P1ugins: Shockwave%20F1ash Chromium%20PDF%20Viewer</code></td>
+<td>Search for <em>device information online</em> to get the information about the device and the browser. Separate all the values with commas. Then search for <em>encode url online</em>.</td>
+</tr>
+<tr>
+<td>Gov-Client-Local-Ips</td>
+<td>IP addresses.</td>
+<td><ul><li><code>Gov-Client-Local-IPs:  10 .1. 2.3</code></li><li><code>Gov-Client-Local-IPs: 10.1. 2. 3,10.3.4. 2</code></li><li><code>Gov-Client-Local-IPs: 65f466e3-1f39-4ca5-957f-65e231804f91.local</code></li></ul></td>
+<td>If you don&#39;t know your IP address, search for <em>how to identify my local IP</em>. Alternatively, use a PowerShell command such as the following: <br><code>Test-Connection -ComputerName (hostname) -Count 1 \| Select IPV4Address</code></td>
+</tr>
+<tr>
+<td>Gov-Client-Public-Port</td>
+<td>The public TCP port used by the originating device when initiating the request. This must not be a server port, such as 80 for http connections or 443 for https connections. The valid range is between 0 and 65535.</td>
+<td><code>57961</code></td>
+<td>Run <code>netstat -a</code> and see the TCP connection. For example, if your IP address is 192.168.45.2 and you see an entry for 192.168.45.2:57961, it means that port number 57961 is open and possibly in use. You can choose this value.</td>
+</tr>
+<tr>
+<td>Gov-Client-Screens</td>
+<td>Information about the originating device&#39;s screen. These fields should be submitted as a list of key-value data structures, and you can see a description of the keys in the table in the <a href="#headers">Headers</a> section.</td>
+<td><code>Gov-Client-Screens: width=1920&amp;height=1080&amp;sca1ing-factor=1.25&amp;colour-depth=16</code></td>
+<td>Find the details about your monitor in the display settings. Combine the values using the format.</td>
+</tr>
+<tr>
+<td>Gov-Vendor-Public-IP</td>
+<td>The public IP address of the servers the originating device sent their requests to.</td>
+<td><code>Gov -Vendor-Public-IP: 203.0.113.6</code></td>
+<td>Search for <em>what is my public ip address?</em>.</td>
+</tr>
+<tr>
+<td>Gov-Vendor-Forwarded</td>
+<td>A list that details bops over the internet between services that terminate Transport Layer Security (TLS).</td>
+<td><code>Gov-vendor-Forwarded:by=203.0.113.6&amp;for=198.51.100.0</code></td>
+<td><code>by</code> = public ID. <code>for</code> = local IP.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ip-addresses">IP addresses</h2>
+<p>Starting in 2022, you must specify an endpoint for the service that your company uses to extract and submit the IP address of the user who sends the VAT report. This is a requirement of HMRC so that they can validate the sender. The endpoint must be specified in the <strong>User IP Address Service</strong> field in the <strong>VAT Report Setup</strong> page. For more information, see <a href="../../finance-setup-vat.html#set-up-vat-reporting">Set up VAT reporting</a>.  </p>
+<p>Your company can sign up for any of the following endpoints:</p>
+<ul>
+<li><a href="https://api.db-ip.com/v2/free/self">https://api.db-ip.com/v2/free/self</a>  </li>
+<li><a href="https://www.cloudflare.com/cdn-cgi/trace">https://www.cloudflare.com/cdn-cgi/trace</a>  </li>
+<li><a href="https://api.ipify.org">https://api.ipify.org</a>  </li>
+<li><a href="https://jsonip.com">https://jsonip.com</a>  </li>
+</ul>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>The <strong>User IP Address Service</strong> field is available in version 20.1 and later. Your admin can manage your organization&#39;s version of Business Central in the admin center.</p>
+</div>
+<h2 id="see-also">See Also</h2>
+<p><a href="making-tax-digital-submit-vat-return.html">Making Tax Digital</a><br><a href="united-kingdom-local-functionality.html">United Kingdom Local Functionality</a><br><a href="../../ui-extensions.html">Customizing Business Central Using Extensions</a><br><a href="../../ui-work-product.html">Work with Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

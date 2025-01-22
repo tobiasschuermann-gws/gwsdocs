@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Integration mit Dynamics 365 Sales </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Integration mit Dynamics 365 Sales ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="integrating-with-dynamics-365-sales">Integration mit Dynamics 365 Sales</h1>
+
+<!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[azure-ad-to-microsoft-entra-id](~/../shared-content/shared/azure-ad-to-microsoft-entra-id.md)]
+
+: Couldn&#39;t find file ../shared-content/shared/azure-ad-to-microsoft-entra-id.md. -->[!INCLUDE[azure-ad-to-microsoft-entra-id](~/../shared-content/shared/azure-ad-to-microsoft-entra-id.md)]
+
+<!--END ERROR INCLUDE --><p>Die Rolle des Verkäufers wird häufig als eine der am meisten nach außen gerichteten Tätigkeiten in einem Unternehmen angesehen. Es kann jedoch für Verkäufer hilfreich sein, einen Blick in das Innere des Unternehmens zu werfen und zu erfahren, was am anderen Ende passiert. Durch die Integration von Business Central und Dynamics 365 Sales können Sie Ihren Vertriebsmitarbeitern diesen Einblick geben. Durch die Integration können Benutzer Informationen anzeigen Business Central während sie arbeiten Dynamics 365 Sales. Bei der Vorbereitung eines Verkaufsangebots kann es zum Beispiel hilfreich sein, zu wissen, ob ausreichend Lagerbestand vorhanden ist, um die Bestellung zu erfüllen. Weitere Informationen finden Sie unter <a href="marketing-integrate-dynamicscrm.html">Dynamics 365 Sales von Business Central verwenden</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Dieser Artikel beschreibt den Prozess der Integration der Onlineversionen von Dynamics 365 Sales und Business Central durch Dataverse. Informationen zur lokalen Konfiguration finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/prepare-dynamics-365-for-sales-for-integration">Dynamics 365 Sales für die lokale Integration vorbereiten</a>.</p>
+</div>
+<h2 id="integrate-through-dataverse">Über Dataverse integrieren</h2>
+<p>Um die Verbindung und Synchronisierung von Daten mit anderen Dynamics 365-Anwendungen zu erleichtern, lässt sich Business Central auch mit Dataverse integrieren. Sie können zum Beispiel eine Verbindung zu Dynamics 365 Sales herstellen, oder sogar zu Apps, die Sie selbst erstellen. Wenn Sie die Integration zum ersten Mal vornehmen, müssen Sie dies über Dataverse tun. Weitere Informationen finden Sie unter <a href="admin-common-data-service.html">Integration mit Dataverse</a>.</p>
+<p>Wenn Sie bereits eine Integration mit  Dynamics 365 Sales  Business Central durchgeführt haben, können Sie mit Ihrem Setup weiterhin Daten synchronisieren. Wenn Sie jedoch Ihre Dynamics 365 Sales-Integration aktualisieren oder ausschalten, müssen Sie, um sie wieder einzuschalten, eine Verbindung über Dataverse herstellen. Weitere Informationen finden Sie unter <a href="admin-upgrade-sales-to-cds.html">Aktualisierung einer Integration mit Dynamics 365 Sales</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Eine erneute Verbindung über Dataverse wendet die Standard-Synchronisationseinstellungen an und überschreibt alle Ihre Konfigurationen. Es werden zum Beispiel die Standard-Tabellenzuordnungen angewendet.</p>
+</div>
+<h2 id="integration-settings-that-are-specific-to-a--integration">Integrationseinstellungen, die spezifisch für eine Dynamics 365 Sales-Integration gelten</h2>
+<p>Die Integration mit Business Central erfolgt über Dataverse, und es werden viele Standardeinstellungen und Tabellen bereitgestellt. Zusätzlich zu den Standardeinstellungen gibt es einige, die spezifisch für Dynamics 365 Sales sind. In den folgenden Abschnitten sind diese Einstellungen aufgeführt.</p>
+<h2 id="permissions-and-security-roles-for-user-accounts-in-sales">Berechtigungen und Sicherheitsrollen für Benutzerkonten in Sales</h2>
+<p>Wenn Sie die Integrationslösung installieren, werden die Berechtigungen für das Integrationsbenutzerkonto konfiguriert. Wenn diese Berechtigungen geändert werden, müssen Sie sie möglicherweise zurücksetzen. Sie können dies tun, indem Sie die Integrationslösung neu installieren, indem Sie <strong>Integrationslösung neu installieren</strong> auf der Seite <strong>Dynamics 365 Verbindungseinrichtung</strong> wählen. Die folgenden Sicherheitsrollen werden eingesetzt:</p>
+<ul>
+<li>Dynamics 365 Business Central Integrations-Administrator</li>
+<li>Dynamics 365 Business Central Integration Benutzer</li>
+<li>Dynamics 365 Business Central Benutzer der Produktverfügbarkeit</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Um die Aktion <strong>In Business Central öffnen</strong> in Sales verwenden zu können, müssen Sie über die folgenden Berechtigungen für die folgenden Tabellen verfügen:</p>
+<ul>
+<li>Sie müssen über Leseberechtigungen für die Tabelle „Dynamics 365 Business Central-Verbindung“ (nav_connection) verfügen.</li>
+<li>Sie müssen über Lese-, Schreib- und Löschberechtigungen für die Tabelle „Dynamics 365 Business Central-Standardverbindung“ (nav_defaultconnection) verfügen.</li>
+</ul>
+</div>
+<h3 id="connection-settings-in-the-setup-guide">Verbindungseinstellungen im Einrichtungshandbuch</h3>
+<p>Sie können eine unterstützte Setup-Anleitung verwenden, um die Verbindung schnell einzurichten und erweiterte Funktionen wie die Kopplung zwischen Datensätzen festzulegen.</p>
+<ol>
+<li>Wählen Sie <strong>Einrichtung und Erweiterungen</strong> und dann <strong>Unterstütztes Setup</strong> aus.</li>
+<li>Wählen Sie <strong>Dynamics 365 Sales verbindung einrichten</strong>, um den Leitfaden zur unterstützten Einrichtung zu starten.</li>
+<li>Füllen Sie die Felder je nach Bedarf aus.</li>
+<li>Optional gibt es erweiterte Einstellungen, mit denen Sie die Sicherheit erhöhen und mehr Funktionalitäten aktivieren können. Die erweiterten Einstellungen werden in der folgenden Tabelle beschrieben.  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Import Dynamics 365 Sales Lösung</strong></td>
+<td>Installieren und konfigurieren Sie die Integrationslösung in Dynamics 365 Sales.</td>
+</tr>
+<tr>
+<td><strong>Automatische Synchronisierung der Artikelverfügbarkeit</strong></td>
+<td>Legt fest, dass die Warteschlange für die Artikelverfügbarkeit geplant werden muss. Die Auftragswarteschlange wird alle 30 Minuten ausgeführt und aktualisiert die Verfügbarkeit der gekoppelten Artikel.</td>
+</tr>
+<tr>
+<td><strong>Veraltete Verkaufsauftragsintegration aktivieren</strong></td>
+<td>Wenn Personen in Dynamics 365 Sales Verkaufsaufträge erstellen und in Business Central Aufträge erfüllen, wird der Prozess mit dieser Einstellung in Dynamics 365 Sales integriert. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/customer-engagement/sales-enterprise/developer/enable-sales-order-processing-integration">Integration der Verarbeitung von Verkaufsaufträgen aktivieren</a>.<br><br><strong>Hinweis:</strong> Sie können diese Option nicht verwenden, wenn Sie die Option <strong>Bidirektionale Synchronisierung von Verkaufsaufträgen</strong> verwenden. Die beiden Einstellungen schließen sich gegenseitig aus. Weitere Informationen zu dieser Option finden Sie unter <a href="#single-and-bi-directional-synchronization-of-sales-orders">Einzel- und bidirektionale Synchronisierung von Verkaufsaufträgen</a>.</td>
+</tr>
+<tr>
+<td><strong>Dynamics 365 Sales-Verbindung aktivieren</strong></td>
+<td>Aktivieren Sie die Verbindung mit Dynamics 365 Sales.</td>
+</tr>
+<tr>
+<td><strong>Dynamics 365 SDK Version</strong></td>
+<td>Dies ist nur relevant, wenn Sie eine Integration mit einer lokalen Version von Dynamics 365 Sales vornehmen. Dieses SDK ist das Dynamics 365 Software Development Kit (auch als Xrm bezeichnet), das Sie für die Verbindung von Business Central mit Dynamics 365 Sales verwenden. Die Version muss mit der SDK-Version kompatibel sein, die von Dynamics 365 Sales verwendet wird, und der Version von Dynamics 365 Sales entsprechen oder neuer sein.</td>
+</tr>
+<tr>
+<td><strong>Bidirektionale Synchronisierung von Verkaufsaufträgen</strong></td>
+<td>Synchronisieren Sie Verkaufsaufträge in beide Richtungen. Um mehr über diese Option zu erfahren, gehen Sie zu  <a href="#single-and-bi-directional-synchronization-of-sales-orders">Einfache und bidirektionale Synchronisierung von Verkaufsaufträgen</a>.<br><br><strong>Hinweis:</strong> Sie können diese Option nicht verwenden, wenn Sie die Option <strong>Veraltete Verkaufsauftragsintegration aktivieren</strong> verwenden. Die beiden Einstellungen schließen sich gegenseitig aus.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie auch mit  Microsoft Dynamics 365 Field Service integrieren möchten, bietet Anleitung ein optionales Schritt, das hilfreich sein kann. Weitere Informationen zur Integration mit Field Service finden Sie unter  <a href="admin-integrate-field-service.html">Integrieren mit Microsoft Dynamics 365 Field Service</a>.</p>
+</div>
+<h3 id="connection-settings-on-the-microsoft-dynamics-365-connection-setup-page">Verbindungseinstellungen auf der Seite Microsoft Dynamics 365 Verbindungseinrichtung</h3>
+<p>Geben Sie die folgenden Informationen über die Verbindung von Dynamics 365 Sales mit Business Central ein.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dynamics 365 Sales URL</strong></td>
+<td>Die URL Ihrer Dynamics 365 Sales-Instanz. Mit dieser Einstellung können Benutzer die Datensätze in Business Central öffnen, die den Datensätzen in Dynamics 365 Sales entsprechen. Zum Beispiel ein Konto oder ein Produkt. Die Business Central-Datensätze werden in Business Central geöffnet.</td>
+</tr>
+<tr>
+<td><strong>Automatische Synchronisierung der Artikelverfügbarkeit</strong></td>
+<td>Legt fest, dass die Warteschlange für die Artikelverfügbarkeit geplant werden muss. Die Auftragswarteschlange wird alle 30 Minuten ausgeführt und aktualisiert die Verfügbarkeit der gekoppelten Artikel.</td>
+</tr>
+<tr>
+<td><strong>Dynamics 365 SDK Version</strong></td>
+<td>Wenn Sie eine Integration mit einer lokalen Version von  Dynamics 365 Sales durchführen, verwenden Sie das Dynamics 365 Software Development Kit (auch als Xrm bezeichnet), um Verbinden Business Central an Dynamics 365 Sales anzuschließen. Die Version, die Sie auswählen, muss mit der SDK-Version kompatibel sein, die von Dynamics 365 Sales verwendet wird. Diese Version gleicht der Version, die von Dynamics 365 Sales verwendet wird oder ist neuer.</td>
+</tr>
+</tbody>
+</table>
+<p>Geben Sie zusätzlich zu diesen Einstellungen die folgenden Einstellungen für  Dynamics 365 Sales ein.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Auftragsintegration ist aktiviert</strong></td>
+<td>Ermöglichen Sie es Benutzern, Verkaufsaufträge und aktivierte Angebote in Dynamics 365 Sales zu senden und sie dann in Business Central anzuzeigen und zu bearbeiten. Mit dieser Einstellung wird der Prozess in Dynamics 365 Sales integriert. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/customer-engagement/sales-enterprise/developer/enable-sales-order-processing-integration">Integration der Verarbeitung von Verkaufsaufträgen aktivieren</a>.</td>
+</tr>
+<tr>
+<td><strong>Verkaufsaufträge automatisch erstellen</strong></td>
+<td>Erstellen Sie einen Verkaufsauftrag in Business Central, wenn ein Benutzer einen in Dynamics 365 Sales erstellt und sendet.</td>
+</tr>
+<tr>
+<td><strong>Verkaufsangebote automatisch verarbeiten</strong></td>
+<td>Verarbeiten Sie ein Verkaufsangebot in Business Central, wenn ein Benutzer eins in Dynamics 365 Sales erstellt und aktiviert. Weitere Informationen finden Sie im Abschnitt <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/marketing-integrate-dynamicscrm?tabs=new-experience#handling-sales-quotes-data">Handhaben von Verkaufsangebotsdaten</a>.</td>
+</tr>
+<tr>
+<td><strong>Bidirektionale Synchronisierung von Verkaufsaufträgen</strong></td>
+<td>Synchronisieren Sie Verkaufsaufträge in beide Richtungen. Weitere Informationen zu dieser Option finden Sie unter <a href="#single-and-bi-directional-synchronization-of-sales-orders">Einzel- und bidirektionale Synchronisierung von Verkaufsaufträgen</a>.</td>
+</tr>
+</tbody>
+</table>
+<!--
+### <a name="user-account-settings"></a>User Account Settings
+Integration with Business Central through Dataverse requires an administrator user account and an account that is used only for the connection between the apps. This account is called the "integration user." When you install the CDS Base Integration Solution, permissions for the integration user account are configured in [!INCLUDE[crm_md](includes/crm_md.md)]. If those permissions are changed you might need to reset them. You can do that by reinstalling the Integration Solution or by manually resetting them. The following tables list the minimum permissions for the user accounts in [!INCLUDE[crm_md](includes/crm_md.md)].  -->
+<h3 id="single-and-bi-directional-synchronization-of-sales-orders">Einzel- und bidirektionale Synchronisierung von Verkaufsaufträgen</h3>
+<p>Beim Einrichten Ihrer Integration gibt es Optionen, die die Richtung steuern, in die Sie Verkaufsaufträge synchronisieren und wie Sie sie übermitteln.</p>
+<p>Mit der Option <strong>Bidirektionale Synchronisierung von Verkaufsaufträgen</strong> können Sie Verkaufsaufträge aus Sales mit Business Central synchronisieren und umgekehrt. Wenn ein Kunde beispielsweise seine Meinung hinsichtlich des Produkts oder der Menge in Dynamics 365 Sales ändert, können Sie den Verkaufsbeleg archivieren und einen neuen Beleg in Business Central erstellen. Dasselbe gilt für Änderungen in Business Central. Wenn sich beispielsweise Preise, Steuerbeträge oder voraussichtliche Warenausgangsdaten ändern, werden die Änderungen mit Dynamics 365 Sales synchronisiert. Die bidirektionale Synchronisierung hilft Ihren Vertriebsmitarbeitenden, über die neuesten Änderungen und den Status von Verkaufsaufträgen auf dem Laufenden zu bleiben.</p>
+<p>Bei der bidirektionalen Synchronisierung machen Sie Verkaufsaufträge für die Synchronisierung verfügbar, wenn Sie ihren Status in Sales in <strong>Übermittelt</strong> ändern. Wenn Sie diesen Status festlegen, können Sie die Informationen in den Zeilen des Auftrags nicht mehr ändern. Beim Synchronisieren wird der Auftrag an Business Central mit dem Status <strong>Freigegeben</strong> übertragen. Wenn ein Fehler auftritt, können Sie den Auftrag auf <strong>Offen</strong> (in Business Central) oder <strong>Aktiv</strong> (in Sales) zurücksetzen und dann Zeilen hinzufügen oder löschen, um den Fehler zu korrigieren. Anschließend können Sie den Auftrag erneut einreichen.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie die Option <strong>Bidirektionale Synchronisierung von Verkaufsaufträgen</strong> aktivieren, erstellt Business Central einen Datensatz auf der Seite <strong>Verkaufsauftragsarchive</strong>, wenn Sie Informationen zu einem Auftrag veröffentlichen oder ändern. Die archivierten Versionen können beispielsweise nützlich sein, um sich den Verlauf eines Auftrags anzusehen.</p>
+</div>
+<p>Die Option <strong>Veraltete Verkaufsauftragsintegration aktivieren</strong> synchronisiert nur von Sales nach Business Central. Für diese Option verwenden Sie die Aktion <strong>Übermitteln</strong> in Sales, um Aufträge für die Synchronisierung verfügbar zu machen. Wenn Sie dies tun, können Sie keine Informationen in dem Auftrag mehr ändern. Beim Synchronisieren wird der Auftrag an Business Central mit dem Status <strong>Freigegeben</strong> übertragen.</p>
+<p>Um diese Option nutzen zu können, müssen Sie Anmeldeinformationen für ein Administrator-Benutzerkonto in Dynamics 365 Sales angeben. Weitere Informationen finden Sie im Abschnitt <a href="marketing-integrate-dynamicscrm.html#handling-sales-order-data">Verarbeiten von Verkaufsauftragsdaten</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Optionen <strong>Bidirektionale Synchronisierung von Verkaufsaufträgen</strong> und <strong>Veraltete Verkaufsauftragsintegration aktivieren</strong> schließen sich gegenseitig aus. Sie können nicht beide Optionen gleichzeitig nutzen.</p>
+</div>
+<p>Bei beiden Optionen zeigt Business Central alle Verkaufsaufträge mit dem Status <strong>Übermittelt</strong> auf der Seite <strong>Aufträge – Microsoft Dynamics 365 Sales</strong>.</p>
+<h3 id="standard-sales-entity-mapping-for-synchronization">Standard-Sales-Entitätszuordnungen für die Synchronisierung</h3>
+<p>Entitäten in Dynamics 365 Sales, wie z.B. Bestellungen, werden mit äquivalenten Typen von Tabellen in Business Central integriert, wie z.B. Debitorenaufträge. Um mit Dynamics 365 Sales-Daten zu arbeiten, richten Sie Verknüpfungen, auch Kopplungen genannt, zwischen Tabellen in Dynamics 365 Sales und Business Central ein.</p>
+<p>Die folgende Tabelle zeigt die standardmäßige Zuordnung zwischen Tabellen in Business Central und Business Central, die Dynamics 365 Sales bietet.</p>
+<table>
+<thead>
+<tr>
+<th>Business Central</th>
+<th>Dynamics 365 Sales</th>
+<th>Synchronisierungsrichtung</th>
+<th>Standardfilter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Einheit</td>
+<td>Einheiten-Gruppe</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td></td>
+</tr>
+<tr>
+<td>Artikel</td>
+<td>Produkt</td>
+<td>Business Central -&gt; Dynamics 365 Sales und Dynamics 365 Sales -&gt; Business Central</td>
+<td>Vertriebskontaktfilter: <strong>Produkt-Typ</strong> ist <strong>Verkaufs-Lager</strong></td>
+</tr>
+<tr>
+<td>Ressource</td>
+<td>Produkt</td>
+<td>Business Central -&gt; Dynamics 365 Sales und Dynamics 365 Sales -&gt; Business Central</td>
+<td>Vertriebskontaktfilter: <strong>Produkt-Typ</strong> ist <strong>Service</strong></td>
+</tr>
+<tr>
+<td>Artikeleinheit</td>
+<td>CRM-Einheit</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td></td>
+</tr>
+<tr>
+<td>Ressourceneinheit</td>
+<td>CRM-Einheit</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td></td>
+</tr>
+<tr>
+<td>Einheiten-Gruppe</td>
+<td>CRM Uomschedule</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td></td>
+</tr>
+<tr>
+<td>Debitorenpreisgruppe</td>
+<td>VK-Preisliste</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td></td>
+</tr>
+<tr>
+<td>Verkaufspreis</td>
+<td>Produkt-Preisliste</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td>Business Central Kontaktfilter: <strong>Verkaufscode</strong> ist nicht leer, <strong>Verkaufstyp</strong> ist <strong>Kundenpreisgruppe</strong></td>
+</tr>
+<tr>
+<td>Verkaufschance</td>
+<td>Verkaufschance</td>
+<td>Business Central -&gt; Dataverse und Dynamics 365 Sales -&gt; Business Central</td>
+<td></td>
+</tr>
+<tr>
+<td>Verkaufsrechnungskopf</td>
+<td>Fakturieren</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td></td>
+</tr>
+<tr>
+<td>Verkaufsrechnungszeile</td>
+<td>Rechnungsprodukt</td>
+<td>Business Central -&gt; Dynamics 365 Sales</td>
+<td></td>
+</tr>
+<tr>
+<td>Verkaufsauftrags-Kopf</td>
+<td>Verkaufsauftrag</td>
+<td>Business Central -&gt; Dynamics 365 Sales und Dynamics 365 Sales -&gt; Business Central <br><br> Um in beide Richtungen zu synchronisieren, müssen Sie den Schalter <strong>Bidirektionale Synchronisierung von Verkaufsaufträgen</strong> auf der Seite <strong>Dynamics 365 Connection Einrichtung</strong> aktivieren.</td>
+<td>Business Central Verkaufskopfzeilenfilter:  <strong>Dokumenttyp</strong> ist <strong>Bestellung</strong> und <strong>Status</strong> ist <strong>Freigegeben</strong></td>
+</tr>
+<tr>
+<td>Hinweise zu Verkaufsaufträgen</td>
+<td>Hinweise zu Verkaufsaufträgen</td>
+<td>Business Central -&gt; Dynamics 365 Sales und Dynamics 365 Sales -&gt; Business Central</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Zuordnungen für die Tabellen „Artikeleinheit“, „Ressourceneinheit“ und „Einheitengruppe“ sind nur verfügbar, wenn Ihre Administration den Umschalter <strong>Einheitengruppenzuordnung</strong> auf der Seite <strong>Microsoft Dynamics 365-Verbindungseinrichtung</strong> aktiviert hat. Weitere Informationen finden Sie unter <a href="admin-prepare-dynamics-365-for-sales-for-integration.html#synchronize-items-and-resources-with-products-with-different-units-of-measure">Synchronisieren von Artikeln und Ressourcen mit Produkten in verschiedenen Einheiten</a>.</p>
+</div>
+<h2 id="synchronize-items-and-resources-with-products-with-different-units-of-measure">Artikel und Ressourcen mit Produkten in verschiedenen Einheiten synchronisieren</h2>
+<p>Unternehmen produzieren oder kaufen die Artikel oft in einer Einheit und verkaufen sie dann in einer anderen. Um Artikel zu synchronisieren, die mehrere Einheiten verwenden, müssen Sie den Umschalter <strong>Einheitengruppenzuordnung</strong> auf der Seite <strong>Microsoft Dynamics 365-Verbindungseinrichtung</strong> aktivieren. </p>
+<p>Wenn Sie die Funktion Update einschalten, wird eine neue Einheitentabelle erstellt und jedem Artikel und jeder Ressource in Business Central zugewiesen. Über die Tabellen können Sie die Tabellen Einheitengruppe, Artikel Einheiten und Ressourcen Einheiten in Business Central der Dynamics 365 Sales Einheitengruppe in Dynamics 365 Sales zuordnen. Das folgende Bild zeigt die Zuordnungen.</p>
+<p>:::image type=&quot;content&quot; source=&quot;media/unit group 1.png&quot; alt-text=&quot;Tabellenzuordnungen für Einheitengruppen&quot;:::</p>
+<p>Sie können für jede Einheitengruppe mehrere Einheiten erstellen und die Gruppen den Produkten in Dynamics 365 Sales zuweisen. Anschließend können Sie die Produkte mit Artikeln und Ressourcen in Business Central synchronisieren. Sie können Artikeleinheiten oder Ressourceneinheiten manuell mit einer Einheitengruppe koppeln. Wenn Sie dies tun und die Einheitengruppe für den Artikel oder die Ressource nicht mit einer Einheitengruppe in  Dynamics 365 Sales verknüpft ist, beispielsweise weil die Einheitengruppe nicht vorhanden war, Business Central wird die Einheitengruppe automatisch in  Dynamics 365 Sales erstellt.</p>
+<h3 id="map-items-and-resources-to-products">Artikel und Ressourcen zu Produkten zuordnen</h3>
+<p>Wenn Sie den Umschalter <strong>Einheitengruppenzuordnung</strong> auf der Seite <strong>Microsoft Dynamics 365-Verbindungseinrichtung</strong> einschalten, geschieht Folgendes:</p>
+<ul>
+<li>Für Elemente und Ressourcen werden neue Zuordnungen erstellt.</li>
+<li>Vorhandene Zuordnungen werden gelöscht. <!--which mappings?--></li>
+<li>Bei einer Datenaktualisierung werden Einheitengruppen für Artikel und Ressourcen erstellt.</li>
+</ul>
+<p>Um die neuen Zuordnungen zu verwenden, müssen Sie Einheitengruppen, Artikeleinheiten und Ressourceneinheiten synchronisieren. Sie müssen auch Elemente und Ressourcen neu synchronisieren. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Dynamics 365 Sales erlaubt Ihnen nicht, eine Einheitengruppe für ein Produkt zu ändern. Daher müssen Sie Ihre Produkte stilllegen und die Artikel und Ressourcen entkoppeln und dann synchronisieren, indem Sie neue Produkte in Dynamics 365 Sales erstellen. </p>
+</div>
+<p>Die folgenden Schritte beschreiben die Schritte zum Starten der Zuordnung von Einheitengruppen:</p>
+<ol>
+<li>Stellen Sie sicher, dass Produkte in Dynamics 365 Sales nicht mit Artikeln oder Ressourcen in Business Central gekoppelt sind. Wenn ja, wechseln Sie zu den Seiten <strong>Artikel</strong> und/oder <strong>Ressourcen</strong>, und verwenden Sie die Filteroptionen, um die gekoppelten Datensätze auszuwählen. Verwenden Sie dann die Aktion <strong>Dynamics 365 Sales</strong>, und wählen Sie <strong>Entkoppeln</strong> aus. Diese Aktion plant einen Hintergrundjob ein, um die Datensätze zu entkoppeln. Während der Vorgang ausgeführt wird, können Sie seinen Status überprüfen, indem Sie die Aktion <strong>Synchronisationsprotokoll</strong> verwenden. Weitere Informationen finden Sie unter <a href="admin-how-to-couple-and-synchronize-records-manually.html">Koppeln und Synchronisieren</a>. </li>
+<li><p>Da neue Produkte mit neuen Einheitengruppen erstellt werden, führen Sie zur Vermeidung doppelter Namen einen der folgenden Schritte aus: Dynamics 365 Sales </p>
+<ul>
+<li>Benennen Sie Ihre Produkte um und entfernen Sie sie dann in Dynamics 365 Sales. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/sales-enterprise/retire-product">Produkte zurückziehen (Vertriebshub)</a>. Melden Sie sich zur Massenbearbeitung Ihrer Produkte in Microsoft Excel bei Power Apps an, wählen Sie Ihre Umgebung aus, wechseln Sie zur Tabelle <strong>Produkt</strong>, und wählen Sie dann die Registerkarte <strong>Daten</strong> aus. Löschen Sie alle angewendeten Filter. In der Gruppe <strong>Daten</strong> wähle Sie <strong>Daten in Excel bearbeiten</strong> aus. Fügen Sie den gekoppelten Produkten ein Präfix oder Suffix hinzu, und entfernen Sie sie dann.<ul>
+<li>Stellen Sie Ihre Produkte ein und löschen Sie sie. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Befolgen Sie diese Schritte zum Synchronisieren von <strong>Einheitengruppen</strong>, <strong>Einheit</strong>, <strong>Produkte</strong> und <strong>Ressourcen</strong>:</p>
+<ol>
+<li>Öffnen Sie in Business Central die Seite <strong>Dynamics 365 Sales-Verbindungseinrichtung</strong>.</li>
+<li>Verwenden Sie <strong>Vollständige Synchronisierung ausführen</strong> zum Öffnen der Seite <strong>Dataverse Vollständige Synchronisierungsprüfung</strong>.</li>
+<li>Für die Zuordnungen <strong>ARTIKEL ME</strong>, <strong>RESSOURCE ME</strong> und <strong>EINHEITENGRUPPE</strong> wählen Sie die Aktion <strong>Vollständige Synchronisierung empfehlen</strong> aus.</li>
+<li><p>Wählen Sie die Aktion <strong>Alle synchronisieren</strong> aus.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Zuordnungen, die noch nicht vollständig synchronisiert wurden, werden durch diese Aktion vollständig synchronisiert. Um zu verhindern, dass diese Zuordnungen synchronisiert werden, löschen Sie die Zuordnungen von der Seite. Dadurch werden sie nur aus der aktuellen vollständigen Synchronisierung entfernt und die Zuordnungen nicht gelöscht.</p>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Wählen Sie die Zuordnung <strong>ARTIKEL-PRODUKT</strong> und dann <strong>Neustarten</strong>. Neustart erstellt neue Produkte aus den Artikeln in Dynamics 365 Sales und weist eine neue, für den Artikel spezifische Einheitsgruppe zu.</p>
+</li>
+<li>Wählen Sie die Zuordnung <strong>RESSOURCE-PRODUKT</strong> und dann <strong>Neustarten</strong>. Neustart erstellt neue Produkte aus den Ressourcen in Dynamics 365 Sales und weist eine neue, ressourcenspezifische Einheitsgruppe zu.</li>
+</ol>
+<h3 id="synchronization-rules">Synchronisierungsregeln</h3>
+<p>Die folgende Tabelle listet die Regeln auf, die die Synchronisation zwischen Dynamics 365 Sales und Business Central steuern. Diese Regeln gelten zusätzlich zu den für Dataverse definierten Regeln, die ebenfalls gelten. Weitere Informationen finden Sie unter <a href="admin-synchronizing-business-central-and-sales.html#standard-table-mapping-for-synchronization">Standard-Entitätszuordnung für die Synchronisation</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Änderungen an Daten, die vom Integrationsbenutzerkonto vorgenommen wurden, werden nicht synchronisiert. Daher empfiehlt es sich, bei der Nutzung dieses Kontos keine Daten zu ändern. Weitere Informationen finden Sie unter <a href="admin-setting-up-integration-with-dynamics-sales.html">Einrichten des Benutzerkontos für die Integration in Dynamics 365 Sales</a>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Tisch</th>
+<th>Regel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Einheiten</td>
+<td>Einheiten werden mit Einheitengruppen in Dynamics 365 Sales synchronisiert. Es kann nur eine Einheit in der Einheitengruppe definiert sein.</td>
+</tr>
+<tr>
+<td>Artikel</td>
+<td>Wenn Artikel mit  Dynamics 365 Sales Produkten synchronisiert werden, Business Central wird automatisch eine Preisliste in Dynamics 365 Sales erstellt. Um Synchronisierungsfehler zu vermeiden, sollten Sie diese Preisliste nicht manuell ändern.</td>
+</tr>
+<tr>
+<td>Ressourcen</td>
+<td>Ressourcen werden mit Dynamics 365 Sales-Produkten synchronisiert, die den Produkttyp-Service haben.</td>
+</tr>
+<tr>
+<td>Debitorenpreisgruppen</td>
+<td>Debitorenpreisgruppen werden mit Verkaufspreislisten synchronisiert.</td>
+</tr>
+<tr>
+<td>Verkaufspreise</td>
+<td>Verkaufspreise, die Verkaufsart Debitorenpreisgruppe haben und einen definierten Verkaufscode haben werden mit Dynamics 365 Sales-Preislistenzeilen synchronisiert</td>
+</tr>
+<tr>
+<td>Verkaufschancen</td>
+<td>Chancen werden mit Dynamics 365 Sales-Chancen synchronisiert. Der Verkäufer-Codewert definiert den Besitzer der gekoppelten Tabelle in Dynamics 365 Sales.</td>
+</tr>
+<tr>
+<td>Gebuchte Verkaufsrechnungen</td>
+<td>Gebuchte Verkaufsrechnungen werden mit Verkaufsrechnungen synchronisiert. Bevor eine Rechnung synchronisiert werden kann, ist es besser, alle anderen Tabellen zu synchronisieren, die an der Rechnung beteiligt sein können, von Verkäufern bis zu Preislisten. Der Verkäufer-Codewert im Rechnungskopf definiert den Besitzer der gekoppelten Tabelle im Verkauf.</td>
+</tr>
+<tr>
+<td>Aufträge</td>
+<td>Wenn Sie die Verkaufsauftragsintegration aktivieren und Verkaufsaufträge in  Business Central  freigeben, die aus übermittelten Verkaufsaufträgen in  Dynamics 365 Sales erstellt wurden, werden diese mit Verkaufsaufträgen in  Dynamics 365 Sales synchronisiert. Bevor Sie Bestellungen synchronisieren, empfehlen wir Ihnen, zunächst alle an der Bestellung beteiligten Tabellen zu synchronisieren. Beispielsweise Verkäufer und Preislisten. Das Verkäufer-Codefeld im Auftragskopf definiert den Besitzer der gekoppelten Tabelle in Dynamics 365 Sales.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synchronization-jobs-for-a-sales-integration">Synchronisierungsaufträge für eine Sales-Integration</h3>
+<p>Die Jobs werden in der folgenden Reihenfolge ausgeführt, um Kopplungsabhängigkeiten zwischen Tabellen zu vermeiden. Es sind mehr Aufträge aus Dataverse verfügbar. Weitere Informationen finden Sie unter <a href="admin-job-queues-schedule-tasks.html">Vorgehensweise: Projektwarteschlangen nutzen, um Aufgaben zu planen</a></p>
+<ol>
+<li>UNITOFMEASURE - Dynamics 365 Sales Synchronisierungsauftrag  </li>
+<li>RESSOURCE-PRODUKT - Dynamics 365 Sales Synchronisierungsauftrag  </li>
+<li>ARTIKEL - PRODUKT - Dynamics 365 Sales Synchronisierungsauftrag  </li>
+<li>CUSTPRCGRP-PRICE- Synchronisierungsauftrag „Dynamics 365 Sales“.</li>
+<li>SALESPRC-PRODPRICE - Synchronisierungsauftrag „Dynamics 365 Sales“.</li>
+<li>POSTEDSALESINV-INV - Dynamics 365 Sales-Synchronisierungsauftrag.</li>
+</ol>
+<h3 id="default-synchronization-job-queue-entries">Standard-Synchronisations-Projektwarteschlangeneinträge</h3>
+<p>Die folgende Tabelle beschreibt die Standard-Synchronisierungsaufträge für Dynamics 365 Sales.  </p>
+<table>
+<thead>
+<tr>
+<th>Aufgabenwarteschlangenposten</th>
+<th>Beschreibung</th>
+<th>Richtung</th>
+<th>Integrationstabellenzuordnung</th>
+<th>Standard-Synchronisationsfrequenz (Minuten)</th>
+<th>Standard-Inaktivitätsruhezustand (Minuten)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNITOFMEASURE - Dynamics 365 Sales Synchronisierungsauftrag</td>
+<td>Synchronisiert Dynamics 365 Sales-Einheitsgruppen mit Business Central-Einheiten.</td>
+<td>Von Business Central nach Dynamics 365 Sales</td>
+<td>EINHEIT</td>
+<td>30</td>
+<td>720<br> (12 Std.)</td>
+</tr>
+<tr>
+<td>RESSOURCE-PRODUCT - Dynamics 365 Sales Vertriebssynchronisierungsauftrag</td>
+<td>Synchronisiert Dynamics 365 Sales-Produkte mit Business Central-Ressourcen.</td>
+<td>Von Business Central nach Dynamics 365 Sales</td>
+<td>RESSOURCE – PRODUKT</td>
+<td>30</td>
+<td>720<br> (12 Std.)</td>
+</tr>
+<tr>
+<td>ARTIKEL - PRODUKT - Dynamics 365 Sales Synchronisierungsauftrag</td>
+<td>Synchronisiert Dynamics 365 Sales-Produkte mit Business Central-Artikeln.</td>
+<td>Von Business Central nach Dynamics 365 Sales</td>
+<td>ARTIKEL/PRODUKT</td>
+<td>30</td>
+<td>1440<br> (24 Std.)</td>
+</tr>
+<tr>
+<td>CUSTPRCGRP-PREIS - Dynamics 365 Sales Synchronisierungsauftrag</td>
+<td>Synchronisiert Dynamics 365 Sales-Verkaufspreislisten mit Business Central-Debitorenpreisgruppen.</td>
+<td></td>
+<td>DEBITORENPREISGRUPPEN – VERKAUFSPREISLISTEN</td>
+<td>30</td>
+<td>1440<br> (24 Std.)</td>
+</tr>
+<tr>
+<td>SALESPRC-PRODUCTPRICE - Dynamics 365 Sales Synchronisierungsauftrag</td>
+<td>Synchronisiert Dynamics 365 Sales-Produktpreise mit Business Central-Verkaufspreisen.</td>
+<td></td>
+<td>PRODUKTPREIS – VERKAUFSPREIS</td>
+<td>30</td>
+<td>1440<br> (24 Std.)</td>
+</tr>
+<tr>
+<td>POSTEDSALESINV-INV - Dynamics 365 Sales Synchronisierungsauftrag</td>
+<td>Synchronisiert Dynamics 365 Sales-Rechnungen mit gebuchten Business Central-Verkaufsrechnungen.</td>
+<td>Von Business Central nach Dynamics 365 Sales</td>
+<td>RECHNUNGEN – GEBUCHTE VERKAUFSRECHNUNGEN</td>
+<td>30</td>
+<td>1440<br> (24 Std.)</td>
+</tr>
+<tr>
+<td>Debitorenstatistik - Dynamics 365 Sales Synchronisierungsauftrag</td>
+<td>Aktualisiert Dynamics 365 Sales-Konten mit den neuesten Business Central-Debitorendaten. In Dynamics 365 Sales erscheinen diese Informationen im <strong>Business Central-Kontostatistik</strong>-Schnellansichtsformular von Konten, die mit Business Central-Debitoren gekoppelt werden.<br><br> Diese Daten können auch manuell für jeden Debitorendatensatz aktualisiert werden. Weitere Informationen finden Sie unter <a href="admin-how-to-couple-and-synchronize-records-manually.html">Datensätze manuell koppeln und synchronisieren</a>. </br></br><strong>Hinweis:</strong> Dieser Projektwarteschlangeneintrag ist nur relevant, wenn die Business Central-Integrationslösung in Dynamics 365 Sales installiert ist.</td>
+<td>Nicht anwendbar</td>
+<td>Nicht anwendbar</td>
+<td>30</td>
+<td>Nicht anwendbar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="connect-to-on-premises-versions-of-business-central-2019-release-wave-1-and-microsoft-dynamics-nav-2018">Lokale Versionen von Business Central 2019 des Veröffentlichungszyklus 1 und Microsoft Dynamics NAV 2018 verbinden</h2>
+<p>Das Microsoft Power Platform Team <a href="https://learn.microsoft.com/de-de/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse">hat bekannt gegeben,</a> dass der Office 365 Authentifizierungstyp veraltet ist. Wenn Sie vor Ort eine Version vor  Business Central 2019 Veröffentlichungszyklus 1 verwenden, müssen Sie den OAuth-Authentifizierungstyp verwenden, um Verbinden mit  Business Central online zu verbinden. Dynamics 365 Sales  Die Schritte in diesem Abschnitt beschreiben, wie Sie die folgenden Produktversionen verbinden:</p>
+<ul>
+<li>Business Central 2019 Freigabewelle 1</li>
+<li>Microsoft Dynamics NAV 2018</li>
+</ul>
+<h3 id="prerequisites">Voraussetzungen</h3>
+<ul>
+<li>Sie müssen ein Microsoft Azure Abonnement haben. Für die Anwendungsregistrierung ist ein Testkonto gültig.</li>
+<li><p>Dynamics 365 Sales ist für die Verwendung eines der folgenden Authentifizierungstypen konfiguriert:</p>
+<ul>
+<li><p>Office 365 (Vermächtnis)</p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Ab April 2022 wird Office365 (Legacy) nicht mehr unterstützt. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse">Wichtige Änderungen (Abschreibungen) über Power Apps, Power Automate und Customer Engagement-Apps</a>.</p>
+</div>
+</li>
+<li><p>OAuth</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="connect-business-central-2019-release-wave-1-and-dynamics-nav-2018">Business Central 2019 Veröffentlichungszyklus 1 und Dynamics NAV 2018</h3>
+<ol>
+<li><p>Importieren Sie Microsoft Dynamics 365 Business Central Integrationslösung in Ihre Dynamics 365 Sales Umgebung. Die Integrationslösung ist im Ordner CrmCustomization auf Ihrer Business Central oder Dynamics NAV 2018 Installations-DVD verfügbar. Abhängig von Ihrer Produktversion importieren Sie eine der folgenden Lösungen:</p>
+<ul>
+<li>Für Business Central enthält der Ordner die DynamicsNAVIntegrationSolution_v9 und DynamicsNAVIntegrationSolution_v91. Lösungen. Die Lösung, die Sie importieren sollten, hängt von der Version von Dynamics 365 Sales ab, mit der Sie sich verbinden. Dynamics 365 Sales online erfordert die DynamicsNAVIntegrationSolution_v91 Integrationslösung.</li>
+<li>Für Dynamics NAV 2018, installieren Sie die Lösung DynamicsNAVIntegrationSolution.</li>
+</ul>
+</li>
+<li><p>Erstellen Sie einen nicht interaktiven Integrationsbenutzer in Ihrer Dynamics 365 Sales Umgebung, und weisen Sie dem Benutzer die folgenden Sicherheitsrollen zu. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/power-platform/admin/create-users-assign-online-security-roles#create-a-non-interactive-user-account">Erstellen eines nicht interaktiven Benutzerkontos</a>.</p>
+<ul>
+<li>Dynamics 365 Business Central Integrations-Administrator</li>
+<li>Dynamics 365 Business Central Integration Benutzer</li>
+</ul>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Dieser Benutzer darf nicht über die Sicherheitsrolle des Systemadministrators verfügen. Sie können das Systemadministratorkonto auch nicht als Integrationsbenutzer verwenden.</p>
+</div>
+</li>
+<li><p>Erstellen Sie im Azure-Portal eine App-Registrierung für Business Central. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/powerapps/developer/data-platform/walkthrough-register-app-azure-active-directory">Registrieren einer Anwendung in Microsoft Entra-ID</a>. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wir empfehlen, dass Sie die App im gleichen Mandant wie Ihre Dataverse-Umgebung registrieren, damit Sie nicht zustimmen müssen, dass die App auf die Umgebung zugreifen darf. Wenn Sie die App in einer anderen Umgebung registrieren, müssen Sie sich mit dem Administratorkonto für Ihre Dataverse-Umgebung bei Microsoft Entra-ID anmelden und die Zustimmung erteilen.</p>
+<p>Außerdem darf die App, die Sie registrieren, kein Geheimnis haben. Das Verbinden einer App mit einem Geheimnis mit Dataverse ist nur in Business Central 2020 Release Wave 1 und später verfügbar.</p>
+</div>
+</li>
+<li><p>Führen Sie abhängig von Ihrer Produktversion einen der folgenden Schritte aus:</p>
+<ul>
+<li>In Business Central suchen Sie nach <strong>Microsoft Dynamics 365 Verbindung einrichten</strong> und wählen Sie dann den entsprechenden Link. </li>
+<li>Suchen Sie in Dynamics NAV 2018 nach <strong>Microsoft Dynamics 365 for Sales Verbindungseinrichtung</strong>, und wählen Sie dann den entsprechenden Link.</li>
+</ul>
+</li>
+<li><p>Wählen Sie im Feld <strong>Authentifizierungstyp</strong> die Option für OAuth. </p>
+</li>
+<li><p>Wählen Sie die CRM SDK-Version aus, die der in Schritt 1 importierten Lösungsversion entspricht.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Dieser Schritt ist nur für Business Central relevant.</p>
+</div>
+</li>
+<li><p>Geben Sie die URL Ihrer Dynamics 365 Sales-Umgebung ein, und geben Sie dann den Benutzernamen und das Kennwort für den Integrationsbenutzer ein. </p>
+<ul>
+<li>Verwenden Sie in Business Central das Feld <strong>Server-Adresse</strong>.</li>
+<li>Verwenden Sie in Dynamics NAV 2018 das Feld <strong>Dynamics 365 Sales URL</strong>.</li>
+</ul>
+</li>
+<li><p>In dem Feld <strong>Verbindungszeichenfolge</strong> geben Sie im Feld die ID der App-Registrierung an. Dieses Feld enthält zwei Token, in denen die ID Ihrer Anwendung angegeben werden soll.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>appId</strong></td>
+<td>Stellen Sie die Anwendungs-ID ein.</td>
+</tr>
+<tr>
+<td><strong>Umleitungs-URL</strong></td>
+<td>Stellen Sie die Anwendungs-ID ein, fügen Sie jedoch den <strong>App: //</strong> Präfix hinzu.</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>Beispiel</strong> Das folgende Beispiel zeigt eine Verbindungszeichenfolge.</p>
+<pre><code>AuthType=OAuth;Username=jsmith@contoso.onmicrosoft.com;Password=****;Url=https://contosotest.crm.dynamics.com;AppId=&lt;your AppId&gt;;RedirectUri=app://&lt;your AppId&gt;;TokenCacheStorePath=;LoginPrompt=Auto
+</code></pre></li>
+<li>Aktivieren Sie die Verbindung.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie eine lokale Instanz mit Dynamics 365 Sales mit einem bestimmten Authentifizierungstyp konfigurieren möchten, füllen Sie die Felder im Inforegister <strong>Authentifizierungstyp-Details</strong> aus. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/powerapps/developer/data-platform/authentication">Authentifizierung mit Microsoft Dataverse-Webdienste</a>. Dieser Schritt ist nicht erforderlich, wenn sie eine Verbindung mit einer Onlineversion von Business Central herstellen.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="admin-setting-up-integration-with-dynamics-sales.html">Einrichten des Benutzerkontos für die Integration in Dynamics 365 Sales</a><br><a href="admin-how-to-set-up-a-dynamics-crm-connection.html">Richten Sie eine Verbindung mit Dynamics 365 Sales</a> ein<br><a href="admin-synchronizing-business-central-and-sales.html">Synchronisieren von Business Central und Dynamics 365 Sales</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/prepare-dynamics-365-for-sales-for-integration">Vorbereiten der Integration in Dynamics 365 Sales für die lokale Integration</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

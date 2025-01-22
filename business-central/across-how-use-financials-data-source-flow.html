@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Power Automate-Flows in Business Central verwenden </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Power Automate-Flows in Business Central verwenden ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="use-power-automate-flows-in-">Power Automate-Flows in Business Central verwenden</h1>
+<!-- Line 41 says there are three cloud flow types, but the table lists four. Should line 41 change? -->
+
+<p>Mit Business Central erhalten Sie eine Lizenz für Microsoft Power Automate. Mit dieser Lizenz können Sie Ihre Business Central-Daten als Teil eines Workflows in Microsoft Power Automate verwenden. Sie erstellen Flows und stellen über den Business Central-Konnektor eine Verbindung zu Ihren Daten aus internen und externen Quellen her.</p>
+<p>Power Automate-Flows werden durch Ereignisse ausgelöst, z. B. wenn ein Datensatz erstellt, geändert oder gelöscht wird. Flows können auch nach einem benutzerdefinierten Zeitplan oder bei Bedarf ausgeführt werden.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Administratoren können den Zugriff auf Power Automate einschränken. Wenn Sie feststellen, dass Sie keinen Zugriff auf einige oder alle der in diesem Artikel beschriebenen Funktionen haben, wenden Sie sich an Ihren Admin. Wenn Sie erfahren möchten, wie Sie als Admin den Zugriff auf Power Automate festlegen können, lesen Sie <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/power-automate-setup">Einrichten der Power Automate-Integration</a>.</p>
+</div>
+<!-- You must have a valid account with both [!INCLUDE[prod_short](includes/prod_short.md)] and Power Automate. --> 
+<div class="TIP"><h5>Tipp</h5><p>Zusätzlich zu Power Automate können Sie die Vorlagen für Genehmigungsworkflow in Business Central verwenden. Obwohl es zwei verschiedene Workflowsysteme sind, wird jede Vorlage für Genehmigungsworkflows, die Sie mit Power Automate erstellen, der Liste von Workflows in Business Central hinzugefügt. Erfahren Sie mehr unter <a href="across-workflow.html">Workflows</a>.</p>
+</div>
+<h2 id="about-power-automate-flows">Über Power Automate Flows</h2>
+<p>Power Automate ist ein Dienst, mit dem Sie automatisierte Workflows (oder Flows) zwischen Apps und Diensten erstellen können, wie Business Central. Power Automate Flows erfordern wenig oder gar keine Programmierkenntnisse. Sie können mit einer Vielzahl von Ereignissen und Reaktionen verknüpft werden, z.B:</p>
+<ul>
+<li>Änderungen eines Datensatzes</li>
+<li>Aktualisierungen externer Dateien</li>
+<li>Eingestellte Dokumente</li>
+<li>Verschiedene Dienste von Microsoft und Drittanbietern, wie Microsoft Outlook, Excel, Dataverse, Teams, SharePoint, Power Apps, und mehr.</li>
+</ul>
+<p>Es gibt drei verschiedene Cloud-Flow-Typen, mit denen Sie arbeiten können:</p>
+<table>
+<thead>
+<tr>
+<th>Flow-Typ</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automatisierter Flow</td>
+<td>Dieser Flow-Typ wird automatisch durch ein Ereignis ausgeführt. In Business Central könnte ein Ereignis sein, wenn ein Datensatz oder ein Dokument erstellt, geändert oder gelöscht wird. So kann z.B. eine neue Verkaufsrechnung einen Flow für eine Genehmigungsanfrage auslösen, für die je nach Antwort des Genehmigers unterschiedliche Ereignisse festgelegt werden können. Bei einer negativen Antwort werden eine Benachrichtigung und eine E-Mail an den Genehmigungsanfragenden gesendet. Eine positive Antwort aktualisiert gleichzeitig eine Excel-Tabelle, die sich in einem SharePoint-Ordner befindet, und sendet ein Update an einen Teams-Chat. Automatisierte Flows können sowohl durch interne als auch durch externe Ereignisse in Business Central gestartet werden.</td>
+</tr>
+<tr>
+<td>Genehmigungsflow</td>
+<td>Genehmigungsflows sind ebenfalls automatisierte Flows in Power Automate, aber sie sind speziell für die Beantragung von Genehmigungen bei Änderungen an Datensätzen und Daten konzipiert. Sie können die Flows in Power Automate als Alternative zu den <a href="across-use-workflows.html">Genehmigungsworkflows verwenden</a>, die Teil von Business Central sind.</td>
+</tr>
+<tr>
+<td>Geplanter Flow</td>
+<td>Diese Art von Flows wird ebenfalls automatisch ausgeführt, allerdings periodisch zu einem bestimmten Datum und einer bestimmten Uhrzeit.</td>
+</tr>
+<tr>
+<td>Direktflow</td>
+<td>Dieser Flow-Typ wird bei Bedarf ausgeführt, d.h. der Benutzer muss ihn manuell über eine Schaltfläche oder Aktion in einer anderen App oder einem anderen Gerät, in diesem Fall dem Business Central-Client, ausführen. Instant Flows funktionieren ähnlich wie Batch-Verknüpfungen, führen mehrere langwierige Schritte mit ein paar Tastendrücken aus und werden von bestimmten Seiten oder Tabellen aus gestartet. Beispielsweise kann ein Flow eine Schaltfläche zum Aktionsmenü auf der Seite <strong>Anbieter</strong> hinzufügen, um Zahlungen an einen Lieferanten zu blockieren und gleichzeitig anpassbare E-Mails an den Kontakt des Lieferanten und die Einkäufer Ihres Unternehmens zu senden sowie den Kontakt in Outlook zu aktualisieren.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="power-automate-features">Power Automate-Funktionen</h2>
+<p>Sie können sich alle Power Automate Flows ansehen, die Ihnen derzeit zur Verfügung stehen, indem Sie sich bei <a href="https://powerautomate.com">Power Automate</a> anmelden und <strong>Meine Flows</strong> aus der Navigationsleiste auf der linken Seite auswählen. Hier finden Sie alle Flows, die Sie bereits selbst erstellt haben, sowie Flows, die Ihnen von einem Admin oder einem Mitarbeiter zur Verfügung gestellt wurden.</p>
+<ul>
+<li><p>Direktflows werden auch für die direkte Ausführung von den meisten Listen-, Karten- und Dokumentseiten in Business Central zur Verfügung gestellt. Sie finden die Direktflows in der Aktionsgruppe <strong>Automatisieren</strong> in der Aktionsleiste der Seiten. Um einen Flow auszuführen, wählen Sie ihn aus und befolgen Sie die angezeigten Anweisungen. Mehr dazu erfahren Sie in den folgenden Abschnitten.</p>
+</li>
+<li><p>Bei automatisierten Flows in Business Central müssen Sie nichts tun, es sei denn, Sie möchten sie ändern oder deaktivieren. Andernfalls funktionieren sie einfach, wenn sie ausgelöst werden. 
+&lt;!--</p>
+</li>
+</ul>
+<h2 id="automated-flows">Automated flows</h2>
+<p>With Power Automate, you can create business flows directly in-house and rely on citizen developers. Automated workflows can be started by both internal and external events in Business Central, and also be set to run periodically. Learn more and get instructions on how to create flows in the <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/automate-workflows">Set Up Automated Workflows</a> article in the administration content.</p>
+<p>--&gt;</p>
+<h2 id="run-instant-flows">Sofortige Flows ausführen</h2>
+<p>Direktflows öffnen sich innerhalb von Business Central online, so dass Sie im Kontext des Geschäftsprozesses bleiben können, in dem Sie sich gerade befinden. Sie können einen Instant Flow aus den meisten Listen, Karten oder Dokumenten ausführen.</p>
+<ol>
+<li><p>Wählen Sie in der Aktionsleiste <strong>Automatisieren</strong> und wählen Sie dann einen Flow aus der Liste der verfügbaren Flows unter der Aktion <strong>Power Automate</strong>.</p>
+<p> :::image type=&quot;content&quot; source=&quot;media/power-automate-instant-menu.svg&quot; alt-text=&quot;Zeigt die Aktion „Automatisieren“ mit Direktflowaktionen an.&quot;:::</p>
+<p> Auf einigen Seiten ist <strong>Automatisieren</strong> unter <strong>Weitere Optionen (...)</strong> verschachtelt. </p>
+</li>
+<li>Füllen Sie im Bereich <strong>Ausführen des Flows</strong> alle erforderlichen Felder aus und wählen Sie dann <strong>Fortfahren</strong>, um den Flow auszuführen.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie das Element <strong>Automatisieren</strong> zum ersten Mal verwenden, sehen Sie möglicherweise nur die Aktion <strong>Gestartet mit Power Automate</strong>. Sie sehen diese Aktion, weil Sie dem Datenschutzhinweis für Microsoft Power Automate nicht zugestimmt haben. Um fortzufahren, wählen Sie <strong>Erste Schritte mit Power Automate</strong> und folgen Sie den Anweisungen, um zuzustimmen oder zu widersprechen.  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/power-automate-action.png&quot; alt-text=&quot;Zeigt das Element Automatisieren in der Aktionsleiste an.&quot;:::</p>
+</div>
+<!--
+
+[!INCLUDE [prod_short](includes/prod_short.md)] can run a Power Automate flow from most list, card, and document pages. Once the admin has connected [!INCLUDE [prod_short](includes/prod_short.md)] with Power Automate, you'll see any flows your organization has added when you choose the **Automate** action on the relevant pages. Instant flows are run without leaving [!INCLUDE [prod_short](includes/prod_short.md)]. Learn more in the [Set Up Automated Workflows](https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/automate-workflows) article in the administration content.
+
+These instant flows open on a page inside [!INCLUDE [prod_short](includes/prod_short.md)] online so you can remain within the context of the business process you were in the middle of. Choose the **Automate** action—on some pages nested under the **More Options** menu—choose the **Power Automate** menu item, then choose the relevant link to trigger the workflow. The connection to Power Automate is already set up for you.
+
+Most flows require you to fill in a field or two before you choose the **Run flow** action.
+
+> [!TIP]
+> If you don't see an **Automate** action, then your [!INCLUDE [prod_short](includes/prod_short.md)] probably hasn't yet been set up to use Power Automate. Learn more from your admin.-->
+<h2 id="create-edit-and-manage-flows">Flows erstellen, bearbeiten und verwalten</h2>
+<p>Das Erstellen neuer Flows oder das Ändern und Verwalten bestehender Flows (wie das Ein- oder Ausschalten) können Sie direkt in Power Automate vornehmen. Sie können jedoch einige dieser Aufgaben über das Menü „Automatisieren“ in Business Central initiieren:</p>
+<p>:::image type=&quot;content&quot; source=&quot;media/power-automate-menu.svg&quot; alt-text=&quot;Zeigt die Aktion Automatisieren in der Aktionsleiste mit erweiterten Aktionen an.&quot;:::</p>
+<ul>
+<li>Um einen automatisierten Flow aus einer Liste, einer Karte oder einer Dokumentseite zu erstellen, wählen Sie <strong>Automatisieren</strong> &gt; <strong>Automatisierten Flow erstellen</strong>.</li>
+<li><p>Um einen Genehmigungsworkflow von einer Karten- oder Dokumentenseite aus zu erstellen, wählen Sie <strong>Automatisieren</strong> &gt; <strong>Genehmigungsflow erstellen</strong>.</p>
+<div class="TIP"><h5>Tipp</h5><p>Diese Aktion ist nur auf Karten- und Dokumenttypseiten verfügbar; keine Listen.</p>
+</div>
+</li>
+<li>Um einen sofortigen Flow aus einer Liste, einer Karte oder einer Dokumentseite zu erstellen, wählen Sie <strong>Automatisieren</strong> &gt; <strong>Aktion auf Grundlage eines Flows erstellen</strong>.</li>
+<li>Um Power Automate von einer Liste, Karte oder Dokumentenseite aus zu öffnen, wählen Sie <strong>Automatisieren</strong> &gt; <strong>Flows verwalten</strong>.
+<!--- To create new flows or manage existing flows from inside [!INCLUDE[prod_short](includes/prod_short.md)], got to the **Manage Power Automate Flows** page.--></li>
+</ul>
+<p>Diese Aufgaben werden normalerweise von einem Admin oder Superuser erledigt. Die Aufgaben erfordern ein breiteres Wissen über die Geschäftsprozesse in Business Central. Weitere Informationen finden Sie in den folgenden Artikeln in der Business Central Dev und IT Pro-Hilfe:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/power-automate-overview">Power Automate-Integration</a></li>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/automate-workflows">Automatisierte Flows erstellen</a> (deckt auch Genehmigungsflows ab)</li>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/instant-flows">Direktflows erstellen</a></li>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/manage-power-automate-flows">Power Automate-Flows verwalten</a>
+&lt;!-- </li>
+</ul>
+<h2 id="add-more-automated-flows-and-instant-flows">Add more automated flows and instant flows</h2>
+<p>You can create flows through the <a href="https://powerautomate.microsoft.com">powerautomate.microsoft.com</a> website. However, if your admin has switched on the capability to run Power Automate flows from inside Business Central online, you can start the process of building a flow from the <strong>Automate</strong> action on the relevant pages, which can be found under the <strong>More Options</strong> menu depending on the page. Then choose the <strong>Power Automate</strong> menu item, and then choose the <strong>Create a flow</strong> action. Power Automate then opens in a new browser tab, and you&#39;re signed in automatically.</p>
+<p>You can find sample templates to adapt to your company and all available trigger events, using both Business Central and external tools, by choosing the <strong>Connectors</strong> menu on the Power Automate website. Learn more about available templates and triggers in the <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/automate-workflows">Set Up Automated Workflows</a> article in the administration content.</p>
+<h2 id="create-and-manage-power-automate-flows">Create and manage Power Automate flows</h2>
+<p>You can create new flows or manage existing Power Automate flows in Business Central on the <strong>Manage Power Automate Flows</strong> page. Learn more in the <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/manage-power-automate-flows">Manage Power Automate Flows</a> article in the administration content.</p>
+<!--
+You can also manage available Power Automate workflows on the **Workflows** page in [!INCLUDE[prod_short](includes/prod_short.md)]. The page lists both the built-in approval and Power Automate workflows, with options for the latter to enable/disable, delete, and view the workflow on the Power Automate website.-->
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="across-flow-troubleshoot.html">Problembehandlung für automatisierte Business Central-Workflows</a><br><a href="ui-get-ready-business.html">Bereiten Sie sich auf das Geschäft vor</a><br><a href="across-workflow.html">Workflows</a><br><a href="across-import-data-configuration-packages.html">Geschäftsdaten aus anderen Finanzsystemen importieren</a><br><a href="ui-define-granular-permissions.html">Benutzende und Gruppen Berechtigungen zuweisen</a><br><a href="setup.html">Business Central einrichten</a><br><a href="finance.html">Finanzmanagement</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/manage-power-automate-flows">Power Automate-Flows verwalten</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/automate-workflows">Automatisierte Workflows einrichten</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/instant-flows">Schalten Sie Direktflows ein</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

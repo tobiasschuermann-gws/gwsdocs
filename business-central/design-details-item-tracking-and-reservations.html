@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Design Details &#8211; Elementverfolgung und Reservierungen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Design Details &#8211; Elementverfolgung und Reservierungen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-item-tracking-and-reservations">Designdetails: Artikelverfolgung und Reservierungen</h1>
+
+<p>Die gleichzeitige Verwendung von Reservierung und spezifischer Artikelnachverfolgung ist selten, da beide eine Kopplung zwischen Vorrat und Bedarf erstellen. Mit Ausnahme von Situationen, in denen ein Kunde oder ein Produktionsplaner eine bestimmte Charge anfragt, ist es selten sinnvoll, Lagerartikel zu reservieren, die bereits Artikelverfolgungsnummern für bestimmte Anwendungen tragen. Obwohl es möglich ist, Artikel zu reservieren, die eine spezifische Artikelnachverfolgung erfordern, sind spezielle Funktionen erforderlich, um Verfügbarkeitskonflikte zwischen Auftragsbearbeitern zu vermeiden, die dieselben artikelnachverfolgten Artikel anfordern.  </p>
+<p>Das Konzept der späten Bindung stellt sicher, dass eine nicht-spezifische Reservierung einer Seriennummer oder einer Chargennummer bis zur Buchung lose verbunden bleibt. Zum Zeitpunkt der Buchung kann das Reservierungssystem nicht-spezifische Reservierungen umändern, um sicherzustellen, dass ein fester Ausgleich anhand der Serien- oder Chargennummer möglich ist, die tatsächlich kommissioniert wurde. Unterdessen wird die Serien- oder Chargennummer für spezifische Reservierungen in anderen Belegen bereitgestellt, die bestimmte Serien- oder Chargennummern erfordern.  </p>
+<p>Eine nicht-spezifische Reservierung ist eine Reservierung, bei der der Benutzer nicht interessiert ist, welcher bestimmte Artikel kommissioniert wird, und eine spezifische Reservierung ist eine, bei der der Benutzer daran interessiert ist.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Funktionalität der späten Bindung bezieht sich nur auf Artikel, die mit spezifischer Artikelverfolgung eingerichtet wurden, sowie nur auf Reservierungen gegen den Bestand, nicht gegen eingehende Beschaffungsaufträge.  </p>
+</div>
+<p>Die Reservierung von Artikelverfolgungsnummern zerfällt in zwei Kategorien, wie in der folgenden Tabelle dargestellt.  </p>
+<table>
+<thead>
+<tr>
+<th>Reservierung</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ausgewählt</td>
+<td>Sie wählen eine bestimmte Serien- oder Chargennummer aus, wenn Sie den Lagerartikel aus einem Bedarf reservieren, beispielsweise einem Verkaufsauftrag.<br><br> Dies stellt eine gewöhnliche Reservierung dar. Dies ist eine feste Verknüpfung zwischen Vorrat und Bedarf, die beide Serien- oder Chargennummern enthalten. <strong>Hinweis</strong>  Der Bedarf trägt Serien- oder Chargennummern. <br><br> Beispielsweise möchten Sie eine Dose blaue Farbe von Charge A reservieren, da der Kunde dies verlangt. Eine Dose blaue Farbe aus Charge A wird an den Kunden geliefert.</td>
+</tr>
+<tr>
+<td>Unspezifisch</td>
+<td>Sie können keine bestimmte Serien- oder Chargennummer auswählen, wenn Sie den Lagerartikel aus einem Bedarf reservieren, beispielsweise einem Verkaufsauftrag.<br><br> Dies ist ein Status, der einem Reservierungsposten für Serien- oder Chargennummern, die nicht speziell ausgewählt werden, auferlegt wird. <strong>Hinweis:</strong>  Der Bedarf trägt keine Serien- oder Chargennummern. <br><br> Sie möchten beispielsweise eine Dose blaue Farbe von einer Charge für Ihren Verkaufsauftrag reservieren. Eine Dose blaue Farbe einer zufälligen Serien- oder Chargennummer wird an den Kunden geliefert.</td>
+</tr>
+</tbody>
+</table>
+<p>Der hauptsächliche Unterschied zwischen spezifischer und unspezifischer Reservierung ist durch das Vorhandensein von Serien- oder Chargennummern auf in der Bedarfsseite definiert, wie in der folgenden Tabelle gezeigt.  </p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Vorrat</th>
+<th>Bedarf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ausgewählt</strong></td>
+<td>Serien- oder Chargennummer</td>
+<td>Serien- oder Chargennummer</td>
+</tr>
+<tr>
+<td><strong>Unspezifisch</strong></td>
+<td>Serien- oder Chargennummer</td>
+<td>Keine Serien- oder Chargennummer.</td>
+</tr>
+</tbody>
+</table>
+<p>Wenn Sie reservieren, werden Lagerbestandsmengen aus einem ausgehenden Beleg für einen Artikel, der die zugeordneten Artikelverfolgungsnummern hat und für bestimmte Artikelverfolgung eingerichtet ist, führt Sie die Seite <strong>Reservierung</strong> durch verschiedene Workflows entsprechend Ihres Bedarfs für eine Serien- oder Chargennummer.  </p>
+<h2 id="specific-reservation">Spezifische Reservierung</h2>
+<p>Wenn Sie <strong>Reservieren</strong> aus der Zeile Ausgehender Beleg aktivieren, erscheint ein Dialogfeld, in dem Sie gefragt werden, ob Sie bestimmte Serien- oder Chargennummern reservieren möchten. Wenn Sie <strong>Ja</strong> auswählen, wird eine Liste mit allen Serien- oder Chargennummern angezeigt, die der Belegzeile zugeordnet sind. Die Seite <strong>Reservierung</strong> wird geöffnet, nachdem Sie eine der Serien- oder Chargennummern auswählen, und Sie können dann unter den ausgewählten Serien- oder Chargennummern in typischer Weise eine Reservierung vornehmen.  </p>
+<p>Wenn einige der speziellen Artikelverfolgungsnummern, die Sie zu reservieren versuchen, in den unspezifischen Reservierungen geführt werden, informiert Sie eine Meldung unten auf der <strong>Reservierungs</strong>-Seite darüber, wie viel der reservierten Gesamtmenge in nichtspezifischen Reservierungen geführt wird, und ob diese Mengen noch verfügbar sind.  </p>
+<h2 id="nonspecific-reservation">Unspezifische Reservierungen</h2>
+<p>Wenn Sie <strong>Nein</strong> im Dialogfeld auswählen, wird die Seite <strong>Reservierung</strong> geöffnet und ermöglicht Ihnen, unter allen Serien- oder Chargennummern im Bestand zu reservieren.  </p>
+<p>Aufgrund der Struktur des Reservierungssystems gilt: Wenn Sie eine nicht-spezifische Reservierung für einen Artikel mit Artikelverfolgung setzen, muss das System bestimmte Artikelposten auswählen, gegen die reserviert werden kann. Da die Artikelposten die Artikelverfolgungsnummern enthalten, reserviert die Reservierung indirekt bestimmte Serien- oder Chargennummern, obwohl dies nicht gewünscht ist. Um diese Situation zu behandeln, versucht das Reservierungssystem, nicht-spezifische Reservierungsposten vor der Buchung umzugruppieren.  </p>
+<p>Die Anwendung reserviert tatsächlich weiterhin für bestimmte Posten, aber dann verwendet es einen Umgruppierungsmechanismus, sobald es speziellen Bedarf für die Chargen- oder Seriennummer in der unspezifischen Reservierung gibt. Dies kann der Fall sein, wenn Sie eine Bedarfstransaktion, beispielsweise einen Verkaufsauftrag, ein FA-Verbrauchs Buch.-Blatt oder einen Umlagerungsauftrag für eine Serien- oder Chargennummer buchen, oder wenn Sie versuchen, die Serien- oder Chargennummer speziell zu reservieren. Die Anwendung gruppiert die Reservierungen um, um die Chargen- oder Seriennummer für den Bedarf oder die spezifische Reservierung zugänglich zu machen, und platziert dadurch eine andere Chargen- oder Seriennummer in die unspezifische Reservierung. Wenn die Menge im Bestand nicht ausreicht, nimmt das System so weit wie möglich Umgruppierungen vor, und Sie erhalten einen Verfügbarkeitsfehler, wenn der Vorrat zum Zeitpunkt der Buchung immer noch nicht ausreicht.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> In einer unspezifischen Reservierung ist das Chargennummeren- oder Seriennummernfeld im Reservierungsposten, der wie der Verkauf auf den Bedarf verweist, leer.  </p>
+</div>
+<h2 id="reshuffle">Umgruppierung</h2>
+<p>Wenn ein Benutzer einen ausgehenden Beleg bucht, nachdem er die falsche Serien- oder Chargennummer kommissioniert hat, werden andere nicht-spezifische Reservierungen umgruppiert, um die aktuelle Serien- oder Chargennummer wiederzugeben, die kommissioniert wurde. Dadurch wird das Buchungsmodul mit einem festen Ausgleich zwischen Angebot und Nachfrage zufriedengestellt.  </p>
+<p>Für alle unterstützten Geschäftsszenarien ist die Umgruppierung nur mit positiven Artikelposten möglich, die Reservierungs- und Serien- oder Chargennummern enthalten, aber ohne festgelegte Serien- oder Chargennummern auf der Bedarfsseite.  </p>
+<h2 id="supported-business-scenarios">Unterstützte Geschäftsszenarien</h2>
+<p>Die Funktionalität der späten Bindung unterstützt die folgenden Geschäftsszenarien:  </p>
+<ul>
+<li>Eingabe einer bestimmten Serien- oder Chargennummern auf einem ausgehenden Beleg mit unspezifischer Reservierung einer falschen Serien- oder Chargennummer.  </li>
+<li>So reservieren Sie eine bestimmte Serien- oder Chargennummer.  </li>
+<li>Buchen eines ausgehenden Belegs mit unspezifischer Reservierung einer Serien- oder Chargennummer.  </li>
+</ul>
+<h3 id="entering-serial-or-lot-numbers-on-an-outbound-document-with-wrong-nonspecific-reservation">Eingabe von Serien- oder Chargennummern auf einem ausgehenden Beleg mit fehlerhafter unspezifischer Reservierung</h3>
+<p>Dies ist das häufigste der drei unterstützten Szenarien. In diesem Fall stellt die Late Binding-Funktion sicher, dass ein Benutzer eine Serien- oder Chargennummer eingeben kann, die tatsächlich kommissioniert wurde, auf einem ausgehenden Beleg, der bereits eine nicht-spezifische Reservierung einer anderen Serien- oder Chargennummer hat.  </p>
+<p>Beispielsweise entsteht die Notwendigkeit, wenn ein Auftragsverarbeiter zuerst eine nicht-spezifische Reservierung von einer Serien- oder Chargennummer vorgenommen hat. Nachdem der Artikel tatsächlich aus dem Lager entnommen wurde, muss die kommissionierte Serien- oder Chargennummer auf dem Auftrag vor seiner Buchung eingegeben werden. Die nicht-spezifische Reservierung wird zur Buchungszeit umgruppiert, um sicherzustellen, dass die kommissionierte Serien- oder Chargennummer eingegeben werden kann, ohne die Reservierung zu verlieren, sowie um sicherzustellen, dass die kommissionierte Serien- oder Chargennummer vollständig ausgeglichen und gebucht werden kann.  </p>
+<h3 id="reserve-specific-serial-or-lot-numbers">So reservieren Sie eine bestimmte Serien- oder Chargennummer</h3>
+<p>In diesem Szenario stellt die Late Binding-Funktion sicher, dass ein Benutzer, der versucht, eine bestimmte Serien- oder Chargennummer zu reservieren, die derzeit unspezifisch reserviert ist, dies tun kann. Eine nicht-spezifische Reservierung wird zum Zeitpunkt der Reservierung umgruppiert, um die Serien- oder Chargennummer für die spezifische Anfrage freizugeben.  </p>
+<p>Die Umgruppierung erfolgt automatisch, aber die eingebettete Hilfe wird unten auf der Seite <strong>Reservierung</strong> angezeigt und zeigt den folgenden Text an:  </p>
+<p><strong>XX der Gesamten Reservierten Menge sind unspezifisch und möglicherweise verfügbar.</strong>  </p>
+<p>Darüber hinaus zeigt das Feld <strong>Unspezifische reservierte Menge</strong> an, wie viele Reservierungsposten unspezifisch sind. Standardmäßig ist dieses Feld für Anwender nicht sichtbar.  </p>
+<h3 id="posting-an-outbound-document-with-nonspecific-reservation-of-serial-or-lot-numbers">Buchen eines ausgehenden Belegs mit unspezifischer Reservierung einer Serien- oder Chargennummer.</h3>
+<p>Dieses Geschäftsszenario wird durch die Late Binding-Funktionalität unterstützt, die festen Ausgleich und ausgehende Buchung dessen aktiviert, was tatsächlich kommissioniert wird, indem eine andere nicht-spezifische Reservierung einer Serien- oder Chargennummer umgruppiert wird. Wenn die Umgruppierung nicht möglich ist, dann wird folgende Standardfehlermeldung angezeigt, wenn der Benutzer versucht, die Lieferung zu buchen:  </p>
+<p><strong>Artikel XX kann nicht vollständig ausgeglichen werden.</strong>  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="design-details-item-tracking.html">Designdetails: Artikelnachverfolgung</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

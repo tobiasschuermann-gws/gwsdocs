@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Set Up Payment Classes [FR] </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Set Up Payment Classes [FR] ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-payment-classes">Set Up Payment Classes</h1>
+
+<p>To use payment management in the French version of Business Central, you must set up payment classes to define operation types, such as bills of exchange, electronic payments, or checks. Payment classes are defined in the <strong>Payment Slip Setup</strong> page.  </p>
+<p>For each operation type, you then define the various statuses that the operation type can have, and you associate each status with steps to define how the payment changes from one status to the another.  </p>
+<h2 id="to-set-up-a-payment-class">To set up a payment class</h2>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>Payment Slip Setup</strong>, and then choose the relevant link.  </li>
+<li>On the <strong>Payment Slip Setup</strong> page, choose the <strong>New</strong> action.  </li>
+<li><p>Fill in the fields as described in the following table.  </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enable</strong></td>
+<td>Select to enable usage of the payment class.</td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td>The unique identification code for the payment class.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>The payment class description.</td>
+</tr>
+<tr>
+<td><strong>Header No. Series</strong></td>
+<td>The number series code for the payment slip header.</td>
+</tr>
+<tr>
+<td><strong>Line No. Series</strong></td>
+<td>The number series code for the payment slip lines. If you leave this field blank, the number for each payment line is created based on the payment header number.</td>
+</tr>
+<tr>
+<td><strong>Suggestions</strong></td>
+<td>The type of payment proposals that can be created automatically on a payment slip.</td>
+</tr>
+<tr>
+<td><strong>Unrealized VAT Reversal</strong></td>
+<td>Specify the method to handle unrealized VAT.<br><br> If you select <strong>Application</strong>, VAT will be realized when you post the invoice application and payment application.<br><br> If you select <strong>Delayed</strong>, you must define the payment step during which VAT must be realized, by selecting the <strong>Realize VAT</strong> field on the <strong>Payment Step Card</strong> page.</td>
+</tr>
+<tr>
+<td><strong>SEPA Transfer Type</strong></td>
+<td>Specify the SEPA export format, either <strong>Credit Transfer</strong> or <strong>Direct Debit</strong>. You specify the export format for SEPA transfers in payment steps for the payment class.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-payment-statuses-for-a-payment-class">To set up payment statuses for a payment class</h2>
+<ol>
+<li>In the <strong>Payment Slip Setup</strong> page, select a payment class, and then choose the <strong>Status</strong> action.  </li>
+<li>On the <strong>Payment Status</strong> page, choose the <strong>New</strong> action.  </li>
+<li><p>Fill in the fields. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.  </p>
+<p> For example, the <strong>RIB</strong> field indicates that information about the Relevé d&#39;Identité Bancaire (RIB) statement for the customer or vendor must be displayed in the payment lines. The RIB information includes the bank branch number, agency code, bank account number, bank name, RIB key, and key verification.</p>
+</li>
+<li><p>When you have defined the statuses you want for this payment class, return to the <strong>Payment Slip Setup</strong> page.  </p>
+</li>
+</ol>
+<p>Next, you must define steps for each payment class. The payment steps define how the payment moves from one state to the next, such as <em>Creation of documents</em>, <em>Documents created</em>, and <em>Creation of payments</em>.  </p>
+<h2 id="to-set-up-payment-steps-for-a-payment-class">To set up payment steps for a payment class</h2>
+<ol>
+<li>In the <strong>Payment Slip Setup</strong> page, select a payment class, and then choose the <strong>Steps</strong> action.  </li>
+<li>In the <strong>Payment Step</strong> list, add the relevant steps for this payment class. For each step, you can enter a maximum of 50 alphanumeric characters.  </li>
+<li>Choose the first step, and then choose the <strong>Edit</strong> action.  </li>
+<li>On the <strong>Payment Step Card</strong> page, fill in the fields. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>The <strong>Previous Status</strong> field defines the previous status, from which the step was last executed. The default value is 0, and the first step will have 0 as the value of the <strong>Previous Status</strong> field.</p>
+<p>To make a step optional and potentially repeatable, set the  previous status to be equal to the next status.</p>
+<p>The <strong>Action Type</strong>, <strong>Export Type</strong>, and <strong>Export No.</strong> fields play together. For example, for SEPA credit transfer files, set <strong>Export Type</strong> to <strong>XMLport</strong>, and then set the <strong>Export No.</strong> field to 1000. For SEPA direct debit files, specify <strong>XMLport</strong>, and then set the <strong>Export No.</strong> field to 1010.</p>
+</div>
+<p>If the action type of the payment step is <strong>Ledger</strong>, you must set up extra ledger information for the payment step.  </p>
+<h3 id="to-set-up-ledger-information-for-a-payment-step">To set up ledger information for a payment step</h3>
+<ol>
+<li>On the <strong>Payment Step Card</strong> page for the payment step, choose the <strong>Ledger</strong> action.  </li>
+<li>On the <strong>Payment Step Ledger</strong> page, choose the <strong>New</strong> action.  </li>
+<li>Fill in the fields as appropriate. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<h2 id="see-also">See Also</h2>
+<p> <a href="payment-management.html">Payment Management</a><br> <a href="how-to-set-up-payment-addresses.html">Set Up Payment Addresses</a><br> <a href="how-to-export-or-import-payment-management-setup-parameters.html">Export or Import Payment Management Setup Parameters</a><br> <a href="how-to-create-payment-slips.html">Create Payment Slips</a><br> <a href="how-to-post-payment-slips.html">Post Payment Slips</a><br> <a href="how-to-archive-payment-slips.html">Archive Payment Slips</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

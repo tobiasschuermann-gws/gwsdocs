@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Verwenden Sie die Daten, um eine App zu erstellen| Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Verwenden Sie die Daten, um eine App zu erstellen| Microsoft Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="connecting-to-your-business-central-data-to-build-a-business-app-using-power-apps">Verknüpfung mit Business Central, um eine Geschäfts-App mithilfe von Power Apps zu erstellen</h1>
+
+<p>Sie können die Business Central Daten als Datenquelle in Power Apps bereitstellen.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Business Central bietet jetzt Entwicklungs- und Betriebsunterstützung für Power Platform in AL-Go sowie Beispiele, die Ihnen den Einstieg in die Erstellung Ihrer eigenen Apps mit Power Apps erleichtern. Diese Funktionen befinden sich derzeit in der Vorschau. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/power-apps-overview">Business Central und Power Apps</a> in der Hilfe für Entwickler und IT-Profis.</p>
+</div>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<p>Sie müssen ein gültiges Konto bei Business Central und Power Apps haben.  </p>
+<h2 id="add--as-a-data-source-in-power-apps">Business Central als Datenquelle in Power Apps hinzufügen</h2>
+<p>Mit diesen Schritten wird eine Business Central-Tabelle, wie Kunden oder Artikel, als Datenquelle einer Power Apps-App hinzugefügt.</p>
+<ol>
+<li>Gehen Sie in Ihrem Browser zu <a href="https://powerapps.microsoft.com/">powerapps.microsoft.com</a> und melden Sie sich dann an.</li>
+<li><p>Wählen Sie im Navigationsbereich auf der linken Seite <strong>+ Erstellen</strong> und dann <strong>Weitere Datenquellen</strong> auf der Seite <strong>App erstellen</strong> aus.</p>
+<!-- This step opens Power Apps canavs. On first sign-in, you must specify the country/region.  --></li>
+<li><p>In der Liste <strong>Verbindungen</strong> werden alle bestehenden Datenverbindungen angezeigt, die Sie haben.</p>
+<ul>
+<li><p>Wenn bereits eine <strong>Business Central</strong>-Verbindung besteht, wählen Sie diese aus und wählen Sie dann <strong>Erstellen</strong> aus.</p>
+</li>
+<li><p>Wenn Sie keine Business Central-Verbindung sehen, wählen Sie <strong>+ Neue Verbindung</strong> aus, suchen Sie danach und wählen Sie <strong>Business Central</strong> und dann <strong>Erstellen</strong> aus.</p>
+</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie Business Central lokal verbinden möchten, müssen Sie den <strong>Business Central (lokal)</strong> Connector auswählen.  </p>
+</div>
+</li>
+<li><p>Power Apps stellt eine Verbindung zu Ihrem Business Central her. Melden Sie sich mit den gültigen Benutzernamen und Kennwort von Business Central an. Wenn Sie kein Administrator Ihrer Business Central sind, müssen Sie sich möglicherweise bei einem anderen Konto anmelden.  </p>
+</li>
+<li>Sobald Sie angemeldet sind, zeigt Power Apps eine Liste der <em>Umgebungen und Unternehmen</em> an, die in Business Central verfügbar sind. Wählen Sie die Umgebung und das Unternehmen aus, in der sich die Daten befinden, zu denen Sie eine Verbindung herstellen möchten, z. B. <em>PRODUKTION - Mein Unternehmen</em>.  </li>
+<li>Als Nächstes wird eine Liste der Tabellen angezeigt, die als Teil der API für Ihre Umgebung bereitgestellt werden. Wählen Sie die Tabelle aus, zu der Sie eine Verbindung herstellen möchten, und wählen Sie dann <strong>Verbinden</strong> aus.</li>
+</ol>
+<p>Diese sogenannten Tabellen werden von Business Central Connector für Power Apps als Endpunkte bereitgestellt.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie Daten aus anderen Tabellen in Business Central in Ihre Anwendung aufnehmen möchten, müssen Sie mit einem Entwickler zusammenarbeiten, um eine benutzerdefinierte API in Business Central zu definieren.  </p>
+</div>
+<p>Zu diesem Zeitpunkt haben Sie erfolgreich Ihre Business Central-Daten verbunden und sind bereit, Ihre Power App zu erstellen. Sie können immer weitere Bildschirme hinzufügen und erhalten eine Verbindung zu weiteren Daten. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/powerapps/maker/canvas-apps/open-and-run-a-sample-app">Erstellen einer Canvas-App aus einem Beispiel in Power Apps</a>.  </p>
+<p>Wenn Sie Ihre App entworfen und erstellt haben, können Sie diese mit Ihre Kollegen teilen. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/powerapps/maker/canvas-apps/save-publish-app">Speichern und veröffentlichen Sie eine Canvas-App in Power Apps</a>.  </p>
+<!--
+## <a name="sample-apps-to-get-started"></a>Sample apps to get started
+
+As a preview version, Business Central offers several sample apps that you can use as a starting point for building your own apps that use Business Central data. These sample apps are available in the [Business Central Demos](https://github.com/BusinessCentralDemos) repo on GitHub. For a quick overview on the apps, go to [Power Apps samples for Business Central](https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/power-apps-samples).
+
+## <a name="develop-and-maintain-apps-application-lifecycle-management"></a>Develop and maintain apps application lifecycle management
+
+As an app developer, you may already be familiar with Business Central AL-Go. AL-Go is set of tools on GiHub that enables you to maintain professional DevOps processes for your Business Central AL projects. AL-Go supports source control and activities, like building, testing, and deploying. As a preview, Business Central now offers an Al-Go version that supports for Power Platform solutions. The preview, for example, includes workflows that let you push and pull Power Platfrom changes to and from enviroments. You can access the tools at [https://github.com/BusinessCentralDemos/AL-Go-PTE](https://github.com/BusinessCentralDemos/AL-Go-PTE). For more information, see [Application lifecycle management for Power Apps in Business Central](https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/power-apps-alm).-->
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="https://learn.microsoft.com/de-de/powerapps/maker/canvas-apps/get-started-test-drive">Erstellen Sie eine Canvas-App aus einer Vorlage in Power Apps</a><br><a href="across-import-data-configuration-packages.html">Importieren von Geschäftsdaten aus anderen Finance-Systemen</a><br><a href="setup.html">Einrichten Business Central</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-develop-connect-apps">Erste Schritte mit dem Entwickeln von Verbindungs-Apps für Dynamics 365 Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

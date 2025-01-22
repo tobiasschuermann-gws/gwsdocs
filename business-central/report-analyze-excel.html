@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Analysieren von Berichtsdaten mit Excel und XML </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Analysieren von Berichtsdaten mit Excel und XML ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="analyzing-report-data-with-excel-and-xml">Analysieren von Berichtsdaten mit Excel und XML</h1>
+
+<blockquote><p><strong>Gilt für:</strong> Business Central 2021 Veröffentlichungszyklus 2 und später</p>
+</blockquote>
+<p>Als Entwickler oder fortgeschrittener Benutzer ist es hilfreich, die Daten, die für ein bestimmtes Dataset eines Berichts erzeugt werden, zu prüfen, während Sie neue Berichte erstellen oder bestehende Berichte ändern. Um diese Funktion zu unterstützen, können Sie einen Berichtsdatensatz als Rohdaten in eine Excel-Arbeitsmappe oder eine XML-Datei exportieren direkt. In Excel können Sie beispielsweise dann eine Ad-hoc-Analyse der Daten durchführen und Probleme diagnostizieren.</p>
+<h2 id="get-started">Erste Schritte</h2>
+<p>Um einen Berichtsdatensatz in eine Excel-Arbeitsmappe oder eine XML-Datei zu exportieren, öffnen Sie den Bericht im Client und wählen Sie dann auf der Anforderungsseite <strong>Senden an</strong> &gt; <strong>Microsoft Excel-Dokument (nur Daten)</strong> oder <strong>XML-Dokument</strong>. Die Datei wird auf Ihr Gerät heruntergeladen.</p>
+<h2 id="more-about-excel-data-only">Mehr über Excel (nur Daten)</h2>
+<p><strong>Microsoft Excel Beleg (nur Daten)</strong> Die Option exportiert die Berichtsergebnisse und die Kriterien, die zu ihrer Erstellung verwendet wurden &mdash;aber sie enthält nicht das Berichtslayout. Die Excel-Datei enthält das komplette Dataset, als Rohdaten, angeordnet in Zeilen und Spalten. Alle Datenspalten des Datasets des Berichts sind enthalten, unabhängig davon, ob sie im Berichtslayout verwendet werden.</p>
+<p>Sobald Sie die Excel-Datei haben, können Sie mit der Analyse der Daten beginnen. Sie könnten zum Beispiel die Daten filtern und Power Pivot verwenden, um sie anzuzeigen.</p>
+<p>Jedes Mal, wenn Sie Ergebnisse exportieren, wird ein neues Arbeitsblatt erstellt. Mit der Option <strong>Microsoft Excel Beleg (nur Daten)</strong> können Sie denselben Bericht ausführen und Formatierungsänderungen wiederverwenden. Zum Beispiel können Sie für Power Pivot den Bericht für einen anderen Zeitraum erneut ausführen, die Ergebnisse in das Arbeitsblatt kopieren und dann das Arbeitsblatt aktualisieren. Eine App für Berichte finden Sie auch auf <a href="https://appsource.microsoft.com/">AppSource</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können keinen Bericht exportieren, der mehr als 1.048.576 Zeilen oder 16.384 Spalten hat. Bei Business Central lokal kann die maximale Anzahl der exportierten Zeilen sogar noch geringer sein. Business Central Server enthält eine Konfigurationseinstellung mit der Bezeichnung <strong>Maximal zulässige Anzahl der an Excel zu sendenden Datenzeilen</strong>, mit der Sie die Grenze vom Maximalwert herabsetzen können. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/configure-server-instance#General">Konfiguration von Business Central Server</a> oder wenden Sie sich an Ihren Administrator.</p>
+</div>
+<h2 id="for-administrators">Für Administratoren</h2>
+<ul>
+<li><p><strong>Microsoft Excel Beleg (nur Daten)</strong> wurde als optionale Funktion in der 2021er Release-Welle 1, Update 18.3 eingeführt. Um Benutzern Zugriff auf diese Funktion zu geben, wenn Sie Veröffentlichungszyklus Welle 1 2021 ausführen, aktivieren Sie die Funktion <strong>Berichts-Dataset in Microsoft Excel Beleg speichern</strong> in <strong>Funktionsverwaltung</strong>. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/feature-management">Bevorstehende Funktionen im Voraus aktivieren</a>. In der Release-Welle 2 von 2021 wurde diese Funktion permanent, so dass Sie sie nicht mehr aktivieren müssen.</p>
+</li>
+<li><p>Um die Funktion <strong>Microsoft Excel Dokument (nur Daten)</strong> zu verwenden, benötigen Benutzerkonten die Berechtigung <strong>Aktion Exportieren von Berichtsdataset nach Excel zulassen</strong>. Sie können Benutzern diese Berechtigung erteilen, indem Sie entweder die Berechtigung <strong>Fehlerbehebungtools</strong> oder <strong>Export Bericht Excel</strong> festlegen. Weitere Informationen finden Sie unter <a href="ui-define-granular-permissions.html">Berechtigungen an Benutzer und Gruppen zuweisen</a>  </p>
+</li>
+</ul>
+<h2 id="for-developers-and-advanced-users">Für Entwickler und fortgeschrittene Benutzer</h2>
+<p>Die Option <strong>Microsoft Excel Dokument (nur Daten)</strong> exportiert alle Spalten, einschließlich Spalten, die Filter und Formatierungsanweisungen für andere Werte enthalten. Hier sind einige Punkte von Interesse:</p>
+<ul>
+<li><p>Binäre Daten in einem Feld, wie ein Bild, werden nicht exportiert.</p>
+<p>In Spalten, die binäre Daten enthalten, enthalten Felder den Text <strong>Binäre Daten ({0} Bytes)</strong>, wobei <strong>{0}</strong> die Anzahl der Bytes angibt.</p>
+</li>
+<li><p>Ab Business Central 2021 Release Wave 2 enthält die Excel-Datei auch das Arbeitsblatt <strong>Berichts-Metadaten</strong>.</p>
+<p>Dieses Arbeitsblatt zeigt die auf den Bericht angewendeten Filter und allgemeine Berichtseigenschaften, wie Name, ID und Erweiterungsdetails. Die Filter werden in der Spalte <strong>Filter (DataItem ::Table ::FilterGroupNo ::FieldName)</strong> angezeigt. Die Filter in dieser Spalte enthalten Filter, die auf der Anforderungsseite des Berichts festgelegt wurden. Sie enthält auch Filter, die im AL-Code definiert sind, zum Beispiel durch die <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemlink-reports-property">DataItemLink-Eigenschaft</a> und <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/properties/devenv-dataitemtableview-property">DataItemTableView-Eigenschaft</a>.</p>
+</li>
+</ul>
+<p>Weitere Informationen zur Berichtsgestaltung finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-reports">Berichtsübersicht</a>.</p>
+<h2 id="see-also">Weitere Informationen</h2>
+<p><a href="ui-work-report.html">Arbeiten mit Berichten</a><br><a href="ui-manage-report-layouts.html">Verwaltung von Berichts- und Dokumentlayouts</a><br><a href="ui-define-granular-permissions.html">Berechtigungen an Benutzer und Gruppen zuweisen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

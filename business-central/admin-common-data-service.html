@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Integration mit Microsoft Dataverse &#252;ber Datensynchronisierung </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Integration mit Microsoft Dataverse &#252;ber Datensynchronisierung ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="integrate-with-microsoft-dataverse-via-data-sync">Integration mit Microsoft Dataverse über Datensynchronisierung</h1>
+
+<p>Geschäftsanwendungen verwenden häufig Daten aus mehr als einer Quelle. Dataverse kombiniert Daten in einem einzigen Satz von Logik, mit dem es leichter wird, Business Central mit anderen Dynamics 365-Anwendungen zu verbinden. Zum Beispiel mit Dynamics 365 Sales oder Ihrer eigenen Anwendung, die auf Dataverse basiert. Um mehr zu erfahren, gehen Sie zu Dataverse und <a href="https://learn.microsoft.com/de-de/powerapps/maker/common-data-service/data-platform-intro">Was ist Dataverse</a>.</p>
+<p>Die folgenden Schritte bieten einen Überblick über die Schritte für die Integration von Dataverse mit Business Central.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Für diese Aufgaben ist die Sicherheitsrolle des <strong>Systemadministrators</strong> in Dataverse und Business Central erforderlich.  </p>
+</div>
+<ol>
+<li><p>Weisen Sie Lizenzen für Dataverse den Business Central-Benutzern zu, die die integrierten Apps verwenden werden.</p>
+</li>
+<li><p>Richten Sie eine Verbindung mit Dataverse ein. Weitere Informationen finden Sie unter <a href="admin-how-to-set-up-a-dynamics-crm-connection.html">Verbindung zu Dataverse</a>.  </p>
+</li>
+<li><p>Synchronisieren Sie die Daten zwischen den Apps. Weitere Informationen finden Sie unter <a href="admin-synchronizing-business-central-and-sales.html">Synchronisieren von Business Central und Dataverse</a>. </p>
+</li>
+</ol>
+<h2 id="get-started-with-">Erste Schritte mit Dataverse</h2>
+<p>Um mit der Nutzung von Dataverse zu beginnen, benötigen Sie ein Microsoft Power Apps-Konto. Wenn Sie noch nicht über ein Power Apps-Konto verfügen, können Sie sich ein kostenloses Konto holen, indem Sie <a href="https://make.powerapps.com/?utm_source=padocs&amp;utm_medium=linkinadoc&amp;utm_campaign=referralsfromdoc">powerapps.com</a> besuchen und den Link <strong>Kostenlos einsteigen</strong> wählen. Weitere Informationen zu den ersten Schritten mit Dataverse finden Sie im Modul <a href="https://learn.microsoft.com/de-de/training/modules/get-started-with-powerapps-common-data-service/">Erste Schritte mit Dataverse</a> von Microsoft-Schulungen.</p>
+<h2 id="bi-directional-or-uni-directional-data-synchronization">Bidirektionale oder unidirektionale Datensynchronisierung</h2>
+<p>Sie können Daten entweder von einer oder an eine Dynamics 365-Geschäftsanwendung zu einer anderen oder durch Dataverse in beiden Richtungen nahezu in Echtzeit synchronisieren. Wenn Sie z. B. Business Central mit Dynamics 365 Sales integrieren, kann ein Verkäufer einen Verkaufsauftrag in Dynamics 365 Sales erstellen, und der Auftrag wird mit Business Central synchronisiert. Umgekehrt kann der Verkäufer von Dynamics 365 Sales in Business Central die Verfügbarkeit des Artikels für den Auftrag einsehen. </p>
+<h2 id="standard-and-custom-entities">Standard- und benutzerdefinierte Entitäten</h2>
+<p>Dataverse speichert Daten sicher in einem Satz von Tabellen, das sind Datensätze, ähnlich wie eine Tabelle Daten in einer Datenbank speichert. Dataverse enthält einen Basissatz von Standardentitäten, die typische Szenarien abdecken, aber Sie können auch benutzerdefinierte Tabellen erstellen, die spezifisch für Ihre Organisation sind. In Business Central können Sie Standard- und benutzerdefinierte Tabellen anzeigen, die auf der Seite Integrationstabellenzuordnungen synchronisiert werden.</p>
+<h2 id="about-the-business-central-base-integration-solution">Informationen über die Business Central Basis-Integrationslösung</h2>
+<p>Die Basisintegrationslösung ist eine Schlüsselkomponente der Integration. Die Lösung fügt den Benutzerkonten für die Integration die erforderlichen Rollen und Zugriffsebenen hinzu, und sie erstellt Tabellen, die für die Zuordnung von Business Central Unternehmen zu Geschäftseinheit in Dataverse erforderlich sind. </p>
+<p>Standardmäßig importiert die unterstützte Einrichtung <strong>Dataverse-Verbindung einrichten</strong> die Lösung. Dazu verwendet der Einrichtungsleitfaden ein Administrator-Benutzerkonto, das Sie angeben. Dieses Konto muss ein gültiger Benutzender in Dataverse mit der Sicherheitsrolle <strong>Systemadministrierender</strong> sein.  </p>
+<p>Weitere Informationen zu Benutzerkonten finden Sie in den folgenden Artikeln:</p>
+<ul>
+<li><a href="admin-setting-up-integration-with-dynamics-sales.html">Einrichten des Benutzerkontos für die Integration in Dataverse</a> </li>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles">Benutzer in Microsoft Dynamics 365 (online) erstellen und Sicherheitsrollen zuweisen</a> </li>
+</ul>
+<p>Das Administratorkonto wird aufgrund von Konfigurationsänderungen, die die Basis-Integrationslösung in Dataverse vornimmt, während der Einrichtung nur einmal verwendet. Nachdem die Lösung importiert wurde, wird das Konto nicht mehr benötigt. Bei der Integration wird dann weiterhin das Benutzerkonto verwendet, das automatisch speziell für die Integration erstellt wurde.</p>
+<p>Zusätzlich zur Anpassung von Dataverse erstellt die Lösung auch eine Sicherheitsrolle in Dataverse für die Integration:</p>
+<ul>
+<li><strong>Business Central Dataverse-Integration</strong>: Ermöglicht Ihnen das Verwalten der Verbindung zwischen Business Central und Dataverse. Normalerweise wird diese Rolle nur dem für die Synchronisierung automatisch erstellten Benutzerkonto zugewiesen. Weitere Informationen zu dieser Rolle finden Sie unter <a href="admin-setting-up-integration-with-dynamics-sales.html">Einrichten des Benutzerkontos für die Integration in Dataverse</a>.</li>
+</ul>
+<p>Wenn Sie die Verbindung aufbauen, erstellen Sie Integrationstabellenzuordnungen, die Sie zur Datensynchronisierung benötigen. Entitäten in Dataverse werden Tabellen und Tabellenfeldern in Business Central durch Integrationstabellen zugeordnet. Weitere Informationen zu Zuordnungen finden Sie unter <a href="admin-synchronizing-business-central-and-sales.html#standard-table-mapping-for-synchronization">Standard-Entitätszuordnung für die Synchronisierung</a>.</p>
+<h2 id="handle-differences-in-local-and-base-transaction-currencies">Umgang mit Unterschieden zwischen lokalen und Basistransaktionswährungen</h2>
+<p>Sie können eine Verbindung zu einer Dataverse Umgebung herstellen, die eine andere Basiswährung als die lokale Währung in Business Central hat. Sie können die Verbindung in Business Central auf der Seite <strong>Dataverse Verbindungseinrichtung</strong> oder mithilfe der Anleitung für die unterstützte Einrichtung <strong>Eine Verbindung mit Dataverse einrichten</strong> aufbauen.</p>
+<p>Um die Verbindung herstellen zu können, stellen Sie sicher, dass die Einstellung der Basistransaktionswährung in Dataverse die gleiche Währung wie auf der Seite <strong>Währungen</strong> in Business Central hat und für die Währung mindestens ein Wechselkurs auf der Seite <strong>Währungswechselkurs</strong> angegeben ist.</p>
+<p>Im Folgenden finden Sie ein Beispiel. Sie verbinden Dataverse mit Euro (EUR) als lokaler Währung, wie auf der Seite <strong>Hauptbucheinrichtung</strong> angegeben, mit einer Dataverse Umgebung, deren Basistransaktionswährung auf US-Dollar (USD) eingestellt ist. Auf der Seite <strong>Währungen</strong> in Business Central müssen USD und der entsprechende Wechselkurs angegeben sein. </p>
+<p>Wenn Sie die Verbindung mit Dataverse aktivieren, fügt Business Central die lokale Währung der Entität <strong>Währung</strong> in Dataverse mit dem Wechselkurs aus dem Feld <strong>Währungsfaktor</strong> auf der Seite <strong>Währungswechselkurse</strong> hinzu.</p>
+<p>Die Währungssynchronisierung erfolgt unidirektional, von Business Central an Dataverse, wobei Geldbeträge wie folgt konvertiert und synchronisiert werden:</p>
+<ul>
+<li>Beträge in der Dataverse Basiswährung werden basierend auf dem letzten synchronisierten Wechselkurs von Business Central in die Business Central lokale Währung umgerechnet.</li>
+<li>Beträge in der Business Central lokalen Währung werden mit der Business Central lokalen Währung in einer der anderen (nicht Basis-)Währungen in Dataverse synchronisiert.</li>
+</ul>
+<h2 id="what-happens-when-you-copy-a-company">Was passiert, wenn Sie ein Unternehmen kopieren?</h2>
+<p>Sie können Unternehmen, die mit Dataverse oder Dynamics 365 Sales integriert sind, bedenkenlos kopieren. Das Kopieren von Unternehmen verringert das Risiko von Dateninkonsistenzen und kann Ihnen wertvolle Zeit sparen. Weitere Informationen zum Kopieren von Unternehmen finden Sie unter <a href="about-new-company.html#copy-a-company">Unternehmen kopieren</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie ein Unternehmen in einer Umgebung kopieren, in der die Dataverse oder Sales-Integration aktiviert ist, löscht Business Central beim Kopieren in das Zielunternehmen die folgenden Einstellungen:</p>
+<ul>
+<li>Dataverse- und Dynamics-Verbindungseinstellungen, um sicherzustellen, dass die Integration im Zielunternehmen korrekt erneut gestartet wird.</li>
+<li>Integrationsdatensätze, um sicherzustellen, dass das Zielunternehmen nicht auf Datensätze verweist, die im Quellunternehmen gekoppelt sind.</li>
+<li>Integrationssynchronisierungsaufträge, um Synchronisierungshintergrundaufträge anzuhalten.</li>
+<li>Synchronisierungsfehler, sofern sie existieren, deuten auf Fehler im Quellunternehmen hin und werden im Zielunternehmen lediglich als Rauschen betrachtet.</li>
+</ul>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="admin-cds-company-concept.html">Dateneigentumsmodelle</a>  </p>
+<!--needs to be removed as this is moved to dev-itpro docs[Walkthrough: Customizing an Integration with Dataverse](\dynamics365\business-central\dev-itpro\administration\administration-custom-cds-integration) -->
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

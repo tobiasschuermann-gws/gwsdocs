@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FA abschreiben oder amortisieren </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="FA abschreiben oder amortisieren ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="depreciate-or-amortize-fixed-assets">Anlagen abschreiben oder amortisieren</h1>
+
+<p>Abschreibung wird verwendet, um die Anschaffungskosten von Anlagen wie Maschinen und Ausrüstung über die Nutzungsdauer zu verteilen. Sie müssen für jede Anlage definieren, wie diese abgeschrieben wird.  </p>
+<p> Es gibt zwei Wege, Abschreibungen zu buchen:  </p>
+<ul>
+<li>Automatisch durch Ausführen der Stapelverarbeitung <strong>AfA berechnen</strong>  </li>
+<li>Manuell, unter Verwendung des Anlagen Fibu Buch.-Blattes.  </li>
+</ul>
+<p>Business Central kann tägliche Abschreibungen berechnen, sodass Sie Abschreibungen für beliebige Perioden berechnen können. Sie können damit das aktuelle operative Ergebnis beispielsweise auf monatlicher, quartalsweiser oder jährlicher Basis analysieren. Die Berechnungen verwendet ein standardisiertes Jahr mit 360 Tagen und einen standardisierten Monat mit 30 Tagen. Weitere Informationen finden Sie unter <a href="fa-depreciation-methods.html">AfA-Methoden</a>.  </p>
+<p>Falls eine Anlage von verschiedenen Abteilungen verwendet wird, kann die AfA automatisch entsprechend einer benutzerdefinierten Tabelle auf diese Abteilungen verteilt werden.  </p>
+<p>Sie können falsche AfA-Posten aus einem AfA-Buch mit Hilfe der Stapelverarbeitung <strong>Anlagenposten stornieren</strong> stornieren. Danach können Sie die korrekten Beträge buchen, indem Sie die Stapelverarbeitung <strong>AfA berechnen</strong> erneut ausführen. Wenn Sie Fehler korrigieren, werden diese als Anlagenstornoposten gebucht.  </p>
+<p>Die Indexierung wird verwendet, um die Werte allgemeinen Preisänderungen anzupassen. Die Stapelverarbeitung <strong>Anlagen indexieren</strong> kann verwendet werden, um die AfA-Beträge neu zu berechnen.  </p>
+<h2 id="to-calculate-depreciation-automatically">So berechnen Sie AfA automatisch</h2>
+<p>Einmal monatlich oder in beliebigen anderen Intervallen können Sie die Stapelverarbeitung <strong>AfA berechnen</strong> ausführen. Der Stapelverarbeitungsjob ignoriert Anlagen, die verkauft wurden, auf der Anlagenkarte gesperrt oder inaktiv sind, und Anlagen, die die AfA-Methode „Manuell“ verwenden.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>AfA berechnen</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Füllen Sie die Felder je nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.  </li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </p>
+<p> Die Stapelverarbeitung berechnet die AfA und erstellt Zeilen im Anlagen Fibu Buch.-Blatt.</p>
+</li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Anlagen Fibu Buch.-Blätter</strong> ein, und wählen Sie dann den zugehörigen Link.  </p>
+<p> Auf der Seite <strong>Anlagen-Fibu Buch.-Blatt</strong> können Sie im Feld <strong>Anzahl AfA-Tage</strong> sehen, wie viele AfA-Tage berechnet wurden.  </p>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> aus.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Bekannte Einschränkung: Wenn Sie das Feld <strong>Anzahl der Tage erzwingen</strong> auf Ja festlegen und das Feld <strong>Anzahl der Tage erzwingen</strong> auf einen Wert festgelegt ist, bei dem <strong>Buchungsdatum</strong> minus <strong>Anzahl der Tage</strong> ein Datum im vorherigen Kalenderjahr ergibt, lässt das System Sie die Abschreibung nicht buchen.
+Sie können dies vermeiden, indem Sie das Feld <strong>Anzahl der Tage</strong> auf höchstens die berechneten Tage bis zum Buchungsdatum mit 30 Tagen/Monat reduzieren ODER das Flag <strong>Geschäftsjahr 365 Tage</strong> im AfA-Buch festlegen.
+Wir empfehlen die erste Option, da Sie die Verwendung von 30 Tagen/Monaten für die Abschreibung möglicherweise nicht ändern möchten. Weitere Informationen finden Sie unter <a href="fa-how-setup-depreciation.html#fiscal-year-365-days-field-depreciation">Feld 365 Tage Geschäftsjahr Abschreibung</a>.</p>
+</div>
+<h2 id="to-post-depreciation-manually-from-the-fixed-asset-gl-journal">So buchen Sie eine AfA aus dem Anlagen Fibu Buch.-Blatt</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Anlagen-Fibu Buch.-Blatt</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Erstellen Sie eine ursprüngliche Buch.-Blattzeile und füllen Sie die notwendigen Felder aus.  </li>
+<li>Wählen Sie im Feld <strong>Anlagenbuchungsart</strong> die <strong>AfA</strong>.  </li>
+<li>Wählen Sie die Aktion <strong>Anlagengegenkonto einfügen</strong>. Eine zweite Buch.-Blattzeile wird für das Gegenkonto erstellt, das für die AfA-Buchung eingerichtet ist. Weitere Informationen finden Sie unter <a href="fa-how-setup-general.html#to-set-up-fixed-asset-posting-groups">So richten Sie Anlagenbuchungsgruppen ein</a>.</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong>, um das Journal zu buchen.  </li>
+</ol>
+<p>Das Feld <strong>Buchwert</strong> auf der Seite <strong>Anlagenkarte</strong> wird entsprechend aktualisiert.</p>
+<p>Falls Sie Anlagenverteilungsschlüssel eingerichtet haben, um Beträge auf verschiedene Kostenstellen und/oder Kostenträger zu verteilen, werden die Beträge während der Buchung zugeordnet. Weitere Informationen finden Sie unter <a href="fa-how-setup-general.html">Allgemeine Anlageninformationen einrichten</a>.  </p>
+<h2 id="to-manage-the-ending-book-value">So werden Erinnerungswerte verwaltet</h2>
+<p>Im Feld <strong>Erinnerungswert</strong> auf der Seite <strong>Anlagenabschreibungsbücher</strong> können Sie den Buchwert angeben, den Ihre Anlage im aktuellen Abschreibungsbuch haben soll, nachdem es vollständig abgeschrieben wurde. Sie können den Wert manuell eingeben oder das Feld <strong>Standarderinnerungswert</strong> auf der zugehörigen Seite <strong>AfA-Buch</strong> ausfüllen. Das Feld wird automatisch mit dem Wert ausgefüllt.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn die letzte Abschreibung bedeutet, dass das Feld <strong>Buchwert</strong> auf der Seite <strong>Anlagenkarte</strong> null ist, wird die letzte Abschreibung automatisch um diesen Betrag reduziert.<br><br>
+Wenn der Wert im Feld <strong>Buchwert</strong> nach der letzten Abschreibung größer als null ist, beispielsweise wegen eines Rundungsproblems oder weil ein Restwert besteht, wird der Wert im Feld <strong>Erinnerungswert</strong> auf der Seite <strong>Anlagen-AfA-Bücher</strong> ignoriert. Weitere Informationen finden Sie unter <a href="fa-how-acquire.html#to-post-the-salvage-value-together-with-the-acquisition-cost">Wie der Restwert zusammen mit den Anschaffungskosten gebucht wird</a>.</p>
+</div>
+<h2 id="to-calculate-allocations-for-a-fixed-asset">So berechnen Sie Zuteilungen für eine Anlage</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>FA-Buchungsgruppen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie <strong>Zugehörig</strong>, <strong>Buchungsgruppe</strong>, <strong>Zuteilungen</strong> und dann <strong>Abschreibung</strong> aus.</li>
+<li>Füllen Sie für jede Buchungsgruppe die Sachkonten und die entsprechenden Zuteilungsprozentsätze aus, und schließen Sie anschließend die Seite.</li>
+<li>Wählen Sie als Nächstes die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> aus, geben Sie <strong>Anlagen-Fibu Buch.-Blätter</strong> ein, und wählen Sie dann den zugehörigen Link aus.</li>
+<li>Geben Sie die Anlage und die entsprechende Anlagenbuchungsgruppe ein, und das Afa-Buch bestimmen die Zuteilungspositionen.</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong>, um das Journal zu buchen.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn eine Anlage von mehreren Abteilungen verwendet wird, können Sie die Dimension in der Anlagen-Fibu Buch.-Blattzeile auswählen.</p>
+</div>
+<h2 id="use-duplication-lists-to-prepare-to-post-to-multiple-depreciation-books">Kopiervorgänge zum Vorbereiten von Buchungen in mehrere AfA-Bücher verwenden</h2>
+<p>Ausfüllen der Zeilen in einem Buch.-Blatt für die Buchung auf ein AfA-Buch und anschließendes Kopieren der Zeilen in ein anderes Buch.-Blatt, von wo aus sie auf ein anderes AfA-Buch gebucht werden können Weitere Informationen finden Sie unter <a href="fa-how-depreciate-amortize.html#to-post-entries-to-different-depreciation-books">So buchen Sie Posten auf verschiedene Abschreibungsbücher</a>.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Afa-Bücher</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie das entsprechende AfA-Buch aus und aktivieren Sie dann das Kontrollkästchen <strong>Teil des Kopiervorgangs</strong>.  </li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>  Wenn Sie das Feld <strong>Kopiervorgang aktivieren</strong> aktiviert haben, dürfen Sie im Buch.-Blatt keine Nummernserien verwenden. Der Grund dafür ist, dass die Nummernserie für das Anlagen Fibu Buch.-Blatt nicht der Nummernserie im Anlagen Buch.-Blatt entspricht.  </p>
+</div>
+<h2 id="to-post-entries-to-different-depreciation-books">So buchen Sie Posten auf verschiedene AfA-Bücher</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Anlagen-Fibu Buch.-Blatt</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Aktivieren Sie im Buch.-Blatt, das Sie zum Buchen der AfA verwenden möchten, das Kontrollkästchen <strong>Kopiervorgang aktivieren</strong>.  </li>
+<li>Füllen Sie die verbleibenden Felder je nach Bedarf aus.  </li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong>.  </li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>FA-Erfassungen Buch.-Blätter</strong> ein und wählen Sie dann den zugehörigen Link.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Auf der Seite <strong>Anlagen Buch.-Blatt</strong> enthält neue Zeilen für verschiedene AfA-Bücher entsprechend der Verdopplungsliste.  </p>
+</div>
+</li>
+<li><p>Prüfen oder bearbeiten Sie die Zeilen, und wählen Sie dann die Aktion <strong>Buchen</strong> aus.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Eine andere Art, einen Posten in ein anderes Buch zu kopieren, ist es, einen AfA-Buchcode in dem Feld <strong>In AfA-Buch kopieren</strong> anzugeben, wenn Sie eine Buch.-Blattzeile ausfüllen.  </p>
+</div>
+</li>
+</ol>
+<p>Sie können mit Hilfe der Stapelverarbeitung <strong>AfA-Buch kopieren</strong> Posten von einem AfA-Buch in ein anderes AfA-Buch kopieren. Die Stapelverarbeitung erstellt Buch.-Blattzeilen in dem Buch.-Blatt, das Sie auf der Seite <strong>Anlagen Buch.-Blatt Einr.</strong> für das AfA-Buch angegeben haben, aus dem Sie kopieren möchten. Weitere Informationen finden Sie unter <a href="#to-copy-fixed-asset-ledger-entries-between-depreciation-books">So kopieren Sie Anlagenposten zwischen Afa-Büchern</a>.  </p>
+<h2 id="to-copy-fixed-asset-ledger-entries-between-depreciation-books">So kopieren Sie Anlagenposten zwischen AfA-Büchern</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Afa-Bücher</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie die entsprechende AfA-Buch - Karte und wählen Sie dann die Aktion <strong>AfA-Buch kopieren</strong>.  </li>
+<li>Füllen Sie im Inforegister <strong>AfA-Buchkarte kopieren</strong> die Seite nach Bedarf aus.  </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </li>
+</ol>
+<p>Die kopierten Zeilen werden entweder in einem Anlagen Fibu Buch.-Blatt oder im Anlagen Buch.-Blatt erstellt. Dies hängt davon ab, ob das AfA-Buch, das Sie kopieren, in der Finanzbuchhaltung aktiviert wurde.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="fa-manage.html">Anlagen</a><br><a href="fa-setup.html">Einrichten von Anlagen</a><br><a href="finance.html">Finanzen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

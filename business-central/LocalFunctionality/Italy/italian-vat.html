@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Italian VAT </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Italian VAT ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="italian-vat">Italian VAT</h1>
+
+<p>Companies must pay VAT to the state for most purchased goods and services. VAT can be deducted if the goods or services purchased by a company are used in the production of its income.  </p>
+<p> In Business Central, you can define periodic VAT reports on the <strong>VAT Report</strong> page. You can fill in the lines based on VAT entries, and then export the VAT report to the appropriate authorities.  </p>
+<h2 id="vat-codes-and-rates">VAT Codes and Rates</h2>
+<p>VAT codes and rates must be set up even though some transactions are not subject to VAT rates. There are also many VAT-liable operations that are subject to a zero VAT rate by provision of the law.  </p>
+<p>The related VAT code is printed for each invoice line. Invoices for VAT transaction entries that are not subject to VAT rates must be recorded and printed with a note stating that VAT is not owed.  </p>
+<h3 id="computing-vat">Computing VAT</h3>
+<p>VAT is computed for transactions to comply with the rules in effect on that the day the transactions occur. Thus, the date on which a transaction legally occurs must be tracked when recording transactions.  </p>
+<h3 id="dates">Dates</h3>
+<p>The date of issue is the document date and the date of registration is the posting date. Reporting date filters are based on the posting dates. This is changed from the previous behavior in which reporting date filters were based on the Operation Occurred Date.  </p>
+<h3 id="non-deductible-vat">Non-deductible VAT</h3>
+<p>VAT cannot be deducted for some purchases because of:  </p>
+<ul>
+<li><p>The type of goods or services purchased – VAT is fully or partially non-deductible by provision of the law on goods like cars, mobile phones, food purchased at restaurants, and so on.  </p>
+</li>
+<li><p>Partially deductible pro-rated VAT – VAT is pro-rated according to the ratio between sales operations for which VAT is owed, and all operations performed. VAT exceeding this ratio cannot be deducted.  </p>
+</li>
+</ul>
+<h2 id="service-tariffs">Service Tariffs</h2>
+<p>The European Union (EU) has issued directives that change the VAT reporting for cross-border trade of goods and services in the EU.  </p>
+<p>In Italy, the EU sales list (Intrastat) and annual listing reports are updated to include services. This involves a change in the reporting format. A new table for service tariffs is added so that companies can classify services that must be included in the Intrastat report. Users must add the relevant service tariff to all documents that are for cross-border transactions. The service tariff specified on the <strong>Foreign Trade</strong> FastTab for the document can be modified in each line in the document.  </p>
+<h2 id="vat-transaction-reports">VAT Transaction Reports</h2>
+<p>You must submit periodic reports to the tax authorities, which list transactions that include VAT with amounts over a specified threshold. The VAT transaction reports are created based on transactions with customers or vendors from a country/region that is outside the EU and is not listed as blocked according to Italian authorities. Transactions with customers or vendors from EU countries/regions are reported through <strong>Intrastat</strong> reports. Business Central provides support for the following transaction types:  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Transaction Type</strong></th>
+<th><strong>Supported</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FE - Customer invoices (factures issued)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>FR - Vendor invoices (factures received)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>NE - Customer credit notes (notes issued)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>NR - Vendor credit notes (notes received)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DF - Transactions without invoices (direct invoices) (customer)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>FN - Customers invoices, when customer is non-resident</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SE - Vendor invoices, when vendor is non-resident</td>
+<td>Yes <strong>Note:</strong> The purchase of services is assumed, but differentiation between service and goods is left for the user to implement.</td>
+</tr>
+</tbody>
+</table>
+<p> Business Central does not report the following types of transactions:  </p>
+<ul>
+<li><p>Prepayment invoices, because the total amount will be reported at the time of the final invoice.  </p>
+</li>
+<li><p>Operations without an invoice, for example, VAT entries posted via general ledger accounts, because a VAT registration number, a fiscal code, or a customer or vendor reference is required for inclusion in a report.  </p>
+</li>
+<li><p>Self-billed transactions, which are not supported.  </p>
+</li>
+</ul>
+<p>The VAT transactions reports include lines where the amount is over the threshold and lines that must be included for other legal reasons. The threshold amount is set by the Italian authorities.  </p>
+<p>Document lines contain a field to indicate if the line must be included in the VAT transaction reports. The <strong>Include in VAT Transac. Rep.</strong> fields are selected automatically based on the day of the transaction and a comparison with the threshold amount for the calendar year. If sales lines are related to a blanket order, the threshold is compared to the amount for the blanket order. This only applies to sales line of type <strong>Item</strong>. For service lines, the comparison is made with the service contract amount.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Credit memos are included in the VAT transaction report if the customer or vendor is from a country/region that is outside the EU and is not listed as blocked.  </p>
+</div>
+<p>When you post credit memos, you must update the <strong>Refers to Period</strong> field to specify the relevant period. The VAT transaction reports will include credit memos where the <strong>Refers to Period</strong> field is set to <strong>Current Calendar Year</strong> or <strong>Previous Calendar Year</strong>.  </p>
+<p>Business Central adds credit memos to the VAT reports in different ways depending on the application status and the value of the <strong>Refers to Period</strong> field. The following table describes the scenarios.  </p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A credit memo is applied to a single invoice.<br><br> The <strong>Refers to Period</strong> field is set to <strong>Current Calendar Year</strong>.</td>
+<td>The <strong>Invoice No.</strong> field will be set to the document number of the invoice.<br><br> The <strong>Invoice Date</strong> field will be set to the date that is specified in the <strong>Operation Occurred Date</strong> field<br><br> Business Central will deduct the credit memo amount from the amount of the original invoice. If the resulting amount is above the threshold, both the invoice and credit memo will be included in the VAT transactions report. If the resulting amount is below the threshold, neither invoice or credit memo will be included in the VAT transactions report.</td>
+</tr>
+<tr>
+<td>A credit memo is applied to multiple invoices, or it is not applied.<br><br> The <strong>Refers to Period</strong> field is set to <strong>Current Calendar Year</strong>.</td>
+<td>The <strong>Invoice Date</strong> field will be set to the last day of the year that is specified in the <strong>Operation Occurred Date</strong> field. For example, if the <strong>Operation Occurred Date</strong> field is <strong>07-11-11</strong>, the <strong>Invoice Date</strong> field will be set to <strong>31-12-11</strong>.<br><br> Only the credit memo will be included in the VAT transactions report.</td>
+</tr>
+<tr>
+<td>A credit memo is applied to multiple invoices, or it is not applied.<br><br> The <strong>Refers to Period</strong> field is set to <strong>Previous Calendar Year</strong>.</td>
+<td>The <strong>Invoice Date</strong> field will be set to the last day of the year before the date that is specified in the <strong>Operation Occurred Date</strong> field. For example, if the <strong>Operation Occurred Date</strong> field is <strong>07-11-11</strong>, the <strong>Invoice Date</strong> field will be set to <strong>31-12-10</strong>.<br><br> Only the credit memo will be included in the VAT transactions report.</td>
+</tr>
+</tbody>
+</table>
+<p>When service contracts are compared with the threshold, the <strong>Annual Amount</strong> field is converted to your local currency (LCY). The conversion is based on the <strong>Currency Code</strong> field and the exchange rate on the date in the <strong>Starting Date</strong> field for the service contract.  </p>
+<p>Transactions with reverse charges are not included in the VAT transaction reports. Transactions with prepayments are also not included in the VAT transaction reports.  </p>
+<p>To prepare your data for these reports, you must set up VAT posting to include VAT transaction report amounts. When a transaction such as posting a sales invoice is made that uses this VAT posting setup, Business Central checks if the transaction meets the threshold amounts. The check is based on document lines because a document can contain lines that must be included in the VAT transaction report and lines that must be excluded. The VAT transaction reports must only contain the lines that must be submitted, so Business Central compares amounts against the threshold for each line instead of for a document.  </p>
+<p>You must submit a VAT transactions report electronically to the tax authorities. For more information, see <a href="how-to-create-electronic-vat-transactions-reports.html">Create Electronic VAT Transactions Reports</a>.  </p>
+<h2 id="see-also">See Also</h2>
+<p><a href="../../finance-setup-vat.html">Set Up VAT</a><br><a href="../../finance-how-report-vat.html">Report VAT</a><br> <a href="how-to-prepare-for-vat-transactions-reports.html">Prepare for VAT Transactions Reports</a><br> <a href="how-to-create-electronic-vat-transactions-reports.html">Create Electronic VAT Transactions Reports</a><br> <a href="how-to-submit-vat-statements.html">Submit VAT Statements</a><br> <a href="how-to-update-vat-transactions-data.html">Update VAT Transactions Data</a><br> <a href="italy-local-functionality.html">Italy Local Functionality</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

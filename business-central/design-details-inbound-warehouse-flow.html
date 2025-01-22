@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Design-Details &#8211; Inbound Warehouse Flow </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Design-Details &#8211; Inbound Warehouse Flow ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-inbound-warehouse-flow">Designdetails: Eingehender Lagerflow</h1>
+
+<p>Der eingehende Fluss in ein Lager beginnt, wenn Artikel im Lager des Unternehmensstandorts ankommen, entweder aus externen Quellen oder von einem anderen Standort des Unternehmens. Sie können physische und nicht vorrätige Artikel erhalten. Weitere Informationen zum Empfang von Nicht-Lagerartikeln finden Sie unter <a href="#post-non-inventory-items">Nicht-Lagerartikel buchen</a>.</p>
+<p>Grundsätzlich besteht der Prozess des Eingangs von eingehenden Aufträgen aus zwei Aktivitäten:</p>
+<ul>
+<li>Sie nehmen Artikel an der Rampe entgegen, identifizieren sie, ordnen sie einem Quellbeleg zu und setzen die Eingangsmenge fest.</li>
+<li>Lagern Sie Artikel im Lager ein und notieren Sie den Platz, an dem Sie sie abgelegt haben.</li>
+</ul>
+<p>Die Herkunftsbelege für den eingehenden Lagerfluss sind:</p>
+<ul>
+<li>Bestellungen  </li>
+<li>Eingehende Umlagerungsaufträge  </li>
+<li>Verkaufsreklamationen  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Produktions- und Montage-Ausgabe stellen auch eingehende Herkunftsbelege dar. Weitere Informationen über die Verarbeitung von Fertigungs- und Montage-Ausgabe für interne Prozesse finden Sie unter <a href="design-details-internal-warehouse-flows.html">Designdetails: Interner Lagerfluss</a>.  </p>
+</div>
+<p>In Business Central erhalten Sie Artikel und lagern sie, wie in der folgenden Tabelle beschrieben, mit einer von vier Methoden ein.</p>
+<table>
+<thead>
+<tr>
+<th>Art</th>
+<th>Eingangsprozess</th>
+<th>Wareneingang erforderlich</th>
+<th>Einlagerung erforderlich</th>
+<th>Komplexitätsgrad (Weitere Informationen unter <a href="design-details-warehouse-management.html">Lagermanagementübersicht</a>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Posteinlieferungsschein und die Einlagerung der Auftragszeile</td>
+<td></td>
+<td></td>
+<td>Keine dedizierte Lageraktivität.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Posteinlieferungsschein und Einlagerung aus dem Beleg &quot;Lagereinlagerung&quot;</td>
+<td></td>
+<td>Aktiviert</td>
+<td>Basis: Auftragsbezogene Logistik</td>
+</tr>
+<tr>
+<td>U</td>
+<td>Posteinlieferungsschein und Einlagerung aus einem Wareneingangsbeleg</td>
+<td>Aktiviert</td>
+<td></td>
+<td>Basis: Konsolidierte Eingangs-/Versandbuchung für mehrere Bestellungen.</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Posteinlieferungsschein aus einem Wareneingangsbeleg und Posteinlagerung aus einem Einlagerungsbeleg</td>
+<td>Aktiviert</td>
+<td>Aktiviert</td>
+<td>Erweitert</td>
+</tr>
+</tbody>
+</table>
+<p>Die Auswahl eines Ansatzes hängt von Ihren Methoden des Unternehmens und dem Niveau der Organisationskomplexität ab. Im Folgenden finden Sie einige Beispiele, die Ihnen bei der Entscheidung helfen könnten.</p>
+<ul>
+<li>In einer Lagerumgebung mit auftragsbezogener Logistik, in der die meisten Lagermitarbeiter direkt mit Auftragsdokumenten arbeiten, können Sie sich für Methode A entscheiden. </li>
+<li>Ein Lager mit auftragsbezogener Logistik mit einem komplexeren Einlagerungsprozess oder wo Lagermitarbeiter ihre Einlagerungsaktivitäten vom Auftragsdokument trennen, könnte Methode B verwenden.</li>
+<li>Unternehmen, die die Abwicklung mehrerer Bestellungen planen müssen, finden es möglicherweise hilfreich, Wareneingangsbelege zu verwenden, Methoden C und D.  </li>
+</ul>
+<p>In den Methoden A, B und C werden der Eingang und die Einlagerung in einem Schritt zusammengefasst, wenn der Beleg als eingegangen gebucht wird. In Methode D wird der Eingang zuerst gebucht, um die Bestandszunahme zu erfassen sowie, dass Artikel zum Verkauf verfügbar sind. Der Lagermitarbeiter registriert die Einlagerung, um die Artikel für die Kommissionierung für ausgehende Aufträge bereitzustellen. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wareneinlagerungen und Lagereinlagerungen klingen zwar ähnlich, sind aber unterschiedliche Dokumente und werden in unterschiedlichen Prozessen verwendet.</p>
+<ul>
+<li>Die in Methode B verwendete Lagereinlagerung verbucht zusammen mit der Registrierung von Einlagerungsinformationen auch den Eingang des Herkunftsbelegs.</li>
+<li>Die in Methode D verwendete Lagereinlagerung kann nicht gebucht werden und registriert nur die Einlagerung. Die Registrierung stellt die Artikel für die weitere Bearbeitung zur Verfügung, bucht aber nicht den Beleg. Im Wareneingang erfordert die Lagereinlagerung einen Wareneingang.</li>
+</ul>
+</div>
+<h2 id="no-dedicated-warehouse-activity">Keine dedizierte Lageraktivität</h2>
+<p>Die folgenden Artikel enthalten Informationen zum Verarbeiten von Wareneingängen für Herkunftsbelege, wenn Sie keine dedizierten Lageraktivitäten haben.</p>
+<ul>
+<li><a href="purchasing-how-record-purchases.html">Erfassen eines Einkaufs</a></li>
+<li><a href="inventory-how-transfer-between-locations.html">Umlagerungsaufträge</a></li>
+<li><a href="sales-how-process-sales-returns-orders.html">Verkaufsaufträge für Rücklieferungen verarbeiten</a></li>
+</ul>
+<h2 id="basic-warehouse-configurations">Grundlegende Lagerhauskonfigurationen</h2>
+<p>In einer Basislagerkonfiguration ist der Schalter <strong>Einlagerung erforderlich</strong> aktiviert, aber der Schalter <strong>Wareneingang erforderlich</strong> auf der Seite <strong>Lagerortkarte</strong> für den Lagerort ist deaktiviert.</p>
+<p>Das folgende Diagramm zeigt die eingehenden Lagerflüsse nach Belegtyp im Rahmen der einfachen Logistik an. Die Nummern im Diagramm entsprechen den Schritten in den Abschnitten, die dem Diagramm folgen.  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/design_details_warehouse_management_inbound_basic_flow.png&quot; alt-text=&quot;Der eingehende Basisfluss in einem Lager.&quot;:::</p>
+<h3 id="1-release-a-source-document-to-create-a-request-for-an-inventory-put-away">1: Geben Sie ein Herkunftsbeleg frei, um eine Anforderung für eine Lagereinlagerung zu erstellen</h3>
+<p>Wenn Sie Artikel erhalten, geben Sie den Herkunftsbeleg frei, z. B. eine Bestellung oder einen eingehenden Umlagerungsauftrag. Durch die Freigabe des Belegs werden die Artikel zum Einlagern verfügbar. Sie können auch Lagereinlagerungsbelege für einzelne Auftragszeilen, im Push-Verfahren, basierend auf angegebenen Lagerplätzen und Mengen erstellen, die verarbeitet werden sollen.  </p>
+<h3 id="2-create-an-inventory-put-away">2: Erstellen Sie eine Lagereinlagerung</h3>
+<p>Auf der Seite <strong>Lagereinlagerung</strong> können Sie im Pull-Verfahren die offenen Herkunftsbelegzeilen basierend auf den eingehenden Lageranfragen abrufen. Im Push-Verfahren können Sie auch Lagereinlagerungszeilen erstellen, wenn Sie den Herkunftsbeleg erstellen.  </p>
+<h3 id="3-post-an-inventory-put-away">3: An Lagereinlagerung buchen</h3>
+<p>In jeder Zeile für Artikel, die kommissioniert oder umgelagert wurden, sei es teilweise oder vollständig, füllen Sie das Feld <strong>Menge</strong> aus und buchen Sie dann die Lagereinlagerung. Herkunftsbelege, die mit der Einlagerung verknüpft sind, werden als eingegangen gebucht.  </p>
+<ul>
+<li>Positive Artikelposten werden erstellt.</li>
+<li>Lagerposten werden für Lagerplätze erstellt, die bei allen Artikeltransaktionen einen Lagerplatzcode erfordern.</li>
+<li>Die Einlagerungsanforderung wird gelöscht, wenn sie vollständig bearbeitet wurde. Beispielsweise wird das Feld <strong>Menge empfangen</strong>auf der Zeile des eingehenden Herkunftsbelegs aktualisiert.</li>
+<li>Ein Beleg des gebuchten Wareneingangs wird erstellt, der beispielsweise die Einkaufsbestellung und die eingegangenen Artikel angezeigt.  </li>
+</ul>
+<h2 id="advanced-warehouse-configurations">Erweiterte Lagerhauskonfigurationen</h2>
+<p>Um die erweiterten Lagerkonfiguration zu verwenden, aktivieren Sie den Schalter <strong>Wareneingang erforderlich</strong> auf der Standortkartenseite für den Standort. Der Schalter <strong>Einlagerung erforderlich</strong> ist optional.</p>
+<p>Das folgende Diagramm zeigt den eingehenden Lagerfluss nach Belegtyp. Die Nummern im Diagramm entsprechen den Schritten in den Abschnitten, die dem Diagramm folgen.  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/design_details_warehouse_management_inbound_advanced_flow.png&quot; alt-text=&quot;Der erweiterte eingehende Fluss in einem Lager.&quot;:::</p>
+<h3 id="1-release-the-source-document">1: Den Herkunftsbeleg freigeben</h3>
+<p>Wenn Sie Artikel erhalten, geben Sie den Herkunftsbeleg frei, z. B. die Bestellung oder einen eingehenden Umlagerungsauftrag. Durch die Freigabe des Belegs werden die Artikel zum Einlagern verfügbar. Die Einlagerung enthält Referenzen zur Herkunftsbelegart und -Nummer.</p>
+<h3 id="2-create-a-warehouse-receipt">2: Einen Wareneingang erstellen</h3>
+<p>Auf der Seite <strong>Wareneingang</strong> rufen Sie die eingehenden Herkunftsbelegzeilen ab. Sie können mehrere Herkunftsbelegzeilen zu einem Wareneingangsbeleg zusammenfassen. Füllen Sie das Feld <strong>Verarbeitungsmenge</strong> aus und wählen Sie die empfangende Zone und den Lagerplatz nach Bedarf aus.  </p>
+<h3 id="3-post-the-warehouse-receipt">3: Buchen Sie den Wareneingang</h3>
+<p>Buchen Sie den Wareneingang, um positive Artikel Buch.-Blattzeilen zu erstellen. Das Feld <strong>Menge empfangen</strong> wird auf der Zeile des eingehenden Herkunftsbelegs aktualisiert.  </p>
+<p>Wenn der Schalter <strong>Einlagerung erforderlich</strong> auf der Lagerortkarte nicht aktiviert ist, wird der Prozess hier beendet. Andernfalls werden die Artikel durch die Buchung des eingehenden Herkunftsbelegs zum Einlagern verfügbar gemacht. Die Einlagerung enthält Referenzen zur Herkunftsbelegart und -Nummer.  </p>
+<h3 id="4-optional-generate-put-away-worksheet-lines">4: (Optional) Einlagerungsarbeitsblattzeilen generieren</h3>
+<p>Rufen Sie Einlagerungszeilen im <strong>Einlagerungsarbeitsblatt</strong> basierend auf gebuchten Wareneingängen oder Vorgängen ab, die eine Ausgabe erzeugen. Geben Sie in der einzulagernden Zeile die folgenden Informationen an:</p>
+<ul>
+<li>Die Lagerplätze aus denen Artikel entnommen werden sollen.</li>
+<li>Die Lagerplätze, in die Artikel eingelagert werden.</li>
+<li>Wie viele Einheiten zu bearbeiten sind.</li>
+</ul>
+<p>Die Lagerplätze können durch Einrichtung des Lagerorts oder der Ressource vordefiniert werden, die den Vorgang durchgeführt hat.  </p>
+<p>Wenn alle Einlagerungen geplant und den Lagermitarbeitern zugeteilt sind, erstellen Sie die Einlagerungsbelege. Vollständig zugeordnete Einlagerungszeilen werden aus dem <strong>Einlagerungsarbeitsblatt</strong> gelöscht.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn der Schalter <strong>Einlagerungsarbeitsblatt</strong> auf der Artikelkarte nicht aktiviert ist, werden Einlagerungsbelege direkt basierend auf den gebuchten Wareneingängen erstellt. In diesem Fall ist dieser Schritt nicht erforderlich.  </p>
+</div>
+<h3 id="5-create-a-warehouse-put-away-document">5: Einen Einlagerungsbeleg erstellen</h3>
+<p>Erstellen Sie auf der Grundlage des gebuchten Wareneingangs einen Lagereinlagerungsbeleg im Pull-Verfahren. Oder erstellen Sie das Wareneinlagerungsbeleg und weisen Sie es einem Lagermitarbeiter im Push-Verfahren zu.  </p>
+<h3 id="6-register-a-warehouse-put-away">6: Eine Wareneinlagerung registrieren</h3>
+<p>In jeder Zeile für Artikel, die kommissioniert oder umgelagert wurden, sei es teilweise oder vollständig, füllen Sie das Feld <strong>Menge</strong> auf der Seite <strong>Kommissionierungsarbeitsblatt</strong> aus und erfassen dann die Lagerbestandsumlagerung.  </p>
+<ul>
+<li>Lagerposten werden für Lagerplätze erstellt, die bei allen Artikeltransaktionen einen Lagerplatzcode erfordern.</li>
+<li>Die Wareneinlagerungszeilen wird gelöscht, wenn sie vollständig bearbeitet wurde.</li>
+<li>Der Einlagerungsbeleg bleibt offen, bis die gesamte Menge des zugehörigen gebuchten Warenzugangs erfasst ist.</li>
+<li>Das Feld <strong>Menge eingelagert</strong> auf den gebuchten Wareneingangsauftragszeilen wird aktualisiert.</li>
+</ul>
+<h2 id="related-tasks">Verwandte Tasks</h2>
+<p>Die folgende Tabelle beschreibt eine Reihe von Aufgaben mit Links zu den Artikeln, die sie beschreiben.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Prozess</strong></th>
+<th><strong>Informationen</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empfangen Sie Artikel an Lagerstandorten mit einem Lagerbeleg für die voll- oder teilautomatisierte Lagerverarbeitung.</td>
+<td><a href="warehouse-how-receive-items.html">Artikel empfangen</a></td>
+</tr>
+<tr>
+<td>Lagern Sie Artikel auftragsweise ein, und buchen Sie bei Basis-Lagerkonfigurationen den Eingang in einer Aktivität.</td>
+<td><a href="warehouse-how-to-put-items-away-with-inventory-put-aways.html">Artikel mit Lagereinlagerungen einlagern</a></td>
+</tr>
+<tr>
+<td>Lagern Sie Artikel ein, die bei mehreren Einkäufen, Verkaufsrücksendungen, Umlagerungsaufträgen in einer erweiterten Lagerkonfiguration ein.</td>
+<td><a href="warehouse-how-to-put-items-away-with-warehouse-put-aways.html">Artikel mit Lagereinlagerungen einlagern</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="post-non-inventory-items">Buchen von Nicht-Bestandsartikeln</h2>
+<p>Lagermitarbeiter können im Rahmen von Verkaufs- und Bestellungen Nicht-Lagerartikel zusammen mit physischen Gütern versenden und empfangen. Nicht zum Lagerbestand gehörende Gegenstände sind immaterielle Werte, wie z. B. Versicherungen oder zusätzliche Kosten.</p>
+<p>Bei Verkaufs- und Einkaufsaufträgen stehen oft verschiedene Dinge auf dem Programm. Beispielsweise können Aufträge Hauptbuchposten, Konten und Anlagevermögen umfassen. Wenn Sie Lagerbelege zur Abwicklung physischer Artikel verwenden, können Sie auch einige Arten von Nicht-Lagerartikeln buchen. Es folgen Beispiele für ausgehende Lagerbelege:</p>
+<ul>
+<li>Lagereinlagerungen</li>
+<li>Wareneingänge</li>
+<li>Lagerkommissionierungen</li>
+<li>Warenausgänge</li>
+</ul>
+<p>Damit Lagerarbeiter Artikel versenden und empfangen können, die nicht zum Lagerbestand gehören, füllen Sie das Feld <strong>Lag-unab. aut. über Lager buchen</strong> Feld auf den Seiten <strong>Debitoren &amp; Verkauf Einr.</strong> und <strong>Kreditoren &amp; Einkauf Einr.</strong> Das Feld bietet die folgenden Optionen:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keine</td>
+<td>Versenden oder empfangen Sie keine Artikel, die nicht zum Lagerbestand gehören.</td>
+</tr>
+<tr>
+<td>Angehängt/zugewiesen</td>
+<td>Buchen Sie Artikelgebühren und andere Nicht-Lagerartikelzeilen, die physischen Artikeln zugewiesen oder diesen zugeordnet sind. Um Nicht-Lagerpositionen an physische Artikel anzuhängen, verwenden Sie die Aktion <strong>Zu Lagerartikelzeile hinzufügen</strong>.</td>
+</tr>
+<tr>
+<td>Alle</td>
+<td>Buchen Sie alle Nicht-Bestandszeilen im Quellbeleg, sobald mindestens ein Artikel vom Lagerbeleg gebucht wird.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Option <strong>Vollständig</strong> im Feld <strong>Versandhinweis</strong> des Kundenauftrags hat Vorrang vor der Auswahl im <strong>Lag-unab. aut. über Lager buchen</strong> -Feld auf der Seite <strong>Debitoren &amp; Verkauf Einr.</strong>.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

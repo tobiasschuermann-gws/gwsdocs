@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Debitoren und Unternehmen synchronisieren </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Debitoren und Unternehmen synchronisieren ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../TOC.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="debitoren-und-unternehmen-synchronisieren">Debitoren und Unternehmen synchronisieren</h1>
+
+<p>Wenn Sie einen Auftrag aus Shopify importieren, sind die Informationen über den Debitor für die weitere Verarbeitung des Dokuments in Business Central unerlässlich. Dafür stehen zwei Hauptoptionen und verschiedene Kombinationen zur Verfügung:</p>
+<ul>
+<li>Verwenden Sie einen speziellen Kunden für alle Bestellungen.</li>
+<li>Importieren Sie die Debitoreninformationen aus Shopify. Diese Option steht auch zur Verfügung, wenn Sie Debitoren nach Shopify von Business Central exportieren.</li>
+</ul>
+<p>Mit Shopify können Sie Ihr Business-to-Business-(B2B-) und Direct-to-Customer-(DTC-)Geschäft mit der Leistung und Benutzerfreundlichkeit der All-in-one-Plattform von Shopify von nur einem Ort aus erledigen. Der Shopify-Konnektor funktioniert auch mit verschiedenen E-Commerce-Varianten.</p>
+<p>Während Shopify zwei Entitäten – Debitor und Unternehmen – hat, verfügt Business Central nur über die Debitorenentität, die sich darauf auswirkt, wie die Synchronisierung funktioniert.</p>
+<p>Wenn Sie DTC ausführen, wird der Kaufende in Shopify als Debitor erstellt. Anschließend wird der Debitor in Business Central als Shopify-Debitor zugeordnet und mit einem Debitor verknüpft bzw. konvertiert.</p>
+<p>Wenn Sie B2B betreiben, wird der Kaufende in Shopify als Debitor mit einem Unternehmen verbunden. Der Debitor wird in Business Central als Shopify-Debitor importiert, und das Unternehmen wird in Business Central als Shopify-Unternehmen importiert und mit einem Debitoren verknüpft bzw. konvertiert.</p>
+<p>Um einen Debitoren aus Business Central in Shopify zu exportieren, unterscheiden sich die Schritte, je nachdem, was Sie tun möchten:</p>
+<ul>
+<li>Exportieren Sie einen Debitoren als Shopify-Debitoren für DTC.</li>
+<li>Exportieren Sie einen Debitoren als Unternehmens- und Debitorenpaar für den B2B-Flow.</li>
+</ul>
+<h2 id="wichtige-einstellungen-beim-import-von-dtc-debitoren-aus-shopify">Wichtige Einstellungen beim Import von DTC-Debitoren aus Shopify</h2>
+<p>Ob Sie nun Debitoren aus Shopify in großen Mengen oder Bestellungen importieren: Verwenden Sie folgende Einstellungen, um den Vorgang zu verwalten:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Debitorenimport aus Shopify</strong></td>
+<td>Wählen Sie <strong>Alle Kunden</strong>, wenn Sie Kunden aus Shopify in großen Mengen importieren möchten; entweder manuell mit der Aktion <strong>Kunden synchronisieren</strong> oder über die Auftragswarteschlange für wiederkehrende Aktualisierungen. Unabhängig von der Auswahl werden die Kundeninformationen immer zusammen mit der Bestellung importiert. Die Verwendung dieser Information hängt jedoch von den <strong>Shopify Kundenvorlagen</strong> und den Einstellungen im Feld <strong>Kundenzuordnungstyp</strong> ab.</td>
+</tr>
+<tr>
+<td><strong>Kundenzuordnungstyp</strong></td>
+<td>Legen Sie fest, wie der Konnektor die Zuordnung vornehmen soll.<br>- <strong>Nach E-Mail/Telefon</strong>, wenn Sie möchten, dass der Konnektor E-Mail-Konto- und Telefoninformationen verwendet, um den importierten Shopify-Debitoren anhand eines Debitoren in Business Central zuzuordnen.</br><br>- <strong>Nach Rechnungsinformationen</strong>, wenn Sie möchten, dass der Konnektor die Adresse des Rechnungsempfängers verwenden, um den importierten Shopify-Debitor einem bestehenden Debitor in Business Central zuzuordnen.</br><br>- <strong>Nehmen Sie Immer den Standarddebitor</strong>, wenn Sie möchten, dass das System einen Debitor aus dem Feld <strong>Standarddebitornr.</strong> verwendet.</td>
+</tr>
+<tr>
+<td><strong>Shopify Kann Debitoren aktualisieren</strong></td>
+<td>Wählen Sie dieses Feld, ob der Konnektor gefundene Debitoren aktualisieren soll, wenn die Optionen <strong>Nach E-Mail/Telefon</strong> oder <strong>Nach Rechnungsinformationen</strong> im Feld <strong>Debitorzuordnungstyp</strong> ausgewählt sind.</td>
+</tr>
+<tr>
+<td><strong>Unbekannte Debitoren automatisch erstellen</strong></td>
+<td>Wählen Sie dieses Feld, ob der Konnektor fehlende Debitoren erstellen soll, wenn die Optionen <strong>Nach E-Mail/Telefon</strong> oder <strong>Nach Rechnungsinformationen</strong> im Feld <strong>Debitorzuordnungstyp</strong> ausgewählt sind. Ein neuer Debitor wird anhand der importierten Daten und des <strong>Debitorenvorlagencodes</strong> erstellt, der auf den Seiten <strong>Shopify Shop-Karte</strong> oder <strong>Shopify-Debitorenvorlage</strong> definiert ist. Beachten Sie, dass der Shopify-Debitor über mindestens eine Adresse verfügen muss. Bei Bestellungen, die über den Shopify-Vertriebskanal POS erstellt wurden, fehlen häufig Adressangaben. Wenn diese Option nicht aktiviert ist, müssen Sie einen Debitoren manuell erstellen und mit dem Shopify-Debitor verknüpfen.</td>
+</tr>
+<tr>
+<td><strong>Debitor.Unternehmensvorlagencode</strong></td>
+<td>Verwenden Sie dieses Feld zusammen mit <strong>Unbekannte Debitoren automatisch erstellen</strong>.<br>Wählen Sie die Standardvorlage aus, die für automatisch erstellte Debitoren verwendet werden soll. Stellen Sie sicher, dass die ausgewählte Vorlage die obligatorischen Felder enthält, wie z. B. <strong>Gen. Geschäftsbuchungsgruppe</strong>, <strong>Debitorbuchungsgruppe</strong>, MwSt.- oder steuerbezogene Felder.</br><br>Auf der Seite <strong>Shopify-Debitorenvorlagen</strong> können Sie Vorlagen pro Land/Region definieren, was Ihnen dabei hilft, Steuern korrekt zu berechnen.</br><br>Weitere Informationen finden Sie unter <a href="setup-taxes.html">Steuern einrichten</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debitorenvorlage-pro-landregion">Debitorenvorlage pro Land/Region</h3>
+<p>Einige Einstellungen können auf der Ebene eines Landes/Region oder eines Staates/Provinz festgelegt werden. Die Einstellungen können unter <a href="https://www.shopify.com/admin/settings/shipping">Versand und Lieferung</a> in Shopify festgelegt werden.</p>
+<p>Mit der <strong>Shopify-Debitorenvorlage</strong> können Sie die folgenden Schritte für jeden Debitor ausführen:</p>
+<ol>
+<li>Geben Sie die <strong>Standarddebitorennr.</strong> an, die Vorrang vor der Auswahl in den Feldern <strong>Debitorenimport aus Shopify</strong> und <strong>Debitorenzuordnungstyp</strong> hat. Sie wird im importierten Verkaufsauftrag verwendet.</li>
+<li>Definieren Sie den <strong>Kundenvorlagencode</strong>, mit dem fehlende Kunden erstellt werden, wenn <strong>Unbekannte Kunden automatisch erstellen</strong> aktiviert ist. Wenn der <strong>Kundenvorlagencode</strong> leer ist, dann verwendet die Funktion den <strong>Kundenvorlagencode</strong>, der auf der <strong>Shopify Shop-Karte</strong> definiert ist. Das System versucht zunächst, eine Vorlage für den <strong>Länder-/Regionscode</strong> für die Standardadresse zu finden. Wenn keine Vorlage gefunden wird, wird die erste Adresse verwendet.</li>
+<li>In manchen Fällen ist der für ein Land/eine Region definierte <strong>Debitorvorlagencode</strong> nicht ausreichend, um die eine korrekte Berechnung der Steuern zu gewährleisten (z. B. für Länder/Regionen mit Umsatzsteuer). In diesem Fall könnte der <strong>Steuerbereich</strong> eine nützliche Ergänzung sein.</li>
+<li>Das Feld <strong>Steuergebiet</strong> enthält auch einen <strong>Ländercode</strong> und einen <strong>Bezirksnamen</strong> Paar. Dieses Paar ist nützlich, wenn der Connector einen Code in einen Namen umwandeln muss oder umgekehrt.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Ländercodes sind Ländercodes nach ISO 3166-1 Alpha 2. Erfahren Sie mehr unter <a href="https://help.shopify.com/en/api/custom-storefronts/storefront-api/reference/enum/countrycode">Ländercode</a>.</p>
+</div>
+<h2 id="wichtige-einstellungen-beim-export-von-dtc-debitoren-aus-shopify">Wichtige Einstellungen beim Export von DTC-Debitoren aus Shopify</h2>
+<p>Sie können bestehende Debitoren in Shopify in großen Mengen exportieren. In jedem Fall werden ein Debitor und eine Standardadresse erstellt. Der Prozess kann mit den folgenden Einstellungen verwaltet werden:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kann Shopify-Debitoren aktualisieren</strong></td>
+<td>Aktivieren Sie diese Option, wenn Sie später Aktualisierungen aus Business Central für Debitoren erstellen möchten, die bereits in Shopify vorhanden sind.</td>
+</tr>
+</tbody>
+</table>
+<p>Für den Export eines Debitors gelten die folgenden Voraussetzungen:</p>
+<ul>
+<li>Der Debitor muss eine gültige E-Mail-Adresse haben.</li>
+<li>Stellen Sie sicher, wenn Sie Debitoren mit Adressen, die Provinzen/Staaten beinhalten exportieren, dass der <strong>ISO-Code</strong> für Länder/Regionen ausgefüllt ist.|</li>
+<li>Wenn auf der Kundenkarte ein Land bzw. eine Region ausgewählt ist, stellen Sie sicher, dass der <strong>ISO-Code</strong> angegeben ist. Für lokale Debitoren mit einem leeren Feld für Land/Region, verwendet der Shopify-Konnektor das auf der Seite <strong>Unternehmensinformationen</strong> angegebene Land bzw. die angegebene Region.</li>
+<li>Wenn der Debitor eine Telefonnummer hat, muss die Nummer eindeutig sein, denn Shopify akzeptiert keinen zweiten Debitor mit derselben Telefonnummer.</li>
+<li><p>Wenn der Debitor eine Telefonnummer hat, muss diese im E.164-Format vorliegen. Andere Formate werden unterstützt, wenn sie eine Nummer darstellen, die von überall auf der Welt gewählt werden kann. Die folgenden Formate sind gültig:</p>
+<ul>
+<li>xxxxxxxxxx</li>
+<li>+xxxxxxxxxxx</li>
+<li>(xxx)xxx-xxxx</li>
+<li>+x xxx-xxx-xxxx</li>
+</ul>
+</li>
+</ul>
+<p>Nachdem Sie die Debitoren in Shopify erstellt haben, können Sie ihnen direkte Einladungen schicken, um sie zur Aktivierung ihrer Konten zu bewegen.</p>
+<h3 id="debitoreninformationen-in-shopify-ausfüllen">Debitoreninformationen in Shopify ausfüllen</h3>
+<p>In Shopify verfügt ein Debitor über einen Vornamen, einen Nachnamen, eine E-Mail-Adresse und/oder eine Telefonnummer. Sie können die Vor- und Familiennamen aus der Kundenkarte in Business Central eingeben.</p>
+<table>
+<thead>
+<tr>
+<th>Priorität</th>
+<th>Feld in der Kundenkarte</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Kontaktname</strong></td>
+<td>Höchste Priorität, wenn das Feld <strong>Kontaktname</strong> ausgefüllt und das Feld <strong>Kontaktquelle</strong> auf der <strong>Shopify-Shop-Karte</strong> entweder die Optionen <em>Vorname und Nachname</em> oder <em>Nachname und Vorname</em> enthält, die festlegen, wie die Werte getrennt werden sollen.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Name 2</strong></td>
+<td>Wenn das Feld <strong>Name 2</strong> ausgefüllt und das Feld <strong>Quelle von Name 2</strong> auf der <strong>Shopify-Shop-Karte</strong> die Optionen <em>Vorname und Nachname</em> oder <em>Nachname und Vorname</em> enthält, die festlegen, wie die Werte getrennt werden sollen.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Name</strong></td>
+<td>Niedrigste Priorität, wenn das Feld <strong>Name</strong> ausgefüllt und das Feld <strong>Namensquelle</strong> auf der <strong>Shopify-Shop-Karte</strong> die Optionen <em>Vorname und Nachname</em> oder <em>Nachname und Vorname</em> enthält, die festlegen, wie die Werte getrennt werden sollen.</td>
+</tr>
+</tbody>
+</table>
+<p>In Shopify verfügt ein Debitor auch über eine Standardadresse. Zusätzlich zu Vorname, Nachname, E-Mail-Adresse und/oder Telefon kann die Adresse ein Unternehmen und eine Adresse enthalten. Sie können das Feld <strong>Firma</strong> auf der Grundlage der Daten aus der Kundenkarte in Business Central ausfüllen.</p>
+<table>
+<thead>
+<tr>
+<th>Priorität</th>
+<th>Feld in der Kundenkarte</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Name</strong></td>
+<td>Höchste Priorität, wenn das Feld <strong>Namensquelle</strong> auf der <strong>Shopify-Shop-Karte</strong> die Option <em>Unternehmensname</em> enthält.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Name 2</strong></td>
+<td>Niedrigste Priorität, wenn das Feld <strong>Quelle von Name 2</strong> auf der <strong>Shopify-Shop-Karte</strong> die Option <em>Unternehmensname</em> enthält.</td>
+</tr>
+</tbody>
+</table>
+<p>Wählen Sie für Adressen, bei denen Bezirk/Provinz verwendet wird, die Option <strong>Code</strong> oder <strong>Name</strong> im Feld <strong>Länderquelle</strong> auf der <strong>Shopify-Shop-Karte</strong> aus, Der Code bzw. der Name gibt den Typ der gespeicherten Daten in Business Central im Feld <strong>Bezirk</strong> an. Denken Sie daran, Kundenvorlagen pro Land/Region zu initialisieren, damit die Ländercode-/Namenszuordnung fertig ist. </p>
+<h2 id="dtc-debitoren-nach-shopify-exportieren">DTC-Debitoren nach Shopify exportieren</h2>
+<h3 id="anfängliche-synchronisierung-von-debitoren-aus-business-central-mit-shopify">Anfängliche Synchronisierung von Debitoren aus Business Central mit Shopify</h3>
+<ol>
+<li>Wechseln Sie zum Suchsymbol <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren"> Symbol, geben Sie <strong>Shopify Kunden</strong> ein und wählen Sie den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Debitor hinzufügen</strong> aus.</li>
+<li>Geben Sie im Feld <strong>Shop-Code</strong> den ersten Code ein. Wenn Sie das Fenster <strong>Shopify-Debitoren</strong> über die Seite <strong>Shop-Karte</strong> aufrufen, wird der Shop-Code automatisch ausgefüllt.</li>
+<li>Legen Sie nach Bedarf Filter für Debitoren fest. Sie können beispielsweise nach Länder-/Regionscode filtern.</li>
+<li>Wählen Sie <strong>OK</strong> aus.</li>
+</ol>
+<p>Die daraus resultierenden Debitoren werden automatisch mit ihren Adressen in Shopify erstellt.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die erste Synchronisierung von Debitoren von Business Central nach Shopify berücksichtigt die Einstellungen <strong>Kann Shopify-Debitoren aktualisieren</strong> nicht.</p>
+</div>
+<h3 id="debitoren-synchronisieren">Debitoren synchronisieren</h3>
+<ol>
+<li>Wählen Sie die <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die “Wie möchten Sie weiter verfahren“-Funktion 1 öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Shopify Shop</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie den bestimmten Shop aus, für den Sie Debitoren synchronisieren möchten.</li>
+<li>Wählen Sie die Aktion <strong>Debitoren synchronisieren</strong> aus.</li>
+</ol>
+<p>Alternativ können Sie die Aktion <strong>Kundensynchronisation starten</strong> im Fenster <strong>Shopify Kunden</strong> verwenden oder nach dem Batchauftrag <strong>Kunden synchronisieren</strong> suchen.</p>
+<p>Sie können die Aufgabe für eine automatische Ausführung planen. Erfahren Sie mehr unter <a href="background.html#to-schedule-recurring-tasks">Planen Sie wiederkehrende Aufgaben</a>.</p>
+<h2 id="b2b-unternehmen">B2B-Unternehmen</h2>
+<p>Wenn Sie B2B in Shopify verwenden, können Sie nicht nur Debitoren, sondern auch Unternehmen erstellen. Sie können einem Unternehmen einen oder mehrere Einzeldebitoren zuordnen. Darüber hinaus können Sie Zahlungsbedingungen, Standorte und Kataloge definieren.</p>
+<h2 id="wichtige-einstellungen-beim-import-von-b2b-unternehmen-aus-shopify">Wichtige Einstellungen beim Import von B2B-Unternehmen aus Shopify</h2>
+<p>Ob Sie nun Unternehmen aus Shopify in großen Mengen oder Bestellungen importieren: Verwenden Sie die Einstellungen in der folgenden Tabelle, um den Vorgang zu verwalten.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unternehmensimport aus Shopify</strong></td>
+<td>Wählen Sie <strong>Alle Unternehmen</strong>, wenn Sie Debitoren aus Shopify in großen Mengen importieren möchten; entweder manuell mit der Aktion <strong>Unternehmen synchronisieren</strong> oder über die Auftragswarteschlange für wiederkehrende Aktualisierungen. Unabhängig von der Auswahl werden die Debitoreninformationen immer zusammen mit der Bestellung importiert. Die Verwendung dieser Information hängt jedoch von den <strong>Shopify-Unternehmensvorlagen</strong> und den Einstellungen im Feld <strong>Mandantenzuordnungstyp</strong> ab.</td>
+</tr>
+<tr>
+<td><strong>Mandantenzuordnungstyp</strong></td>
+<td>Legen Sie fest, wie der Konnektor die Zuordnung vornehmen soll.<br>- <strong>Nach E-Mail/Telefon</strong>, wenn Sie möchten, dass der Konnektor die importierten Shopify-Unternehmen anhand von E-Mail und Telefon des Hauptkontakts einem bestehenden Debitoren in Business Central zuordnet.</br><br>- Wählen Sie <strong>Immer den Standardmandanten verwenden</strong>, wenn Sie möchten, dass das System das Unternehmen aus dem Feld <strong>Standardmandantennr.</strong> verwendet.</td>
+</tr>
+<tr>
+<td><strong>Shopify kann Mandanten aktualisieren</strong></td>
+<td>Wählen Sie dieses Feld aus, wenn der Konnektor gefundene Debitoren aktualisieren soll, wenn die Option <strong>Nach E-Mail/Telefon</strong> im Feld <strong>Mandantenzuordnungstyp</strong> ausgewählt ist.</td>
+</tr>
+<tr>
+<td><strong>Unbekannte Mandanten automatisch erstellen</strong></td>
+<td>Wählen Sie dieses Feld aus, wenn der Konnektor neue Debitoren erstellen soll, wenn die Option <strong>Nach E-Mail/Telefon</strong> im Feld <strong>Mandantenzuordnungstyp</strong> ausgewählt ist. Ein neuer Debitor wird anhand der importierten Daten und des <strong>Debitoren-/Unternehmensvorlagencodes</strong> erstellt, der auf den Seiten <strong>Shopify Shop-Karte</strong> oder <strong>Shopify Kundenvorlage</strong> definiert ist.</td>
+</tr>
+<tr>
+<td><strong>Debitoren-/Firmenvorlagencode</strong></td>
+<td>Verwenden Sie dieses Feld zusammen mit <strong>Unbekanntes Unternehmen automatisch erstellen</strong> aus.<br>- Wählen Sie die Standardvorlage aus, die für automatisch erstellte Debitoren verwendet werden soll. Stellen Sie sicher, dass die obligatorischen Felder in der Vorlage ausgefüllt sind, wie z. B. <strong>Gen. Geschäftsbuchungsgruppe</strong>, <strong>Debitorbuchungsgruppe</strong>, <strong>Mehrwertsteuer (MwSt.)</strong> oder andere steuerbezogene Felder.</br><br>- Auf der Seite <strong>Shopify Debitorenvorlagen</strong> können Sie Vorlagen pro Land/Region definieren, was für eine korrekte Steuerberechnung nützlich ist.</br><br>Erfahren Sie mehr unter <a href="setup-taxes.html">Steuern festlegen</a>.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Das Unternehmen muss einen Hauptkontakt haben. Andernfalls springt der Konnektor zum Unternehmen.
+Es wird nur ein ältester Standort importiert.
+Es wird nur der Hauptkontakt importiert.</p>
+</div>
+<h2 id="wichtige-einstellungen-beim-export-von-b2b-unternehmen-nach-shopify">Wichtige Einstellungen beim Export von B2B-Unternehmen nach Shopify</h2>
+<p>Sie können bestehende Debitoren in Shopify in großen Mengen als Unternehmen exportieren. Es werden jeweils ein Unternehmen und ein Standardstandort sowie ein Hauptkontakt angelegt. Es ist auch möglich, einen Katalog zu erstellen.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kann Shopify-Mandanten aktualisieren</strong></td>
+<td>Aktivieren Sie diese Option, wenn Sie später Aktualisierungen aus Business Central für Unternehmen erstellen möchten, die bereits in Shopify vorhanden sind.</td>
+</tr>
+<tr>
+<td><strong>Standardkontaktberechtigungen</strong></td>
+<td>Geben Sie an, welche Berechtigungen dem Hauptkontakt zugewiesen werden müssen. Sie können zwischen <strong>Keine</strong>, <strong>Nur Bestellung</strong> und <strong>Standortadministrator</strong> wählen.</td>
+</tr>
+<tr>
+<td><strong>Katalog automatisch erstellen</strong></td>
+<td>Aktivieren Sie diese Option, wenn Sie einen Katalog erstellen möchten, der alle Produkte enthält. Für jedes exportierte Unternehmen wird ein Katalog erstellt.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ein-b2b-unternehmen-nach-shopify-exportieren">Ein B2B-Unternehmen nach Shopify exportieren</h2>
+<h3 id="anfängliche-synchronisierung-von-b2b-unternehmen-aus-business-central-mit-shopify">Anfängliche Synchronisierung von B2B-Unternehmen aus Business Central mit Shopify</h3>
+<ol>
+<li>Wechseln Sie zum Suchsymbol <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Shopify-Mandanten</strong> ein und wählen Sie den zugehörigen Link aus.</li>
+<li>Wählen Sie die Aktion <strong>Mandant hinzufügen</strong> aus.</li>
+<li>Geben Sie im Feld <strong>Shop-Code</strong> den ersten Code ein. Wenn Sie das Fenster <strong>Shopify-Mandant</strong> über die Seite <strong>Shop-Karte</strong> aufrufen, wird der Shop-Code automatisch ausgefüllt.</li>
+<li>Legen Sie nach Bedarf Filter für den Debitor fest. Sie können beispielsweise nach Länder-/Regionscode filtern.</li>
+<li>Wählen Sie <strong>OK</strong> aus.</li>
+</ol>
+<p>Das resultierende Unternehmen und die resultierenden Debitoren werden automatisch in Shopify erstellt.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die erste Synchronisierung von Unternehmen von Business Central nach Shopify berücksichtigt die Einstellungen <strong>Kann Shopify-Unternehmen aktualisieren</strong> nicht.</p>
+</div>
+<h3 id="b2b-unternehmen-synchronisieren">B2B-Unternehmen synchronisieren</h3>
+<ol>
+<li>Wählen Sie die <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die “Wie möchten Sie weiter verfahren“-Funktion 1." title="Was möchten Sie tun?"> öffnet. Symbol, geben Sie <strong>Shopify Shop</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie den bestimmten Shop aus, für den Sie Debitoren synchronisieren möchten.</li>
+<li>Wählen Sie die Aktion <strong>Mandanten synchronisieren</strong> aus.</li>
+</ol>
+<p>Verwenden Sie alternativ die Aktion <strong>Mandantensynchronisierung starten</strong> auf der Seite <strong>Shopify-Mandant</strong> oder suchen Sie nach dem Batchauftrag <strong>Mandanten synchronisieren</strong>.</p>
+<p>Sie können für die Aufgabe eine automatische Ausführung planen. Erfahren Sie mehr unter <a href="background.html#to-schedule-recurring-tasks">Planen Sie wiederkehrende Aufgaben</a>.</p>
+<h2 id="siehe-auch">Siehe auch</h2>
+<p><a href="get-started.html">Einstieg in den Konnektor für Shopify</a>  </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

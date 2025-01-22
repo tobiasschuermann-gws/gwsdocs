@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Belgian VAT </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Belgian VAT ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="belgian-vat">Belgian VAT</h1>
+
+<p>Business Central includes Belgian extensions to the VAT reporting capabilities so that you can print VAT transaction details. You must send the following reports to the Belgian tax authorities:  </p>
+<ul>
+<li><p>Monthly/Quarterly declaration - Use this report to create monthly or quarterly VAT declarations, depending on your company revenue.  </p>
+</li>
+<li><p>VAT annual listing (on paper/disk)</p>
+<p>  Use this report to annually report all amounts invoiced for both goods and services to all Belgian companies with a registered VAT number.  </p>
+</li>
+<li><p>EC sales list</p>
+<p>  Use this report to report the sales of goods to other countries/regions in the European Union. To learn more, go to <a href="../../finance-how-report-vat.html#ecsaleslist">About the EC Sales List Report</a>.  </p>
+</li>
+</ul>
+<p>You&#39;re also required to provide a printed statement detailing the VAT transactions to the Belgian tax authorities.</p>
+<h2 id="nondeductible-vat">Nondeductible VAT</h2>
+<p>In Belgium, VAT can be fully or partially deductible. Expenses such as representation cost or purchases of cars are only partially deductible, and the transaction must specify how much of the VAT is nondeductible. For example, you create a general ledger account for fixed assets such as cars, and another account for representation cost. For each account, you specify how much of the reported VAT is nondeductible by setting the <strong>Percentage Non deductible VAT</strong> field. Then, when you post a transaction, the deductible VAT posts to the corresponding VAT account. The nondeductible VAT is added to the base amount and posted to the same account as a tangible or intangible asset.  </p>
+<p>For fixed assets, the nondeductible VAT depreciates just like the base acquisition cost of the fixed asset. You must set up separate fixed asset posting groups for each percentage of nondeductible VAT. You must do so because each fixed asset posting group posts to a general ledger account where the <strong>Percentage Non deductible VAT</strong> field specifies how much VAT must post to the same account as the fixed asset.  </p>
+<p>If you select the <strong>Incl. Non Deductible VAT</strong> field in a VAT statement line, nondeductible VAT is included in the VAT amount. The <strong>Calc. and Post VAT Settlement</strong> report adds the nondeductible part of that amount to the <strong>Non Ded. VAT Amount</strong> and <strong>Non Ded. Source Curr. VAT Amt.</strong> fields in the resulting VAT entries.  </p>
+<h2 id="multiple-vat-numbers-for-customers">Multiple VAT numbers for customers</h2>
+<p>The feature for using multiple VAT registration numbers for customers, including adding different <strong>VAT Registration Numbers</strong>, <strong>VAT Business Posting Groups</strong>, and <strong>General Business Posting Groups</strong> for addresses in another country, are available in the Belgian localization. To learn more, go to <a href="../../finance-how-use-multiple-vat-registrations.md">Multiple VAT registration numbers</a>.</p>
+<p>In addition to different <strong>VAT Registration Numbers</strong>, <strong>VAT Business Posting Groups</strong>, and <strong>General Business Posting Groups</strong>, businesses using the Belgian localization also need to work with the <strong>Enterprise No.</strong>. When you open the <strong>Alternative Customer VAT Registration</strong> page, you can add the <strong>Enterprise No.</strong> for the customer if their address is in another country. After you enter this information, Business Central does the following things when you&#39;re working with sales documents:  </p>
+<ul>
+<li>If the customer is from Belgium and the ship-to address is in Belgium, the <strong>Enterprise No.</strong> comes from the <strong>Customer</strong> card.</li>
+<li>If the customer is from Belgium and the ship-to address isn&#39;t in Belgium, the <strong>Enterprise No.</strong> is removed.</li>
+<li>If the customer isn&#39;t from Belgium and the ship-to address is in Belgium, the <strong>Enterprise No.</strong> comes from the <strong>Alternative Customer VAT Registration</strong> page.</li>
+<li>If the customer isn&#39;t from Belgium and the ship-to address isn&#39;t in Belgium, the <strong>Enterprise No.</strong> isn&#39;t available.  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>If there&#39;s a change in the <strong>Enterprise No.</strong> in a sales document, it displays on the <strong>Confirm Alternative Customer VAT Registration</strong> dialog.  </p>
+</div>
+<h2 id="related-information">Related information</h2>
+<p><a href="belgium-local-functionality.html">Belgium Local Functionality</a><br><a href="how-to-print-periodic-vat-reports.html">Print Periodic VAT Reports</a><br><a href="how-to-set-up-non-deductible-vat.html">Set Up Non-Deductible VAT</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

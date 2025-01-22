@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Copilot- und KI-Funktionen konfigurieren </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Copilot- und KI-Funktionen konfigurieren ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="configure-copilot-and-ai-capabilities">Copilot- und KI-Funktionen konfigurieren</h1>
+
+<!--[!INCLUDE[ai-preview](includes/ai-preview.md)]-->
+<!--This article explains how you can control the ability to create AI-powered item marketing text with Copilot for your organization. This task is done by an admin. There are two requirements that you must fulfill to make the feature available to users:-->
+<p>In diesem Artikel wird erläutert, wie Sie Microsoft Copilot und andere KI-Funktionen in Dynamics 365 Business Central steuern. Diese Aufgaben müssen von einem Administrator ausgeführt werden.</p>
+<p>Copilot ist eine Systemfunktion und ein integraler Bestandteil von Business Central. Wie bei den meisten Systemfunktionen gewähren Sie einzelnen Benutzern keinen Zugriff und können Copilot auch nicht ein- oder ausschalten. Copilot bietet jedoch Datenverwaltungskontrollen und die Möglichkeit, einzelne Copilot- und KI-Funktionen für jede Umgebung zu deaktivieren. Abhängig von der Funktion gibt es unterschiedliche Ebenen der Zugriffskontrolle für KI-Funktionen:</p>
+<ul>
+<li><p>Datenverschiebung über geografische Regionen hinweg erlauben.</p>
+<p>  Diese Aufgabe ist nur erforderlich, wenn sich Ihre Business Central-Umgebung in einer anderen Region befindet als der Azure OpenAI Dienst, den sie verwendet. <a href="#allow-data-movement-across-geographies">Erfahren Sie mehr über diese Aufgabe</a>.</p>
+</li>
+<li><p>Aktivieren Sie die Funktion auf der Seite <strong>Copilot- und KI-Funktionen</strong>. <a href="#activate-features">Erfahren Sie mehr über diese Aufgabe</a>.</p>
+</li>
+</ul>
+<!-- For 2024 there are no AI features governed by **Feature Management**, so this section is not shown
+- Enable the specific feature if it's governed by **Feature Management**.
+
+  Check whether  of 2024 release wave 1, chat with Copilot, marketing text suggestions, and bank account reconciliation assist features are included under **Feature Management**. [Learn more](#enable-feature-in-feature-management)
+<!-- 
+- Enable the specific feature, if it's still governed by **Feature Management**.
+
+  In 2023 release wave 2, both the marketing text suggestions and bank account reconciliation assist features are included under **Feature Management**. [Learn more](#enable-feature-in-feature-management)-->
+<p>Wenn eine dieser Anforderungen nicht erfüllt ist, steht das Feature nicht zur Verfügung.</p>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li>Sie verwenden Business Central Online.</li>
+<li>Sie sind <a href="#requirements-for-being-an-administrator">Administrierender</a> für Business Central.</li>
+</ul>
+<h2 id="allow-data-movement-across-geographies">Datenverschiebung über geografische Regionen hinweg zulassen</h2>
+<p>Diese Aufgabe gilt nur, wenn die Option <strong>Datenverschiebung zulassen</strong> oben auf der Seite <strong>Copilot- und KI-Funktionen</strong> angezeigt wird. Überspringen Sie diese Aufgabe, wenn anstelle der Option <strong>Datenverschiebung zulassen</strong> der Link <strong>Wie kann ich meine Copilot-Daten verwalten?</strong> angezeigt wird.</p>
+<p><img src="media/allow-data-movement-v2.png" alt="Screenshot mit der Option „Datenverschiebung zulassen“ auf der Seite „Copilot und KI-Fähigkeiten“"></p>
+<p>Das Vorhandensein der Option <strong>Datenverschiebung zulassen</strong> gibt an, dass sich der Standort Ihrer Business Central-Umgebung (also die Region, in der Daten verarbeitet und gespeichert werden) von der geografischen Region des Azure OpenAI Service unterscheidet, die von Copilot verwendet wird. Um Copilot zu aktivieren, müssen Sie die Datenverschiebung zwischen Regionen zulassen. <a href="ai-copilot-data-movement.html">Erfahren Sie mehr über die Datenverschiebung</a>.</p>
+<p>Um die Datenverschiebung außerhalb Ihrer geografischen Region zuzulassen, gehen Sie wie folgt vor:</p>
+<ol>
+<li>Suchen Sie in Business Central nach der Seite <strong>Copilot- und KI-Funktionen</strong> und öffnen Sie sie.</li>
+<li><p>Aktivieren Sie die Option <strong>Datenverschiebung zulassen</strong>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Für Umgebungen in den Azure-Regionen Westeuropa und Nordeuropa ist die Option <strong>Datenverschiebung zulassen</strong> standardmäßig aktiviert.</p>
+</div>
+</li>
+</ol>
+<p>Deaktivieren Sie die Option <strong>Datenverschiebung zulassen</strong>, um die die Datenverschiebung ausschalten.</p>
+<p>Nachdem ein Azure OpenAI Service in der geografischen Region Ihrer Business Central-Umgebung verfügbar ist, wird Ihre Umgebung automatisch damit verbunden. An dieser Stelle wird die Option <strong>Datenverschiebung zulassen</strong> auf der Seite <strong>Copilot- und KI-Funktionen</strong> nicht mehr angezeigt.</p>
+<!-- Don't review
+| Australia, United Kingdom, United States | Within the respective geographical region |
+| Europe, France, Germany, Norway, Switzerland  | Sweden or Switzerland |
+| Asia Pacific, Brazil, Canada, India, Japan, Singapore, South Africa, South Korea, United Arab Emirates  | United States |-->
+<!--Note
+
+If your environment is hosted in North America, Copilot will use an Azure OpenAI endpoint in North America to process your data.
+If your environment is hosted in Europe, Copilot will use an Azure OpenAI endpoint in Europe to process your data.
+If your environment is hosted anywhere else, Copilot will use an Azure OpenAI endpoint outside of the region in which the environment is hosted.
+To opt in 
+
+Copilot and other AI capabilities use Azure OpenAI Service.  and are provided by default to only those customers with environments that have United States as their geography for data processing and storage. While the Azure OpenAI Service is available in multiple geographies including Australia, Canada, United States, France, Japan and UK, Copilot does not follow the same regional rollout schedule.
+
+Meanwhile, customers with environments outside the United States can use Copilot AI features by opting in to share relevant data with the Azure OpenAI Service in United States or Switzerland.
+
+The information in the following table outlines the Azure OpenAI service that's used by the Copilot services based on the geography of their Dynamics 365 environment when they opt-in to share data.-->
+<h2 id="activate-features">Features aktivieren</h2>
+<p>Alle Copilot- und KI-Funktionen sind standardmäßig aktiv, wenn sie in der Vorschau verfügbar gemacht werden oder allgemein verfügbar werden. Auf der Seite <strong>Copilot- und KI-Funktionen</strong> können Sie einzelne Features für alle Benutzenden deaktivieren oder wieder aktivieren.</p>
+<ol>
+<li>Suchen Sie in Business Central nach der Seite <strong>Copilot- und KI-Funktionen</strong> und öffnen Sie sie.</li>
+<li><p>Die Seite listet alle verfügbaren Copilot- und KI-bezogenen Features und ihren aktuellen Status auf. (Der Status kann <em>Aktiv</em> oder <em>Inaktiv</em> sein.) Die Funktionen sind in zwei Abschnitte unterteilt: ein Abschnitt für Funktionen, die sich in der Vorschauversion befinden, und ein Abschnitt für Funktionen, die allgemein verfügbar sind.</p>
+<ul>
+<li>Um eine Funktion zu aktivieren, wählen Sie sie aus der Liste aus, und wählen Sie dann <strong>Aktivieren</strong> aus.</li>
+<li><p>Zum Deaktivieren einer Funktion wählen Sie sie aus der Liste und dann <strong>Deaktivieren</strong> aus.</p>
+<p><a href="media/copilot-and-ai-capabilties-page.svg#lightbox"><img src="media/copilot-and-ai-capabilties-page.svg" alt="Screenshot mit den Schaltflächen „Aktivieren“ und „Deaktivieren“ für die Funktionslisten auf der Seite „Copilot- und KI-Funktionen“"></a></p>
+</li>
+</ul>
+</li>
+</ol>
+<!-- don't review 
+
+<!-- For 2024 there are no AI features governed by **Feature Management**, so this section is not shown
+## <a name="enable-feature-in-feature-management"></a>Enable feature in Feature Management
+
+When individual Copilot capabilities are released in Business Central minor updates, these capabilities are optional until the next major update. **Feature Management** is used to turn on or off features that are in preview, like bank reconciliation, and some features that are generally available, like marketing text suggestions. [Learn more about feature management](https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/feature-management).
+
+1. In Business Central, search for and open the **Feature Management** page.
+2. To enable a feature, set the **Enabled for** column to **All users**. To disable a feature, set the **Enabled for** column to **None**. Use the following table to help you determine the switch that applies to the Copilot and AI capability you want to enable:
+
+   - **Feature Preview: Bank account reconciliation with Copilot** enables the bank account reconciliation assist feature.
+   - **Feature Preview: Chat with Copilot** enables the chat with Copilot feature.
+   - **Feature preview: Create AI-powered product descriptions with Copilot** enables the marketing text suggestions feature.
+
+   For more information about feature management in general, go to [Feature Management](https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/feature-management).-->
+<h2 id="granting-user-access">Gewähren von Benutzerzugriff</h2>
+<p>Copilot- und KI-Funktionen können Funktionen bieten, die für alle Benutzenden in Ihrer Organisation oder für bestimmte Benutzerrollen gedacht sind. Die meisten Copilot- und KI-Funktionen bieten Zugriffskontrolle mithilfe von Berechtigungen und Berechtigungssätzen im Berechtigungsverwaltungssystem von Business Central. <a href="ui-define-granular-permissions.html">Erfahren Sie mehr über Berechtigungen und Berechtigungssätze</a>.</p>
+<p>In der folgenden Tabelle sind die Berechtigungen aufgelistet, die für die Verwendung der von Business Central bereitgestellten Copilot-Funktionen erforderlich sind.</p>
+<table>
+<thead>
+<tr>
+<th>Copilot-Funktion</th>
+<th>Erforderliche Berechtigungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyseunterstützung</td>
+<td>Der Berechtigungssatz <strong>DATENANALYSE – AUSFÜHREN</strong> oder die Ausführungsberechtigung für das Systemobjekt 9640, <strong>Datenanalysemodus zulassen</strong> Dies sind die Berechtigungen, die auch für den Zugriff auf den Analysemodus erforderlich sind.</td>
+</tr>
+<tr>
+<td>Unterstützung bei der Bankkontoabstimmung</td>
+<td>Berechtigung auf Seite 7250, <strong>Bankkontoabstimmungs-KI-Vorschlag</strong> und Seite 7252 <strong>Übertr. KI-Vorschlag auf Fibu-Konto</strong></td>
+</tr>
+<tr>
+<td>Chat</td>
+<td>Es gibt keine Berechtigungen oder Berechtigungssätze, die den Zugriff auf den Chat auf Benutzerbasis steuern. Wenn der Chat aktiviert ist, steht er allen Benutzenden zur Verfügung.</td>
+</tr>
+<tr>
+<td>E-Belege zuweisen</td>
+<td>Berechtigung auf Seite 6166 <strong>E-Beleg-Best. Copilot-Vorschl.</strong></td>
+</tr>
+<tr>
+<td>Vorschläge für Marketingtexte</td>
+<td>Berechtigung auf Seite 5836 <strong>Copilot-Marketingtext</strong></td>
+</tr>
+<tr>
+<td>Verkaufszeilenvorschläge</td>
+<td>Berechtigung auf Seite 7275, <strong>KI-Vorschläge für Verkaufszeilen</strong> und Seite 7276 <strong>KI-Untervorschläge für Verkaufszeilen</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Um den Zugriff auf bestimmte, nicht von Microsoft stammende Copilot- und KI-Funktionen zu gewähren oder zu verweigern, wenden Sie sich an die Dokumentation oder den Herausgeber des Features und informieren Sie sich über die erforderlichen Berechtigungen.</p>
+<h2 id="requirements-for-being-an-administrator">Voraussetzungen um Administrierender zu sein</h2>
+<p>Sie müssen entweder über SUPER-Berechtigungen in Ihrem Business Central-Benutzerkonto oder über eine der folgenden Business Central-Lizenzen verfügen:</p>
+<ul>
+<li>Delegierter Admin-Agent – Partner</li>
+<li>Delegierter Helpdesk-Agent – Partner</li>
+<li>Interner Admin</li>
+<li>Interner BC-Administrator</li>
+<li>Dynamics 365-Administrator</li>
+</ul>
+<p>Business Central bietet noch keine granularen Berechtigungen auf Objektebene, sodass nur bestimmte Administrierende Copilot konfigurieren können.</p>
+<h2 id="next-steps">Nächste Schritte</h2>
+<p>Nachdem Sie die Funktionen aktiviert und ihnen zugestimmt haben, können Sie sie ausprobieren. Gehen Sie zu den folgenden Artikeln:</p>
+<ul>
+<li><a href="item-marketing-text.html">Marketingtext für Artikel mit Copilot hinzufügen</a></li>
+<li><a href="analysis-assist.html">Listendaten mithilfe von Copilot analysieren</a></li>
+<li><a href="chat-with-copilot.html">Chat mit Copilot</a></li>
+<li><a href="map-edocuments-with-copilot.html">E-Belege mit Copilot Bestellzeilen zuordnen</a></li>
+<li><a href="bank-reconciliation-with-copilot.html">Bankkontoabstimmung mit Copilot</a></li>
+<li><a href="sales-suggest-sales-lines-with-copilot.html">Zeilen in Verkaufsaufträgen mit Copilot vorschlagen</a></li>
+</ul>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="ai-copilot-troubleshooting.html">Probleme mit Copilot- und KI-Funktionen beheben</a><br><a href="faqs-analysis-assist.html">Häufig gestellte Fragen zur Analyseunterstützung</a><br><a href="faqs-bank-reconciliation.html">Häufig gestellte Fragen zur Unterstützung bei der Bankkontoabstimmung</a><br><a href="faqs-chat-with-copilot.html">Häufig gestellte Fragen zum Chat mit Copilot</a><br><a href="faqs-map-edocuments.html">Häufig gestellte Fragen zur Zuordnung von E-Belegen zu Bestellungen</a><br><a href="faqs-marketing-text.html">Häufig gestellte Fragen zu Vorschlägen für Marketingtexte</a><br><a href="faq-sales-suggest-sales-lines-with-copilot.html">Häufig gestellte Fragen zu Verkaufszeilenvorschlägen</a><br><a href="ai-overview.html">Überblick über Vorschläge für Marketingtexte</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

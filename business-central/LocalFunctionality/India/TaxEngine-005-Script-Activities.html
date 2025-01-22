@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tax Engine - Script Activity </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Tax Engine - Script Activity ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="tax-engine---script-activity">Tax Engine - Script Activity</h1>
+
+<p>Script extension contains UI elements and tables which are used in scripting of Business logics within a use case.</p>
+<h3 id="string--text">String / Text</h3>
+<ul>
+<li><p><strong>Concatenate</strong>: Concatenates list values and outputs to a variable.</p>
+</li>
+<li><p><strong>String Expression</strong>: It is used to compose string. Names that are enclosed within curly braces are treated as tokens. Values can be assigned to tokens using lookups, whereas on the Value tab,  source of that token can be defined.</p>
+</li>
+<li><p><strong>Length of String</strong>: Calculates the length of the string and assigns it to the output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which value of the length is stored.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>Specifies the string for which length is to be calculated, hard coded text or/and expression can be entered.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Convert Case of String</strong>: Converts the case of the string and assigns to the output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which value of converted case will be stored.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>Specifies the string for which case will be converted, hard coded text or/and expression can be entered.</td>
+</tr>
+<tr>
+<td>Convert to Case</td>
+<td>Converts case of the string, it can be either Upper Case or Lower Case.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Find Substring in String</strong>: Finds the substring in string and assigns the position of the substring to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which value of substring will be stored.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>This will be the string for which value of substring will be searched, hard coded text or/and expression can be entered.</td>
+</tr>
+<tr>
+<td>Substring</td>
+<td>Specifies the string or expression which needs to be identified from String value.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Replace Substring in String</strong>: Replace substring in a string with a new string and assigns to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which the value of Replaced String will be stored.</td>
+</tr>
+<tr>
+<td>Sub String</td>
+<td>This will be the string content which will be replaced from &#39;In String&#39;, hard coded text or/and expression can be entered.</td>
+</tr>
+<tr>
+<td>With String</td>
+<td>This will be the string content which will be replaced with &#39;Sub String&#39;, hard coded text or/and expression can be entered.</td>
+</tr>
+<tr>
+<td>In String</td>
+<td>This will be the string on which replacement of character will happen.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Extract Substring</strong>: Extracts substring of a length from a string from start/ end and assigns to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which value of Extracted Sub String will be stored.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>This will be the string for which value of Substring will be extracted, hard coded text or/and expression can be entered.</td>
+</tr>
+<tr>
+<td>From</td>
+<td>Starting point of extraction, it can be either start or end.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Length of the character to extract.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Extract Substring from Index of String</strong>: Extracts substring of a length from a string with an index and assigns to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the variable name in which value of Extracted Sub String will be stored.</td>
+</tr>
+<tr>
+<td>In String</td>
+<td>This will be the string for which value of Substring will be extracted, hard coded text or/and expression can be entered.</td>
+</tr>
+<tr>
+<td>From Index</td>
+<td>Starting point of extraction as Index.</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Length of the character to extract.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="number">Number</h3>
+<ul>
+<li><p><strong>Number Calculation</strong>: Calculates the number based on values and the operator. It is assigned to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the variable name in which value of Calculated Number will be stored.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>This will be the Left-Hand Side (LHS) of the Number Calculation.</td>
+</tr>
+<tr>
+<td>Operator</td>
+<td>Operator to be used for calculation, it can be Addition, Subtraction, Division, Multiplication.</td>
+</tr>
+<tr>
+<td>Value 2</td>
+<td>This will be the Right-Hand Side (RHS) of the Number Calculation.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Numeric Expression</strong>: Numeric Expression is to evaluate expression into number and assign it to output variable. Text token will be extracted and replaced with values from Lookups, whereas on the value tab source of that token can be defined.</p>
+</li>
+<li><p><strong>Round Number</strong>: Round Number is used to round decimal places to a precision and direction could be nearest, up or down.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the variable name in which value of Rounded Number will be stored.</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>Value that will be rounded.</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>Rounding precision.</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Direction of rounding, it can be Nearest, Up or Down.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="date">Date</h3>
+<ul>
+<li><p><strong>Date Calculation</strong>: ‘Date Calculation’ is used to manipulate dates by adding or subtracting number of days / months / years and it is assigned to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which value of ‘Calculated Date’ will be stored.</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>This will be the date on which calculation will be done.</td>
+</tr>
+<tr>
+<td>Operator</td>
+<td>This will be the operator that will be applied on ‘Date for calculation’.</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>This will be the number that will added or subtracted to date.</td>
+</tr>
+<tr>
+<td>Period</td>
+<td>This will be the type that will be added or subtracted to date as Number. It can be Days, Week, Months, Year.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Extract Date Part</strong>: ‘Extract Date Part’ is used to extract day / month / year from a date and assign it to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the variable name in which value of Extracted Date will be stored.</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>This will be the Date on which extraction will be done.</td>
+</tr>
+<tr>
+<td>Part</td>
+<td>Type of extraction, it can be Year, Month, Day.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Find Interval between Dates</strong>: Find Interval between dates is used to find number of days / hours / minutes between dates and assign it to output variable.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the variable name in which value of Interval will be stored.</td>
+</tr>
+<tr>
+<td>From Date</td>
+<td>This will be starting date of date range.</td>
+</tr>
+<tr>
+<td>To Date</td>
+<td>This will be ending date of date range.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Extract Date Time Part</strong>: Extracts the date or time from a &#39;date time value&#39;.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which value of date or time will be stored.</td>
+</tr>
+<tr>
+<td>Date Time</td>
+<td>This will be the date time value from which extraction will be done.</td>
+</tr>
+<tr>
+<td>Part</td>
+<td>Part that will be extracted, it can be either date or time.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Date to Date Time</strong>: Converts a ‘Date’ value to ‘Date Time’</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>Specifies the name of variable in which value of ‘date time’ will be stored.</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>This will be the date value which will be part of &#39;date time&#39;.</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>This will be the time value which will be part of ‘date time’.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 id="condition">Condition</h4>
+<ul>
+<li><strong>If Statement</strong>: Activities within the &quot;If&quot; statement will be executed when the defined conditions are evaluated to be true. If the conditions are evaluated to false, activities in the “Else” branch will be executed. Conditions can be specified in “Else” branch. There can be more than one else branch for an “If Statement”.</li>
+</ul>
+<h3 id="loops">Loops</h3>
+<ul>
+<li><p><strong>Loop n Times</strong>: Executes activities in the loop block for n number of times. &quot;N&quot; can be a constant value, or it can be a variable.</p>
+</li>
+<li><p><strong>Loop with Condition</strong>: Executes activities in the loop block until condition is evaluated to be false.</p>
+</li>
+<li><p><strong>Loop through Records</strong>: Loop through all records and execute activities in the Loop block.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table Name</td>
+<td>Name of table whose records need to be iterated.</td>
+</tr>
+<tr>
+<td>Sorting</td>
+<td>Sorting order of the records.</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>Ascending or Descending.</td>
+</tr>
+<tr>
+<td>Distinct</td>
+<td>To skip duplicate records.</td>
+</tr>
+<tr>
+<td>Table Filters</td>
+<td>Filters to be applied on the table records.</td>
+</tr>
+<tr>
+<td>Record Value</td>
+<td>Variable that holds the current record of the table.</td>
+</tr>
+<tr>
+<td>Index Variable</td>
+<td>Loop index starts from 1.</td>
+</tr>
+<tr>
+<td>Count Variable</td>
+<td>Count of records after applying filters.</td>
+</tr>
+<tr>
+<td>Set Variables</td>
+<td>To assign field values to a variable.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Exit Loop</strong>: Breaks loop and executes activates after the loop block.</p>
+</li>
+<li><p><strong>Skip Next Activities</strong>: Skips next activities in the loop block and continues execution of the next iteration.</p>
+</li>
+</ul>
+<h3 id="misc">Misc.</h3>
+<ul>
+<li><p><strong>Set Variable</strong>: To assign Variable value.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output Variable</td>
+<td>The variable which will be assigned with value.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>The value of variable, this can be constant or lookup.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Alert Message</strong>: Message dialog will be displayed while execution rule. This is helpful to debug, and this can also be used for throwing errors.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td>Message that is to be displayed.</td>
+</tr>
+<tr>
+<td>Throw Error</td>
+<td>Check this flag to throw error message.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="see-also">See Also</h2>
+<p><a href="TaxEngine-006-Design-Consideration.html">Tax Engine Design Consideration</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>E-Belege einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="E-Belege einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-e-documents">E-Belege einrichten</h1>
+
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Das E-Beleg-Kernmodul ist ein Framework. Standardmäßig gibt es kein Feld <strong>Dienstintegration</strong>. Wenn Sie standardmäßig die <strong>Belegformat</strong>-Optionen finden, beachten Sie, dass diese als Beispiel angeboten werden und dass die Lokalisierung ein detailliertes Format bereitstellen muss. Diese Details gehören zu Lokalisierungs-Apps, da sie für lokale Anforderungen spezifisch sind.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Ab Version 23.2 wird ein Standard-PEPPOL-Belegformat als globales Format im Format <strong>Belegformat</strong> hinzugefügt. Bedenken Sie, dass Sie dieses Format wahrscheinlich nicht so verwenden können, wie es ist. Es handelt sich um ein W1-Format, das bereitgestellt wird, um die Verwendung dieses Features zu veranschaulichen. Wir empfehlen Ihnen, das vorhandene PEPPOL-Format zu testen, bevor Sie mit der Verwendung dieses Formats beginnen.</p>
+</div>
+<p>Der erste Schritt bei der Konfiguration elektronischer Belege (E-Beleg) besteht in der Einrichtung des E-Beleg-Dienstes, in dem Sie das gesamte Verhalten Ihres Systems in Bezug auf die E-Beleg-Kommunikation konfigurieren.</p>
+<h2 id="set-up-the-e-document-service">Den E-Belegdienst einrichten</h2>
+<p>Gehen Sie wie folgt vor, um den E-Beleg-Dienst einzurichten.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol aus. Geben Sie <strong>E-Belegdienste</strong> ein und wählen Sie dann den zugehörigen Link aus.</li>
+<li><p>Wählen Sie <strong>Neu</strong> und dann auf der Seite <strong>E-Belegdienste</strong> auf dem Inforegister <strong>Allgemein</strong> die Felder wie in der folgenden Tabelle beschrieben aus.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>Wählen Sie den Einrichtungscode für den elektronischen Beleg aus.</td>
+</tr>
+<tr>
+<td>Beschreibung</td>
+<td>Geben Sie eine kurze Beschreibung für die Einrichtung des elektronischen Exports an.</td>
+</tr>
+<tr>
+<td>Belegformat</td>
+<td><p>Das Exportformat für die Einrichtung des elektronischen Exports.</p><p>Standardmäßig gibt es in diesem Feld zwei Optionen. Sie können <strong>PEPPOL BIS 3</strong> als generisches codebasiertes Format oder <strong>Datenaustausch</strong> wählen, wenn Sie Vorabdokumente bestimmter Formate im Inforegister <strong>Datenaustauschdefinition</strong> einrichten müssen.</p></td>
+</tr>
+<tr>
+<td>Dienstintegration</td>
+<td>Wählen Sie den Integrationscode für die Einrichtung des elektronischen Exports aus. In Zyklus 1 ist die einzige Option <strong>Keine Integration</strong>.</td>
+</tr>
+<tr>
+<td>Stapelverarbeitung verwenden</td>
+<td>Geben Sie an, ob der Dienst für den Export die Stapelverarbeitung verwendet.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Konfigurieren Sie auf dem Inforegister <strong>Importierte Parameter</strong> die in der folgenden Tabelle beschriebenen Felder.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empfangendes Unternehmen überprüfen</td>
+<td>Geben Sie an, ob eingehende Unternehmensinformationen während des Imports überprüft werden müssen.</td>
+</tr>
+<tr>
+<td>Einheit auflösen</td>
+<td>Geben Sie an, ob die Einheit während des Imports aufgelöst werden soll.</td>
+</tr>
+<tr>
+<td>Artikelreferenz nachschlagen</td>
+<td>Geben Sie an, ob ein Artikel während des Imports anhand der Artikelreferenz gesucht werden soll.</td>
+</tr>
+<tr>
+<td>Artikel-GTIN suchen</td>
+<td>Geben Sie an, ob ein Artikel während des Imports anhand der Global Trade Item Number (GTIN) gesucht werden soll.</td>
+</tr>
+<tr>
+<td>Kontozuordnung nachschlagen</td>
+<td>Geben Sie an, ob während des Imports ein Konto anhand des eingehenden Textes in der <strong>Kontozuordnung</strong> gesucht werden soll.</td>
+</tr>
+<tr>
+<td>Zeilenrabatt überprüfen</td>
+<td>Geben Sie an, ob während des Imports ein Zeilenrabatt überprüft werden soll.</td>
+</tr>
+<tr>
+<td>Rechnungsrabatt anwenden</td>
+<td>Geben Sie an, ob während des Imports ein Rechnungsrabatt angewendet werden soll.</td>
+</tr>
+<tr>
+<td>Summen überprüfen</td>
+<td>Geben Sie an, ob während des Imports eine Rechnungssumme überprüft werden soll.</td>
+</tr>
+<tr>
+<td>Auftrag aktualisieren</td>
+<td>Geben Sie an, ob die entsprechende Bestellung aktualisiert werden muss.</td>
+</tr>
+<tr>
+<td>Buch.-Blattzeilen erstellen</td>
+<td>Geben Sie an, ob anstelle eines Einkaufsbelegs eine Buchungsblattzeile erstellt werden muss. Wählen Sie diese Option, wenn Sie Buchungsblätter als Ziel für Ihre Rechnungen verwenden möchten.</td>
+</tr>
+<tr>
+<td>Fibu Buch.-Blattvorlagenname</td>
+<td>Geben Sie den Namen der Fibu Buch.-Blattvorlage an, der für die Erstellung der Buchungsblattzeile verwendet wird. Dieses Feld gilt, wenn Sie Buchungsblätter als Ziel für Ihre Rechnungen verwenden möchten.</td>
+</tr>
+<tr>
+<td>Fibu Buch.-Blattname</td>
+<td>Geben Sie den Namen des Fibu Buch.-Blatts an, der für die Erstellung der Buchungsblattzeile verwendet wird. Dieses Feld gilt, wenn Sie Buchungsblätter als Ziel für Ihre Rechnungen verwenden möchten.</td>
+</tr>
+<tr>
+<td>Automatischer Import</td>
+<td>Geben Sie an, ob Belege automatisch aus dem Dienst importiert werden sollen.</td>
+</tr>
+<tr>
+<td>Stapel-Startzeit</td>
+<td>Geben Sie die Startzeit für Importaufträge an.</td>
+</tr>
+<tr>
+<td>Minuten zwischen Ausführungen</td>
+<td>Geben Sie die Anzahl der Minuten zwischen den Ausführungen von Importaufträgen an.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wenn Sie <strong>Datenaustausch</strong> im Feld <strong>Dokumentformat</strong> im Inforegister <strong>Allgemein</strong> ausgewählt haben, verwenden Sie das Inforegister <strong>Datenaustauschdefinition</strong>, um die folgenden Felder festzulegen.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Belegtyp</td>
+<td>Geben Sie den Belegtyp an, der den Datenaustausch zum Importieren und Exportieren der Daten verwendet. Beispiele hierfür sind <strong>Verkaufsrechnung</strong>, <strong>Verkaufsgutschrift</strong> und <strong>Einkaufsrechnung</strong>.</td>
+</tr>
+<tr>
+<td>Datenaustausch-Definitionscode importieren</td>
+<td>Geben Sie den Datenaustauschcode an, der zum Importieren der Daten verwendet wird. Nutzen Sie dieses Feld nur, um im Kaufprozess einen Beleg zu erhalten.</td>
+</tr>
+<tr>
+<td>Datenaustausch-Definitionscode exportieren</td>
+<td>Geben Sie den Datenaustauschcode an, der zum Exportieren der Daten verwendet wird. Verwenden Sie dieses Feld nur, um Belege im Verkaufsprozess zu liefern.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Es gibt vorbereitete Datenaustauschdefinitionen für das PEPPOL-Format, die sich auf den Standardverkaufs- und Einkaufsbeleg beziehen. Allerdings können Sie diese Definitionen wahrscheinlich nicht so verwenden, wie sie sind. Es handelt sich dabei ausschließlich um W1-Formate, die bereitgestellt werden, um die Verwendung dieses Features zu veranschaulichen. Wir empfehlen Ihnen, das vorhandene PEPPOL-Format zu testen, bevor Sie mit ihrer Verwendung beginnen.</p>
+</div>
+<p>Wenn Sie das <strong>Datenaustauschdefinition</strong>-Format in Ihrer Lokalisierung konfiguriert haben, können Sie für jeden Belegtyp, den Sie benötigen, eine Zeile hinzufügen. Fügen Sie Zeilen hinzu, die dem Standarddatenaustauschbeispiel für das W1-PEPPOL-Format entsprechen. Wählen Sie jedoch zuerst die Option <strong>Belegtyp</strong> für jede Zeile aus, die Sie benötigen. Wählen Sie für jeden Datentyp die Werte <strong>Datenaustauschdefinitionscode importieren</strong> oder <strong>Datenaustauschdefinitionscode exportieren</strong>, die Sie verwenden möchten.</p>
+<p>Wenn Sie das Format <strong>Datenaustauschdefinition</strong> nicht verwenden, können Sie Formate mithilfe der <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-extend-edocuments">Schnittstelle</a> erstellen und konfigurieren. Passen Sie die Informationen in den Zeilen <strong>Exportzuordnung</strong> und <strong>Importzuordnung</strong> an, in denen Sie die Tabellen und Felder zur Konfiguration von Transformationsregeln finden. In diesem Fall müssen Sie im Feld <strong>Dokumentformat</strong> eine neue Option hinzufügen, die sich auf Ihr Format bezieht.  </p>
+<h3 id="supported-document-types">Unterstützte Belegtypen</h3>
+<p>Unterstützte Dokumenttypen basieren auf dem ausgewählten <strong>Belegformat</strong>. Um zu überprüfen, welche Belegtypen unterstützt werden, wählen Sie auf der Seite <strong>E-Belegdienste</strong> die Aktion <strong>Unterstützte Belegtypen</strong> aus. Die <strong>Unterstützten Quellbelegtypen des E-Belegdienstes</strong> öffnen sich und in der Spalte <strong>Quellbelegtyp</strong> können Sie verschiedene Belegtypen auswählen, um Sie für das Format, dass Sie verwenden möchten, als unterstützt festzulegen. Stellen Sie sicher, dass Sie den Belegtyp nicht verwenden, wenn dieser Beleg auf dieser Seite nicht ausgewählt ist.   </p>
+<h2 id="set-up-a-document-sending-profile">Ein Belegsendeprofil einrichten</h2>
+<p>Sie können für jeden Debitor eine bevorzugte Methode zum Senden von Verkaufsbelegen einrichten. So müssen Sie nicht jedes Mal eine Sendeoption auswählen, wenn Sie die Aktion <strong>Buchen und senden</strong> auswählen. Auf der Seite <strong>Belegsendeprofile</strong> können Sie verschiedene Sendeprofile einrichten und dann Ihre Auswahl aus den <strong>Belegsendeprofilen</strong> auf der Debitorenkarte treffen. Im Kontrollkästchen <strong>Standard</strong> können Sie auswählen, dass das Belegsendeprofil das Standardprofil für alle Debitoren gilt, außer Debitoren, bei denen das Feld <strong>Belegsendeprofil</strong> auf ein anderes Sendeprofil eingestellt ist.</p>
+<p>Diese Funktionalität wird zum Einrichten der Automatisierung der elektronischen Fakturierung verwendet. Wenn Sie die Schaltfläche <strong>Buchen und senden</strong> für einen Verkaufsbeleg auswählen, wird im Dialogfeld <strong>Buchungs- und Sendebestätigung</strong> das verwendete Sendeprofil angezeigt: entweder das für den Debitor eingerichtete oder das Standardprofil für alle Debitoren.</p>
+<p>Gehen Sie wie folgt vor, um ein Belegsendeprofil einzurichten.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Belegsendeprofil</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie auf der Seite <strong>Dokumentsendeprofile</strong> <strong>Neu</strong> aus.</li>
+<li>Geben Sie auf dem Inforegister <strong>Allgemein</strong> alle erforderlichen Feldinformationen ein.</li>
+<li><p>Konfigurieren Sie im Inforegister <strong>Sendeoptionen</strong> die Felder gemäß der Beschreibung in der folgenden Tabelle.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elektronischer Beleg</td>
+<td>Geben Sie an, ob dieser Beleg als E-Beleg gesendet wird, den der Debitor in sein System importieren kann, wenn Sie die Schaltfläche <strong>Buchen und senden</strong> auswählen. Um diese Option zu verwenden, müssen Sie auch das Feld <strong>Format</strong> oder <strong>Serviceflowcode für elektronischen Beleg</strong> festlegen. Alternativ kann die Datei auf einem Datenträger gespeichert werden.</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Geben Sie das Format an, das zum Senden eines E-Belegs verwendet werden soll. Wenn Sie <strong>Über Belegaustauschdienst</strong> im Feld <strong>Elektronischer Beleg</strong> auswählen, handelt es sich hierbei um ein Pflichtfeld.</td>
+</tr>
+<tr>
+<td>Serviceflowcode für elektronischen Beleg</td>
+<td>Geben Sie den elektronischen Serviceflow an, der zum Senden von Belegen verwendet wird. Wenn Sie <strong>Erweiterter E-Beleg-Serviceflow</strong> im Feld <strong>Elektronischer Beleg</strong> auswählen, handelt es sich hierbei um ein Pflichtfeld.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie <strong>Erweiterter E-Beleg-Serviceflow</strong> im Feld <strong>Elektronischer Beleg</strong> auswählen, muss der Workflow bereits für Ihre E-Belege konfiguriert sein.</p>
+</div>
+</li>
+</ol>
+<h2 id="set-up-the-workflow">Den Workflow einrichten</h2>
+<p>Gehen Sie wie folgt vor, um den Workflow einzurichten, der in der E-Beleg-Funktionalität verwendet wird.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Workflowvorlagen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wenn Sie <strong>Workflow-Vorlagen für E-Belege</strong> auf der Seite <strong>Workflow-Vorlagen</strong> nicht finden können, wählen Sie <strong>Microsoft-Vorlagen zurücksetzen</strong>. <strong>Workflow-Vorlagen für E-Belege</strong> sollte dann erscheinen. Schließen Sie die Seite.</li>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Workflows</strong> ein und wählen Sie dann den entsprechenden Link.</li>
+<li>Wählen Sie die Aktion <strong>Neuen Workflow aus Vorlage</strong> aus, um eine Vorlage für den E-Belegprozess auszuwählen. Die verfügbaren Vorlagen sind <strong>An einen Dienst senden</strong> und <strong>An mehrere Dienste senden</strong>.</li>
+<li>Wählen Sie <strong>OK</strong>, um die Einrichtung des Workflows abzuschließen.</li>
+<li>Wählen Sie im Feld <strong>Dann Antwort</strong> <strong>E-Beleg mit Einrichtung senden</strong> aus, um die Workflowreaktionen zu konfigurieren.</li>
+<li>Wählen Sie den von Ihnen erstellten E-Belegdienst als Option aus, wählen Sie <strong>OK</strong> und aktivieren Sie dann den Workflow.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können Ihren eigenen Workflow für E-Belege erstellen, ohne vordefinierte Workflow-Vorlagen zu verwenden. Wenn Sie mehr Dienste haben, können Sie unterschiedliche Workflows nutzen.</p>
+</div>
+<p>Um weitere Workflows zu nutzen, konfigurieren Sie diese über die Belegsendeprofile für verschiedene Debitoren. Wenn Sie den Workflow einrichten, geben Sie das Belegsendeprofil in der Spalte <strong>Bei Bedingung</strong> auf der Registerkarte <strong>Workflowschritte</strong> an, da Sie nicht über zwei Dienste verfügen können, die dasselbe Belegsendeprofil in Workflows verwenden.</p>
+<p>Wenn Sie Ihren Workflow auf der Seite <strong>Workflows</strong> konfigurieren, zeigen Sie auf das Feld <strong>Bei Bedingung</strong> auf dem Inforegister <strong>Workflowschritte</strong>. Wählen Sie auf der Seite <strong>Ereignisbedingungen</strong> im Feld <strong>Filter</strong> das Belegsendeprofil aus, das Sie verwenden möchten.</p>
+<h2 id="set-up-a-retention-policy-for-e-documents">Richten Sie eine Aufbewahrungsrichtlinie für E-Belege ein</h2>
+<p>E-Belege können im Hinblick darauf, wie lange die E-Belege aufbewahrt werden müssen, verschiedenen lokalen Gesetzen unterliegen. Aus diesem Grund haben wir eine Aufbewahrungsrichtlinie für alle wichtigen Informationen im Zusammenhang mit E-Belegen hinzugefügt. Administrierende können Aufbewahrungsrichtlinien festlegen, die bestimmen, wie häufig Dynamics 365 Business Central veraltete Datensätze im Zusammenhang mit E-Belegen gelöscht werden. Weitere Informationen zu Aufbewahrungsrichtlinien finden Sie unter <a href="admin-data-retention-policies.html">Aufbewahrungsrichtlinien definieren</a>.</p>
+<p>Führen Sie die folgenden Schritte aus, um Aufbewahrungsrichtlinien für E-Belege einzurichten.</p>
+<ol>
+<li>Wählen Sie auf der Seite <strong>E-Belegdienste</strong> die Aktion <strong>Aufbewahrungsrichtlinie</strong> aus.</li>
+<li><p>Wenn die Aktion abgeschlossen ist, wählen Sie eine der folgenden Aufbewahrungsrichtlinien zum Einrichten aus:</p>
+<ul>
+<li>E-Beleg-Protokoll</li>
+<li>Integrationsprotokoll für E-Belege</li>
+<li>E-Beleg-Zuordnungsprotokoll</li>
+<li>E-Beleg-Datenspeicherung</li>
+</ul>
+</li>
+</ol>
+<h2 id="e-documents-demo-data">E-Belegdemodaten</h2>
+<div class="NOTE"><h5>Hinweis</h5><p>Ab Business Central Version 24.0 ist es möglich, Demodaten für E-Belege einzurichten.</p>
+</div>
+<p>Um einfachere Möglichkeiten zum Testen und Vorführen der Fähigkeiten von <strong>E-Belegen</strong> zu bieten, hat Microsoft ein neues Demomodul für elektronische Belege erstellt. Um dieses Modul zu aktivieren, gehen Sie wie folgt vor:  </p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Contoso-Demo-Tool</strong> ein und wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Bevor Sie das <strong>E-Beleg-Contoso-Modul</strong> aktivieren, müssen Sie aufgrund von Abhängigkeiten die folgenden Module aktiviert haben: <strong>Allgemeines Modul</strong> und <strong>Lagermodul</strong>. </li>
+<li>Nachdem Sie diese Module aktiviert haben, wählen Sie das <strong>E-Belege-Contoso-Modul</strong> und anschließend die Aktion <strong>Generieren</strong> aus. </li>
+<li>Gehen Sie wie folgt vor.  </li>
+<li>Schließen Sie die Seite.   </li>
+</ol>
+<p>Sobald Sie ein aktiviertes Modul haben, haben Sie neue Demoartikel erstellt, sechs elektronische Belege (basierend auf Peppol BIS 3) importiert und bereits den <strong>E-Belegdienste</strong> mit erstellten Workflows konfiguriert.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance-how-use-edocuments.html">E-Belege im Verkauf verwenden</a><br><a href="finance-how-use-edocuments-purchase.html">E-Belege im Einkauf verwenden</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-extend-edocuments">E-Belege in Business Central erweitern</a><br><a href="finance.html">Finanzmanagement</a><br><a href="sales-how-invoice-sales.html">Fakturieren eines Verkaufs</a><br><a href="purchasing-how-record-purchases.html">Käufe mit Einkaufsrechnungen und Bestellungen erfassen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

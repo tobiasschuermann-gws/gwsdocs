@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Teilen Sie Kontakte zwischen Business Central und Outlook </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Teilen Sie Kontakte zwischen Business Central und Outlook ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="synchronize-contacts-in-business-central-with-contacts-in-microsoft-outlook">Synchronisieren Sie Kontakte in Business Central mit Kontakten in Microsoft Outlook</h1>
+
+<p>Sie können die Kontaktsynchronisierung einrichten, damit Ihre Kontakte in Business Central dieselben Informationen aufweisen wie Ihre Kontakte in Microsoft Outlook. Wenn Sie beispielsweise ein Vertriebsmitarbeiter sind, arbeiten Sie möglicherweise in Outlook und Business Central gleichzeitig. Wenn die Kontakte an beiden Stellen identisch sind, wird die Arbeit einfacher.  </p>
+<p>Standardmäßig werden die Kontakte, die Sie synchronisieren, in einem <strong>Business Central</strong>-Ordner in Ihren Favoriten im Ordnerbereich in Outlook gespeichert. Über den Business Central-Ordners können Sie einfacher ermitteln, welche Kontakte Sie synchronisieren. Sie können Filter festlegen, um nur bestimmte Kontakte von Business Central nach Outlook zu synchronisieren. Nachdem Sie die Synchronisierung eingerichtet haben, können Sie die Synchronisierung manuell durchführen oder den Vorgang automatisieren, um die Synchronisierung auf geplanter Basis durchzuführen.  </p>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li><p>Auf Ihrem Benutzerprofil in Business Central muss Ihr Microsoft 365 E-Mail angegeben sein.</p>
+<p>Sie können diese Einstellung im Abschnitt <strong>Microsoft 365-Authentifizierung</strong> Ihres Benutzerprofils in der Liste <strong>Benutzer</strong> überprüfen.</p>
+</li>
+<li>Sie haben mit Business Central die Kontaktsynchronisierung wie unter <a href="admin-contact-sync-setup-onprem.html">Die Kontaktsynchronisierung mit Outlook für das lokale Business Central einrichten</a> beschrieben eingerichtet</li>
+</ul>
+<h2 id="set-up-synchronization">Synchronisierung einrichten</h2>
+<p>Sie geben an, wie Sie die Synchronisierung der Kontakte mit Outlook einrichten möchten auf der Seite <strong>Exchange Synchronisierung einrichten</strong> in Business Central. </p>
+<p>Auf der Seite <strong>Exchange Synchronisierung einrichten</strong> können Sie die Verbindung mit Exchange überprüfen und die Synchronisierung von Kontakten festlegen. Auf der Seite <strong>Exchange Synchronisierung einrichten</strong> können Sie die Seite <strong>Kontaktsynchronisierung einrichten</strong> öffnen und die Synchronisierung starten. Legen Sie optional einen Filter fest, um anzugeben, welche Kontakte synchronisiert werden sollen. Sie können beispielsweise nach Name, Typ, Unternehmen usw. filtern. Sie können auch den Standardnamen des Ordners in Outlook ändern, mit dem die Kontakte synchronisiert werden sollen.  </p>
+<p>Jeder Ihrer Mitarbeiter kann die eigene Exchange-Synchronisierung einrichten und die eigenen Filter für die Synchronisierung von Kontakten einrichten.  </p>
+<p>Nachdem Sie die Synchronisierung eingerichtet haben, können Sie Änderungen am Kontakt manuell synchronisieren oder den Vorgang automatisieren, indem Sie einen Projektwarteschlangenposten einrichten. Weitere Informationen zur Automatisierung finden Sie im nächsten Abschnitt dieses Artikels.</p>
+<h3 id="automate-synchronization">Synchronisierung automatisieren</h3>
+<p>Sie können einen Projektwarteschlangenposten erstellen, der Kontakte gemäß einem von Ihnen definierten Zeitplan synchronisiert. Weitere Informationen finden Sie unter <a href="admin-job-queues-schedule-tasks.html">Job-Warteschlangen zur Einplanung von Aufgaben verwenden</a>. </p>
+<p>In der folgenden Tabelle sind die Einstellungen auf der Seite <strong>Karte für Aufgabenwarteschlangenposten</strong> aufgelistet, die für die Synchronisierung vorgesehen sind:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Einstellung für Kontaktsynchronisierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Art des auszuführenden Objekts</td>
+<td>Codeunit</td>
+</tr>
+<tr>
+<td>ID des auszuführenden Objekts</td>
+<td>6700</td>
+</tr>
+</tbody>
+</table>
+<h2 id="synchronize-contacts">Kontakte synchronisieren</h2>
+<p>Wenn Sie es gewohnt sind, in Business Central mit Kontakten zu arbeiten, ist es für Sie einfach, die Synchronisierung manuell über die Liste <strong>Kontakte</strong> durchzuführen, falls Sie dies wünschen. Es gibt zwei Möglichkeiten, Kontakte zu synchronisieren:</p>
+<ul>
+<li><p><strong>Mit Microsoft 365 synchronisieren</strong></p>
+<p>Synchronisieren Sie alle Änderungen von Business Central nach Microsoft 365, die nach der letzten Synchronisierung durchgeführt wurden, basierend auf dem letzten Änderungsdatum. Außerdem werden neue Kontakte von Microsoft 365 nach Business Central synchronisiert. Diese Aktion erfolgt in der Regel schneller als eine vollständige Synchronisierung. </p>
+</li>
+<li><p><strong>Vollständig mit Microsoft 365 synchronisieren</strong></p>
+<p>Synchronisieren Sie alle Kontakte in beide Richtungen unabhängig vom letzten Synchronisierungsdatum und der letzten Änderung.  </p>
+</li>
+</ul>
+<p>In beiden Fällen werden nur Kontakte von Outlook synchronisiert, wenn die erforderlichen Felder ausgefüllt sind. Die für die Synchronisierung mit Microsoft 365 erforderlichen Felder sind <strong>Name</strong> und <strong>E-Mail-Adresse</strong>, und der Kontakt muss vom Typ <strong>Person</strong> sein. Business Central ist die Quelle der Kontaktinformationen, sodass die Kontaktinformationen von Business Central gespeichert werden, falls Duplikate vorhanden sind.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie einen Kontakt in Outlook löschen, ihn in Business Central jedoch beibehalten, wird der Kontakt bei der nächsten Synchronisierung in Outlook neu erstellt. </p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="ui-get-ready-business.html">Vorbereiten auf die Geschäftsabwicklung</a><br><a href="finance.html">Finanzen</a><br><a href="sales-manage-sales.html">Verkauf</a><br><a href="purchasing-manage-purchasing.html">Einkauf</a><br><a href="https://support.office.com/article/Using-contacts-People-in-Outlook-on-the-web-1e3438c7-26b2-420c-87de-3cea9d31b5cb?appver=OWB150">Kontakte (Personen) in Outlook im Netz verwenden</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

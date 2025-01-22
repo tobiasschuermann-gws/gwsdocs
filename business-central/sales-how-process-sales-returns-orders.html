@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Retouren verarbeiten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Retouren verarbeiten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="process-sales-return-orders">Retouren verarbeiten</h1>
+
+<p>Wenn Sie mehr Steuerelemente für den Rücklieferungsprozess benötigen, z.B. Lagerbelege für die Artikelabwicklung oder eine bessere Übersicht beim Empfang von Artikeln aus mehreren Verkaufsbelegen mit einer Rücklieferung, dann können Sie Verkaufsreklamationen erstellen. Ein Rücklieferungsauftrag gibt automatisch die zugehörige Verkaufsgutschrift und andere rücklieferungsbezogene Belege aus, wie z.B. einen Ersatzverkaufsauftrag, falls erforderlich.</p>
+<p>Zusätzlich zur ursprünglich gebuchten Verkaufsrechnung können Sie die Verkaufsgutschrift für andere Verkaufsbelege übernehmen, beispielsweise einer anderen gebuchten Verkaufsrechnung, da der Debitor auch die Artikel zurücksendet, die mit dieser Rechnung geliefert werden.</p>
+<h2 id="create-a-sales-return-order-based-on-one-or-more-posted-sales-documents">Erstellen Sie einen Verkaufsauftrag für eine Rücklieferung auf der Grundlage eines oder mehrerer gebuchter Belege</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Verkaufsreklamationen</strong> ein und wählen Sie den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Neu</strong> aus.  </li>
+<li>Füllen Sie im Inforegister <strong>Allgemein</strong> die notwendigen Felder aus.</li>
+<li><p>Im Inforegister <strong>Zeilen</strong> können Sie die Zeilen manuell ausfüllen, oder kopieren Sie Informationen aus anderen Belegen, um die Zeilen automatisch auszufüllen:</p>
+<ul>
+<li>Die Funktion <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong> können Sie verwenden, um eine oder mehrere gebuchte Belegzeilen aus einem oder mehreren gebuchten Belegen zu kopieren. Diese Funktion ermöglicht Ihnen die exakte Stornierung der Einstandspreise aus der gebuchten Belegzeile. Diese Funktion wird in den folgenden Schritten beschrieben.    </li>
+<li>Verwenden Sie die Funktion <strong>Aus Dokument kopieren</strong>, um ein vorhandenes Dokument in den Rückgabeauftrag zu kopieren. Verwenden Sie diese Funktion zum Kopieren des gesamten Belegs. Dies kann entweder ein bereits gebuchter oder ein noch nicht gebuchter Beleg sein. Diese Funktion ermöglicht die Einstandspreisrückverfolgung nur dann, wenn die <strong>Einstandspreisrückverfolgung</strong> als obligatorisch auf der Seite <strong>Debitoren &amp; Verkauf Einr.</strong> eingerichtet ist.  </li>
+</ul>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Verarbeiten</strong> und dann die Aktion <strong>Getragene Belegzeilen zum Stornieren</strong>.</p>
+</li>
+<li><p>Wählen Sie oben auf der Seite <strong>Gebuchte Verkaufsbelegzeilen</strong> das Feld <strong>Nur stornierbare Zeilen anzeigen aus,</strong> wenn Sie nur Zeilen mit Mengen anzeigen möchten, die noch nicht zurückgesendet oder, im Falle von Einkaufszeilen, verkauft oder verbraucht wurden. Wenn eine gebuchte Verkaufsrechnungsmenge beispielsweise bereits zurückgesendet wurde, möchten Sie diese Menge möglicherweise nicht mit einem neuen Verkaufsreklamationsbeleg zurücksenden.</p>
+<div class="NOTE"><h5>Hinweis</h5><p> Das Feld bezieht sich nur auf gebuchte Liefer- und Rechnungszeilen, nicht auf gebuchte Rücklieferungs- oder Gutschriftzeilen.</p>
+</div>
+<p> Klicken Sie links auf der Seite, die verschiedenen Belegarten werden aufgeführt und die Nummer in Klammern steht für die Anzahl der Belege, die von jeder Belegart verfügbar sind.</p>
+</li>
+<li><p>Wählen Sie im Feld <strong>Belegartfilter</strong> die Art der gebuchten Belegzeilen aus, die Sie verwenden möchten.  </p>
+</li>
+<li><p>Wählen Sie die Zeilen aus, die Sie in den neuen Beleg kopieren möchten.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn Sie zum Auswählen aller Zeilen <kbd>STRG</kbd>+<kbd>A</kbd> verwenden, werden alle Zeilen in dem von Ihnen festgelegten Filter kopiert, jedoch wird der Filter <strong>Nur stornierbare Mengen anzeigen</strong> ignoriert. Angenommen, Sie haben die Zeilen nach einem bestimmten Beleg mit zwei Zeilen gefiltert, von denen eine bereits auf &quot;Zurückgesendet&quot; gesetzt wurde. Auch wenn das Feld <strong>Nur stornierbare Mengen</strong> anzeigen ausgewählt wird, werden beim Drücken von <kbd>STRG</kbd>+<kbd>A</kbd> zum Kopieren aller Zeilen beide Zeilen kopiert und nicht nur die eine, die noch nicht storniert wurde.  </p>
+</div>
+</li>
+<li><p>Klicken Sie auf die Schaltfläche <strong>OK</strong>, um die Zeilen in den neuen Beleg zu kopieren.  </p>
+<p> Die folgenden Prozesse werden durchgeführt:  </p>
+<ul>
+<li><p>Für gebuchte Belegzeilen der Art <strong>Artikel</strong> wird eine neue Belegzeile erstellt, die eine Kopie der gebuchten Belegzeile ist, und zwar mit der noch nicht stornierten Menge. Das Feld <strong>Ausgegl. von Artikelposten</strong> wird ausgefüllt mit der Nummer des Artikelpostens der gebuchten Belegzeile.  </p>
+</li>
+<li><p>Bei gebuchten Belegzeilen, die nicht von der Art <strong>Artikel</strong> sind, wie z. B. Artikel Zu-/Abschläge, wird eine neue Belegzeile erstellt, die eine Kopie der ursprünglichen gebuchten Belegzeile ist.  </p>
+</li>
+<li><p>Die Anwendung berechnet das Feld <strong>Einstandspreis (MW)</strong> der neuen Zeile anhand der Kosten in den entsprechenden Artikelposten.  </p>
+</li>
+<li><p>Wenn es sich bei dem kopierten Beleg um eine gebuchte Lieferung, einen gebuchten Wareneingang, eine gebuchte Rücksendung oder eine gebuchte Rücklieferung handelt, wird der VK-Preis automatisch anhand der Artikelkarte berechnet.  </p>
+</li>
+<li><p>Wenn es sich bei dem gebuchten Beleg um eine gebuchte Rechnung oder Gutschrift handelt, werden VK-Preis, Rechnungsrabatte und Zeilenrabatte aus der gebuchten Belegzeile kopiert.  </p>
+</li>
+<li><p>Wenn die gebuchte Belegzeile Artikelverfolgungszeilen enthält, wird Feld <strong>Anwendung vom Artikeleintrag</strong> auf der Artikelnachverfolgungszeilen mit den entsprechenden Artikelpostennummern aus den gebuchten Artikelverfolgungszeilen gefüllt.  </p>
+<p>Beim Kopieren aus einer gebuchten Rechnung oder einer gebuchten Gutschrift kopiert die Anwendung alle relevanten Rechnungsrabatte und Zeilenrabatte, die zum Zeitpunkt der Buchung dieses Belegs gelten, von der gebuchten Belegzeile in die neue Belegzeile. Beachten Sie jedoch, dass, wenn die Option <strong>Rechnungsrab. berechnen</strong> auf der Seite <strong>Verkaufs- und Forderungseinrichtung</strong> aktiviert ist, der Rechnungsrabatt neu berechnet wird, wenn Sie die neue Belegzeile buchen. Daher kann es sein, dass der Zeilenbetrag für die neue Zeile sich von dem Zeilenbetrag für die ursprüngliche Belegzeile unterscheidet, je nach der Neuberechnung des Rechnungsrabatts.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn ein Teil der Menge der gebuchten Belegzeile bereits zurückgesendet, verkauft oder verbraucht wurde, wird nur für die Menge, die am Lager verbleibt oder die nicht zurückgesendet wurde, eine Zeile erstellt. Wurde die vollständige Menge der gebuchten Belegzeile bereits storniert, wird keine neue Belegzeile erstellt.  </p>
+<p> Wenn der Warenfluss im gebuchten Beleg der gleiche wie der Warenfluss im neuen Beleg ist, wird einfach eine Kopie der ursprünglich gebuchten Belegzeile im neuen Beleg erstellt. Das Feld <strong>Ausgegl. von Artikelposten</strong> wird nicht ausgefüllt, da in diesem Fall eine exakte Einstandspreisstornierung nicht möglich ist. Wenn Sie beispielsweise die Funktion <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong> zum Abrufen einer gebuchten Verkaufsgutschriftzeile für eine neue Verkaufsgutschrift verwenden, wird nur die ursprünglich gebuchte Gutschriftszeile in die neue Gutschrift kopiert.  </p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Auf der Seite <strong>Verkaufsreklamation</strong> im Feld <strong>Reklamationsgrundcode</strong> auf jeder Zeile wählen Sie den Grund für die Reklamation aus.</p>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> aus.</li>
+</ol>
+<h2 id="to-create-a-replacement-sales-order-from-a-sales-return-order">So erstellen Sie einen Austauschverkaufsauftrag von einer Verkaufsreklamation aus:</h2>
+<p>Möglicherweise entscheiden Sie, einen Debitoren für einen Artikel, den Sie ihm verkauft haben, zu entschädigen, indem Sie ihm den Artikel ersetzen. Sie können diesen Austausch mit demselben oder einem anderen Artikel vornehmen. Diese Situation könnte eintreten, wenn Sie dem Kunden z. B. versehentlich einen falschen Artikel geliefert haben.  </p>
+<ol>
+<li>Auf der Seite <strong>Einkaufsreklamation</strong> für einen aktiven Rückgabevorgang in einer leeren Zeile, erzeugen Sie einen negativen Eintrag für den Austauschartikel, indem Sie einen negativen Betrag in das Feld <strong>Menge</strong> eingeben.  </li>
+<li>Wählen Sie die <strong>Negative Zeilen übertragen</strong> Aktion aus.</li>
+<li>Füllen Sie auf der Seite <strong>Negative Verkaufszeile verschieben</strong> die Felder nach Bedarf aus.</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Wenn Sie diese Stapelverarbeitung ausführen, wird die negative Zeile (für den Austauschartikel) aus der Verkaufsreklamation gelöscht und auf einer neuen <strong>Verkaufsauftrag</strong>-Seite eingefügt. Weitere Informationen finden Sie unter <a href="sales-how-sell-products.html">Produkte verkaufen</a></li>
+</ol>
+<h2 id="to-create-return-related-documents-from-a-sales-return-order">So erstellen Sie reklamationsbezogene Belege aus einer Verkaufsreklamation</h2>
+<p>Lassen Sie alle relevanten Verkaufsreklamationsbelege automatisch erstellen, z. B. eine Einkaufsreklamation, eine Ersatzbestellung oder einen neuen Verkaufsauftrag. Dies ist beispielsweise in Fällen nützlich, in denen Sie Artikel mit den Garantien bearbeiten möchten, die von Kreditoren bereitgestellt werden.</p>
+<ol>
+<li>Auf der Seite <strong>Verkaufsreklamation</strong> für einen aktiven Rückgabevorgang wählen Sie die Aktion <strong>Reklamationsbez. Belege erstellen</strong> aus.</li>
+<li>Geben Sie im <strong>Kreditorennr.</strong> Feld die Nummer des Kreditors ein, wenn Sie Kreditorenbelege automatisch erstellen möchten.</li>
+<li>Wenn ein Artikel an den Kreditor zurückgeliefert werden muss, aktivieren Sie das Kontrollkästchen <strong>Eink.-Reklamation erstellen</strong>.</li>
+<li>Wenn ein Artikel beim Kreditor bestellt werden muss, aktivieren Sie das Kontrollkästchen <strong>Bestellung erstellen</strong>.</li>
+<li>Wenn ein Auftrag für eine Ersatzlieferung erstellt werden muss, aktivieren Sie das Kontrollkästchen <strong>Verkaufsauftrag erstellen</strong>.</li>
+</ol>
+<h2 id="to-create-a-restock-charge">So legen Sie eine Wiedereinlagerungsgebühr an</h2>
+<p>Möglicherweise entscheiden Sie sich dazu, Ihren Debitoren mit einer Wiedereinlagerungsgebühr zu belasten, um die Bearbeitungskosten für die Rücksendung des Artikels abzudecken. Diese Situation könnte z. B. eintreten, wenn der Debitor aus Versehen den falschen Artikel bestellt hatte oder seine Meinung geändert hat, nachdem er den Artikel erhalten hat.</p>
+<p>Sie können diesen herabgesetzten Preis als Zu-/Abschlag (Artikel) in einer Gutschrift oder einer Reklamation buchen und ihn der gebuchten Lieferung zuordnen. Im Folgenden wird dies für einen Verkaufsreklamationsauftrag beschrieben, aber die gleichen Schritte gelten auch für eine Verkaufsgutschrift.</p>
+<ol>
+<li>Öffnen Sie die Seite <strong>Verkaufsreklamation</strong> für einen aktiven Rückgabevorgang.</li>
+<li>Geben Sie eine neue Zeile ein, und wählen Sie <strong>Zu-/Abschlag (Artikel)</strong> im Feld <strong>Art</strong>.  </li>
+<li>Füllen Sie die Felder für jede mögliche Artikelzuschlagszeile aus. Weitere Informationen finden Sie untert <a href="payables-how-assign-item-charges.html">Verwenden von Artikelzuschlägen für zusätzliche Kosten</a>.  </li>
+</ol>
+<p>Wenn Sie die Verkaufsreklamation buchen, wird die Wiedereinlagerungsgebühr zu dem entsprechenden Betrag des Verkaufspostens addiert. Auf diese Art können Sie genaue Bestandbewertung führen.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="sales-manage-sales.html">Verkauf</a><br><a href="sales-setup-sales.html">Einrichten von Verkäufen</a><br><a href="payables-manage-payables.html">Verwalten von Verbindlichkeiten</a><br><a href="ui-how-send-documents-email.html">Belege per E-Mail senden</a><br><a href="purchasing-how-process-purchase-returns-cancellations.html">Verarbeiten einer Einkaufsrücklieferung oder von Stornierungen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

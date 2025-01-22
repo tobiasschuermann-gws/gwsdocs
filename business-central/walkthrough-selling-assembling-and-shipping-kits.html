@@ -1,0 +1,700 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Verkaufen, Montieren und Versenden von Baus&#228;tzen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Verkaufen, Montieren und Versenden von Baus&#228;tzen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="walkthrough-selling-assembling-and-shipping-kits">Exemplarische Vorgehensweise: Verkauf, Montage und Liefern von Kits</h1>
+
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
+<p>Um eine Just-In-Time-Logistik sowie die Möglichkeit, Produkte an Debitorenanfragen anzupassen, zu unterstützen, können Montageaufträge automatisch erstellt und verknüpft werden, sobald die Verkaufsauftragszeile erstellt wird. Der Verknüpfung zwischen dem Verkaufsbedarf und dem Montagezubehör ermöglicht Verkaufsauftragsverarbeitern die Anpassung des Montageartikels und die Zusage von Lieferungsdaten auf der Grundlage der Verfügbarkeit von Komponenten. Darüber hinaus werden der Montageverbrauch und die Ausgabe automatisch mit der Lieferung des verknüpften Verkaufsauftrags gebucht.  </p>
+<p>Es sind spezielle Funktionen vorhanden, um die Lieferung von Auftragsmontagemengen zu steuern, sowohl in einfachen als auch in erweiterten Lagerkonfigurationen. Wenn Arbeiter für montagefertige Teile oder für die gesamte Auftragsmontagemenge zuständig sind, erfassen sie diese im Feld <strong>Vesandmenge</strong> in der Warenausgangszeile, in erweiterten Konfigurationen, und wählen dann <strong>Warenausgang buchen</strong>. Das Ergebnis ist, dass der entsprechende Montageausstoß, einschließlich des zugehörigen Komponentenverbrauchs, gebucht wird und eine Verkaufslieferung für die Menge für den verknüpften Verkaufsauftrag gebucht wird. Diese Anleitung illustriert den erweiterten Lagerprozess.  </p>
+<p>In Basis-Lagerkonfigurationen bucht der zuständige Lagermitarbeiter für die jeweiligen Verkaufsauftragszeilen eine Lagerkommissionierung, wenn eine Auftragsmontagemenge für die Lieferung bereitsteht. Dies erstellt eine Lagerbestandsumlagerung für die Komponenten und bucht den Montageausstoß und die Verkaufsauftragslieferung. Weitere Informationen finden Sie unter <a href="warehouse-how-to-pick-items-with-inventory-picks.html#handling-assemble-to-order-items-with-inventory-picks">Verwenden von Auftragsmontageartikeln in Lagerkommissionierungen</a>.  </p>
+<h2 id="about-this-walkthrough">Informationen zu dieser exemplarischen Vorgehensweise</h2>
+<p>In dieser exemplarischen Vorgehensweise werden folgende Aufgaben erläutert:  </p>
+<h3 id="setting-up-assembly-items">Montageartikel einrichten</h3>
+<p>Montageartikel sind durch ihre Beschaffungsmethode und die Montagestückliste charakterisiert. Die Montagerichtlinie des Artikels kann entweder Programmfertigung (ATO) oder Lagerfertigung (ATS) sein. Dieser Abschnitt behandelt die folgenden Aufgaben:  </p>
+<ul>
+<li>Einrichten der korrekten Beschaffungsmethode und der Montagerichtlinie auf einer neuen Montageartikelkarte.  </li>
+<li>Erstellen einer Montagestückliste, die die Montagekomponenten und die Ressource auflistet, die zu dem Montageartikel gehören.  </li>
+</ul>
+<h3 id="selling-customized-assembly-items">Verkauf von benutzerdefinierten Montageartikeln</h3>
+<p>Business Central bietet die Flexibilität, eine Lagermenge und eine Programmfertigungsmenge in einer Verkaufsauftragszeile einzugeben. Dieser Abschnitt behandelt die folgenden Aufgaben:  </p>
+<ul>
+<li>Erstellen einer reinen ATO-Verkaufsauftragszeile, in der die gesamte Menge nicht verfügbar ist und vor dem Warenausgang montiert werden muss.  </li>
+<li>Anpassen von ATO-Artikeln.  </li>
+<li>Neuberechnen des VK-Preises eines benutzerdefinierten Montageartikels.  </li>
+<li>Erstellen einer Mischverkaufsauftragszeile, in der die Teile der Vertriebsmenge aus dem Lagerbestand bereitgestellt werden und der Rest vor dem Warenausgang montiert werden muss.  </li>
+<li>Verstehen der ATO-Verfügbarkeitswarnungen.  </li>
+</ul>
+<h3 id="planning-for-assembly-items">Planung für Montageartikel</h3>
+<p>Montagenachfrage und -angebot werden vom Planungssystem ähnlich wie für Einkauf, Umlagerung und Produktion behandelt. Dieser Abschnitt behandelt die folgenden Aufgaben:  </p>
+<ul>
+<li>Durchführen einer Neuplanung für Artikel mit Verkaufsbedarf für assemblierte Bedarfssicherung.  </li>
+<li>Generierung eines Montageauftrags zur Erfüllung einer Verkaufspositionsmenge durch das angefragte Lieferdatum.  </li>
+</ul>
+<h3 id="assembling-items">Artikelmontage</h3>
+<p>Montageaufträge funktionieren in ähnlicher Weise wie Fertigungsaufträge; sie erwarten, dass der Verbrauch und die Ausgabe direkt aus dem Auftrag erfasst und gebucht werden. Wenn die Artikel zum Bestand montiert werden, hat der Montagearbeiter vollständigen Zugriff auf alle Kopf- und Zeilenfelder. Wenn die Artikel für einen Auftrag montiert werden, in dem dem Debitor Menge und Datum zugesagt werden, können bestimmte Felder im Montageauftrag nicht bearbeitet werden. In diesem Fall wird die Montagebuchung aus dem Warenausgang für den verknüpften Verkaufsauftrag ausgeführt. Dieser Abschnitt behandelt die folgenden Aufgaben.  </p>
+<ul>
+<li>Erfassung und Buchung von Montageverbrauch und -ausgabe für den Bestand.  </li>
+<li>Aufrufen einer Warenausgangszeile aus einem ATO-Montageauftrag zur Erfassung von Montagearbeit.  </li>
+<li>Aufrufen eines ATO-Montageauftrags aus einer Warenausgangszeile zur Prüfung der automatisch eingegebenen Daten.  </li>
+</ul>
+<h3 id="shipping-assembly-items-from-stock-and-assembled-to-order">Versand von Montageartikeln, aus Lagerbestand und nach Auftrag montiert</h3>
+<p>Es sind spezielle Funktionen vorhanden, um den Versand von Auftragsmontagemengen zu steuern. Dieser Abschnitt behandelt die folgenden Aufgaben:  </p>
+<ul>
+<li>Erstellen einer Lagerkommissionierung für Montageartikel und Montagekomponenten zur Montage vor der Lieferung.  </li>
+<li>Erfassen von Lagerkommissionierungen für Montagekomponenten und dann für Montageartikel.  </li>
+<li>Aufrufen eines Montageauftrags aus einem Warenausgang zur Prüfung der kommissionierten oder verbrauchten Komponenten.  </li>
+<li>Versenden von Auftragsmontagemengen.  </li>
+<li>Versenden von Bestandsmontageartikeln.  </li>
+</ul>
+<h2 id="roles">Rollen</h2>
+<p>Die Aufgaben in dieser Demonstration werden von den folgenden Benutzerrollen ausgeführt:  </p>
+<ul>
+<li>Verkaufsauftragsbearbeiter  </li>
+<li>Planer  </li>
+<li>Montagearbeiter  </li>
+<li>Kommissionierer  </li>
+<li>Lieferverantwortlicher  </li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<p>Für diese exemplarische Vorgehensweise gelten folgende Voraussetzungen:  </p>
+<ul>
+<li>Installieren von Business Central  </li>
+<li>Machen Sie sich anhand der nachfolgenden Schritte selbst zu einem Lagermitarbeiter am Standort WHITE:  </li>
+</ul>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lagermitarbeiter</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie das Feld <strong>Benutzer-ID</strong> aus, und wählen Sie Ihr eigenes Benutzerkonto auf der Seite <strong>Benutzer</strong> aus.  </li>
+<li>Geben Sie im Feld <strong>Lagerortcode</strong> WHITE ein.  </li>
+<li>Wählen Sie das Feld <strong>Standard</strong> aus.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>In diesem Artikel werden Namen von Standorten aus einer früheren Version des Demounternehmens in Business Central verwendet. Diese Namen werden nicht direkt den Standorten im aktuellen Demounternehmen zugeordnet. Wir empfehlen Ihnen, den Artikel zu verwenden, um mehr über Standorte zu erfahren, und nicht als schrittweise Anleitung zur Verwendung des Demounternehmens.</p>
+</div>
+<p>Bereiten Sie den Lagerort WHITE folgendermaßen für die Montageverarbeitung vor:  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lagerorte</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Öffnen Sie die Lagerortkarte für den Lagerort WHITE.  </li>
+<li><p>Im Inforegister <strong>Lagerplätze</strong> geben Sie <strong>W-10-0001</strong> im Feld <strong>Mont.-Bereitst.-Lagerplatzcode</strong> ein.  </p>
+<p>Durch die Eingabe dieses Nicht-Kommissionierungslagerplatzcodes werden alle Montageauftragszeilen zur Aufnahme ihrer Komponenten an dem Lagerplatz vorbereitet.  </p>
+</li>
+<li><p>In dem Feld <strong>Montage-Ausgangslagerplatzcode</strong> geben Sie <strong>W-01-0001</strong> ein.  </p>
+<p>Durch die Eingabe dieses Kommissionierungslagerplatzcodes werden fertige Montageartikel an den Lagerplatz ausgegeben.  </p>
+</li>
+</ol>
+<p>Entfernen Sie die Standard-Beschaffungszeit für interne Vorgänge, indem Sie die folgenden Schritte befolgen:  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Produktions Einrichtung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Auf der Seite <strong>Produktion Einrichtung</strong> im Inforegister <strong>Planung</strong>, löschen Sie den Wert im Feld <strong>Vorg. Sich.-Zuschl. Besch.-Zt.</strong> Feld.  </li>
+</ol>
+<!-- Create inventory for assembly components by following [Prepare Sample Data](walkthrough-selling-assembling-and-shipping-kits.md#prepare-sample-data).   -->
+<h2 id="story">Hintergrund</h2>
+<p>Am 23. Januar akzeptiert Martha, die Verkaufsauftragsverarbeiterin, einen Auftrag von The Device Shop für drei Einheiten von Kit B, wobei es sich um einen ATO-Artikel handelt. Alle drei Einheiten werden individuell angepasst und müssen eine leistungsstarke Grafikkarte und einen zusätzlichen RAM-Block enthalten. Die Laufwerke werden auf DWD aktualisiert, da die CD-Laufwerke nicht verfügbar sind. Martha weiß, dass die Einheiten sofort montiert werden können und sie lässt daher das vorgeschlagene Lieferdatum vom 23. Januar unverändert.  </p>
+<p>Gleichzeitig bestellt der Debitor fünfzehn Einheiten von Kit A mit der speziellen Anforderung, dass fünf Einheiten mit der leistungsstarken Grafikkarte ausgerüstet werden. Obwohl Kit A typischerweise ein Bestandsfertigungsartikel ist, kombiniert die Auftragsbearbeiterin die Verkaufszeilenmengen, um zehn Einheiten aus dem Lagerbestand zu verkaufen und fünf Einheiten gemäß diesem Auftrag zu montieren. Die zehn Einheiten von Kit A sind nicht verfügbar und müssen gemäß der Montagerichtlinie des Artikels zuerst durch einen Montageauftrag in den Bestand eingefügt werden. Martha erfährt aus der Montageabteilung, dass Einheiten von Kit A in der laufenden Woche nicht fertiggestellt werden können. Susan setzt das Lieferdatum der zweiten Verkaufsauftragszeile, für die gemischte ATO- und Bestandsmenge, auf den 27. Januar fest und informiert den Debitoren, dass die 15 Einheiten von Kit A vier Tage später geliefert wurden, als die drei Einheiten von Kit B. Um der Versandabteilung mitzuteilen, dass dieser Verkaufsauftrag Montageverarbeitung erfordert, erstellt sie den Warenausgangsbeleg aus dem Verkaufsauftrag.  </p>
+<p>Jürgen, der Planer, führt das Planungsarbeitsblatt und erstellt einen Montageauftrag für zehn Standardeinheiten aus Kit A mit einem internen Fälligkeitsdatum am 27. Januar.  </p>
+<p>Sammy, der für die Lieferung verantwortlich ist, ruft drei Warenausgangszeilen für den Verkaufsauftrag ab: Eine Zeile für die drei reinen ATO-Einheiten, eine Zeile für die fünf ATO-Einheiten in der Mischverkaufsauftragszeile und eine Zeile für die zehn ATS-Einheiten in der Mischverkaufsauftragszeile. Sammy erstellt einen Kommissionierbeleg über alle Montagekomponenten, die benötigt werden, um die insgesamt acht ATO-Einheiten im Warenausgangsbeleg zu montieren.  </p>
+<p>Wilfried, der Kommissionierer, ruft Komponenten für alle ATO-Mengen auf dem Warenausgangsbeleg ab und bringt diese in den Miontagebereich. John gibt die zu verwendende Menge ein und registriert die Kommissionierung.  </p>
+<p>Elfriede montiert die drei ATO-Einheiten aus Kit B. Die Komponenten sind bereits kommissioniert, und Linda erfasst nicht die Ausgabe- und Verbrauchsmengen und bucht auch nicht den Auftrag, da beides bereits automatisch durch die entsprechenden Lagersendungszeilen durchgeführt wird.  </p>
+<p>Sammy speichert die montierte Menge in der Warenausgangszeile und bucht die Lieferung der drei Einheiten von Kit B. Die erste Zeile des Auftrags wird als geliefert aktualisiert. Der verknüpfte Montageauftrag bleibt offen, bis der Verkaufsauftrag vollständig fakturiert ist. Die zwei Warenausgangszeilen, eine ATO- und eine ATS-Zeile, für Kit A mit Fälligkeitsdatum 27. Januar bleiben offen.  </p>
+<p>Am 27. Januar verarbeitet Linda zwei Montageaufträge für Kit A. Die erste Bestellung ist der ATO-Auftrag für fünf Einheiten, die Linda anders als die ATO-Bestellung verarbeitet für Kit B, das sie am 23. Januar verarbeitet hat. In diesem Auftrag wird Linda autorisiert, um selber auf die Warenausgangszeile zuzugreifen, um die vollständige Montagearbeit zu erfassen. Die benötigten Komponenten stehen in der Montageabteilung zur Verfügung, da sie zusammen mit Komponenten für Kit B kommissioniert wurden.  </p>
+<p>Der zweite Montageauftrag ist der ATS-Auftrag für zehn Einheiten, der vom Planungssystem erstellt wurde. Auf diesem ATS-Auftrag führt Elfriede alle betreffenden Aktionen aus dem Montageauftrag aus. Linda erstellt einen Kommissionierbeleg für die Montagekomponenten, die benötigt werden, um die zehn Einheiten zu montieren. Wenn die Geräte montiert werden, bucht Elfriede den Montageauftrag und gibt damit an, dass die Artikel im Bestand verfügbar sind und für die Lieferung kommissioniert werden können.  </p>
+<p>Sammy erstellt einen Kommissionierbeleg für alle verbleibenden Mengen, bevor der Warenausgang gebucht werden kann. Ein Kommissionierbeleg wird für die zehn Einheiten von Kit A erstellt, die soeben fertig gestellt wurden. Die Komponenten, die benötigt werden, um die fünf Einheiten von Kit A gemäß dem Auftrag zu montieren, wurden am 23. Januar kommissioniert.  </p>
+<p>Wilfried bringt die zehn Einheiten von Kit A aus dem Lager in den angegebenen Warenausgangsbereich, registriert die zu verwendende Menge und dann die Kommissionierung.  </p>
+<p>Sammy verpackt die zehn ATS-Einheiten mit den fünf ATO-Einheiten, die Elfriede zuvor montiert hat. Sammy gibt auf beiden Zeilen die Liefermenge ein und bucht die letzte Lieferung für The Device Shop. Der zugehörige Montageauftrag für fünf Einheiten von Kit A wird automatisch gebucht. Die zweite Zeile auf dem Verkaufsauftrag wird als &quot;geliefert&quot; aktualisiert. Zwei verknüpfte Montageaufträge bleiben offen, bis der Verkaufsauftrag fakturiert und abgeschlossen ist.  </p>
+<p>Wenn der Auftrag später als vollständig fakturiert gebucht wird, werden der Verkaufsauftrag und die verknüpften Montageaufträge entfernt.  </p>
+<h2 id="prepare-sample-data">Vorbereiten der Beispieldaten</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Whse. Artikel Buch.-Blätter</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie das Feld <strong>Buch.-Blattname</strong>, und wählen Sie anschließend das Standardjournal aus.  </li>
+<li><p>Erstellen Sie positive Lagerregulierungen am Lagerort WHITE am Arbeitsdatum 23. Januar, indem Sie die folgenden Informationen eingeben.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Artikelnr.</strong></th>
+<th><strong>Zonencode</strong></th>
+<th><strong>Lagerplatzcode</strong></th>
+<th><strong>Menge</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>80001</td>
+<td>KOMMISS</td>
+<td>W-01-0001</td>
+<td>20</td>
+</tr>
+<tr>
+<td>80005</td>
+<td>KOMMISS</td>
+<td>W-01-0001</td>
+<td>20</td>
+</tr>
+<tr>
+<td>80011</td>
+<td>KOMMISS</td>
+<td>W-01-0001</td>
+<td>20</td>
+</tr>
+<tr>
+<td>80014</td>
+<td>KOMMISS</td>
+<td>W-01-0001</td>
+<td>20</td>
+</tr>
+<tr>
+<td>80203</td>
+<td>KOMMISS</td>
+<td>W-01-0001</td>
+<td>20</td>
+</tr>
+<tr>
+<td>80209</td>
+<td>KOMMISS</td>
+<td>W-01-0001</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Registrieren</strong> und dann die Schaltfläche <strong>Ja</strong>.  </p>
+<p>Synchronisieren Sie anschließend die neuen Lagereinträge mit dem Bestand.  </p>
+</li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Element Buch.-Blätter</strong> ein und wählen Sie dann den zugehörigen Link. Die Seite <strong>Artikel Buch.-Blatt</strong> wird geöffnet.  </p>
+</li>
+<li>Wählen Sie die <strong>Lagerortanpassung berechnen</strong> Aktion aus.  </li>
+<li>Auf der Seite <strong>Ausgleich berechnen</strong> auszuführen, wählen Sie die Schaltfläche <strong>OK</strong> aus.  </li>
+<li>Wählen Sie auf der Seite <strong>Einzelpostenjournal</strong> die Aktion <strong>Post</strong> und anschließend die Schaltfläche <strong>Ja</strong>.  </li>
+</ol>
+<h3 id="creating-the-assembly-items">Erstellen der Montageartikel</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Elemente</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.  </li>
+<li><p>Erstellen Sie den ersten Montageartikel auf der Grundlage der folgenden Informationen.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td>Kit A – Basis-PC</td>
+</tr>
+<tr>
+<td><strong>Basiseinheit</strong></td>
+<td>STÜCK</td>
+</tr>
+<tr>
+<td><strong>Artikelkategoriencode</strong></td>
+<td>Sonst.</td>
+</tr>
+<tr>
+<td><strong>Beschaffungsmethode</strong></td>
+<td>Montage</td>
+</tr>
+<tr>
+<td><strong>Montagerichtlinie</strong></td>
+<td>Lagermontage</td>
+</tr>
+<tr>
+<td><strong>Wiederbeschaffungsverfahren</strong></td>
+<td>Los-für-Los</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p> Kit A wird in der Regel durch Bestandsmontage geliefert und verfügt daher über ein Wiederbeschaffungsverfahren, durch das es zum Teil der allgemeinen Wiederbeschaffungsplanung wird.  </p>
+</div>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Montage</strong> und dann <strong>Montage-Stückliste</strong>.  </p>
+</li>
+<li><p>Definieren Sie eine Montagestückliste für Kit A mit den folgenden Informationen.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Typ</strong></th>
+<th><strong>Nr.</strong></th>
+<th><strong>Komponentenmenge</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artikel</td>
+<td>80001</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Artikel</td>
+<td>80011</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Artikel</td>
+<td>80209</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ressource</td>
+<td>Linda</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Erstellen Sie den zweiten Montageartikel auf der Grundlage der folgenden Informationen.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td>Kit B – Profi-PC</td>
+</tr>
+<tr>
+<td><strong>Basiseinheit</strong></td>
+<td>STÜCK</td>
+</tr>
+<tr>
+<td><strong>Artikelkategoriencode</strong></td>
+<td>Sonst.</td>
+</tr>
+<tr>
+<td><strong>Beschaffungsmethode</strong></td>
+<td>Montage</td>
+</tr>
+<tr>
+<td><strong>Montagerichtlinie</strong></td>
+<td>Programmfertigung</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p> Kit B wird normalerweise als Montageartikel geliefert und verfügt daher über kein Wiederbeschaffungsverfahren, da es nicht zur allgemeinen Wiederbeschaffungsplanung gehören soll.  </p>
+</div>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Montage</strong> und dann <strong>Montage-Stückliste</strong>.  </p>
+</li>
+<li><p>Definieren Sie eine Montagestückliste für Kit B mit den folgenden Informationen.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Typ</strong></th>
+<th><strong>Nr.</strong></th>
+<th><strong>Komponentenmenge</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artikel</td>
+<td>80005</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Artikel</td>
+<td>80014</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Artikel</td>
+<td>80210</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ressource</td>
+<td>Laura</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h3 id="selling-the-assembly-items">Verlaufen der Montageartikel</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Verkaufsaufträge</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.  </li>
+<li><p>Erstellen Sie zwei Verkaufsauftragszeilen für Debitor 62000, The Device Shop, am Arbeitsdatum mit den folgenden Informationen.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Typ</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Menge</strong></th>
+<th>Menge für Auftragsmontage</th>
+<th>Warenausg.-Datum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artikel</td>
+<td>Kit B – Profi-PC</td>
+<td>3</td>
+<td>3</td>
+<td>23. Januar</td>
+</tr>
+<tr>
+<td>Artikel</td>
+<td>Kit A – Basis-PC</td>
+<td>15</td>
+<td>5</td>
+<td>27. Januar</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p> Für die Verkaufsauftragszeile für Kit B besteht das folgende Verfügbarkeitsproblem:  </p>
+<ul>
+<li><p>Montagekomponente 80210 ist nicht verfügbar. Dies bedeutet, dass die drei angegebenen Einheiten von Kit B nicht montiert werden können, angezeigt durch <strong>0</strong> im Feld <strong>Montage möglich</strong> auf der Seite <strong>Montageverfügbarkeit</strong> .  </p>
+<p>Für die Verkaufsauftragszeile für Kit A besteht das folgende Verfügbarkeitsproblem:  </p>
+</li>
+<li><p>Die zehn Einheiten von Kit A sind nicht verfügbar. Dies zeigt dem Planungssystem an, dass die Menge zum Bestand montiert werden muss.  </p>
+</li>
+</ul>
+</div>
+<p>Passen Sie anschließend den Verkaufsauftrag an.  </p>
+</li>
+<li><p>Wählen Sie die Verkaufsauftragszeile für drei Einheiten von Kit B.  </p>
+</li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> <strong>Zeile</strong> aus, wählen Sie <strong>Auftragsmontage</strong>, und klicken Sie anschließend auf <strong>Auftragsmontagezeilen</strong>.  </li>
+<li>Auf der Seite <strong>Programmfertigungszeilen</strong> der Montageauftragszeile für Artikel 80014, geben Sie <strong>2</strong> im Feld <strong>Komponentenmenge</strong> ein.  </li>
+<li>Auf der Montageauftragszeile für Artikel 80210, wählen Sie <strong>Nr.</strong> aus und klicken Sie anschließend auf Artikel 80209.  </li>
+<li><p>Erstellen Sie eine neue Montageauftragszeile mit den folgenden Informationen.  </p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Anz.</th>
+<th>Komponentenmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Option</td>
+<td>80203</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Schließen Sie die Seite <strong>Auftragsmontagezeilen</strong>.  </p>
+<p> Aktualisieren Sie dann den VK-Preis von Kit B entsprechend der Anpassung, die Sie gerade durchgeführt haben. Beachten Sie den aktuellen Wert im Feld <strong>VK-Preis ohne MwSt.</strong>.  </p>
+</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> <strong>Zeile</strong> aus, wählen Sie <strong>Auftragsmontage</strong>, und klicken Sie anschließend auf <strong>Mehrstufigen Preis berechnen</strong>.  </p>
+</li>
+<li>Wählen Sie die Schaltfläche <strong>Ja</strong> aus. Beachten Sie den höheren Wert im Feld <strong>VK-Preis ohne MwSt.</strong>.  </li>
+<li>Wählen Sie die Verkaufsauftragszeile für 15 Einheiten von Kit A.  </li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> <strong>Zeile</strong> aus, wählen Sie <strong>Auftragsmontage</strong>, und klicken Sie anschließend auf <strong>Auftragsmontagezeilen</strong>.  </li>
+<li><p>Erstellen Sie auf der Seite <strong>Auftragsmontagezeile</strong> eine neue Montageauftragszeile mit den folgenden Informationen.  </p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Anz.</th>
+<th>Komponentenmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artikel</td>
+<td>80203</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p> Ändern Sie dann das Lieferdatum gemäß dem Montagezeitplan.  </p>
+</li>
+<li><p>Geben Sie auf der Verkaufsauftragszeile für 15 Einheiten von Kit A <strong>01-27-2014</strong> im Feld <strong>Versanddatum</strong> ein.  </p>
+</li>
+<li>Wählen Sie die Aktion <strong>Freigabe</strong> aus.  </li>
+<li>Wählen Sie die Option <strong>Waren anlegen. Versand</strong> Aktion.  </li>
+<li>Schließen Sie den Verkaufsauftrag.  </li>
+</ol>
+<h3 id="planning-for-the-unavailable-ats-items">Planen für die nicht verfügbaren ATS-Artikel</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Planungsarbeitsblatt</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die <strong>Neuplanung berechnen</strong> Aktion aus.  </li>
+<li><p>Stellen Sie auf der Seite <strong>Planung berechnen</strong> die folgenden Filter ein.  </p>
+<table>
+<thead>
+<tr>
+<th>Startdatum</th>
+<th>Enddatum</th>
+<th>Anz.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-23-2014</td>
+<td>01-27-2014</td>
+<td>Kit A – Basis-PC</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </p>
+<p>Eine neue Planungszeile wird für den erforderlichen Montageauftrag über zehn Stück fällig am 27. Januar erstellt. Es muss keine Änderung vorgenommen werden, sodass Sie nun einen Auftrag anlegen können.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Aktionsnachricht austragen</strong>.  </p>
+</li>
+<li>Wählen Sie auf der Seite <strong>Ereignismeld. durchf.</strong> das Feld <strong>Montageauftrag</strong> und dann <strong>Montageaufträge erstellen</strong>.  </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </li>
+</ol>
+<h3 id="assembling-and-shipping-the-first-ato-quantity">Montieren und Versenden der ersten ATO-Menge</h3>
+<ol>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Warenausgang</strong> ein und wählen Sie dann den zugehörigen Link.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> In diesem Abschnitt ist die Person, die für die Lieferung verantwortlich ist, für die Registrierung der abgeschlossenen ATO-Montagearbeit auf der Warenausgangszeile zuständig. Dieser Workflow kann in Umgebungen vorkommen, in denen die Montagearbeit von der Person, die für die Lieferung verantwortlich ist, bzw. von Montagearbeitern im Auslieferungsbereich durchgeführt wird.  </p>
+<p> In diesem Abschnitt werden die Aktionen auf dem Montageauftrag indirekt von der Warenausgangszeile aus ausgeführt. Weitere Informationen darüber, wie ein Montageauftrag direkt verarbeitet wird, finden Sie unter Artikel für Lager montieren in dieser Anleitung.  </p>
+</div>
+</li>
+<li><p>Öffnen Sie den neuesten Warenausgang, der am Lagerort WHITE erstellt wurde.  </p>
+<p>Beachten Sie die drei Warenausgangszeilen: Eine Zeile für die ATO-Menge des Kits B, fällig am 23. Januar. Eine Zeile für die ATO-Menge von A Kit, fällig am 27. Januar. Eine Zeile für die Bestand-Menge von Kit A, fällig am 27. Januar.  </p>
+<p>Das Feld <strong>Auftragsmontage</strong> gibt die Fertigungsmethode an.</p>
+<p>Erstellen Sie dann einen Kommissionierbeleg für alle ATO-Montagekomponenten, die für den Warenausgang benötigt werden.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Pick erstellen</strong> und dann die Schaltfläche <strong>OK</strong>.  </p>
+<p>Als nächstes führen Sie die Aufgabe des Kommissionierers aus.  </p>
+</li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kommissionierungen</strong> ein und wählen Sie dann den zugehörigen Link.  </p>
+</li>
+<li><p>Öffnen Sie den Kommissionierungsbeleg, den Sie in Schritt 3 in diesem Abschnitt erstellt haben.  </p>
+<p>Beachten Sie den Wert im Feld <strong>Quelldokument</strong> und dass alle Kommissionierzeilen für Montagekomponenten gelten.  </p>
+<p>Registrieren Sie dann die Kommissionierung, ohne die Standardinformationen zu ändern.  </p>
+</li>
+<li><p>Wählen Sie die <strong>Die zu verarbeitende Menge automatisch ausfüllen</strong> Aktion aus.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Kommissionierung registrieren</strong> aus.  </p>
+<p>Kehren Sie zum Ausführen der Versandaufgaben zurück.  </p>
+</li>
+<li><p>Öffnen Sie wieder die Seite <strong>Warenausgangsübersicht</strong>.  </p>
+<p>Beachten Sie, dass das Feld <strong>Ausgewählte Menge</strong> auf allen Zeilen noch leer ist. Dies liegt daran, dass Sie die zu liefernden Artikel noch nicht kommissioniert haben, sondern nur die Komponenten, die benötigt werden, um die ATO-Mengen zu montieren.  </p>
+<p>Fahren Sie fort, um den verknüpften Montageauftrag zu prüfen.  </p>
+</li>
+<li><p>Wählen Sie die Warenausgangszeile für drei Einheiten von Kit B.  </p>
+</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> <strong>Zeile</strong> aus, und wählen Sie dann <strong>Auftragsmontage</strong>. Die Seite <strong>Montageauftrag</strong> wird geöffnet.  </p>
+<p>Beachten Sie, dass einige Felder auf dem Montageauftrag nicht verfügbar sind, da der Auftrag mit einem Verkaufsauftrag verbunden ist.  </p>
+<p>Beachten Sie auf den Montageauftragszeilen, dass das Feld <strong>Ausgewählte</strong> ausgefüllt ist. Der Grund dafür ist die Kommissionierung, die Sie in Schritt 7 registriert haben.  </p>
+</li>
+<li><p>Versuchen Sie, in Feld <strong>Montagemenge</strong> einen Wert unter <strong>3</strong> einzugeben.  </p>
+<p>Lesen Sie die Fehlermeldung, die erläutert, warum dieses Feld nur durch das Feld <strong>Versandmenge</strong> auf der entsprechenden Lieferung ausgefüllt werden kann.  </p>
+<p>Das Feld <strong>Montagemenge</strong> ist editierbar, um Situationen zu unterstützen, in denen Sie eine Lagermenge teilweise ausliefern möchten, anstatt mehr Einheiten für den Auftrag zu montieren. Weitere Informationen finden Sie im Abschnitt „Kombinationsszenarien“ in <a href="assembly-assemble-to-order-or-assemble-to-stock.html">Auftragsmontage und Lagermontage verstehen</a>.  </p>
+</li>
+<li><p>Schließen Sie die Seite <strong>Montageauftrag</strong>, um zur Seite <strong>Warenausgang</strong> zurückzukehren.  </p>
+</li>
+<li>Geben Sie auf der Ausgangszeile für drei Einheiten von Kit B im Feld <strong>Versandmenge</strong> <strong>3</strong> ein.  </li>
+<li><p>Wählen Sie die Aktion <strong>Postversand</strong> und dann die Schaltfläche <strong>Senden</strong>.  </p>
+<p>Zusammen mit dieser Warenausgangbuchung werden die vollständige Verbrauchs- und Ausgabemenge des zugehörigen Montageauftrags gebucht, und das Feld <strong>Verbleibende Menge</strong> ist leer. Die Verkaufsauftragszeile für Kit B wird aktualisiert, um zu zeigen, dass die drei Einheiten geliefert werden.  </p>
+<p>Die Lageraktivitäten zum Erfüllen der ersten Verkaufsauftragszeile bis 23. Januar sind abgeschlossen. Als Nächstes erfüllen Sie die Verkaufsauftragszeilen, die am 27. Januar geliefert werden.  </p>
+</li>
+</ol>
+<h3 id="assembling-and-recording-the-second-ato-quantity">Montieren und erfassen der zweiten ATO-Menge</h3>
+<ol>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Montageaufträge</strong> ein, und wählen Sie dann den entsprechenden Link.  </p>
+<p>Beachten Sie, dass das der ATO-Auftrag für gelieferte Einheiten von Kit B noch in der Liste ist, obwohl <strong>Verbleibende Menge</strong> leer ist. Dies liegt daran, dass der verknüpfte Verkaufsauftrag noch nicht vollständig fakturiert ist.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> In diesem Abschnitt ist der Montagearbeiter für die Erfassung der abgeschlossenen ATO-Montagearbeit auf der Warenausgangszeile zuständig. Dieser Workflow kann vorkommen in Umgebungen auftreten, in der die Montagearbeit in einer separaten Montageabteilung ausgeführt wird und Montagearbeiter autorisiert sind, um die Warenausgangszeile zu ändern.  </p>
+</div>
+</li>
+<li><p>Öffnen Sie den ATO-Montageauftrag für fünf Einheiten des Kit A.  </p>
+<p>Beachten Sie, dass die Felder <strong>Menge für Montage</strong> und <strong>Verbrauchsmenge</strong> leer sind, da keine Arbeit erfasst wird.  </p>
+<p>Beachten Sie auf den Montageauftragszeilen, dass das Feld <strong>Ausgewählte</strong> ausgefüllt ist. Dies liegt an der Kommissionierung, die am 23. Januar erfasst wurde.  </p>
+<p>Buchen Sie dann, dass der Montageauftrag abgeschlossen ist.  </p>
+</li>
+<li><p>Wählen Sie die Option <strong>Warenausgangszeile für Programmfertigung</strong> Aktion.  </p>
+</li>
+<li><p>Geben Sie auf der Seite <strong>Warenausgangszeile für Programmfertigung</strong> im Feld <strong>Versandmenge</strong> <strong>5</strong> ein und schließen Sie dann die Seite.  </p>
+<p>Beachten Sie auf der Seite, dass die Felder <strong>Montageauftrag</strong> und <strong>Montagemenge</strong> jetzt mit den <strong>Verbrauchsmengen</strong> ausgefüllt sind, die mit der Lieferung gebucht werden.  </p>
+</li>
+<li><p>Schließen Sie die Seite <strong>Montageauftrag</strong>.  </p>
+</li>
+</ol>
+<h3 id="assembling-the-ats-quantity">Montieren der ATS-Menge</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Montageaufträge</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li><p>Öffnen Sie den Montageauftrag für zehn Einheiten des Kit A.  </p>
+<p>Beachten Sie, dass das Feld <strong>Montagemenge</strong> mit der erwarteten Menge ausgefüllt wird.  </p>
+<p>Als Nächstes erstellen Sie ein Kommissionierungsdokument, um die benötigten Komponenten abzurufen.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Freigeben</strong>.  </p>
+</li>
+<li><p>Wählen Sie die <strong>Kommissionierung erstellen</strong> Aktion, und wählen Sie die Schaltfläche <strong>OK</strong>.  </p>
+<p>Führen Sie als nächstes die Aufgabe des Kommissionierers aus.  </p>
+</li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kommissionierungen</strong> ein und wählen Sie dann den zugehörigen Link.  </p>
+</li>
+<li><p>Öffnen Sie den Kommissionierbeleg, den Sie in Schritt 4 in diesem Abschnitt erstellt haben.  </p>
+<p> Registrieren Sie dann die Kommissionierung, ohne die Standardinformationen zu ändern.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Die zu verarbeitende Menge automatisch ausfüllen</strong>.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Auswahl registrieren</strong>.  </p>
+<p>Kehren Sie zum Montageauftrag zurück, um die letzte Montageaufgabe auszuführen.  </p>
+</li>
+<li><p>Wählen Sie in der <strong>Montageauftrag</strong> die Aktion <strong>Buchen</strong> und dann die Schaltfläche <strong>Ja</strong>.  </p>
+<p> Beachten Sie, dass der Montageauftrag aus der Liste der offenen Aufträge entfernt wurde.  </p>
+</li>
+</ol>
+<h3 id="shipping-the-remaining-items-partly-from-stock-and-partly-assembled-to-the-order">Lieferung der übrigen Artikel, teilweise aus dem Lagerbestand und teilweise nach Auftrag montiert</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Warenausgang</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li><p>Öffnen Sie den neuesten Warenausgang, der am Lagerort WHITE erstellt wurde.  </p>
+<p>Beachten Sie, dass in der Zeile für zehn Einheiten von Kit A das Feld <strong>Versandmenge</strong> und <strong>Ausgewählte Menge</strong> leer ist.  </p>
+<p>Kommissionieren Sie dann alle übrigen Artikel.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Pick erstellen</strong> und dann die Schaltfläche <strong>OK</strong>.  </p>
+<p>Führen Sie dann die letzte Aufgabe der Auswahl für diesen Lagerausgang aus.  </p>
+</li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kommissionierungen</strong> ein und wählen Sie dann den zugehörigen Link.  </p>
+</li>
+<li><p>Öffnen Sie den Beleg für die Lager-Kommissionierung, den Sie in Schritt 3 in diesem Abschnitt erstellt haben.  </p>
+<p>Beachten Sie, dass dieser Kommissionierbeleg für Montageartikel gilt, nicht für Montagekomponenten.  </p>
+<p>Registrieren Sie dann die Kommissionierung, ohne die Standardinformationen zu ändern.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Die zu verarbeitende Menge automatisch ausfüllen</strong>.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Auswahl registrieren</strong> und dann die Schaltfläche <strong>Ja</strong>.  </p>
+<p>Kehren Sie zum Warenausgang zurück, um die letzte Aufgabe auszuführen.  </p>
+</li>
+<li><p>Öffnen Sie wieder die Seite <strong>Warenausgangsübersicht</strong>.  </p>
+<p>Beachten Sie, dass auf der Seite <strong>Lagerahausversand</strong> in der Zeile für zehn Einheiten von Kit A die Felder <strong>Versandmenge</strong> und <strong>Ausgewählte Menge</strong> jetzt <strong>10</strong> enthalten.  </p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Postversand</strong> und wählen Sie <strong>Senden</strong>.  </p>
+<p> Das Warenausgangdokument wird entfernt, was angibt, dass die entsprechenden Lageraktivitäten ausgeführt wurden. Als Nächstes überprüfen Sie, dass der Verkaufsauftrag verarbeitet wurde.  </p>
+</li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Verkaufsaufträge</strong> ein, und wählen Sie dann den zugehörigen Link  </p>
+</li>
+<li><p>Öffnen Sie den Verkaufsauftrag für The Device Shop.  </p>
+<p>Beachten Sie, dass das Feld <strong>Versandte Menge</strong> die gesamte Menge in beiden Zeilen enthält.  </p>
+<p>Wenn der Geräte-Shop für den Erhalt der 18 PCs von CRONUS bezahlt, werden der Kundenauftrag und die damit verbundenen Montageaufträge entfernt.  </p>
+</li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p> <a href="assembly-assemble-to-order-or-assemble-to-stock.html">Auftragsmontage und Lagermontage verstehen</a><br> <a href="assembly-how-to-assemble-items.html">Artikel montieren</a><br> <a href="warehouse-how-to-pick-items-for-warehouse-shipment.html">Um Artikel für den Warenausgang zu kommissionieren</a><br> <a href="assembly-how-to-sell-items-assembled-to-order.html">Verkaufen von Auftragsmontageartikeln</a><br> <a href="assembly-how-to-assemble-items.html">Artikel montieren</a><br> <a href="design-details-assembly-order-posting.html">Designdetails: Montageauftragsbuchung</a><br> <a href="design-details-internal-warehouse-flows.html">Designdetails: Interner Lagerfluss</a><br> <a href="design-details-outbound-warehouse-flow.html">Designdetails: Ausgehender Lagerfluss</a>   </p>
+<!--  [Walkthrough: Planning Supplies Automatically](walkthrough-planning-supplies-automatically.md) -->
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>R&#252;cklieferungen oder Stornierungen verarbeiten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="R&#252;cklieferungen oder Stornierungen verarbeiten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="process-purchase-returns-or-cancellations">Bestellretouren oder Stornierungen verarbeiten</h1>
+
+<p>Wenn Sie Artikel an Ihren Kreditor zurückschicken oder Dienstleistungen löschen wollen, die Sie eingekauft haben, können Sie eine Einkaufsgutschrift erstellen und buchen, die die angeforderte Änderung im Hinblick auf die ursprünglichen Einkaufsrechnung angibt. Um korrekte Verkaufsrechnungsinformationen einzuschließen, können Sie die Verkaufsgutschrift direkt aus der gebuchten Verkaufsrechnung erstellen oder neue Verkaufsgutschrift mit der Rechnungsinformationen erstellen.</p>
+<p>Wenn Sie mehr Kontrolle für den Rücklieferungsvorgang, die Logistikbelege oder die Artikelbehandlung benötigen, wenn Sie Artikel von mehreren Verkaufsbelegen mit einer Rücklieferung bearbeiten, dann können Sie Verkaufsrückgabeaufträge erstellen. Wenn Sie die Einkaufsreklamation als fakturiert buchen, wird automatisch eine Einkaufsgutschrift erstellt. Weitere Informationen finden Sie unter <a href="purchasing-how-process-purchase-returns-cancellations.html#to-create-a-purchase-credit-memo-from-a-posted-purchase-invoice">Einkaufsreklamation auf einem oder mehreren gebuchten Einkaufsbelegen erstellen</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn eine gebuchte Einkaufsrechnung noch nicht bezahlt wurde, können Sie die <strong>Korrigieren</strong> oder <strong>Abbrechen</strong>-Funktionen auf der gebuchten Einkaufsrechnung verwenden, um die entsprechenden Transaktionen automatisch zu stornieren. Diese Funktionen arbeiten nur für nicht geleistete Rechnungen, und sie unterstützen nicht Teil-Reklamationen oder Kündigungen. Sie können auch keine Einkaufsrechnungen korrigieren oder stornieren, die mit Belegen aus mehreren Einkaufsbestellungen gebucht wurden. Weitere Informationen finden Sie unter <a href="purchasing-how-correct-cancel-unpaid-purchase-invoices.html">Ändern oder löschen von unbezahlten Einkaufsrechnungen</a>.</p>
+</div>
+<p>Normalerweise erstellen Sie eine Einkaufsgutschrift als Antworten auf eine Gutschrift, die Ihnen von einem Kreditor gesendet wird. Die Einkaufsgutschrift oder die Einkaufsreklamation dient als Ihre interne Dokumentation des Gutschriftsvorgangs zu den Buchhaltungszwecken oder den Versand der einbezogenen Artikel.</p>
+<p>Die Änderung mögen mit allen Produkten auf der Rechnung der ursprünglichen Einkaufsrechnung oder nur mit einigen der Produkte, verknüpft werden. Entsprechend können Sie die erhaltenen Artikel teilweise zurückgeben oder Teil-Vergütung von erhaltenen Services. In diesem Fall müssen Sie Informationen in den Zeilen der Verkaufsgutschrift oder der Verkaufsreklamation bearbeiten.</p>
+<p>Zusätzlich zur ursprünglich gebuchten Einkaufsrechnung können Sie die Einkaufsgutschrift für andere Einkaufsbelege übernehmen, beispielsweise einer anderen gebuchten Einkaufsrechnung, da der Kreditor auch die Artikel zurücksendet, die mit dieser Rechnung geliefert werden.</p>
+<p>Die Gutschriftsbuchung stellt auch jegliche Artikel Zu-/Abschläge wieder her, die dem gebuchten Beleg zugewiesen wurden, sodass die Wertposten des Artikels wieder identisch sind, wie bevor der Artikel Zu-/Abschlag zugewiesen wurde.</p>
+<h2 id="inventory-costing">Bestandskosten</h2>
+<p>Um die korrekte Lagerbewertung beizubehalten, möchten Sie üblicherweise zurückgegebene Artikel im Lager zum Einstandspreis, zum dem sie verkauft wurden und nicht mit dem aktuellen Einstandspreis einlagern. Dies wird als Einstandspreisrückverfolgung bezeichnet.</p>
+<p>Zwei Funktionen sind vorhanden, um die Einstandspreisrückverfolgung automatisch zuzuweisen.  </p>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Funktion <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong> auf der Seite <strong>Einkaufsreklamation</strong></td>
+<td>Kopiert Zeilen einer oder mehrerer gebuchter Verkaufsbelegzeilen, um den ursprünglichen Auftrag zu stornieren. Weitere Informationen finden Sie unter <a href="purchasing-how-process-purchase-returns-cancellations.html#to-create-a-purchase-return-order-based-on-one-or-more-posted-purchase-documents">Einkaufsreklamation auf einem oder mehreren gebuchten Einkaufsbelegen erstellen</a>.</td>
+</tr>
+<tr>
+<td><strong>Kopieren aus Dokument</strong> Funktion auf den Seiten <strong>Einkaufsgutschrift</strong> und <strong>Rückgabeauftrag</strong></td>
+<td>Kopiert den Kopf und die Zeilen aus einem gebuchten Beleg, der storniert werden soll.<br><br> Erfordert, dass das Kontrollkästchen <strong>Einst.-Pr.-Rückverfolg. notw.</strong> auf der Seite <strong>Kreditoren &amp; Einkauf Einr.</strong> ausgewählt ist.</td>
+</tr>
+</tbody>
+</table>
+<p>Um exakte Einstandspreisstornierung manuell zuzuordnen, müssen Sie das Feld <strong>Ausgegl. von Artikelposten</strong> für alle Rückholbelegzeile Art wählen und dann die Nummer des ursprünglichen Verkaufspostens. Dies verknüpft die Einkaufsgutschrift oder Einkauzfsreklamation mit dem ursprünglichen Einkaufsposten und stellt sicher, dass der Artikel mit dem ursprünglichen Einstandspreis bewertet wird.</p>
+<p>Weitere Informationen finden Sie unter <a href="design-details-inventory-costing.html">Designdetails: Lagerkosten</a>.</p>
+<h2 id="to-create-a-purchase-credit-memo-from-a-posted-purchase-invoice">Eine neue Einkaufsgutschrift aus einer gebuchte Einkaufsrechnung erstellen</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Gebuchte Einkaufsrechnungen</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li><p>Wählen Sie das Feld <strong>Gebuchte Einkaufsrechnung</strong>, um die Seite <strong>Korrekturgutschrift erstellen</strong> zu öffnen, und wählen Sie die gebuchte Einkaufsrechnung aus, die Sie stornieren möchten.</p>
+<p> Die meisten Felder im Einkaufsgutschriftskopf werden mit den Informationen aus der gebuchten Einkaufsrechnung ausgefüllt. Sie können alle Felder bearbeiten, zum Beispiel mit neuen Daten, die die Rückholvereinbarung wiedergeben.</p>
+</li>
+<li>Bearbeiten Sie Informationen über die Zeilen entsprechend der Vereinbarung, wie die Anzahl der zurückzuerstattenden Artikel oder der gutzuschreibende Betrag.</li>
+<li>Wählen Sie die Aktion <strong>Posten ausgleichen...</strong> aus.</li>
+<li>Auf der Seite <strong>Kreditorenposten zuweisen</strong> wählen Sie die Zeile mit dem gebuchten Einkaufsbeleg, die Sie der Einkaufsgutschrift zuordnen möchten, und wählen Sie dann <strong>Zuweisungs-ID festlegen</strong> aus. Die Nummer der Einkaufsgutschrift wird im Feld <strong>Zuweisungs-ID</strong> eingefügt.</li>
+<li><p>Geben Sie in jeder Zeile im Feld <strong>Anzuwendender Betrag</strong> den Betrag ein, den Sie ausgleichen möchten, wenn dieser kleiner ist als der ursprüngliche Betrag.</p>
+<p> Im unteren Bereich der Seite <strong>Kreditorenposten zuweisen</strong> können Sie den Gesamtbetrag sehen, um alle beteiligten Posten zu stornieren, nämlich wenn der Wert im Feld <strong>Saldo</strong> Null ist.</p>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Wenn Sie die Einkaufsgutschrift buchen, wird sie für die angegebenen Einkaufsbelege angewandt.</p>
+<p> Nachdem Sie die erforderlichen Einkaufsgutschriftszeilen erstellt oder bearbeitet haben, und der Ausgleich einzelner oder mehrerer Posten angegeben wird, können Sie fortfahren, die Einkaufsgutschrift zu buchen.</p>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> aus.</li>
+</ol>
+<p>Die gebuchten Einkaufsrechnungen, auf die Sie die Gutschrift anzuwenden, werden jetzt umgekehrt. Wenn Sie bereits die ursprüngliche Rechnung bezahlt haben, sollte der Kreditor die Zahlung jetzt an Sie jetzt zurückerstatten. Wenn die Gutschrift nur für einen Teil des Produkts auf der ursprünglichen Rechnung gilt, können Sie nur den Restbetrag auf der Rechnung der ursprünglichen Einkaufsrechnung bezahlen, um sie zu schließen.</p>
+<p>Die Einkaufsgutschrift wird entfernt und durch einen neuen Beleg in der Liste der gebuchten Einkaufsgutschriften ersetzt.</p>
+<h2 id="to-create-a-purchase-credit-memo-by-copying-a-posted-purchase-invoice">Erstellt eine neue Einkaufsgutschrift, um eine gebuchte Einkaufsrechnung zurückzusetzen.</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einkaufsgutschriften</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie <strong>Neu</strong>, um eine neue leere Einkaufsgutschrift zu öffnen.</li>
+<li>Geben Sie im Feld <strong>Kreditor</strong> den Namen eines vorhandenen Kreditors ein.</li>
+<li>Wählen Sie die Aktion <strong>Aus Dokument kopieren</strong>.</li>
+<li>Wählen Sie auf der Seite <strong>Einkaufsbeleg kopieren</strong> im Feld <strong>Dokumenttyp</strong> <strong>Rechnung buchen</strong> aus.</li>
+<li>Wählen Sie das Feld <strong>Belegnr.</strong>, um die Seite <strong>Geb. Einkaufsrechnungen</strong> zu öffnen, und wählen Sie die gebuchte Einkaufsrechnung aus, die Sie stornieren möchten.</li>
+<li>Wählen Sie das Kontrollkästchen <strong>Zeilen neu berechnen</strong>, wenn die kopierten gebuchten Einkaufsrechnungszeilen, mit einzelnen Änderungen im Artikelpreis und im Einstandspreis, aktualisiert werden sollen, da die Rechnung gebucht wurde.</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Die kopierten Rechnungszeilen werden in die Einkaufsgutschrift eingefügt.</li>
+<li>Schließen Sie die Einkaufsgutschrift ab, so wie dies unter <a href="purchasing-how-process-purchase-returns-cancellations.html#to-create-a-purchase-credit-memo-from-a-posted-purchase-invoice">Eine neue Einkaufsgutschrift aus einer gebuchte Einkaufsrechnung erstellen</a> erklärt ist.</li>
+</ol>
+<h2 id="to-create-a-purchase-return-order-based-on-one-or-more-posted-purchase-documents">Weitere Informationen finden Sie unter „Einkaufsreklamation auf einem oder mehreren gebuchten Einkaufsbelegen erstellen“.</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einkaufsreklamationen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong> aus.  </li>
+<li>Füllen Sie im Inforegister <strong>Allgemein</strong> die notwendigen Felder aus.</li>
+<li><p>Im Inforegister <strong>Zeilen</strong> können Sie die Zeilen manuell ausfüllen, oder kopieren Sie Informationen aus anderen Belegen, um die Zeilen automatisch auszufüllen:</p>
+<ul>
+<li>Die Funktion <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong> können Sie verwenden, um eine oder mehrere gebuchte Belegzeilen aus einem oder mehreren gebuchten Belegen zu kopieren. Diese Funktion ermöglicht Ihnen die exakte Stornierung der Einstandspreise aus der gebuchten Belegzeile. Diese Funktion wird in den folgenden Schritten beschrieben.    </li>
+<li>Verwenden Sie die Funktion <strong>Aus Dokument kopieren</strong>, um ein vorhandenes Dokument in den Rückgabeauftrag zu kopieren. Verwenden Sie diese Funktion zum Kopieren des gesamten Belegs. Dies kann entweder ein bereits gebuchter oder ein noch nicht gebuchter Beleg sein. Diese Funktion ermöglicht die Einstandspreisrückverfolgung nur dann, wenn die <strong>Einstandspreisrückverfolgung</strong> als obligatorisch auf der Seite <strong>Debitoren &amp; Verkauf Einr.</strong> eingerichtet ist.  </li>
+</ul>
+</li>
+<li><p>So verwenden Sie die Funktion <strong>Zu stornierende Belegzeilen</strong> abrufen</p>
+</li>
+<li><p>Wählen Sie oben auf der Seite <strong>Gebuchte Einkaufsbelegzeilen</strong> das Feld <strong>Nur stornierbare Zeilen anzeigen aus,</strong> wenn Sie nur Zeilen mit Mengen anzeigen möchten, die noch nicht zurückgesendet oder, im Falle von Einkaufszeilen, verkauft oder verbraucht wurden. Wenn eine gebuchte Einkaufsrechnungsmenge beispielsweise bereits zurückgesendet wurde, möchten Sie diese Menge möglicherweise nicht mit einem neuen Einkaufsreklamationsbeleg zurücksenden.</p>
+<div class="NOTE"><h5>Hinweis</h5><p> Das Feld bezieht sich nur auf gebuchte Liefer- und Rechnungszeilen, nicht auf gebuchte Rücklieferungs- oder Gutschriftzeilen.  </p>
+</div>
+<p> Klicken Sie links auf der Seite, die verschiedenen Belegarten werden aufgeführt und die Nummer in Klammern steht für die Anzahl der Belege, die von jeder Belegart verfügbar sind.</p>
+</li>
+<li><p>Wählen Sie im Feld <strong>Belegartfilter</strong> die Art der gebuchten Belegzeilen aus, die Sie verwenden möchten.  </p>
+</li>
+<li><p>Wählen Sie die Zeilen aus, die Sie in den neuen Beleg kopieren möchten.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn Sie zum Auswählen aller Zeilen <kbd>STRG</kbd>+<kbd>A</kbd> verwenden, werden alle Zeilen in dem von Ihnen festgelegten Filter kopiert, jedoch wird der Filter <strong>Nur stornierbare Mengen anzeigen</strong> ignoriert. Angenommen, Sie haben die Zeilen nach einem bestimmten Beleg mit zwei Zeilen gefiltert, von denen eine bereits auf &quot;Zurückgesendet&quot; gesetzt wurde. Auch wenn das Feld <strong>Nur stornierbare Mengen</strong> anzeigen ausgewählt wird, werden beim Drücken von <kbd>STRG</kbd>+<kbd>A</kbd> zum Kopieren aller Zeilen beide Zeilen kopiert und nicht nur die eine, die noch nicht storniert wurde.  </p>
+</div>
+</li>
+<li><p>Klicken Sie auf die Schaltfläche <strong>OK</strong>, um die Zeilen in den neuen Beleg zu kopieren.  </p>
+<p> Die folgenden Prozesse werden durchgeführt:  </p>
+<ul>
+<li><p>Für gebuchte Belegzeilen der Art <strong>Artikel</strong> wird eine neue Belegzeile erstellt, die eine Kopie der gebuchten Belegzeile ist, und zwar mit der noch nicht stornierten Menge. Das Feld <strong>Ausgegl. von Artikelposten</strong> wird ausgefüllt mit der Nummer des Artikelpostens der gebuchten Belegzeile.  </p>
+</li>
+<li><p>Bei gebuchten Belegzeilen, die nicht von der Art <strong>Artikel</strong> sind, wie z. B. Artikel Zu-/Abschläge, wird eine neue Belegzeile erstellt, die eine Kopie der ursprünglichen gebuchten Belegzeile ist.  </p>
+</li>
+<li><p>Die Anwendung berechnet das Feld <strong>Einstandspreis (MW)</strong> der neuen Zeile anhand der Kosten in den entsprechenden Artikelposten.  </p>
+</li>
+<li><p>Wenn es sich bei dem kopierten Beleg um eine gebuchte Lieferung, einen gebuchten Wareneingang, eine gebuchte Rücksendung oder eine gebuchte Rücklieferung handelt, wird der VK-Preis automatisch anhand der Artikelkarte berechnet.  </p>
+</li>
+<li><p>Wenn es sich bei dem gebuchten Beleg um eine gebuchte Rechnung oder Gutschrift handelt, werden VK-Preis, Rechnungsrabatte und Zeilenrabatte aus der gebuchten Belegzeile kopiert.  </p>
+</li>
+<li><p>Wenn die gebuchte Belegzeile Artikelverfolgungszeilen enthält, wird Feld <strong>Anwendung vom Artikeleintrag</strong> auf der Artikelnachverfolgungszeilen mit den entsprechenden Artikelpostennummern aus den gebuchten Artikelverfolgungszeilen gefüllt.  </p>
+<p>Beim Kopieren aus einer gebuchten Rechnung oder einer gebuchten Gutschrift kopiert die Anwendung alle relevanten Rechnungsrabatte und Zeilenrabatte, die zum Zeitpunkt der Buchung dieses Belegs gelten, von der gebuchten Belegzeile in die neue Belegzeile. Beachten Sie jedoch, dass, wenn die Option <strong>Rechnungsrab. berechnen</strong> auf der Seite <strong>Verkaufs- und Forderungseinrichtung</strong> aktiviert ist, der Rechnungsrabatt neu berechnet wird, wenn Sie die neue Belegzeile buchen. Daher kann es sein, dass der Zeilenbetrag für die neue Zeile sich von dem Zeilenbetrag für die ursprüngliche Belegzeile unterscheidet, je nach der Neuberechnung des Rechnungsrabatts.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn ein Teil der Menge der gebuchten Belegzeile bereits zurückgesendet, verkauft oder verbraucht wurde, wird nur für die Menge, die am Lager verbleibt oder die nicht zurückgesendet wurde, eine Zeile erstellt. Wurde die vollständige Menge der gebuchten Belegzeile bereits storniert, wird keine neue Belegzeile erstellt.  </p>
+<p> Wenn der Warenfluss im gebuchten Beleg der gleiche wie der Warenfluss im neuen Beleg ist, wird einfach eine Kopie der ursprünglich gebuchten Belegzeile im neuen Beleg erstellt. Das Feld <strong>Ausgegl. von Artikelposten</strong> wird nicht ausgefüllt, da in diesem Fall eine exakte Einstandspreisstornierung nicht möglich ist. Wenn Sie beispielsweise die Funktion <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong> zum Abrufen einer gebuchten Einkaufsgutschriftzeile für eine neue Einkaufsgutschrift verwenden, wird nur die ursprünglich gebuchte Gutschriftszeile in die neue Gutschrift kopiert.  </p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Auf der Seite <strong>EInkaufsreklamation</strong> im Feld <strong>Reklamationsgrundcode</strong> auf jeder Zeile wählen Sie den Grund für die Reklamation aus.</p>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> aus.</li>
+</ol>
+<h2 id="to-create-a-replacement-purchase-order-from-a-purchase-return-order">So erstellen Sie eine Ersatzbestellung anhand von einer Reklamation</h2>
+<p>Möglicherweise einigen Sie sich mit Ihrem Kreditoren darauf, dass Sie für einen – eventuell beschädigten – Artikel, den Sie bei ihm gekauft haben, eine Entschädigung in Form eines Austauschartikels erhalten. Der Austauschartikel kann derselbe Artikel oder ein anderer sein. Diese Situation kann eintreten, wenn der Lieferant versehentlich den falschen Artikel geliefert hat.  </p>
+<ol>
+<li>Auf der Seite <strong>Einkaufsreklamation</strong> für einen aktiven Rückgabevorgang in einer leeren Zeile, erzeugen Sie einen negativen Eintrag für den Austauschartikel, indem Sie einen negativen Betrag in das Feld <strong>Menge</strong> eingeben.  </li>
+<li>Wählen Sie die <strong>Negative Zeilen übertragen</strong> Aktion aus.  </li>
+<li>Füllen Sie auf der Seite <strong>Negative Einkaufszeile verschieben</strong> die Felder nach Bedarf aus.</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Die negative Zeile wird aus der Einkaufsreklamation gelöscht, und eine neue Einkaufsbestellung wird erstellt. Weitere Informationen finden Sie unter <a href="purchasing-how-record-purchases.html">Erfassen eines Einkaufs</a>.  </li>
+</ol>
+<h2 id="to-create-a-purchase-allowance">So erstellen Sie einen Einkaufsnachlass</h2>
+<p>Falls Sie von einem Kreditor Artikel erhalten, die nicht Ihren Vorstellungen entsprechen, z. B. weil sie die falsche Farbe haben oder beschädigt sind, kann Ihnen der Kreditor einen Rabatt anbieten.  </p>
+<p>Sie können diesen reduzierten EK-Preis als Zu-/Abschlag für Artikel in einer Gutschrift oder einer Reklamation buchen und mit der gebuchten Einkaufslieferung verknüpfen. Nachfolgend wird es für eine Einkaufsreklamation erläutert, aber dieselben Schritte gelten für eine Einkaufsgutschrift zu.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einkaufsgutschriften</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie <strong>Neu</strong>, um eine neue leere Einkaufsgutschrift zu öffnen.  </li>
+<li>Füllen Sie den Kopf der Gutschrift mit den Informationen über den Kreditor aus, von dem Sie den Einkaufsnachlass erhalten haben.  </li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> im Feld <strong>Art</strong> die Option <strong>Zu-/Abschlag (Artikel)</strong>.  </li>
+<li><p>Geben Sie im Feld <strong>Nr.</strong> den entsprechenden Chargenwert ein.  </p>
+<p> Sie haben die Möglichkeit, eine spezielle Artikel Zu-/Abschlagsnummer für Einkaufsrabatte einzurichten.  </p>
+</li>
+<li>Geben Sie in dem Feld <strong>Menge</strong> <strong>1</strong> ein.  </li>
+<li>Geben Sie in dem Feld <strong>EK-Preis</strong> den Betrag des Einkaufsrabattes an.  </li>
+<li>Weisen Sie den Einkaufsrabatt den Artikeln als Artikel Zu-/Abschlag in der gebuchten Einkaufslieferung zu. Weitere Informationen finden Sie untert <a href="payables-how-assign-item-charges.html">Verwenden von Artikelzuschlägen für zusätzliche Kosten</a>. Kehren Sie zur Seite <strong>Gutschrift</strong> zurück.</li>
+</ol>
+<p>Wenn Sie die Verkaufsreklamation buchen, wird die Wiedereinlagerungsgebühr zu dem entsprechenden Betrag des Verkaufspostens addiert. Auf diese Art können Sie genaue Bestandbewertung führen.  </p>
+<h2 id="to-combine-return-shipments">So fassen Sie Rücklieferungen zusammen</h2>
+<p>Wenn Sie mehrere Artikel , für die verschieden Einkaufsreklamationen gelten, an denselben Kreditor zurücksenden möchten, können Sie die Funktion <strong>Sammelrücklieferungen</strong> verwenden.  </p>
+<p>Wenn Sie die Artikel liefern, buchen Sie die jeweiligen Einkaufsreklamationen als geliefert und erzeugen damit gebuchte Rücklieferungen.  </p>
+<p>Wenn Sie diese Artikel fakturieren möchten, können Sie eine Einkaufsgutschrift anlegen und die gebuchten Rücklieferzeilen automatisch in diesen Beleg kopieren, anstatt jede Einkaufsreklamation einzeln zu fakturieren. Dann können Sie die Einkaufsgutschrift buchen und gleichzeitig alle offenen Einkaufsreklamationen auf einmal fakturieren.  </p>
+<p>Wenn Rücklieferungen in einer Gutschrift zusammengefasst und gebucht werden, wird für die fakturierten Zeilen eine gebuchte Einkaufsgutschrift erstellt. Das Feld <strong>Menge fakturiert</strong> auf der entstehenden Einkaufsreklamation wird ausgehend von der fakturierten Menge aktualisiert. Die ursprüngliche Einkaufsreklamation wird jedoch nicht gelöscht, auch wenn sie vollständig geliefert und fakturiert wurde, und Sie müssen daher die Retoure manuell löschen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Dieses Verfahren nimmt an, dass mehrere Einkaufsreklamationen für den Kreditor vorliegen, die alle als geliefert gebucht worden sind.     </p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einkaufsgutschriften</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong> aus.  </li>
+<li>Füllen Sie im Inforegister <strong>Allgemein</strong> die notwendigen Felder aus.  </li>
+<li>Wählen Sie die <strong>Rücklieferzeilen abrufen</strong> Aktion aus.  </li>
+<li><p>Wählen Sie mehrere Rücklieferzeilen aus, die in der Rechnung enthalten sein sollen:  </p>
+<p> Wenn Sie eine falsche Rücklieferzeile ausgewählt haben oder von vorn beginnen möchten, können Sie einfach die Zeilen in der Einkaufsgutschrift löschen und die Funktion <strong>Rücklieferzeilen holen</strong> erneut ausführen.  </p>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> aus.  </li>
+</ol>
+<h3 id="to-remove-open-purchase-return-orders-after-combined-return-shipment-posting">Offene Einkaufsreklamationen nach kombinierter Rücklieferungsbuchung entfernen</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Erledigte Einkaufsrechnungen-Rücklieferungen löschen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Füllen Sie die anderen relevanten Felder wie erforderlich aus, und wählen Sie dann die Schaltfläche <strong>OK</strong> aus.  </li>
+<li>Sie können die einzelnen Einkaufsreklamtionen auch manuell löschen.</li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="purchasing-manage-purchasing.html">Einkauf</a><br><a href="purchasing-how-record-purchases.html">Einkäufe erfassen</a><br><a href="purchasing-how-correct-cancel-unpaid-purchase-invoices.html">Unbezahlte Einkaufsrechnungen korrigieren oder stornieren</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a><br><a href="sales-how-process-sales-returns-cancellations.html">Verarbeiten einer Verkaufsrücklieferung oder von Stornierungen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

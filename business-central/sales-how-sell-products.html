@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Einen Debitorenauftrag erstellen und Produkte verkaufen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Einen Debitorenauftrag erstellen und Produkte verkaufen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="sell-products-with-a-customer-sales-order">Produkte mit einem Debitorenauftrag verkaufen</h1>
+
+<p>Dieser Artikel bietet Hilfestellungen dazu, wann ein Debitorenauftrag zusätzlich zu einer Rechnung verwendet werden sollte. Wenn der Verkaufsprozess erfordert, dass Sie nur Teile einer Bestellmenge liefern, weil beispielsweise die vollständige Menge nicht sofort verfügbar ist, müssen Sie diesen Verkauf mittels eines Verkaufsauftrags verarbeiten.</p>
+<p>Sie müssen auch Verkaufsaufträge verwenden, wenn Sie Artikel als Direktlieferung verkaufen, indem Sie direkt von Ihrem Kreditor an Ihren Debitor versenden. Erfahren Sie mehr unter <a href="sales-how-drop-shipment.html">Direktlieferungen machen</a>. In allen anderen Aspekten ist das Vorgehen bei Verkaufsaufträgen gleich wie bei Verkaufsrechnungen. Erfahren Sie mehr unter <a href="sales-how-invoice-sales.html">Fakturieren eines Verkaufs</a>.</p>
+<p>Wenn Sie die Produkte teilweise oder gesamthaft liefern, buchen Sie die Verkaufsrechnung oder den Verkaufsauftrag als geliefert oder als geliefert und fakturiert, um den zugehörigen Artikel und die Debitorenposten im System zu erfassen. Wenn Sie den Verkaufsauftrag, können Sie ihn als PDF-Dateianhang auch senden. Sie können den E-Mail-Text mit einer Zusammenfassung des Auftrags und der Zahlungsinformationen, wie ein Link zu PayPal automatisch ausfüllen lassen. Erfahren Sie mehr unter <a href="warehouse-how-ship-items.html">Artikel versenden</a> und <a href="ui-how-send-documents-email.html">Dokumente per E-Mail versenden</a>.</p>
+<p>In Geschäftsumgebungen, wo Debitoren sofort bezahlen, beispielsweise mit PayPal oder bar, wenn eine Zahlung sofort erfasst wird, wenn Sie die Verkaufsrechnung buchen, das heißt die gebuchte Verkaufsrechnung. wird geschlossen als vollständig ausgeglichen. Wählen Sie im Inforegister Zahlungen im Feld <strong>Zahlungsformcode</strong> den entsprechenden Code aus. Siehe dazu auch Schritt 5 unten. Für elektronischen Zahlungsverkehr wie PayPal müssen Sie das Feld <strong>Zahlungsverkehr</strong> ausfüllen. Erfahren Sie mehr unter <a href="sales-how-enable-payment-service-extensions.html">Aktivieren von Debitoren-Zahlungen durch Zahlungsverkehr</a>.</p>
+<p>Sie können direkt gezahlte Rechnungen für nicht registrierte Debitoren auch erstellen, indem Sie eine Bargelddebitoren-Karte einrichten, auf der Sie auf die Verkaufsrechnung hinweisen. Erfahren Sie mehr unter <a href="finance-how-to-set-up-cash-customers.html">Bardebitoren einrichten</a>.</p>
+<h2 id="create-a-sales-order">Einen Verkaufsauftrag erstellen</h2>
+<div class="NOTE"><h5>Hinweis</h5><p>Beim nachfolgenden Verfahren wird davon ausgegangen aus, dass der Debitor bereits eingerichtet ist. Anweisungen dazu finden Sie unter <a href="sales-how-register-new-customers.html">Neue Debitoren registrieren</a>.</p>
+</div>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Verkaufsaufträge</strong> ein, und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie <strong>Neu</strong> aus, um einen neuen Eintrag zu erstellen.</li>
+<li><p>Geben Sie in das Feld <strong>Kundenname</strong> den Namen eines bestehenden Kunden ein.</p>
+<p> Andere Felder auf der Seite <strong>Verkaufsangebot</strong> werden nun mit den Standardinformationen zum ausgewählten Debitor ausgefüllt.  </p>
+</li>
+<li><p>Füllen Sie auf der Seite <strong>Verkaufsauftrag</strong> die Felder wie benötigt aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie dem Debitor ermöglichen, sofort mit Kreditkarte oder PayPal zu bezahlen, dann füllen Sie das Feld <strong>Zahlungsformcode</strong> aus. Die Zahlung wird dann erfasst, sobald Sie die Verkaufsrechnung buchen. Wenn Sie <em>Kasse</em> auswählen, wird die Zahlung in einem angegebenen Gegenkonto erfasst.</p>
+</div>
+<p> Sie sind nun bereit, die Verkaufsangebotszeilen mit Lagerartikeln oder Services auszufüllen, die Sie an den Debitoren verkaufen möchten.</p>
+<p> Wenn Sie wiederkehrende Verkaufszeilen für den Debitor wie einen Monatsersatzauftrag, eingerichtet haben, können Sie diese auf der Rechnung durch Auswählen der Aktion <strong>Wiederkehrende Verkaufszeilen abrufen</strong> einfügen.</p>
+</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> im Feld <strong>Typ</strong> aus, welche Art von Produkt, Gebühr oder Transaktion Sie für den Debitor mit der Verkaufszeile buchen möchten.</p>
+</li>
+<li><p>Geben Sie im Feld <strong>Nr.</strong> die Nummer eines Lagerartikels oder Dienstes ein.</p>
+<p> Sie lassen das <strong>Nr.</strong> Feld leer, wenn die Zeile für Folgendes ist:</p>
+<ul>
+<li>Kommentar. Die Bemerkung im Feld <strong>Beschreibung</strong> enthalten ist.</li>
+<li>Katalogartikel. Wählen Sie die Aktion <strong>Katalogartikel auswählen</strong>. Erfahren Sie mehr unter <a href="inventory-how-work-nonstock-items.html">Mit Katalogelementen arbeiten</a>.</li>
+</ul>
+</li>
+<li><p>Geben Sie in dem Feld <strong>Menge</strong> die Anzahl des Artikels an, der verkauft werden soll.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Für Artikel des Typs <em>Ressource</em> oder <em>Service</em> ist die Menge eine Zeiteinheit wie Stunden, wie im Feld <strong>Einheitencode</strong> der Zeile angegeben. Weitere Informationen finden Sie unter <a href="inventory-how-setup-units-of-measure.html">Einrichten von Einheiten</a>.</p>
+</div>
+<p> Das Feld <strong>Zeilenmenge</strong> wird aktualisiert, um den Wert im Feld <strong>VK-Preis</strong> multipliziert ist mit dem Zahl im Feld <strong>Menge</strong> anzuzeigen.</p>
+<p> Der Preis und der Zeilenbetrag auf den Verkaufsrechnungszeilen werden mit oder ohne MwSt. angezeigt je nachdem, was Sie im Feld <strong>Preis inklusive Mehrwertsteuer</strong> auf der Debitorenkarte ausgewählt haben.</p>
+</li>
+<li><p>Geben Sie im Feld <strong>Zeilenrabatt in Prozent</strong> einen Prozentsatz ein, wenn Sie dem Debitor einen Rabatt auf das Produkt gewähren möchten. Der Wert im Feld <strong>Zeilenbetrag</strong> wird entsprechend aktualisiert.</p>
+<p> Wenn Sie bestimmte Artikelpreise für den Debitor auf dem Inforegister <strong>Verkaufspreise und Verkaufspreis-Zeilenrabatte</strong> eingerichtet haben und die vereinbarten Preiskriterien erfüllt sind, werden der Preis und der Betrag auf der Rechnungszeile automatisch aktualisiert. Erfahren Sie mehr unter <a href="sales-how-record-sales-price-discount-payment-agreements.html">Erfassen von Verkaufspreisen, Skonti und Zahlungsvereinbarungen</a>.</p>
+</li>
+<li>Um einen Kommentar zur Bestellzeile hinzuzufügen, den der Debitor auf dem gedruckten Verkaufsauftrag sehen kann, schreiben Sie einen Kommentar in die leere Zeile im Feld <strong>Beschreibung</strong>.  </li>
+<li><p>Wiederholen Sie die Schritte 5 bis 9 für jedes Element, das Sie an den Kunden verkaufen möchten.</p>
+<p>Die Summenfelder unter den Positionen werden automatisch aktualisiert, wenn Sie Positionen erstellen oder ändern, um die Beträge anzuzeigen, die auf die Sachkonten gebucht werden.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>In sehr seltenen Fällen können die gebuchten Beträge von den in den Summenfeldern angezeigten Beträgen abweichen. Dies ist in der Regel auf Rundungsrechnungen in Bezug auf Mehrwertsteuer oder Verkaufssteuer zurückzuführen.</p>
+<p>Verwenden Sie zum Übeprüfen der tatsächlich gebuchten Beträge die Seite <strong>Statistiken</strong>, die die Rundungsberechnungen berücksichtigt. Auch wenn Sie die Aktion <strong>Freigabe</strong> auswählen, werden die Summenfelder aktualisiert, sodass sie die Rundungsberechnungen enthalten.  </p>
+</div>
+</li>
+<li><p>Optional geben Sie im Feld <strong>Rabattbetrag in Rechnung stellen</strong> einen Betrag ein, der vom Wert abgezogen werden soll, der im Feld <strong>Total inklusive Mehrwertsteuer</strong> im unteren Bereich der Rechnung angezeigt wird.</p>
+<p>Wenn Sie Rechnungsrabatte für den Debitor eingerichtet haben oder die Kriterien erfüllt werden, wird der angegebene Prozentwert automatisch in das Feld <strong>Kreditorenrechnungsrabatt %</strong> eingetragen. Der zugeordnete Betrag wird dann im Feld <strong>Rechnungsbetrag mit Rabatt ohne Mehrwertsteuer</strong> eingefügt. Erfahren Sie mehr unter <a href="sales-how-record-sales-price-discount-payment-agreements.html">Erfassen von Verkaufspreisen, Skonti und Zahlungsvereinbarungen</a>.</p>
+</li>
+<li><p>Um nur einen Teil der Auftragsmenge zu liefern, geben Sie die Menge im Feld <strong>Menge für Versand</strong> ein. Der Wert wird in das Feld <strong>Zu fakturierende Menge</strong> automatisch kopiert.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn das Feld <strong>Versandhinweis</strong> auf <strong>Vollständig</strong> im Inforegister <strong>Versand und Rechnungsstellung</strong> gesetzt ist, können Sie keine Teillieferungen buchen. Erfahren Sie mehr unter <a href="sales-how-send-partial-shipments.html">Teillieferungen verarbeiten</a>.</p>
+</div>
+</li>
+<li>Um nur einen Teil der Auftragsmenge zu fakturieren, geben Sie die Menge im Feld <strong>Menge für Fakturierung</strong> ein. Die zu fakturierende Menge kann nicht größer sein, als der Wert im Feld <strong>Menge geliefert</strong>.  </li>
+<li>Wenn die Verkaufsangebotszeilen ausgeführt werden, wählen Sie die Aktion <strong>Buchen und Senden</strong> aus.</li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Wenn Sie einen Verkaufsauftrag buchen, können Sie eine Lieferung und eine Rechnung erstellen. Diese Dokumente können gleichzeitig oder unabhängig voneinander erstellt werden. Sie können auch eine Teillieferung und eine Teilrechnung erzeugen, indem Sie die Felder <strong>Menge zu liefern</strong> und/oder <strong>Menge zu fakturieren</strong> in den jeweiligen Zeilen des Verkaufsauftrags ausfüllen, bevor Sie buchen. Beachten Sie, dass Sie keine Rechnung auf der Seite <strong>Verkaufsaufträge</strong> ausstellen können, solange die entsprechende Lieferung nicht erfolgt ist. Bevor Sie also die Fakturierung durchführen können, müssen Sie einen Lieferschein erstellt oder die Funktion zur gleichzeitigen Lieferung und Fakturierung gewählt haben.</p>
+<p>Falls Sie einen Verkauf in Rechnung stellen müssen, ohne eine Sendung in Business Central zu registrieren, erstellen Sie das Dokument auf der Seite <strong>Verkaufsrechnungen</strong>, oder wählen Sie <strong>Rechnung erstellen</strong> auf der Seite <strong>Verkaufsangebote</strong>. Erfahren Sie mehr unter <a href="sales-how-invoice-sales.html">Fakturieren eines Verkaufs</a>.</p>
+</div>
+<p>Das Dialogfeld <strong>Buchungs- und Sendebestätigung</strong> zeigt die gewünschte Methode des Debitors das Empfangen von Belegen an. Sie können die Sendemethode ändern, indem Sie die Schaltfläche vom Feld <strong>Beleg senden an</strong> auswählen. Erfahren Sie mehr unter <a href="sales-how-setup-document-send-profiles.html">Belegsendeprofile einrichten</a></p>
+<p>Der zugehörige Artikel und die Debitorenposten werden nun im System erfasst erstellt, und das Verkaufsangebot wird als PDF-Dokument ausgegeben. Sobald der Auftrag vollständig gebucht ist, wird er aus der Liste von Verkaufsaufträgen entfernt und durch neue Belege in der Übersicht der Verkaufsrechnungen und Verkaufslieferungen ersetzt.  </p>
+<h2 id="external-document-number">Externe Belegnummer</h2>
+<p>Auf Verkaufsbelegen und Buch.-Blättern können Sie eine Belegnummer angeben, die auf das Nummerierungssystem des Debitors verweist. <!--You can enter a maximum of ten characters, both numbers and letters.--> Verwenden Sie dieses Feld, um die Nummer zu erfassen, die der Debitor der Bestellung, Rechnung oder Gutschrift zugewiesen hat. Sie können die Nummer dann später verwenden, wenn Sie aus irgendeinem Grund den gebuchten Posten anhand dieser Nummer suchen müssen.  </p>
+<p>Das Feld <strong>Ext. Belegnr. erforderlich</strong> auf der Seite <strong>Debitoren &amp; Verkauf Einr.</strong> gibt an, ob die Eingabe einer externen Belegnummer im Feld <strong>Externe Belegnr.</strong> in einem Verkaufskopf und das Feld <strong>Externe Belegnr.</strong> in einer Fibu Buch.-Blattzeile erforderlich ist.</p>
+<p>Wenn Sie dieses Feld auswählen, ist es nicht möglich, eine Rechnung oder eine Fibu Buch.-Blattzeile ohne externe Belegnummer zu buchen.</p>
+<p>Die externe Belegnummer ist in gebuchten Belegen enthalten, in denen Sie nach der entsprechenden Nummer suchen können. Sie können bei der Navigation zu Debitorenposten auch über die externe Belegnummer suchen.</p>
+<p>Eine andere Möglichkeit, externe Belegnummern zu handhaben, ist die Verwendung des Feldes <strong>Ihre Referenz</strong>. Wenn Sie das Feld <strong>Ihre Referenz</strong> verwenden, wird die Nummer in gebuchte Belege aufgenommen und Sie können danach wie nach Werten aus den Feldern <strong>Externe Belegnr.</strong> suchen. Das Feld ist jedoch in Buchungsblattzeile nicht verfügbar.</p>
+<h2 id="working-with-amount-fields">Mit Betragsfeldern arbeiten</h2>
+<p>Die Werte in Feldern, in denen Beträge angezeigt werden, können positiv oder negativ sein, je nachdem, ob es sich bei dem Wert um eine Gutschrift oder eine Belastung handelt. Dieses Video zeigt, wie Sie mit Feldern arbeiten, die Beträge anzeigen.</p>
+<div class="embeddedvideo"><iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RW1h96P" frameborder="0" allowfullscreen="true"></iframe></div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="sales-how-invoice-sales.html">Verkäufe fakturieren</a><br><a href="ui-post-sales.html">Verkäufe buchen</a><br><a href="warehouse-how-ship-items.html">Artikel versenden</a><br><a href="sales-how-drop-shipment.html">Direktlieferungen durchführen</a><br><a href="sales-manage-sales.html">Verkauf</a><br><a href="sales-setup-sales.html">Einrichten von Verkäufen</a><br><a href="sales-how-print-picking-list.html">Kommissionierliste drucken</a><br><a href="sales-how-send-partial-shipments.html">Teillieferungen verarbeiten</a><br><a href="inventory-manage-inventory.html">Bestand</a><br><a href="ui-how-send-documents-email.html">Dokumente per E-Mail versenden</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

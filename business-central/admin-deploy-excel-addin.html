@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Central-Add-in f&#252;r Excel abrufen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Business Central-Add-in f&#252;r Excel abrufen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="get-the-business-central-add-in-for-excel">Das Business Central-Add-in für Excel abrufen</h1>
+
+<p>Business Central enthält ein Add-in für Excel, mit dem Benutzer auf bestimmten Seiten eine Aktion <strong>In Excel bearbeiten</strong> auswählen können, um die Daten in einem Excel-Arbeitsblatt zu öffnen. Diese Aktion unterscheidet sich von der Aktion <strong>In Excel öffnen</strong>, denn sie ermöglicht es den Benutzern, Änderungen in Excel vorzunehmen und diese dann wieder in Business Central zu veröffentlichen</p>
+<h2 id="overview">Übersicht</h2>
+<h3 id="about-the-add-in">Über das Add-in</h3>
+<p>Das Add-in heißt <strong>Microsoft Dynamics Office Add-in</strong> und kann über den <a href="https://appsource.microsoft.com/">Office Store (AppSource)</a> installiert werden. Wenn das Add-in installiert ist, ist die Aktion <strong>In Excel bearbeiten</strong> auf den meisten Listen- und Listenteilseiten über das Symbol <strong>Freigeben</strong> verfügbar. <img src="media/share-icon.png" alt="Eine Seite in einer anderen App freigeben.">. Weitere Informationen zur Verwendung des Add-Ins finden Sie unter <a href="across-work-with-excel.html">Anzeigen und Bearbeiten in Excel von Business Central</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Das Add-In funktioniert nur unter Windows, nicht unter macOS.</p>
+</div>
+<h3 id="about-deployment-as-an-admin">Über das Bereitstellen als Admin</h3>
+<p>Mit Business Central Online gibt es einige Bereitstellungsoptionen, um das Add-In für die Benutzer bereitzustellen. Eine Option ist der <em>individuelle Erwerb</em>, bei dem Sie die Benutzer das Add-In selbst installieren lassen. Bei dieser Option müssen die Benutzer Zugriff auf das Herunterladen von Dateien aus dem Office Store haben. Eine andere Möglichkeit ist, die <em>Zentrale Bereitstellung</em> im Microsoft 365 Admin Center festzulegen, um das Add-In automatisch für Ihr gesamtes Unternehmen, für Gruppen oder für bestimmte Benutzer bereitzustellen. Die zentrale Bereitstellung bietet eine Möglichkeit, das Add-in den Benutzern zur Verfügung zu stellen, wenn Ihr Unternehmen den Benutzern keinen Zugriff auf den Office Store gewährt.</p>
+<p>Für den Endbenutzer stellt sich die Installation in den beiden Bereitstellungsszenarien unterschiedlich dar:</p>
+<ul>
+<li><p>Bei der Einzelerfassung wählen die Benutzer zum ersten Mal die Aktion <strong>In Excel bearbeiten</strong> und das Fenster <strong>Neues Office Add-in</strong> wird in Excel geöffnet. Um das Add-in zu installieren, wählt der Benutzer <strong>Diesem Add-in vertrauen</strong>, was wiederum das Add-in direkt aus dem Office Store installiert. Der Benutzer meldet sich dann mit seinem Benutzernamen und Kennwort bei Business Central an.</p>
+</li>
+<li><p>Bei der zentralen Bereitstellung wird das Add-in bei der ersten Auswahl der Aktion <strong>In Excel bearbeiten</strong> automatisch aus der zentralen Bereitstellung in Excel installiert, nicht aus dem Office Store. Die Benutzer müssen sich nur noch bei Business Central anmelden.</p>
+</li>
+</ul>
+<p>Bei beiden Bereitstellungsoptionen wird das Add-In automatisch so konfiguriert, dass es eine Verbindung zu Business Central herstellt. Eine dritte Bereitstellungsoption ist eine manuelle Installation des Add-Ins direkt aus Excel. Bei dieser Option müssen die Benutzer das Add-In so konfigurieren, dass es eine Verbindung zu Business Central herstellt.</p>
+<h3 id="switch">Wechsel von der individuellen Erfassung zur zentralen Bereitstellung oder andersherum</h3>
+<p>Wenn Sie vom Einzelerwerb des Add-Ins zur zentralen Bereitstellung oder umgekehrt wechseln, sind Excel-Dateien betroffen, die Benutzer vor dem Übergang erstellt haben. Nach der Umstellung können Benutzer weiterhin alle Excel-Arbeitsblätter öffnen, die zuvor mit der Aktion <strong>In Excel bearbeiten</strong> erstellt wurden oder die manuell durch die Konfiguration des Excel-Add-Ins erstellt wurden. Aber sie können die Daten in der Datei nicht von Business Central aus aktualisieren oder Aktualisierungen an Business Central senden.</p>
+<p>Dieser Zustand wird dadurch verursacht, dass jeder Excel-Datei eine „Add-In“-Kennung zugewiesen wird. Beim Übergang zur oder von der zentralen Bereitstellung wird eine andere Kennung zugewiesen, sodass die frühere Kennung blockiert wird.</p>
+<h2 id="preparation-on-premises-only">Vorbereitung (nur on-premises)</h2>
+<p>Business Central on-premises setzt voraus, dass Ihre Umgebung für das Add-In konfiguriert ist. Wenn dies nicht der Fall ist, steht die Aktion <strong>In Excel bearbeiten</strong> den Benutzern nicht zur Verfügung. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/configuring-excel-addin">Einrichten des Excel-Add-Ins zum Bearbeiten von Business Central-Daten</a> in der Hilfe für Entwickler und IT-Profis.</p>
+<h2 id="deploy-the-add-in-by-using-centralized-deployment">Bereitstellen des Add-Ins mit Hilfe der zentralen Bereitstellung</h2>
+<p>Die zentrale Bereitstellung ist eine Funktion im Microsoft 365 Admin Center, mit der Sie Add-Ins automatisch in den Office-Apps der Benutzer, z. B. Excel, bereitstellen können. Um Ihnen bei der zentralen Bereitstellung zu helfen, enthält Business Central die <strong>Unterstützte Einrichtung des Excel Add-Ins Zentrale Bereitstellung</strong>.</p>
+<h3 id="before-you-begin">Bevor Sie beginnen</h3>
+<ul>
+<li>Um zu erfahren, wie Sie Benutzer am Herunterladen aus dem Office Store hindern können, lesen Sie <a href="https://learn.microsoft.com/de-de/microsoft-365/admin/manage/manage-addins-in-the-admin-center">Add-ins im Admin Center verwalten</a>.</li>
+<li>Vergewissern Sie sich, dass die zentrale Bereitstellung in Ihrem Unternehmen funktioniert. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/microsoft-365/admin/manage/centralized-deployment-of-add-ins">Bestimmen Sie, ob die zentrale Bereitstellung von Add-Ins für Ihr Unternehmen geeignet ist</a>.</li>
+<li>Wenn Sie von der individuellen Erfassung zu einer zentralen Bereitstellung wechseln, lesen Sie bitte <a href="#switch">Umstellung von der individuellen Erfassung zur zentralen Bereitstellung</a></li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Aktivierung der zentralen Bereitstellung wirkt sich auf Funktionen aus, die das Excel-Add-In verwenden, wie z.B. die <strong>Bearbeiten in Excel</strong> Aktion. Sie hat keine Auswirkungen auf andere Excel-bezogene Funktionen und Berechtigungen, die Benutzern in Business Central zugewiesen sind.</p>
+</div>
+<h3 id="set-up-centralized-deployment-of-the-add-in">Zentrale Bereitstellung des Add-Ins festlegen</h3>
+<p>Sie werden sowohl in Business Central als auch im Microsoft 365 Admin Center arbeiten.</p>
+<ol>
+<li>Wählen Sie in Business Central die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Excel Add-in Zentrale Bereitstellung</strong> ein und wählen Sie dann den entsprechenden Link.</li>
+<li>Lesen Sie die Informationen auf der Seite <strong>Einrichtung des Business Central-Add-in für Excel</strong> und wählen Sie <strong>Weiter</strong>.</li>
+<li><p>Melden Sie sich beim <a href="https://go.microsoft.com/fwlink/?linkid=2163967">Microsoft 365 Admin Center</a> an, und wechseln Sie dann zu <strong>Integrierte Apps</strong>.<!--**Add-ins**-->.</p>
+<p> Führen Sie die folgenden Schritte aus, um das Add-in so zu konfigurieren, dass es aus dem Office Store bereitgestellt wird: </p>
+<ol>
+<li>Wählen Sie <strong>Apps holen</strong>, um den Office Store zu öffnen (AppSource). <!--**Deploy Add-in** 5. In the **Deploy a new add-in**, select **Choose from the store**.--></li>
+<li>Suchen Sie nach <strong>Microsoft Dynamics Office Add-in</strong>, und wählen Sie dann <strong>Jetzt holen</strong>. <!--On the **Select add-in** page, search for and select **Microsoft Dynamics Office Add-in** > **Add** > **Continue**.--></li>
+<li>Geben Sie auf der Seite <strong>Benutzer hinzufügen</strong> die Benutzer an, für die Sie das Add-in bereitstellen möchten, und wählen Sie dann <strong>Weiter</strong>.<!--On the **Configure add-in**, specify the users that you want to deploy the add-in for.--></li>
+<li>Überprüfen Sie die Seite <strong>Anforderungen für Berechtigungen akzeptieren</strong> und wählen Sie dann <strong>Weiter</strong> &gt; <strong>Einsatz fertig stellen</strong>.</li>
+<li><p>Warten Sie, bis das grüne Häkchen neben <strong>Bereitgestellt</strong> für das Add-In erscheint, und wählen Sie dann <strong>Erledigt</strong>. <!--Select **Deploy** and wait til successful, then **Next** > **Continue**.--></p>
+<p>Das Add-In erscheint auf der Seite <strong>Add-ins</strong>. Weitere Informationen über das Bereitstellen von Add-Ins im Microsoft 365 Admin Center finden Sie unter <a href="https://learn.microsoft.com/de-de/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true">Einsatz von Add-Ins im</a> Admin Center.</p>
+</li>
+</ol>
+</li>
+<li>Gehen Sie zurück zur unterstützten Einrichtung <strong>Excel Add-in „Zentrale Bereitstellung“</strong> unterstützten Einrichtung in Business Central. und wählen Sie <strong>Weiter</strong> aus.</li>
+<li><p>Aktivieren Sie <strong>Zentrale Bereitstellung verwenden</strong> und wählen Sie <strong>Fertigstellen</strong>.</p>
+<p> Wenn Sie diesen Schalter nicht einschalten, holt Business Central das Add-in direkt aus dem Office Store.</p>
+</li>
+</ol>
+<p>Wenn Sie fertig sind, können Sie die Bereitstellung im Microsoft 365 Admin Center jederzeit ändern, z. B. weitere Benutzer zuweisen. Weitere Informationen über das Bereitstellen von Add-Ins im Admin Center finden Sie unter <a href="https://learn.microsoft.com/de-de/power-platform/admin/use-service-admin-role-manage-tenant?azure-portal=true">Einsatz von Add-Ins im Admin Center</a>.</p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Wenn Sie über mehr als eine Umgebung verfügen, müssen Sie die unterstützte Einrichtung <strong>Excel Add-in Zentrale Bereitstellung</strong> in jeder Umgebung ausführen, in der Sie die zentrale Bereitstellung verwenden möchten. Sie müssen die zentrale Bereitstellung in Microsoft 365 jedoch nicht erneut konfigurieren. Sie müssen lediglich den Schalter <strong>Zentrale Bereitstellung bereitstellen</strong> in der unterstützten Einrichtung aktivieren. </p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Es kann bis zu 24 Stunden dauern, bis das Add-In automatisch in Excel von Benutzern bereitgestellt wird.</p>
+</div>
+<h2 id="install">Individuelle Übernahme: Installieren Sie das Add-In manuell für Ihren eigenen Gebrauch</h2>
+<p>Wenn Sie Excel von Business Central aus öffnen, wird das Add-in in den meisten Fällen entweder automatisch für Sie installiert oder Sie werden aufgefordert, es zu installieren. Es kann jedoch Fälle geben, in denen Sie das Add-in manuell installieren müssen.</p>
+<ol>
+<li>Öffnen Sie Excel und dann eine beliebige Excel-Arbeitsmappe.</li>
+<li>Wählen Sie auf der Registerkarte <strong>Start</strong> <strong>Add-Ins</strong> &gt; <strong>Weitere Add-Ins</strong> aus.</li>
+<li>Gehen Sie zu <strong>Admin verwaltet</strong> und suchen Sie nach <strong>Microsoft Dynamics Office Add-in</strong>. Wenn Sie es sehen, wählen Sie es aus und wählen Sie dann <strong>Hinzufügen</strong>. Wenn Sie es nicht sehen, gehen Sie zu <strong>Store</strong>, suchen Sie dann nach <em>Microsoft Dynamics Office Add-in</em> und folgen Sie den Anweisungen auf dem Bildschirm, um es hinzuzufügen.</li>
+</ol>
+<p>Wenn das Add-In installiert ist, wird es in Excel als ein Panel angezeigt. Als nächstes konfigurieren Sie die Verbindung.</p>
+<h3 id="configure-the-business-central-connection">Konfigurieren Sie die Business Central Verbindung</h3>
+<p>Wenn ein Benutzer die Verbindung nicht automatisch herstellen kann, können Sie ihn auffordern, die folgenden Schritte auszuführen:</p>
+<ol>
+<li>Wählen Sie im <strong>Microsoft Dynamics</strong> Add-In-Fenster in Excel die Option <strong>Serverinformationen hinzufügen</strong>. Wenn Sie es nicht sehen, wählen Sie in Excel die Schaltfläche <img src="media/cogwheel.png" alt="Weitere Optionen">. Symbol am oberen Rand, um den Optionsdialog zu öffnen. </li>
+<li>Für Business Central online, legen Sie <strong>Server URL</strong> auf <code>https://exceladdinprovider.smb.dynamics.com</code> fest. Für Business Central on-premises legen Sie die URL des Web Clients fest, wie <code>https://myBCserver/240</code>.</li>
+<li>Wählen Sie <strong>OK</strong>, und bestätigen Sie dann, dass die App neu geladen wird.</li>
+<li>Wenn Sie dazu aufgefordert werden, melden Sie sich mit Ihrem Business Central Benutzernamen und Kennwort an.</li>
+<li>Wählen Sie optional die Umgebung und die Firma aus, mit der Sie sich verbinden möchten.</li>
+</ol>
+<p>Das Add-In ist nun mit Business Central verbunden und Sie können Daten bearbeiten und die Änderungen in Business Central veröffentlichen.  </p>
+<h2 id="prepare-devices-and-network-for-the-excel-add-in">Geräte und Netzwerk für das Excel Add-In vorbereiten</h2>
+<p>Netzwerkdienste wie Proxys oder Firewalls müssen Routing zwischen jedem Client-Gerät, auf dem das Add-In installiert ist, und vielen Dienstendpunkten zulassen. Eine Liste der Endpunkte finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/configuring-network-for-addins">Vorbereiten Ihres Netzwerks für das Excel-Add-In</a>.</p>
+<h2 id="troubleshooting">Problembehebung</h2>
+<p>Manchmal kommt es vor, dass Benutzer Probleme mit dem Excel-Add-In ausführen. In diesem Abschnitt finden Sie einige Tipps, wie Sie die Sperrung für Benutzer unter bestimmten Umständen aufheben können.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Lösung oder Workaround</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Das Add-In lässt sich nicht starten <br><br>Beispielsweise erhält der Benutzende die Meldung „Add-In-Warnung: Dieses Add-In ist nicht mehr verfügbar.“, wenn Sie versuchen, das Add-In zu verwenden. Dieses spezielle Problem kann auftreten, wenn die zentralisierte Bereitstellung korrekt konfiguriert ist, dem Benutzenden jedoch kein Zugriff zugewiesen wurde.</td>
+<td>Prüfen Sie, ob das Add-in zentral bereitgestellt wird. Oder überprüfen Sie, ob der Benutzer für die lokale Installation gesperrt ist.</td>
+<td>Der Admin kann Office so konfigurieren, dass Benutzer keine Add-Ins erwerben können. In diesen Fällen muss der Admin das Add-In zentral bereitstellen. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide&amp;preserve-view=true">Add-ins im Admin Center bereitstellen</a>.</td>
+</tr>
+<tr>
+<td>Die Daten werden nicht in Excel geladen</td>
+<td>Testen Sie die Verbindung, indem Sie eine andere Liste in Excel über Business Central öffnen. Oder öffnen Sie die Arbeitsmappe in Excel in einem Browser.</td>
+<td>Wenn der Benutzer einen Firmennamen angegeben hat, der Sonderzeichen enthält, kann das Add-In keine Verbindung herstellen.</td>
+</tr>
+<tr>
+<td>Daten können nicht in Business Central zurück veröffentlicht werden.</td>
+<td>Testen Sie die Verbindung, indem Sie die Arbeitsmappe in Excel in einem Browser öffnen.</td>
+<td>Manchmal kann eine Erweiterung den Veröffentlichungsauftrag blockieren. Wenn die Seite erweitert oder angepasst ist, entfernen Sie die Erweiterungen und versuchen Sie es dann erneut.</td>
+</tr>
+<tr>
+<td>Die Daten sind falsch</td>
+<td>Excel zeigt Zeiten und Daten möglicherweise in einem anderen Format als Business Central an. Diese Bedingung macht sie nicht falsch, und die Daten in Business Central werden nicht durcheinander gebracht.</td>
+<td></td>
+</tr>
+<tr>
+<td>Bei einigen Listenseiten führt das Bearbeiten mehrerer Zeilen in Excel immer wieder zu Fehlern. Diese Bedingung kann auftreten, wenn OData-Aufrufe FlowFields und Felder außerhalb des Steuerelements des Repeaters enthalten.</td>
+<td>Aktivieren Sie auf der Seite <strong>Webdienste</strong> die Kontrollkästchen <strong>Nicht editierbare FlowFields ausschließen</strong> und <strong>Felder außerhalb des Repeaters ausschließen</strong> für die veröffentlichte Seite. Wenn Sie diese Kontrollkästchen aktivieren, werden nicht editierbare FlowFields und Felder von der eTag Berechnung ausgeschlossen.</td>
+<td>Diese Kontrollkästchen sind standardmäßig ausgeblendet. Um sie auf der Seite <strong>Webdienste</strong> anzuzeigen, verwenden Sie <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/ui-personalization-user">Personalisierung</a>.</td>
+</tr>
+<tr>
+<td>Benutzer können sich nicht mehr beim Add-In anmelden. Wenn sie versuchen, sich anzumelden, wird der Vorgang abgebrochen, ohne abgeschlossen zu werden.</td>
+<td>Dieses Problem wird möglicherweise durch ein Update verursacht, das irgendwann im Juli 2022 am Add-In vorgenommen wurde. Weitere Informationen und eine Fehlerbehebung finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/update-excel-addin-configuration">Excel-Add-In-Konfiguration zur Unterstützung des Updates vom Juli 2022 ändern</a>.</td>
+<td>Gilt nur für Business Central-On-Premises</td>
+</tr>
+<tr>
+<td>Das Add-In kommuniziert mithilfe der API v2.0 für Dynamics 365 Business Central und alle Einschränkungen dieser API werden automatisch übernommen. Zum Beispiel liegt eine Einschränkung vor, wenn Sie versuchen, eine Liste zu bearbeiten und die zugrunde liegende Karte beispielsweise als Validierungslogik einen Bestätigungsdialog in ihrer AL-Logik verwendet.</td>
+<td>Manchmal kann nichts unternommen werden, weil es sich um eine Designauswahl handelt und der Benutzende die Änderung explizit bestätigen muss. Wenn die Bestätigung bei der Verwendung von <strong>In Excel bearbeiten</strong> vernachlässigbar ist, können Sie den Aufruf des Bestätigungsdialogs in eine bedingte If-Anweisung einschließen, die prüft, ob der Clienttyp sich von ODataV4 unterscheidet, z. B. <code>if SESSION.CurrentClientType() &lt;&gt; ClientType::ODataV4 then</code>.</td>
+<td>Aus andere Clients möchten Sie den Bestätigungsdialog dagegen vielleicht entfernen, z. B. OData und SOAP.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="known-limitations-in-business-logic">Bekannte Einschränkungen in der Geschäftslogik</h2>
+<table>
+<thead>
+<tr>
+<th>Seite</th>
+<th>Einschränkung</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aufträge</td>
+<td>Fehlermeldung: „Microsoft Dynamics 365 Business Central Data Services hat versucht, einen Client-Rückruf auszugeben, um Seite 301 (Lieferadressenliste) als modal auszuführen.“ Client-Rückrufe werden von Microsoft Dynamics 365 Business Central Data Services nicht unterstützt.</td>
+<td>Der  <strong>Liefercode</strong>  auf der Seite  <strong>Verkaufsauftrag</strong>  kann nur mit bestimmten Lieferoptionen bearbeitet werden. Wenn Sie „ <strong>Alternative Lieferadresse</strong> “ auf „ <strong>Lieferanschrift</strong> “ festlegen, wird das modale Dialogfeld „ <strong>Lieferanschriftliste</strong> “ geöffnet, das nicht mit der Funktion „In Excel bearbeiten“ kompatibel ist.</td>
+</tr>
+<tr>
+<td>Projekt Buch.-Blatt</td>
+<td>Die Aktualisierung des Felds  <strong>Stückpreis</strong>  bewirkt nicht Trigger eine Aktualisierung des  <strong>Zeilenbetrags</strong>. Stattdessen wird der  <strong>Linienrabatt</strong> aktualisiert.</td>
+<td>Mit dem Webclient können Sie Felder in beliebiger Reihenfolge aktualisieren: &amp;; Preis, Betrag, Zeilenrabatt. Andere Felder werden automatisch aktualisiert. Um kaskadierende Aktualisierungen zu vermeiden, verfügen die Felder über eine erweiterte Logik, die auf xRec basiert und sich anders verhält, wenn es über APIs aufgerufen wird.</td>
+</tr>
+</tbody>
+</table>
+<!--
+## <a name="deploy-the-excel-add-in-for-business-central-online"></a>Deploy the Excel add-in for Business Central online
+
+For [!INCLUDE [prod_short](includes/prod_short.md)] online, the administrator can deploy the add-in for all users. But users can also install the add-in themselves, provided they have permission to configure their Office experience.  
+
+> [!TIP]
+> In some organizations, administrators cannot deploy add-ins centrally. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](https://learn.microsoft.com/de-de/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide&preserve-view=true).
+
+### <a name="to-deploy-the-excel-add-in-for-all-users"></a>To deploy the Excel add-in for all users
+
+1. As the administrator, sign in to the Microsoft commercial website and find the add-in at [https://appsource.microsoft.com/product/office/WA104379629](https://appsource.microsoft.com/product/office/WA104379629).
+2. Choose the **Get it now** button.
+
+    You'll be redirected to the Microsoft 365 admin center.
+3. In the left panel, go to **Settings**, and then choose **Add-ins**.
+4. In the **Configure add-in** pane, specify which users to grant access to the add-in.
+5. Save your changes.
+
+
+### <a name="to-add-the-excel-add-in-locally"></a>To add the Excel add-in locally
+
+1. Open Excel, and then open any Excel workbook.
+2. On the **Insert** menu, choose **Office Add-ins**, and then choose **Admin managed** or **Store** as appropriate.
+3. Search for *Dynamics Office Add-In*, and then install the add-in.
+
+When the add-in is installed, it shows up as a panel in Excel. Next, you must configure the connection.
+
+> [!TIP]
+> If the workbook is not automatically saved to the user's OneDrive, then recommend them to save all workbooks that they export from [!INCLUDE [prod_short](includes/prod_short.md)].When they open the workbook again, the connection is still available, so they do not have to configure the connection again.
+
+> [!NOTE]
+> In certain deployments, the administrator must configure network access to unblock the Excel add-in. For more information, see [Preparing Your Network for the Excel Add-In](configuring-network-for-addins.md).-->
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance-analyze-excel.html">Analysieren von Finanzberichten in Microsoft Excel</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a><br><a href="https://learn.microsoft.com/de-de/dynamics365-release-plan/2019wave2/dynamics365-business-central/enhancements-excel-integration">Verbesserungen der Excel-Integration in der Veröffentlichungswelle 2 von 2019</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Buchung von Intercompany-Transaktionen festlegen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Buchung von Intercompany-Transaktionen festlegen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-intercompany-transactions">Intercompany-Transaktionen einrichten</h1>
+
+<p>Unternehmensgemeinschaften erleichtern die Abwicklung buchhalterischer Prozesse, wenn zwei oder mehrere Tochtergesellschaften eines Unternehmens häufig miteinander Geschäfte tätigen. Partner können Transaktionen wie Verkäufe und Käufe austauschen und entweder manuell oder automatisch abwickeln. Wenn beispielsweise ein Partner eine Buchungsblattzeile an einen anderen Partner sendet, wird eine Buchungsblattzeile für den empfangenden Partner erstellt.</p>
+<p>Bei dem Intercompanykontenplan kann es sich beispielsweise um eine vereinfachte Version des Kontenplans des synchronisierenden Partners handeln. Jeder Partner weist den Intercompany-Kontenplan ihren Konen zu. Jeder Partner ordnet auch seine Dimensionen und Dimensionswerte den Intercompany-Dimensionen zu.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>In der 1. Veröffentlichungswelle 2023 haben wir eine verbesserte Seite <strong>Unternehmensübergreifende Einrichtung</strong> eingeführt. Die neue Seite erleichtert das Einrichten einer Intercompanypartnerschaft, indem alle eingerichteten Aufgaben auf einer einzigen Seite zusammengefasst werden. Wenn Sie bei Business Central neu sind, nutzen Sie die neue Erfahrung bereits. Wenn Sie bereits Kunde sind, kann Ihr Administrator den Funktionsschalter <strong>Firmenübergreifende allgemeine Journalbuchungen automatisch akzeptieren</strong> in der Seite <strong>Funktionsverwaltung</strong> aktivieren.</p>
+<p>Bei den Aufgaben in diesem Artikel wird davon ausgegangen, dass der Funktionsschalter aktiviert ist. Wenn Sie bereits eine Intercompanypartnerschaft eingerichtet haben, können Sie diese weiterhin verwenden.</p>
+</div>
+<h2 id="before-you-start">Bevor Sie beginnen</h2>
+<p>Bevor Sie mit dem Aufbau Ihrer Intercompanypartnerschaft beginnen, sind einige Entscheidungen zu treffen.</p>
+<table>
+<thead>
+<tr>
+<th>Entscheidung</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Welcher Kontenplan soll die Grundlage für den Intercompany-Kontenplan sein?</td>
+<td>Alle Unternehmen in der Partnerschaft müssen denselben Intercompany-Kontenplan verwenden. Sie können Ihren Intercompany-Kontenplan auf dem Kontenplan eines der Unternehmen der Partnerschaft basieren oder einen neuen Intercompany-Kontenplan erstellen. Sie ordnen die in der Partnerschaft zu verwendenden Konten auf beide Arten zu, sodass jeder Partner Transaktionen auf den richtigen Konten sendet und empfängt. Weitere Informationen zum Einrichten des Intercompany-Kontenplans finden Sie unter <a href="#set-up-the-intercompany-charts-of-accounts">Intercompany-Kontenpläne einrichten</a>.</td>
+</tr>
+<tr>
+<td>Welche Dimensionen sollen die Basis für die Intercompany-Dimensionen sein?</td>
+<td>Wenn Sie Intercompany-Dimensionen verwenden, müssen diese für alle Unternehmen in der Partnerschaft gleich sein. Nachdem Sie Ihre Intercompany-Dimensionen angegeben haben, ordnen Sie deren Dimensionswerte zu. Weitere Informationen zum Zuordnen von Dimensionswerten finden Sie unter <a href="#set-up-intercompany-dimensions">Intercompany-Dimensionen einrichten</a>.</td>
+</tr>
+<tr>
+<td>Welche Partner sind Kunden oder Lieferanten oder beides?</td>
+<td>Erfahren Sie mehr über das Einrichten von Kunden- und Lieferantenunternehmen in einer Intercompany-Partnerschaft unter <a href="#set-up-intercompany-partners-as-customers-and-vendors">Intercompany-Partner als Kunden und Lieferanten einrichten</a>.</td>
+</tr>
+<tr>
+<td>Möchten Sie Bankkonten angeben, die in der Partnerschaft verwendet werden sollen?</td>
+<td>Sie können den Prozess der Registrierung von Zahlungstransaktionen beschleunigen, indem Sie das Bankkonto angeben, das für jedes Partnerunternehmen verwendet werden soll. Erfahren Sie mehr unter <a href="#specify-the-bank-accounts-to-use-for-intercompany-partners">Geben Sie die Bankkonten an, die für Intercompanypartner verwendet werden sollen</a>.</td>
+</tr>
+<tr>
+<td>Wie möchten Sie die Unternehmen in der Partnerschaft identifizieren?</td>
+<td>Alle Parteien müssen sich auf einen eindeutigen Intercompanypartner-Identifikationscode für jedes Unternehmen einigen. Sie weisen den Code Debitoren- und Kreditorenkarten zu, um zugehörige Transaktionen zu identifizieren. Weitere Informationen zu Kennungen finden Sie unter <a href="ui-create-number-series.html">Nummernserien erstellen</a>.</td>
+</tr>
+<tr>
+<td>Wie möchten Sie mit Nummernelementen umgehen?</td>
+<td>Wenn Intercompanyzeilen Artikeln enthalten, können Sie entweder eigene Artikelnummern verwenden oder für die betreffenden Artikel jeweils die Artikelnummern des Partners einrichten, indem Sie das <strong>Feld Kred.-Artikelnr.</strong> oder das Feld <strong>Gemeinsame Artikelnr.</strong> auf der Artikelkarte verwenden. Sie können auch die Aktion <strong>Artikelreferenz</strong> verwenden, um die Nummern Ihrer Artikel den Artikelbeschreibungen Ihrer Intercompanypartner zuzuordnen. Weitere Informationen zu Artikelreferenzen finden Sie unter <a href="inventory-how-use-item-cross-refs.html">Artikelreferenzen verwenden</a>.</td>
+</tr>
+<tr>
+<td>Sind Ressourcen involviert?</td>
+<td>Wenn Sie Intercompany-Verkaufstransaktionen vornehmen, die Ressourcen beinhalten, müssen Sie auf der Ressourcenkarte der entsprechenden Ressourcen das Feld <strong>IC-Partner Eink.-Sachkontonr.</strong> ausfüllen. Das Feld enthält die Nummer des Intercompanysachkontos, auf das der Betrag für diese Ressource im Partnerunternehmen gebucht wird. Um mehr über Ressourcen zu erfahren, gehen Sie zu <a href="projects-how-setup-resources.html">Ressourcen einrichten</a>.<br><br><strong>HINWEIS</strong><br>Intercompany-Einkaufstransaktionen, die Ressourcen, Anlagevermögen und Artikelgebühren enthalten, werden nicht vollständig unterstützt. Im Partnerunternehmen bleibt das Feld <strong>Positionstyp</strong> in Einkaufsbelegzeilen leer, die diese Entitäten enthalten. Sie müssen sie das Feld manuell aktualisieren.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview-of-the-steps-to-get-started">Übersicht über die ersten Schritte</h2>
+<p>Verwenden Sie die Seite <strong>Intercompany-Einrichtung</strong>, um die folgenden Komponenten von Intercompany-Transaktionen einzurichten:</p>
+<ul>
+<li>Die Intercompany-Einstellungen Ihres Unternehmens.</li>
+<li>Das Unternehmen, das der Synchronisierungspartner sein wird.</li>
+<li>Der Intercompany-Kontenplan, den alle Partner zum Austausch von Transaktionen verwenden.</li>
+<li>Die Zuordnungen zwischen Konten im Kontenplan und dem Intercompany-Kontenplan für eingehende und ausgehende Transaktionen für jeden Partner.</li>
+<li>Die zu verwendenden Intercompany-Dimensionen und die Dimensionswerte und wie die Dimensionen jedem Partner zugeordnet werden sollen.</li>
+<li>Die Unternehmen, die die Intercompanypartner sind.</li>
+<li>Die Unternehmen, die Lieferanten oder Kunden oder beides sind.</li>
+</ul>
+<h2 id="set-up-a-synchronization-partner">Einen Synchronisierungspartner einrichten</h2>
+<p>Alle Partner müssen denselben Intercompany-Kontenplan und ggf. dieselben Intercompany-Dimensionen verwenden. Sie können Zeit sparen, wenn Sie die Partnerschaft einrichten, indem Sie den Kontenplan und die Dimensionen für einen der Partner als Grundlage für den Intercompany-Kontenplan und die Dimensionen verwenden. Das Unternehmen, das Sie als Baseline verwenden, wird als <em>Synchronisierungspartner</em> bezeichnet. Typischerweise ist der Synchronisationspartner das Unternehmen der Zentrale, muss es aber nicht sein.</p>
+<p>Auf der Seite <strong>Unternehmensübergreifende Einrichtung</strong> gibt jeder Partner den Synchronisierungspartner im Feld <strong>Synchronisierungspartner</strong> an. Danach werden der Intercompany-Kontenplan und die Intercompany-Dimensionen automatisch für sie festgelegt, basierend auf der Einrichtung für den Synchronisierungspartner. Die Partner verwenden dann die Seiten <strong>Intercompany-Kontenplanzuordnung</strong> und <strong>Intercompany-Dimensionszuordnung</strong>, um ihren Kontenplan zuzuordnen und Dimensionen in den Intercompany-Kontenplan und Dimensionen und umgekehrt. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Es ist wichtig, Konten und Dimensionen in beide Richtungen zuzuordnen. Das heißt, sowohl zum Intercompany-Kontenplan und zu den Dimensionen als auch von dort zu Ihren eigenen Konten und Dimensionen.</p>
+</div>
+<h3 id="connect-with-partners-in-another-tenant-or-environment">Verbinden Sie sich mit Partnern in einem anderen Mandanten oder einer anderen Umgebung</h3>
+<p>Wenn sich Business Central von einem oder mehreren Partnern in einem anderen Mandanten oder einer anderen Umgebung befinden, sind einige zusätzliche Schritte zum Erstellen der Verbindung erforderlich. Die Schritte gelten für alle Partner in einem anderen Mandanten oder einer anderen Umgebung.</p>
+<ul>
+<li>Richten Sie Business Central als registrierte App im Azure-Portal ein.</li>
+<li>In Business Central fügen Sie die App-Registrierung hinzu und aktivieren sie.</li>
+<li><p>Tauschen Sie Informationen über ihre unternehmensübergreifenden Einrichtungen aus. Jeder Partner kann diese Informationen unter <strong>Intercompanyeinrichtung</strong>, <strong>Aktionen</strong>, <strong>Verbindungsdetails</strong> abrufen.</p>
+<table>
+<thead>
+<tr>
+<th>Aus der Einrichtung des Partners kopieren</th>
+<th>Kopieren Sie es in Ihre Einrichtung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktuelle Verbindungs-URL</td>
+<td>Verbindungs-URL des IC-Partners</td>
+</tr>
+<tr>
+<td>Aktuelle Unternehmens-ID</td>
+<td>Unternehmens-ID des IC-Partners</td>
+</tr>
+<tr>
+<td>Intercompany-ID</td>
+<td>Intercompany-ID des IC-Partners</td>
+</tr>
+<tr>
+<td>Firmenname</td>
+<td>Unternehmensname des IC-Partners</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Tauschen Sie die folgenden Authentifizierungseinstellungen aus, damit Business Central bei der Verbindung authentifiziert werden kann. Jeder Partner kann diese Informationen über seine registrierte App abrufen. Weitere Informationen zum Erstellen einer registrierten App finden Sie unter <a href="#create-a-registered-app-in-azure-portal">Registrierte App im Azure-Portal erstellen</a>.  </p>
+<ul>
+<li>Client-ID</li>
+<li>Geheimer Clientschlüssel</li>
+<li>Token-Endpunkt</li>
+<li>Umleitungs-URL</li>
+</ul>
+</li>
+</ul>
+<p>Führen Sie die <strong>Intercompanyeinrichtung</strong>, <strong>Aktionen</strong>, <strong>Verbindungsdetails</strong> in allen Unternehmen aus, um die Informationen anzugeben. </p>
+<h4 id="create-a-registered-app-in-azure-portal">Erstellen Sie eine registrierte App im Azure-Portal</h4>
+<p>Dieser Vorgang ist nur erforderlich, wenn Sie eine Verbindung mit einem Partner herstellen möchten, dessen Business Central sich in einem anderen Mandanten oder einer anderen Umgebung befindet.</p>
+<div class="TIP"><h5>Tipp</h5><p>Es empfiehlt sich, beim Erstellen Ihrer registrierten App einen Texteditor wie Notepad geöffnet zu haben. Sie benötigen einige Informationen, wenn Sie die <strong>Intercompanyeinrichtung</strong>, <strong>Aktionen</strong>, <strong>Verbindungsdetails</strong> ausführen. Daher ist es hilfreich, die Informationen zur Hand zu haben.</p>
+</div>
+<ol>
+<li>Gehen Sie zum <a href="https://portal.azure.com/#home">Azure-Portal</a>.</li>
+<li>Wählen Sie den <strong>Microsoft Entra-ID</strong>-Service aus.</li>
+<li>Wählen Sie im linken Navigationsbereich <strong>App-Registrierungen</strong> aus.</li>
+<li>Wählen Sie auf der Seite <strong>App-Registrierungen</strong> die Option <strong>Neue Registrierung</strong> aus.</li>
+<li>Benennen Sie die Anwendung.</li>
+<li>Wählen Sie den Kontotyp <strong>Konten in einem beliebigen Organisationsverzeichnis (Beliebiger Microsoft Entra-ID-Mandant – mehrmandantenfähig)</strong> aus.</li>
+<li><p>Wählen Sie für den Umleitungs-URI im Feld <strong>Plattform auswählen</strong> die Option <strong>Web</strong> aus und geben Sie dann den URI an. Zum Beispiel *<em><a href="https://businesscentral.dynamics.com/OAuthLanding.htm">https://businesscentral.dynamics.com/OAuthLanding.htm</a></em>*.</p>
+<p>Wenn Sie mit einem eingebetteten ISV arbeiten, benötigen Sie möglicherweise einen anderen URI.</p>
+</li>
+<li><p>Registrieren Sie die App.</p>
+</li>
+<li>Wählen Sie auf der Seite <strong>Intercompany-App</strong> im Navigationsbereich <strong>API-Berechtigungen</strong> aus.</li>
+<li>Wählen Sie die Aktion <strong>Berechtigung hinzufügen</strong>.</li>
+<li>Wählen Sie auf der Registerkarte <strong>Microsoft-APIs</strong> die Option <strong>Dynamics 365 Business Central</strong> aus.</li>
+<li>Wählen Sie im Bereich <strong>API-Berechtigungen anfordern</strong> die Option <strong>Anwendungsberechtigungen</strong> und dann die Berechtigung <strong>API.ReadWrite.All</strong> aus.</li>
+<li>Wählen Sie auf der Seite <strong>Intercompany-App | API-Berechtigungen</strong> die Aktion <strong>Administratorzustimmung für Contoso erteilen</strong> aus und erteilen Sie dann die Zustimmung.</li>
+<li>Wählen Sie im Navigationsbereich <strong>Zertifikate und geheime Schlüssel</strong> aus.</li>
+<li>Wählen Sie die Registerkarte <strong>Geheimer Clientschlüssel</strong> und dann <strong>Neuer geheimer Clientschlüssel</strong> aus.</li>
+<li><p>Geben Sie im Bereich <strong>Geheimen Clientschlüssel hinzufügen</strong> einen Namen für den geheimen Schlüssel ein und geben Sie an, wann er ablaufen soll.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Alle Partner, die sich in unterschiedlichen Umgebungen befinden, müssen den geheimen Schlüssel erneuern, bevor er abläuft.</p>
+</div>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Kopieren Sie die ID in das Feld <strong>Wert</strong>, bevor Sie die Seite <strong>Intercompany-App | Zertifikate &amp; geheime Schlüssel</strong> verlassen. Sie benötigen sie in einem späteren Schritt und sie ist nicht mehr verfügbar, nachdem Sie die Seite verlassen haben. Fügen Sie den Wert beispielsweise in einen Texteditor ein.</p>
+</div>
+</li>
+<li><p>Im Navigationsbereich wählen Sie <strong>Übersicht</strong> aus.</p>
+</li>
+<li>Kopieren Sie den Wert in das Feld <strong>Anwendungs-(Client-)ID</strong>. Fügen Sie den Wert beispielsweise in einen Texteditor ein.</li>
+<li>Wählen Sie die Aktion <strong>Endpunkte</strong> und kopieren Sie dann den Wert in das Feld <strong>OAuth 2.0-Token-Endpunkt (v2)</strong>. Fügen Sie den Wert beispielsweise in einen Texteditor ein.</li>
+<li>Kopieren Sie den Wert in das Feld <strong>Verzeichnis-(Mandant-)ID</strong>. Fügen Sie den Wert beispielsweise in einen Texteditor ein.</li>
+<li>Ersetzen Sie im kopierten Tokenwert <strong>Organisationen</strong> durch den Wert, den Sie aus dem Feld <strong>Verzeichnis-(Mandant-)ID</strong> im vorherigen Schritt kopiert haben.</li>
+</ol>
+<h4 id="add-and-enable-your-registered-app-in-business-central">Ihre registrierte App in Business Central hinzufügen und aktivieren</h4>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Microsoft Entra-Anwendungskarte</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Füllen Sie die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li>Wählen Sie im <strong>Status</strong>-Feld <strong>Aktiviert</strong> aus. </li>
+<li>Wählen Sie die Aktion <strong>Zustimmung erteilen</strong> aus. </li>
+<li>Wählen Sie im Feld <strong>Berechtigungssatz</strong> die Berechtigungssätze <strong>D365 INTERCOMPANY CE &amp; DATA ACCESS IC CE</strong> aus.</li>
+</ol>
+<h2 id="set-up-the-intercompany-charts-of-accounts">Richten Sie den Intercompanykontenplan ein</h2>
+<p>Alle Partner müssen denselben Intercompanykontenplan verwenden und ihm die Konten in ihrem eigenen Kontenplan zuordnen. Wenn der Kontenplan für Ihr Unternehmen den Intercompanykontenplan für Ihre Partnerunternehmen definiert, befolgen Sie die Schritte in diesem Abschnitt.</p>
+<p>Wenn Sie eine XML-Datei verwenden, die den Intercompanykontenplan enthält, befolgen Sie die Schritte in <a href="intercompany-how-setup.html#import-or-export-an-intercompany-chart-of-accounts">Importieren oder exportieren Sie einen Intercompanykontenplan</a>.  </p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>IC-Kontenplan einfügen</strong> aus.</li>
+<li><p>Um Konten hinzuzufügen, geben Sie auf der Seite <strong>Intercompany-Kontenplan</strong> ein:</p>
+<ul>
+<li>Wählen Sie <strong>Neu</strong> aus und geben Sie dann jedes Konto in einer Zeile auf der Seite ein.  </li>
+<li>Wenn der Intercompanykontenplan dem üblichen unternehmenseigenen Kontenplan gleicht oder ähnelt, können Sie die Werte automatisch in das Fenster eingeben, indem Sie die Aktion <strong>Aus Kontenplan kopieren</strong> wählen. Sie können die neuen Zeilen bei Bedarf bearbeiten.</li>
+<li><p>Wenn Sie für einen Synchronisationspartner einen Intercompanykontenplan eingerichtet haben, verwenden Sie die <strong>Synchronisationseinrichtung</strong>-Aktion zum Kopieren dieser Konten.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie den Intercompany-Kontenplan von einem Synchronisationspartner kopieren, können Sie die <strong>Synchronisationseinrichtung</strong>-Aktion zum Aktualisieren Ihrer Intercompany-Konten mit allen Änderungen, die der Partner an seinen vornimmt verwenden.</p>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<p>Im nächsten Schritt ordnen Sie die Kontenpläne den Intercompanykontenplan zu. Mehr erfahren unter <a href="#map-the-intercompany-chart-of-accounts-to-your-companys-chart-of-accounts">Intercompanykontenplan dem unternehmenseigenen Kontenplan zuordnen</a>.</p>
+<h3 id="import-or-export-an-intercompany-chart-of-accounts">So exportieren oder importieren Sie einen Intercompanykontenplan</h3>
+<p>Das Synchronisationsunternehmen kann seinen Kontenplan mit Partnern teilen, indem es ihn in eine Datei exportiert. Partner können die Datei importieren, um den Kontenplan zu erhalten.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>IC-Kontenplan einfügen</strong> aus.</li>
+<li>Wählen Sie auf der Seite <strong>Intercompany-Kontenplan</strong> die Aktion <strong>Importieren/Exportieren</strong> aus, und wählen Sie dann die Schaltfläche <strong>Importieren</strong> oder <strong>Exportieren</strong> aus.</li>
+<li>Wählen Sie die zu importierende oder zu exportierende Datei aus.  </li>
+</ol>
+<p>Die Seite <strong>Intercompany-Kontenplan</strong> wird mit den neuen oder bearbeiteten Sachkontozeilen entsprechend dem Intercompanykontenplan in der Datei ausgefüllt. Jede möglicherweise vorhandene Zeile auf der Seite bleibt unverändert.</p>
+<h2 id="map-the-intercompany-chart-of-accounts-to-your-companys-chart-of-accounts">Den Intercompanykontenplan dem unternehmenseigenen Kontenplan zuordnen</h2>
+<p>Wenn Sie den Intercompany-Kontenplan definiert oder importiert haben, ordnen Sie jedes Intercompany-Konto einem Ihrer Konten zu. auf der Seite <strong>Intercompany-Kontenplan</strong> legen Sie fest, wie Intercompanysachkonten bei eingehenden Transaktionen in Sachkonten des unternehmenseigenen Kontenplans übersetzt werden.</p>
+<p>Wenn die Intercompany-Konten und Ihre Konten die gleichen Nummern haben, können Sie die Konten automatisch zuordnen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li><p>Wählen Sie die Aktion <strong>IC-Kontenplan einfügen</strong> aus.</p>
+<div class="TIP"><h5>Tipp</h5><p>Um auf die Aktionen auf der Seite zugreifen zu können, müssen Sie die Seite möglicherweise auf die breite Layoutansicht erweitern.</p>
+</div>
+</li>
+<li><p>Wählen Sie auf der Seite <strong>Intercompany-Kontenplan</strong> die Aktion <strong>Kontenplan zuordnen</strong> aus.</p>
+</li>
+<li><p>Sie können die Konten automatisch oder manuell neu zuordnen.</p>
+<ul>
+<li>Um die Zuordnung manuell zu erstellen, wählen Sie auf der Seite <strong>Intercompany-Kontenplan</strong> und <strong>Sachkontenplan</strong> ein Konto aus, und wählen Sie dann ein Konto unter <strong>Sachkonto-Nr.</strong> und <strong>IC-Nummer</strong> aus Felder.</li>
+<li><p>Um Konten mit gleichen Nummern automatisch zuzuordnen, markieren Sie die Zeilen, die Sie zuordnen möchten, wählen Sie die Aktion <strong>Karte nach Acc. mit gleicher Nr</strong> und wählen Sie dann den zu aktualisierenden Kontenplan aus.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie viele oder vielleicht alle Konten abbilden möchten, wählen Sie eine Zeile, wählen Sie :::image type=&quot;icon&quot; source=&quot;media/show-more-options-icon.png&quot; border=&quot;false&quot;::: und wählen Sie dann <strong>Wählen Sie Mehr aus</strong>.</p>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="set-up-intercompany-dimensions">So richten Sie Intercompanydimensionen ein</h2>
+<p>Wenn Partner Transaktionen mit entsprechend verknüpften Dimensionen übertragen werden sollen, müssen Sie die Dimensionen vereinbaren, die Sie nutzen werden. Die synchronisierende Gesellschaft kann eine vereinfachte Version ihres eigenen Dimensionssatzes erstellen und diese in eine XML-Datei exportieren und dann die Datei an jeden Partner weitergeben. Jeder Partner kann die XML-Datei auf der Seite <strong>Intercompanydimensionen</strong> importieren und dann die Intercompanydimension ihren Dimensionen zuordnen. Mehr erfahren unter <a href="#map-intercompany-dimensions-to-your-companys-dimensions">Intercompanydimensionen Ihren unternehmenseigenen Dimensionen zuordnen</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Jedes Unternehmen muss seine Dimensionen den Intercompany-Dimensionen für ausgehende und eingehende Dokumente zuordnen. Die Zuordnung von Konten in beide Richtungen ist wichtig und trägt dazu bei, die Konsistenz zwischen den Unternehmen aufrechtzuerhalten.</p>
+</div>
+<p>Wenn Partner die Intercompanydimensionen des Synchronisierungspartners verwenden, befolgen Sie die Schritte in diesem Abschnitt. Wenn Sie eine verwendete XML-Datei teilen möchten, die die Intercompanydimensionen enthält, befolgen Sie die Schritte in <a href="#import-or-export-intercompany-dimensions">Importieren oder exportieren Sie einen Intercompanydimension</a>.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>IC-Dimensionen</strong> aus.</li>
+<li><p>Um Dimensionen hinzuzufügen, gehen Sie zur Seite <strong>Intercompanydimensionen</strong>:</p>
+<ul>
+<li>Wählen Sie <strong>Neu</strong> und geben Sie dann jede Dimension in einer Zeile ein.  </li>
+<li>Wenn die Intercompanydimensionen gleich oder ähnlich sind wie Ihre reguläre Dimensionen, können Sie die Seite automatisch in das Fenster eingeben, indem Sie die Aktion <strong>Aus Dimensionen kopieren</strong> wählen. Danach können Sie Zeilen nach Bedarf bearbeiten.</li>
+<li><p>Wenn Sie für einen Synchronisationspartner eine bestimmte Intercompanydimension eingerichtet haben, verwenden Sie die <strong>Synchronisationseinrichtung</strong>-Aktion zum Kopieren dieser Dimensionen.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie die Intercompanydimensionen von einem Synchronisationspartner kopieren, können Sie die <strong>Synchronisationseinrichtung</strong>-Aktion zum Aktualisieren Ihrer Intercompany-Dimensionen mit allen Änderungen, die der Partner an seinen vornimmt verwenden.  </p>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="import-or-export-intercompany-dimensions">Importieren oder exportieren von Intercompanydimensionen</h3>
+<p>Das Synchronisationsunternehmen kann seine Dimensionen mit Partnern teilen, indem es sie in eine Datei exportiert. Partner können die Datei importieren, um die Dimensionen abzurufen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>IC-Dimensionen</strong> aus.  </li>
+<li>Wählen Sie auf der Seite <strong>Intercompanydimensionen</strong> die Aktion <strong>Importieren/Exportieren</strong> aus, und wählen Sie dann die Schaltfläche <strong>Importieren</strong> oder <strong>Exportieren</strong> aus.</li>
+<li>Wählen Sie die zu importierende oder zu exportierende Datei aus.</li>
+</ol>
+<p>Im nächsten Schritt ordnen Sie die Dimensionen den Intercompanydimensionen zu. Mehr erfahren unter <a href="#map-intercompany-dimensions-to-your-companys-dimensions">Intercompanydimensionen Ihren unternehmenseigenen Dimensionen zuordnen</a>.</p>
+<h3 id="map-intercompany-dimensions-to-your-companys-dimensions">Intercompanydimensionen Ihren unternehmenseigenen Dimensionen zuordnen</h3>
+<p>Nachdem Sie die Dimensionen definiert haben, die Sie verwenden, ordnen Sie jede Intercompanydimension einer Ihrer unternehmenseigenen Dimensionen zu und umgekehrt. Verwenden Sie die Seite <strong>Intercompany-Dimensionszuordnung</strong> , um die Zuordnung anzugeben. Wiederholen Sie anschließend den Vorgang für die Dimensionswerte.</p>
+<ul>
+<li>Geben Sie an, wie Intercompany-Dimensionen bei eingehenden Transaktionen Dimensionen aus der Dimensionsliste Ihres Unternehmens zugeordnet werden.</li>
+<li>Unter <em>Ausgehende Transaktionen</em> legen Sie fest, wie die unternehmenseigenen Dimensionen in Intercompanydimensionen übersetzt werden.</li>
+</ul>
+<p>Wenn Intercompanydimensionen bezüglich ihres Codes mit unternehmenseigenen Dimensionen aus der Dimensionentabelle übereinstimmen, können diese Dimensionen durch das Programm automatisch einander zugeordnet werden.  </p>
+<p>In den folgenden Schritten ordnen Sie zunächst konzerninterne Dimensionen Dimensionen für eingehende Dokumente im Bereich <strong>Intercompany-Dimensionen</strong> zu. Anschließend ordnen Sie Dimensionen Intercompany-Dimensionen für ausgehende Dokumente im Bereich <strong>Aktuelle Unternehmensdimensionen</strong> zuordnen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>IC-Dimensionen</strong> aus.</li>
+<li>Wählen Sie auf der Seite <strong>Intercompany-Dimensionen</strong> die <strong>Dimensionen-Zuordnung</strong>-Aktion aus.</li>
+<li><p>Sie können die Dimensionen automatisch oder manuell neu zuordnen.</p>
+<ul>
+<li>Um die Zuordnung manuell zu erstellen, wählen Sie in den Bereichen <strong>Unternehmensübergreifende Dimensionen</strong> und <strong>aktuelle Unternehmensdimensionen</strong> eine Dimension aus und dann Wählen Sie eine Abmessung in den Feldern <strong>Dim. Code</strong> und <strong>IC Dim. Code</strong>.</li>
+<li><p>Um Konten mit gleichen Codes automatisch zuzuordnen, markieren Sie die Zeilen, die Sie zuordnen möchten, wählen Sie die Aktion <strong>Dimensionen mit gleichem Cod zuordnen</strong> und wählen Sie dann die zu aktualisierende Dimensionen aus. </p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie viele oder vielleicht alle Dimensionen abbilden möchten, wählen Sie eine Zeile, wählen Sie :::image type=&quot;icon&quot; source=&quot;media/show-more-options-icon.png&quot; border=&quot;false&quot;::: und wählen Sie dann <strong>Wählen Sie Mehr aus</strong>.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Dimensionswerte-Zuordnung</strong> aus.</p>
+</li>
+<li>Auf der Seite <strong>Zuordnung von Intercompany-Dimensionswerten</strong> ähneln die Schritte zum Erstellen der Zuordnung denen, die Sie gerade für Dimensionen ausgeführt haben.</li>
+</ol>
+<h2 id="set-up-intercompany-general-journal-templates-and-batches">So richten Sie allgemeine Intercomapny-FibuBuch.-Blattzeilenvorlagen und -chargen ein</h2>
+<p>Sie müssen eine allgemeine Erfassungsvorlage und einen allgemeinen Erfassungsstapel einrichten, die standardmäßig für Intercompany-Transaktionen verwendet werden. Die Vorlage und der Stapel sind besonders wichtig, wenn Sie automatisch Intercompany-Transaktionen von Ihren Partnern akzeptieren. Weitere Informationen zum automatischen Akzeptieren von Transaktionen finden Sie unter <a href="#auto-accept-transactions-from-intercompany-partners">Transaktionen von Intercompany-Partnern automatisch akzeptieren</a>.   </p>
+<ul>
+<li>Fibu Buch.-Blätter dienen zum Buchen auf Sachkonten sowie auf andere Konten wie Bank-, Debitoren-, Kreditorenkonten. Bei der Buchung mit einem Fibu Buch.-Blatt werden immer Posten für Sachkonten erstellt.  Verwenden Sie die Seite <strong>Intercompany-Hauptbuch.-Blatt</strong> , um das zu verwendenden Hauptbuch-Blatt einzurichten. Die für Intercompany-Transaktionen spezifischen Einstellungen sind die Konten, die Sie in den Feldern <strong>IC-Kontotyp</strong> und <strong>IC-Kontonummer</strong> angeben.</li>
+<li>Buch.-Blattvorlagen ermöglichen es Ihnen, in einer Buch.-Blatt Seite zu arbeiten, das für einen bestimmten Zweck entworfen wurde. So entsprechen die in der Buch.-Blattvorlage angezeigten Felder genau denen, die für einen bestimmten Bereich der Anwendung benötigt werden. Verwenden Sie die Seite <strong>Allgemeine Buchungsvorlagen</strong>, um eine Vorlage für Intercompany-Transaktionen einzurichten.</li>
+</ul>
+<p>Um mehr über allgemeine Journalvorlagen und Batches zu erfahren, gehen Sie zu <a href="ui-work-general-journals.html#use-journal-templates-and-batches">Journalvorlagen und Batches verwenden</a>.</p>
+<h2 id="set-up-a-company-for-intercompany-transactions">Unternehmen für Intercompanytransaktionen einrichten</h2>
+<p>Bei den folgenden Schritten wird davon ausgegangen, dass ein Synchronisierungspartner mit dem Kontenplan und den Dimensionen eingerichtet ist, auf denen der Intercompany-Kontenplan und die Dimensionen basieren. Sie können sie selbst einrichten, aber in der Regel ist der Einstieg schneller und die Wartung einfacher, wenn Sie einen Synchronisierungspartner verwenden. Weitere Informationen zum Synchronisierungspartner finden Sie unter <a href="#set-up-a-synchronization-partner">Synchronisierungspartner einrichten</a>.</p>
+<div class="TIP"><h5>Tipp</h5><p>Es empfiehlt sich, die Felder auf dem Inforegister <strong>Allgemein</strong> auf der Seite <strong>Unternehmensübergreifende Einrichtung</strong> vorher für jeden Partner auszufüllen, bevor Sie die Partner hinzufügen. Wenn Sie Partnerunternehmen hinzufügen, die sich im selben Mandanten befinden, ruft Business Central ruft ihren IC-Code und Firmennamen aus ihrer Einrichtung auf dem Inforegister Allgemein ab. Das Feld <strong>Firmenname</strong> prüft, ob der IC-Code eindeutig ist.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie einen Synchronisierungspartner verwenden, lassen Sie das Feld <strong>Synchronisierungspartner</strong> leer, wenn Sie dieses Unternehmen für die Partnerschaft einrichten.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Füllen Sie auf der Seite <strong>Intercompany-Einrichtung</strong> die Felder auf dem Inforegister <strong>Allgemein</strong> aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Unter Business Central online können Sie keine Dateispeicherorte verwenden, um Transaktionen an Ihre Partner zu übertragen, da Business Central keinen Zugriff auf Ihr lokales Netzwerk hat. Daher ist bei Auswahl von <strong>Dateispeicherort</strong> im Feld <strong>Transfertyp</strong> das Feld <strong>Ordnerpfad</strong> nicht verfügbar. Stattdessen wird die Datei in den Ordner <strong>Downloads</strong> auf Ihrem Computer heruntergeladen. Anschließend senden Sie die Datei per E-Mail an eine Person in der Partnerfirma. Für einen direkteren Prozess empfehlen wir stattdessen die Auswahl von <strong>E-Mail</strong>.</p>
+</div>
+<p>Der nächste Schritt ist das Einrichten der Partnerunternehmen.</p>
+<h2 id="set-up-intercompany-partners">Intercompanypartner einrichten</h2>
+<p>Jeder Partner muss alle anderen Unternehmen in der Partnerschaft als Partner hinzufügen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie auf dem Inforegister <strong>Intercompanypartner</strong> und <strong>Hinzufügen</strong> aus.</li>
+<li>Füllen Sie auf der Seite <strong>Intercompanypartner</strong> die Felder aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li>Wiederholen Sie die Schritte 2 und 3 für alle Unternehmen der Partnerschaft.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie für Intercompany-Buchungen <strong>Transaktion automatisch akzeptieren</strong> einschalten auf der Seite <strong>Intercompany-Partnerkarte</strong>, unterdrückt Business Central Meldungen, die vor Einkaufsrechnungen warnen, die die ursprüngliche Bestellung duplizieren. Es ist wichtig, einen Geschäftsprozess für die Verwaltung von Duplikaten zu haben. Zum Beispiel durch Löschen solcher Bestellungen, wenn die Einkaufsrechnung vom Intercompany-Partner eingegangen ist.</p>
+</div>
+<h3 id="set-up-intercompany-partners-as-customers-and-vendors">Einrichten von Intercompanypartner als Kunden und Kreditoren</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Intercompanyeinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Öffnen Sie auf dem Inforegister <strong>Intercompanypartner</strong> und öffnen Sie die die Kartenseite für den Partner.</li>
+<li><p>Wählen Sie je nachdem, was Sie tun möchten, den Kunden oder Partner unter <strong>Kundennummer</strong> oder <strong>Lieferanten-Nr.</strong> Felder.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn der Kunde oder Lieferant noch nicht erstellt wurde, können Sie <strong>+Neu</strong> im Dropdown-Menü auswählen, um sie einzurichten. Um mehr über das Erstellen von Kunden und Lieferanten zu erfahren, gehen Sie zu <a href="sales-how-register-new-customers.html">Neue Kunden registrieren</a> und <a href="purchasing-how-register-new-vendors.html">Neue Lieferanten registrieren</a>.</p>
+</div>
+<div class="TIP"><h5>Tipp</h5><p>Sie können auch einen Debitor oder Kreditor als Intercompany-Partner definieren, inem Sie das Feld <strong>IC-Partnercode</strong> auf den Seiten <strong>Debitorenkarte</strong> und <strong>Kreditorenkarte</strong> ausfüllen.</p>
+</div>
+</li>
+</ol>
+<h3 id="set-up-default-intercompany-partner-general-ledger-accounts">Vorgegebene IC-Partner-Sachkonten einrichten</h3>
+<p>Bei der Erstellung von Intercompanyverkaufs- oder -einkaufszeilen, die als ausgehende Transaktion gesendet werden sollen, geben Sie ein Konto aus dem Intercompanykontenplan vor, auf das der Betrag im Partnerunternehmen gebucht werden soll. Auf der Seite <strong>Sachkonto-Karte</strong> können Konten, die Sie regelmäßig für ausgehende Intercompanyverkaufs- oder -einkaufszeilen verwenden, als vorgegebene Intercompanypartner-Sachkonten festgelegt werden. Für Debitorensammelkonten können beispielsweise die zugeordneten Kreditorensammelkonten aus dem Intercompanykontenplan als vorgegebene Konten festgelegt werden. Die Forderungs- und Verbindlichkeitskonten werden als Gegenkonto für den Intercompanypartner verwendet, wenn Sie Transaktionen in Intercompany-Hauptbuchungen buchen.  </p>
+<p>Wenn Sie jetzt im Feld <strong>Gegenkontonr.</strong> in einer Intercompanyzeile mit dem Eintrag <strong>Intercompanypartner</strong> im Feld <strong>Kontoart</strong> ein Sachkonto eingeben, wird das Feld <strong>SachkontoIC-Partner</strong> automatisch ausgefüllt.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kontenplan</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie das Sachkonto, das für Intercompanytransaktionen verwendet wird und geben Sie im Feld <strong>Vorgegebene IC-Partner-Sachkonten</strong> das Intercompanysachkonto ein, auf das Ihr Partner buchen soll, wenn Sie auf das Sachkonto in der Zeile buchen.</li>
+<li>Wiederholen Sie Schritt 2 für jedes Konto, das Sie häufig im Feld <strong>Gegenkontonr.</strong> einer Zeile in einem Intercompany-Buch.-Blatt oder -Beleg eingeben.</li>
+</ol>
+<h3 id="auto-accept-transactions-from-intercompany-partners">Transaktionen von Intercompanypartnern automatisch akzeptieren</h3>
+<p>Um Intercompanytransaktionen rascher zu verarbeiten, können Sie angeben, ob Sie automatisch Buchungszeilen basierend auf den Buchungen eines Intercompany-Partners auf der Seite <strong>IC-Fibu Buch.-Blatt</strong> erstellen möchten. Um eingehende und ausgehende Transaktionen automatisch zu erstellen, müssen Sie die folgenden Schalter für jeden Partner aktivieren:</p>
+<ul>
+<li><p>Aktivieren Sie auf der Seite <strong>Unternehmensübergreifende Einrichtung</strong> die Umschaltung <strong>Automatisch. Senden-Transaktionen</strong> für den Synchronisationspartner. Geben Sie dann an, wo empfangene Intercompany-Buchungsbuchungen erstellt werden sollen, indem Sie die Felder <strong>Standard-IC Gen. Jnl. Vorlage</strong> und <strong>Standard IC Gen. Jnl. Charge</strong> ausfüllen.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn das Feld <strong>Standard-IC Gen. Jnl. Vorlage</strong> leer ist, müssen Sie eine allgemeine Erfassungsvorlage einrichten, die Sie für Ihre zwischenbetrieblichen allgemeinen Erfassungen verwenden. Um mehr über allgemeine Journalvorlagen und Batches zu erfahren, gehen Sie zu <a href="#set-up-intercompany-general-journal-templates-and-batches">Allgemeine Intercompany-Journalvorlagen und Batches einrichten</a>    </p>
+</div>
+</li>
+<li><p>Aktivieren Sie auf der Seite <strong>Intercompany-Partner</strong> die Umschaltung <strong>Transaktionen automatisch annehmen</strong>.</p>
+</li>
+</ul>
+<p>Die Buch.-Blattzeilen werden für Sie erstellt, aber nicht gebucht.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Ihre Organisation Intercompany-Features in Business Central vor der 1. Veröffentlichungswelle 2022 verwendet hatm muss Ihr Administrator <strong>Akzeptieren Sie automatisch unternehmensübergreifende allgemeine Buchungsbuchungen</strong> auf der Seite <strong>Funktionsverwaltung</strong> aktivieren, um Transaktionen automatisch zu akzeptieren.</p>
+</div>
+<h3 id="specify-the-bank-accounts-to-use-for-intercompany-partners">Geben Sie die Bankkonten an, die für Intercompanypartner verwendet werden sollen</h3>
+<p>Um schnelle Zahlungen zu ermöglichen, geben Sie ein oder mehrere Bankkonten an, die für Intercompany-Partner verwendet werden sollen. Wenn ein Partner ein Intercompany-Hauptbuch für eine Zahlung verwendet, kann er das Bankkonto in der Zeile angeben. Das Bankkonto wird als Ausgleichskonto im empfangenden Unternehmen verwendet, wodurch die Notwendigkeit der manuellen Eingabe von Transaktionen minimiert wird.</p>
+<ul>
+<li>Um das zu verwendende Bankkonto anzugeben, wählen Sie auf der Seite <strong>Unternehmensübergreifende Partner</strong> die Aktion <strong>Bankkonten</strong> aus. Geben Sie auf der <strong>Intercompany-Bankkontokarte</strong> die Kontoinformationen ein.</li>
+</ul>
+<h2 id="troubleshoot-your-intercompany-setup">Fehlerbehandlung für Ihre Intercompany-Einrichtung</h2>
+<p>Auf der Seite <strong>Unternehmensübergreifende Einrichtung</strong> enthält der Bereich <strong>Diagnose der unternehmensübergreifenden Einrichtung</strong> Kacheln, die angeben, ob Sie alle eingerichtet haben die Komponenten, die für den Austausch konzerninterner Transaktionen erforderlich sind. Die Kacheln sind auch im Business-Manager-Rollencenter verfügbar. Wählen Sie die Kacheln aus, um herauszufinden, was fehlt. Eine Übersicht über die erforderlichen Komponenten finden Sie unter <a href="#overview-of-the-steps-to-get-started">Übersicht über die Schritte für die ersten Schritte</a>.</p>
+<h2 id="see-also">Weitere Informationen</h2>
+<p><a href="intercompany-manage.html">Intercompanytransaktionen verwalten</a><br><a href="finance.html">Finanzen</a><br><a href="finance-setup-finance.html">Finanzen einrichten</a><br><a href="ui-work-general-journals.html">Arbeiten mit Fibu Buch.-Blättern</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

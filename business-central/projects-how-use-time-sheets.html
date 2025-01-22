@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Arbeitszeittabellen verwenden </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Arbeitszeittabellen verwenden ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="use-time-sheets">Arbeitszeittabellen verwenden</h1>
+
+<p>Dieser Artikel beschreibt, wie Sie Arbeitszeittabellen zur Nachverfolgung von Abwesenheit sowie von Zeit und Ressourcen verwenden, die für ein Projekt aufgewendet werden. Die Zeiterfassung hilft Ihnen, Probleme frühzeitig zu erkennen und Verzögerungen oder Kostenüberschreitungen zu vermeiden. Arbeitszeittabellen erleichtern es einer Ressource, die Zeitverwendung für eine Person oder eine Maschine zu melden, so dass Vorgesetzte die Verwendung und deren Zuordnung überprüfen können.</p>
+<p>Sie können Ihre Projektplanzeilen in die Arbeitszeittabelle kopieren und verwenden. Auf diese Art müssen Sie die Informationen immer nur an einer Stelle eingeben und die Zeileninformationen sind immer korrekt. Weitere Informationern finden Sie unter <a href="#copy-project-planning-lines-to-a-time-sheet">So kopieren Sie Projektplanzeilen in eine Arbeitszeittabelle</a>.</p>
+<p>Nachdem Sie Arbeitszeittabellenposten für ein Projekt genehmigt haben, können Sie sie in das entsprechende Projekt- oder Ressourcen-Buch.-Blatt buchen. Weitere Informationen finden Sie unter <a href="#post-time-sheet-lines-in-a-project-journal">Buchen von Arbeitszeittabellenzeilen in einem Projektbuchungsblatt</a> und <a href="#post-time-sheet-lines-in-a-resource-journal">Buchen von Arbeitszeittabellenzeilen zu einem Ressourcen-Buch.-Blatt</a>.</p>
+<p>Bevor Sie Arbeitszeittabellen verwenden können, müssen Sie Informationen einrichten und einen Administrator und mindestens einen Genehmiger für Arbeitszeittabellen festlegen. Weitere Informationen zum Einrichten von Arbeitszeittabellen finden Sie unter <a href="projects-how-setup-time-sheets.html">Arbeitszeittabellen einrichten</a>.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Sie können Arbeitszeittabellen auf einem mobilen Gerät verwenden. Dazu müssen Sie möglicherweise den Schalter <strong>Neue Arbeitszeittabellenumgebung verwenden</strong> auf der Seite <a href="https://businesscentral.dynamics.com/?page=462">Ressourcen-Setup</a> aktivieren.</p>
+</div>
+<h2 id="create-time-sheets">Arbeitszeittabellen erstellen</h2>
+<p>Sie können die Seite <strong>Arbeitszeittabellen erstellen</strong> verwenden, um Arbeitszeittabellen für eine bestimmte Anzahl von Perioden oder Wochen einzurichten. Nachdem eine Arbeitszeittabelle erstellt wurde, kann der Arbeitszeittabellenbesitzer sie öffnen und die Zeit aufzeichnen, die für eine Aufgabe benötigte wurde. Sie können auch <a href="ui-work-report.html#ScheduleReport">die automatische Ausführung des Stapelprojekts planen</a>.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Sie müssen berechtigt sein, Arbeitszeittabellen zu erstellen. Um mehr über Berechtigungen zu erfahren, gehen Sie zu <a href="projects-how-setup-time-sheets.html">Einrichten von Arbeitszeittabellen</a>.</p>
+</div>
+<ol>
+<li><p>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Arbeitszeittabellen erstellen</strong> ein und wählen Sie dann den zugehörigen Link.</p>
+<div class="TIP"><h5>Tipp</h5><p>Sie können die Aktion <strong>Arbeitszeittabellen erstellen</strong> auch auf der <strong>Ressourcen</strong>-Listenseite und der <strong>Ressourcenkarte</strong>-Seite verwenden.</p>
+</div>
+</li>
+<li><p>Füllen Sie die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Bevor Sie Stundenzettel für eine Ressource erstellen, stellen Sie sicher, dass die Felder <strong>Arbeitszeitnachweis</strong> und <strong>Benutzer-ID des Arbeitszeittabellenbesitzers</strong> aktiviert sind für auf der Seite <strong>Ressourcenkarte</strong> angegeben sind.</p>
+</div>
+<p> Wählen Sie optional die Aktion <strong>Zeitplan</strong> aus, um anzugeben, wie oft die Aufgabe automatisch ausgeführt werden soll. Um beispielsweise die Aufgabe so zu konfigurieren, dass sie vier Wochen lang wöchentlich ausgeführt wird, legen Sie das Feld <strong>Datumsformel für nächste Ausführung</strong> auf der Seite <strong>Bericht planen – Arbeitszeittabelle erstellen</strong> auf <strong>4W</strong> fest. Weitere Informationen zur Planung von Berichten finden Sie unter <a href="ui-work-report.html#ScheduleReport">Bericht für die Ausführung planen</a>.  </p>
+</li>
+</ol>
+<p>Erstellen Sie auf der Seite <strong>Arbeitszeittabellen</strong> die erstellten Arbeitszeittabellen anzeigen. Jede Arbeitszeittabelle besteht aus mindestens einer Zeile, die die Zeit definiert, die Sie zur Genehmigung senden möchten. In der folgenden Tabelle werden die Zeilentypen beschrieben, die Sie der Arbeitszeittabelle hinzufügen können.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Feld</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Wird verwendet, um eine Notiz oder einen Marker im Feld <strong>Beschreibung</strong> der Arbeitszeittabellenzeile hinzuzufügen. Sie können dieses Feld beispielsweise verwenden, um Arbeitszeittabellenposten zu kategorisieren. Wenn Sie das Feld <strong>Typ</strong> in einer Arbeitszeittabelle leer lassen, können Sie keine Zeitwerte in den Wochentagsfeldern für diese Zeile eingeben.</td>
+</tr>
+<tr>
+<td>Fehlzeit</td>
+<td>Wird verwendet, um die Zeit zu erfassen, in der Sie in einer Arbeitswoche abwesend sind. Geben Sie die Art der Abwesenheit im Feld <strong>Grund Abwesenheitscode</strong> an, um die Informationen für die Zeile abzuschließen.</td>
+</tr>
+<tr>
+<td>Montageauftrag</td>
+<td>Wird verwendet, um die Zeit für Montageaufträge zu erfassen. Eine Arbeitszeittabelleposition wird beim Buchen von Montageauftragspositionen erstellt, für welche die Ressource für die Verwendung von Arbeitszeittabellen eingerichtet wurde. Sie können eine Zeile dieses Typs nicht manuell auswählen.</td>
+</tr>
+<tr>
+<td>Projekt</td>
+<td>Wird verwendet, um den Verbrauch für ein Projekt zu erfassen. Geben Sie die Projektnummer und die Projektaufgabennummer an, für die Sie die Zeit registrieren möchten, um die Informationen für die Zeile abzuschließen. Sie können Zeit für Zeilen eintragen, die Sie nicht geplant haben.</td>
+</tr>
+<tr>
+<td>Ressource</td>
+<td>Wird verwendet, um den Verbrauch für eine Ressource zu erfassen. Erstellen Sie eine Beschreibung der Arbeit, um die Informationen für die Zeile abzuschließen.</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>Wird verwendet, um die Bearbeitungszeit für einen Serviceauftrag oder eine Servicegutschrift zu erfassen.</td>
+</tr>
+</tbody>
+</table>
+<p>Sie möchten beispielsweise eine Arbeitszeittabelle für eine Woche einreichen, in der Sie Reinigungsaufgaben erledigt haben und einen freien Tag für einen Arzttermin hatten. Die folgende Tabelle zeigt, wie Sie Zeilen zum Arbeitszeitnachweis hinzufügen würden.</p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Description</th>
+<th>Arbeitstypencode</th>
+<th>Abwesenheitstypcode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ressource</td>
+<td>Arbeitszeit</td>
+<td>Reinigung</td>
+<td></td>
+</tr>
+<tr>
+<td>Fehlzeit</td>
+<td>Arbeitsfreie Zeit</td>
+<td></td>
+<td>Integrität</td>
+</tr>
+<tr>
+<td></td>
+<td>Ich musste am Dienstag wegen eines Arzttermins frei nehmen.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>In diesem hypothetischen Beispiel können Sie dann die relevanten Stunden über die relevanten Tage hinweg für die einzelnen Wochentage eintragen.  </p>
+<div class="TIP"><h5>Tipp</h5><p>In den meisten Fällen verfügt Ihr Unternehmen über vordefinierte Arbeitstypen für die verschiedenen Zeilentypen. In diesen Fällen wählen Sie einfach den entsprechenden Arbeitstyp aus der Liste aus und fügen dann Ihre eigene Beschreibung hinzu.  </p>
+<p>Wählen Sie den Arbeitstyp aus, indem Sie die Schaltfläche :::image type=&quot;icon&quot; source=&quot;media/assist-edit-icon.png&quot; border=&quot;false&quot;::: im Feld <strong>Beschreibung</strong> und die Aktion <strong>Aktivitätsdetails</strong> auswählen und ihn dann auf der Seite angeben, die geöffnet wird, oder indem Sie ihn im Feld <strong>Arbeitstypcode</strong> bzw. im Feld <strong>Abwesenheitstypcode</strong> auswählen. In diesem Fall können Sie den Abschnitt <a href="#define-work-types-and-add-one-to-a-time-sheet">So definieren Sie Arbeitstypen und fügen sie einer Arbeitszeittabelle hinzu</a> ignorieren.  </p>
+</div>
+<h2 id="reuse-time-sheet-lines-in-other-time-sheets">So können Sie Arbeitszeittabellenzeilen in anderen Arbeitszeittabellen wiederverwenden</h2>
+<p>Falls die Arbeitszeittabelleninformationen von einem Zeitraum zum nächsten gleich bleiben, kopieren Sie die Zeilen aus dem vorherigen Zeitraum, um Zeit zu sparen. Tragen Sie dann einfach Ihren Zeitverbrauch für den neuen Zeitraum ein.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Arbeitszeittabellen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie die Arbeitszeittabelle für eine Periode nach der Periode für eine vorhandene Arbeitszeittabelle mit Zeilen.  </li>
+<li>Wählen Sie die Aktion <strong>Zeilen aus vorherigen Arbeitszeittabellen kopieren</strong> aus.</li>
+</ol>
+<p>Die Zeilen werden kopiert, einschließlich Informationen wie Art und Beschreibung. Wenn beispielsweise die Zeile mit einem Projekt verknüpft ist, wird die <strong>Projektnr.</strong> kopiert. Alle kopierten Zeilen haben den Status <strong>Offen</strong>. Sie können die benutzerdefinierten Zeilen jetzt bei Bedarf ändern.</p>
+<h2 id="copy-project-planning-lines-to-a-time-sheet">Projektplanzeilen in eine Arbeitszeittabelle kopieren</h2>
+<p>Die folgende Vorgehensweise beschreibt, wie Projektplanzeilen einer Arbeitszeittabelle schnell hinzugefügt werden können.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Arbeitszeittabellen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie auf der Seite <strong>Arbeitszeittabellen</strong> eine Arbeitszeittabelle für den entsprechenden Zeitraum aus.  </li>
+<li>Wählen Sie die Aktion <strong>Zeilen anhand der Projektplanung erstellen</strong> aus. Jegliche Projektplanzeilen im Arbeitszeittabellenzeitraum werden in die Arbeitszeittabelle für die Person oder die Maschine unter <strong>Ressourcennummer</strong> kopiert.</li>
+</ol>
+<h2 id="define-work-types-and-add-one-to-a-time-sheet">Um Arbeitstypen festzulegen und einer Arbeitszeittabelle hinzufügen</h2>
+<p>Sie können den Arbeitstyp für alle Arbeitszeittabellenzeilen für Serviceaufträge, Projektaufträge und Ressourcen definieren. Auf diese Art können Sie Informationen hinzufügen, die Sie benötigen, um dem Debitor unterschiedliche Arten von Arbeit zu berechnen.  </p>
+<ol>
+<li>Wählen Sie auf der Seite <strong>Arbeitszeittabellen</strong> die entsprechende Arbeitszeittabelle aus.</li>
+<li>Wählen Sie in der ersten Zeile im Abschnitt <strong>Zeilen</strong> das Feld <strong>Typ</strong> und dann den entsprechenden Typ aus, z. B. <em>Ressource</em>.  </li>
+<li>Wählen Sie das Feld <strong>Beschreibung</strong> aus, und füllen Sie anschließend die Felder auf der Seite <strong>Arbeitszeittabellenzeile - Ressourcendetails</strong> aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.  <ol>
+<li>Wenn keine Arbeitstypen vorhanden sind, wählen Sie die Aktion <strong>Neu</strong> aus.</li>
+<li>Füllen Sie die Felder auf der Seite <strong>Arbeitstypen</strong> nach Bedarf aus, und kehren Sie dann zur Arbeitszeittabelle zurück.</li>
+</ol>
+</li>
+<li>Füllen Sie den Rest der Arbeitszeittabelle aus. Weitere Informationen finden Sie im Abschnitt <a href="#fill-in-time-sheet-lines-and-submit-for-approval">So füllen Sie Arbeitszeittabellen aus und senden sie zur Genehmigung</a>.  </li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>Sie können ähnlich vorgehen, um Abwesenheitscodes festzulegen.</p>
+</div>
+<h2 id="fill-in-time-sheet-lines-and-submit-for-approval">So können Sie Arbeitszeittabellenzeilen ausfüllen und zur Genehmigung senden</h2>
+<p>Die Arbeitszeittabellenregistrierung wird in Stunden verfolgt, der Standard-Basiseinheit für Ressourcen. Standardmäßig zeigt eine Arbeitszeittabelle die allgemeinen Arbeitstage von Montag bis Freitag an.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Arbeitszeittabellen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie ein Arbeitszeitblatt für den entsprechenden Zeitraum aus.</li>
+<li><p>Füllen Sie die Felder in einer neuen Zeile wie erforderlich aus. Geben Sie die Anzahl der Stunden ein, die von der Ressource an jedem Wochentag verwendet werden.  </p>
+<p> In den meisten Fällen fügen Sie zum Nachverfolgen der Arbeit eine Zeile vom Typ <em>Ressource</em> hinzu und erfassen anschließend die täglich aufgewendeten Stunden. Wenn Sie Abwesenheit erfassen möchten, fügen Sie eine Zeile vom Typ <em>Abwesenheit</em> hinzu.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Sie können die Summe der Arbeitszeittabellenstunden überprüfen, die in die Infobox <strong>Zusammenfassung tatsächlich/budgetiert</strong> eingetragen sind.  </p>
+</div>
+</li>
+<li><p>Wiederholen Sie Schritt 3 für weitere Arbeitstypen, die die Ressource ausführt.  </p>
+<p> Entscheiden Sie im nächsten Schritt, ob Sie alle oder ausgewählte Zeilen in der Arbeitszeittabelle einreichen möchten.  </p>
+<ul>
+<li><p>Wählen Sie die entsprechende Zeile und dann die Aktion <strong>Übermitteln</strong> aus, um den Stundenzettel für eine oder mehrere Zeilen zu übermitteln.</p>
+<p>  Wählen Sie auf der Übermittlungsseite die Option <strong>Nur ausgewählte Zeilen</strong> aus. Die Zeile ändert den Status von <strong>Offen</strong> in <strong>Übermittelt</strong>.</p>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Übermitteln</strong> oben auf der Seite <strong>Arbeitszeittabelle</strong> aus, um die Arbeitszeittabelle für alle offenen Zeilen zu übermitteln.  </p>
+<p>  Bestätigen Sie, dass Sie alle offenen Zeilen der aktuellen Arbeitszeittabelle übermitteln möchten.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>ie können nur Arbeitszeitta‎bellenzeilen senden, für die Sie Zeit eingegeben haben.  </p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Um Informationen in einer Zeile zu ändern, die auf <strong>Übermittelt</strong> festgelegt wurde, wählen Sie die Zeile und wählen Sie dann die Aktion <strong>Erneut öffnen</strong> aus.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Ein Manager weist möglicherweise eine Arbeitszeittabellenzeile zurück, die zur Genehmigung eingesendet wird. Wenn eine Zeile den Status <strong>Abgelehnt</strong> hat, können Sie an der Zeile Änderungen vornehmen und dann erneut <strong>Übermitteln</strong> wählen.  </p>
+</div>
+</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong>.</li>
+</ol>
+<h2 id="approve-or-reject-a-time-sheet">Arbeitszeittabellen genehmigen oder ablehnen</h2>
+<p>Eine Arbeitszeittabelle muss zur Genehmigung eingereicht werden, bevor Sie verwendet wird. Sie können einzelne Zeilen in der Arbeitszeittabelle genehmigen oder ablehnen und sie wieder an den Antragsteller senden. Eine Arbeitszeittabelle kann auf zwei Arten genehmigt werden:</p>
+<ul>
+<li>Ein Arbeitszeittabellenadministrator kann jede Arbeitszeittabelle genehmigen.</li>
+<li>Die Person, die im Feld <strong>Arbeitszeittabellen-Genehmiger Benutzer-ID</strong> in einer Ressourcenkarte angegeben wird, kann die Arbeitszeittabellen dieser Ressource genehmigen. Weitere Informationen zum Einrichten von Genehmigungen finden Sie unter <a href="projects-how-setup-time-sheets.html">Arbeitszeittabellen einrichten</a>.</li>
+</ul>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Arbeitszeittabellen für Manager</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie eine Arbeitszeittabelle aus der Liste aus.  </li>
+<li>Führen Sie auf der Seite <strong>Arbeitszeitblatt</strong> die folgenden Schritte aus: <ol>
+<li>Wählen Sie die Aktion <strong>Verarbeiten</strong> und dann die Aktion <strong>Genehmigen</strong> aus.</li>
+<li>Wählen Sie die Aktion <strong>Alle übermittelten Zeilen</strong> aus, um alle Zeilen zu genehmigen, oder wählen Sie die Aktion <strong>Alle offenen Zeilen</strong> aus, um nur die Zeilen zu genehmigen, die auf der Seite <strong>Arbeitszeittabelle</strong> ausgewählt wurden.</li>
+</ol>
+</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </li>
+<li>Wählen Sie die Aktion <strong>Ablehnen</strong> und führen Sie die Schritte 4 bis 5 aus.  </li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>Verwenden Sie die Infoboxen <strong>Arbeitszeittabellenstatus</strong> uns <strong>Tatsächliche/Geplante Zusammenfassung</strong> aus, um einen schnellen Überblick zu Arbeitszeittabelleninformationen zu erhalten.</p>
+</div>
+<p>Nachdem Sie eine Arbeitszeittabelle genehmigt oder abgelehnt haben, kann sie nicht mehr bearbeitet werden, wenn sie nicht zuerst wieder geöffnet wird. Verwenden Sie das folgende Vorgehen, um eine genehmigte oder zurückgewiesene Arbeitszeittabelle erneut zu öffnen.</p>
+<h2 id="reopen-a-time-sheet">Eine Arbeitszeittabelle erneut öffnen</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Arbeitszeittabellen für Manager</strong> oder <strong>Arbeitszeittabellen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li><p>Öffnet eine Arbeitszeittabelle aus der Liste.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können Zeilen nur erneut öffnen, die den Status <strong>Genehmigt</strong> haben. Sie können keine Zeilen erneut öffnen, die den Status <strong>Abgelehnt</strong> haben oder gebucht wurden.  </p>
+</div>
+</li>
+<li>Wählen Sie auf der Seite <strong>Erneut öffnen</strong> die Aktion <strong>Genehmigen</strong> aus, und wählen Sie die Aktion <strong>Alle übermittelten Zeilen</strong>, um alle Zeilen erneut zu öffnen oder <strong>Nur ausgewählte Zeilen</strong>, um nur jene Zeilen erneut zu öffnen, die auf der Seite <strong>Arbeitszeittabelle</strong> ausgewählt wurden.</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Der Status der Arbeitszeittabellen, Zeile oder Zeilen wechselt auf <strong>Übermittelt</strong>.  </li>
+</ol>
+<h2 id="view-and-approve-time-sheets-by-project">Arbeitszeittabellen nach Projekt anzeigen und diese genehmigen</h2>
+<p>Für ein Projekt können Sie eine Person bestimmen, die für das Projekt verantwortlich ist. Diese Informationen sind mit Stundenzettelzeilen verknüpft. Über den Link erhalten Projektmanager eine Liste der zu genehmigenden Stundennachweise. Beispielsweise ist der Team-Projekt-Manager möglicherweise für bestimmte Projekte in Ihrem Unternehmen verantwortlich. In diesem Fall sollte der Manager als die <strong>Verantwortliche Person</strong> auf der Projektkartenseite festgelegt sein. In dieser Ansicht der Arbeitszeittabelleninformationen, können Sie die Projektaufgaben sehen, die einem Projekt zugeordnet sind, und die verwendete Stundenmenge.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um Arbeitszeittabellen auf der Seite <strong>Arbeitszeittabelle für Manager nach Projekt</strong> genehmigen zu können, müssen Sie zuerst eine Option <strong>Arbeitszeittabelle nach Projektgenehmigung</strong> auf der Seite <strong>Ressourceseinrichtung</strong> auswählen. Weitere Informationen zu Genehmigungen für Ressourcen finden Sie unter <a href="projects-how-setup-resources.html">Ressourcen einrichten</a>.</p>
+</div>
+<h3 id="approve-or-reject-a-time-sheet-by-project">Arbeitszeittabellen nach Projekt genehmigen oder ablehnen</h3>
+<ol>
+<li>Geben Sie im Feld <strong>Suchen</strong> <strong>Arbeitszeittabelle für Manager nach Projekt</strong> ein, und wählen Sie dann den zugehörigen Link aus. Business Central zeigt eine Liste der Arbeitszeittabellezeilen an, die den Projekten zugeordnet sind, für die Sie verantwortlich sind.</li>
+<li><p>Wählen Sie die Aktion <strong>Genehmigen</strong> und dann die Aktion <strong>Alle übermittelten Zeilen</strong> aus, um alle Zeilen zu genehmigen, oder wählen Sie die Aktion <strong>Nur ausgewählte Zeilen</strong> aus, um nur die Zeilen zu genehmigen, die auf der Seite <strong>Arbeitszeittabelle</strong> ausgewählt wurden.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können nur Arbeitszeittabellen mit dem Status <strong>Übermittelt</strong> genehmigen.</p>
+</div>
+</li>
+<li><p>Um zusätzliche Informationen zur Genehmigung oder Ablehnung anzugeben, wählen Sie die Aktion <strong>Zugehörig</strong>, dann <strong>Kommentare</strong> und anschließend <strong>Zeilenkommentare</strong> aus.</p>
+</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong>.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Nachdem Sie eine Arbeitszeittabellenzeile nach Projekt genehmigt oder abgelehnt haben, können Sie sie auf der Seite <strong>Arbeitszeittabelle</strong> nicht wieder öffnen oder ändern.</p>
+</div>
+<h2 id="post-time-sheet-lines-in-a-resource-journal">Buchen von Arbeitszeittabellenzeilen zu einem Ressourcen-Buch.-Blatt</h2>
+<p>Nachdem Sie Arbeitszeittabellenposten für eine Ressource genehmigt haben, können Sie sie in das entsprechende Ressourcen-Buch.-Blatt buchen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Ressourcen Buch.-Blätter</strong> ein, und wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Wählen Sie die Aktion <strong>Zeilen von Arbeitszeittabellen vorschlagen</strong> aus.  </li>
+<li>Füllen Sie auf der Seite <strong>Ressourcen Buch.-Blattzeilen vorschlagen</strong> die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen. </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong>. Einträge für Verbrauch werden im Ressourcen Buch.-Blatt erstellt, in dem Sie die Informationen ändern können.  </li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> aus.  </li>
+<li>Um die Buchung zu überprüfen, wählen Sie die Aktion <strong>Sachposten</strong> aus. Die Seite <strong>Ressourcen-Buch.-Blatt</strong> öffnet sich und die Ergebnisses der Buchung des Ressourcen Buch.-Blattes werden angezeigt.</li>
+</ol>
+<h2 id="post-time-sheet-lines-in-a-project-journal">Buchen von Arbeitszeittabellenzeilen zu einem Projekt-Buch.-Blatt</h2>
+<p>Nachdem Sie Arbeitszeittabellenposten für ein Projekt genehmigt haben, können Sie sie in das entsprechende Projekt-Buch.-Blatt buchen.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Projekterfassungen</strong> ein und wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Wählen Sie die Aktion <strong>Zeilen von Arbeitszeittabellen vorschlagen</strong> aus.  </li>
+<li>Füllen Sie auf der Seite <strong>Projekt Buchungsblattzeilen vorschlagen</strong> die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen. </li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Einträge für Verbrauch werden im Projekt-Buch.-Blatt erstellt, in dem Sie die Informationen ändern können.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Informationen über den Arbeitstyp und darüber, ob die Arbeit fakturierbar ist, werden aus der Arbeitszeittabellenzeile kopiert. Bei Bedarf können Sie die Anzahl der Stunden reduzieren und eine Teilbuchung durchführen. Wenn Sie die Anzahl reduzieren, dann wird bei der nächsten Auswahl von <strong>Zeilen anhand von Arbeitszeittabellen vorschlagen</strong> eine Zeile mit der Restmenge der Stunden erstellt.  </p>
+</div>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong>.  </li>
+<li>Um die Buchung zu überprüfen, wählen Sie die Aktion <strong>Sachposten</strong> aus. Die Seite <strong>Projektposten</strong> öffnet die Anzeige des Ergebnisses der Buchung des Ressourcen-Buch.-Blattes.</li>
+</ol>
+<h2 id="archive-time-sheets">Arbeitszeitnachweise archivieren</h2>
+<p>Nachdem Sie Arbeitszeittabellen gebucht haben, können Sie diese für spätere Bezugnahme archivieren. Sie müssen alle Zeilen auf einer Arbeitszeittabelle buchen, bevor Sie sie archivieren können.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie eine Arbeitszeittabelle archivieren, wird sie aus der Seite <strong>Arbeitszeittabelle</strong> und aus der Seite <strong>Arbeitszeittabelle für Manager</strong> entfernt.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Arbeitszeittabellen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Arbeitszeittabellen in Archiv verschieben</strong> aus.  </li>
+<li>Füllen Sie auf der Seite <strong>Arbeitszeittabellen in Archiv verschieben</strong> die Felder nach Bedarf aus, und wählen Sie dann die Schaltfläche <strong>OK</strong> aus.  </li>
+<li>Um archivierte Arbeitszeittabellen zu überprüfen, wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Was möchten Sie tun?"> aus. Symbol. Geben Sie <strong>Archiv für Arbeitszeittabellen</strong> oder <strong>Archiv für Arbeitszeittabellen für Manager</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="projects-manage-projects.html">Projektmanagement</a><br><a href="projects-setup-projects.html">Einrichten des Projektmanagements</a><br><a href="finance.html">Finanzen</a><br><a href="purchasing-manage-purchasing.html">Einkauf</a><br><a href="sales-manage-sales.html">Verkauf</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

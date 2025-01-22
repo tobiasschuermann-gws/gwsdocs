@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Granulare Berechtigungen definieren </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Granulare Berechtigungen definieren ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="assign-permissions-to-users-and-groups">Benutzern und Gruppen Berechtigungen zuweisen</h1>
+
+<div class="NOTE"><h5>Hinweis</h5><p>Sicherheitsgruppen sind in den Online- und lokalen Versionen von Business Central im 1. Veröffentlichungszyklus 2023 neu. Sie erleichtern Administratoren die Verwaltung von Benutzerberechtigungen, indem sie ihnen ermöglichen, Benutzer nach Abteilung, Projektfunktion usw. zu gruppieren. Administratoren weisen der Gruppe die Berechtigungen zu, die ihre Mitglieder für ihre Aufgaben benötigen.</p>
+<p>Sicherheitsgruppen ähneln den derzeit verfügbaren Benutzergruppen. Benutzergruppen sind jedoch nur für Business Central relevant. Sicherheitsgruppen basieren auf Gruppen im Microsoft 365 Admin Center oder im Azure-Portal. Davon profitieren Administratoren, da sie ihre Sicherheitsgruppen mit anderen Dynamics 365-Apps verwenden können. Wenn Vertriebsmitarbeiter beispielsweise Business Central und SharePoint verwenden, müssen Administratoren die Gruppe und ihre Mitglieder nicht neu erstellen.</p>
+<p>Um mehr über Sicherheitsgruppen zu erfahren, gehen Sie zu <a href="ui-security-groups.html">Zugriff auf Business Central mithilfe von Sicherheitsgruppen steuern</a>.</p>
+</div>
+<p>Das Business Central-Sicherheitssystem steuert, auf welche Objekte ein Benutzer in jeder Datenbank oder Umgebung in Kombination mit den Lizenzen des Benutzers zugreifen kann. Sie können für jeden Benutzer festlegen, ob er Daten in den Datenbankobjekten lesen, ändern oder eingeben darf. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/security/data-security?tabs=object-level">Datensicherheit</a> in der Hilfe für Entwickler und Verwaltungsinhalt für Business Central.</p>
+<p>Bevor Sie Benutzern und Benutzergruppen Berechtigungen zuweisen, müssen Sie festlegen, wer sich anmelden kann, indem Sie Benutzer entsprechend ihrer Lizenz erstellen. Weitere Informationen finden Sie unter <a href="ui-how-users-permissions.html">Benutzer nach Lizenzen anlegen</a>.</p>
+<p>In Business Central gibt es zwei Ebenen von Berechtigungen für Datenbankobjekte:</p>
+<ul>
+<li><p>Gesamt-Berechtigungen gemäß der Lizenz, auch als Berechtigung bezeichnet.</p>
+<p>Die Lizenzen enthalten Standardberechtigungssätze. Ab dem 1. Veröffentlichungszyklus 2022 können Administratoren diese Standardberechtigungen für die relevanten Lizenztypen anpassen. Weitere Informationen finden Sie unter <a href="ui-how-users-permissions.html#licensespermissions">Berechtigungen basierend auf Lizenzen konfigurieren</a>.  </p>
+</li>
+<li><p>Detaillierte Berechtigungen, die Sie in Business Central zuweisen.</p>
+</li>
+</ul>
+<p>Dieser Artikel beschreibt, wie Sie in Business Central Berechtigungen definieren, verwenden und anwenden können, um die Standardkonfiguration zu ändern.  </p>
+<p>Möglicherweise werden in der Liste <strong>Benutzer</strong> andere Benutzer als die Ihres eigenen Unternehmens angezeigt. Wenn sich ein delegierter Administrator eines Wiederverkaufspartnerunternehmens in einer Business Central-Umgebung im Auftrag seines Debitors anmeldet, wird dieser automatisch als Benutzer in Business Central erstellt. Auf diese Weise werden die von einem delegierten Administrator ausgeführten Aktionen in Business Central protokolliert, z. B. Buchungsbelege, und mit ihrer Benutzer-ID verknüpft.  </p>
+<p>Mit der Funktion <em>Granular delegated admin privileges (GDAP)</em> wird der Benutzer in der Liste <strong>Benutzer</strong> angezeigt und kann beliebigen Berechtigungen zugewiesen werden. Sie werden nicht mit Namen und anderen personenbezogenen Informationen angezeigt, sondern mit hrem Unternehmensnamen und einer eindeutigen ID. Sowohl interne als auch externe Administratoren können diese Benutzer in der Liste <strong>Benutzer</strong> anzeigen, und sie haben einen umfassenden Einblick in die Aktionen, die diese Benutzer beispielsweise über das <a href="across-log-changes.html">Änderungsprotokoll</a> durchführen. Der tatsächliche Name dieser Benutzer wird jedoch nicht angezeigt. GDAP-Benutzer werden mit Benutzernamen im folgenden Format aufgelistet: <code>User123456@partnerdomain.com</code>. Sie haben möglicherweise einen Benutzernamen, der den Unternehmensnamen des Partners widerspiegelt, und die E-Mail-Adresse ist nicht die tatsächliche E-Mail-Adresse der Person. Auf diese Weise geben die GDAP-Benutzerkonten keine personenbezogenen Informationen preis. Wenn Sie herausfinden möchten, wer hinter einem solchen Pseudonym steckt, müssen Sie sich an das Unternehmen wenden, für das dieser Benutzer arbeitet oder gearbeitet hat.  </p>
+<p>Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/delegated-admin">Delegierter Administratorzugriff auf Business Central Online</a>.  </p>
+<p>Business Central-Online enthält Standardbenutzergruppen, die Benutzern automatisch basierend auf ihrer Lizenz zugewiesen werden. Sie können die Standardkonfiguration ändern, indem Sie Sicherheitsgruppen, Berechtigungssätze und Berechtigungen ändern oder hinzufügen. In der folgenden Tabelle sind wichtige Szenarien zum Ändern der Standardberechtigungen aufgeführt.  </p>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Siehe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Um die Verwaltung von Berechtigungen für mehrere Benutzer zu erleichtern, können Sie diese in Sicherheitsgruppen organisieren und dann ein Berechtigungsset für mehrere Benutzer in einer Aktion zuordnen oder ändern.</td>
+<td><a href="#manage-permissions-through-user-groups">Berechtigungen über Benutzergruppen verwalten</a></td>
+</tr>
+<tr>
+<td>So verwalten Sie Berechtigungssätze für bestimmte Benutzer</td>
+<td><a href="#assign-permission-sets-to-users">Benutzenden Berechtigungen zuweisen</a></td>
+</tr>
+<tr>
+<td>Erfahren Sie, wie Sie einen Berechtigungssatz definieren</td>
+<td><a href="#create-a-permission-set">Einen Berechtigungssatz erstellen</a></td>
+</tr>
+<tr>
+<td>So zeigen Sie Berechtigungen eines Benutzers an oder bearbeiten sie</td>
+<td><a href="#get-an-overview-of-a-users-permissions">Eine Übersicht der Benutzerberechtigungen erhalten</a></td>
+</tr>
+<tr>
+<td>So erfahren Sie mehr über Sicherheit auf Rekordniveau</td>
+<td><a href="#security-filters-limit-a-users-access-to-specific-records-in-a-table">Sicherheitsfilter beschränken den Zugriff eines Benutzers auf bestimmte Datensätze in einer Tabelle</a></td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Eine breitere Methode, um zu definieren, auf welche Funktionen Benutzer Zugriff haben, ist das Setzen des Feldes <strong>Erfahrung</strong> auf der Seite <strong>Unternehmensinformationen</strong>. Weitere Informationen finden Sie unter <a href="ui-experiences.html">Ändern, welche Funktionen angezeigt werden</a>.</p>
+<p>Sie können auch Funktionen definieren, die für Benutzer auf der Benutzeroberfläche verfügbar sind und wie sie mit ihnen über Seiten interagieren. Dies geschieht über Profile, die Sie verschiedenen Arten von Benutzern entsprechend ihrer Jobrolle oder Abteilung zuordnen. Weitere Informationen finden Sie unter <a href="admin-users-profiles-roles.html">Verwalten von Profilen</a> und <a href="ui-customizing-overview.html">Business Central anpassen</a>.</p>
+</div>
+<h2 id="create-a-permission-set">Einen Berechtigungssatz erstellen</h2>
+<div class="NOTE"><h5>Hinweis</h5><p>Im Veröffentlichungszyklus 2, 2022 haben wir das Hinzufügen von Berechtigungen zu Berechtigungssätzen vereinfacht. Anstatt Berechtigungen einzeln hinzuzufügen, können Sie ganze Berechtigungssätze hinzufügen. Bei Bedarf können Sie dann einzelne Berechtigungen darin ausschließen. Weitere Informationen finden Sie unter <a href="#to-add-other-permission-sets">WeitereBerechtigungssätze hinzufügen</a>. Um dies zu ermöglichen, haben wir die Seite „Berechtigungssatz“ durch eine neue ersetzt. Die wichtigsten Unterschiede sind die neuen Bereiche <strong>Berechtigungssätze</strong> und <strong>Ergebnisse</strong> und die Infobox <strong>Enthaltene Berechtigungen</strong>. Um die ersetzte Seite „Berechtigungen“ weiterhin zu verwenden, klicken Sie auf der Seite <strong>Berechtigungssätze</strong> auf <strong>Berechtigungen (alt)</strong>.</p>
+</div>
+<p>Die Wartung ist auch einfacher. Wenn Sie eine Systemberechtigungen hinzufügen, wird Ihr benutzerdefinierter Berechtigungssatz automatisch mit allen Änderungen aktualisiert, die Microsoft an diesen Berechtigungen vornimmt.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Befugnissätze</strong> ein und wählen Sie dann den entsprechenden Link.</li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.</li>
+<li>Auf der neuen Zeile füllen Sie die Felder wie erforderlich aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li>Wählen Sie die Aktion <strong>Berechtigungen</strong> aus.</li>
+<li><p>Auf der Seite <strong>Berechtigungssatz</strong> im Feld <strong>Typ</strong> können Sie Berechtigungen für das Objekt wie folgt einschließen oder ausschließen:</p>
+<p>Um die Berechtigung einzuschließen, wählen Sie <strong>Einschließen</strong> und dann die Zugriffstufe für die Felder <strong>Leseberechtigung</strong>, <strong>Einfügeberechtigung</strong>, <strong>Bearbeitungsberechtigung</strong>, <strong>Löschberechtigung</strong> und <strong>Ausführungsberechtigung</strong>. Die Optionen werden in der folgenden Tabelle beschrieben.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+<th>Lagerplatzpriorität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&quot;Leer&quot;</strong></td>
+<td>Der Benutzer kann die Aktion an dem Objekt ausführen.</td>
+<td>Am niedrigsten</td>
+</tr>
+<tr>
+<td><strong>Ja</strong></td>
+<td>Der Benutzer kann die Aktion an dem Objekt ausführen.</td>
+<td>Am höchsten</td>
+</tr>
+<tr>
+<td><strong>Indirekt</strong></td>
+<td>Der Benutzer kann die Aktion an dem Objekt nur über ein anderes zugehöriges Objekt ausführen, auf das der Benutzer vollständig zugreifen kann. Weitere Informationen finden Sie unter <a href="#example---indirect-permission">Beispiel - Indirekte Berechtigung</a> in diesem Artikel und <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/properties/devenv-permissions-property#example---indirect-permission">Berechtigungseigenschaft</a> in der Entwickler- und IT-Pro-Hilfe.</td>
+<td>Zweithöchste</td>
+</tr>
+</tbody>
+</table>
+<p>Um die Berechtigung oder eine oder mehrere Zugriffsebenen auszuschließen, wählen Sie <strong>Ausschließen</strong> und dann die zu gewährende Zugriffsebene aus. Die Optionen werden in der folgenden Tabelle beschrieben.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&quot;Leer&quot;</strong></td>
+<td>Verwenden Sie die Zugriffsebene basierend auf der Hierarchie der Berechtigungen im Satz.</td>
+</tr>
+<tr>
+<td><strong>Ausschließen</strong></td>
+<td>Entfernen Sie die spezifische Zugriffsebene für das Objekt.</td>
+</tr>
+<tr>
+<td><strong>Auf indirekt reduzieren</strong></td>
+<td>Ändern Sie die Zugriffsebene in Indirekt, wenn Berechtigungssätze direkten Zugriff auf das Objekt gewähren. Wählen Sie diese Option beispielsweise aus, wenn der Berechtigungssatz direkten Zugriff auf Sachkonteneinträge gewährt, Sie aber nicht möchten, dass Benutzer vollen Zugriff auf die Einträge haben.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn eine Berechtigung in einem einbezogenen Berechtigungssatz und auch in einem ausgeschlossenen Berechtigungssatz enthalten ist, wird die Berechtigung ausgeschlossen.</p>
+</div>
+</li>
+<li><p>Verwenden Sie die Felder <strong>Objekttyp</strong> und <strong>Objekt-ID</strong>, um das Objekt anzugeben, auf das Sie Zugriff gewähren.</p>
+<div class="TIP"><h5>Tipp</h5><p>Neue Zeilen zeigen Standardwerte an. Zum Beispiel enthält das Feld <strong>Objekttyp</strong> <strong>Tabellendaten</strong>, und das Feld <strong>Objekt-ID</strong> enthält <strong>0</strong>. Die Standardwerte sind nur Platzhalter und werden nicht verwendet. Sie müssen einen Objekttyp und ein Objekt im Feld <strong>Objekt-ID</strong> auswählen, bevor Sie eine weitere neue Zeile erstellen können.</p>
+</div>
+</li>
+<li><p>Optional: Wenn Sie Berechtigungen für einen Tabellendaten-Objekttyp definieren, können Sie im Feld <strong>Sicherheitsfilter</strong> die Daten filtern, auf die ein Benutzer in Feldern in der ausgewählten Tabelle zugreifen kann. Sie können z. B. angeben, dass ein Benutzer nur auf die Datensätze zugreifen kann, die Informationen über einen bestimmten Debitor enthalten. Weitere Informationen finden Sie unter <a href="#security-filters-limit-a-users-access-to-specific-records-in-a-table">Sicherheitsfilter beschränken den Zugriff eines Benutzers auf bestimmte Datensätze in einer Tabelle</a> und <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/security/security-filters">Verwenden von Sicherheitsfiltern</a>.</p>
+</li>
+<li>Optional: Fügen Sie im Bereich <strong>Berechtigungssätze</strong> einen oder mehrere andere Berechtigungssätze hinzu. Weitere Informationen finden Sie unter <a href="#to-add-other-permission-sets">WeitereBerechtigungssätze hinzufügen</a>.</li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Seien Sie vorsichtig, wenn Sie <strong>Berechtigung einfügen</strong> oder <strong>Berechtigung ändern</strong> auf die Tabelle <strong>9001Benutzergruppenmitglied</strong> oder <strong>9003Benutzergruppenberechtigungssatz</strong> festlegen. Alle Benutzer, die dem Berechtigungssatz zugeordnet sind, könnten sich möglicherweise selbst anderen Benutzergruppen zuordnen, wodurch sie wiederum unbeabsichtigte Berechtigungen erhalten könnten.</p>
+</div>
+<h3 id="example---indirect-permission">Beispiel - Indirekte Berechtigungen</h3>
+<p>Sie können Benutzern indirekte Berechtigungen zuweisen, um ein Objekt nur über ein anderes Objekt zu verwenden. Beispielsweise hat ein Benutzer die Berechtigung, Codeunit 80, Vertrieb-Beitrag, auszuführen. Die Verkaufsbuchung Codeunit führt viele Aufgaben aus, einschließlich der Bearbeitung von Tabelle 37 Verkaufsposition aus. Wenn der Benutzer ein Verkaufsbeleg bucht, überprüft die Codeunit &quot;Vertrieb-Beitrag&quot; Business Central, ob der Benutzer über die Berechtigung zum Bearbeiten der Tabelle &quot;Verkaufszeile&quot; verfügt. Wenn nicht, kann die Codeunit ihre Aufgaben nicht ausführen und der Benutzer erhält eine Fehlermeldung. In diesem Fall wird die Codeunit erfolgreich ausgeführt.</p>
+<p>Jedoch muss der Anwender keinen vollen Zugriff auf die Tabelle Verkaufszeile haben, um Codeunit auszuführen. Wenn der Benutzer über indirekte Berechtigungen für die Tabelle &quot;Verkaufszeile&quot; verfügt, wird die Codeunit &quot;Verkaufseinheit&quot; erfolgreich ausgeführt. Wenn ein Benutzer über indirekte Berechtigungen verfügt, kann dieser Benutzer die Tabelle Verkaufszeile nur ändern, indem die Verkaufsbuchung Codeunit oder ein anderes Objekt ausgeführt wird, das die Berechtigung zum ändern der Tabelle Verkaufsposition hat. Der Benutzer kann die Tabelle Verkaufsposition nur von unterstützten Anwendungsbereichen aus ändern. Der Benutzer kann die Funktion mit anderen Methoden nicht unbeabsichtigt oder böswillig ausführen.</p>
+<h3 id="to-add-other-permission-sets">Weitere Berechtigungssätze hinzufügen</h3>
+<p>Erweitern Sie einen Berechtigungssatz, indem Sie ihm andere Berechtigungssätze hinzufügen. Anschließend können Sie in jedem hinzugefügten Satz bestimmte Berechtigungen oder ganze Berechtigungssätze ein- oder ausschließen. Dies schließt Berechtigungen in den Berechtigungssätzen des Typs „Erweiterung“ und „System“ ein, die andernfalls nicht zulässig sind. Ausschlüsse gelten nur für den Berechtigungssatz, den Sie erweitern. Das ursprügnliche Set wird nicht verändert.</p>
+<p>Fügen Sie auf der Seite <strong>Berechtigungssatz</strong> einen Berechtigungssatz im Bereich <strong>Berechtigungssätze</strong> hinzu. Im Bereich <strong>Ergebnis</strong> werden alle hinzugefügten Berechtigungssätze aufgelistet. Um die Berechtigungen zu untersuchen, die in einem von Ihnen hinzugefügten Satz enthalten sind, wählen Sie den Satz im Ergebnisbereich aus und die Infobox <strong>Enthaltene Berechtigungen</strong> zeigt die Berechtigungen an.</p>
+<p>Verwenden Sie im Bereich <strong>Ergebnis</strong> das Feld <strong>Inklusionsstatus</strong>, um die Berechtigungssätze zu identifizieren, in denen Sie Berechtigungen oder Berechtigungssätze ausgeschlossen haben. Wenn etwas ausgeschlossen wurde, lautet der Status <strong>Teilweise</strong>.</p>
+<p>Wählen Sie für eine Gesamtansicht der Berechtigungen im Berechtigungssatz die Aktion <strong>Alle Berechtigungen anzeigen</strong> aus. Die Seite <strong>Erweiterte Berechtigungen</strong> zeigt alle Berechtigungen, die dem Berechtigungssatz bereits zugewiesen wurden, und die Berechtigungen in den hinzugefügten Berechtigungssätzen.</p>
+<p>Um einen Berechtigungssatz vollständig auszuschließen, wählen Sie im Bereich <strong>Ergebnis</strong> die Option <strong>Weitere Optionen anzeigen</strong>, und wählen Sie dann <strong>Ausschließen</strong>. Wenn Sie einen Berechtigungssatz ausschließen, wird eine Zeile im Bereich <strong>Berechtigungssätze</strong> vom Typ Ausgeschlossen erstellt. Wenn Sie einen Berechtigungssatz ausgeschlossen haben, ihn aber wieder einschließen möchten, löschen Sie die Zeile im Feld <strong>Berechtigungssätze</strong>.</p>
+<p>Um eine bestimmte Berechtigung in einem von Ihnen hinzugefügten Satz vollständig oder teilweise auszuschließen, erstellen Sie eine Zeile für das Objekt unter <strong>Berechtigungen</strong>. Die Felder für die Zugriffsebene, Berechtigung einfügen, Berechtigung ändern usw. enthalten alle <strong>Ausschließen</strong>. Wählen Sie die entsprechende Option, um eine bestimmte Zugriffsebene zuzulassen.</p>
+<p>Durch das Ausschließen eines Berechtigungssatzes werden alle Berechtigungen im Satz ausgeschlossen. Business Central berechnet Berechtigungen wie folgt:</p>
+<ol>
+<li>Berechnen Sie die vollständige Liste der enthaltenen Berechtigungen</li>
+<li>Berechnen Sie die vollständige Liste der ausgeschlossenen Berechtigungen</li>
+<li>Ausgeschlossene Berechtigungen aus der Liste der enthaltenen Berechtigungen entfernen (das Entfernen einer indirekten Berechtigung entspricht dem Reduzieren auf indirekt)</li>
+</ol>
+<h2 id="copy-a-permission-set">Einen Berechtigungssatz kopieren</h2>
+<p>Erstellen Sie einen neuen Berechtigungssatz, indem Sie einen anderen kopieren. Der neue Satz enthält alle Berechtigungen und Berechtigungssätze aus dem kopierten Satz. Wie die Berechtigungen und Berechtigungssätze im neuen Berechtigungssatz angeordnet sind, hängt von Ihrer Auswahl im Feld <strong>Kopiervorgang</strong> ab. Die Optionen werden in der folgenden Tabelle beschrieben.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nach Referenz kopieren</strong></td>
+<td>Der ursprüngliche Berechtigungssatz und alle ihm hinzugefügten Berechtigungssätze werden in <strong>Ergebnisse</strong> aufgelistet.</td>
+</tr>
+<tr>
+<td><strong>Kopie für flache Berechtigung</strong></td>
+<td>Alle Berechtigungen aus allen Berechtigungssätzen sind in einer flachen Liste im <strong>Bereich „Berechtigungen“</strong> enthalten. Berechtigungen werden nicht nach Berechtigungssatz organisiert.</td>
+</tr>
+<tr>
+<td><strong>Klonen</strong></td>
+<td>Erstellen Sie eine exakte Kopie des ursprünglichen Berechtigungssatzes.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Auf der Seite <strong>Berechtigungssätze</strong> wählen Sie die Zeile für einen Zugriffsrechtsatz, den Sie kopieren möchten, und wählen die <strong>Berechtigungssatz kopieren</strong>-Aktion aus.</li>
+<li>Auf der Seite <strong>Berechtigungssatz kopieren</strong> geben Sie den Namen des neuen Berechtigungssatzes an.</li>
+<li>Geben Sie im Feld <strong>Kopiervorgang</strong> an, wie die Berechtigung im neuen Berechtigungssatz angeordnet werden soll.</li>
+<li>Optional: Wenn Sie einen Systemberechtigungssatz hinzufügen, möchten Sie möglicherweise benachrichtigt werden, wenn sich der Name oder Inhalt des ursprünglichen Berechtigungssatzes in einer zukünftigen Version ändert. Auf diese Weise können Sie überlegen, ob Sie Ihren benutzerdefinierten Berechtigungssatz aktualisieren möchten. Um eine Benachrichtigung zu erhalten, schalten Sie den Schalter <strong>Bei geändertem Berechtigungssatz benachrichtigen</strong> um.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Benachrichtigung setzt voraus, dass die Benachrichtigung <strong>Ursprünglicher Systemberechtigungssatz geändert</strong> auf der Seite <strong>Meine Benachrichtigungen</strong> aktiviert ist.</p>
+</div>
+<h2 id="create-or-modify-permissions-by-recording-your-actions">Berechtigungen durch das Aufzeichnen Ihrer Aktionen erstellen oder ändern</h2>
+<ol>
+<li><p>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, welche die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Befugnissätze</strong> ein und wählen Sie dann den entsprechenden Link.</p>
+<p> Wählen Sie alternativ auf der Seite <strong>Benutzer</strong> die Aktion <strong>Berechtigungssätze</strong> aus.</p>
+</li>
+<li>Wählen Sie auf der Seite <strong>Benutzer</strong> die Aktion <strong>Neu</strong> aus.</li>
+<li>Füllen Sie die Felder in einer neuen Zeile wie erforderlich aus.</li>
+<li>Wählen Sie die Aktion <strong>Berechtigungen</strong> aus.</li>
+<li>Auf der Seite <strong>Berechtigungen</strong> wählen Sie die Aktion <strong>Berechtigungen aufzeichnen</strong> aus, und wählen Sie dann die Aktion <strong>Starten</strong> aus.<br> Die Aufzeichnung muss entweder über die Funktion <strong>Diese Seite in einem neuen Fenster öffnen</strong> (Pop-Out) erfolgen, um das Aufzeichnungsfenster <strong>Berechtigungen</strong> nebeneinander zu haben, oder Sie arbeiten innerhalb derselben Registerkarte.<br> Jetzt wird ein Aufzeichnungsprozess gestartet, der alle Ihre Aktionen auf der Benutzeroberfläche erfasst.</li>
+<li>Wechseln Sie zu den verschiedenen Seiten und Aktivitäten in Business Central für die Benutzer mit diesem Berechtigungssatz, die darauf zugreifen sollen. Sie müssen die Aufgaben ausführen, für die Sie Berechtigungen erfassen möchten.</li>
+<li>Wenn Sie die Erfassung abschließen möchten, kehren Sie zur Seite <strong>Berechtigungen</strong> zurück, und wählen Sie die <strong>Beenden</strong> Aktion aus.</li>
+<li>Wählen Sie die Schaltfläche <strong>Ja</strong>, um die erfassten Berechtigungen dem neuen Berechtigungssatz zuzuordnen.</li>
+<li>Für jedes Objekt in der erfassten Liste geben Sie an, ob Benutzer in der Lage sind, Datensätze in den erfassen Tabellen einzufügen, zu ändern oder zu löschen.</li>
+</ol>
+<h3 id="to-export-and-import-a-permission-set">So exportieren und importieren Sie einen Berechtigungssatz</h3>
+<p>Um Berechtigungen schnell einzurichten, können Sie Berechtigungssätze importieren, die Sie aus einem anderen Business Central-Mandanten exportiert haben.</p>
+<p>In Umgebungen mit mehreren Mandanten wird ein Berechtigungssatz in einen bestimmten Mandanten importiert. D. h. der Umfang des Imports ist <em>Mandant</em>.</p>
+<ol>
+<li><p>Wählen Sie auf der Seite <strong>Berechtigungssätze</strong> unter „Mandant 1“ die zu importierende(n) Zeile bzw. Zeilen für die Berechtigungssätze und dann die Aktion <strong>Berechtigungssätze exportieren</strong> aus.</p>
+<p> Eine XML-Datei wird im Download-Ordner auf Ihrem Computer erstellt. Der Name lautet standardmäßig <em>Export Permission Sets.xml</em>.</p>
+</li>
+<li><p>Wählen Sie auf der Seite <strong>Berechtigungssätze</strong> unter „Mandant 2“ die Aktion <strong>Berechtigungssätze importieren</strong> aus.</p>
+</li>
+<li><p>Berücksichtigen Sie auf der Seite <strong>Berechtigungssätze importieren</strong>, ob Sie vorhandene Berechtigungssätze mit neuen Berechtigungssätzen in der XML-Datei zusammenführen möchten.</p>
+<p> Wenn Sie das Kontrollkästchen <strong>Vorhandene Berechtigungen aktualisieren</strong> aktivieren, werden vorhandene Berechtigungssätze, deren Namen mit den in der XML-Datei vorhandenen Berechtigungssätzen übereinstimmen, mit den importierten Berechtigungssätzen zusammengeführt.</p>
+<p> Wenn Sie das Kontrollkästchen <strong>Vorhandene Berechtigungen aktualisieren</strong> nicht aktivieren, werden Berechtigungssätze, deren Namen mit den in der XML-Datei vorhandenen Berechtigungssätzen übereinstimmen, während des Imprts übersprungen. In diesem Fall werden Sie über übersprungene Berechtigungssätze informiert.</p>
+</li>
+<li><p>Suchen Sie auf der Dialogfeldseite <strong>Importieren</strong> die zu importierende XML-Datei, und wählen Sie sie aus. Wählen Sie anschließend die Aktion <strong>Öffnen</strong> aus.</p>
+</li>
+</ol>
+<p>Die Berechtigungssätze werden importiert.</p>
+<h2 id="remove-obsolete-permissions-from-all-permission-sets">Veraltete Berechtigungen aus allen Berechtigungssätzen entfernen</h2>
+<p>Wählen Sie auf der Seite <strong>Berechtigungssätze</strong> die Aktion <strong>Veraltete Berechtigungssätze entfernen</strong> aus.</p>
+<h2 id="set-up-time-constraints-for-users">Zeiteinschränkungen für Benutzende einrichten</h2>
+<p>Administratoren können Zeiträume definieren, in denen bestimmte Benutzer Beiträge veröffentlichen können. Administratoren können auch angeben, ob das System protokolliert, wie lange Benutzer angemeldet sind. Entsprechend können Administratoren Benutzern Zuständigkeitseinheiten zuordnen. Weitere Informationen finden Sie unter <a href="inventory-responsibility-centers.html">Arbeiten mit Zuständigkeitseinheiten</a>.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Benutzereinrichtung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Öffnen Sie auf der Seite <strong>Benutzereinrichtung</strong> die Aktion <strong>Neu</strong> aus.</li>
+<li>In dem Feld <strong>Benutzer-ID</strong> geben Sie die ID eines Benutzers ein, oder wählen Sie das Feld aus, um alle Nutzer der aktiven Fenster im System anzuzeigen.</li>
+<li>Füllen Sie die Felder nach Bedarf aus.</li>
+</ol>
+<h2 id="control-access-to-specific-companies">Den Zugriff auf bestimmte Unternehmen kontrollieren</h2>
+<p>Wenn Sie über mehrere Unternehmen in Business Central verfügen, muss insbesondere bei der unternehmensübergreifenden Verwaltung von Berechtigungen mit Bedacht vorgegangen werden. Sie möchten wahrscheinlich nicht, dass Benutzende für alle Unternehmen die gleichen Zugriffsrechte haben. Stattdessen müssen Sie Benutzenden möglicherweise Berechtigungen basierend auf ihrer Unternehmenszugehörigkeit erteilen. Um dieses Szenario zu unterstützen, haben Sie beim Zuweisen von Berechtigungssätzen an einzelne Benutzende oder Sicherheitsgruppen die Möglichkeit, ein bestimmtes Unternehmen auszuwählen, für das der Berechtigungssatz gilt. Das Unternehmen wird nicht explizit im Berechtigungssatz angegeben, sondern wenn der Berechtigungssatz dem Benutzenden oder der Sicherheitsgruppe zugewiesen wird.</p>
+<p>Wenn Sie bei der Vergabe eines Berechtigungssatzes keine Angabe zum Unternehmen machen, dann gilt der Berechtigungssatz für alle Unternehmen. Wenn ein Berechtigungssatz für mehrere, aber nicht für alle Unternehmen gelten soll, fügen Sie den Berechtigungssatz für jedes Unternehmen einzeln hinzu.</p>
+<p>Weitere Informationen finden Sie unter <a href="#assign-permission-sets-to-users">Benutzenden Berechtigungen zuweisen</a> oder <a href="ui-security-groups.html#assign-permissions-to-a-security-group">Einer Sicherheitsgruppe Berechtigungen zuweisen</a>.</p>
+<h2 id="manage-permissions-through-user-groups">Berechtigungen über Benutzergruppen verwalten</h2>
+<p>Benutzergruppen helfen Ihnen bei der Verwaltung von Berechtigungssätzen im gesamten Unternehmen. Business Central-Online enthält Standardbenutzergruppen, die Benutzern automatisch basierend auf ihrer Lizenz zugewiesen werden. Sie können Benutzer manuell zu einer Benutzergruppe hinzufügen und neue Benutzergruppen als Kopien vorhandener Gruppen erstellen.  </p>
+<p>Sie beginnen mit der Erstellung einer Benutzergruppe. Anschließend ordnen Sie der Gruppe Berechtigungen zu, um festzulegen, auf welche Objekte die Benutzer der Gruppe zugreifen können. Wenn Sie einen Benutzer zur Gruppe hinzufügen, gelten die für die Gruppe definierten Berechtigungssätze für den Benutzer.</p>
+<p>Berechtigungssätze, die einem Benutzer über eine Benutzergruppe zugewiesen wurden, bleiben synchronisiert. Eine Änderung der Benutzergruppenberechtigungen wird automatisch an die Benutzer weitergegeben. Wenn Sie einen Benutzer aus einer Benutzergruppe entfernen, werden die entsprechenden Berechtigungen automatisch entzogen.</p>
+<h3 id="to-add-users-to-a-user-group">So fügen Sie einer Benutzergruppe Benutzer hinzu</h3>
+<p>Die folgende Vorgehensweise erläutert, wie Sie Benutzergruppen manuell anlegen. Informationen zum automatischen Erstellen von Benutzergruppen finden Sie unter <a href="#to-copy-a-user-group-and-all-its-permission-sets">Eine Benutzergruppe und alle ihre Berechtigungen kopieren</a>.</p>
+<ol>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Benutzergruppen</strong> ein und wählen Sie dann den zugehörigen Link.</p>
+<ol>
+<li>Wählen Sie alternativ auf der Seite <strong>Benutzer</strong> die Aktion <strong>Benutzergruppen</strong> aus.</li>
+</ol>
+</li>
+<li>Wählen Sie auf der Seite <strong>Benutzergruppen</strong> die Aktion <strong>Benutzergruppenmitglieder</strong> aus.</li>
+<li>Wählen Sie auf der Seite <strong>Benutzergruppenmitglieder</strong> die Aktion <strong>Benutzer hinzufügen</strong> aus.</li>
+</ol>
+<h3 id="to-copy-a-user-group-and-all-its-permission-sets">So kopieren Sie eine Benutzergruppe und all seine Zugriffsrechtsätze</h3>
+<p>Zur schnellen Definition einer neuen Benutzergruppe können Sie eine Funktion verwenden, um alle Berechtigungssätze einer vorhandenen Benutzergruppe zur neuen Benutzergruppe zu kopieren.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Mitglieder der Benutzergruppe werden nicht in die neue Benutzergruppe kopiert. Sie müssen sie hinterher manuell hinzufügen. Weitere Informationen finden Sie im Abschnitt <a href="#to-add-users-to-a-user-group">So fügen Sie Benutzer einer Benutzergruppe hinzu</a>.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Benutzergruppen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Benutzergruppe aus, die Sie kopieren möchten, und wählen Sie <strong>Benutzergruppe kopieren</strong> aus.</li>
+<li>Im Feld <strong>Neuer Benutzergruppencode</strong> geben Sie einen Namen für die Gruppe an. Wählen Sie dann die Schaltfläche <strong>OK</strong> aus.</li>
+</ol>
+<p>Die neue Benutzergruppe wird die Seite <strong>Benutzergruppen</strong> hinzugefügt. Fahren Sie fort, um Benutzer hinzuzufügen. Weitere Informationen finden Sie im Abschnitt <a href="#to-add-users-to-a-user-group">So fügen Sie Benutzer einer Benutzergruppe hinzu</a>.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Sie erhalten einen Validierungsfehler, wenn Sie versuchen, dem Benutzer eine Benutzergruppe zuzuweisen, die sich auf einen Berechtigungssatz bezieht, der in einer nicht installierten Erweiterung definiert wurde. Dies liegt daran, dass die App-ID der Erweiterung überprüft wird, wenn darauf verwiesen wird. Um diese Benutzergruppe einem Benutzer zuzuweisen, können Sie entweder die Erweiterung neu installieren, die Referenz der deinstallierten Erweiterung aus dem Berechtigungssatz entfernen oder diesen Berechtigungssatz aus der Benutzergruppe entfernen.</p>
+</div>
+<h3 id="to-assign-permission-sets-to-user-groups">So weisen Sie Berechtigungssätze Benutzergruppen zu</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Benutzergruppen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li><p>Wählen Sie die Benutzergruppe aus, der Sie die Berechtigung zuweisen möchten.  </p>
+<p> Zugriffsrechtsätze, die dem Benutzer bereits zugewiesen sind, werden im Bereich <strong>Benutzerzugriffsrechtsätze</strong> angezeigt.</p>
+</li>
+<li>Wählen Sie die Aktion <strong>Benutzerrechtesätze</strong>, um die Seite <strong>Benutzerrechtesätze</strong> zu öffnen.</li>
+<li>Füllen Sie auf der Seite <strong>Benutzerberechtigungen</strong> in einer neuen Zeile die Felder nach Bedarf aus.</li>
+</ol>
+<h3 id="to-assign-a-permission-set-on-the-permission-set-by-user-group-page">So weisen Sie ein Berechtigungsset auf der Seite Berechtigung festgelegt nach Benutzergruppe zu</h3>
+<p>Die folgende Vorgehensweise erläutert, wie Sie Berechtigungssätze einer Benutzergruppe auf der Seite <strong>Berechtigungen nach Benutzergruppe</strong> zuordnen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Benutzer</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Wählen Sie auf der Seite <strong>Benutzer</strong> den entsprechenden Benutzer aus und wählen Sie dann die Aktion <strong>Berechtigung festgelegt durch Benutzergruppe</strong>.</li>
+<li>Aktivieren Sie auf der Seite <strong>Berechtigung festgelegt durch Benutzergruppe</strong> das Feld <strong>[Name der Benutzergruppe]</strong> in einer Zeile für die entsprechende Berechtigung, um die Gruppe der Benutzergruppe zuzuordnen.</li>
+<li>Aktivieren Sie das Kontrollkästchen <strong>Alle Benutzergruppen</strong>, um die Berechtigung allen Benutzergruppen zuzuordnen.</li>
+</ol>
+<p>Sie können einem Benutzer Berechtigungsgruppen zudem direkt zuweisen.</p>
+<h2 id="assign-permission-sets-to-users">Benutzenden Berechtigungen zuweisen</h2>
+<p>Ein Berechtigungssatz ist eine Sammlung von Berechtigungen für bestimmte Datenbankobjekte. Allen Benutzern muss mindestens ein Berechtigungssatz zugeordnet werden, bevor sie auf Business Central zugreifen können.  </p>
+<p>Eine Business Central-Lösung enthält vordefinierte Berechtigungen, die von Microsoft oder Ihrem Lösungsanbieter hinzugefügt werden. Sie können auch neue Berechtigungen hinzufügen, die auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind. Weitere Informationen finden Sie im Abschnitt <a href="#create-a-permission-set">Einen Berechtigungssatz erstellen</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie den Zugriff eines Benutzers nicht mehr einschränken möchten, als in der Lizenz bereits definiert ist, können Sie dem Benutzer eine spezielle Berechtigung namens SUPER zuweisen. Diese Berechtigung stellt sicher, dass der Benutzer auf alle in der Lizenz angegebenen Objekte zugreifen kann.</p>
+<p>Ein Benutzer mit der Essential-Lizenz und dem SUPER-Berechtigungssatz hat Zugriff auf mehr Funktionen als Benutzer mit der Team Member-Lizenz und dem SUPER-Berechtigungssatz.</p>
+</div>
+<p>Sie können den Benutzern Berechtigungsgruppen auf zwei Arten zuweisen:</p>
+<ul>
+<li>Auf der Seite <strong>Benutzerkarte</strong> durch Auswahl von Berechtigungssätzen, die dem Benutzer zugewiesen werden sollen.</li>
+<li>Auf der Seite <strong>Berechtigung vom Benutzer festgelegt</strong> durch Auswählen von Benutzern, denen ein Berechtigungssatz zugeordnet ist.</li>
+</ul>
+<h3 id="to-assign-a-permission-set-on-a-user-card">Zuweisen eines Berechtigungssatzes in einer Benutzerkarte</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Benutzer</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li><p>Wählen Sie den Benutzer aus, den Sie dem Debitor zuordnen möchten.</p>
+<p>Zugriffsrechtsätze, die dem Benutzer bereits zugewiesen sind, werden im Bereich <strong>Benutzerzugriffsrechtsätze</strong> angezeigt.</p>
+</li>
+<li>Wählen Sie auf der Seite <strong>Benutzerkarte</strong> die Aktion <strong>Bearbeiten</strong> aus.</li>
+<li><p>Füllen Sie im Inforegister <strong>Benutzer-Berechtigungssatz</strong> die Felder nach Bedarf aus. Weitere Informationen finden Sie unter <a href="ui-define-granular-permissions.html#create-a-permission-set">Einen Berechtigungssatz erstellen und bearbeiten</a>.</p>
+<p>Wenn Sie möchten, dass der Berechtigungssatz für ein bestimmtes Unternehmen gilt, legen Sie das <strong>Unternehmen</strong> auf dieses Unternehmen fest. Wenn der Berechtigungssatz für alle Unternehmen gelten soll, lassen Sie das Feld <strong>Unternehmen</strong> leer. <a href="#control-access-to-specific-companies">Weitere Informationen</a>.</p>
+</li>
+</ol>
+<h2 id="to-assign-a-permission-set-on-the-permission-set-by-user-page">Zuweisen eines Berechtigungssatzes auf der Seite Benutzerberechtigungssatz nach Benutzer</h2>
+<p>Diese Methode macht es Ihnen leichter, mehreren Benutzenden unterschiedliche Berechtigungssätze zuzuweisen. </p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Benutzer</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Wählen Sie auf der Seite <strong>Benutzer</strong> die Aktion <strong>Berechtigungssatz nach Benutzer</strong> aus.</li>
+<li>Wenn Sie möchten, dass die Berechtigungssätze nur für ein bestimmtes Unternehmen gelten, legen Sie das Feld <strong>Unternehmensname</strong> auf dieses Unternehmen fest. Wenn der Berechtigungssatz für alle Unternehmen gelten soll, lassen Sie das Feld <strong>Unternehmensname</strong> leer. <a href="#control-access-to-specific-companies">Weitere Informationen</a>.</li>
+<li><p>Auf der Seite <strong>Benutzerberechtigungssatz nach Benutzer</strong> wählen Sie das Kontrollkästchen <strong>[Benutzername]</strong> in einer Zeile für den relevanten Berechtigungssatz aus, um den Satz einem Benutzer zuzuweisen.</p>
+<p> Wählen Sie das Kontrollkästchen <strong>Alle Benutzer</strong> aus, um dem Berechtigungssatz allen Anwender zuzuweisen.</p>
+</li>
+</ol>
+<h2 id="get-an-overview-of-a-users-permissions">Eine Übersicht der Benutzerberechtigungen erhalten</h2>
+<p>Sie können die effektiven Berechtigungen anderer Benutzer nur sehen, wenn Sie die Berechtigungen SECURITY oder SUPER haben. </p>
+<p>Die Seite <strong>Effektive Berechtigungen</strong> bietet zusätzliche Informationen über die Quelle jeder Berechtigung. Beispielsweise, ob es sich bei der Quelle um eine Sicherheitsgruppe handelt oder ob eine Berechtigung vererbt wird. Die Seite enthält außerdem eine Spalte, in der Administratoren die angewendeten Sicherheitsfilter überprüfen können. Weitere Informationen über Sicherheitsfilter finden Sie unter <a href="#security-filters-limit-a-users-access-to-specific-records-in-a-table">Sicherheitsfilter beschränken den Zugriff eines Benutzers auf bestimmte Datensätze in einer Tabelle</a>.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Benutzer</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Öffnen Sie die karte des relevanten Benutzers.</li>
+<li><p>Wählen Sie die Aktion <strong>Effektive Berechtigungen</strong> aus.</p>
+<p> Der Teil <strong>Berechtigungen</strong> führt alle Datenbankobjekte auf, auf die der Benutzer Zugriff hat. Sie können diesen Abschnitt nicht bearbeiten.</p>
+<p> Der Teil <strong>Nach Berechtigungssatz</strong> zeigt die zugewiesenen Berechtigungssätze, über die dem Benutzer die Berechtigungen gewährt werden, die Quelle und den Typ des Berechtigungssatzes und in welchem Umfang die verschiedenen Zugriffsarten erlaubt sind.</p>
+<p> Für jede Zeile, die Sie im Abschnitt <strong>Berechtigungen</strong> auswählen, zeigt der Abschnitt <strong>Nach Berechtigungssatz</strong>, über welchen Berechtigungssatz oder welche Berechtigungssätze die Berechtigung gewährt wird. In diesem Abschnitt können Sie den Wert in jedem der fünf Zugriffstypfelder <strong>Leseberechtigung</strong>, <strong>Einfügeberechtigung</strong>, <strong>Bearbeitungsberechtigung</strong>, <strong>Löschberechtigung</strong> und <strong>Ausführungsberechtigung</strong> ändern.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Nur Berechtigungssätze vom Typ <strong>Benutzerdefiniert</strong> können bearbeitet werden.</p>
+<p>Die Zeilen des Quellanspruchs stammen aus der Abonnementlizenz. Die Berechtigungswerte des Anspruchs setzen Werte in anderen Berechtigungssätzen außer Kraft, wenn Ihre Priorität höher ist. Ein Wert in einem Berechtigungssatz ohne Anspruch mit einer höheren Priorität als der zugehörige Wert im Anspruch, wird in Klammern gesetzt, um anzugeben, dass er nicht wirksam ist, da er durch den Anspruch außer Kraft gesetzt wurde.</p>
+<p>Eine Erklärung der Priorität finden Sie unter <a href="ui-define-granular-permissions.html#create-a-permission-set">Einen Berechtigungssatz erstellen</a>.  </p>
+</div>
+</li>
+<li><p>Wenn Sie einen Berechtigungssatz bearbeiten möchten, wählen Sie im Teil <strong>Nach Berechtigungssatz</strong> in der Zeile für einen entsprechenden Berechtigungssatz vom Typ <strong>Benutzerdefiniert</strong> eins der fünf Zugriffstypfelder und einen anderen Wert aus.</p>
+</li>
+<li><p>Um einzelne Berechtigungen innerhalb des Berechtigungssatzes zu bearbeiten, wählen Sie den Wert im Feld <strong>Berechtigungssatz</strong> aus, um die Seite <strong>Berechtigungen</strong> zu öffnen.</p>
+</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie einen Berechtigungssatz bearbeiten, gelten die Änderungen auch für andere Benutzer, denen der Berechtigungssatz zugewiesen wurde.</p>
+</div>
+<h3 id="security-filters-limit-a-users-access-to-specific-records-in-a-table">Sicherheitsfilter beschränken den Zugriff eines Benutzers auf bestimmte Datensätze in einer Tabelle</h3>
+<p>Verwenden Sie für Sicherheit auf Datensatzebene in Business Central Sicherheitsfilter, um den Benutzerzugriff auf Daten in einer Tabelle einzuschränken. Sie erstellen Sicherheitsfilter für Tabellendaten. Ein Sicherheitsfilter beschreibt einen Satz Datensätze in einer Tabelle, worauf ein Benutzer zugreifen darf. Sie können z. B. angeben, dass ein Benutzer nur die Daten lesen kann, die Informationen über einen bestimmten Debitor enthalten. Auf diese Weise kann der Benutzer nicht auf die Daten zugreifen, die Informationen zu anderen Debitoren enthalten. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/security/security-filters">Verwenden von Sicherheitsfiltern</a> im Verwaltungsinhalt.</p>
+<h2 id="view-permission-changes-telemetry">Änderungen durch Berechtigungen an der Telemetrie anzeigen</h2>
+<p>Sie können Business Central einrichten, um Änderungen, die an der Berechtigung vorgenommen wurden, an eine Application Insights Ressource in Microsoft Azure zu senden. Anschließend erstellen Sie mit Azure Monitor Berichte und richten Warnungen für die erfassten Daten ein. Weitere Informationen finden Sie in den folgenden Artikeln in der Business Central-Hilfe für Entwickler und die Verwaltung:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/telemetry-overview#enable">Überwachung und Analyse der Telemetrie – Aktivieren Application Insights</a></li>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/telemetry-permission-changes-trace">Ananlysieren der Feldüberwachungstelemetrie</a></li>
+</ul>
+<h2 id="delegated-admin-users">Delegierte Administratorbenutzer</h2>
+<p>Möglicherweise werden in der Liste <strong>Benutzer</strong> andere Benutzer als die Ihres eigenen Unternehmens angezeigt. Wenn sich ein delegierter Administrator eines Wiederverkaufspartnerunternehmens in einer Business Central-Umgebung im Auftrag seines Debitors anmeldet, wird dieser automatisch als Benutzer in Business Central erstellt. Auf diese Weise werden die von einem delegierten Administrator ausgeführten Aktionen in Business Central protokolliert, z. B. Buchungsbelege, und mit ihrer Benutzer-ID verknüpft.  </p>
+<p>Mit der Funktion <em>Granular delegated admin privileges (GDAP)</em> wird der Benutzer in der Liste <strong>Benutzer</strong> angezeigt und kann beliebigen Berechtigungen zugewiesen werden. Sie werden nicht mit Namen und anderen personenbezogenen Informationen angezeigt, sondern mit hrem Unternehmensnamen und einer eindeutigen ID. Sowohl interne als auch externe Administratoren können diese Benutzer in der Liste <strong>Benutzer</strong> anzeigen, und sie haben einen umfassenden Einblick in die Aktionen, die diese Benutzer beispielsweise über das <a href="across-log-changes.html">Änderungsprotokoll</a> durchführen. Der tatsächliche Name dieser Benutzer wird jedoch nicht angezeigt. GDAP-Benutzer werden mit Benutzernamen im folgenden Format aufgelistet: <code>User123456@partnerdomain.com</code>. Sie haben möglicherweise einen Benutzernamen, der den Unternehmensnamen des Partners widerspiegelt, und die E-Mail-Adresse ist nicht die tatsächliche E-Mail-Adresse der Person. Auf diese Weise geben die GDAP-Benutzerkonten keine personenbezogenen Informationen preis. Wenn Sie herausfinden möchten, wer hinter einem solchen Pseudonym steckt, müssen Sie sich an das Unternehmen wenden, für das dieser Benutzer arbeitet oder gearbeitet hat.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="ui-how-users-permissions.html">Benutzer nach Lizenzen anlegen</a><br><a href="admin-users-profiles-roles.html">Profile verwalten</a><br><a href="ui-experiences.html">Funktionen, die angezeigt werden ändern</a><br><a href="ui-customizing-overview.html">Anpassen von Business Central</a><br><a href="ui-get-ready-business.html">Vorbereitung für die Geschäftstätigkeit</a><br><a href="admin-setup-and-administration.html">Verwaltung</a><br><a href="https://learn.microsoft.com/de-de/microsoft-365/admin/add-users/add-users">Benutzer zu Microsoft 365 für Unternehmen hinzufügen</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/security/security-and-protection">Sicherheit und Schutz in Business Central</a> in der Hilfe für Entwickler und IT-Profis<br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/telemetry-enable-application-insights#assign-a-telemetry-id-to-users">Benutzern eine Telemetriekennung zuweisen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

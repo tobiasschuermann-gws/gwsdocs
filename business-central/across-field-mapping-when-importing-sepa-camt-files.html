@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Feld-Zuordnung beim Importieren von SEPA CAMT-Dateien | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Feld-Zuordnung beim Importieren von SEPA CAMT-Dateien | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="field-mapping-when-importing-sepa-camt-files">Feld-Zuordnung beim Importieren von SEPA CAMT-Dateien</h1>
+
+<p>Business Central unterstützt den regionalen SEPA-Standard (Single Euro Payments Area) für das Importieren von SEPA-Bankkontoauszügen (CAMT-Format). Weitere Informationen finden Sie unter <a href="ui-extensions-amc-banking.html">Die AMC Banking 365 Fundamentals-Erweiterung verwenden</a>.  </p>
+<p> Der SEPA CAMT-Standard selbst verfügt über lokale Variationen. Daher müssen Sie möglicherweise die generische Datenaustauschdefinition ändern (angezeigt durch den <strong>SEPA CAMT-Code</strong> auf der Seite <strong>Datenaustauschdefinitionen</strong> ändern), um ihn einer lokalen Variation des Standards anzupassen. Die folgenden Tabellen zeigen die Element-zu-Feld-Zuordnung für die Tabellen 81, 273 und 274 in der SEPA CAMT-Implementierung in Business Central.  </p>
+<p> Informationen zum Erstellen oder die Stapelverarbeitung eine Datenaustauschdefinition, siehe <a href="across-how-to-set-up-data-exchange-definitions.html">Datenaustauschdefinition einrichten</a>.  </p>
+<h2 id="camt-data-mapping-to-fields-in-the-general-journal-table-81">CAMT-Datenzuordnung zu den Feldern in der Fibu Buch.-Blatt-Tabelle (81)</h2>
+<table>
+<thead>
+<tr>
+<th>Element-Pfad</th>
+<th>Meldungs-Element</th>
+<th>Datentyp</th>
+<th>Beschreibung</th>
+<th>Kennzeichen mit negativem Zeichen</th>
+<th>Feldnr.</th>
+<th>Feldname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stmt/Ntry/Amt</td>
+<td>Betrag</td>
+<td>Dezimal</td>
+<td>Der Geldbetrag im Bargeldposten</td>
+<td></td>
+<td>13</td>
+<td>Betrag</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/CdtDbtInd</td>
+<td>CreditDebitIndicator</td>
+<td>Text</td>
+<td>Gibt an, ob der Posten ein Habenbetrag oder ein Sollposten ist</td>
+<td>DBIT</td>
+<td>13</td>
+<td>Betrag</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/BookgDt/Dt</td>
+<td>Datum</td>
+<td>Datum</td>
+<td>Das Datum der Buchung eines Postens auf einem Konto oder in den Büchern des Buchhaltungsservices.</td>
+<td></td>
+<td>5</td>
+<td>Buchungsdatum</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/BookgDt/DtTm</td>
+<td>DateTime</td>
+<td>DateTime</td>
+<td>Das Datum und die Uhrzeit der Buchung eines Postens auf einem Konto oder in den Büchern des Buchhaltungsservices.</td>
+<td></td>
+<td>5</td>
+<td>Buchungsdatum</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm</td>
+<td>Name</td>
+<td>Text</td>
+<td>Der Name der Partei, die einen Geldbetrag an das (wesentlichen) schuldet können</td>
+<td></td>
+<td>1221</td>
+<td>Informationen Zahlender</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/NtryDtls/TxDtls/RmtInf/Ustrd</td>
+<td>Unstrukturiert</td>
+<td>Text</td>
+<td>Informationen, die angegeben werden, um Abgleichen/Abstimmung eines Postens mit den Artikeln zu aktivieren, die die Zahlung abgleichen soll, wie etwa Handelsrechnungen in einem Debitorensystem, in unstrukturierter Form.</td>
+<td></td>
+<td>8</td>
+<td>Beschreibung</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/AddtlNtryInf</td>
+<td>ZusätzlicheEingabeInformationen</td>
+<td>Text</td>
+<td>Zusätzliche Informationen zu der Eingabe</td>
+<td></td>
+<td>1222</td>
+<td>Transaktionsinformationen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="camt-data-mapping-to-fields-in-the-bank-acc-reconciliation-table-273">CAMT-Datenzuordnung zu den Feldern in der Bankkonto-Abstimmungstabelle (273)</h2>
+<table>
+<thead>
+<tr>
+<th>Element-Pfad</th>
+<th>Meldungs-Element</th>
+<th>Datentyp</th>
+<th>Beschreibung</th>
+<th>Kennzeichen mit negativem Zeichen</th>
+<th>Feldnr.</th>
+<th>Feldname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stmt/CreDtTm</td>
+<td>CreationDateTime</td>
+<td>Datum</td>
+<td>Das Datum und die Uhrzeit der Erstellung der Nachricht.</td>
+<td></td>
+<td>3</td>
+<td>Auszugsdatum</td>
+</tr>
+<tr>
+<td>Stmt/Bal/Amt</td>
+<td>Betrag</td>
+<td>Dezimal</td>
+<td>Der Betrag, der aus den Nettobeträgen für alle Soll- und Habenposten resultiert</td>
+<td></td>
+<td>4</td>
+<td>Auszug Schluss-Saldo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="camt-data-mapping-to-fields-in-the-bank-acc-reconciliation-line-table-274">CAMT-Datenzuordnung zu den Feldern in der Bankkonto-Abstimmungszeilentabelle (274)</h2>
+<table>
+<thead>
+<tr>
+<th>Element-Pfad</th>
+<th>Meldungs-Element</th>
+<th>Datentyp</th>
+<th>Beschreibung</th>
+<th>Kennzeichen mit negativem Zeichen</th>
+<th>Feldnr.</th>
+<th>Feldname</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stmt/Ntry/Amt</td>
+<td>Betrag</td>
+<td>Dezimal</td>
+<td>Der Geldbetrag im Bargeldposten</td>
+<td></td>
+<td>7</td>
+<td>Auszugsbetrag</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/CdtDbtInd</td>
+<td>CreditDebitIndicator</td>
+<td>Text</td>
+<td>Gibt an, ob der Posten ein Habenbetrag oder ein Sollposten ist</td>
+<td>DBIT</td>
+<td>7</td>
+<td>Auszugsbetrag</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/BookgDt/Dt</td>
+<td>Datum</td>
+<td>Datum</td>
+<td>Das Datum der Buchung eines Postens auf einem Konto oder in den Büchern des Buchhaltungsservices.</td>
+<td></td>
+<td>5</td>
+<td>Transaktionsdatum</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/BookgDt/DtTm</td>
+<td>DateTime</td>
+<td>DateTime</td>
+<td>Das Datum und die Uhrzeit der Buchung eines Postens auf einem Konto oder in den Büchern des Buchhaltungsservices.</td>
+<td></td>
+<td>5</td>
+<td>Transaktionsdatum</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/ValDt/Dt</td>
+<td>Datum</td>
+<td>Datum</td>
+<td>Das Datum, an dem Anlagen für den Kontobesitzer im Falle eines Habenpostens verfügbar sind oder oder im Falle eines Sollpostens nicht mehr verfügbar sind.</td>
+<td></td>
+<td>12</td>
+<td>Valutadatum</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/ValDt/DtTm</td>
+<td>DateTime</td>
+<td>DateTime</td>
+<td>Das Datum und die Uhrzeit, wenn Anlagen für den Kontobesitzer im Falle eines Habenpostens verfügbar sind oder oder im Falle eines Sollpostens nicht mehr verfügbar sind.</td>
+<td></td>
+<td>12</td>
+<td>Valutadatum</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Nm</td>
+<td>Name</td>
+<td>Text</td>
+<td>Der Name der Partei, die einen Geldbetrag an das (wesentlichen) schuldet können</td>
+<td></td>
+<td>15</td>
+<td>Informationen Zahlender</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/NtryDtls/TxDtls/RmtInf/Ustrd</td>
+<td>Unstrukturiert</td>
+<td>Text</td>
+<td>Informationen, die angegeben werden, um Abgleichen/Abstimmung eines Postens mit den Artikeln zu aktivieren, die die Zahlung abgleichen soll, wie etwa Handelsrechnungen in einem Debitorensystem, in unstrukturierter Form.</td>
+<td></td>
+<td>6</td>
+<td>Beschreibung</td>
+</tr>
+<tr>
+<td>Stmt/Ntry/AddtlNtryInf</td>
+<td>ZusätzlicheEingabeInformationen</td>
+<td>Text</td>
+<td>Zusätzliche Informationen zu der Eingabe</td>
+<td></td>
+<td>16</td>
+<td>Transaktionsinformationen</td>
+</tr>
+</tbody>
+</table>
+<p> Elemente im <strong>Ntry</strong>-Knoten, die in Business Central importiert, aber nicht mit einem Feld verknüpft werden, werden in der <strong>Exch.Spaltendefinition buchen</strong>-Tabelle gespeichert. Benutzer können diese Elemente <strong>Zahlungsabstimmungsbuch.-Blatt</strong>, <strong>Zahlungsausgleich</strong> und <strong>Bankkonto Abstimmen</strong> Seiten anzeigen, indem sie die <strong>Details zur Bankauszugsposition</strong> Aktion auswählen. Weitere Informationen finden Sie unter <a href="receivables-how-reconcile-payments-auto-application.html">Abstimmen von Zahlungen mithilfe der automatischen Anwendung</a>.</p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Bei einem Import von CAMT-Bankauszügen erwartet Business Central, dass jede Transaktion eindeutig ist. Dies bedeutet, dass das Feld <strong>Transaktions-ID</strong>, das vom Tag <em>Stmt/Ntry/NtryDtls/TxDtls/Refs/EndToEndId</em> in der CAMT-Datei stammt, innerhalb der offenen Bankkontoabstimmung eindeutig sein muss. Wenn die Informationen nicht vorhanden sind, ignoriert Business Central die Zahlung. Wenn eine frühere Bankabstimmung für dasselbe Bankkonto mit derselben Transaktions-ID wie beim aktuellen Import gebucht wurde, wird die aktuelle Transaktion nicht automatisch abgestimmt, kann aber dennoch importiert werden.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="across-set-up-data-exchange.html">Datenaustausch einrichten</a><br><a href="across-data-exchange.html">Daten elektronisch austauschen</a><br><a href="ui-extensions-amc-banking.html">Die AMC Banking 365 Fundamentals-Erweiterung verwenden</a><br><a href="across-how-to-use-xml-schemas-to-prepare-data-exchange-definitions.html">XML-Schemas verwenden, um Datenaustauschdefinitionen vorzubereiten</a><br><a href="receivables-how-reconcile-payments-auto-application.html">Zahlungen mit automatischem Ausgleich abstimmen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

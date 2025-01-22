@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Verwalten von &#196;nderungen des MwSt.-Satzes </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Verwalten von &#196;nderungen des MwSt.-Satzes ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="managing-vat-rate-changes">Verwalten von Änderungen des Mehrwertsteuersatzes</h1>
+
+<p>Mehrwertsteuersätze können sich je nach lokaler Gesetzgebung ändern. Jede Änderung der Mehrwertsteuer wirkt sich auf Ihre Daten in Business Central aus, unabhängig davon, ob der Mehrwertsteuersatz gesenkt, angehoben oder entfernt wird. Die Mehrwertsteuer ist mit vielen Entitäten in Business Central verbunden, z. B. Kunden, Lieferanten, Artikel, Ressourcen, Artikel Zu-/Abschläge und Sachkonten. Änderungen der Mehrwertsteuersätze erfolgen normalerweise zu einem bestimmten Zeitpunkt. Ab diesem Zeitpunkt müssen Sie die MwSt.-Einrichtung und Buchungsgruppen usw. geändert haben, um sicherzustellen, dass neue Verkaufsaufträge und Einkaufsbestellungen mit dem neuen Mehrwertsteuersatz erstellt werden.</p>
+<h2 id="changing-vat-rates">Ändern von Mehrwertsteuersätzen</h2>
+<p>Der optimale Ansatz für die Verwaltung einer Änderung des Mehrwertsteuersatzes besteht darin, offene Bestellungen und andere Dokumente vor dem Datum der Änderung des Mehrwertsteuersatzes vollständig zu buchen und zu schließen, um sicherzustellen, dass diese nicht von der Änderung betroffen sind. Dies ist die sauberste Vorgehensweise, die es Ihnen ermöglicht, neue Bestellungen und Dokumente mit dem neuen Mehrwertsteuersatz zu starten.</p>
+<p>Die folgende Methode wird vorgeschlagen, um eine Änderung des Mehrwertsteuersatzes zu verwalten.</p>
+<ol>
+<li>Buchen und schließen Sie offene Aufträge, Buch.-Blätter und andere Dokumente vor dem Umstellungsdatum vollständig. Sie können bis nach dem Umstellungsdatum warten, solange Sie keine neuen Zeilen hinzufügen und sicherstellen, dass das Gültigkeitsdatum vor dem Umstellungsdatum liegt.  </li>
+<li>Erstellen Sie die neue MwSt-Einrichtung.  </li>
+<li>Nehmen Sie die MwSt-Umstellung für Entitäten vor (relevante Debitoren, Kreditoren, Artikel usw.).  </li>
+<li>Am Umstellungsdatum des Mehrwertsteuersatzes erstellen Sie neue Dokumente, die den neuen Satz verwenden.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Das Tool zum Ändern des MwSt.-Satzes wird derzeit aktualisiert. Die nachfolgend aufgeführten Funktionen stimmen möglicherweise nicht mit den Funktionen in Ihrer Umgebung überein. Das Update wird vor dem 1. Juli 2020 ausgeführt und ist kein regelmäßiges monatliches Update. Stattdessen werden alle Umgebungen automatisch aktualisiert (Hotfix). Wenn dieses Update abgeschlossen ist, wird diese Meldung nicht mehr angezeigt.  </p>
+</div>
+<h2 id="the-vat-rate-change-tool">Das Tool zum Ändern des MwSt.-Satzes</h2>
+<p>Das Tool zum Ändern des MwSt.-Satzes kann die Umrechnung von Mehrwertsteuersätzen für Masterdaten, Buch.-Blätter und Bestellungen in gewissem Umfang unterstützen. Dies ist nützlich, wenn Sie die Mehrwertsteuer für Masterdaten einfacher umrechnen möchten oder Sie über Aufträge verfügen, die Sie nicht vor dem Umstellungsdatum schließen können und die über einen längeren Zeitraum bearbeitet werden und das Umstellungsdatum des Mehrwertsteuersatzes überschreiten. Das angewendete Tool zum Ändern des MwSt.-Satzes unterliegt bestimmten Einschränkungen und Einschränkungen.</p>
+<h2 id="understanding-the-vat-rate-conversion-process-and-limitations">Verstehen des Prozesses und der Einschränkungen des Tools zum Ändern des MwSt.-Satzes</h2>
+<p>Das Tool zum Ändern des MwSt.-Satzes führt Mehrwertsteuersatzkonvertierungen für Masterdaten, Buch.-Blätter und Aufträge auf verschiedene Arten aus. Die ausgewählten Masterdaten und die Buch.-Blätter werden von der neuen Produktbuchungsgruppe oder der MwSt.-Produktbuchungsgruppe aktualisiert. Wenn eine Bestellung vollständig oder teilweise geliefert wurde, behalten die gelieferten Artikel die aktuelle Produktbuchungsgruppe oder MwSt.-Produktbuchungsgruppe. Eine neue Auftragszeile wird für die nicht gelieferten Artikel erstellt und aktualisiert, um aktuelle und neue Produktbuchungsgruppen oder MwSt.-Produktbuchungsgruppen aufeinander auszurichten. Darüber hinaus werden Artikelzu-/-abschlagszuweisungen, Konfigurationsvorlagen für Artikel, Reservierungen und Artikelverfolgungsinformationen entsprechend aktualisiert. </p>
+<p>In Auftragspositionen wird der VK-Preis für alle Zeilen des Typs „Artikel“ und „Ressource“ aktualisiert, wenn Preise inkl. Mehrwertsteuer für den Artikel verwendet werden. Bei anderen Positionstypen kann entschieden werden, ob der VK-Preis aktualisiert werden soll oder nicht.</p>
+<p>Es gibt mehrere Elemente, die das Werkzeug nicht konvertiert:</p>
+<ul>
+<li>Verkaufs- oder Einkaufsbestellungen und -rechnungen, in denen Lieferungen gebucht wurden. Diese Belege werden unter Verwendung des aktuellen Mehrwertsteuersatzes gebucht.  </li>
+<li>Belege mit gebuchten Vorauszahlungsrechnungen. Beispielsweise haben Sie Vorauszahlungen auf Rechnungen geleistet oder erhalten, die nicht vollständig erledigt sind, bevor Sie das Mehrwertsteuersatz-Änderungstool verwenden. In diesem Fall gibt es eine Differenz zwischen der MwSt., die fällig ist, und der MwSt., die in den Vorauszahlungen bezahlt wurde, wenn die Rechnung abgeschlossen wird. Das Mehrwertsteuersatz-Änderungstool überspringt diese Belege, und Sie müssen sie manuell aktualisieren.  </li>
+<li>Verkaufs- oder Einkaufsbestellungen mit Lagerintegration, wenn sie teilweise geliefert oder erhalten werden.  </li>
+<li>Direktlieferungen</li>
+<li>Spezialaufträge </li>
+<li>Montageaufträge</li>
+<li>Serviceverträge.  </li>
+<li>Gutschriften</li>
+<li>Reklamationen</li>
+<li>Preise für Artikel (Masterdaten)</li>
+<li>Preise für Verkaufspreise (Masterdaten)</li>
+<li>Geschäftsbuchungsgruppen für Debitoren und Kreditoren</li>
+</ul>
+<h3 id="to-prepare-vat-rate-change-conversions">So bereiten Sie Mehrwertsteuersatzänderungen vor</h3>
+<p>Bevor Sie das Mehrwertsteuersatz-Änderungstool einrichten, müssen Sie die folgenden Vorbereitungen durchführen.</p>
+<ul>
+<li>Wenn Sie Transaktionen haben, die verschiedene Sätze verwenden, müssen sie in verschiedene Gruppen aufgeteilt werden, entweder durch Erstellen neuer Sachkonten für die einzelnen Sätze oder mithilfe von Datenfiltern, um Transaktionen entsprechend dem Satz zu gruppieren.  </li>
+<li>Wenn Sie neue Sachkonten erstellen, müssen Sie auch neue allgemeine Buchungsgruppen erstellen.  </li>
+<li>Um die Anzahl der Belege zu verringern, die konvertiert werden, buchen Sie möglichst viele Belege, und reduzieren Sie nicht gebuchte Belege auf ein Minimum.  </li>
+<li>Sichern von Daten.</li>
+</ul>
+<h3 id="to-set-up-the-vat-rate-change-tool">So richten Sie das Mehrwertsteuersatz-Änderungstool ein</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einrichtung der MwSt.-Satzänderung</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie auf den Inforegistern <strong>Masterdaten</strong>, <strong>Buch.-Blätter</strong> und <strong>Belege</strong> einen Buchungsgruppenwert aus der Liste der Optionen für erforderliche Felder aus. Für jede Gruppe können Sie wählen, ob Sie MwSt.-Produktbuchungsgruppen oder allgemeine Produktbuchungsgruppen konvertieren oder beide Werte konvertieren möchten, sofern sie im Masterdatenelement verfügbar sind. Für einige Bereiche können Sie auch einen Filter festlegen, um nur eine Teilmenge von Werten zu konvertieren, z. B. Sachkonten. </li>
+<li>Wählen Sie auf dem Inforegister <strong>Preise inkl. MwSt</strong> aus, für welche Zeilenarten in Bestellungen Sie VK-Preise aktualisieren möchten. VK-Preise in Zeilen vom Typ „Artikel“ und „Ressource“ werden immer aktualisiert.</li>
+</ol>
+<h3 id="to-set-up-product-posting-group-conversion">So richten Sie die Produktbuchungsgruppenkonvertierung ein</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einrichtung der MwSt.-Satzänderung</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie auf der Seite <strong>Einrichtung der MwSt.-Satzänderung</strong> entweder die Option <strong>Umrech. für MwSt.-Produktbuchungsgruppe</strong> oder <strong>Umrech. für Produktbuchungsgruppe</strong> Aktion.  </li>
+<li>Geben Sie im Feld <strong>Code ab</strong> die aktuelle Buchungsgruppe ein.  </li>
+<li>Geben Sie den neuen Standort in dem Feld <strong>Cod zu</strong> ein.  </li>
+</ol>
+<h3 id="to-perform-vat-rate-change-conversion">So führen Sie eine Umrechnung für die MwSt.-Satzänderung aus</h3>
+<p>Sie verwenden das MwSt.-Satz-Änderungstool, um Änderungen im Standard-MwSt.-Satz zu verwalten. Sie führen MwSt.- und Buchungsgruppenkonvertierungen durch, um Mehrwertsteuersätze zu ändern und genaue MwSt.-Abrechnungen zu erstellen. Abhängig von Ihrem Setup werden folgende Änderungen vorgenommen:  </p>
+<ul>
+<li>MwSt.-Buchungsgruppen und Buchungsgruppen werden konvertiert.  </li>
+<li>Änderungen werden in den Sachkonten, den Debitoren, den Kreditoren, den offenen Belegen, den Buch.-Blattzeilen usw. implementiert.  </li>
+</ul>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Bevor Sie die Umrechnung für MwSt.-Satzänderungen ausführen, können Sie die Konvertierung testen. Um dies zu tun, führen Sie die Schritte unten aus, stellen Sie aber sicher, dass Sie die Kontrollkästchen <strong>Konvertierung durchführen</strong> und <strong>Tool zum Ändern des MwSt.-Satzes abgeschlossen</strong> deaktivieren. Während der Testkonvertierung wird das Feld <strong>Konvertiert</strong> in der Tabelle <strong>Protokollposten für MwSt.-Satzänderung</strong> gelöscht und das Feld <strong>Konvertierungsdatum</strong> in der Tabelle <strong>Protokollposten für MwSt.-Satzänderung</strong> ist leer. Nach der Umrechnung wählen Sie auf der Registerkarte Start, in der Gruppe Prozess die Option <strong>Änderungsprotokollposten für MwSt.-Satz</strong> aus, um die Ergebnisse der Umrechnung anzuzeigen. Prüfen Sie jeden Posten, bevor Sie die Umrechnung ausführen. Insbesondere überprüfen Sie Transaktionen, die einen alten Mehrwertsteuersatz verwenden.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>MwSt.-Satz-Änderung</strong> ein und wählen Sie dann den Link <strong>Einrichtung der MwSt.-Satzänderung</strong>.  </li>
+<li>Vergewissern Sie sich, dass Sie bereits die MwSt.-Produktbuchungsgruppen-Umrechnung oder die Produktbuchungsgruppen-Umrechnung eingerichtet haben.  </li>
+<li><p>Wählen Sie das Kontrollkästchen <strong>Konvertierung durchführen</strong>.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p> Deaktivieren Sie das Kontrollkästchen <strong>Tool zum Ändern des MwSt.-Satzes abgeschlossen</strong>. Das Kontrollkästchen wird automatisch aktiviert, wenn die Umrechnung für die MwSt.-Satzänderung abgeschlossen ist.  </p>
+</div>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Konvertieren</strong> aus.  </p>
+</li>
+<li>Nachdem die Konvertierung abgeschlossen ist, wählen Sie die Aktion <strong>Änderungsprotokollposten für MwSt.-Satz</strong>, um die Ergebnisse der Konvertierung anzuzeigen.  </li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Nachdem die Umrechnung abgeschlossen ist, wird das Feld <strong>Konvertiert</strong> in der Tabelle <strong>Protokollposten für MwSt.-Satzänderung</strong> ausgewählt und das Feld <strong>Konvertierungsdatum</strong> in der Tabelle <strong>Protokollposten für MwSt.-Satzänderung</strong> wird mit dem Umrechnungsdatum ausgefüllt.  </p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance-setup-vat.html">Mehrwertsteuer einrichten</a><br><a href="finance-setup-unrealized-vat.html">Einrichten von unrealisierter Mehrwertsteuer</a><br><a href="finance-how-report-vat.html">Meldung der Mehrwertsteuer an eine Steuerbehörde</a><br><a href="finance-work-with-vat.html">Arbeiten mit MwSt im Verkauf und Einkauf</a><br><a href="about-localization.html">Lokale Funktion in Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Drucker f&#252;r Universal Print einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Drucker f&#252;r Universal Print einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-universal-print-printers">Drucker für Universal Print einrichten</h1>
+
+<!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[azure-ad-to-microsoft-entra-id](~/../shared-content/shared/azure-ad-to-microsoft-entra-id.md)]
+
+: Couldn&#39;t find file ../shared-content/shared/azure-ad-to-microsoft-entra-id.md. -->[!INCLUDE[azure-ad-to-microsoft-entra-id](~/../shared-content/shared/azure-ad-to-microsoft-entra-id.md)]
+
+<!--END ERROR INCLUDE --><p>Universal Print ist ein auf Microsoft 365 basierender Abonnement-Service, der vollständig über Microsoft Azure ausgeführt wird. Sie erhalten eine zentralisierte Druckerverwaltung über das Universal Print-Portal. Business Central stellt in Universal Print eingerichtete Drucker Clientbenutzern über die Erweiterung <strong>Universal Print-Integration</strong> zur Verfügung.</p>
+<p><img src="media/universal-print-arch.png" alt="Universal Print Einrichtung."></p>
+<p>Für die vollständige Einrichtung müssen Sie in Microsoft Azure über das <a href="https://portal.azure.com">Azure-Portal</a> und in Business Central arbeiten. Die Einrichtung ist wie in diesem Artikel beschrieben in zwei Hauptaufgaben unterteilt:</p>
+<ol>
+<li>Richten Sie Universal Print in Microsoft Azure ein und fügen Sie die Drucker, die Sie in Business Central verwenden möchte, in einer Druckfreigabe hinzu. Navigieren Sie zu <a href="#set-up-universal-print-and-printers-in-microsoft-azure">diesem Abschnitt</a>.</li>
+<li>Fügen Sie in Business Central die Drucker aus den Druckfreigaben in Universal Print hinzu. Wechseln Sie zu <a href="#add-printers-in-business-central-online">diesem Abschnitt</a> für online oder <a href="#add-printers-in-business-central-on-premises">hierher</a> für lokal.</li>
+</ol>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li><p>Unterstützte Drucker</p>
+<p>Business Central unterstützt dieselben Drucker wie Universal Print, die entweder Universal Print-kompatible oder nicht kompatible Drucker sein können. Nicht kompatible Drucker können nicht direkt mit Universal Print kommunizieren. Daher benötigen sie eine zusätzliche Anschlusssoftware, die von Universal Print bereitgestellt wird. Einige ältere Drucker werden möglicherweise nicht unterstützt. </p>
+</li>
+<li><p>Universal Print:</p>
+<ul>
+<li><p>Ein Universal Print-Abonnement/eine Lizenz für Ihre Organisation</p>
+<p>Erfahren Sie mehr unter <a href="https://learn.microsoft.com/de-de/universal-print/fundamentals/universal-print-license">Universal Print lizenzieren</a>.</p>
+</li>
+<li><p>Sie verfügen in  <a href="https://learn.microsoft.com/de-de/entra/identity/role-based-access-control/permissions-reference#printer-administrator">ID mindestens über die Rolle</a> Druckeradministrator Microsoft Entra .</p>
+<p>Um Universal Print verwalten zu können, muss Ihr Konto in  <a href="https://learn.microsoft.com/de-de/entra/identity/role-based-access-control/permissions-reference#printer-administrator">ID mindestens über die Rolle</a> Druckeradministrator Microsoft Entra  verfügen. Diese Rollen werden nur für die Verwaltung von Universal Print benötigt. Es ist nicht erforderlich, dass Personen sie Einrichten und die Drucker von Business Central.</p>
+</li>
+</ul>
+</li>
+<li><p>Business Central online and lokal:</p>
+<ul>
+<li>Business Central 2021 Veröffentlichungszyklus 1 oder später.</li>
+<li><p>Die Erweiterung <strong>Universal Print-Integration</strong> ist installiert.</p>
+<p>Diese Erweiterung wird standardmäßig als Teil von Business Central online und vor Ort veröffentlicht und installiert. Sie können überprüfen, ob es auf der Seite <strong>Erweiterungsverwaltung</strong> installiert ist. Weitere Informationen erhalten Sie unter <a href="ui-extensions-install-uninstall.html">Installieren und Deinstallieren von Erweiterungen in Business Central</a>.</p>
+</li>
+</ul>
+</li>
+<li><p>Business Central nur vor Ort:</p>
+<ul>
+<li>Microsoft Entra-ID oder NavUserPassword-Authentifizierung ist konfiguriert.
+&gt; [!NOTE]
+&gt;  Die Universal Print-Erweiterung unterstützt keine Service-to-Service (S2S)-Authentifizierung. Sie erfordert einen angemeldeten Benutzer, um Druckaufträge über die Graph-API an den universellen Druckdienst zu senden.</li>
+<li><p>Eine Anwendung für Business Central ist in Ihrem Microsoft Entra-Mandanten und Business Central registriert.</p>
+<p>Wie andere Azure-Dienste, mit denen Business Central arbeitet, benötigt Universal Print eine App-Registrierung für Business Central in Microsoft Entra-ID. Die App-Registrierung bietet Authentifizierungs- und Autorisierungsdienste zwischen Business Central und Universal Print.</p>
+<p>Ihre Bereitstellung verwendet möglicherweise bereits eine App-Registrierung für andere Azure-Dienste, z. B. Power BI. Wenn ja, verwenden Sie auch die vorhandene App-Registrierung für Universal Print, anstatt eine neue hinzuzufügen. In diesem Fall müssen Sie lediglich die App-Registrierung so ändern, dass sie die relevanten Druckberechtigungen für die Microsoft Graph-API enthält: <strong>PrinterShare.ReadBasic.All</strong>, <strong>PrintJob.Create</strong> und <strong>PrintJob.ReadBasic</strong>. </p>
+<p>Befolgen Sie die unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/register-app-azure#register-an-application-in-azure-active-directory">Registrieren Sie eine Anwendung in Microsoft Entra-ID</a> beschriebenen Schritte, um eine App zu registrieren und die richtigen Berechtigungen festzulegen.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="set-up-universal-print-and-printers-in-microsoft-azure">Universal Print und Drucker in Microsoft Azure einrichten</h2>
+<p>Bevor Sie mit der Verwaltung von Universal Print-Druckern in Business Central beginnen können, müssen Sie Aufgaben ausführen, um Universal Print in Azure mit den gewünschten Druckern zu verwenden.</p>
+<p>Ausführliche Anweisungen zum Einrichten finden Sie unter <a href="https://learn.microsoft.com/de-de/universal-print/fundamentals/universal-print-getting-started">Erste Schritte: Universal Print einrichten</a> in der Universal Print-Dokumentation. Hier ist eine Übersicht über die Schritte, die Sie ausführen müssen. Die meisten dieser Schritte werden im Azure-Portal ausgeführt.</p>
+<ol>
+<li><p>Weisen Sie sich und anderen Benutzern Universal Print-Lizenzen zu.</p>
+<p> Wie Sie die Lizenz zuweisen, hängt davon ab, ob Sie sich online oder lokal in Business Central integrieren.</p>
+<ul>
+<li><p>Mit Business Central online weisen Sie Lizenzen über das Microsoft 365 Admin-Center zu.</p>
+<p>Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/microsoft-365/admin/manage/assign-licenses-to-users">Microsoft Admin Center-Hilfe – Benutzern Lizenzen zuweisen</a>.</p>
+</li>
+<li><p>Mit Business Central-On-premises weisen Sie Lizenzen in Ihrem Mandanten über das Azure-Portal zu.</p>
+<p>Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/azure/active-directory/fundamentals/license-users-groups">Azure Directory – Lizenzen im -Portal zuweisen oder entfernen</a>.</p>
+</li>
+</ul>
+</li>
+<li><p>Installieren Sie den Universal Print-Konnektor zum Registrieren von Druckern, die nicht direkt mit Universal Print kommunizieren können.</p>
+<p> Die meisten Drucker auf dem Markt können nicht nicht direkt mit Universal Print kommunizieren, deshalb müssen Sie den Universal Print-Konnektor installieren. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/universal-print/fundamentals/universal-print-connector-installation">Installieren des Universal Print-Konnektors</a>.</p>
+</li>
+<li><p>Registrieren Sie Ihre Drucker in Universal Print.</p>
+<p> Durch die Registrierung eines Druckers wird Universal Printer auf den Drucker aufmerksam.</p>
+<ul>
+<li><p>Befolgen Sie bei Druckern, die direkt mit Universal Print kommunizieren können, die vom Druckerhersteller angegebenen Schritte.</p>
+</li>
+<li><p>Registrieren Sie bei anderen Druckern die Drucker über den Universal Print-Konnektor. </p>
+<p>Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/universal-print/fundamentals/universal-print-connector-printer-registration">Druckerregistrierung</a>.</p>
+</li>
+</ul>
+</li>
+<li><p>Druckereigenschaften ändern (optional)</p>
+<p> Nachdem ein Drucker registriert wurde, können Sie Druckereigenschaften wie Standardeinstellungen anzeigen und ändern.</p>
+<p> Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/universal-print/reference/portal/printer-settings">Verwalten der Druckereinstellungen mit dem Universal Print Portal</a>.</p>
+</li>
+<li><p>Teilen Sie die Drucker mit Benutzern.</p>
+<p> Jeder Drucker, den Sie in Business Central verwenden möchten, muss in Universal Print einer <em>Druckerfreigabe</em> hinzugefügt werden. Jeder Benutzer, der Zugriff auf den Drucker benötigt, muss als Mitglied der Druckerfreigabe hinzugefügt werden. Erfahren Sie mehr unter <a href="https://learn.microsoft.com/de-de/universal-print/reference/portal/share-printers">Teilen a Printer</a>.</p>
+<div class="TIP"><h5>Tipp</h5><p>Sie können Benutzer später jederzeit hinzufügen oder entfernen. Weitere Informationen finden Sie unter  <a href="https://learn.microsoft.com/de-de/universal-print/reference/portal/share-printers#configure-user-permissions-for-a-printer-share">Benutzerberechtigungen für Drucker Teilen konfigurieren</a>.</p>
+</div>
+</li>
+<li><p>Aktivieren Sie die Dokumentkonvertierung.</p>
+<p> Universal Print rendert Inhalte für den Druck im XPS-Format. Einige ältere marktübliche Drucker unterstützen das Rendern von XPS-Inhalten in vielen Fällen nicht, sondern nur das PDF-Format. Das Drucken auf diesen Druckern schlägt fehl, es sei denn, Universal Print ist so eingerichtet, dass Dokumente in das vom Drucker unterstützte Format konvertiert werden.</p>
+<p> Weitere Informationen finden Sie unter  <a href="https://learn.microsoft.com/de-de/universal-print/reference/portal/settings#2-document-conversion">Dokumentenkonvertierung</a>.</p>
+</li>
+</ol>
+<p>Jetzt können Sie die Drucker Business Central hinzufügen, Standarddrucker für Berichte einrichten und drucken.  </p>
+<h2 id="add-printers-in-business-central-online">Drucker in Business Central Online hinzufügen</h2>
+<p>Nachdem die Drucker in Universal Print eingerichtet und freigegeben wurden, können Sie sie zur Verwendung in Business Central hinzufügen. Es gibt zwei Möglichkeiten, Universal Print-Drucker hinzuzufügen. Sie können die Drucker auf einmal oder einzeln hinzufügen.</p>
+<p>Wenn Sie Drucker einzeln hinzufügen, können Sie denselben Universal Print-Drucker in Business Central mehrmals einrichten. Anschließend können Sie für jeden hinzugefügten Drucker die Druckeinstellungen wie Papierfach, Größe und Ausrichtung ändern. Auf diese Weise können Sie Drucker für verschiedene Berichte und Dokumente einrichten, für die besondere Ausgabeanforderungen gelten.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Verwenden Sie Business Central lokal? Wenn ja, gehen Sie zum <a href="#add-printers-in-business-central-on-premises">nächsten Abschnitt</a>, die erstmalige Einrichtung ist etwas anders.  </p>
+<!-- To Do Adding printers individually lets you duplicate printers with custom , like different paper trays and paper size and orientation.  To add printers individually, you'll need to know printer's share name in Universal Print. -->
+</div>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Druckerverwaltung</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li><p>Klicken Sie auf <strong>Universal Print</strong>, und wählen Sie dann eine der folgenden Optionen aus:</p>
+<ul>
+<li><strong>Alle Universal Print-Drucker hinzufügen</strong>, um alle Drucker hinzuzufügen, die noch nicht hinzugefügt wurden. Sie können diese Option auch dann verwenden, wenn bereits Drucker hinzugefügt wurden.</li>
+<li><strong>Universal Print-Drucker hinzufügen</strong>, um einen bestimmten Drucker hinzuzufügen.  </li>
+</ul>
+</li>
+<li><p>Folgen Sie den Anweisungen auf dem Bildschirm.</p>
+<ul>
+<li><p>Wenn Sie <strong>Alle Universal Print-Drucker hinzufügen</strong> auswählen, beginnt die Einrichtung <strong>Universal Print-Drucker hinzufügen</strong>. </p>
+</li>
+<li><p>Wenn Sie <strong>Universal Print-Drucker hinzufügen</strong> auswählen, erscheint die Seite <strong>Universal Print-Drucker – Einstellungen</strong>. Füllen Sie das Feld <strong>Name</strong> aus, und wählen Sie dann die Auslassungspunkte <strong>...</strong> neben dem Feld <strong>Druckfreigabe in Universal Print</strong> aus, um die Druckerfreigabe mit dem Universal Print-Drucker auszuwählen. Füllen Sie die verbleibenden Felder je nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen..</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Nachdem ein Drucker hinzugefügt wurde, können Sie seine Einstellungen über <strong>Druckerverwaltung</strong> anzeigen und ändern. Wählen Sie einfach den Drucker und dann <strong>Druckereinstellungen bearbeiten</strong> aus.</p>
+<h2 id="add-printers-in-business-central-on-premises">Drucker in Business Central lokal hinzufügen</h2>
+<!--With [!INCLUDE[prod_short](includes/prod_short.md)] on-premises, unlike online, users aren't automatically authenticated with the registered app in Azure used for the Universal Print service. So, before any Business Central user (including admins) can add or even use Universal Print printers, they'll have to authenticate with the Azure app and grant access to the Universal Print service. The following procedure describes how to initiate this authentication flow. Each user typically only has to do this task once.-->
+<p>Bevor ein Benutzer Universal Print-Drucker zu Business Central hinzufügen oder verwenden kann, muss er den Zugriff auf die von Universal Print verwendeten Azure-Dienste autorisieren und ihm die Berechtigung für Daten und Vorgänge erteilen, z. B.:</p>
+<ul>
+<li>Anmelden und lesen des Benutzerprofils</li>
+<li>Lesen grundlegender Druckauftragsinformationen</li>
+<li>Erstellen von Druckaufträgen</li>
+</ul>
+<p>Dies geschieht in der Regel beim ersten Herstellen einer Verbindung mit der für Universal Print verwendeten in Azure registrierten App. In Business Central Online erfolgt dieser Autorisierungsfluss nahtlos, ohne Benutzerinteraktion. Aber Business Central lokal funktioniert anders. Es erfordert, dass Sie oder jeder andere Benutzer, der Universal Print-Drucker verwenden möchte, den Authentifizierungsablauf initiiert&mdash;normalerweise nur einmal. Die direkteste Methode wird in den folgenden Schritten beschrieben. Ein weniger direkter Weg ist die Verbindung mit einem anderen integrierten Dienst, der dieselbe registrierte Azure-App verwendet, wie Power BI oder OneDrive. Jeder Benutzer muss diese Aufgabe normalerweise nur einmal ausführen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie ein Administrator sind, empfehlen wir Ihnen, diese Aufgabe vor anderen Benutzern abzuschließen. Informieren Sie anschließend die Benutzer, die Universal Print-Drucker verwenden müssen, wie dies zu tun ist. Wenn die von Azure registrierte App für Universal Print die Zustimmung des Administrators für API-Berechtigungen erfordert, ist es einfacher, wenn Sie die Zustimmung im Namen der Organisation erteilen. Sie können die Administratoreinwilligung über das Azure-Portal erteilen, oder wenn Sie die folgenden Schritte ausführen. </p>
+</div>
+<!-- To Do Adding printers individually lets you duplicate printers with custom , like different paper trays and paper size and orientation.  To add printers individually, you'll need to know printer's share name in Universal Print. -->
+<h3 id="connect-to-universal-print-for-the-first-time">Erstmaliges Herstellen einer Verbindung mit Universal Print</h3>
+<p>Führen Sie diese Schritte aus, um zum ersten Mal eine Verbindung mit dem Universal Print-Dienst herzustellen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Druckerverwaltung</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Wählen Sie <strong>Universal Print</strong> &gt; <strong>Alle Universal Print-Drucker hinzufügen</strong>, um den <strong>Universal Print-Drucker hinzufügen</strong>-Assisted Setup Guide (Assistenten).</li>
+<li><p>Befolgen Sie die Anweisungen auf dem Bildschirm, bis Sie zur Seite <strong>MICROSOFT ENTRA-SERVICEBERECHTIGUNGEN</strong> gelangen.</p>
+ <!--The MICROSOFT ENTRA SERVICE PERMISSIONS page appears. You'll be prompted to give consent to Azure Services. You'll be lead through the process of verifying your Microsoft Entra ID setup, checking your Universal Print license, and then adding the printers.-->
+
+<p><img src="media/azure-ad-services-permissions.png" alt="Zeigt die Seite MICROSOFT ENTRA-SERVICEBERECHTIGUNGEN an" title="Zeigt die Seite MICROSOFT ENTRA-SERVICEBERECHTIGUNGEN an"></p>
+</li>
+<li><p>Wählen Sie den Link <strong>Azure-Dienste autorisieren</strong> aus.</p>
+<ol>
+<li><p>Wenn die Seite <strong>Berechtigung angefordert</strong> angezeigt wird, lesen Sie sie sorgfältig durch und wählen Sie <strong>Akzeptieren</strong>, um zuzustimmen und fortzufahren. Wenn Sie als Administrator arbeiten, können Sie <strong>Zustimmung im Namen der Organisation</strong> auswählen, wenn Sie für alle Benutzer zustimmen möchten.</p>
+<p><img src="media/azure-ad-permissions-requested.png" alt="Zeigt die Seite Azure-Anforderungsberechtigungen" title="Seite Azure-Anforderungsberechtigungen"> an.</p>
+</li>
+<li><p>Falls Sie dazu aufgefordert werden, melden Sie sich mit Ihrem Namen und Kennwort an.</p>
+</li>
+</ol>
+</li>
+<li><p>Wenn die Autorisierung erfolgreich abgeschlossen wurde, kehren Sie zur Seite <strong>Universal Print-Drucker hinzufügen</strong> zurück. Wählen Sie <strong>Weiter</strong> &gt; <strong>Beenden</strong>, um die Einrichtung abzuschließen.</p>
+</li>
+</ol>
+<p>Nachdem ein Drucker hinzugefügt wurde, können Sie seine Einstellungen über <strong>Druckerverwaltung</strong> anzeigen und ändern. Wählen Sie einfach den Drucker und dann <strong>Druckereinstellungen bearbeiten</strong> aus.</p>
+<p>Sobald Sie die Erstanmeldung abgeschlossen haben, können Sie die Universal Print-Drucker zum Drucken von Berichten und anderen Druckaufträgen verwenden. Weitere Informationen finden Sie unter <a href="ui-work-report.html#PrintReport">Drucken eines Berichts</a>. Wenn Sie Drucker hinzufügen, entfernen oder ändern möchten, kehren Sie einfach zurück zur Seite <strong>Druckverwaltung</strong> zurück und wählen Sie <strong>Universal Print</strong>.</p>
+<h2 id="common-problems-and-resolutions">Häufige Probleme und Lösungen</h2>
+<p>In diesem Abschnitt erfahren Sie mehr über die häufigsten Probleme, auf die Benutzer möglicherweise stoßen, wenn sie versuchen, Universal Print-Drucker einzurichten oder zu verwenden.</p>
+<h3 id="you-dont-have-access-to-the-printer-your-printer">Sie haben keinen Zugriff auf den Drucker &lt;your-printer>.</h3>
+<p>Wenn ein Benutzer diese Meldung erhält, wenn er versucht, einen Beleg auf einem Universal Print-Drucker zu drucken, kann dies durch eine der folgenden Bedingungen verursacht werden:</p>
+<ul>
+<li>Dem Benutzer ist keine Universal Print-Lizenz für sein Microsoft 365 - oder Azure Active AD-Konto zugewiesen. </li>
+<li>Der Benutzer wird der Druckerfreigabe in Universal Print nicht zugewiesen.</li>
+<li>(Lokal) Die für Universal Print verwendete Azure-App-Registrierung funktioniert nicht oder wurde kürzlich geändert, seit sich der Benutzer das letzte Mal angemeldet hat.</li>
+<li>(Lokal) Der Benutzer hat sich noch nicht bei der von Azure registrierten App für die Universal Print-App angemeldet und zum ersten Mal zugestimmt.</li>
+</ul>
+<h2 id="there-was-an-error-fetching-printers-shared-to-you">Fehler beim Abrufen von freigegebenen Druckern.</h2>
+<p>Wenn ein Benutzer diese Meldung erhält, wenn er versucht, einen Universal Print-Drucker über die Seite <strong>Druckerverwaltung</strong> hinzuzufügen, liegt dies normalerweise daran, dass er sich noch nicht bei der von Azure registrierten App für Universal Printer-App angemeldet und zum ersten Mal zugestimmt hat. </p>
+<!--
+### <a name="troubleshooting"></a>Troubleshooting
+
+#### <a name="you-dont-see-the-a-printer-in-the"></a>You don't see the a printer in the
+
+The printer is not shared in Universal Print.
+
+### <a name="you-get-an-error-when-tryong-to-add-all-or-a-single-printer"></a>You get an error when tryong to add all or a single printer
+
+You have'nt been assigned a Uincersla Print license.
+
+There was an error fetching printers shared to you. You don't have access to the data. Make sure your account has been assigned a Universal Print license and you have the required permissions.
+or 
+You don't seem to have access to Universal Print. Make sure you have a Universal Print subscription, and that your account has been assigned a Universal Print license.
+
+## <a name="could-not-upload-the-document-to-print-job-50"></a>Could not upload the document to print job 50.
+
+There is a technical problem withe the printer. Unsupported document-format: application/pdf. Supported formats: Attribute document-format-supported: SimpleIppValue-Type:MimeMediaType-Value:application/oxps
+
+
+
+
+-->
+<h2 id="next-steps">Nächste Schritte</h2>
+<p><a href="ui-specify-printer-selection-reports.html">Standarddrucker einrichten</a></p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="admin-printer-setup-overview.html">Übersicht der Drucker</a><br><a href="admin-printer-setup-email.html">E-Mail-Drucker einrichten</a>
+<a href="ui-work-report.html#PrintReport">Einen Bericht drucken</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a><br><a href="ui-how-run-batch-jobs.html">Ausführen von Stapelverarbeitungen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

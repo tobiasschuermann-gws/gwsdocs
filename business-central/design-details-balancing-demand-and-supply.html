@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Designdetails &#8211; Ausgleich von Angebot und Nachfrage </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Designdetails &#8211; Ausgleich von Angebot und Nachfrage ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-balancing-supply-and-demand">Designdetails: Ausgleich von Angebot und Nachfrage</h1>
+
+<p>Um zu verstehen, wie das Planungssystem funktioniert, ist es wichtig, seine priorisierten Ziele zu verstehen:  </p>
+<ul>
+<li>Jeder Bedarf wird durch ausreichenden Vorrat gedeckt.  </li>
+<li>Jeder Vorrat dient einem bestimmten Zweck.  </li>
+</ul>
+<p>Im Allgemeinen werden diese Ziele durch den Ausgleich von Vorrat und Bedarf erreicht.  </p>
+<h2 id="supply-and-demand">Angebot und Nachfrage</h2>
+<p>Der Begriff <em>Angebot</em> bezieht sich auf jede Art von positiver oder eingehender Menge, wie z. B.:</p>
+<ul>
+<li>Inventar</li>
+<li>Einkauf</li>
+<li>Montage</li>
+<li>Produktion</li>
+<li>Eingehende Umlagerungen</li>
+<li>Retouren  </li>
+</ul>
+<p>Der Begriff <em>Nachfrage</em> bezieht sich auf jede Art von Bruttonachfrage, wie z. B.:</p>
+<ul>
+<li>Ein Artikel für einen Verkaufsauftrag</li>
+<li>Eine Komponente für einen Fertigungsauftrag</li>
+</ul>
+<p>Business Central lässt auch die Verwendung für technischere Bedarfsarten zu, wie z. B. negative Bestände und Einkaufsreklamationen.</p>
+<p>Um die Quellen von Angebot und Nachfrage zu organisieren, ordnet das Planungssystem diese in zwei Zeitskalen an, die Bestandsprofile genannt werden. Ein Profil ist für Bedarfsereignisse vorgesehen, das andere die entsprechenden Vorratsereignisse. Jedes Angebotsereignis stellt eine Entität in einer Bestellung dar, wie z. B.:</p>
+<ul>
+<li>EIne Verkaufsauftragsposition</li>
+<li>Ein Artikelposten</li>
+<li>Eine Fertigungsauftragsposition</li>
+</ul>
+<p>Beim Laden von Bestandsprofilen werden die Nachfrage-/Angebotssätze abgeglichen, um einen Vorratsplan zu erzeugen, der die angegebenen Ziele abdeckt.</p>
+<p>Lagerbestände und Planungsparameter sind andere Arten von Angebot und Nachfrage. Diese Typen werden einem integrierten Ausgleich unterzogen, um Lagerartikel aufzufüllen. Weitere Informationen finden Sie unter <a href="design-details-handling-reordering-policies.html">Designdetails: Umgang mit Wiederbeschaffungsverfahren</a>.</p>
+<h2 id="the-concept-of-balancing-in-brief">Kurzzusammenfassung des Ausgleichskonzepts</h2>
+<p>Die Nachfrage kommt von Ihren Kunden. Der Vorrat ist das, was Sie erzeugen und für den Ausgleich entnehmen kann. Das Planungssystem beginnt mit dem Bedarf und verfolgt diesen dann rückwärts bis zum Vorrat.  </p>
+<p>Bestandsprofile enthalten Informationen über den Bedarf und den Vorrat, die Mengen und den Zeitpunkt. Diese Profile bilden die beiden Seiten des Ausgleichs.  </p>
+<p>Das Ziel der Planung ist es, das Angebot und die Nachfrage eines Artikels auszugleichen, um sicherzustellen, dass das Angebot entsprechend den Planungsparametern und -regeln zum Vorrat passt.  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/nav_app_supply_planning_2_balancing.png&quot; alt-text=&quot;Übersicht über den Ausgleich von Angebot und Nachfrage.&quot;:::</p>
+<h2 id="process-orders-before-the-planning-start-date">Aufträge vor dem Planungsstartdatum bearbeiten</h2>
+<p>Um zu vermeiden, dass ein Angebotsplan unangemessene Vorschläge enthält, plant das Planungssystem in der Zeit vor dem Planungsstartdatum nichts. Für den Zeitraum gilt die folgende Regel:</p>
+<ul>
+<li>Alle Vorräte und der Bedarf vor dem Startdatum des Planungszeitraums werden als Teil des Bestands oder als ausgeliefert betrachtet.  </li>
+</ul>
+<p>Das Planungssystem schlägt, mit wenigen Ausnahmen, keine Änderungen an Vorräten im Zeitraum vor und es werden keine Auftragsverfolgungsverknüpfungen für diesen Zeitraum erstellt. Folgendes sind Ausnahmen von dieser Regel:  </p>
+<ul>
+<li>Das Lager, dessen Verfügbarkeit projiziert ist, einschließlich der Summe aus Vorrat und Bedarf im Zeitraum, unter null liegt.  </li>
+<li>Zurückdatierte Aufträge erfordern Seriennummern oder Chargennummern.  </li>
+<li>Der Vorrat-/Bedarfssatz ist über eine Eins-zu-Eins-Richtlinie verknüpft. </li>
+</ul>
+<p>Wenn der anfänglich verfügbare Bestand unter null liegt, schlägt das Planungssystem einen Vorrat am Tag vor der Planungsperiode vor, um die fehlende Menge zu decken. Daher ist der projizierte und verfügbare Bestand immer mindestens Null, wenn die Planung für die zukünftige Periode beginnt. In der Planungszeile für diesen Beschaffungsauftrag wird ein Notfall-Warnsymbol angezeigt, und in der Nachschlagefunktion werden zusätzliche Informationen bereitgestellt.</p>
+<h3 id="serial-and-lot-numbers-and-order-to-order-links-are-exempt-from-the-previous-period">Serien- und Chargennummern sowie Auftrag-zu-Auftrag-Verknüpfungen sind vom vorherigen Zeitraum ausgenommen</h3>
+<p>Wenn Serien- oder Chargennummern erforderlich sind oder eine Auftrag-zu-Auftrag-Verknüpfung besteht, ignoriert das Planungssystem die Regel über die vorherige Periode. Es enthält zurückdatierte Mengen ab dem Startdatum und schlägt möglicherweise Korrekturmaßnahmen vor, wenn Angebot und Nachfrage nicht synchronisiert sind. Diese Nachfrage-Angebots-Sätze müssen übereinstimmen, um sicherzustellen, dass eine bestimmte Nachfrage erfüllt wird.</p>
+<h2 id="load-inventory-profiles">Bestandsprofile laden</h2>
+<p>Um die Quellen von Angebot und Nachfrage zu organisieren, ordnet das Planungssystem diese in zwei Zeitskalen an, die Bestandsprofile genannt werden.  </p>
+<p>Angebot und Nachfrage mit Fälligkeitsdaten am oder nach dem Planungsstartdatum werden in jedes Bestandsprofil geladen. Beim Laden werden die Angebots- und Nachfragetypen nach Gesamtprioritäten sortiert, z. B.:</p>
+<ul>
+<li>Fälligkeitsdatum</li>
+<li>Stücklistenebene</li>
+<li>Lagerort</li>
+<li>Variante</li>
+</ul>
+<p>Auftragsprioritäten werden auf die verschiedenen Arten angewendet, um den wichtigsten Bedarf zuerst zu erfüllen. Informationen finden Sie unter <a href="design-details-balancing-demand-and-supply.html#prioritize-orders">Bestellungen priorisieren</a>.  </p>
+<p>Die Nachfrage kann auch negativ sein. Negative Nachfrage als Angebot behandeln. Im Gegensatz zum typischen Angebot gilt die negative Nachfrage jedoch als festes Angebot. Das Planungssystem kann ihn berücksichtigen, wird aber keine Änderungen vorschlagen.  </p>
+<p>Allgemein betrachtet das Planungssystem alle Vorräte nach dem Planungsstartdatum als zur Bedarfserfüllung veränderbar. Nachdem eine Menge aus einem Beschaffungsauftrag gebucht wird, kann das Planungssystem diese nicht mehr ändern. Die folgenden Aufträge können nicht neu geplant werden:  </p>
+<ul>
+<li>Freigegebene Produktionsaufträge, bei denen ein Verbrauch oder eine Ausgabe gebucht wurde.  </li>
+<li>Montageaufträge, bei denen ein Verbrauch oder eine Ausgabe gebucht wurde.  </li>
+<li>Umlagerungsaufträge, bei denen die Lieferung gebucht wurde.  </li>
+<li>Einkaufsbestellungen, bei denen der Eingang gebucht wurde.  </li>
+</ul>
+<p>Neben dem Laden von Angebots- und Nachfragearten werden bestimmte Arten unter Beachtung spezieller Regeln und Abhängigkeiten geladen, die im Folgenden beschrieben werden. In den folgenden Abschnitten dieses Artikels werden diese Regeln und Abhängigkeiten beschrieben.  </p>
+<h3 id="item-dimensions-are-separated">Artikeldimensionen werden separiert</h3>
+<p>Der Vorratsplan muss für jede Kombination der Dimensionen des Artikel berechnet werden, z. B. Variante und Lagerplatz. Es müssen nur die Kombinationen berechnet werden, die einen Bedarf und/oder einen Vorrat aufweisen.  </p>
+<p>Das Planungssystem sucht nach Kombinationen im Bestandsprofil. Wenn es eine neue Kombination findet, erstellt es einen internen Steuerdatensatz, der die tatsächlichen Informationen zur Kombination enthält. Das Planungssystem fügt dann die SKU als Steuerungsdatensatz (äußere Schleife) ein. Dadurch werden die Planungsparameter entsprechend einer Kombination aus Variante und Lagerplatz festgelegt, und das System kann mit der inneren Schleife fortfahren. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie müssen keinen SKU-Datensatz eingeben, wenn Sie eine Nachfrage und/oder ein Angebot für eine bestimmte Kombination von Variante und Lagerort eingeben. Wenn für eine bestimmte Kombination kein SKU-Datensatz vorhanden ist, erstellt Business Central daher einen eigenen temporären SKU-Datensatz auf der Basis der Daten aus dem Artikel. Wenn der Schalter <strong>Lagerplatz obligatorisch</strong> auf der Seite <strong>Bestandseinrichtung</strong> eingeschaltet ist, müssen Sie entweder eine SKU erstellen oder den Schalter <strong>Komponenten am Lagerplatz</strong> einschalten. Weitere Informationen finden Sie unter <a href="production-planning-with-without-locations.html">Planung mit/ohne Lagerortcodes</a>.  </p>
+</div>
+<h3 id="serial-and-lot-numbers-are-loaded-by-specification-level">Serien- und Chargennummern werden nach Spezifikationsstufe geladen</h3>
+<p>Serien- und Chargennummern werden zusammen mit dem Angebot und der Nachfrage, denen sie zugeordnet sind, in die Bestandsprofile geladen.  </p>
+<p>Angebots- und Nachfrageattribute werden nach Auftragspriorität und nach ihrer Spezifikationsstufe geordnet. Da Serien- und Chargennummernübereinstimmungen die Spezifikationsstufe widerspiegeln, wird eine spezifischere Anforderung vor einer weniger spezifischen Anforderung abgeglichen. Eine bestimmte Nachfrage kann beispielsweise eine Chargennummer sein, die für eine Verkaufsposition angegeben ist. Eine weniger spezifische Nachfrage könnte ein Verkauf von einer beliebigen Chargennummer sein.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die einzigen speziellen Priorisierungsregeln für ein Angebot und eine Nachfrage mit Serien- und Chargennummern sind die Spezifikationsstufe, die durch die Kombinationen von Serien- und Chargennummern definiert ist, und das Einrichten der Artikelverfolgung für die betroffenen Artikel.  </p>
+</div>
+<p>Beim Ausgleich betrachtet das Planungssystem Lieferungen mit Serien- und Chargennummern als unflexibel. Das System wird solche Beschaffungsaufträge nicht erhöhen oder neu planen. Die einzige Ausnahme hiervon gilt, wenn sie in einer Auftrag-zu-Auftrag-Beziehung verwendet werden. Weitere Informationen finden Sie unter <a href="#order-to-order-links-are-never-broken">Auftrag-zu Auftrag-Verknüpfungen werden nie aufgelöst</a>. Diese Ausnahme schützt das Angebot davor, mehrere, möglicherweise widersprüchliche Aktionsnachrichten zu erhalten, wenn unterschiedliche Attribute vorliegen. Unterschiedliche Attribute können beispielsweise auftreten, wenn das Angebot eine Sammlung unterschiedlicher Seriennummern aufweist.  </p>
+<p>Ein weiterer Grund, warum Lieferungen mit Serien- und Chargennummern unflexibel sind, besteht darin, dass Serien- und Chargennummern oft spät im Prozess zugewiesen werden. Es könnte verwirrend sein, wenn an dieser Stelle Änderungen vorgeschlagen werden.  </p>
+<p>Der Seriennummern- und Chargennummernausgleich respektiert die Regel nicht, dass vor dem Planungsstartdatum nichts geplant wird. Wenn Angebot und Nachfrage nicht synchronisiert sind, schlägt das Planungssystem unabhängig vom Startdatum der Planung Änderungen oder neue Aufträge vor.  </p>
+<h3 id="order-to-order-links-are-never-broken">Auftrag-zu-Auftrag-Verknüpfungen werden nie aufgelöst</h3>
+<p>Bei der Planung eines Auftrag-zu-Auftrag-Artikels darf das verknüpfte Angebot nur für das verwendet werden, wofür es ursprünglich vorgesehen war. Die verknüpfte Nachfrage darf nicht durch ein anderes beliebigen Angebot gedeckt werden. Dies gilt auch dann, wenn das Angebot aktuell zeitlich und mengenmäßig verfügbar ist. Beispielsweise können Sie keinen Montageauftrag verwenden, der in einem Programmfertigungsszenario mit einem Kundenauftrag verknüpft ist, um eine andere Nachfrage zu decken.  </p>
+<p>Bei Auftrag-zu-Auftrag müssen sich Angebot und Nachfrage exakt decken. Das Planungssystem stellt das Angebot sicher. Dies geschieht ohne Berücksichtigung von Auftragsgrößenparametern, Modifikatoren und Mengen im Bestand (mit Ausnahme der Mengen, die sich auf die verknüpften Aufträge beziehen). Aus demselben Grund schlägt das System die Verringerung überschüssiger Vorräte vor, wenn der verknüpfte Bedarf sinkt.  </p>
+<p>Dieser Abgleich wirkt sich auch auf das Timing aus. Der durch den Zeitbereich bedingte begrenzte Horizont wird nicht berücksichtigt. Der Vorrat wird neu geplant, wenn sich das Timing des Bedarfs geändert hat. Die Verzögerungszeit wird jedoch beachtet. Sie verhindert, dass Eins-zu-Eins-Vorräte eingeplant werden – außer bei internen Vorräten eines mehrstufigen Produktionsauftrags (Projektauftrag).  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Serien- und Chargennummern können auch für Eins-zu-Eins-Bedarf angegeben werden. In diesem Fall wird das Angebot nicht als flexibel betrachtet (wie normalerweise bei Serien- und Chargennummern). In diesem Fall führt das System eine Erhöhung oder Verringerung durch, wenn sich der Bedarf ändert. Wenn ein Bedarf unterschiedliche Serien- und Chargennummern aufweist, z. B. mehr als eine Chargennummer, wird außerdem ein Beschaffungsauftrag für jede Charge vorgeschlagen.  </p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Planungen sollten nicht dazu führen, dass Vorratsaufträge erstellt werden, die durch eine Eins-zu-Eins-Verknüpfung gebunden sind. Wenn die Planung verwendet wird, sollte dies nur zur Generierung des abhängigen Bedarfs in einer Fertigungsumgebung geschehen.</p>
+</div>
+<h3 id="component-need-is-loaded-according-to-production-order-changes">Der Komponentenbedarf wird entsprechend den Änderungen der Produktionsaufträge geladen.</h3>
+<p>Bei der Bearbeitung von Produktionsaufträgen muss das Planungssystem die benötigten Komponenten überwachen, bevor diese in das Bedarfsprofil geladen werden. Komponentenzeilen, die sich aus einem geänderten Produktionsauftrag ergeben, ersetzen die Zeilen des ursprünglichen Auftrags. Die Änderung stellt sicher, dass das Planungssystem keine Planungszeilen für einen Komponentenbedarf dupliziert.  </p>
+<h3 id="consume-safety-stock">Sicherheitsbestand verbrauchen</h3>
+<p>Die Sicherheitsbestandsmenge ist ein Angebot, das zum Planungsstartdatum in das Bestandsprofil geladen wird.  </p>
+<p>Der Sicherheitsbestand ist eine Bestandsmenge, die festgelegt wird, um Unsicherheiten im Bedarf während der Vorlaufzeit der Wiederbeschaffung zu erfüllen. Er kann jedoch verbraucht werden, um einen Bedarf zu decken. In diesem Fall sorgt das Planungssystem dafür, dass der Sicherheitsbestand schnell ersetzt wird. Das System schlägt einen Beschaffungsauftrag vor, um die Sicherheitsbestandsmenge am Verbrauchsdatum wieder aufzufüllen. In der Planungszeile wird ein Ausnahme-Warnungssymbol angezeigt. Dieses zeigt, dass der Sicherheitsbestand über einen Ausnahmeauftrag für die fehlende Menge teilweise oder vollständig verbraucht wurde.  </p>
+<h3 id="forecast-demand-is-reduced-by-sales-orders">Geplanter Bedarf wird durch Verkaufsaufträge reduziert</h3>
+<p>Bedarfsplanungen stellen den erwarteten zukünftigen Bedarf dar. Während der tatsächliche Bedarf eingegeben wird, typischerweise in Form von Verkaufsaufträgen für produzierte Artikel, verringert sich die Planungsmenge.</p>
+<p>Die Planung selbst wird nicht durch Verkaufsaufträge reduziert. Die geplanten Mengen, die in der Planungsberechnung verwendet werden, werden jedoch um die Verkaufsauftragsmengen reduziert , bevor die verbleibende Mengen, in das Bedarfsprofil eingehen. Für Verkäufe während eines Zeitraums umfasst die Planung sowohl offene Verkaufsaufträge als auch Artikelposten aus versandten Verkäufen. Die Ausnahme von dieser Regel gilt, wenn sie aus einem Rahmenauftrag stammen.  </p>
+<p>Sie müssen einen gültigen Planungszeitraum definieren. Das Datum der geplanten Menge definiert den Beginn des Zeitraums, und das Datum der nächsten Planung definiert das Ende des Zeitraums.  </p>
+<p>Die Planung für Perioden vor dem Planungszeitraum wird nicht verwendet – unabhängig vom Verbrauch. Die erste interessante Planungszahl ist entweder das Startdatum der Planung oder das nächstgelegene Datum.  </p>
+<p>Die Planung kann für verschiedene Bedarfstypen gelten:</p>
+<ul>
+<li>Unabhängiger Bedarf, z. B. Verkaufsaufträge</li>
+<li>Abhängiger Bedarf, z. B. Produktionsauftragskomponenten.</li>
+</ul>
+<p>Ein Artikel kann beide Planungsarten verwenden. Während der Planung erfolgt der Verbrauch separat, zuerst für den unabhängigen Bedarf und dann für den abhängigen Bedarf.  </p>
+<h3 id="blanket-order-demand-is-reduced-by-sales-orders">Bedarf für Rahmenaufträge wird durch Verkaufsaufträge reduziert</h3>
+<p>Die Planung wird durch Rahmenverkaufsaufträge ergänzt, um den zukünftigen Bedarf eines bestimmten Debitors festzulegen. Wie bei der (nicht spezifizierten) Planung sollten die tatsächlichen Verkäufe den erwarteten Bedarf in Anspruch nehmen, und die verbleibende Menge sollte in das Bedarfsbestandsprofil eingehen. Der Verbrauch verringert die Menge des Rahmenauftrags nicht.</p>
+<p>Die Planungsberechnung umfasst offene Verkaufsaufträge, die mit dieser bestimmten Rahmenauftragszeile verbunden sind, nicht jedoch Gültigkeitszeiträume. Außerdem umfasst sie keine gebuchten Aufträge, da der Buchungsvorgang die ausstehende Rahmenauftragsmenge bereits reduziert hat.</p>
+<h2 id="prioritize-orders">Aufträge priorisieren</h2>
+<p>Innerhalb einer bestimmten SKU hat das angeforderte oder verfügbare Datum die höchste Priorität. Der heutige Bedarf sollte vor dem Bedarf der nächsten Woche erledigt werden. Aber zusätzlich zu dieser Gesamtpriorität unterbreitet das Planungssystem die folgenden Vorschläge gemäß der Auftragsprioritäten:</p>
+<ul>
+<li>Welche Art von Nachfrage Sie zuerst erfüllen sollten.</li>
+<li>Welche Vorratsquelle vor der Anwendung anderer Vorratsquellen angewendet werden sollte.  </li>
+</ul>
+<p>Das geladene Angebot und die Nachfrage ergeben ein Profil für geplanten Bestand gemäß den Prioritäten.  </p>
+<h3 id="priorities-on-the-demand-side">Prioritäten auf der Bedarfsseite</h3>
+<ol>
+<li>Bereits geliefert: Artikelsachkontoeintrag  </li>
+<li>Einkaufsreklamation  </li>
+<li>Verkaufsauftrag  </li>
+<li>Serviceauftrag  </li>
+<li>Produktionskomponentenbedarf  </li>
+<li>Montageauftragszeile  </li>
+<li>Ausgehender Umlagerungsauftrag.  </li>
+<li>Rahmenauftrag (der nicht bereits durch entsprechende Verkaufsaufträge verbraucht wurde)  </li>
+<li>Planung (die nicht bereits durch andere Verkaufsaufträge verbraucht wurde)  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Einkaufsreklamationen sind normalerweise nicht in die Vorratsplanung eingebunden. Sie sollten immer aus der Charge reserviert werden, die retourniert werden soll. Wenn sie nicht reserviert werden, spielen Einkaufsreklamationen eine Rolle bei der Verfügbarkeit und werden hoch priorisiert, um zu vermeiden, dass das Planungssystem eine Bestellung vorschlägt, nur um eine Einkaufsreklamation abzudecken.  </p>
+</div>
+<h3 id="priorities-on-the-supply-side">Prioritäten auf der Vorratsseite</h3>
+<ol>
+<li>Bereits im Bestand: Artikelsachkontoeintrag (Planungsflexibilität = keine)  </li>
+<li>Verkaufsreklamationsauftrag (Planungsflexibilität = keine)  </li>
+<li>Ausgehende Umlagerungsaufträge  </li>
+<li>Produktionsauftrag  </li>
+<li>Montageauftrag  </li>
+<li>Einkaufsbestellung  </li>
+</ol>
+<h3 id="priority-related-to-the-state-of-supply-and-demand">Priorität bezogen auf den Status von Bedarf und Vorrat</h3>
+<p>Neben den Prioritäten aus der Art von Angebot und Nachfrage gibt es noch weitere Dinge, die die Planungsflexibilität beeinflussen. Zum Beispiel Lageraktivitäten und der Status der folgenden Bestellungen:</p>
+<ul>
+<li>Verkauf</li>
+<li>Einkauf</li>
+<li>Transfer</li>
+<li>Montage</li>
+<li>Produktion</li>
+</ul>
+<p>Der Status dieser Aufträge hat folgende Auswirkungen: </p>
+<ol>
+<li>Teilweise bearbeitet (Planungsflexibilität = Keine)  </li>
+<li>Bereits in Bearbeitung im Lagerort (Planungsflexibilität = keine)  </li>
+<li>Freigegeben – alle Auftragstypen (Planungsflexibilität = unbegrenzt)  </li>
+<li>Umgewandelter geplanter Produktionsauftrag (Planungsflexibilität = unbegrenzt)  </li>
+<li>Geplant/offen – alle Auftragstypen (Planungsflexibilität = unbegrenzt)</li>
+</ol>
+<h2 id="balancing-supply-with-demand">Abgleich von Angebot und Nachfrage</h2>
+<p>Das Planungssystem gleicht Angebot und Nachfrage aus, indem es Maßnahmen vorschlägt, um Beschaffungsaufträge zu überarbeiten, die nicht ausgeglichen sind. Dieser Ausgleich erfolgt für jede Kombination aus Variante und Standort.  </p>
+<p>Stellen Sie sich vor, dass jedes Bestandsprofil zwei Zeichenfolgen enthält:</p>
+<ul>
+<li>Eine Reihe von Bedarfsereignissen, sortiert nach Datum und Priorität</li>
+<li>Eine entsprechende Kette von Lieferereignissen</li>
+</ul>
+<p>Jedes Ereignis verweist auf seinen Herkunftsartstyp und seine Identifizierung. Die Regeln für den Ausgleich des Artikels sind einfach. Die Zuordnung von Angebot und Nachfrage kann wie folgt zu jedem Zeitpunkt im Vorgang geschehen:  </p>
+<ol>
+<li>Kein Bedarf oder Vorrat für den Artikel =&gt; die Planung ist abgeschlossen (oder soll nicht beginnen).  </li>
+<li>Bedarf existiert, aber es ist kein Vorrat vorhanden=&gt; Vorrat soll vorgeschlagen werden.  </li>
+<li>Vorrat existiert, aber es ist kein Bedarf vorhanden=&gt; Vorrat soll storniert werden.  </li>
+<li><p>Angebot und Nachfrage sind vorhanden =&gt; Fragen sollten gestellt und beantwortet werden, bevor Business Central sicherstellen kann, dass das Angebot den Bedarf erfüllen kann.</p>
+<p> Wenn das Timing des Vorrats nicht passt, kann der Vorrat vielleicht wie folgt neu geplant werden:  </p>
+<ol>
+<li>Wenn der Vorrat früher als der Bedarf platziert wird, kann der Vorrat vielleicht so ausgeplant werden, dass der Bestand so gering wie möglich ist.  </li>
+<li>Wenn der Vorrat später als der Bedarf platziert wird, kann der Vorrat vielleicht vorwärts geplant werden. Andernfalls schlägt das System einen neuen Vorrat vor.  </li>
+<li><p>Wenn der Vorrat den Bedarf an dem Datum erfüllt, kann das Planungssystem untersuchen, ob die Menge des Vorrats den bedarf decken kann.  </p>
+<p>Wenn die Zeitplanung erfolgt ist, kann die bereitzustellende Angebotsmenge wie folgt berechnet werden:  </p>
+</li>
+<li><p>Wenn die Angebotsmenge kleiner als der Bedarf ist, kann die Vorratsmenge erhöht werden (oder nicht, wenn eine Höchstmengenrichtlinie vorhanden ist).  </p>
+</li>
+<li><p>Wenn die Angebotsmenge größer als der Bedarf ist, kann die Vorratsmenge verringert werden (oder nicht, wenn eine Mindestmengenrichtlinie vorhanden ist).  </p>
+<p>An dieser Stelle besteht eine dieser beiden Situationen:  </p>
+</li>
+<li><p>Der aktuelle Bedarf kann abgedeckt werden, in welchem Fall er geschlossen werden kann und die Planung für den folgenden Bedarf begonnen werden kann.  </p>
+</li>
+<li>Das Vorrat hat sein Maximum erreicht, ein Teil der Bedarfsmenge wurde nicht abgedeckt. In diesem Fall kann das Planungssystem den aktuellen Vorrat schließen und mit dem nächsten fortfahren.  </li>
+</ol>
+<p>Der Vorgang beginnt von vorn mit dem folgenden Bedarf und dem folgenden Vorrat oder umgekehrt. Der aktuelle Vorrat kann möglicherweise auch diesen nächsten Bedarf abdecken, oder der aktuelle Bedarf wurde noch nicht vollständig abgedeckt.  </p>
+</li>
+</ol>
+<h3 id="rules-for-actions-for-supply-events">Regeln für Aktionen für Vorratsereignisse</h3>
+<p>Bei Top-down-Berechnungen, bei denen das Angebot die Nachfrage decken muss, wird die Nachfrage als gegeben angenommen. Es liegt außerhalb der Kontrolle des Planungssystems. Das Planungssystem kann jedoch die Angebotsseite verwalten und wird die folgenden Vorschläge unterbreiten:</p>
+<ul>
+<li>Neue Beschaffungsaufträge erstellen</li>
+<li>Vorhandene Bestellungen umplanen oder ihre Mengen ändern</li>
+<li>Lieferaufträge stornieren, die nicht mehr benötigt werden  </li>
+</ul>
+<p>Um einen Beschaffungsauftrag aus den Planungsvorschlägen ausschließen, können Sie angeben, dass keine Planungsflexibilität besteht (Planungsflexibilität = Keine). Dann wird überschüssiger Vorrat aus diesem Auftrag verwendet, um Bedarf zu decken, aber keine Aktion wird vorgeschlagen. </p>
+<p>Im Allgemeinen haben alle Vorräte eine Planungsflexibilität, die durch den Zustand der einzelnen vorgeschlagenen Aktionen eingeschränkt ist.  </p>
+<ul>
+<li><p><strong>Neu ausplanen</strong>: Das Datum eines vorhandenen Beschaffungsauftrags kann ausgeplant werden, um das Fälligkeitsdatum des Bedarfs zu erfüllen, es sei denn:</p>
+<ul>
+<li>Es stellt den Lagerbestand dar (immer mit Tag Null).  </li>
+<li>Es enthält einen Auftrag-zu-Auftrag-Link zu einem anderen Bedarf.  </li>
+<li>Es liegt außerhalb des Fensters für die Umplanung im Zeitrahmen.</li>
+<li>Es gibt einen näheren Bestand, der verwendet werden könnte.  </li>
+<li>Andererseits entscheidet sich der Benutzer möglicherweise zu einer Neuplanung, weil</li>
+<li>Der Beschaffungsauftrag wurde an einem früheren Datum mit einem anderen Bedarf verbunden.  </li>
+<li>Das erforderliche Neuplanung ist so minimal, dass sie als geringfügig ansehen wird.  </li>
+</ul>
+</li>
+<li><p><strong>Neu einplanen</strong>: Das Datum eines vorhandenen Beschaffungsauftrags kann eingeplant werden, ausgenommen unter den folgenden Bedingungen:</p>
+<ul>
+<li>Es wird direkt mit einem anderen Bedarf verknüpft.  </li>
+<li>Es liegt außerhalb des Fensters für die Umplanung, die vom Zeitrahmen definiert ist.</li>
+</ul>
+</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn ein Artikel unter Verwendung eines Meldebestand geplant wird, können Sie den Beschaffungsauftrag neu planen. Dies geschieht häufig in den vorwärtsgeplanten Beschaffungsaufträgen, die durch einen Minimalbestand gestartet werden.</p>
+</div>
+<ul>
+<li><strong>Zugangs-Menge</strong>: Die Menge eines vorhandenen Beschaffungsauftrags kann erhöht werden, damit der Bedarf erfüllt werden kann, es sei denn, der Beschaffungsauftrag ist direkt mit einem Bedarf durch einen Auftrag-zu-Auftrag-Link verknüpft.  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Obwohl Sie den Beschaffungsauftrag erhöhen können, kann die Erhöhung durch eine maximale Auftragsgröße eingeschränkt sein.  </p>
+</div>
+<ul>
+<li><strong>Menge reduzieren</strong>: Ein vorhandener Beschaffungsauftrag mit einem Überschuss im Vergleich zu einem vorhandenen Bedarf kann reduziert werden, damit der Bedarf erfüllt werden kann.  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Obwohl die Menge verringert werden kann, ist möglicherweise immer noch Überschuss im Vergleich zum Bedarf vorhanden, und zwar aufgrund einer Mindestauftragsmenge oder eines Auftragsvielfachen. </p>
+</div>
+<ul>
+<li><strong>Abbrechen</strong>: Als spezieller Vorfall der Mengenverminderungsaktion kann der Beschaffungsauftrag storniert werden, wenn er bis auf Null verringert wird. </li>
+<li><strong>Neu</strong>: Wenn keine Beschaffungsaufträge vorhanden sind oder ein vorhandener Auftrag nicht geändert werden kann, um die erforderlichen Menge für den Bedarf im angeforderten Fälligkeitsdatum zu erfüllen, wird ein neuer Beschaffungsauftrag vorgeschlagen.  </li>
+</ul>
+<h3 id="determine-the-supply-quantity">Die Vorratsmenge bestimmen</h3>
+<p>Sie definieren die Planungsparameter, die die vorgeschlagene Menge eines jeden Beschaffungsauftrags steuern.  </p>
+<p>Wenn das Planungssystem die Menge eines neuen Beschaffungsauftrags oder die Mengenänderung in einem bestehenden Auftrag berechnet, kann sich die vorgeschlagene Menge vom tatsächlichen Bedarf unterscheiden.  </p>
+<p>Wenn ein Maximalbestand oder feste Auftragsmengen ausgewählt werden, wird die vorgeschlagene Menge möglicherweise erhöht, um diese feste Menge oder den Maximalbestand zu erfüllen. Wenn ein Wiederbeschaffungsverfahren einen Minimalbestand verwendet, wird die Menge mindestens so erhöht, dass der Minimalbestand erreicht wird. </p>
+<p>Die vorgeschlagene Menge kann in dieser Sequenz geändert werden:  </p>
+<ol>
+<li>Bis zur maximalen Auftragsmenge.  </li>
+<li>Aufwärts bis zur Mindestbestellmenge.  </li>
+<li>Aufwärts bis zum nächsten Losgrößenrundungsfaktor.</li>
+</ol>
+<h3 id="order-tracking-links-during-planning">Bedarfsverursacherverknüpfungen bei der Planung</h3>
+<p>Bei Auftragsnachverfolgung während der Planung ordnet das Planungssystem die Auftragsnachverfolgungsverknüpfungen der Kombinationen von Artikeln, Varianten und Lagerorten neu an. Das System ordnet die Verfolgungslinks aus folgenden Gründen neu an:</p>
+<ul>
+<li>Um die Vorschläge zur Deckung des gesamten Bedarfs zu überprüfen und sicherzustellen, dass alle Lieferaufträge benötigt werden.  </li>
+<li>Die Auftragsverfolgungslinks müssen regelmäßig neu abgeglichen werden.  </li>
+</ul>
+<p>Mit der Zeit geraten die Links zur Auftragsverfolgung aus dem Gleichgewicht. Die Links geraten aus dem Gleichgewicht, da das Bedarfsverursachernetzwerk erst dann wiederhergestellt wird, wenn ein Bedarf- oder Vorratsereignis geschlossen ist.</p>
+<p>Vor dem Ausgleich des Vorrats nach Bedarf löscht das Planungssystem alle Auftragsnachverfolgungslinks. Während des Ausgleichsvorgangs, wenn ein Bedarfs- oder Zubehörereignis abgeschlossen wird, werden neue Bedarfsverursacherverknüpfungen zwischen Angebot und Nachfrage erstellt.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Das Planungssystem erstellt auch dann ausgeglichene Auftragsverfolgungsverknüpfungen, wenn der Artikel nicht für die dynamische Auftragsverfolgung festgelegt ist.</p>
+</div>
+<h2 id="close-balanced-supply-and-demand">Ausgeglichenes Angebot und Nachfrage schließen</h2>
+<p>Der Ausgleich des Angebots hat drei mögliche Ergebnisse:</p>
+<ul>
+<li>Die benötigte Menge und das Datum der Bedarfsereignisse werden erfüllt, und die Planung für den Artikel kann geschlossen werden. Das Versorgungsereignis bleibt offen und kann möglicherweise den nächsten Bedarf decken. Wird das Vorratsereignis offen gehalten, kann der Ausgleichsvorgang mit dem aktuellen Vorratsereignis erneut beginnen.  </li>
+<li>Der Beschaffungsauftrag kann nicht geändert werden, um den gesamten Bedarf zu decken. Das Bedarfsereignis ist noch offen, mit einer nicht abgedeckten Menge, die möglicherweise vom nächsten Bedarfsereignis abgedeckt werden. Daher wird das aktuelle Vorratsereignis geschlossen und der Ausgleich mit dem aktuellen Bedarfs- und dem nächsten Vorratsereignis kann erneut beginnen.  </li>
+<li>Der gesamte Bedarf ist abgedeckt und es gibt keinen nächsten Bedarf (oder es gab gar keinen Bedarf). Überschüssiger Vorrat kann vermindert (oder storniert) und dann geschlossen werden. Alle anderen Versorgungsereignisse sollten ebenfalls storniert werden.  </li>
+</ul>
+<p>Schließlich erstellt das Planungssystem ein Auftragsnachverfolgungslink zwischen dem Vorrat und dem Bedarf.  </p>
+<h3 id="create-the-planning-line-suggested-action">Die Planungszeile (vorgeschlagene Aktion) erstellen</h3>
+<p>Wenn eine der Aktionen <strong>Neu</strong>, <strong>Menge ändern</strong>, <strong>Neu planen</strong>, <strong>Neu planen und Menge ändern</strong> oder <strong>Stornieren</strong> für die Revision des Beschaffungsauftrags vorgeschlagen wird, erstellt das Planungssystem, eine Planung auf dem Planungsarbeitsblatt. Für die Auftragsverfolgung wird die Planungszeile nicht nur erstellt, wenn das Angebotsereignis geschlossen wird, sondern auch, wenn das Bedarfsereignis geschlossen wird. Dies gilt auch dann, wenn das Angebotsereignis noch offen ist und möglicherweise geändert wird, wenn das nächste Bedarfsereignis verarbeitet wird. Die Planungszeile kann erneut geändert werden, wenn sie erstellt wird.</p>
+<p>Um die Belastung der Datenbank bei der Abwicklung von Fertigungsaufträgen zu reduzieren, kann die Planungszeile in drei Ebenen gepflegt werden:</p>
+<ul>
+<li>Erstellen Sie nur die Planungszeile mit dem aktuellen Fälligkeitsdatum und der Menge, aber ohne Arbeitsplan und Komponenten.  </li>
+<li>Arbeitsplan einschließen: Der geplante Arbeitsplan umfasst die Berechnung des Start- und Enddatum und -Zeiten. „Arbeitsplan einschließen“ ist anspruchvoll in Bezug auf Datenbankzugriffe. Um das End- und die Fälligkeitsdatum zu bestimmen, kann es notwendig sein, den Arbeitsplan zu berechnen, auch wenn das Vorratsereignis nicht abgeschlossen wurde. Zum Beispiel, wenn Sie eine Vorwärtsterminierung durchführen.  </li>
+<li>Strukturstückliste einschließen: kann kurz vor dem Abschluss des Vorratsereignisses geschehen.</li>
+</ul>
+<h2 id="see-also">Weitere Informationen</h2>
+<p><a href="design-details-central-concepts-of-the-planning-system.html">Designdetails: Zentrale Konzepte des Planungssystems</a><br><a href="design-details-handling-reordering-policies.html">Designdetails: Umgang mit Wiederbeschaffungsverfahren</a><br><a href="design-details-supply-planning.html">Designdetails: Vorratsplanung</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

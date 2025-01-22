@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SEPA-Lastschrift in Business Central </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="SEPA-Lastschrift in Business Central ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="collect-payments-with-sepa-direct-debit">Zahlungen per SEPA-Lastschrift einziehen</h1>
+
+<p>Mit dem Einverständnis Ihres Debitors können Sie Zahlungen nach dem SEPA-Format direkt vom Bankkonto des Debitors einziehen.  </p>
+<p>Richten Sie zuerst das Exportformat der Bankdatei ein, die Ihrer Bank aufträgt, eine Lastschrift durchführen. Dann richten Sie die Zahlungsmethode des Debitors ein. Richten Sie schließlich das Lastschrift-Mandat ein, die Ihrer Übereinkunft mit dem Kunden zum Einzug seiner Zahlungen in einem bestimmten Zeitraum entspricht.  </p>
+<p>Um die Bank anzuweisen, den Zahlungsbetrag vom Bankkonto des Debitors auf das Konto Ihres Unternehmens zu überweisen, erstellen Sie eine Lastschrifteinzugsbuchung, die Informationen über Bankkonten, die betroffenen Verkaufsrechnungen und die Lastschriftanweisung enthält. Anschließend exportieren Sie eine XML-Datei, die auf dem Einzugseintrag basiert, und senden Sie zur Verarbeitung an Ihre Bank. Über etwaige nicht verbuchte Zahlungen wirst Du durch Deine Bank informiert und musst die entsprechenden Lastschrifteinzüge dann manuell ablehnen.  </p>
+<p>Sie können Standarddebitorverkaufscodes mit Informationen zum Lastschrifteinzug und zu Einzugsermächtigungen einrichten. Anschließend können Sie mit der <strong>Standard-Debitorenrechnung erstellen</strong>-Stapelverarbeitung mehrere Verkaufsrechnungen erstellen, die bereits vorab die Einzugsinformationen enthalten. Dies kann manuell oder automatisch durchgeführt werden, je nach dem Zahlungsfälligkeitsdatum.  </p>
+<p>Wenn die Zahlungen wie von Ihrer Bank mitgeteilt erfolgreich verarbeitet wurden, können Sie die Zahlungseingänge entweder direkt von der Seite  <strong>Lastschrifteinzugseinträge</strong>  aus buchen oder indem Sie die Zahlungszeilen in das Journal verschieben, in dem Sie Zahlungseingänge buchen, z. B. auf die Seite  <strong>Barzahlungseingangsjournale</strong> . Je nach Ihrem Cash-Management-Prozess können Sie auch warten und die Zahlungen lediglich als Teil der Bankabstimmung anwenden.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um Zahlungen mithilfe von SEPA-Lastschrift zu erfassen, muss die Währung der Verkaufsrechnung EURO sein.  </p>
+</div>
+<h2 id="how-to-set-up-sepa-direct-debit">So richten Sie das SEPA-Lastschriftverfahren ein</h2>
+<p>Von der Seite <strong>Lastschrifteinzüge</strong> aus können Sie Anweisungen an Ihre elektronische Bank exportieren, um einen Lastschrifteinzug vom Bankkonto des Debitors auf Ihr Bankkonto gemäss dem SEPA-Lastschriftformat durchzuführen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die globale Version von Business Central unterstützt nur das SEPA-Lastschriftformat. Die Version für Ihr Land/Ihre Region unterstützt möglicherweise andere Formate für die elektronische Zahlung. Siehe unter <strong>Lokale Funktionalität</strong> im Inhaltsverzeichnis.  </p>
+</div>
+<p>Um den Export eines Bankdateiformats zu ermöglichen, das in  Business Central nicht standardmäßig unterstützt wird, können Sie mithilfe des Datenaustauschframeworks eine Datenaustauschdefinition einrichten. Für weitere Informationen, siehe <a href="across-how-to-set-up-data-exchange-definitions.html">Einrichten der Datenaustauschdefinition</a>.  </p>
+<p>Bevor Sie Debitorenzahlungen elektronisch durch den Export von Lastschriften im SEPA-Lastschriftformat verarbeiten können, müssen Sie die folgenden Einrichtungsschritte ausführen:  </p>
+<ul>
+<li>Richten Sie das Exportformat der Bankdatei ein, mit der Ihre Bank angewiesen wird, einen Bankeinzug vom Bankkonto des Debitors auf Ihr Bankkonto durchzuführen.  </li>
+<li>Richten Sie die Zahlungsmethode des Debitors ein.  </li>
+<li>Richten Sie das Lastschriftmandat ein, das Ihrer Übereinkunft mit dem Debitor zum Einzug seiner Zahlungen in einem bestimmten Zeitraum entspricht.  </li>
+</ul>
+<h3 id="to-set-up-your-bank-account-for-sepa-direct-debit">So richten Sie Ihr Bankkonto für das SEPA-Lastschriftverfahren ein</h3>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die das „Sie wünschen ...“-Feature öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Bankkonten</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie das Konto, das Sie für das Lastschriftverfahren verwenden möchten.  </li>
+<li>Wählen Sie auf der Registerkarte  <strong>Allgemeines</strong>  im Feld  <strong>SEPA-Lastschrift-Ablaufformat</strong>  die Option für SEPA-Lastschrift aus.  </li>
+</ol>
+<h3 id="to-set-up-the-customers-payment-method-for-sepa-direct-debit">So richten Sie die Zahlungsmethode des Debitors für das SEPA-Lastschriftverfahren ein</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Zahlungsformen</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.  </li>
+<li><p>Richten Sie eine Zahlungsform ein. Füllen Sie die auf den Lastschrifteinzug-spezifischen Felder gemäß der Beschreibung in der folgenden Tabelle aus.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lastschrift</strong></td>
+<td>Geben Sie an, ob die Zahlungsmethode für den SEPA-Lastschrifteinzug vorgesehen ist.</td>
+</tr>
+<tr>
+<td><strong>Zahlungsbedingungscode Lastschrift</strong></td>
+<td>Geben Sie die Zahlungsbedingungen (z. B. „NICHT ZAHLEN“) an, die auf Verkaufsrechnungen angezeigt werden, die mit SEPA-Lastschrift bezahlt werden, um dem Kunden mitzuteilen, dass die Zahlung automatisch eingezogen wird. Als Alternative können Sie das Feld leer lassen.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p> Geben Sie hier keinen Wert in <strong>Bal. Kontonr.</strong> ein  </p>
+</div>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus, um die Seite <strong>Zahlungsformen</strong> zu schließen.  </p>
+</li>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Debitor</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Öffnen Sie den Kunden Karte für den Kunden, den Sie für den SEPA-Lastschrifteinzug einrichten möchten.  </li>
+<li>Wählen Sie das Feld , und wählen Sie dann den <strong>Zahlungsformcode</strong>, den Sie in Schritt 3 angegeben haben.  </li>
+<li>Wiederholen Sie die Schritte 6 und 7 für alle Kunden, die Sie für den SEPA-Lastschrifteinzug einrichten möchten.  </li>
+</ol>
+<h4 id="to-set-up-the-direct-debit-mandate-that-represents-the-customer-agreement">Einrichten des Lastschrift-Mandats, entsprechend der Vereinbarung mit dem Debitor</h4>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Debitor</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Öffnen Sie Karte für den Kunden, den Sie für SEPA-Lastschriften einrichten möchten.  </li>
+<li>Wählen Sie die <strong>Bankkonten</strong> Aktion aus.  </li>
+<li>Auswählen Sie auf der Seite  <strong>Kundenbankkontoliste</strong>  das Kundenbankkonto, das Lastschriften nutzen soll, und wählen Sie dann die Aktion  <strong>Lastschriftmandate</strong>  unter  <strong>Neu</strong> aus.  </li>
+<li><p>Füllen Sie auf der Seite <strong>SEPA-Felder</strong> die Felder gemäß der Beschreibung in der folgenden Tabelle aus.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Debitor Bankkontocode</strong></td>
+<td>Gibt das Bankkonto an, aus dem Lastschrifteinzüge-direkt abgebucht werden. Dieses Feld wird automatisch ausgefüllt.</td>
+</tr>
+<tr>
+<td><strong>Gültig ab</strong></td>
+<td>Geben Sie das Datum an, an dem das Lastschrift-Mandat beginnt.</td>
+</tr>
+<tr>
+<td><strong>Gültig bis</strong></td>
+<td>Geben Sie das Datum an, an dem das Lastschrift-Mandat endet.</td>
+</tr>
+<tr>
+<td><strong>Datum der Unterschrift</strong></td>
+<td>Geben Sie das Datum an, an dem der Kunde das Lastschrift-Mandat unterzeichnet hat.</td>
+</tr>
+<tr>
+<td><strong>Zahlungsart</strong></td>
+<td>Geben Sie an, ob die Übereinkunft mehrere (<strong>Wiederkehrende</strong>) oder einen einzelnen (<strong>Einmalig</strong>) Lastschrifteinzug abdeckt.</td>
+</tr>
+<tr>
+<td><strong>Erwartete Anzahl Sollbeträge</strong></td>
+<td>Geben Sie an, wie viele Lastschrifteinzüge Sie zu tätigen erwarten. Dieses Feld ist nur relevant, wenn Sie <strong>Wiederkehrend</strong> im Feld <strong>Sequenzart</strong> ausgewählt haben.</td>
+</tr>
+<tr>
+<td><strong>Sollzähler</strong></td>
+<td>Gibt an, wie viele Lastschrift-Einzüge mit diesem Lastschrift-Mandat durchgeführt wurden. Dieses Feld wird automatisch aktualisiert.</td>
+</tr>
+<tr>
+<td><strong>Gesperrt</strong></td>
+<td>Geben Sie an, dass mit diesem Lastschriftmandat keine Lastschrifteinzüge durchgeführt werden können.-</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wiederholen Sie die Schritte 1 bis 5 für alle Kunden, die Sie für SEPA-Lastschriften einrichten möchten.  </p>
+<p>Das Lastschrift-Mandat wird automatisch in das Feld <strong>Lastschrift-Mandat-ID</strong> eingegeben, wenn Sie eine Verkaufsrechnung für den Debitor erstellen, den Sie in Schritt 2 ausgewählt haben. Weitere Informationen finden Sie unter <a href="sales-how-work-standard-lines.html">Erstellen Sie wiederkehrende Verkaufs- und Einkaufszeilen</a>.</p>
+</li>
+</ol>
+<h2 id="creating-sepa-direct-debit-collection-entries-and-export-to-a-bank-file">SEPA-Lastschrifteinzugsposten erstellen und in eine Bankdatei exportieren</h2>
+<p>Um die Bank anzuweisen, den Zahlungsbetrag vom Bankkonto des Debitors auf das Konto Ihres Unternehmens zu überweisen, erstellen Sie eine Lastschrifteinzugsbuchung, die Informationen über das Bankkonto des Debitors, die betroffenen Verkaufsrechnungen und die Einzugsermächtigung enthält. Aus dem resultierenden Lastschrifteinzugsposten können Sie dann eine XML-Datei exportieren, die Sie dann zur Verarbeitung an Ihre elektronische Bank senden oder hochladen. Konnten Zahlungen von der Bank nicht verarbeitet werden, werden Sie von Ihrer Bank darüber informiert und müssen den entsprechenden Lastschrifteinzug manuell ablehnen.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um Zahlungen mithilfe von SEPA-Lastschrift zu erfassen, muss die Währung der Verkaufsrechnung EURO sein.  </p>
+</div>
+<h3 id="to-create-a-direct-debit-collection">Erstellen eines Lastschrifteinzugs</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lastschriften-Sammlungen</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie auf der Seite <strong>Lastschrifteneinzug</strong> die Aktion <strong>Lastschrift anlegen</strong>.  </li>
+<li><p>Füllen Sie auf der Seite <strong>Lastschrift erstellen</strong> die Felder gemäß der Beschreibung in der folgenden Tabelle aus.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ab Fälligkeitsdatum</strong></td>
+<td>Geben Sie das früheste Zahlungsfälligkeitsdatum auf Verkaufsrechnungen an, für das Sie einen Lastschrifteinzug erstellen wollen.</td>
+</tr>
+<tr>
+<td><strong>Bis Fälligkeitsdatum</strong></td>
+<td>Geben Sie das späteste Zahlungsfälligkeitsdatum auf Verkaufsrechnungen an, für das Sie einen Lastschrifteinzug erstellen wollen.</td>
+</tr>
+<tr>
+<td><strong>Partnerart</strong></td>
+<td>Geben Sie an, ob der Lastschrifteinzug für Debitoren des Typs <strong>Unternehmen</strong> oder <strong>Person</strong> erfolgt.</td>
+</tr>
+<tr>
+<td><strong>Nur Debitoren mit gültiger Einzugsermächtigung</strong></td>
+<td>Geben Sie an, ob ein Lastschrifteinzug für Debitoren erstellt wird, die über ein gültiges Lastschrift-Mandat verfügen. <strong>Hinweis:</strong>  Ein Lastschrifteinzug wird erstellt, auch wenn das Feld  <strong>Lastschriftmandats-ID</strong>  auf der Verkaufsrechnung nicht ausgefüllt ist.</td>
+</tr>
+<tr>
+<td><strong>Nur Rechnungen mit gültigem Lastschrift-Mandat</strong></td>
+<td>Legt fest, ob ein Lastschrifteinzug nur dann für Verkaufsrechnungen erstellt wird, wenn im Feld <strong>Lastschrift-Mandat-ID</strong> auf der Verkaufsrechnung ein gültiges Lastschrift-Mandat ausgewählt ist.</td>
+</tr>
+<tr>
+<td><strong>Bankkontonr.</strong></td>
+<td>Geben Sie an, auf welches der Bankkonten Ihres Unternehmens die eingezogene Zahlung vom Bankkonto des Debitors überwiesen werden soll.</td>
+</tr>
+<tr>
+<td><strong>Bankkontoname</strong></td>
+<td>Gibt den Namen des Bankkontos an, das Sie im Feld <strong>Bankkontonr.</strong> auswählen. Dieses Feld wird automatisch ausgefüllt.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </p>
+</li>
+</ol>
+<p>Eine Einzugserfassung wird der <strong>Lastschrift</strong>-Seite hinzugefügt, und ein oder mehrere Lastschrifteinzugsposten werden erstellt.  </p>
+<h3 id="to-export-a-direct-debit-collection-entry-to-a-bank-file">Export eines Lastschrifteinzugpostens in eine Bankdatei</h3>
+<ol>
+<li>Wählen Sie auf der Seite <strong>Direktinkasso</strong> die Option <strong>Direktinkasso. Einträge</strong> Aktion.  </li>
+<li>Auf der Seite <strong>Direct Debit Inkasso. Einträge</strong>, wählen Sie den Eintrag, den Sie exportieren möchten, und wählen Sie dann die Aktion <strong>Lastschriftdatei erstellen</strong>.  </li>
+<li><p>Speichern Sie die Exportdatei an dem Speicherort, von dem aus Sie sie an Ihre elektronische Bank senden oder hochladen.  </p>
+<p>  auf der Seite <strong>Lastschrifteinzug-Eintrag</strong> wird das Feld <strong>Status Lastschrift</strong> zur erstellten Datei geändert. auf der Seite <strong>SEPA-Lastschrift-Mandate</strong> wird das Feld <strong>Sollzähler</strong> mit einer Anzahl aktualisiert.  </p>
+<p>Kann die exportierte Datei nicht verarbeitet werden, beispielsweise weil der Kunde insolvent ist, können Sie die Lastschrifteinzugsbuchung ablehnen. Wenn die exportierte Datei von der Bank erfolgreich verarbeitet wird, werden die fälligen Zahlungen der beteiligten Verkaufsrechnungen von den beteiligten Debitoren automatisch eingezogen. In diesem Fall können Sie die Erfassung schließen.  </p>
+</li>
+</ol>
+<h3 id="to-reject-a-direct-debit-collection-entry">Ablehnen eines Lastschrifteinzugpostens</h3>
+<ul>
+<li><p>Markieren Sie auf der Seite  <strong>Lastschrifteinzüge</strong>  den Eintrag, der nicht erfolgreich verarbeitet wurde, und wählen Sie dann die Aktion  <strong>Eintrag ablehnen</strong> .  </p>
+<p>  Der Wert im Feld <strong>Status</strong> auf der Seite <strong>Lastschrifteinzug-Eintrag</strong> wird auf <strong>zurückgewiesen</strong> geändert.  </p>
+</li>
+</ul>
+<h3 id="to-close-a-direct-debit-collection">Schließen eines Lastschrifteinzugs</h3>
+<ul>
+<li><p>Auf der Seite <strong>Lastschrifteinzug-Eintrag</strong> Seite, wählen Sie den Eintrag, der erfolgreich bearbeitet wurde, und wählen Sie dann die Aktion <strong>Sammlung schließen</strong>.  </p>
+<p>  Der zugehörige Lastschrifteinzug wird geschlossen.  </p>
+<p>Sie können jetzt Zahlungseingänge für die betreffenden Verkaufsrechnungen buchen. Sie können dies tun, wie Sie normalerweise Zahlungseingänge buchen, etwa auf der Seite <strong>Zahlungserfassung</strong> oder Sie können die zugehörigen Zahlungseingänge direkt aus dem Fenster <strong>Lastschrifteinzug-Eintrag</strong> buchen. Weitere Informationen finden Sie unter <a href="finance-collect-payments-with-sepa-direct-debit.html">Einziehen von Zahlungen mit Abbuchung SEPA</a>.</p>
+</li>
+</ul>
+<h2 id="posting-sepa-direct-debit-payment-receipts">SEPA-Lastschrifteinzug-Zahlungseingänge buchen</h2>
+<p>Wenn ein Lastschrifteinzug von Ihrer Bank erfolgreich verarbeitet wird, können Sie den Eingang der Zahlungen für die betreffenden Verkaufsrechnungen buchen. Weitere Informationen finden Sie unter <a href="finance-collect-payments-with-sepa-direct-debit.html#creating-sepa-direct-debit-collection-entries-and-export-to-a-bank-file">SEPA-Lastschrifteinzugsposten erstellen und in eine Bankdatei exportieren</a>  </p>
+<p>Sie können der Zahlungseingang direkt aus dem <strong>Lastschriften</strong> oder im <strong>Direct Debit Collect. Posten</strong> buchen. Sie können auch die Arbeit an einen anderen Benutzer übertragen, indem Sie die zugehörigen Buch.-Blattzeilen vorbereiten.  </p>
+<h3 id="to-post-a-direct-debit-payment-receipt-from-the-direct-debit-collections-page">Buchen eines Lastschrifteingangs aus der Lastschrift-Einzugsseite</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lastschriften-Sammlungen</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie eine Zeile für die Lastschrift-Einzugserfassung, die in eine Bankdatei exportiert und von der Bank erfolgreich verarbeitet wurde.</li>
+<li>Wählen Sie die Aktion <strong>Zahlungseingang buchen</strong> aus.  </li>
+<li><p>Füllen Sie auf der Seite <strong>Lastschrift buchen</strong> die Felder gemäß der Beschreibung in der folgenden Tabelle aus.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lastschriftnr.</strong></td>
+<td>Geben Sie den Lastschrifteinzug an, für den Sie den Zahlungseingang buchen wollen.</td>
+</tr>
+<tr>
+<td><strong>Fibu Buch.-Blattvorlage</strong></td>
+<td>Geben Sie an, welche Fibu Buch.-Blattvorlage zum Buchen des Zahlungseingangs verwendet werden soll, etwa die Vorlage für Bareingänge.</td>
+</tr>
+<tr>
+<td><strong>Fibu Buch.-Blattname</strong></td>
+<td>Geben Sie an, welcher Fibu Buch.-Blattname für die Buchung des Zahlungseingangs verwendet werden soll.</td>
+</tr>
+<tr>
+<td><strong>Nur Buch.-Blatt erstellen</strong></td>
+<td>Auswählen Aktivieren Sie dieses Kontrollkästchen, wenn Sie den Zahlungsbeleg nicht buchen möchten, wenn Sie die Schaltfläche  <strong>OK</strong>  auswählen. Der Zahlungsbeleg wird im angegebenen Journal vorbereitet und erst gebucht, wenn jemand die betreffenden Journalzeilen bucht.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong>.</p>
+</li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="receivables-manage-receivables.html">Verwalten von Forderungen</a><br><a href="service-service.html">Serviceverwaltung</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Einrichten und Fakturieren von Verkaufsvorauszahlungen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Einrichten und Fakturieren von Verkaufsvorauszahlungen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="walkthrough-set-up-and-invoicing-sales-prepayments">Exemplarische Vorgehensweise: Einrichten und Fakturieren von Verkaufsvorauszahlungen</h1>
+
+<p>Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Einrichtung und die Verwendung von Vorauszahlungen in Business Central. Vorauszahlungen sind Zahlungen, die in Rechnung gestellt und vor dem Buchen der endgültigen Rechnung auf eine Verkaufs- oder Einkaufsbestellung gebucht werden. Sie können beispielsweise auf einer Anzahlung bestehen, bevor Sie Artikel nach Maß fertigen, oder bevor die Artikel an den Debitor geliefert werden. Mit den Vorauszahlungsfunktionen können Sie Rechnungen erstellen, Kautionen von Debitoren einziehen und Kautionen an Kreditoren überweisen. Auf diese Weise werden alle relevanten Zahlungen für dieselbe Rechnung gebucht.</p>
+<p>Die Vorauszahlungsanforderungen können für jeden Debitor oder Kreditor für alle oder für ausgewählte Artikel definiert werden. Wenn Sie Vorauszahlungen eingerichtet haben, können Sie anschließend Vorauszahlungsrechnungen aus Verkaufsaufträge und Bestellungen mit Vorauszahlungsbeträgen generieren, die auf Ihrer Einrichtung basieren. Die Standardbeträge auf der Rechnung können je nach Anforderung geändert werden.  </p>
+<p>Sie haben zum Beispiel auch die Möglichkeit zum Senden mehrerer Vorauszahlungsrechnungen, für den Fall, dass dem Auftrag weitere Artikel hinzugefügt wurden.  </p>
+<h2 id="about-this-walkthrough">Informationen zu dieser exemplarischen Vorgehensweise</h2>
+<p>In dieser exemplarischen Vorgehensweise werden folgende Szenarios behandelt:  </p>
+<ul>
+<li>Einrichten von Vorauszahlungen  </li>
+<li>Erstellen eines Auftrags, der eine Vorauszahlung erfordert  </li>
+<li>Erstellen einer Vorauszahlungsrechnung  </li>
+<li>Korrigieren der Vorauszahlungsanforderungen für einen Auftrag  </li>
+<li>Ausgleichen von Vorauszahlungen für einen Auftrag  </li>
+<li>Fakturieren des Endbetrags für einen Auftrag mit Vorauszahlung  </li>
+</ul>
+<h3 id="roles">Rollen</h3>
+<p>Diese exemplarische Vorgehensweise umfasst Aufgaben für folgende Rollen:  </p>
+<ul>
+<li>Debitorenbetreuerin (Heike)  </li>
+<li>Auftragsbearbeiterin (Martha)  </li>
+<li>Debitorenadministrator (Peter)  </li>
+</ul>
+<h2 id="story">Hintergrund</h2>
+<p> Phyllis ist ein Buchhaltungsmanager und entschweidet, welche Debitoren eine Anzahlung leisten müssen, bevor Artikel hergestellt oder geliefert werden. Heike hat Business Central eingerichtet, um Vorauszahlungen automatisch zu berechnen.  </p>
+<p> Marta ist eine Verkaufsauftragsbearbeiterin. Wenn ein Debitor eine telefonische Bestellung tätigt, gibt Susan die Auftragsdaten in das System ein, während sie mit dem Debitoren telefoniert. Auf diese Weise kann Susan Preise und Zahlungsbedingungen sofort absprechen, und sie hat die Möglichkeit, den Auftrag noch während des Gesprächs mit dem Debitoren anzupassen.  </p>
+<p> Arnie arbeitet in der Debitorenabteilung, wo er Rechnungen und Zahlungen bucht.  </p>
+<p> In diesem Szenario richtet Heike basierend auf der Kreditgeschichte Vorauszahlungsanforderungen für den Debitoren Blütenhaus GmbH ein. Sie informiert Martha, wie Aufträge dieses Debitoren gehandhabt werden sollen.  </p>
+<p> Wenn der Kunde anruft, verhandelt Susan mit ihm, bis sie zu einer Einigung kommen. Im System stehen ihr unterschiedliche Methoden zur Verfügung, um die Vorauszahlung zu berechnen.  </p>
+<p> Nachdem Martha die Vorauszahlungsrechnung gesendet hat, bestellt der Debitor einen weiteren Artikel. Martha aktualisiert den Auftrag und erstellt eine zweite Vorauszahlungsrechnung.  </p>
+<p> Peter erfasst die Zahlung des Kunden und gleicht sie mit den Rechnungen aus. Anschließend sendet er die endgültige Rechnung.  </p>
+<h2 id="set-up-prepayments">Vorauszahlungen einrichten</h2>
+<p>Die Debitorenbetreuerin Heike richtet das System zur Verarbeitung von Vorauszahlungen für Debitoren ein.  </p>
+<ul>
+<li>Heike entscheidet sich, für Vorauszahlungen die gleichen Nummernserien zu verwenden wie für die Fakturierung von Verkaufsaufträgen.  </li>
+<li>Heike richtet die Anwendung so ein, dass die Notwendigkeit von Vorauszahlungen vor der endgültigen Fakturierung eines Auftrags überprüft wird.  </li>
+<li>Heike legt Standardwerte für den erforderlichen Vorauszahlungsprozentsatz für bestimmte Artikel und Debitoren fest.  </li>
+</ul>
+<p>In den folgenden Verfahren wird beschrieben, wie Sie Heikes Aufgaben ausführen:  </p>
+<h3 id="to-set-up-number-series-for-prepayments">So richten Sie Nummernserien für Vorauszahlungen ein</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Einrichtung Debitoren &amp; Verkauf</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Erweitern Sie auf der Seite <strong>Debitoren Verkauf Einr.</strong> das Inforegister <strong>Nummernserie</strong>.  </li>
+<li>Vergewissern Sie sich, dass die Nummernserien für gebuchte Vorauszahlungsrechnungen im Feld <strong>Geb. Vorauszahlungs-Rechnungsnr.</strong> und gebuchte Verkaufsrechnungen (<strong>Gebuchte Rechnungsnummern</strong>) sowie die Nummernserien für gebuchte Vorauszahlungsgutschriften (<strong>Geb. Vorauszahlungs-Gutschriftennr.</strong>) und gebuchte Gutschriften (<strong>Gebuchte Gutschriftennr.</strong>) übereinstimmen.  </li>
+</ol>
+<h3 id="to-block-shipments-for-unpaid-prepayment">Lieferungen für nicht geleistete Vorauszahlung sperren</h3>
+<ol>
+<li>Aktivieren Sie auf der Seite <strong>Debitoren &amp; Verkauf Einr.</strong> auf dem Inforegister <strong>Allgemein</strong> die Option <strong>Vorauszahlung beim Buchen prüfen</strong>.</li>
+</ol>
+<p>Jetzt können Sie einen Auftrag mit nicht bezahltem Vorauszahlungsbetrag nicht liefern oder in Rechnung stellen.  </p>
+<p>Heike legt standardmäßig fest, dass für den Debitoren 20000 eine Anzahlung in Höhe von 30 % für alle Aufträge fakturiert werden muss. Daher gibt Phyllis einen Standardvorauszahlungsprozentsatz in der Debitorenkarte ein.  </p>
+<p>Heike legt fest, dass für alle Debitoren eine Anzahlung in Höhe von 20 % für den Artikel 1896-S fakturiert werden muss. Aufgrund der schlechten Zahlungshistorie des Kunden 20000 verlangt Phyllis vom Kunden 20000 eine Vorauszahlung in Höhe von 40 % für Artikel 1896-S. Im folgenden Beispiel wird gezeigt, wie Sie standardmäßige Vorauszahlungsprozentsätze einrichten.  </p>
+<h3 id="to-assign-default-prepayment-percentages-to-customers-and-items">So weisen Sie Debitoren und Artikeln Standardvorauszahlungsprozentsätze zu</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Debitoren</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Öffnen Sie das Kartenfenster für Debitor 20000 (Trey Research).</li>
+<li>Geben Sie im Inforegister <strong>Zahlungen</strong> im Feld <strong>Vorauszahlung %</strong> <strong>30</strong> ein.  </li>
+<li>Wählen Sie die Aktion <strong>Zugehörig</strong> den Menüpunkt <strong>Verkauf</strong> und dann den Menüpunkt <strong>Vorauszahlungsprozentsätze</strong> aus.  </li>
+<li><p>Füllen Sie auf der Seite <strong>Verkaufsvorauszahlungs-Prozentsätze</strong> zwei Zeilen wie folgt aus:  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Verkaufsart</strong></th>
+<th><strong>Verkaufscode</strong></th>
+<th><strong>Artikelnr.</strong></th>
+<th><strong>Vorauszahlung %%</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Debitor</strong></td>
+<td><strong>20000</strong></td>
+<td><strong>1896-S</strong></td>
+<td><strong>40</strong></td>
+</tr>
+<tr>
+<td><strong>Debitor</strong></td>
+<td><strong>20000</strong></td>
+<td><strong>1900-S</strong></td>
+<td><strong>30</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="TIP"><h5>Tipp</h5><p>Je nach Land/Region müssen Sie im Inforegister <strong>Einstandspreise und Buchung</strong> für den Artikel 1896-S auch einen Steuergruppencode angeben. Wenn Sie das Demounternehmen verwenden, ist dieses Feld bereits festgelegt.</p>
+</div>
+</li>
+<li><p>Schließen Sie alle Seiten.  </p>
+</li>
+</ol>
+<h3 id="to-specify-an-account-for-sales-prepayments-in-general-posting-setup">Ein Konto für Verkaufsvorauszahlung in der allgemeinen Buchungsmatrix angeben</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Allgemeine Buchungsmatrixeinrichtung</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Zeile aus, in der das Feld <strong>Geschäftsbuchungsgruppe</strong> auf <strong>INLAND</strong> und das Feld <strong>Produktbuchungsgruppe</strong> auf <strong>EINZELHANDEL</strong> festgelegt wurde.  </li>
+<li>Geben Sie das entsprechende Konto im Feld <strong>Verkaufsvorauszahlungs-Konto</strong> an. Ihre Auswahl wird automatisch gespeichert.  </li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>Wenn das Feld auf der Seite <strong>Buchungsmatrix einrichten</strong> nicht angezeigt wird, verwenden Sie die horizontale Bildlaufleiste am unteren Rand der Seite, um nach rechts zu scrollen.  </p>
+</div>
+<h2 id="create-an-order-that-requires-a-prepayment">Erstellen eines Auftrags, der eine Vorauszahlung erfordert</h2>
+<p> Im folgenden Szenario erstellt Susan aus der Auftragsabwicklung einen Auftrag, während sie mit einem Debitoren spricht. Die Artikel, die der Debitor bestellt, erfordern eine Vorauszahlung. Außerdem hat der Debitor in der Vergangenheit einige verspätete Zahlungen geleistet. Daher wurde Martha angewiesen, einen festen Betrag von <strong>800</strong> als Vorauszahlung auf dem Auftrag zu benötigen.  </p>
+<p>Der Debitor bittet, nur 35 %% anzahlen zu müssen. Da Susan dem zustimmen kann, ändert sie den Auftrag entsprechend.  </p>
+<p>Martha erstellt die Vorauszahlungsrechnung und sendet sie an den Kunden.  </p>
+<h3 id="to-create-a-sales-order-with-a-prepayment">So erstellen Sie einen Verkaufsauftrag mit einer Vorauszahlung</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Verkaufsaufträge</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.  </li>
+<li>Wählen Sie im Feld <strong>Debitorenname</strong> <strong>Trey Research</strong> aus.  </li>
+<li>Schließen Sie die angezeigte Warnung zum fälligen Saldo.  </li>
+<li><p>Füllen Sie zwei Verkaufszeilen mit den folgenden Informationen aus.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Typ</strong></th>
+<th><strong>Nr.</strong></th>
+<th><strong>Menge</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Artikel</strong></td>
+<td><strong>1896-S</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td><strong>Artikel</strong></td>
+<td><strong>1900-S</strong></td>
+<td><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p> Die Vorauszahlungsfelder in der Verkaufszeile sind standardmäßig ausgeblendet. Um die Felder anzuzeigen, müssen Sie die Seite personalisieren. Weitere Informationen finden Sie unter <a href="ui-personalization-user.html#start-personalizing-by-using-the-personalization-mode">So starten Sie die Personalisierung einer Seite über das Personalisierungsbanner</a>.</p>
+</li>
+<li><p>Vergewissern Sie sich, dass das Feld <strong>Vorauszahlung %</strong> in der Zeile mit dem Artikel <strong>1900-S</strong> den Wert <strong>30</strong> enthält. Der Standardwert wurde aus dem Verkaufskopf von der Debitorenkarte übernommen.  </p>
+<p> Das Feld <strong>Vorauszahlung %</strong> in der Zeile mit dem Artikel <strong>1896-S</strong> enthält <strong>40</strong>. 40 ist der Prozentsatz, den Sie auf der Seite <strong>Verkaufsvorauszahlungs-Prozentsätze</strong> für den Artikel <strong>1896-S</strong> und den Kunden <strong>20000</strong> eingegeben haben.  </p>
+<p> Weitere Informationen finden Sie unter <a href="finance-set-up-prepayments.html">Einrichten von Vorauszahlungen</a>.  </p>
+</li>
+<li>Wählen Sie in der Aktion <strong>Bestellung</strong> die Option <strong>Statistik</strong> aus.  </li>
+<li><p>Im Inforegister <strong>Vorauszahlung</strong> enthält das Feld <strong>Vorauszahlungszeilenbetrag ohne MwSt.</strong> den Wert <strong>458,16</strong>. Wenn Sie jetzt eine Vorauszahlungsrechnung für den Auftrag erstellen, wird 458,16 in der Rechnung angezeigt.  </p>
+<p> In diesem Szenario wurde Martha angewiesen, eine Gesamtvorauszahlung in Höhe von <strong>800</strong> für den Auftrag vorzuschlagen.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p> Abhängig von Ihrem Land/Ihrer Region trifft der nächste Schritt möglicherweise nicht zu.  </p>
+</div>
+</li>
+<li>Ändern Sie den Betrag im Feld <strong>Vorauszahlungsbetrag ohne MwSt.</strong> in <strong>800</strong>, und schließen Sie dann die Seite.  </li>
+<li><p>Überprüfen Sie das Feld <strong>Vorauszahlung %</strong> in den Verkaufszeilen. Der Wert wurde neu berechnet und lautet nun <strong>67.02438</strong> und <strong>67.02282</strong>.  </p>
+<p> Die erneute Berechnung beinhaltet alle Zeilen mit einem Vorauszahlungsprozentsatz größer 0.  </p>
+<p> Jetzt fragt der Debitor, ob der Vorauszahlungsprozentsatz auf 35 %% festgelegt werden kann. Da Marthas Vorgesetzter genehmigt die Änderung.</p>
+</li>
+<li>Erweitern Sie auf der Seite <strong>Verkaufsauftrag</strong> im Inforegister <strong>Vorauszahlung</strong> das Feld <strong>Vorauszahlung %</strong>, und geben Sie <strong>35</strong> ein.  </li>
+<li>In der Warnung, die erscheint, wählen Sie die Schaltfläche <strong>Ja</strong>. Eine Rate von 35 % wird als Vorauszahlungsprozentsatz für den gesamten Auftrag angewendet.  </li>
+<li>Überprüfen Sie dann, ob die Zeilen korrekt aktualisiert wurden.  </li>
+</ol>
+<h2 id="create-a-prepayment-invoice">Erstellen einer Vorauszahlungsrechnung</h2>
+<p>Nachdem sie die korrekten Vorauszahlungswerte im Auftrag eingegeben hat, erstellt Martha die Vorauszahlungsrechnung und sendet sie an den Kunden.  </p>
+<h3 id="to-create-a-prepayment-invoice">So erstellen Sie eine Vorauszahlungsrechnung</h3>
+<ol>
+<li>Wählen Sie auf der Seite <strong>Verkaufsauftrag</strong> nacheinander die Optionen <strong>Aktionen</strong>, <strong>Buchung</strong>, <strong>Vorauszahlung</strong> und dann <strong>Vorauszahlungsrechnung buchen und drucken</strong> aus</li>
+<li>Klicken Sie auf die Schaltfläche <strong>Ja</strong>, um die Rechnung zu buchen.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Susan würde nun die Rechnung an den Kunden senden.  </p>
+</div>
+<h2 id="create-an-additional-prepayment-invoice">Erstellen einer weitere Vorauszahlungsrechnung</h2>
+<p>Am folgenden Tag, ruft der Debitor Martha an, und nimmt Änderungen am Auftrag vor. Der Debitor möchte zwei Exemplare des Artikels 1896-S. Susan öffnet und aktualisiert den auftrag, und dann erstellt sie eine zweite Vorauszahlungsrechnung auf dem Auftrag und sendet sie an den Debitoren.  </p>
+<h3 id="to-create-an-additional-prepayment-invoice">So erstellen Sie eine weitere Vorauszahlungsrechnung</h3>
+<ol>
+<li>Wählen Sie auf der Seite <strong>Verkaufsauftrag</strong> die Aktion <strong>Freigeben</strong> und dann <strong>Erneut öffnen</strong> aus.  </li>
+<li><p>Geben Sie in der Zeile für den Artikel <strong>1896-S</strong> im Feld <strong>Menge</strong> den Wert <strong>2</strong> ein.  </p>
+<p> Wählen Sie in der Aktion <strong>Bestellung</strong> die Option <strong>Statistik</strong> aus. Das Feld <strong>Vorauszahlungsbetrag ohne. MwSt.</strong> enthält jetzt <strong>768,04</strong>, und das Feld <strong>Fakt. Vorauszahlungsbetrag ohne MwSt.</strong> enthält <strong>417,76</strong>. Diese Werte bedeuten, dass ein zusätzlicher Vorauszahlungsbetrag vorhanden ist, der noch nicht fakturiert wurde.  </p>
+</li>
+<li>Wählen Sie nacheinander die Optionen <strong>Aktionen</strong>, <strong>Buchen</strong>, <strong>Vorauszahlung</strong> und dann <strong>Vorauszahlungsrechnung buchen und drucken</strong> aus, um eine Rechnung für den zusätzlichen Vorauszahlungsbetrag zu buchen</li>
+<li>Klicken Sie auf die Schaltfläche <strong>Ja</strong>, um die Rechnung zu buchen.  </li>
+</ol>
+<h2 id="apply-the-prepayments">Ausgleichen der Vorauszahlungen</h2>
+<p>Der Debitor zahlt den Vorauszahlungsbetrag. Peter aus der Buchhaltung registriert die Zahlung und wendet sie auf die Vorauszahlungsrechnungen an.  </p>
+<h3 id="to-apply-a-payment-to-the-prepayment-invoices">So gleichen Sie eine Zahlung mit den Vorauszahlungsrechnungen aus</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Zahlungseingangs Buch.-Blätter</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li><p>Füllen Sie ein Buchhaltungsprotokoll mit den folgenden Informationen aus.  </p>
+<table>
+<thead>
+<tr>
+<th>Name des Felds</th>
+<th>Eingabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Belegart</strong></td>
+<td><strong>Zahlung</strong></td>
+</tr>
+<tr>
+<td><strong>Kontoart</strong></td>
+<td><strong>Debitor</strong></td>
+</tr>
+<tr>
+<td><strong>Kontonr.</strong></td>
+<td><strong>20000</strong></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Wählen Sie die Aktion <strong>Prozess</strong> und dann <strong>Posten ausgleichen</strong> aus.  </li>
+<li>Wählen Sie auf der Seite <strong>Debitorenpostenausgleich</strong> die erste Vorauszahlungsrechnung, dann die Aktion <strong>Prozess</strong> und anschließend Aktion <strong>Ausgleichs-ID setzen</strong> aus.  </li>
+<li>Wiederholen Sie den vorherigen Schritt für die zweite Vorauszahlung.  </li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong>.  </p>
+<p> Die Felder <strong>Betrag</strong> enthalten jetzt die Summe der beiden Vorauszahlungsrechnungen.  </p>
+</li>
+<li><p>Wählen Sie zum Veröffentlichen des Journals die Aktion <strong>Buchen/Drucken</strong> und dann <strong>Buchen</strong> aus.</p>
+</li>
+<li>Wählen Sie die Schaltfläche <strong>Ja</strong> aus.</li>
+</ol>
+<h2 id="invoice-the-remaining-amount">Fakturieren des Restbetrags</h2>
+<p>Peter wurde darüber informiert, dass die Artikel im Auftrag geliefert wurden und der Auftrag fakturiert werden kann. Peter erstellt die Rechnung für den Auftrag.  </p>
+<h3 id="to-invoice-the-remaining-amount">So fakturieren Sie den Restbetrag</h3>
+<ol>
+<li>Öffnen Sie den Verkaufsauftrag.</li>
+<li>Wählen Sie die Aktion <strong>Buchung</strong> und dann <strong>Buchen</strong> aus.</li>
+<li>Wählen Sie <strong>Lieferung und Rechnung</strong> und dann die Schaltfläche <strong>OK</strong> aus.</li>
+<li><p>Wenn Sie eine Vorschau der Rechnung anzeigen möchten, wählen Sie die Schaltfläche <strong>Ja</strong> aus.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Normalerweise wurde die Lieferung bereits von der Versandabteilung gebucht.  </p>
+</div>
+<p> Peter kann die Historie anzeigen, um sicherzustellen, dass die Verkaufsrechnung wie beabsichtigt erstellt wurde.</p>
+</li>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Gebuchte Verkaufsrechnungen</strong> ein und wählen Sie dann den entsprechenden Link.  </p>
+</li>
+</ol>
+<h2 id="update-the-status-of-prepaid-orders-and-invoices-automatically">Status von vorausbezahlten Bestellungen und Rechnungen automatisch aktualisieren</h2>
+<p>Sie können die Auftrags- und Rechnungsverarbeitung beschleunigen, indem Sie Auftragswarteschlangeneinträge einrichten, die den Status dieser Dokumente automatisch aktualisieren. Wenn eine Vorauszahlungsrechnung bezahlt wird, können die Auftragswarteschlangeneinträge den Dokumentstatus automatisch von <strong>Ausstehende Vorauszahlung</strong> zu <strong>Freigegeben</strong> ändern. Wenn Sie die Jobwarteschlangeneinträge einrichten, müssen Sie folgende Codeunits verwenden: <strong>383 Ausstehende Vorauszahlungsverkäufe aktualisieren</strong> und <strong>383 Ausstehende Vorauszahlungsbestellungen aktualisieren</strong>. Wir empfehlen, die Einträge häufig auszuführen, z. B. jede Minute. Weitere Informationen finden Sie unter <a href="admin-job-queues-schedule-tasks.html">Job-Warteschlangen zur Einplanung von Aufgaben verwenden</a>.</p>
+<h2 id="next-steps">Nächste Schritte</h2>
+<p>In dieser Demonstration wurde beschrieben, wie Sie Business Central zur Verarbeitung von Vorauszahlungen einrichten. </p>
+<ul>
+<li>So richten Sie für Debitoren und Artikel Standardvorauszahlungsprozentsätze zu.</li>
+<li>Verwenden Sie verschiedene Methoden, um die Vorauszahlungen für eine Bestellung zu berechnen.  </li>
+<li>Berechnen Sie den Vorauszahlungsbetrag als Prozentsatz des Gesamtbetrags der Bestellung.</li>
+<li>Weisen Sie der Bestellung einen Gesamtvorauszahlungsbetrag zu.  </li>
+</ul>
+<p>Zudem wurden das Buchen einer Vorauszahlungsrechnung, Erstellen einer zweiten Vorauszahlungsrechnung bei einer Änderung des Auftrags und das Buchen der endgültigen Rechnung für den Restbetrag erläutert.  </p>
+<p>Die Vorauszahlungsfunktionen erleichtern die Einrichtung und Durchsetzung von Vorauszahlungsregeln für Kunden und Artikel. Außerdem können Sie jede Zahlung gegen eine Rechnung buchen.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance-invoice-prepayments.html">Vorauszahlungen fakturieren</a><br><a href="finance.html">Finanzen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a><br><a href="walkthrough-business-process-walkthroughs.html">Exemplarische Vorgehensweisen für Geschäftsprozesse</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

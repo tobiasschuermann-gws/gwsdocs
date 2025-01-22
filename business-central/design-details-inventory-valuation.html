@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Designdetails&#160;&#8211; Bestandsbewertung | Microsoft-Dokumentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Designdetails&#160;&#8211; Bestandsbewertung | Microsoft-Dokumentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-inventory-valuation">Designdetails: Lagerbewertung</h1>
+
+<p>Die Lagerbewertung ist die Identifizierung der Kosten, die einem Lagerartikel zugewiesen sind, wie durch folgende Formel dargestellt.  </p>
+<p>Endbestand = Anfangsbestand + Nettoeinkäufe - Vertriebskosten  </p>
+<p>Die Berechnung der Lagerbewertung verwendet das Feld <strong>Kostenbetrag (Ist)</strong> der Wertposten für den Artikel. Die Posten werden nach der Postenart klassifiziert, die den Kostenkomponenten, den direkten Kosten, den indirekten Kosten, der Abweichung, der Neubewertung und der Rundung entspricht. Weitere Informationen finden Sie unter <a href="design-details-cost-components.html">Designdetails: Kostenkomponenten</a>  </p>
+<p>Posten werden gegeneinander ausgeglichen, entweder durch den festen Ausgleich oder entsprechend der allgemeinen Kostenfluss-Annahme, die von der Kostenberechnungsmethode definiert ist. Ein Posten des Lagerabgangs kann mit mehr als einem Zugangseintrag mit verschiedenen Buchungsdaten und ggfs. verschiedenen Anschaffungskosten ausgeglichen werden. Weitere Informationen finden Sie unter <a href="design-details-item-application.html">Designdetails: Artikelverfolgung</a>. Daher basiert die Berechnung des Bestandwerts für ein gegebenes Datum auf dem Aufsummieren von positiven und negativen Wertposten.  </p>
+<h2 id="inventory-valuation-report">Bericht „Bestandsbewertung“</h2>
+<p>Um den Lagerwert im Bericht <strong>Lagerwert berechnen</strong> zu berechnen, beginnt der Bericht, den Bestand des Artikels zu einem bestimmten Startdatum zu berechnen. Er fügt den Wert von Lagerzugängen hinzu nd subtrahiert den Wert von Lagerabgängen bis zu einem bestimmten Enddatum. Das Endergebnis ist der Lagerwert am Enddatum. Der Bericht berechnet diese Werte, indem er die Werte im Feld <strong>Kostenbetrag (ist)</strong> in den Wertposten summiert, wobei die Buchungsdaten als Filter verwendet werden.  </p>
+<p>Der gedruckte Bericht zeigt immer tatsächliche (fakturierte) Beträge an, d. h. Einstandspreise von Posten, die als fakturiert gebucht wurden. Der Bericht enthält auch die Soll-Kosten von Posten, die als geliefert gebucht wurden, wenn Sie auf dem Inforegister „Optionen“ das Feld „Inklusive Soll-Kosten“ durch ein Häkchen aktivieren.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p> Werte im Bericht <strong>Lagerwert berechnen</strong> wird mit dem Lagerkonto im Sachkonto abgestimmt, was bedeutet, dass die betreffenden Wertposten in der Finanzbuchhaltung gebucht wurden.  </p>
+</div>
+<div class="IMPORTANT"><h5>Wichtig</h5><p> Beträge in den <strong>Wert</strong>-Spalten des Berichts basieren auf dem Buchungsdatum der Transaktionen für einen Artikel.  </p>
+</div>
+<h2 id="inventory-valuation---wip-report">Bericht „Bestandsbewertung – WIP“</h2>
+<p>Ein Produktionsbetrieb muss den Wert von drei Arten von Bestand bestimmen:  </p>
+<ul>
+<li>Rohmaterialbestand  </li>
+<li>Produktionslager  </li>
+<li>Fertigerzeugnisse (Bestand)  </li>
+</ul>
+<p>Der Wert des WIP-Lagers wird durch folgende Formel bestimmt:  </p>
+<ul>
+<li>End-WIP-Bestand = Anfangs-WIP-Bestand + Fertigungskosten - Fertigungskosten  </li>
+</ul>
+<p>Wie bei eingekauftem Lagerbestand sind die Werteinträge die Grundlage der Bestandsbewertung. Die Berechnung erfolgt anhand der Werte in dem Feld <strong>Kostenbetrag (Ist)</strong> der Artikel- und Kapazitätswertposten, die mit einem Fertigungsauftrag verbunden sind.  </p>
+<p>Der Zweck der WIP-Bestandsbewertung besteht darin, den Wert der Artikel zu ermitteln, deren Produktion an einem vorgegebenen Datum noch nicht abgeschlossen wurde. Daher ist der den Lagerwert der unfertigen Arbeit auf den Wertposten basiert, die sich auf die Verbrauchs- und Kapazitätsposten beziehen. Verbrauchsposten müssen am Datum der Bewertung fakturiert sein. Deshalb zeigt der Bericht <strong>Lagerbewertung - Aktiviert</strong> die Kosten an, die den den Lagerwert der unfertigen Arbeit in zwei Kategorien darstellen: Verbrauch und Kapazität.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="design-details-reconciliation-with-the-general-ledger.html">Designdetails: Abgleich mit der Finanzbuchhaltung</a><br><a href="design-details-revaluation.html">Designdetails: Neubewertung</a><br><a href="design-details-production-order-posting.html">Designdetails: Fertigungsauftragsbuchung</a><br><a href="finance-manage-inventory-costs.html">Verwalten der Lagerregulierung</a><br><a href="finance.html">Finanzen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

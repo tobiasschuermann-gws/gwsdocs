@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Norwegian VAT reporting [NO] </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Norwegian VAT reporting [NO] ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="norwegian-vat-reporting">Norwegian VAT reporting</h1>
+
+<div class="IMPORTANT"><h5>Wichtig</h5><p>ID-porten in Norway has changed. Microsoft updated the Norwegian Electronic VAT submission solution to the new ID-porten system from the 23.5 release.</p>
+</div>
+<p>Business Central provides features that allow you to calculate and report VAT returns to the Norwegian tax authorities.  </p>
+<p>This article shows the typical steps that you should follow when reporting Norwegian VAT.  </p>
+<p>This article assumes that VAT reporting is set up. For more information, see <a href="../../finance-setup-vat.html">Set Up Calculations and Posting Methods for Value-Added Tax</a> and <a href="../../finance-how-report-vat.html">Report VAT to Tax Authorities</a>.</p>
+<h2 id="set-up-business-central-to-generate-and-submit-electronic-vat-returns">Set up Business Central to generate and submit electronic VAT returns</h2>
+<p>To submit VAT returns to Norwegian tax authorities, an administrator must create a connection to ID-Porten at Digitaliseringsdirektoratet.  </p>
+<div class="TIP"><h5>Tipp</h5><p>We recommend that you always use Business Central in a browser to set up the connection to ID-Porten.</p>
+</div>
+<h3 id="register-your-company-with-id-porten">Register your company with ID-Porten</h3>
+<p>To register your company with ID-Porten, follow the steps provided by <a href="https://samarbeid.digdir.no/id-porten/ta-i-bruk-id-porten/94">Samarbeidsportalen</a>. After you register, note the following information. You&#39;ll need later it when you use the assisted setup guide to authorize Business Central to access ID-Porten.</p>
+<ul>
+<li>Valid redirection URIs</li>
+<li>Client ID</li>
+<li>Client secret</li>
+</ul>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>It&#39;s important to safely store the client ID and client secret of the integration point.</p>
+</div>
+<h3 id="set-up-the-integration-point">Set up the integration point</h3>
+<p>After you register your company in ID-Porten, the next step is to create an integration point in your company&#39;s account in ID-Porten. For more information, see <a href="https://docs.digdir.no/">integration point</a>.</p>
+<ol>
+<li>Sign in to <a href="https://skatteetaten.github.io/mva-meldingen/english/idportenauthentication/">Skatteetaten</a>.</li>
+<li>On the navigation pane, choose <strong>Integrasjoner</strong>, and under <strong>Produksjon</strong>, choose <strong>Ver 2</strong>.</li>
+<li>Choose <strong>New Integration</strong> to add a new integration point: <a href="https://sjolvbetjening.samarbeid.digdir.no/">https://sjolvbetjening.samarbeid.digdir.no/</a> </li>
+<li>Fill in the fields as described in the following table.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter name (Norwegian)</th>
+<th>Parameter description</th>
+<th>Parameter value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Difi-tjeneste</td>
+<td>Select the service to be assigned correct scopes.</td>
+<td>Select <strong>API-klient</strong>.</td>
+</tr>
+<tr>
+<td>Scopes</td>
+<td>The application programming interfaces (APIs)/resources that the integration can access.</td>
+<td><p>Select the following scopes:</p><ul><li><strong>openid</strong></li><li><strong>skatteetaten:mvameldinginnsending</strong></li><li><strong>skatteetaten:mvameldingvalidering</strong></li></ul></td>
+</tr>
+<tr>
+<td>Kundens org.nr.</td>
+<td>The organization number of the service owner.</td>
+<td>You don&#39;t have to specify a value in this field. The required value is automatically set when the setup of the integration point is saved.</td>
+</tr>
+<tr>
+<td>Integrasjonens identifikator</td>
+<td>The unique identifier of the service.</td>
+<td>You don&#39;t have to specify a value in this field. The required value is automatically set when the setup of the integration point is saved.</td>
+</tr>
+<tr>
+<td>Navn på integrasjonen</td>
+<td>The name of the integration as it appears in the sign-in window.</td>
+<td>Specify <strong>Microsoft Dynamics 365 Business Central (New)</strong>.</td>
+</tr>
+<tr>
+<td>Beskrivelse</td>
+<td>A brief description of the service (for example, &quot;Meeting portal for NN municipality&quot;).</td>
+<td>Specify <strong>Integration with Microsoft Dynamics 365 Business Central</strong>.</td>
+</tr>
+<tr>
+<td>Tillatte grant types</td>
+<td>A grant represents the user&#39;s consent to retrieve an access token. By selecting specific grants, you consent to the corresponding methods of retrieving an access token.</td>
+<td><p>Select the following grant types:</p><ul><li><strong>authorization_code</strong></li><li><strong>refresh_token</strong></li></ul></td>
+</tr>
+<tr>
+<td>Klientautentiseringsmetode</td>
+<td>The method of authentication of your client.</td>
+<td>Specify <strong>client_secret_post</strong>.</td>
+</tr>
+<tr>
+<td>Applikasjonstype</td>
+<td>The application (or client) type is the type of runtime environment that the client is running under. OAuth2 chapter 2.1 lists the available options. The choice of client type is a security assessment that the customer performs.</td>
+<td>Select <strong>web</strong>.</td>
+</tr>
+<tr>
+<td>Gyldig(e) redirect uri-er</td>
+<td>This parameter applies only to personal sign-in integrations. It specifies the URIs that the client is allowed to go to after sign-in.</td>
+<td>The URI is a combination of your base URI and OAuthLanding.htm. This value differs depending on whether you use Business Central online or on-premises. For online, use the following URI, <code>https://www.businesscentral.dynamics.com/OAuthLanding.htm</code>. Here&#39;s an example of a URI for on-premises: <code>https://&lt;hostname&gt;/OAuthLanding.htm</code>.</td>
+</tr>
+<tr>
+<td>Gyldig(e) post logout redirect uri-er</td>
+<td>This parameter applies only to personal sign-in integrations. It specifies the URIs that the client is allowed to go to after sign-out.</td>
+<td>Specify <code>https://skatteetaten.no</code>.</td>
+</tr>
+<tr>
+<td>Frontchannel logout uri</td>
+<td>The URI that the provider sends a request to upon sign-out that another client triggers in the same session. If you don&#39;t set this parameter, you risk that users remain signed in to your service when they sign out of ID-porten.</td>
+<td>The value should be blank.</td>
+</tr>
+<tr>
+<td>Frontchannel logout krever sesjons-id</td>
+<td>This parameter applies only to personal sign-in integrations. It&#39;s a flag that determines whether the issuer and session ID parameters are passed together with <strong>frontchannel_logout_uri</strong>.</td>
+<td>Leave this checkbox cleared.</td>
+</tr>
+<tr>
+<td>Tilbake-uri</td>
+<td>This parameter applies only to personal sign-in integrations. It specifies the URI that a user is sent back to when they cancel sign-in.</td>
+<td>Specify <code>https://skatteetaten.no</code>.</td>
+</tr>
+<tr>
+<td>PKCE</td>
+<td>This parameter specifies code challenge method.</td>
+<td>Specify <strong>S256</strong></td>
+</tr>
+<tr>
+<td>Authorization levetid (sekunder)</td>
+<td>The lifetime of the registered authorization. In an OpenID Connect context, this authorization gives access to the &quot;userinfo&quot; endpoint. The value must be specified in seconds.</td>
+<td>Specify <strong>31536000</strong> (= one year).</td>
+</tr>
+<tr>
+<td>Access token levetid (sekunder)</td>
+<td>The lifetime of the issued <strong>access_token</strong> in seconds.</td>
+<td>Specify <strong>7200</strong> (= two hours).</td>
+</tr>
+<tr>
+<td>Refresh token levetid (sekunder)</td>
+<td>The lifetime of the issued <strong>refresh_token</strong> in seconds.</td>
+<td>Specify <strong>0</strong> (zero).</td>
+</tr>
+<tr>
+<td>Refresh token type</td>
+<td><ul><li><strong>One-time</strong> – You get a new <strong>refresh_token</strong> at each refresh of <strong>access_token</strong>.</li><li><strong>Reusable</strong> – A refresh of <strong>access_token</strong> doesn&#39;t change <strong>refresh_token</strong>.</li></ul></td>
+<td>Specify <strong>Engangs</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>:::image type=&quot;content&quot; source=&quot;../../media/nor-vat-return-integration-point-new.png&quot; alt-text=&quot;Integration point settings for Norwegian VAT&quot;:::</p>
+<h3 id="set-up-electronic-vat-reporting">Set up electronic VAT reporting</h3>
+<p>To make it easier to set up VAT reporting, Business Central provides the <strong>Set up an electronic VAT submission</strong> assisted setup guide. </p>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>Assisted Setup</strong>, and then choose the related link.</li>
+<li>Choose <strong>Set up an electronic VAT submission</strong> to start the assisted setup guide. The guide helps you complete the following steps:</li>
+</ol>
+<ul>
+<li><p>Authorize Business Central to connect to ID-Porten.</p>
+<p>  On the <strong>Electronic VAT Setup</strong> page, enter the <strong>Client ID</strong>, <strong>Client Secret</strong>, and <strong>Redirect URI</strong> from your company&#39;s registration for ID-Porten. Then, choose <strong>Open OAuth 2.0 setup page</strong> action. On the <strong>OAuth 2.0 Setup</strong> page, choose the <strong>Request Authorization Code</strong> action to receive the token you need to connect. You need the identification number, password, and pin for a user who is allowed to submit VAT returns. After you provide those credentials, choose <strong>MinID</strong> as the electronic ID.</p>
+</li>
+<li><p>Verify that you&#39;re using the correct VAT registration number for your company.</p>
+<p>  A message prompts you to open the Company Information page, where you can double-check the VAT registration number for your setup.</p>
+</li>
+<li><p>Update the rates for the VAT codes that require reporting.</p>
+<p>  Business Central provides 32 VAT codes, however, some VAT codes don&#39;t require that you report VAT. You can automatically update the rates for VAT codes. Also, VAT codes can vary, for example, for different industries or types of business. On the <strong>VAT Codes</strong> page, you can use the <strong>Edit List</strong> action and then assign or remove the codes and rates that are relevant for your business.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>The update assigns the rates that were valid in December, 2021. You are responsible for ensuring that those rates are still valid.</p>
+</div>
+</li>
+<li><p>Define your VAT posting setup to ensure that VAT amounts are posted to the correct accounts. For more information, see <a href="../../finance-setup-vat.html">Set Up Calculations and Posting Methods for Value-Added Tax</a>.</p>
+</li>
+<li><p>Create a VAT statement to map the VAT business posting group with the VAT product posting group. </p>
+<p>  The mapping determines how you post and track VAT in Business Central. You assign the VAT codes to use for sales and purchasing.</p>
+</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>In addition to the settings described earlier, we automatically create a VAT report configuration for submitting returns and getting responses. You can view the configuration on the <strong>VAT Reports Configuration</strong> page.</p>
+</div>
+<h4 id="electronic-vat-setup-for-existing-users">Electronic VAT setup for existing users</h4>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>If you&#39;re an existing user, you need to manually change some information on the <strong>Electronic VAT Setup</strong> page.  </p>
+</div>
+<p>To update the electronic VAT setup for the use of the new ID-porten system, follow these steps:</p>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>Electronic VAT Setup</strong>, and then choose the related link.</li>
+<li><p>On the <strong>Electronic VAT Setup</strong> page, select the <strong>General</strong> FastTab, and then update the following values:</p>
+<ol>
+<li>In the <strong>Authentication URL</strong> field, specify &#39;<a href="https://idporten.no">https://idporten.no</a>&#39; </li>
+<li>In the <strong>Login URL</strong> field, specify &#39;<a href="https://login.idporten.no">https://login.idporten.no</a>&#39;</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>You can&#39;t open the sign in page from a bookmark or a link.</p>
+</div>
+</li>
+<li><p>Close the page.</p>
+</li>
+</ol>
+<h3 id="vat-report-setup">VAT report setup</h3>
+<ol>
+<li>To set up a VAT report, choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>VAT Report Setup</strong>, and then choose the related link.  </li>
+<li><p>On the <strong>General</strong> FastTab, to let users modify VAT reports that were submitted to the tax authorities, select the <strong>Allow Modification</strong> field.  </p>
+<p>If the field isn&#39;t selected, users must create a corrective or supplementary VAT report instead.  </p>
+</li>
+<li>On the <strong>General</strong> FastTab, select the <strong>Report VAT Base</strong> field if the VAT base must be calculated and shown to the user in the VAT reports.  </li>
+<li>On the <strong>General</strong> FastTab, select the <strong>Report VAT Note</strong> field to make the <strong>VAT Note</strong> field available for reporting from the <strong>VAT Return</strong> page.  </li>
+<li><p>On the <strong>Numbering</strong> FastTab, specify the number series to use for standard VAT reports.  </p>
+<p>This is the default number series that all VAT report use.  </p>
+</li>
+<li>On the <strong>Return Period</strong> and <strong>VAT Group Management</strong> FastTabs, specify the relevant information.  </li>
+<li>Choose the <strong>OK</strong> button.  </li>
+</ol>
+<h2 id="create-and-submit-a-vat-return">Create and submit a VAT return</h2>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>VAT Returns</strong>, and then choose the related link.</li>
+<li>Choose the <strong>New</strong> action.</li>
+<li>In the <strong>Version</strong> field, choose <strong>Elec VAT</strong>.</li>
+<li>Optionally, in the <strong>KID</strong> field, specify a payment identification number.</li>
+<li>Choose <strong>Suggest Lines</strong> to open the <strong>VAT Report Request Page</strong> page, where you specify criteria for generating lines for the report.</li>
+<li>After you specify the criteria, choose <strong>OK</strong>.  </li>
+<li>On the <strong>VAT Settlement</strong> page, choose <strong>Release</strong>. Business Central now validates that the information can be submitted to the Norwegian tax authorities.</li>
+<li>To submit the VAT return, choose <strong>Submit</strong>. The status of the VAT return changes to <strong>Submitted</strong>.</li>
+<li><p>To view whether the tax authorities accepted your submission, choose <strong>Receive Response</strong>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>The response from the tax authority will not be immediately available.  </p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>If you have selected the <strong>Report VAT Note</strong> option in the <strong>VAT Report Setup</strong> page, then the <strong>Note</strong> field is visible and editable in the <strong>VAT Return</strong> page. Users can specify any free text there. The value of the <strong>Note</strong> field will be included in the submission message.  </p>
+</div>
+</li>
+</ol>
+<h2 id="troubleshoot-your-connection-to-id-porten">Troubleshoot your connection to ID-Porten</h2>
+<p>If you don&#39;t receive a response after you submit your return, such as within 24 hours, contact ID-Porten and ask them to verify that they received your return. To help them identify your return, you can send the value from the Message ID field. By default, the field is hidden, but you can use page inspection to get the value. For more information, see <a href="../../across-inspect-page.html">Inspecting Pages in Business Central</a>.  </p>
+<p>You can also send a copy of the XML files for your submission and the response you received. To get the files, on the <strong>VAT Return</strong> page, choose the <strong>Download Submission Message</strong> and <strong>Download Response Message</strong> actions.  </p>
+<h2 id="vat-periods">Close VAT periods</h2>
+<p>To align with legal requirements, VAT periods are to be closed after settling. Normally, a fiscal year consists of six VAT periods, numbered 1 to 6. When the VAT is settled, the period is closed for further posting.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Not all organizations use the standard six VAT periods. Which periods the current organization uses is defined in the <strong>VAT Period</strong> page.</p>
+</div>
+<p>You can view information about settled periods in the <strong>Settled VAT Period</strong> page. The closed periods are created by the report <strong>Calc. and Post VAT Settlement</strong> when you post VAT. If you want to post in the closed VAT period, you can open the period again by clearing the <strong>Closed</strong> field.  </p>
+<h2 id="tradesettlement-report">Tradesettlement report</h2>
+<p>Before January 2022, you used the <strong>Tradesettlement</strong> report to report VAT. This report is no longer described in this article, but you can read about it in the <a href="https://learn.microsoft.com/de-de/previous-versions/dynamicsnav-2016/dn283106(v=nav.90)">Dynamics NAV 2016 documentation archive</a>.  </p>
+<h2 id="see-also">See also</h2>
+<p><a href="norwegian-vat-codes.html">Norwegian VAT Codes</a><br><a href="proportional-vat.html">Proportional VAT</a><br><a href="norway-local-functionality.html">Norway Local Functionality</a><br><a href="../../finance-work-with-vat.html">Work with VAT on Sales and Purchases</a><br><a href="../../finance-setup-vat.html">Set Up Calculations and Posting Methods for Value-Added Tax</a><br><a href="../../ui-extensions-vat-group.html">The VAT Group Management Extension</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

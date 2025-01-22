@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Festlegen und Verwenden des Shopify Konnektors </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Festlegen und Verwenden des Shopify Konnektors ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../TOC.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="walkthrough-set-up-and-use-the-shopify-connector">Exemplarische Vorgehensweise: Festlegen und Verwenden des Shopify Konnektors</h1>
+
+<p>Dieser Abschnitt demonstriert einige typische Szenarien und führt Sie durch die Schritte, mit denen Sie den Workflow des integrierten Business Central und des Shopify Stores testen oder Benutzer schulen können.</p>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<h3 id="shopify">Shopify</h3>
+<p>Sie benötigen Folgendes:</p>
+<ul>
+<li>Ein Shopify-Konto</li>
+<li>Ein Shopify-Online-Store</li>
+</ul>
+<p>Erfahren Sie mehr darüber, wie Sie Shopify-Tests erstellen, und über die empfohlenen Einstellungen unter <a href="shopify-account.html">Ein Shopify-Konto erstellen und einrichten</a>.</p>
+<h3 id="business-central">Business Central</h3>
+<p>Sie müssen ein Business Central-Konto haben.</p>
+<p>Sie können zum Beispiel ein Demokonto erstellen oder eine Testversion starten. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/demo-environment">Demonstrationsumgebung vorbereiten für Dynamics 365 Business Central</a> und <a href="../trial-signup.html">Anmelden für den Test</a>. </p>
+<h2 id="connect-business-central-to-the-shopify-shop">Verbinden Sie Business Central mit dem Shopify-Laden</h2>
+<p>Gehen Sie in Business Central wie folgt vor:</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol, geben Sie <strong>Shopify Shops</strong> ein und wählen Sie dann den dazugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Neu</strong> aus.</li>
+<li>Geben Sie in das Feld <strong>Code</strong> <strong>DEMO1</strong> ein.</li>
+<li>Geben Sie in das Feld <strong>Shopify URL</strong> die URL für den Onlineshop ein, mit dem Sie eine Verbindung herstellen möchten.</li>
+<li>Aktivieren Sie den Schalter <strong>Aktiviert</strong> und lesen und akzeptieren Sie dann die Bestimmungen.</li>
+</ol>
+<p>Gehen Sie wie folgt vor, um den Shopify-Shop zu konfigurieren.</p>
+<ol>
+<li>Schalten Sie den Schalter <strong>Hintergrundsynchronisationen zulassen</strong> aus.</li>
+<li>Wählen Sie <em>Zu Shopify</em> in dem Feld <strong>Element synchronisieren</strong>.</li>
+<li>Wählen Sie <em>Bis Shopify</em> im Feld <strong>Bilder von Elementen synchronisieren</strong>.</li>
+<li>Schalten Sie das Kontrollkästchen <strong>Artikelattribute synchronisieren</strong> ein.</li>
+<li>Schalten Sie das Kontrollkästchen <strong>Bestand verfolgen</strong> ein.</li>
+<li>Wählen Sie <em>Ablehnen</em> im Feld <strong>Standardrichtlinie für den Bestand</strong>.</li>
+<li>Schalten Sie die Option <strong>Unbekannte Kunden automatisch erstellen</strong> ein.</li>
+<li>Füllen Sie das Feld <strong>Debitoren-/Unternehmensvorlagencode</strong> mit der entsprechenden Vorlage aus.</li>
+<li>Füllen Sie das Feld <strong>Versandkostenkonto</strong>, das Feld <strong>Tippkonto</strong> mit dem Umsatzkonto aus. Verwenden Sie in den USA beispielsweise  <strong>40210</strong>.</li>
+<li>Schalten Sie die Option <strong>Bestellungen automatisch erstellen</strong> ein.</li>
+<li>Deaktivieren Sie den Umschalter <strong>Verkaufsaufträge automatisch freigeben</strong>.</li>
+</ol>
+<p>Konfigurieren Sie die Zuordnung von Standorten:</p>
+<ol>
+<li>Wählen Sie die Aktion <strong>Standorte</strong> aus, um <strong>Shopify-Shop-Standorte</strong> zu öffnen.</li>
+<li>Wählen Sie die Aktion <strong>Shopify Standorte abrufen</strong> aus, um alle in Shopify festgelegten Standorte zu importieren. Wählen Sie einen Eintrag aus, bei dem der Umschalter <strong>Ist primär</strong> ausgewählt ist.</li>
+<li>Geben Sie im  <strong>Standortfilter</strong> „|EAST|MAIN“ ein <strong>.</strong></li>
+<li>Um eine Bestandssynchronisierung für einen ausgewählten Shopify Standort zu aktivieren, geben Sie im Feld <strong>Bestandsberechnung</strong>  Auswählen <strong>Voraussichtlicher verfügbarer Bestand heute</strong> ein.</li>
+</ol>
+<h2 id="walkthrough-start-selling-products-online">Exemplarische Vorgehensweise: Mit dem Online-Verkauf von Produkten beginnen</h2>
+<h3 id="scenario">Szenario</h3>
+<p>Nehmen wir an, Sie möchten Shopify als Onlineshop ausprobieren, ohne viel Zeit mit der Einrichtung zu verbringen, vor allem, weil Sie Ihre Artikel in Business Central bereits gut pflegen. Nachdem Sie Ihren Shopify-Online-Store eröffnet haben, erhalten Sie sofort neue Kunden, die mit Ihrem Shop und ihrem Einkaufserlebnis zufrieden sind. Also beschließen sie, an der Kasse Tipps zu hinterlassen.</p>
+<h3 id="steps">Schritte</h3>
+<p>Gehen Sie in Business Central wie folgt vor:</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol aus, geben Sie <strong>Shopify Produkte</strong> ein und wählen Sie den entsprechenden Link.</li>
+<li>Wählen Sie <strong>Artikel hinzufügen</strong>.</li>
+<li>Geben Sie im Feld  <strong>Shop-Code</strong>  <strong>DEMO1</strong> ein.</li>
+<li>Legen Sie im Feld  <strong>Artikelkategoriecode</strong>  den Filter  <strong>STUHL</strong> fest.</li>
+<li>Schalten Sie den Umschalter <strong>Produktbilder synchronisieren</strong> ein.</li>
+<li>Schalten Sie den Umschalter <strong>Bestand synchronisieren</strong> ein.</li>
+<li>Auswählen <strong>OK</strong> und warten Sie, bis die erste Synchronisierung von Artikeln, Preisen, Bildern und Lagerbeständen abgeschlossen ist.</li>
+</ol>
+<p>Tun Sie im <strong>Shopify-Onlineshop</strong> Folgendes:</p>
+<div class="TIP"><h5>Tipp</h5><p>Öffnen Sie <strong>Shopify Verwaltung</strong>, indem Sie die URL aufrufen, die im Feld <strong>URL</strong> auf der Seite <strong>Shopify Shop-Karte</strong> angegeben ist. Wählen Sie anschließend das Augensymbol neben dem Verkaufskanal <strong>Onlineshop</strong> aus, der sich in der Seitenleiste der <strong>Shopify-Verwaltung</strong> befindet. </p>
+</div>
+<p>Öffnen Sie den Produktkatalog. Beachten Sie:</p>
+<ul>
+<li>Produkttitel, Bilder und Preise.</li>
+<li>Verfügbarkeitsanzeige (ausverkauft für Produkte, die nicht auf Lager sind).</li>
+</ul>
+<p>Wählen Sie ein beliebiges Produkt aus, das verkauft werden kann. Zum Beispiel der  <strong>Drehstuhl BERLIN, gelb</strong>. Beachten Sie, dass die Beschreibung Artikelattribute enthält.</p>
+<p>Wählen Sie <strong>Jetzt kaufen</strong> aus und gehen Sie zur Kasse.</p>
+<ol>
+<li>Geben Sie im Feld  <strong>E-Mail-Adresse oder Mobiltelefonnummer</strong>  Folgendes ein:  <strong>cl@contoso.com</strong>  (oder eine E-Mail-Adresse, an die Sie Bestell- und Versandbestätigungen erhalten möchten).</li>
+<li>Geben Sie in den Feldern  <strong>Vorname</strong>  und  <strong>Nachname</strong>  <strong>Claudia</strong>  und  <strong>Lawson</strong> ein.</li>
+<li>Geben Sie die lokale Adresse ein.</li>
+<li>Wählen Sie das Kontrollkästchen <strong>Diese Informationen für das nächste Mal speichern</strong> aus.</li>
+<li>Behalten Sie <em>Standard</em> als Versandmethode bei.</li>
+<li>Geben Sie im Feld  <strong>Kredit-Karte-Nummer</strong>  <strong>1</strong>  ein, wenn Sie  <strong>(zum Testen) Bogus Gateway</strong> verwenden, oder geben Sie  <strong>5555 5555 5555 4444</strong>  ein, wenn Sie  <strong>Shopify Zahlungen</strong>  im Testmodus verwenden.</li>
+<li>Füllen Sie das Feld <strong>Name auf der Karte</strong> aus.</li>
+<li>Geben Sie in das Feld <strong>Ablaufdatum</strong> den aktuellen Monat/Jahr ein.</li>
+<li>Geben Sie im Feld  <strong>Sicherheitscode</strong> die Zahl  <strong>111</strong> ein.</li>
+<li>Optional: Auswählen <strong>10 %</strong> Trinkgeld.</li>
+<li>Wählen Sie <strong>Jetzt bezahlen</strong>.</li>
+</ol>
+<p>Führen Sie in Business Central die nächsten Schritte aus:</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Shopify-Aufträge</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Aufträge von Shopify synchronisieren</strong> aus.</li>
+<li>Wählen Sie <strong>OK</strong> aus.</li>
+</ol>
+<p>Die importierte Bestellung ist bereit zur Verarbeitung.</p>
+<ol>
+<li>Wählen Sie den importierten Auftrag, um das Fenster <strong>Shopify Aufträge</strong> zu öffnen.</li>
+<li>Beachten Sie, dass die neue Kundschaft und die neuen Verkaufsaufträge erstellt wurden.</li>
+<li>Informieren Sie sich über die  <strong>Risiken</strong> und  <strong>Versandkosten</strong> Aktionen.</li>
+<li>Wählen Sie <strong>Verkaufsauftrag</strong> aus, um das Fenster <strong>Verkaufsauftrag</strong> zu öffnen. Ein Verkaufsauftrag ist ein Bedarf, der, falls erforderlich durch Montage, Produktion oder Kauf mit Hilfe des Planungsmoduls gedeckt werden kann. Es unterstützt auch verschiedene Lagerort-Verarbeitungsprozesse mit vollständiger Aufgabentrennung.</li>
+<li>Geben Sie im Feld  <strong>Agent</strong>  <strong>DHL</strong> ein. Öffnen Sie den Auftrag bei Bedarf erneut, indem Sie die Aktion <strong>Erneut öffnen</strong> auswählen.</li>
+<li>Geben Sie in das Feld  <strong>Paketverfolgungsnummer</strong> <strong>123456789</strong> ein.</li>
+<li>Wählen Sie <strong>Buchen</strong>, behalten Sie die Option <strong>Versand und Rechnung</strong> bei und wählen Sie dann <strong>OK</strong> aus.</li>
+</ol>
+<p>Jetzt sind die physischen und finanziellen Daten in Business Central registriert. Jetzt ist es an der Zeit, Shopify über die Änderungen zu informieren.</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol aus. Geben Sie <strong>Lieferungen mit Shopify synchronisieren</strong> ein und wählen Sie dann den dazugehörigen Link aus.</li>
+<li>Wählen Sie <strong>OK</strong> aus.</li>
+</ol>
+<p>Beachten Sie, dass in der <strong>Shopify-Verwaltung</strong> die Bestellung jetzt als <em>Erfüllt</em> gekennzeichnet ist. Sie können auch die Details der Sendung einsehen und die URL der Sendungsverfolgung sehen. Wenn Sie <strong>Bestellungen von Shopify synchronisieren</strong> erneut ausführen, wird die Bestellung in beiden Systemen archiviert.</p>
+<h2 id="walkthrough-add-your-customers-to-your-new-online-store">Exemplarische Vorgehensweise: Debitoren Ihrem neuen Onlineshop hinzufügen</h2>
+<h3 id="scenario-1">Szenario</h3>
+<p>Nach einem erfolgreichen Schnellstart Ihres neuen Online Stores möchten Sie, dass Ihre derzeitigen Kunden ihn besuchen und Bestellungen aufgeben. Je nach Ihrem Shopify-Plan und -Prozess können Sie B2B- und DTC-Flows ausprobieren.</p>
+<h3 id="dtc-steps">DTC-Schritte</h3>
+<p>Gehen Sie in Business Central wie folgt vor:</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify-Debitoren</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+<li>Wählen Sie <strong>Debitoren hinzufügen</strong> aus.</li>
+<li>Geben Sie im Feld  <strong>Shop-Code</strong>  <strong>DEMO1</strong> ein.</li>
+<li>Wählen Sie im Feld <strong>Nr.</strong> Legen Sie im Feld den Filter  <strong>20000</strong> fest.</li>
+<li>Wählen Sie <strong>OK</strong> und warten Sie, bis die anfängliche Synchronisierung von Debitoren abgeschlossen ist.</li>
+</ol>
+<p>Beachten Sie, dass der Debitor in die <strong>Shopify-Verwaltung</strong> importiert wurden. Öffnen Sie den Debitor und stellen Sie fest, dass der Vor- und Nachname des Debitoren aus dem Feld <strong>Kontaktname</strong> der <strong>Kundenkarte</strong> stammt. Der Name der Firma ist in der Standardadresse zu finden, die mit dem Kunden verknüpft ist. Wenn Sie  <strong>klassische Kundenkonten</strong> verwenden, können Sie Auswählen <strong>eine Kontoeinladung senden</strong> an den Kunden einladen. Bei  <strong>Neukundenkonten</strong> ist für die Anmeldung der Kunden kein Passwort erforderlich. Stattdessen Shopify können sich Ihre Kunden mit einem einmaligen, 6-stelligen Bestätigungscode anmelden, der per E-Mail gesendet wird. </p>
+<h3 id="b2b-steps">B2B-Schritte</h3>
+<div class="NOTE"><h5>Hinweis</h5><p>Diese Funktion ist ab 2024 Veröffentlichungszyklus 1 verfügbar und erfordert ein Shopify Plus-Abonnement. Denken Sie daran, ein Zugriffstoken anzufordern, um Zugriff auf B2B-Funktionen zu erhalten. Weitere Informationen finden Sie unter  <a href="troubleshoot.html#request-the-access-token">Anfordern des Zugriffstokens</a>.</p>
+</div>
+<p>Gehen Sie in Business Central wie folgt vor:</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify-Unternehmen</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+<li>Wählen Sie <strong>Unternehmen hinzufügen</strong> aus.</li>
+<li>Geben Sie im Feld Shop- <strong>Code</strong>  <strong>DEMO1</strong> ein.</li>
+<li>Stellen Sie den Filter <strong>30000</strong> auf der <strong>Nr. ein.</strong> Feld</li>
+<li>Wählen Sie <strong>OK</strong> und warten Sie, bis die anfängliche Synchronisierung von Debitoren abgeschlossen ist.</li>
+</ol>
+<p>Beachten Sie in <strong>Shopify Admin</strong>, dass sowohl das Unternehmen als auch der Kunde importiert wurden. Öffnen Sie die Kunden und beachten Sie, dass die Firmen-Infobox Links zur Firma, zum Standort und den zugewiesenen Berechtigungen enthält.
+Um den Kunden einzuladen, Auswählen <strong>[...]</strong> in der <strong>Firma</strong> FactBox und dann Auswählen <strong>B2B-Zugriffs-E-Mail senden</strong>.</p>
+<h2 id="walkthrough-fine-tuning-of-item-management">Exemplarische Vorgehensweise: Feinabstimmung der Artikelverwaltung</h2>
+<h3 id="scenario-2">Szenario</h3>
+<p>Sie möchten Ihren Prozessen rund um die Verwaltung von Artikeln mehr Flexibilität und Kontrolle hinzufügen. Sie möchten die Produktbeschreibungen verbessern und weitere Überprüfungsschritte hinzufügen, bevor die Produkte für alle Debitoren verfügbar sind.</p>
+<h3 id="steps-1">Schritte</h3>
+<p>Gehen Sie in Business Central wie folgt vor:</p>
+<p>Bereiten Sie die Daten vor.</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Debitorenpreisgruppe</strong> ein und wählen Sie den entsprechenden Link.</li>
+<li>Fügen Sie eine neue Preisgruppe hinzu. Geben Sie im Feld  <strong>Code</strong>  <strong>SHOPIFY</strong> ein.</li>
+<li>Schließen Sie das Fenster <strong>Kundenpreisgruppe</strong>.</li>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Artikel</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+<li><p>Auswählen item <strong>1896-S, Athens Desk</strong>, und dann folgen diese Schritte:</p>
+</li>
+<li><p>Auswählen die Aktion  <strong>Varianten</strong>  und fügen Sie dann zwei Varianten hinzu:  <strong>PREMIUM, Athens Desk, Premium Edition</strong> und  <strong>ESSENTIAL, Athens Desk, Essential Edition</strong>.</p>
+</li>
+<li>Wählen Sie die Aktion <strong>Marketingtext</strong> und verwenden Sie <strong>Entwurf mit Copilot</strong>, um einen kreativen und ansprechenden Text zu erhalten. Wenn die Funktion für Marketingtextvorschläge nicht aktiviert ist, geben Sie einfach Folgendes ein: ‚<strong>Einfaches, stilvolles Design</strong> passt zu jedem Ensemble. <em>In zwei Editionen verfügbar.</em>.</li>
+<li><p>Wählen Sie die Aktion <strong>Verkaufspreise</strong> und fügen Sie neue Preise hinzu, wie in der folgenden Tabelle gezeigt:</p>
+<table>
+<thead>
+<tr>
+<th>Auftrag</th>
+<th>Verkaufsart</th>
+<th>Verkaufscode</th>
+<th>Typ</th>
+<th>Code</th>
+<th>Variantencode<br>(fügen Sie das Feld über die Personalisierung hinzu)</th>
+<th>VK-Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Debitorenpreisgruppe</td>
+<td>SHOPIFY</td>
+<td>Option</td>
+<td>1896-S</td>
+<td>ESSENTIAL</td>
+<td>700</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Debitorenpreisgruppe</td>
+<td>SHOPIFY</td>
+<td>Option</td>
+<td>1896-S</td>
+<td>PREMIUM</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Verkaufsrabatte</strong> und fügen Sie einen neuen Rabatt hinzu:</p>
+<ul>
+<li><strong>Verkaufstyp</strong> <em>Kundenrab. Gruppe</em></li>
+<li><strong>Verkaufscode</strong> <em>RETAIL</em></li>
+<li><strong>Typ</strong> <em>Artikel</em></li>
+<li><strong>Code</strong> <em>1896-S</em></li>
+<li><strong>Code der Maßeinheit</strong> <em>STK</em></li>
+<li><strong>Zeilenrabatt %</strong> <em>10</em></li>
+</ul>
+</li>
+<li><p>Auswählen die Aktion  <strong>Artikelverweise</strong>  und fügen Sie die folgenden Zeilen hinzu:</p>
+<table>
+<thead>
+<tr>
+<th>Auftrag</th>
+<th>Referenzart</th>
+<th>Referenznr.</th>
+<th>Variantencode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Strichcode</td>
+<td>77777777</td>
+<td>ESSENTIAL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Strichcode</td>
+<td>11111111</td>
+<td>PREMIUM</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie den Artikel <strong>1920-S, ANTWERP Conference Table</strong> aus und gehen Sie wie folgt vor:</p>
+</li>
+<li>Auswählen <strong>Anpassen Inventar</strong> und geben Sie im Feld  <strong>Neues Inventar</strong>  <strong>100</strong> für die Standorte  <strong>OST</strong> und  <strong>WEST</strong> ein.</li>
+<li>Wählen Sie <strong>OK</strong> aus.</li>
+</ol>
+<p>Passen Sie die Synchronisationseinstellungen an.</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify Shops</strong> ein und wählen Sie den entsprechenden Link.</li>
+<li>Auswählen der  <strong>DEMO1</strong> Shop, für den Sie Artikel synchronisieren möchten, um die Seite  <strong>Shopify Shop Karte</strong>  zu öffnen.</li>
+<li>Aktivieren Sie das Feld <strong>Marketingtext synchronisieren</strong>.</li>
+<li>In der  <strong>SKU Zuordnung</strong> field, Auswählen <strong>Artikelnr. + Variantencode</strong>.</li>
+<li>Geben Sie im Feld  <strong>Standardinventarrichtlinie</strong>  Auswählen <strong>Weiter</strong> ein.</li>
+<li>Geben Sie im Feld  <strong>Status für erstellte Produkte</strong>  Auswählen <strong>Entwurf</strong> ein.</li>
+<li>Setzen Sie im Feld  <strong>Aktion für entferntes Produkt</strong>  den Status von Auswählen auf „Archiviert“ <strong>.</strong></li>
+<li>Geben Sie im Feld  <strong>Kundenpreisgruppe</strong>  Auswählen <strong>SHOPIFY</strong> ein.</li>
+<li>Geben Sie im Feld  <strong>Kundenrabattgruppe</strong>  Auswählen <strong>RETAIL</strong> ein.</li>
+</ol>
+<p>Führen Sie die Synchronisierung aus.</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify Shops</strong> ein und wählen Sie den entsprechenden Link.</li>
+<li>Auswählen der  <strong>DEMO1</strong> Shop, für den Sie Artikel synchronisieren möchten, um die Seite  <strong>Shopify Shop Karte</strong>  zu öffnen.</li>
+<li>Auswählen <strong>Produkte</strong>, um die Seite <strong>Shopify Produkte</strong>  zu öffnen.</li>
+<li>Wählen Sie die Aktion <strong>Artikel hinzufügen</strong>.</li>
+<li>Setzen Sie den Filter  <strong>TISCH|SCHREIBTISCH</strong>  auf das Feld  <strong>Artikelkategoriecode</strong> .</li>
+<li>Schalten Sie den Umschalter <strong>Produktbilder synchronisieren</strong> ein.</li>
+<li>Schalten Sie den Umschalter <strong>Bestand synchronisieren</strong> ein.</li>
+<li>Auswählen <strong>OK</strong> und warten Sie, bis die erste Synchronisierung von Artikeln, Preisen, Bildern und Lagerbeständen abgeschlossen ist.</li>
+</ol>
+<p>Die Produkte werden hinzugefügt. Beachten Sie, dass der Status auf  <strong>Entwurf</strong> gesetzt ist und daher Artikel im  Shopify Online-Shop nicht sichtbar sind.</p>
+<ol>
+<li>Auswählen die Zeile mit dem Artikel  <strong>1920-S, ANTWERP Konferenztisch</strong>. Geben Sie im  <strong>SEO-Titel</strong> <strong>Rechteckiger Besprechungstisch Antwerpen, 10 Plätze, schwarz</strong> ein.</li>
+<li>Geben Sie im Feld  <strong>Status</strong>  Auswählen <strong>Aktiv</strong> ein.</li>
+<li>Auswählen die Zeile mit dem Artikel <strong>1906-S, ATHEN, Mobiler Sockel</strong> und dann Auswählen <strong>Löschen</strong>.</li>
+</ol>
+<p>Beachten Sie, dass in <strong>Shopify-Verwaltung</strong> alle Produkte unterschiedliche Status haben.</p>
+<ul>
+<li><em>ANTWERP-Konferenztisch</em> ist <em>Aktiv</em>, weil wir seinen Status auf der <strong>Shopify Produkt</strong> seite geändert haben.</li>
+<li><em>ATHENS Schreibtisch</em> ist <em>Entwurf</em>, weil wir den Standardstatus für alle hinzugefügten Produkte auf <em>Entwurf</em> gesetzt haben.</li>
+<li><em>ATHENS Mobile Pedestal</em> ist <em>Archiviert</em>, weil wir den Shop so konfiguriert haben, dass er gelöschten Produkten automatisch den Status <em>Archiviert</em> zuweist.</li>
+</ul>
+<p>Beachten Sie, dass der Bestand für den ANTWERP-Konferenztisch 100 beträgt, da wir das System so konfiguriert haben, dass nur Bestände von zwei Standorten, MAIN und EAST, verwendet werden. Der Bestand am anderen Standort (WEST) wird ignoriert.</p>
+<ul>
+<li>Öffnen Sie <em>ANTWERP Conference Table</em> und achten Sie auf die Felder <strong>Benutzerdefinierter Typ</strong>, <strong>Kreditor</strong>, <strong>Gewicht</strong> und <strong>Kosten pro Artikel</strong> und den Abschnitt <strong>Suchmaschinenauflistung Vorschau</strong>.</li>
+<li>Öffnen Sie <em>Athens Desk</em>, scrollen Sie nach unten zum Abschnitt <strong>Varianten</strong> und beachten Sie, wie <strong>SKU</strong> ausgefüllt ist.</li>
+<li>Um Barcode und Preise zu überprüfen, Auswählen <strong>Bearbeiten</strong>.</li>
+<li>Ändern Sie den Status von  <strong>Athens Desk</strong>  in  <strong>Aktiv</strong> und Auswählen <strong>Vorschauversion</strong>.</li>
+</ul>
+<p>Öffnen Sie im  Shopify Online-Shop den Produktkatalog und suchen Sie das Produkt  <strong>ATHENS Desk</strong> . Beachten Sie, dass verschiedene Optionen verfügbar sind. Für die verschiedenen Optionen gelten auch unterschiedliche Preise. Achten Sie auf die Rabattinformationen.</p>
+<h3 id="additional-steps-for-b2b">Zusätzliche Schritte für B2B</h3>
+<div class="NOTE"><h5>Hinweis</h5><p>Diese Funktion ist ab 2024 Veröffentlichungszyklus 1 verfügbar und erfordert ein Shopify Plus-Abonnement. Denken Sie daran, ein Zugriffstoken anzufordern, um Zugriff auf B2B-Funktionen zu erhalten. Weitere Informationen finden Sie unter  <a href="troubleshoot.html#request-the-access-token">Anfordern des Zugriffstokens</a>.</p>
+</div>
+<p>Sie können den Konnektor so konfigurieren, dass automatisch Kataloge für exportierte Unternehmen erstellt und zugewiesen werden. Die folgenden Schritte sind hilfreich, wenn Sie eine genauere Kontrolle darüber wünschen, was für B2B-Debitoren verfügbar ist.</p>
+<p>Erstellen Sie im  <strong>Shopify Administrator</strong> einen Katalog und weisen Sie ihn zu.</p>
+<ol>
+<li>Wählen Sie <strong>Produkte</strong> und dann <strong>Kataloge</strong> in der Seitenleiste der <strong>Shopify-Verwaltung</strong> aus.</li>
+<li>Erstellen Sie einen Katalog für bestimmte Produkte. Geben Sie ihm den Titel „B2B“. </li>
+<li>Wählen Sie  <strong>Verwalten</strong> und dann  <strong>Produkte und Preise verwalten</strong>.</li>
+<li>Auswählen den Filter  <strong>Ausgeschlossen</strong>, suchen Sie  <strong>ATHENS Desk</strong> und wählen Sie  <strong>In Katalog aufnehmen</strong>.</li>
+<li>Auswählen <strong>Kunden</strong> und dann  <strong>Unternehmen</strong>  in der Seitenleiste von  <strong>Shopify admin</strong>.</li>
+<li>Auswählen <strong>School of Fine Art</strong>, wählen Sie <strong>[...]</strong> und dann  <strong>Kataloge hinzufügen</strong>  und fügen Sie den zuvor erstellten  <strong>B2B</strong> Katalog hinzu.</li>
+</ol>
+<p>Gehen Sie in Business Central wie folgt vor:</p>
+<p>Bereiten Sie die Daten vor.</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Artikel</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+<li>Auswählen item <strong>1896-S, Athens Desk</strong>, und dann folgen diese Schritte:</li>
+<li><p>Wählen Sie die Aktion <strong>Verkaufsrabatte</strong> und fügen Sie einen neuen Rabatt hinzu:</p>
+<ul>
+<li><strong>Verkaufstyp</strong> <em>Kundenrab. Gruppe</em></li>
+<li><strong>Verkaufscode</strong> <em>LARGE ACC</em></li>
+<li><strong>Typ</strong> <em>Artikel</em></li>
+<li><strong>Code</strong> <em>1896-S</em></li>
+<li><strong>Code der Maßeinheit</strong> <em>STK</em></li>
+<li><strong>Zeilenrabatt %</strong> <em>25</em></li>
+</ul>
+</li>
+<li><p>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify-Kataloge</strong> ein und wählen Sie den entsprechenden Link aus.</p>
+</li>
+<li>Wählen Sie <strong>Kataloge abrufen</strong> aus.</li>
+<li>Geben Sie im Feld  <strong>Shop-Code</strong>  <strong>DEMO1</strong> ein.</li>
+<li>Auswählen der Eintrag mit dem <em>B2B</em> Katalog, für den Sie Preise synchronisieren möchten.</li>
+<li>Aktivieren Sie den Umschalter <strong>Preise synchronisieren</strong>.</li>
+<li>Geben Sie im Feld  <strong>Kundenpreisgruppe</strong>  Auswählen <strong>SHOPIFY</strong> ein.</li>
+<li>Geben Sie im Feld  <strong>Kundenrabattgruppe</strong>  Auswählen <strong>GROSSES KUNDENBUCH</strong> ein.</li>
+<li>Wählen Sie <strong>Preis synchronisieren</strong> und warten Sie, bis die Synchronisierung von Preisen abgeschlossen ist.</li>
+</ol>
+<p>Erkunden Sie im  <strong>Shopify Admin</strong> die Preise für den  <strong>B2B</strong> Katalog.</p>
+<p>Öffnen Sie im <strong>Shopify Onlineshop</strong> den Produktkatalog und suchen Sie das Produkt <em>ATHENS Desk</em>. Beachten Sie die Preis- und Rabatthinweise.</p>
+<h2 id="walkthrough-check-out-and-order-synchronization-for-individual-buyer-and-company-representative">Exemplarische Vorgehensweise: Zur Kasse gehen und Auftragssynchronisierung für einzelne Kaufende und Unternehmensvertreter</h2>
+<p>Dies ist eine Fortsetzung von <a href="walkthrough-setting-up-and-using-shopify.html#walkthrough-start-selling-products-online">Beispielhafte Vorgehensweise: Mit dem Online-Verkauf von Produkten beginnen</a>. Sie können es auch mit Ihren eigenen Daten versuchen, beispielsweise mithilfe Ihres Shopify Stores oder Ihrer Sandbox.</p>
+<p>Einzelner Kaufender</p>
+<ol>
+<li>Tun Sie im <strong>Shopify-Onlineshop</strong> Folgendes. Wählen Sie das Symbol <strong>Konto</strong> aus. Geben Sie eine E-Mail-Adresse ein, auf die Sie Zugriff haben.</li>
+<li>Melden Sie sich mit einem einmaligen 6-stelligen Bestätigungscode an, der Ihnen per E-Mail zugesandt wurde.</li>
+<li>Durchsuchen Sie den Produktkatalog. Sie sollten alle Produkte mit Einzelhandelspreisen sehen können.</li>
+<li>Wählen Sie die Variante „Essential“ und dann <strong>Jetzt kaufen</strong> und gehen Sie zur Kasse.</li>
+<li>Füllen Sie die Felder <strong>Vorname</strong> und <strong>Nachname</strong> aus.</li>
+<li>Geben Sie die lokale Adresse ein.</li>
+<li>Behalten Sie <em>Standard</em> als Versandmethode bei.</li>
+<li>Geben Sie im Feld  <strong>Kredit-Karte-Nummer</strong>  <strong>1</strong>  ein, wenn Sie  <strong>(zum Testen) Bogus Gateway</strong> verwenden, oder geben Sie  <strong>5555 5555 5555 4444</strong>  ein, wenn Sie  <strong>Shopify Zahlungen</strong> im Testmodus verwenden.</li>
+<li>Geben Sie in das Feld <strong>Ablaufdatum</strong> den aktuellen Monat/Jahr ein.</li>
+<li>Geben Sie im Feld  <strong>Sicherheitscode</strong> die Zahl  <strong>111</strong> ein.</li>
+<li>Füllen Sie das Feld <strong>Name auf der Karte</strong> aus.</li>
+<li>Wählen Sie <strong>Jetzt bezahlen</strong>.</li>
+</ol>
+<p>Unternehmensvertreter</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Diese Funktion ist ab 2024 Veröffentlichungszyklus 1 verfügbar und erfordert ein Shopify Plus-Abonnement. Denken Sie daran, ein Zugriffstoken anzufordern, um Zugriff auf B2B-Funktionen zu erhalten. Weitere Informationen finden Sie unter  <a href="troubleshoot.html#request-the-access-token">Anfordern des Zugriffstokens</a>.</p>
+</div>
+<ol>
+<li>Gehen Sie in der <strong>Shopify-Verwaltung</strong> wie folgt vor.</li>
+<li>Wählen Sie <strong>Debitoren</strong> und dann <strong>Unternehmen</strong> in der Seitenleiste der <strong>Shopify-Verwaltung</strong> aus.</li>
+<li>Öffnen Sie den Eintrag <em>School of Fine Arts</em>.</li>
+<li>Wählen Sie <strong>[...]</strong> in der <strong>School of Fine Art</strong> FactBox, dann  <strong>Zahlungsbedingungen bearbeiten</strong> und anschließend Auswählen <strong>Fällig am Auswählen</strong>.</li>
+<li>Wählen Sie in der Infobox  <strong>Kunden</strong>  <strong>[...]</strong>  und dann  <strong>Kunden hinzufügen</strong>. Fügen Sie anschließend den Kunden mit der E-Mail-Adresse hinzu, mit der Sie sich zuvor im Geschäft angemeldet haben.</li>
+<li>Tun Sie im <strong>Shopify-Onlineshop</strong> Folgendes. Wählen Sie das Symbol <strong>Konto</strong> aus. Geben Sie eine E-Mail-Adresse ein, auf die Sie Zugriff haben.</li>
+<li>Melden Sie sich mit einem einmaligen 6-stelligen Bestätigungscode an, der Ihnen per E-Mail zugesandt wurde.</li>
+<li>Durchsuchen Sie den Produktkatalog. Sie sollten nur Produkte sehen können, die dem B2B-Katalog mit Sonderpreisen für den Einzelhandel hinzugefügt wurden.</li>
+<li>Auswählen die Essential-Variante, Auswählen <strong>Sofort-Kaufen</strong>, und zur Kasse gehen.</li>
+<li>Beachten Sie, dass Konto, Lieferadresse und Zahlungsmethode ausgefüllt sind.</li>
+<li>Füllen Sie das Feld  <strong>PO-Nummer</strong>  mit  <strong>PO-12345</strong> aus.</li>
+<li>Wählen Sie <strong>Auftrag absenden</strong>.</li>
+</ol>
+<p>Führen Sie in Business Central die nächsten Schritte aus:</p>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify-Aufträge</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Aufträge von Shopify synchronisieren</strong> aus.</li>
+<li>Wählen Sie <strong>OK</strong> aus.</li>
+</ol>
+<p>Die importierte Bestellung ist bereit zur Verarbeitung.</p>
+<ol>
+<li>Auswählen die importierte Bestellung, um die Seite  <strong>Shopify Bestellung</strong>  zu öffnen.</li>
+<li>Beachten Sie, dass beide Bestellungen von derselben Person aufgegeben wurden und mit zwei verschiedenen Kunden verknüpft sind.</li>
+<li>In der im Namen des Unternehmens übermittelten Bestellung können Sie im Feld  <strong>Bestellnummer</strong>  einen Wert sehen, der auch in das Feld  <strong>Externe Belegnummer</strong>  des erstellten Verkaufsbelegs übertragen wird.</li>
+<li>Da wir das B2B-Unternehmen für die Abwicklung von Zahlungen außerhalb von  Shopify konfiguriert haben, wird der  <strong>Finanzstatus</strong>  auf  <strong>Ausstehend</strong> gesetzt. Nachdem Sie die Zahlung erhalten haben, führen Sie die Aktion  <strong>Als bezahlt markieren</strong>  aus. Der Finanzstatus wird in Shopify aktualisiert.</li>
+</ol>
+<h2 id="walkthrough-import-items-customers-companies-from-shopify">Exemplarische Vorgehensweise: Artikel, Debitoren, Unternehmen aus Shopify importieren</h2>
+<h3 id="scenario-3">Szenario</h3>
+<p>Sie haben bereits einen erfolgreichen Online-Store und möchten Business Central als Software für die Unternehmensverwaltung einsetzen. Sie möchten so viele Daten wie möglich aus Shopify importieren.</p>
+<h3 id="steps-2">Schritte</h3>
+<p>Dies ist eine Fortsetzung von <a href="walkthrough-setting-up-and-using-shopify.html#walkthrough-start-selling-products-online">Exemplarische Vorgehensweise: Mit dem Onlineverkauf von Produkten beginnen</a> und <a href="walkthrough-setting-up-and-using-shopify.html#walkthrough-add-your-customers-to-your-new-online-store">Exemplarische Vorgehensweise: Debitoren Ihrem neuen Onlineshop hinzufügen</a>. Sie können es auch mit Ihren eigenen Daten versuchen, beispielsweise mithilfe Ihres Shopify Stores oder Ihrer Sandbox.</p>
+<p>Gehen Sie in Business Central wie folgt vor.</p>
+<h4 id="prepare-data">Daten vorbereiten</h4>
+<ol>
+<li>Wechseln Sie zu einem kostenlosen 30-tägigen Test ohne Beispieldaten. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/trials-subscriptions#add-your-own-data-to-an-empty-trial-company">Eigene Daten zu einem leeren Test hinzufügen</a>.</li>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Shopify Shops</strong> ein und wählen Sie dann den dazugehörigen Link.</li>
+<li>Wählen Sie <strong>Neu</strong> aus.</li>
+<li>Geben Sie in das Feld <strong>Code</strong> <strong>DEMO2</strong> ein.</li>
+<li>Geben Sie in das Feld <strong>Shopify URL</strong> die URL des Online-Shops ein, mit dem Sie sich verbinden möchten.</li>
+<li>Aktivieren Sie den Schalter <strong>Aktiviert</strong>, lesen und akzeptieren Sie die dann die Bestimmungen.</li>
+</ol>
+<p>Konfigurieren Sie den Shopify-Shop wie hier beschrieben:</p>
+<ol>
+<li>Schalten Sie den Schalter <strong>Hintergrundsynchronisationen zulassen</strong> aus.</li>
+<li>Geben Sie im Feld  <strong>Element synchronisieren</strong>  Auswählen <strong>Von Shopify</strong> ein.</li>
+<li>Aktivieren Sie den Schalter  <strong>Unbekannte Elemente automatisch erstellen</strong> .</li>
+<li>Füllen Sie das Feld <strong>Element Vorlagencode</strong> mit der entsprechenden Vorlage aus.</li>
+<li>Geben Sie im Feld  <strong>Elementbilder synchronisieren</strong>  Auswählen <strong>Von Shopify</strong> ein.</li>
+<li>In der  <strong>SKU Zuordnung</strong> field, Auswählen <strong>Artikelnr. + Variantencode</strong>.</li>
+<li>Im Feld  <strong>Kundenimport von Shopify</strong>, Auswählen <strong>Alle Kunden</strong>.</li>
+<li>Schalten Sie die Option <strong>Unbekannte Kunden automatisch erstellen</strong> ein.</li>
+<li>Füllen Sie das Feld <strong>Debitoren-/Unternehmensvorlagencode</strong> mit der entsprechenden Vorlage aus.</li>
+<li>Geben Sie im Feld  <strong>Firmenimport von Shopify</strong>  Auswählen <strong>Alle Kunden</strong> ein.</li>
+<li>Aktivieren Sie den Schalter  <strong>Unbekanntes Unternehmen automatisch erstellen</strong> .</li>
+</ol>
+<h4 id="run-the-synchronization">Führen Sie die Synchronisierung aus</h4>
+<ol>
+<li>Wählen Sie das <img src="../media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify Shops</strong> ein und wählen Sie den entsprechenden Link.</li>
+<li>Wählen Sie den <em>DEMO2</em>-Shop, für den Sie Daten synchronisieren möchten, um die Seite <strong>Shopify Shopkarte</strong> zu öffnen.</li>
+<li>Wählen Sie <strong>Produkte synchronisieren</strong>.</li>
+<li>Wählen Sie <strong>Produktbilder synchronisieren</strong> aus.</li>
+<li>Wählen Sie <strong>Debitoren synchronisieren</strong>.</li>
+<li>Wählen Sie <strong>Unternehmen synchronisieren</strong></li>
+</ol>
+<h3 id="results">Ergebnisse</h3>
+<ul>
+<li>Shopify Produkte werden importiert. Wählen Sie zur Überprüfung die <img src="../media/ui-search/search_small.png" alt="Glühbirne, welche die „Sie wünschen ...“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol aus, geben Sie <strong>Shopify Produkte</strong> ein und wählen Sie den entsprechenden Link.</li>
+<li>Es werden Elemente mit Bildern erstellt. Wählen Sie zur Überprüfung die <img src="../media/ui-search/search_small.png" alt="Glühbirne, welche die „Sie wünschen ...“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Artikel</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+<li>Shopify Kunden werden importiert. Wählen Sie zur Überprüfung die <img src="../media/ui-search/search_small.png" alt="Glühbirne, welche die „Sie wünschen ...“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify-Debitoren</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+<li>Shopify Unternehmen werden importiert. Wählen Sie zur Überprüfung die <img src="../media/ui-search/search_small.png" alt="Glühbirne, welche die „Sie wünschen ...“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Shopify-Unternehmen</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+<li>Die Kunden werden erstellt. Wählen Sie zur Überprüfung die <img src="../media/ui-search/search_small.png" alt="Glühbirne, welche die „Sie wünschen ...“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Debitoren</strong> ein und wählen Sie den entsprechenden Link aus.</li>
+</ul>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="get-started.html">Erste Schritte mit dem Shopify-Konnektor</a>  </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

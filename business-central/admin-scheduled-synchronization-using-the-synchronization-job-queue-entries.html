@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Business Central und Dataverse synchronisieren </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Business Central und Dataverse synchronisieren ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="scheduling-a-synchronization-between-business-central-and-dataverse">Planen einer Synchronisierung zwischen Business Central und Dataverse</h1>
+
+<p>Sie können Business Central mit Dataverse in geplanten Intervallen synchronisieren, indem Sie Projekte in der Projektwarteschlange einrichten. Die Synchronisierungsprojekte synchronisieren Daten in Business Central-Datensätzen und Dataverse-Datensätzen, die gekoppelt wurden. Für Datensätze, die nicht bereits gekoppelt sind, können die Synchronisierungsprojekte entsprechend der Synchronisierungsrichtung und -regeln neue Datensätze im Zielsystem erstellen und koppeln.</p>
+<p>Es gibt mehrere Synchronisierungsprojekte, die standardmäßig verfügbar sind. Die Jobs werden in der folgenden Reihenfolge ausgeführt, um Kopplungsabhängigkeiten zwischen Tabellen zu vermeiden. Weitere Informationen finden Sie unter <a href="admin-job-queues-schedule-tasks.html">Job-Warteschlangen zur Einplanung von Aufgaben verwenden</a>.</p>
+<ol>
+<li>CURRENCY - Common Data Service Synchronisierungsauftrag.</li>
+<li>VENDOR - Common Data Service Synchronisierungsauftrag.</li>
+<li>CONTACT - Common Data Service Synchronisierungsauftrag.</li>
+<li>CUSTOMER - Common Data Service Synchronisierungsauftrag.</li>
+<li>SALESPEOPLE - Common Data Service Synchronisierungsauftrag.</li>
+</ol>
+<p>Sie können die Stellen auf der Seite <strong>Projektwarteschlangeneinträge</strong> ansehen. Weitere Informationen finden Sie unter <a href="admin-job-queues-schedule-tasks.html">Job-Warteschlangen zur Einplanung von Aufgaben verwenden</a>.</p>
+<h2 id="default-synchronization-job-queue-entries">Standard-Synchronisations-Projektwarteschlangeneinträge</h2>
+<p>Die folgende Tabelle beschreibt die Standard-Synchronisierungsaufträge für Dataverse.  </p>
+<table>
+<thead>
+<tr>
+<th>Aufgabenwarteschlangenposten</th>
+<th>Beschreibung</th>
+<th>Richtung</th>
+<th>Integrationstabellenzuordnung</th>
+<th>Standard-Synchronisationsfrequenz (Min.)</th>
+<th>Standardmäßige Inaktivitäts-Ruhezeit (Min.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KONTAKT – Common Data Service-Synchronisierungsprojekt</td>
+<td>Synchronisiert Dataverse-Kontakte mit Business Central-Kontakten.</td>
+<td>Bidirektional</td>
+<td>KONTAKT</td>
+<td>30</td>
+<td>720 <br>(12 Stunden)</td>
+</tr>
+<tr>
+<td>WÄHRUNG – Common Data Service-Synchronisierungsprojekt</td>
+<td>Synchronisiert Dataverse-Transaktionswährungen mit Business Central-Währungen.</td>
+<td>Von Business Central nach Dataverse</td>
+<td>WÄHRUNG</td>
+<td>30</td>
+<td>720 <br> (12 Std.)</td>
+</tr>
+<tr>
+<td>KUNDE – Common Data Service-Synchronisierungsprojekt</td>
+<td>Synchronisiert Dataverse-Konten mit Business Central-Debitoren.</td>
+<td>Bidirektional</td>
+<td>DEBITOR</td>
+<td>30</td>
+<td>720<br> (12 Std.)</td>
+</tr>
+<tr>
+<td>VENDOR - Common Data Service Synchronisierungsauftrag</td>
+<td>Synchronisiert Dataverse-Konten mit Business Central Debitoren.</td>
+<td>Bidirektional</td>
+<td>VENDOR</td>
+<td>30</td>
+<td>720<br> (12 Std.)</td>
+</tr>
+<tr>
+<td>VERKÄUFER – Common Data Service-Synchronisierungsprojekt</td>
+<td>Synchronisiert Business Central-Verkäufer mit Dataverse-Benutzern.</td>
+<td>Von Dataverse nach Business Central</td>
+<td>VERKÄUFER</td>
+<td>30</td>
+<td>1440<br> (24 Std.)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="synchronization-process">Synchronisierungsprozess</h2>
+<p>Jeder Synchronisierungsprojektwarteschlangenposten verwendet eine bestimmte Integrationstabellenzuordnung, die angibt, welche Business Central-Tabelle und Dataverse Tabelle synchronisiert werden sollen. Die Tabellenzuordnungen umfassen auch einige Einstellungen, die steuern, welche Datensätze in der Business Central-Tabelle und Dataverse-Tabelle synchronisiert werden sollen.  </p>
+<p>Um Daten zu synchronisieren, müssen Dataverse-Tabellenatensätze an Business Central-Datensätze gekoppelt werden. Beispielsweise muss ein Business Central-Debitor an ein Dataverse-Konto gekoppelt werden. Sie können Kopplungen manuell einrichten, bevor Sie die Synchronisierungsprojekte ausführen, oder Sie können die Kopplungen automatisch durch die Synchronisierungsprojekte erstellen lassen. Die folgende Liste zeigt, wie Daten zwischen Dataverse und Business Central synchronisiert werden, wenn Sie die Synchronisierungsprojektwarteschlangenposten verwenden. Weitere Informationen finden Sie unter <a href="admin-how-to-couple-and-synchronize-records-manually.html">Datensätze manuell koppeln und synchronisieren</a>.</p>
+<ul>
+<li><p>Das Kontrollkästchen <strong>Nur gekoppelte Datensätze synchronisieren</strong> steuert, ob neue Datensätze erstellt werden, wenn Sie synchronisieren. Standardmäßig ist das Kontrollkästchen aktiviert. Dies bedeutet, dass nur gekoppelte Datensätze synchronisiert werden. In der Integrationstabellenzuordnung können Sie die Tabellenzuordnung zwischen einer Dataverse-Tabelle und einer Business Central-Tabelle ändern, sodass die Integrationssynchronisierungsaufträge neue Datensätze in der Zieldatenbank für jede Zeile in der Quelldatenbank erstellen, der nicht gekoppelt ist. Weitere Informationen finden Sie unter <a href="admin-how-to-modify-table-mappings-for-synchronization.html#create-new-records">Neue Datensätze erstellen</a>.</p>
+<p>  <strong>Beispiel</strong> Wenn Sie das Kontrollkästchen <strong>Nur gekoppelte Datensätze synchronisieren</strong> deaktivieren, wenn Sie Kunden synchronisieren in Business Central mit Konten in Dataverse, wird für jeden Debitor in Business Central ein neues Konto erstellt und automatisch gekoppelt. Da darüberhinaus die Synchronisierung in diesem Fall bidirektional verläuft, wird ein neuer Debitor für jedes Dataverse-Konto erstellt und gekoppelt, das nicht bereits gekoppelt ist.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Es gibt Regeln und Filter, die bestimmen, welche Daten synchronisiert werden. Weitere Informationen finden Sie unter <a href="admin-synchronizing-business-central-and-sales.html">Synchronisierungsregeln</a>.</p>
+</div>
+</li>
+<li><p>Wenn neue Datensätze in Business Central erstellt werden, verwenden die Datensätze entweder die Vorlage, die für die Integrationstabellenzuordnung definiert ist, oder die Standardvorlage, die für den Zeilentyp verfügbar ist. Felder werden mit Daten von Business Central oder Dataverse ausgefüllt, je nach Synchronisierungsrichtung. Weitere Informationen finden Sie unter <a href="admin-how-to-modify-table-mappings-for-synchronization.html">Tabellenzuordnungen für die Synchronisierung ändern</a>.  </p>
+</li>
+<li><p>Bei nachfolgenden Synchronisierungen werden nur Datensätze aktualisiert, die nach dem letzten erfolgreichen Synchronisierungsprojekt für die Tabelle geändert oder hinzugefügt wurden.  </p>
+<p>   Neue Datensätze in Dataverse werden in Business Central hinzugefügt. Wenn sich Daten in Feldern in Dataverse ändern, werden die Daten ins entsprechende Feld in Business Central kopiert.  </p>
+</li>
+<li><p>Bei bidirektionaler Synchronisierung synchronisiert das Projekt von Business Central nach Dataverse, und anschließend von Dataverse nach Business Central.</p>
+</li>
+</ul>
+<h2 id="about-inactivity-timeouts">Über Inaktivitätszeitüberschreitungen</h2>
+<p>Einige Aufgabenwarteschlangeneinträge, z. B. diejenigen, die die Synchronisierung zwischen Business Central und Dataverse planen, verwenden das Feld <strong>Inaktivitätszeitlimit</strong> auf der Seite <strong>Aufgabenwarteschlangeneintrag</strong>, um zu verhindern, dass der Aufgabenwarteschlangeneintrag unnötig ausgeführt wird.  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/on-hold-with-inactivity-timeout.png&quot; alt-text=&quot;Flussdiagramm für den Fall, dass Aufgabenwarteschlangeneinträge aufgrund von Inaktivität gesperrt werden.&quot;:::</p>
+<p>Wenn der Wert in diesem Feld nicht Null ist und die Aufgabenwarteschlange während der letzten Ausführung keine Änderungen gefunden hat, sperrt Business Central den Aufgabenwarteschlangeneintrag. Wenn das passiert, wird das <strong>Status der Aufgabenwarteschlange</strong>-Feld <strong>Gesperrt wegen Inaktivität</strong>, und Business Central wartet auf den Zeitraum, der im Feld <strong>Inaktivitätszeitlimit</strong> angegeben ist, bevor der Aufgabenwarteschlangeneintrag erneut ausgeführt wird.  </p>
+<p>Beispiel: Standardmäßig sucht die Aufgabenwarteschlange WÄHRUNG, die Währungen in Dataverse mit Wechselkursen in Business Central synchronisiert, alle 30 Minuten nach Änderungen bei Wechselkursen. Wenn keine Änderungen gefunden werden, sperrt Business Central die Aufgabenwarteschlange WÄHRUNG für 720 Minuten (zwölf Stunden). Wenn ein Wechselkurs in Business Central geändert wird, während der Aufgabenwarteschlangeneintrag gesperrt ist, aktiviert Business Central automatisch den Aufgabenwarteschlangeneintrag neu und startet die Aufgabenwarteschlange neu. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Business Central aktiviert automatisch Aufgabenwarteschlangeneinträge, die nur dann gesperrt werden, wenn Änderungen in Business Central erfolgen. Änderungen in Dataverse aktivieren keine Aufgabenwarteschlangeneinträge.</p>
+</div>
+<h2 id="to-view-the-synchronization-job-log">So zeigen Sie das Synchronisierungsprojektprotokoll an:</h2>
+<ol>
+<li>Wählen Sie das :::image type=&quot;icon&quot; source=&quot;media/ui-search/search_small.png&quot; border=&quot;false&quot;:::-Symbol, geben Sie <strong>Integrationssynchronisationsprotokoll</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li><p>Wenn Fehler bei einem Synchronisierungsprojekt aufgetreten sind, erscheint die Anzahl der Fehler in der Spalte <strong>Fehler</strong>. Um die Fehler für das Projekt anzuzeigen, wählen Sie die Zahl aus.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Sie können alle Synchronisierungsprojektfehler anzeigen, indem Sie das Protokoll mit den Synchronisierungsprojektfehlern direkt öffnen.</p>
+</div>
+</li>
+</ol>
+<h2 id="to-view-the-synchronization-job-log-from-the-table-mappings">So zeigen Sie das Protokoll der Synchronisierungsprojekte über die Tabellenzuordnungen an:</h2>
+<ol>
+<li>Wählen Sie das :::image type=&quot;icon&quot; source=&quot;media/ui-search/search_small.png&quot; border=&quot;false&quot;:::-Symbol, geben Sie <strong>Integrationstabellenzuordnungen</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Wählen Sie auf der Seite <strong>Integrationstabellenzuordnungen</strong> einen wählen Sie einen Posten aus und wählen Sie dann <strong>Integrationssynchronisierungs-Auftragsprotokoll</strong> aus.  </li>
+</ol>
+<h2 id="to-view-the-synchronization-error-log">So zeigen Sie das Synchronisierungsfehlerprotokoll an:</h2>
+<ul>
+<li>Wählen Sie das :::image type=&quot;icon&quot; source=&quot;media/ui-search/search_small.png&quot; border=&quot;false&quot;:::-Symbol, geben Sie <strong>Integrationssynchronisationsfehler</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+</ul>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="admin-synchronizing-business-central-and-sales.html">Synchronisieren von Daten in Business Central und Dataverse</a><br><a href="admin-manual-synchronization-of-table-mappings.html">Synchronisieren Sie Tabellenzuordnungen manuell</a><br><a href="admin-scheduled-synchronization-using-the-synchronization-job-queue-entries.html">Planen einer Synchronisierung zwischen Business Central und Dataverse</a><br><a href="admin-prepare-dynamics-365-for-sales-for-integration.html">Über das Integrieren von Dynamics 365 Business Central mit Dataverse</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

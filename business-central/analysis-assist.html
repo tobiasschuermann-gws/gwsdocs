@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Daten in Listen mithilfe von Copilot analysieren (Vorschauversion) </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Daten in Listen mithilfe von Copilot analysieren (Vorschauversion) ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="analyze-data-in-lists-with-help-from-copilot-preview">Daten in Listen mithilfe von Copilot analysieren (Vorschauversion)</h1>
+
+<!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+
+: Couldn&#39;t find file ../shared-content/shared/preview-includes/preview-banner.md. -->[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+
+<!--END ERROR INCLUDE --><p>In diesem Artikel wird beschrieben, wie Sie mit der <em>Analyseunterstützung</em> Daten auf Listenseiten analysieren können.</p>
+<!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE [preview-note](~/../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md)]
+
+: Couldn&#39;t find file ../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md. -->[!INCLUDE [preview-note](~/../shared-content/shared/preview-includes/production-ready-preview-dynamics365.md)]
+
+<!--END ERROR INCLUDE --><h2 id="about-analysis-assist">Über die Analyseunterstützung</h2>
+<p>Die Analyseunterstützung ist ein Copilot für den <a href="analysis-mode.html">Analysemodus</a> auf Listenseiten in Business Central. Der Analysemodus bietet eine interaktive und vielseitige Möglichkeit, Daten zu berechnen, zusammenzufassen und zu untersuchen. Um Daten im Analysemodus zu analysieren, erstellen Sie eine <em>Analyse</em>-Registerkarte, auf der Sie die Daten transformieren, sodass die gewünschten Aggregationen und Zusammenfassungen angezeigt werden. Sie ordnen beispielsweise Felder in Zeilen und Spalten an, legen Filter fest, sortieren Spalten und pivotieren Felder. Mit der Analyseunterstützung brauchen Sie diese Aufgabe nicht mehr manuell zu erledigen, sondern erreichen mit Worten fast dasselbe – oder können wenigstens einen entsprechenden Anfang machen. Indem Sie die gewünschte Struktur in natürlicher Sprache ausdrücken, etwa „nach Menge von klein nach groß sortieren“ oder „Durchschnittskosten pro Kategorie anzeigen“, generiert die Analyseunterstützung mithilfe künstlicher Intelligenz einen Layoutvorschlag auf einer Analyseregisterkarte.</p>
+<h2 id="available-languages">Verfügbare Sprachen</h2>
+<p>Diese Copilot-Funktion wurde validiert und wird nur auf Englisch unterstützt. Obwohl sie in anderen Sprachen verwendet werden kann, funktioniert sie möglicherweise nicht wie vorgesehen. Die Sprachqualität kann je nach Benutzerinteraktion oder Systemeinstellungen variieren, was sich auf die Genauigkeit und der Benutzererfahrung auswirken kann.</p>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li>Die Analyseunterstützungsfunktion ist aktiviert und Sie haben die Berechtigung, sie zu verwenden. Diese Aufgabe wird normalerweise durch einen Administrierenden erledigt. <a href="enable-ai.html">Erfahren Sie mehr über das Konfigurieren von Copilot- und KI-Funktionen</a>.
+<!-- - The display language in Business Central is set to one the following English locales: en-AU, en-CA, en-GB, en-IE, en-IN, en-NZ, en-PH, en-SG, en-US, en-ZA. [Learn how to change the language](ui-change-basic-settings.md#language)-->
+<!-- - Your Business Central environment is in any country/region except Canada (this feature isn't yet available in Canada).--></li>
+</ul>
+<h2 id="get-started">Erste Schritte</h2>
+<ol>
+<li><p>Öffnen Sie die Listenseite, die Sie analysieren möchten.</p>
+<p>Um beispielsweise mit der Seite <strong>Artikel</strong> zu arbeiten, wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Lupe, welche das „Sie wünschen“-Feature öffnet."> aus (<kbd>Alt</kbd>+<kbd>Q</kbd>), geben Sie <em>Artikel</em> ein und wählen Sie dann den zugehörigen Link.</p>
+</li>
+<li><p>Sie können die Datenanalyse mit Copilot direkt von der Listenseite aus starten oder indem Sie zunächst in den Analysemodus wechseln. Verwenden Sie für den Einstieg einen der folgenden Schritte:</p>
+<ul>
+<li>Wählen Sie in der Aktionsleiste oben auf der Seite <img src="media/copilot-icon.png" alt="Zeigt das Copilot-Symbol an"> <strong>Copilot</strong> &gt; <strong>Liste analysieren</strong> aus.</li>
+<li>Wählen Sie in der Aktionsleiste oben auf der Seite <img src="media/analysis-mode-icon.png" alt="Zeigt das Symbol für den Wechsel in den Analysemodus an"> <strong>In den Analysemodus wechseln</strong> und wählen Sie dann <img src="media/copilot-icon.png" alt="Zeigt das Copilot-Symbol"> <strong>Copilot</strong> &gt; <strong>Neue Analyse erstellen</strong>.</li>
+</ul>
+</li>
+<li><p>Geben Sie im Fenster zum <strong>Artikel analysieren</strong> mit Copilot eine Beschreibung des gewünschten Layouts ein. Diese Beschreibung wird als <em>Prompt</em> bezeichnet.</p>
+<p> <img src="media/analysis-assist.png" alt="Zeigt Copilot der Analyseunterstützung an"></p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie Hilfe zum Schreiben eines Prompts brauchen, wählen Sie <img src="media/prompt-guide-icon.png" alt="Zeigt das „Prompts anzeigen“-Symbol an"> <strong>Anleitung für Prompts</strong> und wählen Sie eine der Optionen aus, um zu beginnen. Der Text in Klammern <code>[ ]</code> ist nur ein Beispiel und nicht im Copilot-Fenster enthalten.</p>
+</div>
+</li>
+<li><p>Wählen Sie <strong>Generieren</strong> und warten Sie dann, während der Copilot das Layout auf der neuen Analyseregisterkarte generiert.</p>
+</li>
+<li><p>Überprüfen Sie die Ergebnisse auf der neuen Analyseregisterkarte.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie von der neuen Analyseregisterkarte weg navigieren (z. B. zu einer anderen Analyseregisterkarte oder -seite wechseln) oder Layoutänderungen auf der Registerkarte vornehmen (z. B. Spalten sortieren oder Einstellungen in den Registerkarten <strong>Spalten</strong> und <strong>Analysefilter</strong> ändern), wird die neue Analyseregisterkarte automatisch gespeichert und der Copilot wird geschlossen.</p>
+</div>
+</li>
+<li><p>Wenn Sie die generierte Analyse ändern möchten, können Sie einen der folgenden Schritte ausführen:</p>
+<ul>
+<li><p>Um auf den vorherigen Anweisungen aufzubauen, geben Sie die Informationen in das Feld <strong>Weitere Details zur Analyse hinzufügen</strong> ein und wählen Sie dann den <img src="media/analysis-assist-adjust-button.png" alt="Zeigt den Anpassen-Pfeil an"> <strong>Anpassen</strong>-Pfeil aus. Der Copilot merkt sich Ihre vorherigen Anweisungen und verwendet diese, um Anpassungen vorzunehmen.</p>
+</li>
+<li><p>Um von vorne zu beginnen und neue Anweisungen hinzuzufügen, wählen Sie <img src="media/edit-pencil.png" alt="Zeigt das Stiftsymbol für „Prompt bearbeiten“ an"> <strong>Prompt bearbeiten</strong>, fügen Sie dem Prompt die Details hinzu und wählen Sie dann <strong>Generieren</strong> aus.</p>
+</li>
+</ul>
+</li>
+<li><p>Wenn Sie die Analyseregisterkarte speichern möchten, wählen Sie <strong>Behalten</strong>. Wenn Sie sie nicht speichern möchten, wählen Sie <strong>Verwerfen</strong> aus.</p>
+</li>
+</ol>
+<h2 id="prompt-tips-and-examples">Tipps und Beispiele für Prompts</h2>
+<p>Es ist wichtig, für Copilot effektive Prompts zu erstellen, um genaue und relevante Analysevorschläge zu erhalten. Es gibt auch Möglichkeiten, den in Prompts hinzugefügten Text zu minimieren, um das Tippen zu beschleunigen. Hier sind einige Tipps und Leitlinien, gefolgt von einigen Beispielen:</p>
+<ul>
+<li>Seien Sie prägnant und vermeiden Sie lange oder mehrere Sätze.</li>
+<li>Stellen Sie sicher, dass die in Prompts verwendeten Feldnamen einigermaßen den tatsächlichen Feldnamen auf der Seite entsprechen.</li>
+<li>Verwenden Sie eine natürliche Sprache und formulieren Sie die gewünschte Datenstruktur freundlich und im Plauderton.</li>
+<li>Verwenden Sie gängige Schlüsselwörter, Ausdrücke und Begriffe, die in der Datenanalyse verwendet werden, z. B. <code>group by</code>, <code>sum</code>, <code>sort by</code> usw.</li>
+<li>Wenn die erste Antwort nicht Ihren Wünschen entspricht, fügen Sie weitere Anweisungen hinzu oder formulieren Sie die letzte Anweisung um.</li>
+<li>Gängige Abkürzungen sind zulässig.</li>
+<li>Die Groß-/Kleinschreibung ist nicht wichtig.</li>
+</ul>
+<h3 id="examples">Beispiele</h3>
+<p>In den folgenden Beispielprompts wird die Analyseunterstützung für die Liste <strong>Artikel</strong> verwendet. Die Artikelseite enthält drei für die Analyse summierbare Felder: <strong>Vorrätige Menge</strong>, <strong>Einstandspreis</strong>, <strong>VK-Preis</strong>.</p>
+<p>Prompt: <code>Show items by brand and unit of measure</code></p>
+<p>Diese Eingabeaufforderung versucht, Summen für alle summierbaren Felder anzuzeigen, gruppiert nach Marke und dem Feld <strong>Basiseinheit</strong>. Aber in diesem Fall stimmt „Marke“ mit keinem Feldnamen überein, sodass der Copilot wahrscheinlich kein passendes Feld findet. Anschließend werden Sie aufgefordert, die Eingabeaufforderung umzuformulieren und es erneut zu versuchen.</p>
+<p>Prompt: <code>Show items by type and uom</code></p>
+<p>Dieser Prompt zeigt Summen für alle summierbaren Felder an, gruppiert den Feldern <strong>Typ</strong> und <strong>Basiseinheit</strong>. Allerdings wird statt „Einheit“ die Abkürzung <code>uom</code> verwendet.</p>
+<p>Prompt: <code>Show total quantity per type per UoM</code></p>
+<p>Dieser Prompt erstellt eine Pivottabelle für das Feld <strong>Vorrätige Menge</strong> je <strong>Basiseinheit</strong> und <strong>Typ</strong>.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="faqs-analysis-assist.html">Häufig gestellte Fragen zur verantwortungsbewussten KI für die Analyseunterstützung</a><br><a href="reports-adhoc-analysis.html">Ad-hoc-Datenanalyse</a>  </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

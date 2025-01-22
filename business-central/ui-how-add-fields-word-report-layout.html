@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hinzuf&#252;gen von Feldern zu einem Word-Berichtslayout </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Hinzuf&#252;gen von Feldern zu einem Word-Berichtslayout ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="work-with-word-layouts">Mit Word-Layouts arbeiten</h1>
+
+<p>Ein Word-Berichtslayout bestimmt den Inhalt und das Format eines Berichts, wenn er in Business Central in der Vorschau angezeigt und gedruckt wird. Sie erstellen und ändern diese Layouts mit Microsoft Word.</p>
+<p><a href="media/word-layout.png#lightbox"><img src="media/word-layout.png" alt="Beispiel für ein Word-Berichtslayout-Dokument für Business Central."></a> </p>
+<p>Wenn Sie ein Word-Berichtslayout ändern, geben Sie die Felder des Berichtsdatensatzes an, die in den Bericht aufgenommen werden sollen, sowie die Anordnung der Felder. Sie definieren auch das allgemeine Format des Berichts, wie Schriftart und -größe, Ränder und Hintergrundbilder. In der Regel ordnen Sie den Inhalt des Berichts an, indem Sie dem Layout Tabellen hinzufügen.</p>
+<p>Um allgemeine Formatierungs- und Layoutänderungen vorzunehmen, wie zum Beispiel Ändern der Schriftart, Hinzufügen und Ändern einer Tabelle oder Entfernen eines Datenfelds, können Sie einfach die grundlegenden Bearbeitungsfunktionen von Word verwenden, wie bei anderen Word-Dokumenten.</p>
+<p>Wenn Sie ein Word-Berichtslayout von Grund auf neu entwerfen oder neue Datenfelder hinzufügen, dann beginnen Sie mit dem Hinzufügen einer Tabelle, die Zeilen und Spalten enthält, die später die Datenfelder enthalten werden.</p>
+<div class="TIP"><h5>Tipp</h5><p>Zeigen Sie die Tabellenrasterlinien an, sodass Sie die Grenzen von Tabellenzellen sehen. Denken Sie daran, die Gitternetzlinien auszublenden, wenn Sie mit der Bearbeitung fertig sind. Um Tabellenrasterlinien ein- oder auszublenden, wählen Sie die Tabelle und wählen Sie anschließend unter <strong>Layout</strong> auf der Registerkarte <strong>Tabelle</strong> die Option <strong>Rasterlinien anzeigen</strong> aus.</p>
+</div>
+<h2 id="embedding-fonts-in-word-layouts-for-consistency">Schriftarten aus Gründen der Konsistenz in Word-Layouts einbetten</h2>
+<p>Um sicherzustellen, dass Berichte immer mit den vorgesehenen Schriftarten angezeigt und gedruckt werden, wo immer Benutzer die Berichte öffnen oder drucken, können Sie die Schriftarten in den Word-Beleg einbetten. Das Einbetten von Schriftarten kann jedoch die Größe der Word-Dateien erheblich erhöhen. Weitere Informationen zur Einbettung von Schriftarten in Word finden Sie unter <a href="https://support.office.com/article/Embed-fonts-in-Word-PowerPoint-or-Excel-cb3982aa-ea76-4323-b008-86670f222dbc">Einbetten von Schriftarten in Word, PowerPoint oder Excel</a></p>
+<h2 id="adding-data-fields">Hinzufügen von Datenfeldern</h2>
+<p>Ein Berichtsdataset kann aus Feldern bestehen, die Bezeichnungen, Daten und Bilder anzeigen. In diesem Thema wird das Verfahren zum Hinzufügen von Feldern aus einem Berichtsdatasets in ein bestehendes Word-Berichtslayout für einen Bericht beschrieben. Fügen Sie Felder hinzu, indem Sie benutzerdefinierte XML-Abschnitt in Words für den Bericht verwenden und Inhaltssteuerelemente hinzufügen, die den Feldern des Berichtsdatasets zugeordnet sind. Beim Hinzufügen von Feldern ist es erforderlich, dass Sie einiges Wissen über das Dataset des Berichts haben, damit Sie die Felder identifizieren können, die Sie dem Layout hinzufügen möchten.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Sie können keine integrierten Berichtslayouts in ändern<!--Onprem. Built-in layouts can only be modified by using the development environment-->.  </p>
+</div>
+<h3 id="OpenXMLPart">Um den benutzerdefinierten XML-Abschnitt für den Bericht in Word zu öffnen</h3>
+<ol>
+<li><p>Wenn nicht bereits offen, öffnen Sie den Word-Berichtlayoutbeleg in Word.  </p>
+<p>  Weitere Informationen finden Sie unter <a href="ui-how-create-custom-report-layout.html">Erstellen und bearbeiten eines benutzerdefinierten Berichts- oder Dokumentenlayout</a>.  </p>
+</li>
+<li><p>Zeigen Sie die Registerkarte <strong>Entwickler</strong> im Menüband von Microsoft Word an.  </p>
+<p>  Standardmäßig wird die Registerkarte <strong>Entwickler</strong> nicht im Menüband angezeigt. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/visualstudio/vsto/how-to-show-the-developer-tab-on-the-ribbon">Anzeigen der Entwickler-Registerkarte auf dem Menüband</a>.  </p>
+</li>
+<li><p>Wählen Sie auf der Registerkarte <strong>Entwickler</strong> die Option <strong>XML-Zuordnungs-Bereich</strong> aus.  </p>
+</li>
+<li><p>Im Bereich <strong>XML-Zuordnung</strong> in der Dropdownliste <strong>Benutzerdefinierter XML-Abschnitt</strong> wählen Sie den benutzerdefinierten XML-Abschnitt für den Bericht Business Central aus, der normalerweise der letzte in der Liste ist. Der Name des benutzerdefinierten XML-Abschnitts hat folgendes Format:  </p>
+<p>  <code>urn:microsoft-dynamics-nav/reports/&lt;report_name&gt;/&lt;ID&gt;</code>  </p>
+<p>  <code>&lt;report_name&gt;</code> ist der Name, der dem Bericht zugewiesen ist </p>
+<p>  <code>&lt;ID&gt;</code> ist die Kennnummer des Berichts.  </p>
+<p>  Nachdem Sie den benutzerdefinierten XML-Abschnitt auswählen, zeigt der XML-Zuordnungsbereich die Beschriftungen und die Feldsteuerelemente an, die für den Bericht verfügbar sind.  </p>
+</li>
+</ol>
+<h3 id="to-add-a-label-or-data-field">Um eine Beschriftung oder ein Datenfeld hinzufügen</h3>
+<ol>
+<li><p>Setzen Sie den Cursor in dem Beleg an der Stelle ab, an dem Sie das Steuerelement hinzufügen möchten.  </p>
+</li>
+<li><p>Klicken Sie im <strong>XML-Zuordnung</strong>-Bereich auf das Steuerelement, das Sie hinzufügen möchten, und klicken Sie dann mit der rechten Maustaste auf <strong>Inhaltssteuerelement einfügen</strong> und dann auf <strong>Reiner Text</strong>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Sie können kein Feld hinzufügen, indem Sie manuell den Datasetfeldnamen in das Inhaltssteuerelement eingeben. Sie müssen den <strong>XML-Zuordnung</strong>-Bereich verwenden, um die Felder zuzuordnen.  </p>
+</div>
+</li>
+</ol>
+<h3 id="to-add-repeating-rows-of-data-fields-to-create-a-list">Um wiederholente Zeilen aus Datenfeldern hinzufügen, um eine Liste zu erstellen</h3>
+<ol>
+<li><p>Fügen Sie in einer Tabelle eine Tabellenzeile hinzu, die eine Spalte für jedes Feld umfasst, das wiederholt werden soll.  </p>
+<p>Diese Zeile fungiert als als Platzhalter für wiederkehrenden Felder.  </p>
+</li>
+<li><p>Wählen Sie die gesamte Zeile aus.  </p>
+</li>
+<li><p>Klicken Sie im <strong>XML-Zuordnung</strong>-Bereich mit der rechten Maustaste auf das Steuerelement, das dem Berichtsdatenelement entspricht, das die Felder enthält, die wiederholt werden sollen, und wählen Sie dann <strong>Inhaltssteuerelement einfügen</strong> und <strong>Wiederholt</strong>.  </p>
+</li>
+<li><p>Fügen Sie die wiederkehrenden Felder der Zeile hinzu, wie folgt:  </p>
+<ol>
+<li><p>Setzen Sie den Mauszeiger in einer Spalte ab.  </p>
+</li>
+<li><p>Klicken Sie im <strong>XML-Zuordnung</strong>-Bereich auf das Steuerelement, das Sie hinzufügen möchten, und klicken Sie dann mit der rechten Maustaste auf <strong>Inhaltssteuerelement einfügen</strong> und dann auf <strong>Reiner Text</strong>.  </p>
+</li>
+<li><p>Wiederholen Sie die Schritte a und b für jedes Feld.  </p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="adding-image-fields">Hinzufügen von Bildfeldern</h2>
+<p>Ein Berichtsdataset kann einen Feld enthalten, das ein Bild enthält, beispielsweise ein Firmenlogo oder ein Bild eines Artikels. Um ein Bild aus dem Berichtsdataset hinzuzufügen, fügen Sie ein <strong>Bild</strong>-Inhaltssteuerelement ein.  </p>
+<p>Bilder werden im linken oberen Teil des Inhaltssteuerelements ausgerichtet und ändern automatisch Ihre Größe proportional entsprechend den Grenze des Inhaltssteuerelements.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Außerdem können Sie Bilder nur hinzufügen, die in einem Format vorliegen, das von Word unterstützt wird, wie .bmp, .jpeg und PNG-Datei-Typen. Wenn Sie ein Bild hinzufügen, das ein Format hat, das nicht von Word unterstützt wird, erhalten Sie einen Fehler, wenn Sie den Bericht im Client Business Central ausführen.  </p>
+</div>
+<h3 id="to-add-an-image">Um ein Bild hinzuzufügen</h3>
+<ol>
+<li><p>Setzen Sie den Zeiger in dem Beleg an der Stelle ab, an dem Sie das Steuerelement hinzufügen möchten.  </p>
+</li>
+<li><p>Klicken Sie im <strong>XML-Zuordnung</strong>-Bereich auf das Steuerelement, das Sie hinzufügen möchten, und klicken Sie dann mit der rechten Maustaste auf <strong>Inhaltssteuerelement einfügen</strong> und dann auf <strong>Bild</strong>.  </p>
+</li>
+<li><p>Um die Bildgröße zu erhöhen oder zu verringern, ziehen Sie einen der Ziehpunkte zur Mitte des Inhaltssteuerelements hin oder von der Mitte weg.  </p>
+</li>
+</ol>
+<h2 id="RemoveField">Entfernen der Beschriftungs- und Datenfelder</h2>
+<p>Beschriftung und Datenfelder eines Berichts sind in Inhaltssteuerelementen in Word enthalten. Die folgende Abbildung zeigt ein Steuerelement für Inhalte, wenn es im Word-Beleg ausgewählt ist.  </p>
+<p><img src="media/nav_wordreportlayouts_contentcontrol.png" alt="Inhaltssteuerelement für Feld in Word-Berichtslayout." title="NAV_WordReportLayouts_ContentControl">  </p>
+<p>Der Name der Bezeichnung oder des Datenfeldes wird im Inhaltssteuerelement angezeigt. In dem Beispiel ist der Name &quot;CompanyAddr1&quot;.  </p>
+<h3 id="to-remove-a-label-or-data-field">Um eine Beschriftung oder ein Datenfeld zu entfernen</h3>
+<ol>
+<li><p>Klicken Sie mit der rechten Maustaste auf das Feld, das Sie entfernen möchten, und wählen Sie <strong>Inhalt des Steuerelements löschen</strong>.  </p>
+<p>  Das Inhaltssteuerelement wird entfernt, aber die Feldnamen bleiben als Text erhalten.  </p>
+</li>
+<li><p>Löschen Sie den verbleibenden Text nach Bedarf.</p>
+</li>
+</ol>
+<h2 id="custom-xml-part-overview">Benutzerdefinierter XML-Teil, Übersicht</h2>
+<p>Word-Berichtlayouts werden anhand von <em>benutzerdefinierten XML-Abschnitten</em> erstellt. Ein Debitorenspezifischer XML-Abschnitt für einen Bericht besteht aus Elementen, die den Datenelementen, den Spalten und den Beschriftungen entsprechen, die das Dataset des Berichts enthalten, wie im Berichts-DataSet-Designer in definiert. <!--OnPrem The data as defined in the Report Dataset Designer in Microsoft Dynamics NAV Development Environment. -->Der benutzerdefinierte XML-Abschnitt wird verwendet, um die Daten in einem Bericht zuzuordnen, wenn der Bericht ausgeführt wird.</p>
+<h3 id="xml-structure-of-custom-xml-part">XML-Struktur des benutzerdefinierten XML-Abschnitts</h3>
+<p>Die folgende Tabelle enthält eine vereinfachte Übersicht der XML eines benutzerdefinierten XML-Abschnitts.  </p>
+<table>
+<thead>
+<tr>
+<th>XML-Elemente</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;</code></td>
+<td>Header</td>
+</tr>
+<tr>
+<td><code>&lt;WordReportXmlPart xmlns=&quot;urn:microsoft-dynamics-365/report/&lt;reportname&gt;/&lt;id&gt;/&quot;</code></td>
+<td>XML-Namespacespezifikation. <code>&lt;reportname&gt;</code> ist der Namee, der dem Bericht zugewiesen ist. <code>&lt;id&gt;</code> ist die ID, die dem Bericht zugewiesen ist.</td>
+</tr>
+<tr>
+<td><code>..&lt;Labels&gt;</code><br><br> <code>....&lt;ColumnNameCaption&gt;ColumnNameCaption&lt;/ColumnNameCaption&gt;</code><br><br> <code>....&lt;LabelName&gt;LabelCaption&lt;/LabelName&gt;</code><br><br> <code>..&lt;/Labels&gt;</code></td>
+<td>Enthält alle Beschriftungen für den Bericht.<!--OnPren The element includes labels that are related to columns that have the IncludeCaption Property.--><br>-   Beschriftungselemente, die mit Spalten verknüpft sind, weisen das Format <code>&lt;ColumnNameCaption&gt;ColumnNameCaption&lt;/ColumnNameCaption&gt;</code> auf<!--OnPrem where `ColumnName` is determined by the column's Name Property.-->.<br>- Beschriftungselemente weisen das Format <code>&lt;LabelName&gt;LabelName&lt;/LabelName</code> auf<!--OnPrem where LabelName is determined by the label's Name Property.-->.<br>-    Beschriftungen sind in alphabetischer Reihenfolge aufgeführt.</td>
+</tr>
+<tr>
+<td><code>..&lt;DataItem1&gt;</code><br><br> <code>....&lt;DataItem1Column1&gt;DataItem1Column1&lt;/DataItem1Column1&gt;</code></td>
+<td>Dateneinträge und Spalten auf oberster Ebene. Spalten werden in alphabetischer Reihenfolge aufgeführt.<!--OnPrem <br /><br /> The element names and values are determined by the Name Property of the data item or column.--></td>
+</tr>
+<tr>
+<td><code>....&lt;DataItem2&gt;</code><br><br> <code>......&lt;DataItem2Column1&gt;DataItem2Column1&lt;/DataItem2Column1&gt;</code><br><br> <code>....&lt;/DataItem2&gt;</code><br><br> <code>....&lt;DataItem3&gt;</code><br><br> <code>......&lt;DataItem3Column1&gt;DataItem3Column1&lt;/DataItem3Column1&gt;</code><br><br> <code>....&lt;/DataItem3&gt;</code></td>
+<td>Datenelemente und Spalten, die im Dateneintrag auf oberster Ebene verschachtelt sind. Spalten werden in alphabetischer Reihenfolge unter dem entsprechenden Dateneintrag aufgelistet.</td>
+</tr>
+<tr>
+<td><code>..&lt;/DataItem1&gt;</code><br><br> <code>&lt;/WordReportXmlPart&gt;</code></td>
+<td>Abschließendes Element.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-xml-part-in-word">Benutzerdefinierter XML-Abschnitt in Word</h3>
+<p> In Word öffnen Sie den benutzerdefinierten XML-Abschnitt im <strong>XML-Zuordnung</strong>-Bereich und verwenden anschließend diesen Bereich, um Elemente zu den Inhaltssteuerelementen im Word-Dokument zuzuordnen. Der Bereich <strong>XML-Zuordnung</strong> ist zugänglich von der Registerkarte <strong>Entwickler</strong> (weitere Informationen unter <a href="https://learn.microsoft.com/de-de/visualstudio/vsto/how-to-show-the-developer-tab-on-the-ribbon">Anzeigen der Entwickler-Registerkarte auf dem Menüband</a>).  </p>
+<p> Die Elemente im <strong>XML-Zuordnung</strong>-Bereich erscheinen in einer Struktur ähnlich dem XML-Quellcode. Beschriftungsfelder werden unter einem allgemeinen element <strong>Beschriftungen</strong> gruppiert, und Dateneintrag und Spalten sind in einer hierarchischen Struktur angeordnet, die der XML-Quelle entspricht, wobei die Spalten in alphabetischer Reihenfolge aufgeführt werden. Elemente werden durch ihren Spaltennamen identifiziert, wie im DataSet des Berichts im AL-Code definiert. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-report-dataset">Definieren eines Berichts-Datasets</a>.  </p>
+<p> In der folgenden Abbildung wird der einfache benutzerdefinierte XML-Abschnitt aus dem vorherigen Abschnitt im <strong>XML-Zuordnung</strong>-Bereich eines Word-Dokuments dargestellt.  </p>
+<p> <img src="media/nav_reportlayout_xmlmappingpane.png" alt="Clip des Bereichs „XML-Zuordnung“ in Word." title="NAV_ReportLayout_XMLMappingPane">  </p>
+<ul>
+<li><p>Um dem Layout eine Beschriftung oder ein Feld hinzuzufügen, fügen Sie ein Inhaltssteuerelement ein, das dem Element im <strong>XML-Zuordnung</strong>-Bereich zugeordnet ist.  </p>
+</li>
+<li><p>Um wiederholen Zeilen aus Spalten zu erstellen, fügen Sie ein <strong>Wiederholen</strong>-Inhaltssteuerelement für das übergeordnete Datenelement ein, und fügen Sie dann ein Inhaltssteuerelement für die Spalten hinzu.  </p>
+</li>
+<li><p>Bei Beschriftungen ist der tatsächliche Text, der im generierten Angabe erscheint, der Wert der <strong>Caption</strong>-Eigenschaft für das Feld in der Datenelementtabelle (wenn die Beschriftung mit der Spalte im Berichtsdataset verknüpft ist), oder entspricht einer Beschriftung im Berichts-Bezeichnungs-Designer (wenn die Beschriftung nicht mit einer Spalte im Dataset verknüpft ist).  </p>
+</li>
+<li><p>Die Sprache der Beschriftung, die angezeigt wird, wenn Sie den Bericht ausführen, hängt von der Spracheneinstellung des Berichtsobjekts ab.  </p>
+</li>
+</ul>
+<h2 id="see-also">Weitere Informationen</h2>
+<p><a href="ui-how-create-custom-report-layout.html">Erstellen und bearbeiten Sie einen benutzerdefinierten Bericht</a>   </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

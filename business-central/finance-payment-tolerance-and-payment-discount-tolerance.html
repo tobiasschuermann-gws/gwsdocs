@@ -1,0 +1,984 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Zahlungstoleranz und Skontotoleranz </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Zahlungstoleranz und Skontotoleranz ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="work-with-payment-tolerances-and-payment-discount-tolerances">Mit Zahlungstoleranzen und Skontotoleranzen arbeiten</h1>
+
+<p>Sie können eine Zahlungstoleranz einrichten, um eine Rechnung zu schließen, wenn die Zahlung nicht vollständig den Betrag der Rechnung umfasst. Beispielsweise sind Zahlungstoleranzen in der Regel für kleine Beträge vorgesehen, deren Korrektur mehr kosten würde als deren Akzeptanz. Die eingerichtete Skontotoleranz erlaubt Ihnen, Skonto nach Ablauf des Skontodatums zu gewähren.  </p>
+<p>Sie können Zahlungstoleranzen verwenden, sodass für jeden Restauftragsbetrag eine festgelegte maximale Zahlungstoleranz definiert wird. Wenn die Zahlungstoleranz erfüllt wird, dann wird der Zahlungsbetrag analysiert. Wenn der Zahlungsbetrag eine Unterzahlung ist, wird der ausstehende Betrag durch die Unterzahlung vollständig geschlossen. Für den Zahlungsposten wird ein detaillierter Debitorenposten gebucht, sodass in dem ausgeglichenen Rechnungsposten kein Restbetrag offen bleibt. Wenn der Zahlungsbetrag eine Überzahlung ist, wird für den Zahlungsposten wird ein neuer detaillierter Debitorenposten gebucht, sodass in dem Zahlungsposten kein Restbetrag offen bleibt.</p>
+<p>Sie können Skototoleranzen einrichten, sodass bei Gewährung eines Rabatts nach Ablauf des Skontodatums dieses immer auf ein Skonto- oder ein Zahlungstoleranzkonto gebucht wird.</p>
+<h2 id="applying-payment-tolerance-to-multiple-documents">Anwenden der Zahlungstoleranz auf mehrere Belege</h2>
+<p>Ein einzelner Beleg hat dieselben Zahlungstoleranzen, egal ob er alleine oder mit anderen Belegen ausgeglichen wird. Das Akzeptieren eines verspäteten Skontos, wenn Sie Zahlungstoleranz auf mehrere Belegen anwenden, tritt automatisch für jeden Beleg auf, für den die folgende Regel gilt:  </p>
+<p><em>Skontodatum &lt; Zahlungsdatum (des markierten Postens) &lt;= Zahlungstoleranzdatum</em>  </p>
+<p>Diese Regel bestimmt auch, um zu ermitteln, ob Warnungen angezeigt werden, wenn Sie Zahlungstoleranz auf mehrere Belege anwenden. Die Skontotoleranzwarnung wird für jeden Posten angezeigt, der die Datumskriterien erfüllt. Weitere Informationen finden unter <a href="finance-payment-tolerance-and-payment-discount-tolerance.html#example-2---tolerance-calculations-for-multiple-documents">Beispiel 2 – Toleranzberechnungen für mehrere Belege</a>.</p>
+<p>Sie können eine Warnung anzeigen, die auf verschiedenen Toleranzsituationen basiert.  </p>
+<ul>
+<li>Der erste Warnungstext bezieht sich auf die Skontotoleranz. Sie werden darüber informiert, dass Sie einen verspäteten Skonto akzeptieren können. Sie können auswählen, ob Toleranz für das Skontodatum akzeptiert werden soll.  </li>
+<li>Der zweite Warnungstext bezieht sich auf die Zahlungstoleranz. Sie werden darüber informiert, dass alle Posten geschlossen werden können, da die Differenz innerhalb der maximalen Zahlungstoleranz der ausgeglichenen Posten liegt. Sie können auswählen, ob Toleranz für die Zahlungssumme akzeptiert werden soll.</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Durch Aktivieren der Warnmeldung können Sie auswählen, wie Zahlungen innerhalb der Toleranz verarbeitet werden sollen. Wenn Sie die Meldung nicht aktivieren und eine Toleranzstufe angegeben ist, werden Rechnungen mit Beträgen, die innerhalb der Toleranz liegen, automatisch geschlossen. Sie können den Restbetrag dann nicht mehr offen lassen. </p>
+</div>
+<p>Weitere Informationen finden Sie unter <a href="finance-payment-tolerance-and-payment-discount-tolerance.html#to-enable-or-disable-payment-tolerance-warnings">So aktivieren oder deaktivieren Sie die Zahlungstoleranzwarnung</a>. </p>
+<h2 id="to-set-up-tolerances">Toleranzen einrichten:</h2>
+<p>Die Zahlungstoleranz für Tage und Beträge erlaubt Ihnen, eine Rechnung zu schließen, auch wenn die Zahlung nicht vollständig den Betrag der Rechnung umfasst. Zum Beispiel wegen Skontoüberschreitung, Warenabzug oder wegen eines kleinen Fehlers. Dieses Prinzip gilt auch für Gutschriften und Erstattungen.  </p>
+<p>Um diese Toleranz einzurichten, müssen Sie verschiedene Toleranzkonten einrichten, das Skontokonto und die Zahlungstoleranzbuchungsmethode spezifizieren und die Stapelverarbeitung <strong>Zahlungstoleranz ändern</strong> laufen lassen.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Allgemeine Buchungsmatrixeinrichtung</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie die Seite <strong>Buchungsmatrix Einrichtung</strong>. Richten Sie ein Haben- und ein Soll-Verkaufszahlungstoleranzkonto sowie ein Haben- und ein Soll-Einkaufszahlungstoleranzkonto ein.  </li>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Debitorenbuchungsgruppen</strong> ein und wählen Sie dann den zugehörigen Link.    </li>
+<li>Öffnen Sie die Seite <strong>Debitorenbuchungsgruppen</strong>. Richten Sie ein Haben- und ein Soll-Zahlungstoleranzkonto ein. Weitere Informationen finden Sie unter <a href="finance-posting-groups.html">Einrichten von Buchungsgruppen</a>.  </li>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Kreditorenbuchungseinrichtung</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie die Seite <strong>Debitorenbuchungsgruppen</strong>. Richten Sie ein Haben- und ein Soll-Zahlungstoleranzkonto ein.  </li>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Hauptbuchhaltung Einrichtung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie die Seite <strong>Finanzbuchhaltung Einrichtung</strong>.  </li>
+<li>Füllen Sie auf dem Inforegister  <strong>Anwendung</strong>  die Felder  <strong>Zahlungsrabatt-Toleranzbuchung</strong>,  <strong>Zahlungsrabatt-Karenzzeit</strong>  und  <strong>Zahlungstoleranzbuchung</strong>  aus.   </li>
+<li><p>Wählen Sie die Aktion <strong>Zahlungstoleranz ändern</strong> aus.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie <strong>Auf Älteste Anwenden</strong> im Feld <strong>Anwendungsverfahren</strong> auf der Seite <strong>Debitorenkarte</strong> auswählen, bucht Business Central Zahlungstoleranzen nicht automatisch, selbst wenn sie innerhalb der festgelegten Schwellen auf der Seite <strong>Finanzbuchhaltungs-Einrichtung</strong> liegen. Business Central geht davon aus, dass die Einstellung &quot;Auf Älteste anwenden&quot; angibt, dass der Debitor (oder Sie als Debitor Ihres Kreditors) ein Konto bei Ihnen hat, auf das er regelmäßig den Saldo zahlt. Daher sollten Restbeträge nicht durch das Buchen eines Zahlungstoleranzeintrags entfernt werden.</p>
+</div>
+</li>
+<li><p>Füllen Sie auf der Seite  <strong>Zahlungstoleranz ändern</strong>  die Felder  <strong>Zahlungstoleranz %</strong>  und  <strong>Max. Zahlungstoleranzbetrag</strong>  aus und wählen Sie dann die Schaltfläche  <strong>OK</strong> .</p>
+</li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Sie haben jetzt nur die Toleranz für die Mandantenwährung eingerichtet. Wenn Business Central Toleranzen auf Zahlungen, Gutschriften und Erstattungen in Fremdwährungen gewähren soll, müssen Sie die Stapelverarbeitung <strong>Zahlungstoleranz ändern</strong> mit einem Wert im Feld <strong>Währungscode</strong> aufrufen.  </p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Zum Erhalten einer Zahlungstoleranzwarnung jedes Mal, wenn Sie einen Ausgleich innerhalb der Toleranz buchen, müssen Sie die Zahlungstoleranzwarnung aktivieren. Weitere Informationen finden Sie unter <a href="finance-payment-tolerance-and-payment-discount-tolerance.html#to-enable-or-disable-payment-tolerance-warnings">So aktivieren oder deaktivieren Sie die Zahlungstoleranzwarnung</a>.  </p>
+<p>Um die Toleranz für einen Debitor oder Kreditor zu deaktivieren, müssen Sie auf der Debitoren- oder Kreditorenkarte Toleranzen blockieren. Weitere Informationen finden unter <a href="finance-payment-tolerance-and-payment-discount-tolerance.html#to-block-payment-tolerance-for-customers">Zahlungstoleranz für Debitoren sperren</a>.  </p>
+<p>Wenn Sie eine Toleranz einrichten, prüft Business Central auch, ob es offene Posten gibt, und berechnet die Toleranz für diese Posten.</p>
+</div>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Wenn Sie das Feld <strong>An Zahlungsrabatt anpassen</strong> auf der Seite <strong>Einrichtung der MwSt.-Buchung</strong> aktivieren, gilt der MwSt.-Betrag als es bezieht sich auf die Beträge <strong>Zahlungstoleranzen</strong> und <strong>Zahlungsrabatte</strong> , und die Mehrwertsteuer wird für beide Transaktionsbeträge reduziert, wenn Sie existieren. Das System kann nicht so konfiguriert werden, dass es die Mehrwertsteuersenkung nur für eine Transaktionsart verwendet.  </p>
+</div>
+<h2 id="to-enable-or-disable-payment-tolerance-warnings">So aktivieren oder deaktivieren Sie die Zahlungstoleranzwarnungen</h2>
+<p>Die Zahlungstoleranzwarnung erscheint, wenn Sie einen Ausgleich mit einem Saldo innerhalb der erlaubten Toleranz buchen. Sie können dann wählen, wie Sie den Saldo buchen und dokumentieren wollen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Hauptbuchhaltung Einrichtung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Aktivieren Sie auf der Seite <strong>Finanzbuchhaltung einrichten</strong> im Inforegister <strong>Anwendung</strong> den Schalter <strong>Zahlungstoleranzwarnung</strong>, um die Warnung zu aktivieren. Deaktivieren Sie den Schalter, um die Warnung zu deaktivieren.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Standardoption der Seite <strong>Zahlungstoleranzwarnung</strong> ist <strong>Restbetrag offen lassen</strong>. Die Standardoption der Seite <strong>Skontotoleranzwarnung</strong> ist <strong>Überzogenes Skonto nicht akzeptieren</strong>.</p>
+</div>
+<h2 id="to-block-payment-tolerance-for-customers">Zahlungstoleranz für Debitoren sperren:</h2>
+<p>Die Standardeinrichtung für die Zahlungstoleranz ist zulässig. Sperren Sie auf der entsprechenden Debitoren- oder Kreditorenkarte die Toleranz, um eine Zahlungstoleranz für einen bestimmten Kreditor oder Debitor zu sperren. Anhand der folgenden Schritte wird die Vorgehensweise für einen Debitor beschrieben: Die Schritte sind für einen Kreditor ähnlich.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kunde</strong> oder <strong>Kreditor</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Aktivieren Sie auf dem Inforegister <strong>Zahlungen</strong> das Kontrollkästchen <strong>Zahlungstoleranz sperren</strong>.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Sind für einen Debitor oder Kreditor offene Posten vorhanden, müssen Sie zuerst die Zahlungstoleranz aus den offenen Posten entfernen.</p>
+</div>
+<h2 id="example-1---tolerance-calculations-for-a-single-document">Beispiel 1 – Toleranzberechnungen für einen einzelnen Beleg</h2>
+<p>Im Folgenden wird anhand von Beispielszenarien gezeigt, welche Toleranzberechnungen und Buchungen sich in verschiedenen Situationen ergeben.  </p>
+<p>Die Seite <strong>Sachkontoeinrichtung</strong> enthält die folgende Einrichtung:</p>
+<ul>
+<li>Skontozahlungstoleranzperiode:    5T  </li>
+<li>Maximale Zahlungstoleranz. 5  </li>
+</ul>
+<p>Szenarien mit Alternative A oder B bedeuten:  </p>
+<ul>
+<li><strong>A</strong> – In diesem Fall wurde die Skontotoleranzwarnung ausgeschaltet ODER der Benutzer hat die Warnung aktiviert und sich entschieden, den verspäteten Skonto zu erlauben (d. h. den Saldo als Zahlungstoleranz zu buchen).  </li>
+<li><strong>B</strong> – In diesem Fall hat der Benutzer die Warnung aktiviert und sich entschieden, den überzogenen Skonto nicht zu erlauben (d. h. den Saldo als Restbetrag zu belassen).  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>—</th>
+<th>Inv.</th>
+<th>Skonto</th>
+<th>Max. Zahlungstoleranz</th>
+<th>Skontodatum</th>
+<th>Skontotoleranz – Datum</th>
+<th>Zahlungsdatum</th>
+<th>Zahlung</th>
+<th>Toleranzart</th>
+<th>Alle Posten geschlossen</th>
+<th>Skontotoleranz GL/CL</th>
+<th>Maximale Zahlungstoleranz GL/CL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>&lt;=15.01.03</td>
+<td>985</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>1,000</strong></td>
+<td><strong>20</strong></td>
+<td><strong>5</strong></td>
+<td><strong>15.01.2003</strong></td>
+<td><strong>01/20/03</strong></td>
+<td><strong>&lt;=15.01.03</strong></td>
+<td><strong>980</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>a</td>
+<td>&lt;=15.01.03</td>
+<td>975</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4A</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>1005</td>
+<td>PaymentDiscountTolerance</td>
+<td>Nein, 25 in der Zahlung</td>
+<td>20/-20</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5A</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>1000</td>
+<td>PaymentDiscountTolerance</td>
+<td>Nein, 20 in der Zahlung</td>
+<td>20/-20</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6A</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>995</td>
+<td>PaymentDiscountTolerance</td>
+<td>Nein, 15 in der Zahlung</td>
+<td>20/-20</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4B</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>1005</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>-5</td>
+</tr>
+<tr>
+<td><strong>5B</strong></td>
+<td><strong>1,000</strong></td>
+<td><strong>20</strong></td>
+<td><strong>5</strong></td>
+<td><strong>15.01.2003</strong></td>
+<td><strong>01/20/03</strong></td>
+<td><strong>16.01.2003 – 20.01.03</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>6B</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>995</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>985</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>20/-20</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>980</td>
+<td>PaymentDiscountTolerance</td>
+<td>Ja</td>
+<td>20/-20</td>
+<td>0</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>16.01.2003 – 20.01.03</td>
+<td>975</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>20/-20</td>
+<td>5</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>&gt;20.01.03</td>
+<td>1005</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>-5</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>1,000</strong></td>
+<td><strong>20</strong></td>
+<td><strong>5</strong></td>
+<td><strong>15.01.2003</strong></td>
+<td><strong>01/20/03</strong></td>
+<td><strong>&gt;20.01.03</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>&gt;20.01.03</td>
+<td>995</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>&gt;20.01.03</td>
+<td>985</td>
+<td>&quot;Keine&quot;</td>
+<td>Nein, 15 in der Rech.</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>&gt;20.01.03</td>
+<td>980</td>
+<td>&quot;Keine&quot;</td>
+<td>Nein, 20 in der Rech.</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1.000</td>
+<td>20</td>
+<td>5</td>
+<td>15.01.2003</td>
+<td>01/20/03</td>
+<td>&gt;20.01.03</td>
+<td>975</td>
+<td>&quot;Keine&quot;</td>
+<td>Nein, 25 in der Rech.</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment-range-diagrams">Zahlungsbereichsdiagramme</h3>
+<p>Bezugnehmend auf das Szenario, sind die Zahlungszeiträume wie folgt:  </p>
+<h4 id="1-payment-date-011503-scenarios-1-3">(1) Zahlungsdatum &lt;=15.01.03 (Szenarien 1-3)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p><img src="media/singlePmtTolRules_Pre1503.gif" alt="Einzelzahlungstoleranzregeln 1." title="Einmahlzahlungstoleranz-Regeln 1">  </p>
+<p>(1) Fällt die Zahlung in diesen Zeitraum, können alle Ausgleichsposten mit oder ohne Toleranz geschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.  </p>
+<h4 id="2-payment-date-is-between-011603-and-012003-scenarios-4-9">(2) Zahlung zwischen dem 16.01.2003 und 20.01.2003 (Szenarien 4-9)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p><img src="media/singlePmtTolRules_GracePeriod.gif" alt="Einzelzahlungstoleranzregeln 2." title="Einmahlzahlungstoleranz-Regeln 2">  </p>
+<p>(1) Wenn die Zahlung in diese Bereiche fällt, können alle Anwendungseinträge mit oder ohne Toleranz abgeschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.  </p>
+<h4 id="3-payment-date-is-after-012003-scenarios-10-15">(3) Zahlungsdatum liegt nach dem 20.01.03 (Szenarien 10-15)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p><img src="media/singlePmtTolRules_Post0120.gif" alt="Einzelzahlungstoleranzregeln 3." title="Einmalzahlungstoleranz-Regeln 3">  </p>
+<p>(1) Wenn die Zahlung in diese Bereiche fällt, können alle Anwendungseinträge mit oder ohne Toleranz abgeschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.  </p>
+<h2 id="example-2---tolerance-calculations-for-multiple-documents">Beispiel 2 – Toleranzberechnungen für mehrere Belege</h2>
+<p>Im Folgenden wird anhand von Beispielszenarien gezeigt, welche Toleranzberechnungen und Buchungen sich in verschiedenen Situationen ergeben. Die Beispiele beschränken sich auf die Szenarien, die dazu führen, dass alle Posten geschlossen werden.  </p>
+<p>Die Seite <strong>Sachkontoeinrichtung</strong> enthält die folgende Einrichtung:</p>
+<ul>
+<li>Skontotoleranzperiode:     5T  </li>
+<li>Maximale Zahlungstoleranz                 5  </li>
+</ul>
+<p>Szenarien mit Alternative A, B, C oder D bedeuten Folgendes:  </p>
+<ul>
+<li><strong>A</strong> – In diesem Fall wurde die Skontotoleranzwarnung ausgeschaltet oder der Benutzer hat die Warnung aktiviert und sich entschieden, den verspäteten Skonto in jeder Rechnung zu erlauben (d. h. als Toleranz auszubuchen).  </li>
+<li><strong>B</strong> – In diesem Fall hat der Benutzer die Warnung aktiviert und sich entschieden, den verspäteten Skonto in keiner Rechnung zu erlauben.  </li>
+<li><strong>C</strong> – In diesem Fall hat der Benutzer die Warnung aktiviert und sich entschieden, den verspäteten Skonto in der ersten Rechnung zu erlauben, in der zweiten jedoch nicht.  </li>
+<li><strong>D</strong> – In diesem Fall hat der Benutzer die Warnung aktiviert und sich entschieden, den verspäteten Skonto in der ersten Rechnung nicht zu erlauben, jedoch in der zweiten.  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>—</th>
+<th>Inv.</th>
+<th>Skonto</th>
+<th>Max. Zahlungstoleranz</th>
+<th>Skontodatum</th>
+<th>Skontotoleranz – Datum</th>
+<th>Zahlungsdatum</th>
+<th>Zahlung</th>
+<th>Toleranzart</th>
+<th>Alle Posten geschlossen</th>
+<th>Skontotoleranz GL/CL</th>
+<th>Maximale Zahlungstoleranz GL/CL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>&lt;=15.01.03</td>
+<td>1920</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>-5 <br>-5</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>1,000</strong> <br><strong>1,000</strong></td>
+<td><strong>60</strong> <br><strong>30</strong></td>
+<td><strong>5</strong> <br><strong>5</strong></td>
+<td><strong>15.01.2003</strong> <br><strong>01/17/03</strong></td>
+<td><strong>01/20/03</strong> <br><strong>01/22/03</strong></td>
+<td><strong>&lt;=15.01.03</strong></td>
+<td><strong>1910</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong><br><br> <strong>0</strong></td>
+<td>0 <br>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>&lt;=15.01.03</td>
+<td>1900</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>5 <br>5</td>
+</tr>
+<tr>
+<td>4B</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/16/03 01/17/03</td>
+<td>1980</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>-5<br><br> -5</td>
+</tr>
+<tr>
+<td><strong>5B</strong></td>
+<td><strong>1,000</strong> <br><strong>1,000</strong></td>
+<td><strong>60</strong> <br><strong>30</strong></td>
+<td><strong>5</strong> <br><strong>5</strong></td>
+<td><strong>15.01.2003</strong> <br><strong>01/17/03</strong></td>
+<td><strong>01/20/03</strong> <br><strong>01/22/03</strong></td>
+<td><strong>01/16/03 01/17/03</strong></td>
+<td><strong>1970</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong><br><br> <strong>0</strong></td>
+<td><strong>0</strong><br><br> <strong>0</strong></td>
+</tr>
+<tr>
+<td>6B</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/16/03 01/17/03</td>
+<td>1960</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>5<br><br> 5</td>
+</tr>
+<tr>
+<td>7A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/16/03 01/17/03</td>
+<td>1920</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>60/60<br><br> 0/0</td>
+<td>-5 <br>-5</td>
+</tr>
+<tr>
+<td>8A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/16/03 01/17/03</td>
+<td>1910</td>
+<td>PaymentDiscountTolerance</td>
+<td>Ja</td>
+<td>60/60<br><br> 0/0</td>
+<td>0 <br>0</td>
+</tr>
+<tr>
+<td>9A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/16/03 01/17/03</td>
+<td>1900</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>60/60</td>
+<td>5 <br>5</td>
+</tr>
+<tr>
+<td>10B</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>2010</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>-5<br><br> -5</td>
+</tr>
+<tr>
+<td><strong>11B</strong></td>
+<td><strong>1,000</strong> <br><strong>1,000</strong></td>
+<td><strong>60</strong> <br><strong>30</strong></td>
+<td><strong>5</strong> <br><strong>5</strong></td>
+<td><strong>15.01.2003</strong> <br><strong>01/17/03</strong></td>
+<td><strong>01/20/03</strong> <br><strong>01/22/03</strong></td>
+<td><strong>01/18/03 01/20/03</strong></td>
+<td><strong>2000</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong><br><br> <strong>0</strong></td>
+<td><strong>0</strong><br><br> <strong>0</strong></td>
+</tr>
+<tr>
+<td>12B</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1990</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>5<br><br> 5</td>
+</tr>
+<tr>
+<td>13D</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1980</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>0/0<br><br> 30/-30</td>
+<td>-5 <br>-5</td>
+</tr>
+<tr>
+<td>14T</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1970</td>
+<td>PaymentDiscountTolerance</td>
+<td>Ja</td>
+<td>0/0<br><br> 30/-30</td>
+<td>0 <br>0</td>
+</tr>
+<tr>
+<td>15T</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1960</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>0/0<br><br> 30/-30</td>
+<td>5 <br>5</td>
+</tr>
+<tr>
+<td>16T</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1950</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>60/-60<br><br> 0/0</td>
+<td>-5 <br>-5</td>
+</tr>
+<tr>
+<td>17T</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1940</td>
+<td>PaymentDiscountTolerance</td>
+<td>Ja</td>
+<td>60/-60<br><br> 0/0</td>
+<td>0 <br>0</td>
+</tr>
+<tr>
+<td>18T</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1930</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>60/-60<br><br> 0/0</td>
+<td>5 <br>5</td>
+</tr>
+<tr>
+<td>19A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1920</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>60/-60<br><br> 30/-30</td>
+<td>-5 <br>-5</td>
+</tr>
+<tr>
+<td>20A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1910</td>
+<td>PaymentDiscountTolerance</td>
+<td>Ja</td>
+<td>60/-60<br><br> 30/-30</td>
+<td>0 <br>0</td>
+</tr>
+<tr>
+<td>21A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/18/03 01/20/03</td>
+<td>1900</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>60/-60<br><br> 30/-30</td>
+<td>5 <br>5</td>
+</tr>
+<tr>
+<td>22B</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/21/03 01/22/03</td>
+<td>2010</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>-5<br><br> -5</td>
+</tr>
+<tr>
+<td><strong>23B</strong></td>
+<td><strong>1,000</strong> <br><strong>1,000</strong></td>
+<td><strong>60</strong> <br><strong>30</strong></td>
+<td><strong>5</strong> <br><strong>5</strong></td>
+<td><strong>15.01.2003</strong> <br><strong>01/17/03</strong></td>
+<td><strong>01/20/03</strong> <br><strong>01/22/03</strong></td>
+<td><strong>01/21/03 01/22/03</strong></td>
+<td><strong>2000</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong><br><br> <strong>0</strong></td>
+<td><strong>0</strong><br><br> <strong>0</strong></td>
+</tr>
+<tr>
+<td>24B</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/21/03 01/22/03</td>
+<td>1990</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0<br><br> 0</td>
+<td>5<br><br> 5</td>
+</tr>
+<tr>
+<td>25A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/21/03 01/22/03</td>
+<td>1980</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>0/0<br><br> 30/30</td>
+<td>-5 <br>-5</td>
+</tr>
+<tr>
+<td>26A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/21/03 01/22/03</td>
+<td>1970</td>
+<td>PaymentDiscountTolerance</td>
+<td>Ja</td>
+<td>0/0<br><br> 30/30</td>
+<td>0 <br>0</td>
+</tr>
+<tr>
+<td>27A</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>01/21/03 01/22/03</td>
+<td>1960</td>
+<td>PaymentDiscountTolerance &amp; PaymentTolerance</td>
+<td>Ja</td>
+<td>0/0<br><br> 30/30</td>
+<td>5 <br>5</td>
+</tr>
+<tr>
+<td>28</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>&gt;22.01.03</td>
+<td>2010</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>-5</td>
+</tr>
+<tr>
+<td><strong>29</strong></td>
+<td><strong>1,000</strong> <br><strong>1,000</strong></td>
+<td><strong>60</strong> <br><strong>30</strong></td>
+<td><strong>5</strong> <br><strong>5</strong></td>
+<td><strong>15.01.2003</strong> <br><strong>01/17/03</strong></td>
+<td><strong>01/20/03</strong> <br><strong>01/22/03</strong></td>
+<td><strong>&gt;22.01.03</strong></td>
+<td><strong>2000</strong></td>
+<td><strong>Keine</strong></td>
+<td><strong>Ja</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>30</td>
+<td>1.000 <br>1.000</td>
+<td>60 <br>30</td>
+<td>5 <br>5</td>
+<td>15.01.2003 <br>17.01.2003</td>
+<td>01/20/03 <br>01/22/03</td>
+<td>&gt;22.01.03</td>
+<td>1990</td>
+<td>PaymentTolerance</td>
+<td>Ja</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment-range-diagrams-1">Zahlungsbereichsdiagramme</h3>
+<p>Bezugnehmend auf das Szenario, sind die Zahlungszeiträume wie folgt:  </p>
+<h4 id="1-payment-date-011503-scenarios-1-3-1">(1) Zahlungsdatum &lt;=15.01.03 (Szenarien 1-3)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/multiplePmtTolRules_Pre1503.gif&quot; alt-text=&quot;Mehrfachzahlungstoleranz-Regeln 1A&quot;:::</p>
+<p>(1) Fällt die Zahlung in diesen Zeitraum, können alle Ausgleichsposten mit oder ohne Toleranz geschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.  </p>
+<h4 id="2-payment-date-is-between-011603-and-011703-scenarios-4-9">(2) Zahlung zwischen dem 16.01.2003 und 17.01.2003 (Szenarien 4-9)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/multiplePmtTolRules_GracePeriodInv1-2.gif&quot; alt-text=&quot;Mehrfachzahlungstoleranz-Regeln 2&quot;:::</p>
+<p>(1) Fällt die Zahlung in diesen Zeitraum, können alle Ausgleichsposten mit oder ohne Toleranz geschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.  </p>
+<h4 id="3-payment-date-is-between-011803-and-012003-scenarios-10-21">(3) Zahlung zwischen dem 18.01.2003 und 20.01.2003 (Szenarien 10-21)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/multiplePmtTolRules_GracePeriodInv1.gif&quot; alt-text=&quot;Mehrfachzahlungstoleranz-Regeln 3&quot;:::</p>
+<p>(1) Fällt die Zahlung in diesen Zeitraum, können alle Ausgleichsposten mit oder ohne Toleranz geschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.  </p>
+<h4 id="4-payment-date-is-between-012103-and-012203-scenarios-22-27">(4) Zahlung zwischen dem 21.01.03 und 22.01.03 (Szenarien 22-27)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/multiplePmtTolRules_GracePeriodInv2.gif&quot; alt-text=&quot;Mehrfachzahlungstoleranz-Regeln 4&quot;:::</p>
+<p>(1) Fällt die Zahlung in diesen Zeitraum, können alle Ausgleichsposten mit oder ohne Toleranz geschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.  </p>
+<h4 id="5-payment-date-is-after-012203-scenarios-28-30">(5) Zahlungsdatum liegt nach dem 22.01.2003 (Szenarien 28-30)</h4>
+<p>Restbetrag gemäß  </p>
+<p>Normale Ausgleichsvorschriften  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/multiplePmtTolRules_Post0122.gif&quot; alt-text=&quot;Mehrfachzahlungstoleranz-Regeln 5&quot;:::</p>
+<p>(1) Fällt die Zahlung in diesen Zeitraum, können alle Ausgleichsposten mit oder ohne Toleranz geschlossen werden.  </p>
+<p>(2) Fällt die Zahlung in diesen Bereich, können nicht alle Posten geschlossen werden, auch nicht mit Toleranz.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance.html">Finanzen</a><br><a href="finance-setup-finance.html">Finanzen einrichten</a><br><a href="receivables-manage-receivables.html">Verwalten von Forderungen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,876 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Setting up Goods and Service Tax </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Setting up Goods and Service Tax ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="setting-up-goods-and-services-tax">Setting Up Goods and Services Tax</h1>
+
+<p>Business Central has included GST Feature to Indian Localization.</p>
+<p><strong>“Goods and Services Tax”</strong> means any tax on supply of goods, or services or both except taxes on the supply of the alcoholic liquor for human consumption.</p>
+<p>It is a destination-based tax on consumption of goods and services. It is levied at all stages from manufacture up to final consumption with credit of taxes paid at previous stages available as setoff. Briefly, only value addition is taxed and burden of tax is to be borne by the final consumer.</p>
+<p>GST is a comprehensive tax levy on manufacture, sale and consumption of goods and services at a national/regional level. It has subsume indirect taxes like excise duty, countervailing duty and service tax, as also state levies like Value Added Tax, Octroi, Entry Tax, Luxury Tax, etc.</p>
+<h2 id="setting-up-goods-and-service-tax">Setting Up Goods and Service Tax</h2>
+<p>GST has two different types of setups, Automatic and Manual.</p>
+<p>Below is the list of Automatic Setups, that will be pre-configured with the help of Tax Engine</p>
+<ul>
+<li>Tax Types</li>
+<li>Component</li>
+<li>Rate Setup</li>
+<li>Attributes</li>
+</ul>
+<p>For more information about Automatic Setup, see <strong>Tax Engine</strong> information.</p>
+<p>Below is the list of Manual Setups, that are required to be configured manually</p>
+<ul>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-rates">GST Rate</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-registration-number">GST Registration Number</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-tax-accounting-period">Tax Accounting Period</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-states">States</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-groups">GST Groups</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-hsnsac">HSN/SAC</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-posting-setup">GST Posting Setup</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-company-information">GST on Company Information</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-location">GST on Location</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-general-ledger-setup">GST on General Ledger Setup</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-purchase-and-payable-setup">GST on Purchase and Payable Setup</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-source-code-setup">GST on Source Code Setup</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-masters">GST on Masters</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-vendor">GST on Vendor</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-vendor-order-address">GST on Vendor Order Address</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-customer">GST on Customer</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-customer-ship-to-addresses">GST on Customer Ship to Addresses</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-service-cost">GST on Service Cost</a></li>
+<li><a href="GST-001-Basic-Setup.html#to-set-up-gst-on-bank-account">GST on Bank Account</a></li>
+</ul>
+<h2 id="to-set-up-gst-rates">To set up GST rates</h2>
+<p>Rate of GST is defined in combination of HSN/SAC, group and states.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Tax Type</strong> -&gt; <strong>GST</strong> -&gt; <strong>Action</strong> -&gt; <strong>Tax Rates</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HSN/SAC</strong></td>
+<td>Specifies the HSN/SAC code.</td>
+</tr>
+<tr>
+<td><strong>GST Group Code</strong></td>
+<td>Specifies the GST group code.</td>
+</tr>
+<tr>
+<td><strong>From State</strong></td>
+<td>Specifies the vendor state code.</td>
+</tr>
+<tr>
+<td><strong>Location State Code</strong></td>
+<td>Specifies the location state code.</td>
+</tr>
+<tr>
+<td><strong>Date From</strong></td>
+<td>Specifies the starting date.</td>
+</tr>
+<tr>
+<td><strong>Date To</strong></td>
+<td>Specifies the ending date.</td>
+</tr>
+<tr>
+<td><strong>SGST %</strong></td>
+<td>Specifies the SGST rate.</td>
+</tr>
+<tr>
+<td><strong>CGST %</strong></td>
+<td>Specifies the CGST rate.</td>
+</tr>
+<tr>
+<td><strong>IGST %</strong></td>
+<td>Specifies the IGST rate.</td>
+</tr>
+<tr>
+<td><strong>Cess %</strong></td>
+<td>Specifies the Cess rate.</td>
+</tr>
+<tr>
+<td><strong>KFC %</strong></td>
+<td>Specifies the KFC rate.</td>
+</tr>
+<tr>
+<td><strong>POS Out of India</strong></td>
+<td>Specifies whether <strong>POS out of India</strong> functionality is activated or not.</td>
+</tr>
+<tr>
+<td><strong>POS as Vendor State</strong></td>
+<td>Specifies whether <strong>POS as Vendor State</strong> functionality is activated or not.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-registration-number">To set up GST registration number</h2>
+<p>Registration Number under GST is called Goods and Service Tax Payer Identification Number (GSTIN). It is a state-wise PAN based 15-digit number.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>GST Registration Nos.</strong>, and then choose the related link. </li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State Code</strong></td>
+<td>Specify the relevant State Code of the company for which registration number has been assigned.</td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td>Enter the valid registration number provided by authority.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Specify the description of the registration number.</td>
+</tr>
+<tr>
+<td><strong>Input Service Distributor</strong></td>
+<td>Specifies whether the registration belongs to an input service distributor nor not.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>State Code (GST Reg. No.) and first two digits of GST Registration Number should be same.</p>
+</div>
+<h2 id="to-set-up-tax-accounting-period">To set up tax accounting period</h2>
+<p>Accounting Periods and sub-periods are created and closed here. Under GST, Fiscal year would be normally from 1st April to 31st March and Sub-Accounting Periods are months.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Tax Accounting Period</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table. </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tax Type Code</strong></td>
+<td>Specify the type as <strong>GST</strong> to identify the accounting period.</td>
+</tr>
+<tr>
+<td><strong>Starting Date</strong></td>
+<td>Enter a date to specify the beginning of the period.</td>
+</tr>
+<tr>
+<td><strong>Ending Date</strong></td>
+<td>Enter the last date to specify the end of the period.</td>
+</tr>
+<tr>
+<td><strong>Financial Year</strong></td>
+<td>Specify the Financial Year of the period.</td>
+</tr>
+<tr>
+<td><strong>Quarter</strong></td>
+<td>Specify the different quarters of the period.</td>
+</tr>
+<tr>
+<td><strong>Credit Memo Locking Date</strong></td>
+<td>Specify the last date by which credit memo can be entered for this period.</td>
+</tr>
+<tr>
+<td><strong>Annual Return Period</strong></td>
+<td>Specify the last date by which annual return for GST has to be filed for this period.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-states">To set up States</h2>
+<p>List of State codes to be defined with relevant GST registration number state code and eTDS/TCS state code.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>States</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>Specifies the state code.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Specifies the name of the state.</td>
+</tr>
+<tr>
+<td><strong>State Code (GST Reg. No.)</strong></td>
+<td>Specifies the code for GST registration number.</td>
+</tr>
+<tr>
+<td><strong>State Code for eTDS/TCS</strong></td>
+<td>Specifies the code for eTDS/TCS.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-groups">To set up GST groups</h2>
+<p>List of GST groups need to be defined, group can be of two types <strong>Goods</strong> or <strong>Service</strong>.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>GST Groups</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table. </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>Specifies the group code.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Specifies the name of the group.</td>
+</tr>
+<tr>
+<td><strong>GST Group Type</strong></td>
+<td>Specifies whether the group is defined as goods or service.</td>
+</tr>
+<tr>
+<td><strong>GST Place of Supply</strong></td>
+<td>Specifies GST place of supply of the GST group.</td>
+</tr>
+<tr>
+<td><strong>Reverse Charge</strong></td>
+<td>Specifies whether the group is defined as reverse charge or not.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-hsnsac">To set up HSN/SAC</h2>
+<p>List of HSN/SAC codes against relevant GST groups need to be defined.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>HSN/SAC</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table. </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GST Group Code</strong></td>
+<td>Specifies the GST group code.</td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td>Specifies the HSN/SAC code.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Specifies the description of the HSN/SAC code.</td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td>Specifies the type of the HSN/SAC code, e.g HSN, SAC.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-posting-setup">To set up GST posting setup</h2>
+<p>General Ledger Account for each component and state combination is defined state-wise.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>GST Posting Setup</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State Code</strong></td>
+<td>Specifies the state code of company that have valid GST registration number.</td>
+</tr>
+<tr>
+<td><strong>GST Component Code</strong></td>
+<td>Specifies the relevant component code.</td>
+</tr>
+<tr>
+<td><strong>Receivable Account</strong></td>
+<td>Specifies the general ledger account for which GST receivable amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>Payable Account</strong></td>
+<td>Specifies the general ledger account for which GST Payable amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>Receivable Account (Interim)</strong></td>
+<td>Specifies the general ledger account for which GST receivable interim amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>Payable Account (Interim)</strong></td>
+<td>Specifies the general ledger account for which GST payable interim amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>Expense Account</strong></td>
+<td>Specifies the general ledger account for which GST expense amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>Refund Account</strong></td>
+<td>Specifies the general ledger account for which GST refund amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>Receivable Acc. Interim (Dist.)</strong></td>
+<td>Specifies the general ledger account for which GST distribution for receivable interim amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>Receivable Acc (Dist.)</strong></td>
+<td>Specifies the general ledger account for which GST distribution receivable amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>GST Credit Account</strong></td>
+<td>Specifies the general ledger account for which GST credit amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>GST TDS Receivable Account</strong></td>
+<td>Specifies the general ledger account for which GST TDS receivable amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>GST TCS Receivable Account</strong></td>
+<td>Specifies the general ledger account for which GST TCS receivable amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>GST TCS Payable Account</strong></td>
+<td>Specifies the general ledger account for which GST TCS payable amount for this state and component is to be posted.</td>
+</tr>
+<tr>
+<td><strong>IGST Payable A/c (Import))</strong></td>
+<td>Specifies the general ledger account for which GST import payable amount for this state and component is to be posted.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-company-information">To set up GST on company information</h2>
+<p>Legal entity&#39;s GST registration number needs to be defined.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Company Information</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table. </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State Code</strong></td>
+<td>Specifies the state code of the company address.</td>
+</tr>
+<tr>
+<td><strong>GST Registration No.</strong></td>
+<td>Specifies the registration number of GST for the specified address.</td>
+</tr>
+<tr>
+<td><strong>ARN No.</strong></td>
+<td>Capture the ARN No. only when GST registration number is not available.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>State Code (GST Reg. No.) and first two digits of GST Registration Number should be same.</p>
+</div>
+<h2 id="to-set-up-gst-on-location">To set up GST on location</h2>
+<p>GST registration number can be assigned to company for their multiple locations. These registration numbers can be defined in the location master.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Locations</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table. </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State Code</strong></td>
+<td>Specifies the state code of the location address.</td>
+</tr>
+<tr>
+<td><strong>GST Registration No.</strong></td>
+<td>Specifies the registration number of GST for the specified address.</td>
+</tr>
+<tr>
+<td><strong>Location ARN No.</strong></td>
+<td>Capture the ARN No. only when GST registration number is not available.</td>
+</tr>
+<tr>
+<td><strong>GST Input Service Distributor</strong></td>
+<td>Specifies whether the location is registered as a input service distributor or not.</td>
+</tr>
+<tr>
+<td><strong>Bonded warehouse</strong></td>
+<td>Specifies whether the location will be treated as bonded warehouse or not.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>State Code (GST Reg. No.) and first two digits of GST Registration Number should be same.</p>
+</div>
+<h2 id="to-set-up-gst-on-general-ledger-setup">To set up GST on general ledger setup</h2>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>General Ledger Setup</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table. </p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State Code - Kerala</strong></td>
+<td>Specifies state code Kerala.</td>
+</tr>
+<tr>
+<td><strong>GST Distribution Nos.</strong></td>
+<td>Specifies the number series code for distribution document.</td>
+</tr>
+<tr>
+<td><strong>GST Credit Adj. Jnl Nos.</strong></td>
+<td>Specifies the number series code for credit adjustment journal.</td>
+</tr>
+<tr>
+<td><strong>GST Settlement Nos.</strong></td>
+<td>Specifies the number series code for settlement document.</td>
+</tr>
+<tr>
+<td><strong>GST Recon. Tolerance</strong></td>
+<td>Specifies the tolerance value to be considered for GST reconciliation.</td>
+</tr>
+<tr>
+<td><strong>Custom Duty Component Code</strong></td>
+<td>Specifies the custom duty component code.</td>
+</tr>
+<tr>
+<td><strong>GST Opening Account</strong></td>
+<td>Specifies the account which will be used for opening transaction of GST.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-purchase-and-payable-setup">To set up GST on purchase and payable setup</h2>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Purchase &amp; Payable Setup</strong>, and then choose the related link.</li>
+<li>Enter exemption&#39;s start and end date for reverse charge for unregistered vendor in <strong>RCM Exempt Start Date (Unreg)</strong> and <strong>RCM Exempt End Date (Unreg)</strong></li>
+</ol>
+<h2 id="to-set-up-gst-on-source-code-setup">To set up GST on source code setup</h2>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Source Code Setup</strong>, and then choose the related link.</li>
+<li>Fill in source codes for different types of GST transactions. For <strong>Credit Adjustment Journal</strong>, <strong>Settlement</strong>, <strong>Distribution</strong>, <strong>Liability Adjustment</strong>, <strong>Adjustment Journal</strong>.</li>
+</ol>
+<h2 id="to-set-up-gst-on-masters">To set up GST on masters</h2>
+<p>Below is the list of masters requiring setup of GST</p>
+<ul>
+<li>Item</li>
+<li>Fixed Asset</li>
+<li>G/L Account </li>
+<li>Resource</li>
+<li>Item Charge</li>
+</ul>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Items</strong>, <strong>Fixed Asset</strong>, <strong>Chart of Account</strong> -&gt; <strong>G/L Account</strong>, <strong>Resources</strong> and <strong>Item Charges</strong> and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GST Group Code</strong></td>
+<td>Specifies the GST Group code that is relevant for the Item, Fixed asset, G/L Account, Resources or Item Charges. GST Group codes created in GST Group Setup appear as dropdown.</td>
+</tr>
+<tr>
+<td><strong>GST Credit</strong></td>
+<td>Specifies that Input Tax Credit can be &#39;Availment&#39; or &#39;Non-Availment&#39;. This field by default displays &#39;Availment&#39;. If credit cannot be availed on any Item, Fixed Asset, G/L Account, Resources and Item Charge, then &#39;Non-Availment&#39; shall be selected manually from the drop down.</td>
+</tr>
+<tr>
+<td><strong>HSN/SAC Code</strong></td>
+<td>Specifies HSN/SAC Code for the GST Group selected in GST Group code field.</td>
+</tr>
+<tr>
+<td><strong>Exempted</strong></td>
+<td>This field is checked if the item is exempted from payment of tax.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>For Price Inclusive of Tax setup go to <strong>Items</strong> -&gt; <strong>Prices &amp; Discount</strong> -&gt; <strong>Sales Price</strong> and fill the following information</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unit Price</strong></td>
+<td>Specifies the unit price of the item.</td>
+</tr>
+<tr>
+<td><strong>Price Inclusive of Tax</strong></td>
+<td>Specifies whether the unit price of the item is inclusive of tax or not.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-vendor">To set up GST on vendor</h2>
+<ol>
+<li><p>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Vendor</strong>, and then choose the related link.</p>
+</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GST Vendor Type</strong></td>
+<td>Vendor type can be Registered, Composite, Unregistered, Import, Exempted, SEZ. It has to be selected from the dropdown.</td>
+</tr>
+<tr>
+<td><strong>GST Registration No.</strong></td>
+<td>Enter Registration No. of vendor. Registration number is mandatory if GST Vendor Type is Registered. Registration No. is of 15-digits.</td>
+</tr>
+<tr>
+<td><strong>Associated Enterprises</strong></td>
+<td>This field is activated only if GST Vendor Type is Import. This can be used for an import transaction of services or goods from sister concerns located outside India.</td>
+</tr>
+<tr>
+<td><strong>Aggregate Turnover</strong></td>
+<td>Applicable only if GST Vendor Type is Unregistered. The available options are: More than 20 lakh, Less than 20 lakh. System will allow interstate supply of services if Less than 20 lakh is selected in this field for unregistered vendor.</td>
+</tr>
+<tr>
+<td><strong>ARN No.</strong></td>
+<td>Capture the Vendor ARN No. only when GST registration number is not available.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-vendor-order-address">To set up GST on vendor order address</h2>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Vendor</strong> &gt; <strong>Order Addresses</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State</strong></td>
+<td>State code can be selected from dropdown for this field. appropriate State code has to be selected.</td>
+</tr>
+<tr>
+<td><strong>GST Registration No.</strong></td>
+<td>Enter Registration No. of vendor. Registration number is mandatory if GST Vendor Type is Registered. Registration No. is of 15-digits.</td>
+</tr>
+<tr>
+<td><strong>ARN No.</strong></td>
+<td>Capture the Vendor ARN No. only when GST registration number is not available.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-customer">To set up GST on customer</h2>
+<ol>
+<li><p>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Customers</strong>, and then choose the related link.</p>
+</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GST Customer Type</strong></td>
+<td>Customer type can be Registered, Unregistered, Export, Deemed Export, SEZ Unit, SEZ Development or Exempted. Select the appropriate Customer type from the dropdown.</td>
+</tr>
+<tr>
+<td><strong>GST Registration Type</strong></td>
+<td>Registration type can be GSTIN (Goods and Services Tax Payer Identification Number), UID (Unique Identification Number), and GID (Government Identification Number). Appropriate type shall be selected from the dropdown.</td>
+</tr>
+<tr>
+<td><strong>GST Registration No.</strong></td>
+<td>Enter the 15-digit GST Registration Number. Registration number is mandatory if GST Customer Type is Registered or Deemed Export.</td>
+</tr>
+<tr>
+<td><strong>E-Commerce Operator</strong></td>
+<td>This field is activated, if sales are done through an e-commerce operator.</td>
+</tr>
+<tr>
+<td><strong>ARN No.</strong></td>
+<td>Capture the Customer ARN No. only when GST registration number is not available.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-customer-ship-to-addresses">To set up GST on customer ship to addresses</h2>
+<ol>
+<li><p>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Customers</strong> &gt; <strong>Ship to Addresses</strong>, and then choose the related link.</p>
+</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State</strong></td>
+<td>Select state from the dropdown for this field. Select appropriate State code.</td>
+</tr>
+<tr>
+<td><strong>GST Registration No.</strong></td>
+<td>Enter Registration No. of customer. Registration number is mandatory if GST Customer Type is Registered. Registration No. is of 15-digits.</td>
+</tr>
+<tr>
+<td><strong>ARN No.</strong></td>
+<td>Capture the Customer ARN No. only when GST registration number is not available.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-service-cost">To set up GST on service cost</h2>
+<ol>
+<li><p>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Service Cost</strong>, and then choose the related link.</p>
+</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GST Group Code</strong></td>
+<td>Specifies the GST Group code relevant for the service cost. GST Group codes created in GST Group Setup appears as dropdown.</td>
+</tr>
+<tr>
+<td><strong>GST Credit</strong></td>
+<td>Check if the GST Credit can be Availment or Non-Availment. By default this field displays Availment.</td>
+</tr>
+<tr>
+<td><strong>HSN/SAC Code</strong></td>
+<td>Specifies HSN/SAC Code for the GST Group selected in GST Group code field.</td>
+</tr>
+<tr>
+<td><strong>Exempted</strong></td>
+<td>Check if the item is exempted from payment of tax.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="to-set-up-gst-on-bank-account">To set up GST on bank account</h2>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>Bank Account</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State Code</strong></td>
+<td>Required for GST calculation in Bank Charges transactions.</td>
+</tr>
+<tr>
+<td><strong>GST Registration Status</strong></td>
+<td>Can be Blank or Registered. If GST registration No. is added in Bank Account Master the status will be updated as Registered.</td>
+</tr>
+<tr>
+<td><strong>GST Registration No.</strong></td>
+<td>Enter Registration No. of Bank. Registration number is mandatory, if GST Registration Status is Registered. Registration No. comprises 15-digits.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="see-also">See Also</h2>
+<p><a href="GST-Purchase-from-Composite-Vendor.html">Purchase from Composite Vendor</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

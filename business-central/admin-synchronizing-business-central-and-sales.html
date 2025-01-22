@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Synchronisierung und Datenintegration </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Synchronisierung und Datenintegration ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="synchronizing-data-in-business-central-with-microsoft-dataverse">Daten in Business Central mit Microsoft Dataverse synchronisieren</h1>
+
+<p>Wenn Sie Dataverse in Business Central integrieren, können Sie entscheiden, ob die Daten der ausgewählten Felder von Business Central (wie Debitoren, Kontakte und Vertriebsmitarbeiter) mit entsprechenden Zeilen in Dataverse synchronisieren (beispielsweise Konten, Kontakte und Benutzer). Je nach Art des Datensatzes können Sie Zeilen von Dataverse nach Business Central synchronisieren oder umgekehrt. Weitere Informationen finden Sie unter <a href="admin-prepare-dynamics-365-for-sales-for-integration.html">Integrieren in Dynamics 365 Sales</a>.  </p>
+<p>Bei der Synchronisierung werden die folgenden Elemente einbezogen:</p>
+<ul>
+<li>Integrationstabellenzuordnungen</li>
+<li>Integrationsfeldzuordnungen</li>
+<li>Synchronisierungsregeln</li>
+<li>Gekoppelte Datensätze</li>
+</ul>
+<p>Wenn die Synchronisierung eingerichtet ist, können Sie die Business Central Datensätze mit Dataverse Zeilen koppeln, um ihre Daten zu synchronisieren. Sie können eine Synchronisierung manuell oder nach Plan starten. Die folgende Tabelle zeigt eine Übersicht über die Methoden der Synchronisierung von Datensätzen.  </p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Art</th>
+<th>Siehe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manuelle Synchronisierung</td>
+<td>Synchronisieren Sie auf Basis von Zeilen.<br><br> Sie können, beispielsweise als Debitor, einzelne Datensätze in Business Central mit einer entsprechenden Dataverse Zeile synchronisieren, beispielsweise einem Konto. So arbeiten Benutzer normalerweise mit Dataverse-Daten in Business Central.</td>
+<td><a href="admin-manual-synchronization-of-table-mappings.html#synchronize-individual-table-mappings">Datensätze manuell koppeln und synchronisieren</a></td>
+</tr>
+<tr>
+<td></td>
+<td>Synchronisieren Sie auf Basis einer Tabellenzuordnung.<br><br> Sie können alle Datensätze in einer Business Central-Tabelle mit einer Dataverse Tabelle synchronisieren.</td>
+<td><a href="admin-manual-synchronization-of-table-mappings.html#synchronize-individual-table-mappings">Synchronisieren einzelner Tabellenzuordnungen</a></td>
+</tr>
+<tr>
+<td></td>
+<td>Synchronisieren Sie alle geänderten Datensätze für alle Tabellenzuordnungen.<br><br> Sie können alle Datensätze synchronisieren, die in den Business Central-Tabellen seit der letzten Synchronisierung geändert wurden.</td>
+<td><a href="admin-manual-synchronization-of-table-mappings.html#synchronizing-all-modified-records">Synchronisierung aller geänderten Datensätze</a></td>
+</tr>
+<tr>
+<td></td>
+<td>Vollständige Synchronisierung aller Daten für alle Tabellenzuordnungen.<br><br> Sie können alle Daten in den Business Central-Tabellen und die Dataverse-Tabellen, die zugeordnet werden, synchronisieren, und neue Datensätze oder Tabellen in der Ziellösung für ungekoppelte Datensätze in der Quelllösung erstellen.<br><br> Bei der vollständigen Synchronisierung werden alle Daten synchronisiert und die Kopplung ignoriert. Normalerweise führen Sie eine vollständige Synchronisierung durch, wenn Sie die Integration einrichten und nur eine der Lösungen enthält Daten. Eine vollständige Synchronisierung kann auch in einer Demonstrationsumgebung hilfreich sein.</td>
+<td><a href="admin-manual-synchronization-of-table-mappings.html#run-a-full-synchronization">Ausführen einer vollständigen Synchronisierung</a></td>
+</tr>
+<tr>
+<td>Geplante Synchronisierung</td>
+<td>Synchronisieren Sie alle Änderungen an Daten für alle Tabellenzuordnungen.<br><br> Sie können Business Central mit Dataverse in geplanten Intervallen synchronisieren, indem Sie Projekte in der Projektwarteschlange einrichten.</td>
+<td><a href="admin-scheduled-synchronization-using-the-synchronization-job-queue-entries.html">Planen einer Synchronisierung</a></td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Synchronisierung zwischen Dataverse und Business Central basiert auf der geplanten Ausführung von Jobwarteschlangeneinträgen und garantiert keine Echtzeitdatenkonsistenz zwischen zwei Diensten. Um weitere Informationen zur Datenkonsistenz in Echtzeit zu erhalten, sollten Sie <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/powerplat-overview">Virtuelle Business Central-Tabellen</a> oder Business Central-APIs erkunden.   </p>
+</div>
+<h2 id="standard-table-mapping-for-synchronization">Standard-Tabellenzuordnung für die Synchronisierung</h2>
+<p>Tabellen in Dataverse wie beispielsweise Konten, werden mit äquivalenten Arten von Tabellen in Business Central wie beispielsweise Debitoren integriert. Um mit Dataverse-Daten zu arbeiten, richten Sie Verknüpfungen, auch Kopplungen genannt, zwischen Tabellen in Dataverse und Business Central ein.</p>
+<p>Die folgende Tabelle zeigt die standardmäßige Zuordnung zwischen Tabellen in Business Central und Dataverse.</p>
+<div class="TIP"><h5>Tipp</h5><p>Sie können Konfigurationsänderungen an Integrationstabellen- und Feldzuordnungen auf ihre Standardeinstellungen zurücksetzen, indem Sie die Zuordnungen auswählen und dann <strong>Standardsynchronisationseinrichtung verwenden</strong> wählen.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Business Central</th>
+<th>Dataverse</th>
+<th>Synchronisierungsrichtung</th>
+<th>Standardfilter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verkäufer/Einkäufer</td>
+<td>Benutzer</td>
+<td>Dataverse -&gt; Business Central</td>
+<td>Dataverse Kontaktfilter: <strong>Status</strong> ist <strong>Nein</strong>, <strong>Benutzer lizenziert</strong> ist <strong>Ja</strong>, Integrationsbenutzermodus ist <strong>Nein</strong></td>
+</tr>
+<tr>
+<td>Debitor</td>
+<td>Konto</td>
+<td>Business Central -&gt; Dataverse und Dataverse -&gt; Business Central</td>
+<td>Dataverse Kontofilter: <strong>Beziehungstyp</strong> ist <strong>Debitor</strong> und <strong>Status</strong> ist <strong>Aktiv</strong>. Business Central Filter: <strong>Blockiert</strong> ist leer (Debitor ist nicht blockiert).</td>
+</tr>
+<tr>
+<td>Kreditor</td>
+<td>Konto</td>
+<td>Business Central -&gt; Dataverse und Dataverse -&gt; Business Central</td>
+<td>Dataverse Kontofilter: <strong>Beziehungstyp</strong> ist <strong>Kreditor</strong> und <strong>Status</strong> ist <strong>Aktiv</strong>. Business Central Filter: <strong>Blockiert</strong> ist leer (Kreditor ist nicht blockiert).</td>
+</tr>
+<tr>
+<td>Kontakt</td>
+<td>Kontakt</td>
+<td>Business Central -&gt; Dataverse und Dataverse -&gt; Business Central</td>
+<td>Business Central Kontaktfilter: <strong>Type</strong> ist <strong>Person</strong> und der Kontakt wird einem Unternehmen zugewiesen. Dataverse Kontaktfilter: Der Kontakt wird einem Unternehmen zugeordnet und der übergeordnete Debitorentyp ist <strong>Debitor</strong>.</td>
+</tr>
+<tr>
+<td>Währung</td>
+<td>Transaktionswährung</td>
+<td>Business Central -&gt; Dataverse</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Die <strong>Dataverse</strong>-Aktionen stehen auf Seiten nicht zur Verfügung, z. B. auf der Seite „Kundenkarte“ für Datensätze, die den Tabellenfilter auf der Zuordnung der Integrationstabelle nicht beachten.</p>
+</div>
+<h3 id="tip-for-admins-viewing-table-mappings">Tipp für Administratoren: Aufrufen von Tabellenzuordnungen</h3>
+<p>Sie können die Zuordnung zwischen den Tabellen in Dataverse und den Tabellen in Business Central auf der Seite <strong>Integrationstabellenzuordnungen</strong> aufrufen, auf der Sie auch Filter anwenden können. Sie legen die Zuordnung zwischen den Feldern in Business Central-Tabellen und den Spalten in Dataverse-Tabellen auf der Seite <strong>Integrationsfeldzuordnung</strong> fest, auf der Sie zusätzliche Zuordnungslogiken hinzufügen können. Dies kann beispielsweise hilfreich sein, wenn Sie Fehler bei der Synchronisierung beheben müssen.</p>
+<h2 id="use-virtual-tables-to-get-more-data">Verwenden Sie virtuelle Tabellen, um mehr Daten zu erhalten</h2>
+<p>Wenn Sie Ihre Integration einrichten, können Sie virtuelle Tabellen verwenden, um ohne die Hilfe eines Entwicklers mehr Daten in Dataverse verfügbar zu machen.</p>
+<p>Eine virtuelle Tabelle ist eine benutzerdefinierte Tabelle mit Spalten und Zeilen, die Daten aus einer externen Datenquelle enthalten, z. B. Business Central. Die Spalten und Zeilen in einer virtuellen Tabelle sehen aus wie eine normale Tabelle, die Daten werden jedoch nicht in einer physischen Tabelle in der Dataverse Datenbank gespeichert. Stattdessen werden die Daten zur Laufzeit abgerufen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Business Central enthält Objekte, die auch virtuelle Tabellen genannt werden. Diese Tabellenobjekte stehen in keinem Zusammenhang mit den virtuellen Tabellen, die Sie mit Dataverse verwenden.</p>
+</div>
+<p>Weitere Informationen zu virtuellen Tabellen finden Sie in den folgenden Artikeln:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/power-apps/maker/data-platform/create-edit-virtual-entities">Erstellen und Bearbeiten von virtuellen Tabellen, die Daten aus einer externen Datenquelle enthalten</a> (Power Apps-Dokumentation)</li>
+<li><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/powerplatform/powerplat-admin-reference">Virtuelle Business Central-Tabelle für Microsoft Dataverse Admin-Referenz</a> (Business Central Dokumentation)</li>
+</ul>
+<p>Um virtuelle Tabellen zu verwenden, müssen Sie die <strong>Virtuelle Business Central-Entität</strong> App von <a href="https://appsource.microsoft.com/en-US/product/dynamics-365/microsoftdynsmb.businesscentral_virtualentity">AppSource</a> installieren. </p>
+<p>Nachdem Sie die App installiert haben, können Sie virtuelle Tabellen auf einer der folgenden Seiten in Business Central aktivieren:</p>
+<ul>
+<li>Wenn Sie die Anleitung <strong>Dataverse-Verbindung einrichten</strong> ausführen, können Sie auf der Seite <strong>Dataverse Verfügbare virtuelle Tabelle</strong> mehrere virtuelle Tabellen auswählen. Anschließend sind die Tabellen im Dataverse und im PowerApps Maker Portal verfügbar. </li>
+<li>Über die Seiten <strong>Dataverse-Verbindungseinrichtung</strong>, <strong>Virtuelle Tabellen</strong> und <strong>Verfügbare virtuelle Tabellen</strong>.  </li>
+<li>Aus dem Power App Maker-Portal.</li>
+</ul>
+<h2 id="synchronize-data-from-multiple-companies-or-environments">Synchronisieren Sie Daten aus mehreren Unternehmen oder Umgebungen</h2>
+<p>Sie können Daten von mehreren Business Central Unternehmen oder Umgebungen mit einer Dataverse Umgebung synchronisieren. In unternehmensübergreifenden Synchronisierungsszenarien müssen mehrere Dinge berücksichtigt werden.</p>
+<h3 id="set-company-ids">Firmen-IDs festlegen</h3>
+<p>Wenn Sie Datensätze synchronisieren, legen wir eine Firmen-ID für die Dataverse Entität fest, um zu verdeutlichen, von welchem Business Central Unternehmen die Datensätze stammen. Integrationstabellenzuordnungen verfügen über Integrationstabellenfilterfelder, die die Firmen-ID berücksichtigen. Um eine Tabellenzuordnung in ein Mehrfirmen-Setup einzuschließen, aktivieren Sie auf der Seite <strong>Integrationstabellenzuordnung</strong> das Kontrollkästchen <strong>Multi-Mandanten-Synchronisierung aktiviert</strong>. Die Einstellung optimiert die Art und Weise, wie Filterfelder der Integrationstabelle Firmen-IDs in einem Mehrfirmen-Setup filtern.</p>
+<p>Wenn Sie bei Integrationstabellen-Zuordnungen, die Dokumente wie Aufträge, Angebote und Verkaufschancen synchronisieren, das Kontrollkästchen <strong>Multi-Mandanten-Synchronisierung aktiviert</strong> aktivieren, berücksichtigt die Integration nur Entitäten, die die Firmen-ID der aktuellen Firma Business Central haben. Um Dokumente beispielsweise zwischen Business Central und Sales zu synchronisieren, müssen Benutzer in Sales die Firmen-ID in den Dokumenten angeben. Andernfalls werden die Dokumente nicht synchronisiert.  </p>
+<p>Für alle anderen Integrationstabellenzuordnungen entfernt die Option <strong>Multi-Mandanten-Synchronisierung aktiviert</strong> den Filter für die Firmen-ID. Bei der Synchronisierung werden verwandte Entitäten berücksichtigt, unabhängig von ihrer Firmen-ID.</p>
+<h3 id="specify-the-synchronization-direction">Geben Sie die Synchronisierungsrichtung an</h3>
+<p>Wenn Sie die Unterstützung mehrerer Unternehmen für eine Integrationstabellenzuordnung aktivieren, empfehlen wir Ihnen, die Richtung der Zuordnung auf <strong>FromIntegration</strong> festzulegen. Wenn Sie die Richtung auf <strong>ToIntegration</strong> oder <strong>Bidirektional</strong> setzen, ist es eine gute Idee, <strong>Tabellenfilter</strong> und <strong>Integrationstabellenfilter</strong> zu verwenden, um zu kontrollieren, welche Entitäten mit welcher Firma synchronisiert werden. Es ist auch eine gute Idee, eine vergleichsbasierte Kopplung zu verwenden, um die Erstellung doppelter Datensätze zu vermeiden. Weitere Informationen zur Kopplung basierend auf Übereinstimmung finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/admin-how-to-set-up-a-dynamics-crm-connection#customize-the-match-based-coupling">Anpassen der Kopplung basierend auf Übereinstimmung</a>.</p>
+<h3 id="use-unique-numbers">Verwenden Sie eindeutige Nummern</h3>
+<p>Wenn Ihre Zahlenreihe nicht garantiert, dass Primärschlüsselwerte für jedes Unternehmen eindeutig sind, empfehlen wir die Verwendung von Präfixen. Um mit der Verwendung von Präfixen zu beginnen, erstellen Sie eine Transformationsregel für die Integrationsfeldzuordnung. Weitere Informationen zu Transformationsregeln finden Sie unter <a href="admin-how-to-modify-table-mappings-for-synchronization.html#handle-differences-in-field-values">Behandeln Sie Unterschiede in den Feldwerten</a>.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="admin-how-to-couple-and-synchronize-records-manually.html">Datensätze manuell koppeln und synchronisieren</a><br><a href="admin-scheduled-synchronization-using-the-synchronization-job-queue-entries.html">Synchronisierung planen</a><br><a href="admin-prepare-dynamics-365-for-sales-for-integration.html">Integration mit Dynamics 365 Sales</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

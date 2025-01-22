@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Auftragsmontage und Lagermontage verstehen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Auftragsmontage und Lagermontage verstehen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="understanding-assemble-to-order-and-assemble-to-stock">Auftragsmontage und Lagermontage verstehen</h1>
+
+<p>Mit Business Central können Sie Montageartikel auf folgende Weisen ausgeben:</p>
+<ul>
+<li>Montage auf Bestellung  </li>
+<li>Auf Lager montieren  </li>
+</ul>
+<h2 id="assemble-to-order">Montage auf Bestellung</h2>
+<p>Verwenden Sie den Auftragsmontageprozess für Artikel, die Sie nicht auf Lager haben möchten. Zum Beispiel aus folgenden Gründen:</p>
+<ul>
+<li>Sie passen die Artikel an die Kundenanforderungen an.</li>
+<li>Sie möchten die Kosten für den Lagerbestand minimieren.</li>
+</ul>
+<p>Die folgende Liste beschreibt einige der Vorteile des Auftragsmontageprozesses:  </p>
+<ul>
+<li>Montageartikel anpassen, wenn ein Verkaufsauftrag entgegengenommen wird.  </li>
+<li>Übersicht der Verfügbarkeit des Montageartikels und seiner Komponenten.  </li>
+<li>Montagekomponenten sofort reservieren, um die Auftragserfüllung sicherzustellen.  </li>
+<li>Die Profitabilität des angepassten Auftrags durch Berechnen des Preises und der Kosten ermitteln.  </li>
+<li>Fibuintegration für das Lager, um die Montage und das Versenden zu vereinfachen.  </li>
+<li>Auftragsmontage, wenn Sie ein Verkaufsangebot oder einen Rahmenauftrag erstellen.  </li>
+<li>Lagermengen mit Auftragsmontagemengen kombinieren.  </li>
+</ul>
+<p>Bei der Auftragsmontage stellen Sie Artikel für einen Kundenauftrag zusammen. Es besteht eine Eins-zu-Eins-Verknüpfung zwischen dem Montageauftrag und dem Verkaufsauftrag.  </p>
+<p>Wenn Sie eine Auftragsmontageartikel in eine Kundenauftragszeile eingeben, wird automatisch ein Montageauftrag erstellt. Der Montageauftrag basiert auf der Verkaufszeile, und seine Zeilen basieren auf der Montagestückliste des Artikels. Die Menge der Komponenten in der Montagestückliste wird mit der Bestellmenge multipliziert. Die Seite <strong>Auftragsmontagezeilen</strong> zeigt Details zu den verknüpften Montageauftragszeilen. Die Details können Ihnen dabei helfen, den Montageartikel anzupassen. Das Lieferdatum basiert auf der Verfügbarkeit von Komponenten. Weitere Informationen zur Montage von Artikeln für Verkaufsaufträge finden Sie unter <a href="assembly-how-to-sell-items-assembled-to-order.html">Verkauf von Elementen, die auf Bestellung gefertigt wurden</a>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Obwohl es nicht Teil des Standardprozesses ist, können Sie Lagerbestandsmengen und Auftragsmontagemengen mit dem selben Verkaufsauftrag verkaufen. Mehr Informationen zum Kombinieren von Lager- und Auftragsmontageartikeln finden Sie unter <a href="assembly-how-to-sell-inventory-items-in-assemble-to-order-flows.html">Verkauf von Lagerartikeln in Auftragsmontageflüssen</a>.  </p>
+</div>
+<p>Um anzugeben, dass ein Artikel im Auftrag montiert wird, wählen Sie im Feld <strong>Montagerichtlinie</strong> auf der Seite <strong>Artikelkarte</strong> für den Artikel <strong>Auftragsmontage</strong> aus.  </p>
+<h2 id="assemble-to-stock">Auf Lager montieren</h2>
+<p>Verwenden Sie den Lagermontageprozess für Artikel, die Sie montieren und für zukünftige Verkäufe lagern. Lagermontageartikel sind Standardartikel, wie z. B. verpackte Bausätze, die Sie nicht anpassen. Sie können diese Artikel auch als Unterbaugruppenkomponenten verwenden. Die Artikel werden als einzelne Artikel kommissioniert und verarbeitet und wie ein fertiger Fertigungsartikel behandelt. Weitere Informationen zu Montageartikeln finden Sie unter <a href="assembly-how-to-assemble-items.html">Montageartikel</a>.  </p>
+<p>Wenn Sie einen Lagermontageartikel in eine Verkaufszeile angeben, wird der Artikel wie jeder andere aus dem Lagerbestand verkaufter Artikels behandelt. Zum Beispiel prüft Business Central nur die Verfügbarkeit des montierten Artikels und nicht seiner Komponenten.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Obwohl es nicht Teil des Standardprozesses ist, können Sie einen Artikel für einen Auftrag montieren, auch wenn für den Artikel die Lagermontage eingerichtet ist. Weitere Informationen finden Sie unter <a href="assembly-how-to-sell-assemble-to-order-items-and-inventory-items-together.html">So verkaufen Sie Auftragsmontageartikel und Lagerartikel zusammen</a>.  </p>
+</div>
+<p>Um anzugeben, dass ein Artikel für das Lager montiert wird, wählen Sie im Feld <strong>Montagerichtlinie</strong> auf der Seite <strong>Artikelkarte</strong> für den Artikel <strong>Lagermontage</strong> aus.  </p>
+<h2 id="combination-scenarios">Kombinierte Szenarien</h2>
+<p>Wenn die Auftragsmontage und Lagermengen auf einem Verkaufsauftrag kombiniert werden, müssen Auftragsmontagemengen zuerst ausgegeben werden.  </p>
+<p>Wenn ein Montageauftrag mit einer Verkaufsauftragszeile verknüpft ist, wird der Wert im Feld <strong>Menge für Auftragsmontage</strong> der Verkaufsauftragszeile über das Feld <strong>Montagemenge</strong> im Montageauftrag in das Feld <strong>Menge</strong> kopiert. Weitere Informationen finden Sie unter <a href="assembly-how-to-sell-items-assembled-to-order.html">Verkaufen von Auftragsmontageartikeln</a>.  </p>
+<p>Der Wert im Feld <strong>Menge für Montage</strong> bezieht sich auf das Feld <strong>Zu liefern</strong> auf der Verkaufsauftragszeile. Diese Beziehung verwaltet, wie Sie Teil- und Komplettmengen für die Auftragsmontage versenden:</p>
+<ul>
+<li>Wenn die Komplettmenge auf der Verkaufsauftragszeile nach Auftrag montiert wird</li>
+<li>In kombinierten Szenarien, in denen ein Teil der Menge nach Auftrag montiert wird und ein Teil aus dem Lagerbestand geliefert wird.</li>
+</ul>
+<p>Das Kombinationsszenario ermöglicht Flexibilität bei Teillieferungen. Sie können das Feld <strong>Zu montierende Menge</strong> verwenden, um die Menge anzugeben, die teilweise aus dem Bestand und durch Montage auf Bestellung versendet werden soll.  </p>
+<p>Wenn die vollständige Verkaufszeilenmenge nach Auftrag montiert und versendet werden muss, wird der Wert im Feld <strong>Menge für Versand</strong> in das Feld <strong>Menge für Montage</strong> im verknüpften Montageauftrag kopiert, wenn Sie die zu liefernde Menge ändern. Dieses Update stellt sicher, dass die Menge, die ausgeliefert wird, vollständig von der Auftragsmontagemenge geliefert wird.  </p>
+<p>In den kombinierten Szenarien wird der Gesamtwert in <strong>Menge für Versand</strong> jedoch nicht in das Feld <strong>Menge für Montage</strong> im Montageauftrag kopiert. Stattdessen wird ein Standardwert in das Feld <strong>Menge für Montage</strong> eingefügt. Der Wert errechnet sich aus dem Feld <strong>Zu liefern</strong>, um sicherzustellen, dass die Auftragsmontagemengen zuerst versendet werden.</p>
+<p>Um von dem Standard abzuweichen, weil Sie beispielsweise mehr oder weniger zusammenbauen möchten, als die Menge im Feld <strong>Zu liefern</strong> können Sie das Feld <strong>Menge für Montage</strong> innerhalb der vordefinierten Regeln, wie unten dargestellt, ändern.  </p>
+<p>Ein Beispiel dafür, warum Sie die zu montierende Menge ggf. ändern möchten, wäre, dass Sie die Lieferung von Lagermengen teilweise buchen möchten, bevor Sie den Montageausgang liefern.  </p>
+<p>In den folgenden Tabellen werden die Regeln erläutert, die die minimalen und maximalen Werte festlegen, die Sie manuell in das Feld <strong>Menge für Montage</strong> eingeben können, um in einem kombinierten Szenario vom Standardwert abzuweichen. Die Tabelle zeigt ein kombiniertes Szenario, in dem das Feld <strong>Menge für Montage</strong> der verknüpften Verkaufsauftragszeile von 7 in 4 geändert wird, weshalb <strong>Menge für Montage</strong> den Standardwert 4 annimmt.  </p>
+<p><strong>Verkaufszeile</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Menge</strong></th>
+<th><strong>Zu liefern</strong></th>
+<th><strong>Menge für Auftragsmontage</strong></th>
+<th><strong>Menge geliefert</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anfangswert</strong></td>
+<td>10</td>
+<td>7</td>
+<td>7</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Änderung</strong></td>
+<td></td>
+<td>4</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Montageauftragskopf</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Menge</strong></th>
+<th><strong>Zu liefern</strong></th>
+<th><strong>Menge für Auftragsmontage</strong></th>
+<th><strong>Menge geliefert</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anfangswert</strong></td>
+<td>7</td>
+<td>7</td>
+<td>0</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Änderung</strong></td>
+<td></td>
+<td>4 (standardmäßig eingefügt)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Basierend auf diesem Beispiel können Sie das Feld <strong>Menge für Montage</strong> wie folgt ändern:  </p>
+<ul>
+<li>Die Mindestmenge, die Sie eingeben können, ist 1. Sie müssen mindestens eine Einheit montieren, damit Sie die vier Einheiten verkaufen können, wenn davon ausgegangen wird, dass die verbleibenden drei im Lager verfügbar sind.  </li>
+<li>Die Höchstmenge, die Sie eingeben können, ist 4. Dieses Limit stellt sicher, dass Sie nicht mehr von dem Artikel montieren, als Sie für den Verkauf benötigen.  </li>
+</ul>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="assembly-assemble-items.html">Montageverwaltung</a><br><a href="assembly-how-work-assembly-boms.html">Mit Montagestücklisten arbeiten</a><br><a href="inventory-manage-inventory.html">Bestand</a><br><a href="design-details-warehouse-management.html">Lagerverwaltung – Übersicht</a>
+<a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

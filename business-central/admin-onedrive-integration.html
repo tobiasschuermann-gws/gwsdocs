@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Verwalten der OneDrive Integration mit Business Central </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Verwalten der OneDrive Integration mit Business Central ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="managing-onedrive-integration-with-business-central">Verwalten der OneDrive Integration mit Business Central</h1>
+
+<p>Dieser Artikel gibt einen Überblick darüber, was ein Administrator tun kann, um die OneDrive for Business Integration mit Business Central zu steuern. Business Central Online-Kunden profitieren von der automatischen Integration ohne zusätzliche Einrichtung, um die Funktionen Öffnen und Freigeben in OneDrive zu nutzen. Mit der Anleitung zur unterstützten Einrichtung von <strong>OneDrive</strong> können Sie den Benutzern Zugriff auf noch mehr Funktionen von OneDrive geben, z.B. das Öffnen von Excel-Dateien in OneDrive&mdash;oder sogar alle Funktionen ausschalten.  </p>
+<h2 id="configure-onedrive-for-integration-with-business-central">Konfigurieren Sie OneDrive für die Integration mit Business Central</h2>
+<p>In diesem Abschnitt werden die Anforderungen erläutert, die in OneDrive for Business erfüllt sein müssen, um die Integration mit Business Central zu konfigurieren, sowie die Aufgaben, die Sie zur Verwaltung der Integration durchführen können.</p>
+<h3 id="minimum-requirements">Mindestanforderungen</h3>
+<ul>
+<li>Jeder Benutzer muss über eine Lizenz für Business Central und OneDrive als Teil eines Microsoft 365-Plans verfügen.</li>
+<li>OneDrive muss für jeden Benutzer festgelegt werden.</li>
+</ul>
+<h3 id="managing-privacy">Datenschutz verwalten</h3>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Wenn Sie sich dafür entschieden haben, Business Central und OneDrive in verschiedenen Ländern oder Regionen bereitzustellen, können die von Business Central erzeugten und in OneDrive abgelegten Dateien die Grenzen der Datenresidenz überschreiten. Vergewissern Sie sich, dass die Richtlinien Ihres Unternehmens und die gesetzlichen Anforderungen an die Datenaufbewahrung erfüllt sind, bevor Sie die Verbindung zu OneDrive aktivieren.</p>
+</div>
+<p>Administratoren und Endbenutzer haben das Steuerelement für die in OneDrive gespeicherten Inhalte, und diese Daten sind das alleinige Eigentum Ihrer Organisation. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/sharepoint/safeguarding-your-data">Wie SharePoint und OneDrive Ihre Daten in der Cloud schützen</a>. Besuchen Sie auch unsere <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Microsoft-Datenschutzbestimmungen</a><!--(https://privacy.microsoft.com/en-us/privacystatement)-->, in der erläutert wird, welche Daten Microsoft verarbeitet, wie Microsoft sie verarbeitet und zu welchen Zwecken.</p>
+<p>Mit der Aktivierung dieser Service-Verbindung erklären Sie sich einverstanden:</p>
+<p>(a) der Weitergabe von Daten aus Dynamics 365 Business Central an den Dienstanbieter, der diese gemäß seinen Bedingungen und Richtlinien zum Schutz der Privatsphäre verwenden wird; (b) die Compliance-Stufen des Dienstanbieters können sich von Dynamics 365 Business Central unterscheiden; und (c) Microsoft kann Ihre Kontaktinformationen an diesen Dienstanbieter weitergeben, wenn dies für den Vorgang und die Problembehandlung des Dienstes erforderlich ist.</p>
+<h2 id="configure-business-central">Business Central konfigurieren</h2>
+<p>Wenn Business Central online ist, wird die Verbindung zwischen Business Central und OneDrive automatisch für Sie konfiguriert, und die Funktionen von OneDrive stehen den Benutzern standardmäßig zur Verfügung. Wenn Sie einige oder alle Funktionen deaktivieren möchten, können Sie die Anleitung zur <strong>OneDrive Einrichtung</strong> im Business Central Client verwenden.</p>
+<p>Die Konfiguration von Business Central vor Ort ist anders, weil die Verbindung zwischen Business Central und OneDrive nicht für Sie konfiguriert wird. Sie müssen dies manuell tun. Weitere Informationen finden Sie unter <a href="admin-onedrive-integration-onpremises.html">Konfiguration der Integration von OneDrive mit Business Central vor Ort</a>.</p>
+<h3 id="about-multiple-environments">Über mehrere Umgebungen</h3>
+<p>Die OneDrive Integration wird pro Umgebung konfiguriert, d.h. Ihre Einstellungen gelten für alle Firmen in dieser Umgebung. Wenn Ihr Unternehmen mehr als eine Umgebung hat, müssen Sie für jede Umgebung OneDrive Integration konfigurieren.</p>
+<h3 id="prerequisites">Voraussetzungen</h3>
+<ul>
+<li>Berechtigung zum Einfügen, Bearbeiten und Löschen (imd) in der Tabelle <strong>Dokumentenservice-Szenario</strong> als Minimum</li>
+</ul>
+<h3 id="configure-onedrive-using-onedrive-setup">Konfigurieren Sie OneDrive über die Einrichtung OneDrive</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>OneDrive Einrichtung</strong> ein und wählen Sie dann den entsprechenden Link. </li>
+<li>Wenn Sie die Unterstützte Einrichtung zum ersten Mal ausführen, sehen Sie die Seite <strong>Ihre Privatsphäre</strong>. Lesen Sie die Informationen auf der Seite, und wenn Sie mit den Bedingungen einverstanden sind, wählen Sie <strong>Zustimmen</strong>, um fortzufahren.</li>
+<li><p>Auf der Seite <strong>OneDrive-Dateiverarbeitung konfigurieren</strong> stehen die folgenden Optionen zur Auswahl:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Für App-Funktionen verwenden</strong></td>
+<td>Wenn Sie diese Option aktivieren, werden die Aktionen <strong>In OneDrive öffnen</strong> und <strong>Freigeben</strong> für Dateien in Business Central verfügbar gemacht, wie Dateien, die an Dokumente angehängt sind, oder im Berichtseingang. Mit diesen Aktionen können Benutzer Dateien kopieren, öffnen und in OneDrive freigeben. <ul><li>Business Central-Funktionen, die Dokumente und andere Dateien speichern oder erfassen und in OneDrive Öffnen- und Freigeben-Aktionen bieten, um diese Dateien aus Business Central herauszubringen, wie z. B. eingehende Dokumente und Datensatzanhänge.</li><li>Branchenfunktionen, die benutzerdefinierte Excel-Arbeitsmappen generieren, z. B. Verkaufsbudgets.</li><li>An den Berichtseingang gesendete Berichte</li><li>Wenn Sie Anpassungen oder Erweiterungen installiert haben, können diese weitere Funktionen hinzufügen, die OneDrive verwenden.</li></ul>Weitere Informationen finden Sie unter <a href="across-share-onedrive.html">Öffnen und Freigeben von Business Central-Dateien in OneDrive</a>.</td>
+</tr>
+<tr>
+<td><strong>Für Systemfunktionen verwenden</strong></td>
+<td>Wenn Sie diese Option einschalten, werden die folgenden Funktionen aktiviert:<ul><li> Die Aktionen <strong>Öffnen in Excel</strong> und <strong>Bearbeiten in Excel</strong> auf Listenseiten kopieren die Excel-Datei automatisch nach OneDrive und öffnen sie dann in Excel Online. Weitere Informationen finden Sie unter <a href="across-work-with-excel.html">Anzeigen und Bearbeiten in Excel</a>.</li><li> Wenn Sie einen Bericht an Excel oder Word senden, wird die Datei automatisch nach OneDrive kopiert und anschließend in Excel Online, Word Online geöffnet. Weitere Informationen finden Sie unter <a href="ui-work-report.html#save-a-report-to-a-file">Bericht in eine Datei speichern</a>.</li></ul></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>Wählen Sie <strong>Weiter</strong>&gt;<strong>Erledigt</strong>.</li>
+</ol>
+<h3 id="switching-to-new-onedrive-integration-after-upgrade">Umschalten auf die neue OneDrive Integration nach dem Upgrade</h3>
+<p>Die <strong>OneDrive-Einrichtung</strong> wurde mit der Veröffentlichungswelle 2, Version 21.0, im Jahr 2022 eingeführt. Zuvor verwendete die OneDrive-Integration die <strong>SharePoint-Verbindungseinrichtung</strong>, die außer Betrieb genommen wurde und in 2023 Veröffentlichungswelle 2, Version 23.0, entfernt wird. Nachdem Sie auf Version 21 aktualisiert haben, funktioniert OneDrive noch wie bisher. Wir empfehlen Ihnen jedoch, auf die neue OneDrive-Integration umzusteigen. Wenn Sie diese Umstellung jetzt vornehmen, wird es einfacher, wenn die <strong>SharePoint Einrichtung</strong> irgendwann entfernt wird. Außerdem können Sie dann die Anleitung zur unterstützten Einrichtung der <strong>OneDrive Einrichtung</strong> verwenden, um die OneDrive Funktionen zu verwalten, auf die die Benutzer Zugriff haben. Die <strong>OneDrive Einrichtung</strong> macht den Übergang von der veralteten SharePoint Einrichtung einfach und nahtlos.</p>
+<p>Um zu wechseln, öffnen Sie einfach die <strong>OneDrive Einrichtung</strong> und führen Sie sie direkt aus, oder öffnen Sie die Seite <strong>SharePoint Verbindungseinrichtung</strong> und wählen Sie <strong>Zur neuen OneDrive Einrichtung gehen</strong> in der Benachrichtigung am oberen Rand der Seite. Folgen Sie der Anleitung zur Einrichtung wie im vorherigen Abschnitt beschrieben.</p>
+<h2 id="restoring-onedrive-and-">Wiederherstellung von OneDrive und Business Central</h2>
+<p>Im Rahmen einer Disaster Recovery-Übung müssen Administratoren möglicherweise eine Business Central-Online-Umgebung mit einem Backup aus der Vergangenheit wiederherstellen und den OneDrive-Speicher mit demselben Zeitpunkt synchronisieren. OneDrive bietet verschiedene Tools zur Wiederherstellung, z.B. die Wiederherstellung von OneDrive eines Benutzers zu einem früheren Zeitpunkt, die Wiederherstellung einer früheren Version einer einzelnen Datei oder die Wiederherstellung gelöschter Dateien. Weitere Informationen finden Sie in den folgenden Artikeln:</p>
+<ul>
+<li>Zu Business Central, siehe <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-backup-restore">Wiederherstellen einer Umgebung im Admin Center</a>.</li>
+<li>Für OneDrive, siehe <a href="https://support.microsoft.com/en-us/office/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15?ui=en-us&amp;rs=en-us&amp;ad=us">Wiederherstellen Ihrer OneDrive</a></li>
+</ul>
+<h2 id="governance">Governance</h2>
+<p>Das Admin Center von SharePoint bietet umfassende Steuerelemente für Richtlinien, die die Nutzung von OneDrive im gesamten Unternehmen regeln. Benutzer, die mindestens über die Rolle  <a href="https://learn.microsoft.com/de-de/entra/identity/role-based-access-control/permissions-reference#sharepoint-administrator">SharePoint Administrator</a>  verfügen, können Richtlinien einrichten, die bestimmen, wer zugreifen kann OneDrive, wo sich die Daten befinden, den Lebenszyklus der Inhalte und vieles mehr. Unter den folgenden Links finden Sie Informationen zu häufig verwendeten Funktionen und Einstellungen, die Ihre Integration mit Business Central verbessern können. </p>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/sharepoint/turn-external-sharing-on-or-off">Verwaltung der Freigabeeinstellungen</a></li>
+<li><a href="https://learn.microsoft.com/de-de/sharepoint/information-barriers">Nutzen Sie Informationsbarrieren mit SharePoint</a></li>
+<li><a href="https://learn.microsoft.com/de-de/microsoft-365/compliance/dlp-learn-about-dlp">Erfahren Sie mehr über die Verhinderung von Datenverlust</a></li>
+<li><a href="https://learn.microsoft.com/de-de/onedrive/set-default-storage-space">Festlegen des Standardspeicherplatzes für OneDrive-Benutzer</a></li>
+<li><a href="https://learn.microsoft.com/de-de/sharepoint/manage-user-profiles#add-and-remove-admins-for-a-users-onedrive">Admins für OneDrive-Benutzer hinzufügen und entfernen</a></li>
+<li><a href="https://learn.microsoft.com/de-de/sharepoint/manage-user-profiles#disable-onedrive-creation-for-some-users">Deaktivieren Sie die Erstellung von OneDrive für einige Benutzer</a></li>
+<li><a href="https://learn.microsoft.com/de-de/microsoft-365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365">Multi-Geo Funktionalitäten in OneDrive und SharePoint Online</a></li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Einige Funktionen können nur für bestimmte Pläne verfügbar sein.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="across-onedrive-overview.html">Business Central und OneDrive für Business Integration</a><br><a href="across-share-onedrive.html">Öffnen von Business Central Dateien in OneDrive</a><br><a href="admin-onedrive-faq.html">OneDrive FAQ</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

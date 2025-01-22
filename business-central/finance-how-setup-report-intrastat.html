@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Intrastat-Berichterstattung einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Intrastat-Berichterstattung einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-intrastat-reporting">Intrastat-Berichterstattung einrichten</h1>
+
+<p>Alle Firmen in der Europäischen Union (EU) müssen ihren Handel mit anderen EU-Ländern/Regionen melden. Unternehmen müssen die Bewegung von Waren jeden Monat an die Statistikbehörden in ihrem Land/ihrer Region melden, und der Bericht muss an die Steuerbehörden geliefert werden. Intrastat ist das System, das zur Erfassung von Handelsstatistiken über Waren innerhalb dieser Länder/Regionen verwendet wird. Verwenden Sie den Intrastat-Bericht, um die periodische Intrastat-Meldung zu vervollständigen, indem Sie den Handel mit Waren gemäß der lokalen Gesetzgebung erfassen, aufzeichnen und melden.</p>
+<p>Die Intrastat-Berichterstattung basiert auf grundlegenden EU-Vorschriften, die für alle Länder/Regionen gelten. Allerdings gibt es Unterschiede innerhalb der einzelnen Länder/Regionen. Jedes Land/jede Region hat eigene Regeln dazu, was und wie zu melden ist.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Intrastat-Informationen gelten nicht für die Bewegung von Dienstleistungen zwischen Ländern/Regionen. Stattdessen gelten die Informationen nur für Güter wie Artikel und Anlagen. Wenn Ihre Regierung die Registrierung des Dienstleistungsverkehrs zwischen Ländern/Regionen verlangt, verwenden Sie die Funktion <strong>Dienstleistungserklärung</strong>.</p>
+<p>Diese Funktion ist als App verfügbar, die Sie bei <a href="https://go.microsoft.com/fwlink/?linkid=2081646">AppSource</a> herunterladen können. Um diese Funktion zu nutzen, installieren Sie sie auf der Seite <strong>Erweiterungsverwaltung</strong>.</p>
+</div>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Dieser Artikel behandelt das neue Intrastat-Erlebnis, das ab Business Central Version 21 verfügbar ist. Wenden Sie sich an Ihren Administrator, um zu erfahren, welche Version Ihre Firma verwendet und ob Sie die neuen Funktionen aktivieren sollten.</p>
+<p>Lesen Sie den Artikel zur Einrichtung und Verwendung von Intrastat in der Vorgängerversion unter <a href="finance-how-setup-report-intrastat-v20.html">Intrastat einrichten und melden</a>.</p>
+</div>
+<h2 id="assisted-setup">Aktivieren Sie das neue Intrastat-Erlebnis</h2>
+<p>In der Veröffentlichungswelle 2 von 2022 enthält Business Central ein neu gestaltetes Intrastat-Erlebnis, das erweiterte Funktionen bereitstellt. Wenn die neue Intrastat-Funktion in Ihrer Umgebung nicht aktiviert ist, kann sie von einem Administrator auf der Seite <strong>Funktionsverwaltung</strong> aktiviert werden.</p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Sie können nicht die alten und neuen Erfahrungen parallel verwenden. Bevor Sie die Erweiterung in einer Produktionsumgebung aktivieren, wird empfohlen, sie in einer Sandbox-Umgebung zu testen, indem Sie eine Kopie Ihrer Produktionsdaten verwenden. Nachdem Sie eine neue Benutzererfahrung in Ihrer Produktionsumgebung aktiviert haben, können Sie nicht mehr zu der alten Intrastat-Funktionalität zurückkehren.</p>
+</div>
+<ol>
+<li>Wählen Sie das Symbol :::image type=&quot;icon&quot; source=&quot;media/ui-search/search_small.png&quot; border=&quot;false&quot;::: aus, geben Sie <strong>Funktionsverwaltung</strong> ein, und wählen Sie dann den entsprechenden Link aus.</li>
+<li>Wählen Sie auf der Seite <strong>Funktionsverwaltung</strong> die Zeile für <strong>Funktionsupdate: Ersetzen der bestehenden Intrastat-Funktionalität durch die neue Intrastat-Erweiterung</strong>. Mehr über die Funktionsverwaltung erfahren Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/feature-management">Bevorstehende Funktionen im Voraus aktivieren</a>.</li>
+<li>Wählen Sie in der Spalte <strong>Aktivieren für</strong> die Option <strong>Alle Benutzer</strong> aus.</li>
+<li>Lesen Sie die Erklärung darüber, wie das System aktualisiert wird, und wählen Sie dann <strong>Ja</strong>, um zuzustimmen.</li>
+<li>Wählen Sie <strong>Weiter</strong> aus. Sie erhalten die grundlegende Einrichtung für Intrastat. Weitere Informationen zur Intrastat-Einrichtung lesen Sie im Abschnitt <a href="#intrastat-configuration">Intrastat-Konfiguration</a>.</li>
+<li><p>Nachdem die Einrichtung abgeschlossen wurde, wählen Sie <strong>Abschließen</strong>, um das neue Intrastat-Erlebnis zu nutzen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Je nach Standort Ihrer Firma genügt es, die zuvor beschriebene Funktion zu aktivieren. Für Länder/Regionen mit speziellen Funktionen für das Intrastat-Berichtswesen aktivieren Sie die länder-/regionsspezifische Intrastat App zusätzlich zur Haupterweiterung.</p>
+</div>
+</li>
+</ol>
+<h2 id="intrastat-configuration">Intrastat-Konfiguration</h2>
+<p>Bevor Sie Intrastat-Berichte verwenden können, müssen Sie mehrere Konfigurationen festlegen.</p>
+<h3 id="intrastat-reporting-setup">Einrichtung der Intrastat-Berichte</h3>
+<p>Verwenden Sie die Seite <strong>Einrichtung der Intrastat-Berichterstattung</strong>, um das Standardverhalten für das Intrastat-Berichtswesen zu aktivieren und festzulegen. Sie können angeben, ob Sie Intrastat aus Sendungen (Versendungen), Eingängen (Ankünften) oder beidem melden müssen, je nach den Schwellenwerten, die in Ihren lokalen Vorschriften festgelegt sind. Sie können auch Standardtransaktionstypen für die regulären und Retourenbelege festlegen, die für die Meldung von Transaktionen verwendet werden.</p>
+<p>Folgen die Schritte zum Einrichten der Intrastat-Berichterstattung.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> aus, Symbol, geben Sie <strong>Intrastat-Berichtseinrichtung</strong> ein, und wählen Sie den entsprechenden Link aus.</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Allgemein</strong> Feldinformationen nach Bedarf aus oder geben Sie sie ein. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen. Die folgende Tabelle beschreibt einige der Schlüsselfelder.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eingänge melden</strong></td>
+<td>Gibt an, dass Sie Zugänge der eingegangenen Waren in Intrastat-Berichte aufnehmen müssen.</td>
+</tr>
+<tr>
+<td><strong>Sendungen melden</strong></td>
+<td>Gibt an, dass Sie Lieferungen versendeter Waren in Intrastat-Berichte aufnehmen müssen.</td>
+</tr>
+<tr>
+<td><strong>Direktlieferungen einschließen</strong></td>
+<td>Gibt an, ob Direktlieferungstransaktionen in Intrastat-Berichten enthalten sind. Weitere Informationen finden Sie unter <a href="finance-how-report-intrastat.html">Mit Intrastat-Berichten arbeiten</a>.</td>
+</tr>
+<tr>
+<td><strong>Lieferungen auf Basis von</strong></td>
+<td>Gibt den Ländercode an, auf dessen Grundlage die Intrastat-Berichtszeilen genommen werden.</td>
+</tr>
+<tr>
+<td><strong>MwSt.-Nr. basierend auf</strong></td>
+<td>Gibt an, basierend auf welchem Debitoren- oder Kreditorencode die Mehrwertsteuernummer (MwSt.) für den Intrastat-Bericht genommen wird.</td>
+</tr>
+<tr>
+<td><strong>Unternehmens-MwSt.-Nr. in Datei</strong></td>
+<td>Gibt an, wie die Umsatzsteuer-Identifikationsnummer der Firma in die Intrastat-Datei exportiert wird.</td>
+</tr>
+<tr>
+<td><strong>Kreditoren-MwSt.-Nr. in Datei</strong></td>
+<td>Legt fest, wie die Umsatzsteuer-Identifikationsnummer eines Lieferanten in die Intrastat-Datei exportiert werden soll.</td>
+</tr>
+<tr>
+<td><strong>Debitoren-MwSt.-Nr. in Datei</strong></td>
+<td>Legt fest, wie die Umsatzsteuer-Identifikationsnummer eines Kunden in die Intrastat-Datei exportiert wird.</td>
+</tr>
+<tr>
+<td><strong>Partner-Umsatzsteuer abrufen</strong></td>
+<td>Gibt an, aus welcher Zeile des Intrastat-Berichts die Umsatzsteuer-Identifikationsnummer des Partners aktualisiert wird. Je nach Ihren lokalen Anforderungen können Sie Zeilen nur für den Eingang, nur für den Versand oder für beide Arten von Zeilen wählen.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Standardtransaktionen</strong> Feldinformationen nach Bedarf aus oder geben Sie sie ein. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen. Die folgende Tabelle beschreibt einige der Schlüsselfelder.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standardmäßige Art des Geschäftes</strong></td>
+<td>Gibt den Standardtransaktionstyp für reguläre Verkaufslieferungen, Servicelieferungen und Einkaufslieferungen an.</td>
+</tr>
+<tr>
+<td><strong>Vorgabe Trans. Typ - Retouren</strong></td>
+<td>Legt die Standard-Transaktionsart für Retouren, Service-Retouren und Kauf-Retouren fest.</td>
+</tr>
+<tr>
+<td><strong>Standard-MwSt.-Nr. einer Privatperson</strong></td>
+<td>Gibt die Standard-Umsatzsteueridentifikationsnummer für Privatpersonen an, falls die Privatperson eine dedizierte Umsatzsteuernummer im Intrastat-Bericht haben muss.</td>
+</tr>
+<tr>
+<td><strong>Standard-MwSt.-Nr. des Drittanbieters</strong></td>
+<td>Gibt die Standard-Mehrwertsteuernummer für Drei-Parteien-Handel an, falls Sie die Mehrwertsteuernummer nicht haben.</td>
+</tr>
+<tr>
+<td><strong>Standard-Umsatzsteuer für unbekannten Status</strong></td>
+<td>Gibt die Standard-Mehrwertsteuernummer für einen unbekannten Status an.</td>
+</tr>
+<tr>
+<td><strong>Standardländer-/-regionscode</strong></td>
+<td>Legt den Standardcode für das Empfängerland fest.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Berichterstellung</strong> die Feldinformationen nach Bedarf aus oder geben Sie sie ein. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen. Die folgende Tabelle beschreibt einige der Schlüsselfelder.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Datenaustausch-Definitionscode</strong></td>
+<td>Gibt den Datenaustausch-Definitionscode an, um die Intrastat-Datei zu erzeugen. Dieses Feld ist nur verfügbar, wenn das Feld <strong>Dateien für Eingänge/Lieferungen trennen</strong> auf <strong>Nein</strong> festgelegt ist.</td>
+</tr>
+<tr>
+<td><strong>Dateien für Eingänge/Lieferungen trennen</strong></td>
+<td>Gibt an, ob Eingänge und Sendungen in zwei separaten Dateien gemeldet werden sollen.</td>
+</tr>
+<tr>
+<td><strong>Zip-Datei(-s)</strong></td>
+<td>Gibt an, ob die Berichtsdateien der ZIP-Datei hinzugefügt werden sollen.</td>
+</tr>
+<tr>
+<td><strong>Daten Aust. Def. Code - Eingang</strong></td>
+<td>Gibt den Data Exchange Definitionscode an, um die Intrastat-Datei für Wareneingänge zu erzeugen. Dieses Feld ist nur verfügbar, wenn das Feld <strong>Dateien für Eingänge/Lieferungen trennen</strong> auf <strong>Ja</strong> festgelegt ist.</td>
+</tr>
+<tr>
+<td><strong>Daten Aust. Def. Code - Sendung</strong></td>
+<td>Gibt den Datenaustausch-Definitionscode an, um die Intrastat-Datei für versandte Waren zu erzeugen. Dieses Feld ist nur verfügbar, wenn das Feld <strong>Dateien für Eingänge/Lieferungen trennen</strong> auf <strong>Ja</strong> festgelegt ist.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Geben Sie auf dem Inforegister <strong>Nummerierung</strong> einen Wert in das Feld <strong>Intrastat-Nummern</strong> ein.</p>
+</li>
+</ol>
+<h3 id="set-up-a-reporting-file">Legen Sie eine Berichtsdatei fest</h3>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Datenaustauschdefinitionen</strong> ein und wählen Sie dann den zugehörigen Link aus.</li>
+<li>Wählen Sie <strong>Neu</strong> aus, und geben Sie dann auf dem Inforegister <strong>Allgemein</strong> Informationen zu Datenaustauschdefinition, Dateityp, Spaltentrennzeichen, zugehörigen Codeunits, XMLport und anderen Feldern nach Bedarf ein.</li>
+<li>Geben Sie auf dem Inforegister <strong>Zeilendefinitionen</strong> einen Wert im Feld <strong>Zeilentyp</strong> ein, um die Formatierung der Zeilen in der Datendatei zu beschreiben und wo Sie die Anzahl der Spalten für diese Zeile definieren müssen.</li>
+<li>Auf der Inforegisterkarte <strong>Spaltendefinitionen</strong> füllen Sie die Zeile für jede geplante Spalte aus. Sie können Spaltennamen, Datentypen (wie Text, Datum oder Dezimal), die Länge der Zeile mit fester Breite, die die Spalte enthält, wenn die Datei vom Typ <em>Fester Text</em> ist, und einige andere Parameter definieren.</li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilendefinitionen</strong> <strong>Feldzuordnung</strong> aus.</li>
+<li>Erstellen Sie auf der Seite <strong>Feldzuordnung</strong> einen neuen Eintrag. </li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Allgemein</strong> den Wert für <strong>Tabellen-ID</strong> (für <strong>Intrastat-Berichtszeile</strong> wählen Sie <strong>4812</strong>), und geben Sie die folgenden Feldinformationen ein:</p>
+<ol>
+<li>Geben Sie in dem Feld <strong>Schlüsselindex</strong> den Schlüsselindex an, nach dem die Quelldatensätze vor dem Export sortiert werden sollen.</li>
+<li>Wählen Sie im Feld <strong>Zuordnungs-Codeunit</strong> einen Wert aus.</li>
+</ol>
+</li>
+<li><p>Fügen Sie auf dem Inforegister <strong>Feldzuordnung</strong> die Spalten hinzu, die Sie zuvor auf dem Inforegister <strong>Spaltendefinitionen</strong> konfiguriert haben, und fügen Sie dann folgende Feldinformationen hinzu:</p>
+<ol>
+<li>Geben Sie für jede der Spalten den <strong>Feld-ID</strong>-Wert an.</li>
+<li>Geben Sie den <strong>Transformationsregel</strong>-Wert für jede Spalte nach Bedarf an. Der Wert gibt die Regel an, die importierten Text in einen unterstützten Wert umwandelt, bevor er einem bestimmten Feld in Business Central zugeordnet werden kann. Wenn Sie einen Wert in diesem Feld auswählen, wird der genaue Wert in das Feld <strong>Transformationsregel</strong> in der <strong>Daten Aust. Feld Zuordnung Puf.</strong> Tabelle. (Umgekehrt: Bei Eingabe eines genauen Werts in das Feld <strong>Transformationsregel</strong> in der <strong>Datenaustausch-Feldzuordnungspuffer</strong> Tabelle, wird in diesem Feld ein Wert ausgewählt.)</li>
+</ol>
+</li>
+<li><p>Wenn Sie Einträge auf der Basis einiger Spalten gruppieren müssen, wählen Sie auf dem Inforegister <strong>Feldgruppierung</strong> die Felder aus, die Sie für die Gruppierung verwenden möchten.</p>
+</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Dynamics 365 Business Central wird mit der vorkonfigurierten Data Exchange Definition für Intrastat für alle lokalisierten Länder/Regionen geliefert. Um mehr über das Erstellen einer neuen Datenaustauschdefinition zu erfahren, siehe <a href="across-how-to-set-up-data-exchange-definitions.html">Datenaustauschdefinitionen einrichten</a>.</p>
+</div>
+<h3 id="set-mandatory-fields-with-the-intrastat-report-checklist">Pflichtfelder mit der Checkliste für den Intrastat-Bericht festlegen</h3>
+<p>In einigen Ländern/Regionen verlangen die Behörden, dass Intrastat-Berichte z. B. die Versandmethode für Einkäufe oder andere Werte enthalten, wenn die Verkäufe einen bestimmten Schwellenwert überschreiten.</p>
+<p>Um Pflichtfelder oder Werte auf der Seite  <strong>Intrastat-Bericht</strong>  festzulegen, folgen Sie die Schritte.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Intrastat-Berichtseinrichtung</strong> ein, und wählen Sie den entsprechenden Link aus.</li>
+<li>Wählen Sie <strong>Intrastat-Berichtsprüfliste</strong> aus.</li>
+<li><p>Auswählen die Schritte zum Hinzufügen der erforderlichen Zeilen für folgen:</p>
+<ol>
+<li>Legen Sie das Feld <strong>Feld Nr.</strong> auf ein Feld fest, das auf einen nicht leeren Wert geprüft werden muss.</li>
+<li><p>Geben Sie einen Wert in das Feld <strong>Filterausdruck</strong> bei Bedarf auf der Grundlage der folgenden Regeln ein:</p>
+<ol>
+<li>Wenn Sie die <strong>Filterseite</strong> öffnen, wählen Sie den Filter, den Sie für die Überprüfung verwenden müssen.</li>
+<li>Wählen Sie einen Wert aus, der sich auf den ausgewählten Filter bezieht.</li>
+<li>Wenn Sie weitere Filter für das ausgewählte Feld ausfüllen müssen, wiederholen Sie die beiden vorherigen Schritte, um einen weiteren Filter hinzuzufügen.</li>
+<li>Wenn Sie die Eingabe der Filter für das gewählte Feld abgeschlossen haben, wählen Sie <strong>OK</strong> aus.</li>
+</ol>
+</li>
+<li><p>Markieren Sie das Kontrollkästchen <strong>Umgekehrter Filterausdruck</strong>, um festzulegen, dass die Prüfung der Felder nur in den Zeilen ausgeführt wird, die nicht dem Filterausdruck entsprechen. Wenn die Zeile nicht gefiltert wird, wird dieses Feld ignoriert.</p>
+</li>
+</ol>
+</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie die <strong>Filterseite</strong> über die Zeile <strong>Filterausdruck</strong> öffnen, können Sie alle Standardfilterausdrücke verwenden, die sich auf das spezifische Feld beziehen, das Sie filtern möchten.</p>
+<p>Seien Sie vorsichtig, wenn Sie Validierungsregeln einrichten, da sie sich von Land zu Land bzw. Region zu Region unterscheiden können.</p>
+</div>
+<h2 id="use-custom-codeunits-in-intrastat-reporting">Angepasste Codeunits in Intrastat-Berichten verwenden</h2>
+<p>Wenn Sie die Funktionsweise von Intrastat ändern möchten und die Standardkonfiguration nicht ausreicht, können Sie das System anpassen, indem Sie die Standardfunktionen erweitern. Wenn Sie das Verhalten von Intrastat weiter verändern möchten, können Sie Ihre eigenen Codeunits entwickeln. Wenn Sie Codeunits erstellen, müssen Sie zusätzliche Änderungen vornehmen, um sie verwenden zu können. Um das System für die Verwendung Ihrer eigenen Objekte zu konfigurieren, folgen die Schritte.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>MwSt.-Berichtskonfiguration</strong> ein, und wählen Sie dann den zugehörigen Link aus.</li>
+<li>Fügen Sie auf der Seite <strong>Konfiguration MwSt.-Berichte</strong> eine neue Zeile hinzu.</li>
+<li>Wählen Sie im Feld <strong>MwSt.-Berichtstyp</strong> die Option <strong>Intrastat-Bericht</strong> aus.</li>
+<li>Geben Sie im Feld <strong>MwSt.-Berichtsversion</strong> die Version des Berichts an.</li>
+<li>Fügen Sie Ihre Codeunits für die folgenden Optionen hinzu:<ol>
+<li>Geben Sie im Feld <strong>Zeilen vorschlagen codeunit-ID</strong> die neue codeunit für das Vorschlagen von Zeilen in den Zeilen des Intrastat-Berichts an.</li>
+<li>Geben Sie im Feld <strong>Inhalt codeunit-ID</strong> die neue codeunit für den Export von Daten als Datei über eine Datenaustauschdefinition an.</li>
+<li>Geben Sie im Feld <strong>codeunit-ID validieren</strong> die neuen codeunits für die Validierung von Ergebnissen in Intrastat-Berichtszeilen an.</li>
+</ol>
+</li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Diese Zeile muss leer sein, wenn Sie die Standard Codeunits verwenden. Sie sollten nur dann eine Zeile erstellen und konfigurieren, wenn Sie angepasste Codeunits entwickelt haben.</p>
+</div>
+<h2 id="other-intrastat-configurations">Andere Intrastat-Konfigurationen</h2>
+<p>Debitor- und Kreditorkarten enthalten das Feld <strong>Intrastat-Partnertyp</strong>, das die gleichen Optionswerte wie das Feld <strong>Partnertyp</strong> hat: </p>
+<ul>
+<li>„“ (leer)</li>
+<li><em>Unternehmen</em></li>
+<li><em>Person</em></li>
+</ul>
+<p>Das Feld <strong>Partnertyp</strong> wurde in der Intrastat-Meldung durch das Feld <strong>Intrastat-Partnertyp</strong> ersetzt. Das Feld <strong>Partnertyp</strong> wird im einheitlichen Euro-Zahlungsverkehrsraum (SEPA) zur Definition des SEPA-Lastschriftverfahrens (Core oder B2B) verwendet. Das Feld <strong>Intrastat-Partnertyp</strong> wird nur für Intrastat-Meldungen verwendet. Deshalb können Sie bei Bedarf unterschiedliche Werte für die beiden Felder angeben.</p>
+<p>Wenn das Feld <strong>Intrastat-Partnertyp</strong> leer gelassen wird, wird der Wert aus dem Feld <strong>Partnertyp</strong> für die Intrastat-Meldung verwendet.</p>
+<p>Neben <strong>Intrastat-Berichtseinrichtung</strong>, <strong>Datenaustauschdefinition</strong> und <strong>Intrastat-Berichtsprüfliste</strong> müssen noch folgende weitere Einstellungen konfiguriert werden:</p>
+<table>
+<thead>
+<tr>
+<th>Seite</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Länder/Regionen</strong></td>
+<td>Fügen Sie auf der Seite <strong>Länder/Regionen</strong> die Informationen zu <strong>EU-Länder-/Regionscode</strong> und <strong>Intrastat-Code</strong> hinzu, um einen Code für das Land/die Region anzugeben, mit dem/der Sie Handel treiben. Diese Informationen werden in Intrastat-Berichten verwendet.</td>
+</tr>
+<tr>
+<td><strong>Zollpositionen</strong></td>
+<td>In vielen Ländern/Regionen werden von den Zoll- und Steuerbehörden achtstellige Codes für verschiedene Artikel vorgeschrieben. Um die Artikelposten so zu aktivieren, dass sie die erforderlichen Informationen enthalten, wenn das Programm sie in die Intrastat-Buchungsblattzeile importiert, geben Sie den Artikelcode auf der Seite <strong>Zollpositionen</strong> ein. Suchen Sie die Codes für die Elemente, mit denen Ihre Firma handelt, und geben Sie sie auf der Seite <strong>Zollpositionen</strong> ein.</td>
+</tr>
+<tr>
+<td><strong>Verkehrszweige</strong></td>
+<td>Es gibt sieben einstellige Codes für Intrastat-Transportmethoden: <strong>1</strong> für den Seetransport, <strong>2</strong> für den Schienentransport, <strong>3</strong> für den Straßentransport, <strong>4</strong> für den Lufttransport, <strong>5</strong> für den Posttransport, <strong>7</strong> für feste Anlagen und <strong>9</strong> für den Transport mit eigenem Antrieb (z. B. der Transport eines Autos durch Fahren). Business Central erfordert diese spezifischen Codes nicht. Wir empfehlen jedoch, dass die Beschreibungen eine ähnliche Bedeutung bereitstellen.</td>
+</tr>
+<tr>
+<td><strong>Transaktionsarten</strong></td>
+<td>Länder und Regionen haben unterschiedliche Codes für Arten von Intrastat-Transaktionen, wie z.B. gewöhnlicher Kauf und Verkauf, Umtausch von zurückgegebenen Waren und Umtausch von nicht zurückgegebenen Waren. Legen Sie alle Codes fest, die für Ihr Land/Ihre Region gelten. Diese Codes werden dann auf dem Inforegister <strong>Auslandshandel</strong> auf Einkaufs- und Verkaufsbelegen und bei der Bearbeitung von Retouren verwendet.</td>
+</tr>
+<tr>
+<td><strong>Transaktionsspezifikationen</strong></td>
+<td>Legen Sie Codes fest, um die Beschreibungen der Transaktionsarten zu ergänzen.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Ab Januar 2022 verlangt Intrastat unterschiedliche Transaktionsnatur-Codes für Versendungen an Privatpersonen oder nicht mehrwertsteuerlich registrierte Unternehmen und an mehrwertsteuerlich registrierte Unternehmen. Um diese Anforderung zu erfüllen, empfehlen wir Ihnen, die Transaktionsnatur-Codes auf der Seite <strong>Art des Geschäftes</strong> entsprechend den Anforderungen in Ihrem Land zu überprüfen und/oder neue hinzuzufügen. Sie sollten auch das Feld <strong>Intrastat-Partnertyp</strong> auf <em>Person</em> für eine Privatperson oder einen nicht mehrwertsteuerlich registrierten Geschäftskunden auf der entsprechenden <strong>Kunden</strong>-Seite überprüfen und aktualisieren. Wenn Sie sich nicht sicher sind, welchen Intrastat-Partnertyp oder Transaktionstyp Sie verwenden sollen, empfehlen wir Ihnen, einen Experten in Ihrem Land oder Ihrer Region zu fragen.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nettogewicht</strong></td>
+<td>Das Gewicht ist eine der grundlegenden Konfigurationen, die mit der Intrastat-Meldung verknüpft sind, da das Gesamtgewicht für die Meldung obligatorisch ist. Um für diese Anforderung bereit zu sein, geben Sie einen Wert in das Feld <strong>Nettogewicht</strong> auf der Karte des Artikels oder der Anlage ein.</td>
+</tr>
+<tr>
+<td><strong>Ursprungsland</strong></td>
+<td>Verwenden Sie die zweistelligen ISO-Alpha-Codes auf der Karte des Elements oder der Anlage für das Land/die Region, in dem die Ware erworben oder hergestellt wurde. Wenn die Ware in mehr als einem Land bzw. einer Region hergestellt wurde, ist das Ursprungsland bzw. die Ursprungsregion das letzte Land bzw. die letzte Region, in dem/der sie in nennenswertem Umfang verarbeitet wurde.</td>
+</tr>
+<tr>
+<td><strong>Mehrwertsteuer-Identifikationsnummer des Partnerunternehmens im Status des Einfuhrlandes</strong></td>
+<td>Dies ist die Umsatzsteuer-Identifikationsnummer des Partnerunternehmens im Status des Einfuhrlandes. Die Umsatzsteuer-Identifikationsnummer wird auch beim Austausch von Intra-EU-Exportdaten zwischen den Mitgliedstaaten verwendet und lässt die Mitgliedstaaten zu, die erhaltenen Daten der importierenden Firma in ihrem eigenen Land bzw. Ihrer eigenen Region zuzuordnen. Die meldenden Einheiten müssen die Umsatzsteuer-Identifikationsnummer der Firma angeben, die den innergemeinschaftlichen Erwerb von Waren im Status des Einfuhrlandes gemeldet hat.</td>
+</tr>
+</tbody>
+</table>
+<p>Optional können Sie auch Folgendes angeben:</p>
+<ul>
+<li><strong>Warencodes</strong>: Zoll- und Steuerbehörde haben numerische Codes eingerichtet, die Artikel und Dienstleistungen klassifizieren. Sie können diese Codes für Artikel angeben.</li>
+<li><strong>Gebiete</strong>: Ergänzende Informationen über Länder und Regionen.</li>
+<li><strong>Eingangs-/Ausgangsorte</strong>: Geben Sie die Orte an, an denen Sie Artikel in andere Länder versenden oder aus anderen Ländern/Regionen empfangen. Ein Flughafen ist ein Beispiel für einen Eingangs- oder Ausgangspunkt. Sie geben Häfen auf Verkaufs- und Einkaufsbelegen des Inforegisters <strong>Außenhandel</strong> ein. Diese Informationen werden aus den Artikelposten kopiert, wenn Sie das Intrastat-Buch.-Blatt erstellen.</li>
+<li><strong>Zusätzliche Maßeinheit</strong>: Die Menge der Waren für die Intrastat-Meldung kann entweder das Nettogewicht (in Kilogramm) oder eine zusätzliche Einheit sein. Wenn zusätzliche Einheiten erforderlich sind, müssen Sie diese für Elemente und Anlagen konfigurieren.</li>
+</ul>
+<h4 id="set-up-transport-methods">Verkehrszweige festlegen</h4>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Verkehrszweige</strong> ein, und wählen Sie dann den zugehörigen Link aus.</li>
+<li>Geben Sie die Informationen in die Felder wie erforderlich ein. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<h4 id="set-up-transaction-nature-codes">Transaktionsnatur-Codes festlegen</h4>
+<ol>
+<li>wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Art des Geschäftes</strong> ein, und wählen Sie dann den entsprechenden Link aus.</li>
+<li>Geben Sie die Informationen in die Felder wie erforderlich ein. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<h3 id="other-related-configurations">Andere verwandte Konfigurationen</h3>
+<p>Bevor Sie die Intrastat-Berichtswesenfunktion verwenden, müssen Sie Felder auf den Artikel-, Anlage-, Debitor- und Kreditorkarten definieren.</p>
+<h4 id="item-cards">Element-Karten</h4>
+<p>Folgen die Schritte zum Einrichten aller erforderlichen Intrastat-bezogenen Informationen zum Artikel Karten.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Artikel</strong> ein, und wählen Sie dann den entsprechenden Link aus.</li>
+<li>Wählen Sie das Element, das Sie konfigurieren möchten.</li>
+<li><p>Geben Sie auf dem Inforegister <strong>Einstandspreise und Buchung</strong> in den Feldern <strong>Zollpos.</strong>, <strong>Besondere Einheit</strong> und <strong>Code Ursprungsland/-region</strong> einen Wert ein.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um eine Einheit zu verwenden, die die Basiseinheit ergänzt, konfigurieren Sie die zusätzliche Basiseinheit auf der Seite <strong>Artikeleinheiten</strong>.</p>
+</div>
+</li>
+<li><p>Geben Sie im Inforegister <strong>Bestand</strong> in das Feld <strong>Nettogewicht</strong> einen Wert im Dezimalformat ein.</p>
+</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie die Zollposition zu einer Einheit hinzufügen, die für den Artikel definiert ist, füllt Business Central das Feld <strong>Besondere Einheit</strong> basierend auf der Konfiguration der Zollposition automatisch aus. Sie können den Wert des Felds <strong>Besondere Einheit</strong> nach Bedarf ändern.</p>
+</div>
+<h4 id="set-up-fixed-assets-for-intrastat">Anlagen für Intrastat einrichten</h4>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Anlagen</strong> ein, und wählen Sie dann den zugehörigen Link aus.</li>
+<li>Wählen Sie die Anlage, die Sie konfigurieren möchten.</li>
+<li>Geben Sie im Inforegister <strong>Intrastat</strong> in die Felder <strong>Zollpos.</strong>, <strong>Nettogewicht</strong> und <strong>Besondere Einheit</strong> einen Wert ein.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können verschiedene Maßeinheiten als zusätzliche Maßeinheit verwenden. Aber egal, welchen <strong>Maßeinheiten-Code</strong> Sie wählen, seine <strong>Menge</strong> in den Intrastat-Berichten wird immer 1 sein.</p>
+</div>
+<h4 id="set-up-vendors-for-intrastat">Kreditoren für Intrastat einrichten</h4>
+<p>Bevor Sie einen Kreditor in die Intrastat-Berichterstellung aufnehmen können, geben Sie seine Informationen auf der Seite <strong>Kreditorenkarte</strong> ein. Geben Sie beispielsweise einen Wert für <strong>Länder-/Regionscode</strong> und einen Wert für <strong>USt-IdNr.</strong> an.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Kreditoren</strong> ein, und wählen Sie dann den zugehörigen Link aus.</li>
+<li>Wählen Sie den Anbieter, den Sie konfigurieren möchten.</li>
+<li>Legen Sie auf dem Inforegister <strong>Intrastat</strong> Standardwerte für die Felder <strong>Standardmäßige Art des Geschäftes</strong>, <strong>Standardmäßige Art des Geschäftes – Rücksendungen</strong> und <strong>Standardverkehrszweig</strong> fest.</li>
+<li>Geben Sie im Inforegister <strong>Zahlungen</strong> im Feld <strong>Intrastat-Partnertyp</strong> an, ob der Kreditor eine Person oder ein Unternehmen ist.</li>
+</ol>
+<h4 id="set-up-customers-for-intrastat">Debitoren für Intrastat einrichten</h4>
+<p>Bevor Sie einen Debitor in die Intrastat-Berichterstellung aufnehmen können, geben Sie seine Informationen auf der Seite <strong>Debitorenkarte</strong> ein. Sie müssen beispielsweise einen Wert für <strong>Länder-/Regionscode</strong> und einen Wert für <strong>USt-IdNr.</strong> angeben.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Debitoren</strong> ein, und wählen Sie dann den entsprechenden Link aus.</li>
+<li>Wählen Sie den Kunden aus, den Sie konfigurieren möchten.</li>
+<li>Legen Sie auf dem Inforegister <strong>Intrastat</strong> die Standardwerte für die Felder <strong>Standardmäßige Art des Geschäftes</strong>, <strong>Standardmäßige Art des Geschäftes – Rücksendungen</strong> und <strong>Standardverkehrszweig</strong> fest.</li>
+<li>Geben Sie im Inforegister <strong>Zahlungen</strong> im Feld <strong>Intrastat-Partnertyp</strong> an, ob der Kreditor eine Person oder ein Unternehmen ist.</li>
+</ol>
+<h4 id="exclude-items-and-fixed-assets-from-intrastat-reporting">Elemente und Anlagen von Intrastat-Berichten ausschließen</h4>
+<p>Wenn es einen Grund gibt, um einen bestimmten Artikel oder eine bestimmte Anlage von der Intrastat-Berichterstattung auszuschließen, ändern Sie die Option auf der jeweiligen Karte, indem Sie das Feld <strong>Aus Intrastat-Bericht ausschließen</strong> auswählen. Verwenden Sie dieses Feld auf der Karte <strong>Artikelvorlage</strong>, um weitere Artikel zu erstellen, die von der Intrastat-Berichterstattung ausgeschlossen werden sollen. </p>
+<h5 id="exclude-an-item-from-intrastat-reporting">Ein Element von der Intrastat-Berichterstattung ausschließen</h5>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Artikel</strong> ein, und wählen Sie dann den entsprechenden Link aus.</li>
+<li>Wählen Sie den Artikel aus, den Sie konfigurieren möchten, und aktivieren Sie dann auf dem Inforegister <strong>Einstandspreise und Buchung</strong> das Kontrollkästchen <strong>Aus Intrastat-Bericht ausschließen</strong>.</li>
+</ol>
+<h5 id="exclude-a-fixed-asset-from-intrastat-reporting">Eine Anlage aus dem Intrastat-Bericht ausschließen</h5>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Anlagen</strong> ein, und wählen Sie dann den zugehörigen Link aus.</li>
+<li>Wählen Sie die Anlage, die Sie konfigurieren möchten.</li>
+<li>Aktivieren Sie im Inforegister <strong>Intrastat</strong> das Kontrollkästchen <strong>Aus Intrastat-Bericht ausschließen</strong>.</li>
+</ol>
+<h4 id="set-up-tariff-numbers">Zollpositionen einrichten</h4>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Zollpositionen</strong> ein, und wählen Sie dann den zugehörigen Link aus.  </li>
+<li><p>Geben Sie auf der Seite <strong>Zollpositionen</strong> Informationen in den Feldern gemäß der Beschreibung in der folgenden Tabelle ein.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nr.</strong></td>
+<td>Gibt die Zollposition an.</td>
+</tr>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td>Gibt eine Beschreibung der zugehörigen Zollposition an.</td>
+</tr>
+<tr>
+<td><strong>Besondere Einheiten</strong></td>
+<td>Legt fest, ob die Zoll- und Steuerbehörden Angaben zu Mengen und Einheiten für den Artikel verlangen.</td>
+</tr>
+<tr>
+<td><strong>Umrechnungsfaktor</strong></td>
+<td>Gibt den Umrechnungsfaktor für die Zollposition an</td>
+</tr>
+<tr>
+<td><strong>Einheit</strong></td>
+<td>Gibt die Einheit für die Zollposition an</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie eine besondere Einheit hinzufügen, fragt Business Central, ob Sie zugehörige Artikel aktualisieren möchten. Wenn Sie zugehörige Artikel aktualisieren, wird der Wert <strong>Einheit</strong> auf der Seite <strong>Artikeleinheiten</strong> für alle Artikel mit der gleichen Zollposition aktualisiert.</p>
+<p>Wenn Sie dem Artikel eine Zollposition mit einem definierten <strong>Einheit</strong>-Wert hinzufügen, fügt Business Central dem <strong>Artikeleinheit</strong>-Wert für den Artikel automatisch eine neue Einheit hinzu. Der Wert <strong>Menge pro Einheit</strong> basiert auf dem Feld <strong>Mengenrundungspräzision</strong>.</p>
+</div>
+<h2 id="automate-the-process-of-inheriting-the-country-of-origin-for-items">Automatisieren Sie den Prozess der Übernahme des Herkunftslandes für Artikel</h2>
+<div class="NOTE"><h5>Hinweis</h5><p>Möchte der Benutzer die  <em>Herkunftslandvererbung</em> vom Einkaufsbeleg zur Verkaufsrechnung nutzen, ist dies nur über  <em>Artikelverfolgungszeilen möglich</em>. Andernfalls verwendet das System den Standardwert nicht.</p>
+</div>
+<h3 id="how-to-set-up">So richten Sie ein</h3>
+<h4 id="intrastat-report">Intrastat-Bericht</h4>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Intrastat-Berichtseinrichtung</strong> ein, und wählen Sie den entsprechenden Link aus. </li>
+<li>Wählen Sie unter  <strong>Intrastat-Bericht-Setup</strong> im Feld  <strong>Standard-Ländercode für Artikelverfolgung</strong>  die Option  <strong>Einkaufskopfzeilen</strong>  aus.  </li>
+</ol>
+<h4 id="item">Option</h4>
+<p>Um diese automatisierte Funktion zu verwenden, müssen Sie die Artikelverfolgung für diese Artikel aktivieren (entweder Seriennummern, Chargen oder beides). Um die Artikelverfolgung für den Artikel zu aktivieren, folgen die Schritte.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie  <strong>Artikel</strong> ein und dann Auswählen das zugehörige verknüpfen.</li>
+<li>Wählen Sie das Element aus, das Sie konfigurieren möchten.</li>
+<li>Karte Sie auf der Seite  <strong>Artikel Karte</strong>  im Inforegister  <strong>Artikelverfolgung</strong>  einen der Artikelverfolgungscodes mithilfe des Felds  <strong>Artikelverfolgungscode</strong>  ein.</li>
+<li>Bei der Auswahl können Sie sehen, wie die Artikelverfolgungscodes konfiguriert sind.</li>
+<li>Auswählen das gewünschte und Auswählen <strong>OK</strong>.</li>
+</ol>
+<h3 id="use-the-item-in-any-of-the-purchase-documents">Verwenden Sie den Artikel in einem der Kaufdokumente</h3>
+<p>Sobald Sie den Artikel Auswählen haben, für den in der Einkaufszeile ein  <strong>Artikelverfolgungscode</strong>  aktiviert ist, müssen Sie die Schritte folgen.  </p>
+<ol>
+<li>Wählen Sie auf der Registerkarte  <strong>Zeilen</strong>  die Option  <strong>Zeile</strong> aus und führen Sie die Aktion  <strong>Artikelverfolgungszeilen</strong>  aus.</li>
+<li>Wählen Sie auf der Seite  <strong>Artikelverfolgungszeilen</strong>  nach dem Hinzufügen der  <strong>Seriennr.</strong> oder  <strong>Chargennr.</strong> und dem Eingeben des Werts in das Feld  <strong>Menge (Basis)</strong>  eine der folgenden Optionen aus:  <ol>
+<li>Die  <strong>Lot-Nr.-Information Karte</strong> Aktion, wenn Sie Lots verwenden.   </li>
+<li>Die  <strong>Seriennummerninformation Karte</strong> Aktion, wenn Sie Seriennummern verwenden.  </li>
+</ol>
+</li>
+<li>Sie können  <strong>Neu</strong> (<strong>+</strong>) auswählen, um auf der Seite  <strong>Chargennummern-Informationen Karte</strong> oder  <strong>Seriennummern-Informationen Karte</strong>  neue Informationen Karte zu erstellen. </li>
+<li>Der  <strong>Länder-/Regionscode</strong>  wird mit dem  <strong>Länder-/Regionscode</strong> aus Ihrem Dokument  <strong>Kaufkopf</strong> ausgefüllt.</li>
+<li>Wenn Sie den  <strong>Länder-/Regionscode</strong> ändern möchten, können Sie dies manuell tun.</li>
+<li>Schließen Sie die Seite.</li>
+<li>Wiederholen Sie diesen Vorgang für jede Zeile auf der Seite  <strong>Artikelverfolgungszeilen</strong>, auf der Sie die Artikelverfolgung konfiguriert haben.</li>
+<li>Schließen Sie die Seite  <strong>Artikelverfolgungszeilen</strong> .</li>
+</ol>
+<p>Wenn Sie mit der  <strong>Verkaufsrechnung</strong> arbeiten, wird Business Central automatisch der  <strong>Länder-/Regionscode</strong>  für jede von Ihnen gewählte Chargen- oder Seriennummer erfasst. Sie können den Code jederzeit anhand der  <strong>Artikelverfolgungszeilen</strong> aus den Verkaufszeilen überprüfen.  </p>
+<p>Diese <strong>Länder-/Regionscodes</strong> werden automatisch in das Feld <strong>Ursprungsland-/-regionscode</strong> in den <strong>Intrastat-Berichtszeilen</strong> eingetragen.  </p>
+<h2 id="enter-countryregion-intrastat-settings">Länder-/regionsspezifische Intrastat-Einstellungen eingeben</h2>
+<p>Intrastat-Anforderungen sind in allen Mitgliedsstaaten der EU ähnlich, obwohl es wichtige Ausnahmen gibt. Theoretisch sollten die Regeln in allen Mitgliedsstaaten einheitlich angewendet werden. Es gibt jedoch Unterschiede bei den Implementierungen, da einige Mitgliedstaaten Leitlinien zur Verfügung stellen, wie die Grundsätze in bestimmten Situationen (z. B. Handelsmuster und Rücksendungen von Waren) anzuwenden sind. Diese Leitlinien können für verschiedene Situationen zu unterschiedlichen Ergebnissen führen. Daher können sich die von den Ländern/Regionen einzugebenden Informationen ebenso unterscheiden wie das Dateiformat, das sie für die Meldung verwenden müssen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn der Benutzer die  <strong>Chargennummerninformation Karte</strong> oder  <strong>Seriennummerninformation Karte</strong> für keine bestimmte Charge oder Seriennummer erstellt, verwendet das System nicht den  <strong>Länder-/Regionscode</strong>  aus der Einkaufskopfzeile, sondern den  <strong>Länder-/Regionscode</strong> aus dem  <strong>Artikel</strong> Karte.  </p>
+</div>
+<h3 id="austria">Österreich</h3>
+<p>Die Intrastat-Berichterstellung in Österreich erfordert zwei unterschiedliche Dateien für Eingänge und Lieferungen. Um zu überprüfen, ob Ihr Setup korrekt ist, folgen die Schritte.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Intrastat-Berichtseinrichtung</strong> ein, und wählen Sie den entsprechenden Link aus.  </li>
+<li>Überprüfen Sie im Inforegister <strong>Berichterstellung</strong>, ob <strong>Eingangs-/Sendungsdateien aufteilen</strong> ausgewählt ist. Wenn dies der Fall ist, werden Sie feststellen, dass zwei separate  <strong>Data Exchange Def. Code</strong>  Werte konfiguriert sind. </li>
+<li>Vergewissern Sie sich, dass das Feld <strong>Zip-Datei(-en)</strong> ausgewählt ist, um sicherzustellen, dass Berichtsdateien zur Zip-Datei hinzugefügt werden.</li>
+</ol>
+<p>Der Vorgang, mit Intrastat-Berichten zu arbeiten, entspricht dem von globalen Funktionen.</p>
+<!-- ### Belgium-->
+<h3 id="czech-republic">Tschechische Republik</h3>
+<p>Die neue Intrastat-Berichtsumgebung für die Tschechische Republik wird ab dem 1. Veröffentlichungszyklus 2023 verfügbar sein. Verwenden Sie in der Zwischenzeit die Funktion <strong>Intrastat-Buch.-Blatt</strong> weiter.</p>
+<h3 id="finland">Finnland</h3>
+<p>In Finnland sind einige zusätzliche Schritte zur Einrichtung von Intrastat erforderlich. Die Intrastat-Berichterstellung in Finnland erfordert zwei unterschiedliche Dateien für Eingänge und Lieferungen. Sie werden außerdem feststellen, dass zwei separate  <strong>Data Exchange Def. Code</strong> Werte konfiguriert sind.</p>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Intrastat-Berichtseinrichtung</strong> ein, und wählen Sie den entsprechenden Link aus.  </li>
+<li><p>Geben Sie auf der Seite <strong>Intrastat-Berichtseinrichtung</strong> im Inforegister <strong>Dateieinrichtung</strong> die Feldinformationen gemäß der Beschreibung in der folgenden Tabelle ein.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Benutzerdefinierter Code</strong></td>
+<td>Gibt einen benutzerdefinierten Code für die Einrichtungsinformationen der Intrastat-Datei an.</td>
+</tr>
+<tr>
+<td><strong>Seriennummer des Unternehmens</strong></td>
+<td>Gibt eine Seriennummer des Unternehmens die Einrichtungsinformationen der Intrastat-Datei an.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Überprüfen Sie im Inforegister <strong>Berichterstellung</strong>, ob <strong>Eingangs-/Sendungsdateien aufteilen</strong> ausgewählt ist.</p>
+</li>
+</ol>
+<p>Der Vorgang, mit Intrastat-Berichten zu arbeiten, entspricht dem von globalen Funktionen.</p>
+<!-- ### Germany-->
+<h3 id="italy">Italien</h3>
+<p>Eine neue Intrastat-Berichtsumgebung für Italien ist ab Februar 2023 verfügbar. Verwenden Sie in der Zwischenzeit die Funktion <strong>Intrastat-Buch.-Blatt</strong> weiter.</p>
+<!-- ### France-->
+<h3 id="sweden">Schweden</h3>
+<p>Die Intrastat-Berichterstellung in Schweden erfordert zwei unterschiedliche Dateien für Eingänge und Lieferungen. Um zu überprüfen, ob Ihr Setup korrekt ist, folgen die Schritte.</p>
+<ol>
+<li>Auswählen die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sagen Sie mir“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Intrastat-Berichtseinrichtung</strong> ein, und wählen Sie den entsprechenden Link aus.  </li>
+<li>Überprüfen Sie im Inforegister <strong>Berichterstellung</strong>, ob <strong>Dateien für Eingänge/Lieferungen trennen</strong> ausgewählt ist. Wenn dies der Fall ist, werden Sie feststellen, dass zwei separate  <strong>Data Exchange Def. Code</strong> Werte konfiguriert sind.</li>
+</ol>
+<p>Der Vorgang, mit Intrastat-Berichten zu arbeiten, entspricht dem von globalen Funktionen.</p>
+<!-- ### United Kingdom-->
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance-how-report-intrastat.html">Intrastat-Berichterstattung in Business Central</a><br><a href="finance.html">Finanzmanagement</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Fehlerbehebung beim Zugriff mit Microsoft 365-Lizenzen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Fehlerbehebung beim Zugriff mit Microsoft 365-Lizenzen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="fehlerbehebung-beim-zugriff-mit-microsoft-365-lizenzen">Fehlerbehebung beim Zugriff mit Microsoft 365-Lizenzen</h1>
+
+<h2 id="diese-seite-verwendet-daten-aus-verwandten-tabellen-auf-die-sie-keinen-zugriff-haben-fehlermeldung">Diese Seite verwendet Daten aus verwandten Tabellen, auf die Sie keinen Zugriff haben, Fehlermeldung</h2>
+<h3 id="symptome">Symptome</h3>
+<p>Beim Zugriff auf einen Datensatz in Teams wird Ihnen eine Fehlermeldung in einer Registerkarte oder Kartendetails ähnlich der folgenden angezeigt:</p>
+<p>Diese Seite verwendet Daten aus verwandten Tabellen, auf die Sie keinen Zugriff haben. Wenden Sie sich an Ihren Administrator, um mit allen Funktionen dieser Seite zu arbeiten.“</p>
+<h3 id="grund">Grund</h3>
+<p>Höchstwahrscheinlich fehlen Ihnen Objektberechtigungen für Tabellen, auf die die aktuelle Seite oder der aktuelle Datensatz verweist.</p>
+<h2 id="microsoft-365-zugriff-wurde-aktiviert-aber-benutzer-erhalten-beim-zugriff-auf-einen-datensatz-einen-berechtigungsfehler">Microsoft 365 Zugriff wurde aktiviert, aber Benutzer erhalten beim Zugriff auf einen Datensatz einen Berechtigungsfehler</h2>
+<h3 id="symptome-1">Symptome</h3>
+<p>Der Zugriff mit Microsoft 365 wurde im Business Central Admin Center aktiviert, aber Benutzer erhalten beim Zugriff auf einen Datensatz einen Berechtigungsfehler.</p>
+<h3 id="grund-1">Grund</h3>
+<p>Wenn Sie den Zugriff im Business Central Admin Center aktivieren, aber keine Berechtigungen auf der <strong>Lizenzkonfigurationsseite</strong> zuweisen, wird jedem, der versucht, auf Business Central-Datensätze in Teams zuzugreifen, sein Benutzerdatensatz ohne Berechtigung für Objekte bereitgestellt. Business Central ist von Natur aus sicher: Administratoren müssen zunächst konfigurieren, auf welche Daten in Teams zugegriffen werden kann. </p>
+<h3 id="lösung">Lösung</h3>
+<p>Das Anpassen von Berechtigungen auf der Lizenzkonfigurationsseite wirkt sich nur auf neu erstellte Benutzer aus. Sie müssen die fehlenden Berechtigungen auch Benutzern zuweisen, die bereits über die Benutzerlistenseite erstellt wurden. </p>
+<h2 id="sie-haben-einen-link-in-teams-geteilt-aber-benutzer-erhalten-eine-meldung-dass-sie-nur-daten-anzeigen-können">Sie haben einen Link in Teams geteilt, aber Benutzer erhalten eine Meldung, dass sie nur Daten anzeigen können</h2>
+<h3 id="symptome-2">Symptome</h3>
+<p>Wenn ich einen Link in Teams als Business Central Benutzer freigebe, erhalten andere die Fehlermeldung „Beim Zugriff auf Business Central mit einer Microsoft 365-Lizenz können Sie nur Daten in Microsoft Teams anzeigen“.</p>
+<h3 id="grund-2">Grund</h3>
+<p>Wenn Sie einen Business Central-Link für Teams-Chats oder -Kanäle freigeben, wird durch das Navigieren eines Links immer aus Microsoft Teams heraus navigiert, wo die Daten nicht mehr zugänglich für eine Person sind, die eine Microsoft 365-Lizenz hat.</p>
+<h3 id="lösung-1">Lösung</h3>
+<p>Fügen Sie beim Teilen von Seiten oder Datensätzen entweder die Linkvorschau als Karte hinzu oder teilen Sie Daten als Registerkarte im Chat oder Kanal.</p>
+<h2 id="die-karte-vom-freigegebenen-link-ist-minimal-und-enthält-keine-detail-schaltfläche">Die Karte vom freigegebenen Link ist minimal und enthält keine Detail-Schaltfläche</h2>
+<h3 id="symptome-3">Symptome</h3>
+<p>Wenn ein Microsoft 365 Lizenzinhaber ohne Business Central-Lizenz einen Business Central-Link in Teams teilt, wird dieser automatisch zu einer Karte erweitert, die keine nützlichen Informationen enthält und nur Business Central ohne die Schaltfläche <strong>Details</strong> anzeigt.</p>
+<h3 id="grund-3">Grund</h3>
+<p>Benutzer, die eine Microsoft 365 Lizenz, aber keine Business Central-Lizenz haben, dürfen Links nicht als Karten freigeben. Wenn der Benutzer die Business Central-App für Teams installiert hat und einen Link in den Erstellungsbereich einfügt, wird nur eine minimale Karte angezeigt. </p>
+<h2 id="siehe-auch">Siehe auch</h2>
+<p><a href="admin-access-with-m365-license.html#minimum-requirements">Business Central-Zugriff mit Microsoft 365-Lizenzen</a><br><a href="admin-access-with-m365-license-setup.html">Zugriff mit Microsoft 365-Lizenzen festlegen</a><br><a href="across-teams-overview.html">Integration von Business Central und Microsoft Teams</a>
+<a href="across-working-with-teams.html">Gemeinsame Nutzung von Business Central-Datensätzen und Seitenlinks in Microsoft Teams</a><br><a href="admin-teams-troubleshooting.html">Problembehandlung der Teams-Integration</a>  </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

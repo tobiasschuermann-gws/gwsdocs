@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Set up and generate DIOT reports | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Set up and generate DIOT reports | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-and-generate-diot-reports">Set Up and Generate DIOT Reports</h1>
+
+<p>As a company in Mexico, you must report VAT from vendor purchases to the Mexican government, to SAT - Servicio de Administración Tributaria. This can be done in Business Central by generating a file that can be uploaded to SAT. This topic describes how to set up the functionality and generate the report. The DIOT (Declaración Informativa de Operaciones con Terceros) report functionality is created as an extension (app) for Business Central and is preinstalled in the online version but must be installed manually in the on-premises version of Business Central.</p>
+<h2 id="what-does-this-extension-hhandle">What does this extension hHandle?</h2>
+<p>The extension provides the following capabilities:</p>
+<ul>
+<li>Setup of the DIOT-related information</li>
+<li>Vendor settings</li>
+<li>Export the DIOT report so it can be uploaded to the authorities</li>
+</ul>
+<h2 id="setup-of-the-mexican-diot-extension">Setup of the Mexican DIOT extension</h2>
+<p>You set up the DIOT extension through Assisted Setup, which provides an easy, step-by-step guide for getting started with DIOT in Business Central. If needed, you can run the guide several times until the setup is completed.</p>
+<ol>
+<li>In Business Central, choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>Assisted Setup</strong>, and then choose the related link.  </li>
+<li>Choose the <strong>Set Up DIOT</strong> action.</li>
+<li>The first page in the setup guide explains what you are about to set up. Choose the <strong>Next</strong> button.</li>
+<li><p>In the in <strong>Default Vendor DIOT Type of Operation</strong> field, choose the default type of operation that you want to be set on vendors in the system.</p>
+<p> Every entry in the report must be assigned a <strong>Type of Operation</strong> value. There are three valid types: <strong>Prof. Services</strong>, <strong>Lease and Rent</strong>, and <strong>Others</strong>. You are not allowed to report the <strong>Lease and Rent</strong> type of operation for a vendor that is not local. All vendors will be updated with the setting chosen here.</p>
+</li>
+<li><p>Choose a value in the <strong>Type of Operation</strong> field, and then choose the <strong>Next</strong> button.</p>
+</li>
+<li><p>Choose the <strong>Open Vendor List</strong> action to select another <strong>Type of Operation</strong> value individually for vendors if you want the setting to be different from what you chose in the previous step.</p>
+<p> A special page opens, which includes the <strong>DIOT Type of Operation</strong> field. Here you must set up DIOT concepts, which is a sort of setup of how VAT entries are collected for the report.</p>
+</li>
+<li><p>Choose the <strong>Open DIOT Concepts</strong> action.</p>
+<p> You will see a list of predefined DIOT concepts that look like VAT setup. These DIOT concepts must be linked to VAT product posting groups and VAT business posting groups. You may not have to link all of the DIOT concepts. Investigate each DIOT concept and decide how these map to your VAT posting setup.</p>
+<p> Adding a link to a DIOT concept is done by clicking the number in the <strong>VAT Link Count</strong> field. Note, that not all DIOT concepts must be linked. DIOT concepts with <strong>None</strong> in the <strong>Column Type</strong> field exist for legacy reasons and cannot be linked. For records where the <strong>VAT Link Count</strong> field is not filled in, you should investigate if you have VAT entries that fall under this DIOT concept and add the corresponding link. DIOT records where the <strong>VAT Link Count</strong> field is filled in indicate that links are already created or do not have to be created.</p>
+</li>
+<li><p>Choose the <strong>Next</strong> button.</p>
+<p> The setup of DIOT is now finished.</p>
+</li>
+<li>Choose the <strong>Finish</strong> button.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Note that for the DIOT report, the vendor&#39;s operation type will be used for all operations with that vendor unless you specifically change the value of the <strong>DIOT Type Of Operation</strong> in the document before you post it. The DIOT operation type for the vendor is not passed on to purchase documents automatically. If you want to use a type other than the one that is specified for the vendor, change the field on the purchase document manually.</p>
+</div>
+<h2 id="optional-setup-for-reporting-withholding-tax-with-the-diot-extension">Optional setup for reporting withholding tax with the DIOT extension</h2>
+<p>The DIOT report exports data including withholding tax amounts for vendor transactions. Calculation of withholding tax is currently not supported in the Mexican version of Business Central. To work around this, you can post extra lines to a predefined general ledger account. The DIOT extension supports reporting withholding tax data in the following way:</p>
+<p>The <strong>VAT Posting Setup</strong> table has a new field, <strong>DIOT WHT %</strong>. By setting this field to a value other than zero, you indicate that all entries posted with this setup are to be considered as if they were posted with that amount of VAT withheld.</p>
+<p>For example, if you have transactions that are supposed to be 10% VAT and 5% withholding tax, use a posting setup where the <strong>VAT %</strong> field contains <em>10</em> and the <strong>DIOT WHT %</strong> field contains <em>5</em>.  </p>
+<p>This field will only affect the DIOT report calculations and not the actual posting of the lines/entries/documents, so you must continue the existing workaround that you may have for calculating withholding tax, regardless of setting up the DIOT Report extension.</p>
+<h3 id="to-create-an-export-of-diot-report-files">To create an export of DIOT report files</h3>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature."> &quot;Tell me what you want to do&quot;) icon, enter <strong>Create DIOT Report</strong>, and then choose the related link.  </li>
+<li>On the <strong>Create DIOT report</strong> request page, set the <strong>Starting Date</strong> and <strong>Ending Date</strong> fields to represent the period for which you wish to report.</li>
+<li><p>Choose the <strong>OK</strong> button.</p>
+<p> You may get an error regarding the <strong>RFC No.</strong> field, which needs to be set up on local vendors. To set this up, fill in the <strong>RFC No.</strong> field on the <strong>Payments</strong> tab on the <strong>Vendor Card</strong> page.</p>
+</li>
+</ol>
+<p>When the report runs without errors, you will be prompted to save the file <strong>Diot.txt</strong>, which you can then send to authorities.</p>
+<h2 id="see-also">See also</h2>
+<p><a href="../../ui-extensions.html">Customizing Business Central Using Extensions</a><br><a href="../../ui-get-ready-business.html">Getting Ready for Doing Business</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

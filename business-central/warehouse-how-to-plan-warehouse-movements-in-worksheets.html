@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Vorgehensweise: Planen von Lagerplatzumlagerungen in Arbeitsbl&#228;ttern | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Vorgehensweise: Planen von Lagerplatzumlagerungen in Arbeitsbl&#228;ttern | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="plan-warehouse-movements-in-worksheets">Planen von Umlagerungen in Arbeitsblättern</h1>
+
+<p>Planen Sie Lagerplatzumlagerungen im Arbeitsblatt, indem Sie eine Wiederauffüllfunktion nutzen oder manuell die Zeilen planen, die Sie als Umlagerungsanweisungen erstellen möchten.  </p>
+<h2 id="to-calculate-a-replenishment-movement">So berechnen Sie Lagerplatzauffüllungen:</h2>
+<p>Wenn aus dem Lager Artikel an Debitoren geliefert werden, enthalten die Lagerplätze mit den höchsten Prioritäten (höchstwahrscheinlich die, die am dichtesten am Warenausgangsbereich liegen) kontinuierlich weniger Artikel. Um diese Lagerplätze mit den höchsten Prioritäten mit Artikeln aus anderen Lagerplätzen wiederaufzufüllen, können Sie die Funktion <strong>Lagerplatz-Auffüllung berechnen</strong> auf der Seite <strong>Lagerplatzumlagerungsarbeitsblatt</strong> verwenden.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Arbeitsblatt für Lagerplatzumlagerungen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li><p>Wählen Sie die Aktion <strong>Lagerplatzauffüllung berechnen</strong>.  </p>
+<p>Business Central erstellt Zeilen, die genau angeben, wie Artikel von den Lagerplätzen mit niedriger Priorität in die mit höherer Priorität umgelagert werden sollen.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Eine Umlagerung wird gemäß FEFO vorgeschlagen, wenn Sie die Funktion <strong>Lagerplatzumlagerung erstellen</strong> aktivieren und wenn die folgenden Bedingungen für einen Artikel erfüllt sind:  </p>
+<ul>
+<li>Der Artikel weist ein Ablaufdatum auf.  <ul>
+<li>Das Feld <strong>Gemäß FEFO kommissionieren</strong> ist auf der Lagerortkarte aktiviert, und  </li>
+<li>Das Kontrollkästchen <strong>Kommissionierung erforderlich</strong> muss auf der Lagerortkarte aktiviert sein.  </li>
+<li>Die Felder <strong>Von Zone</strong> und <strong>Von Lagerplatz</strong> sind leer.  </li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Weitere Informationen finden Sie unter <a href="warehouse-picking-by-fefo.html">Korrigieren der FEFO</a>.  </p>
+</li>
+<li><p>Sehen Sie sich die Zeilen an und ändern Sie sie – falls notwendig – oder löschen Sie einige von ihnen, wenn Sie nicht genug Zeit haben, alle auszuführen.  </p>
+</li>
+<li>Wählen Sie die Aktion <strong>Lagerplatzumlagerung erstellen</strong> aus, um eine Anweisung zu erstellen, die die Lagermitarbeiter ausführen sollen.  </li>
+</ol>
+<h2 id="to-move-the-entire-contents-of-one-or-more-bins-by-using-the-get-bin-content-function">Den gesamten Inhalt eines oder mehrerer Lagerplätze umlagern, indem Sie die Funktion &quot;Lagerplatzinhalt holen&quot; verwenden</h2>
+<p>Sie können den Lagerplatzumlagerungsarbeitsblatt auch nutzen, um andere Umlagerungen von Artikeln innerhalb des Lagers zu planen. Wenn Sie z. B. Artikel für die Qualitätskontrolle in einen Lagerplatz einlagern möchten, können Sie den Lagerplatzumlagerungsarbeitsblatt verwenden, um diese Aktion zu planen, und dann eine Lagerplatzumlagerung erstellen, die eine Anweisung für einen Mitarbeiter darstellt.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Arbeitsblatt für Lagerplatzumlagerungen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die <strong>Lagerplatzinhalt holen</strong> Aktion aus. Sie verwenden die Anforderungsseite, um Filter auf die Lagerplätze und Artikel zu setzen, die in den Lagerplatzumlagerungsarbeitsblattzeilen erscheinen sollen.  </li>
+<li><p>Füllen Sie die entsprechenden Felder in der Anforderungsseite der Stapelverarbeitung aus. Wenn Sie z. B. den Lagerplatzinhalt aller Lagerplätze in einer bestimmten Zone des Lagerorts sehen möchten, füllen Sie das Feld <strong>Zonencode</strong> aus. Wenn Sie Zeilen für alle Lagerplätze holen möchten, die einen bestimmten Artikel enthalten, füllen Sie das Feld <strong>Artikelnr.</strong> aus.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Sie können Artikel aus einem Lagerplatz der Lagerplatzart &quot;Wareneingang&quot; nicht manuell ein- oder auslagern, da Artikel in Lagerplätzen der Art &quot;Wareneingang&quot; als eingelagert registriert sein müssen, bevor sie ein Teil des verfügbaren Lagerbestands sind.  </p>
+</div>
+</li>
+<li><p>Wenn Sie viele Zeilen abrufen, wählen Sie <strong>Sortierung</strong>, um eine Sortiermethode zum Festlegen der Reihenfolge auszuwählen, in der die Zeilen im Arbeitsblatt erscheinen sollen, und wählen Sie <strong>OK</strong>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Umlagerungszeilen werden gemäß FEFO übernommen, wenn Sie die Funktion <strong>Lagerplatzumlagerung erstellen</strong> aktivieren und wenn die folgenden Bedingungen für einen Artikel erfüllt sind:  </p>
+<ul>
+<li>Der Artikel weist ein Ablaufdatum auf.  <ul>
+<li>Das Feld <strong>Gemäß FEFO kommissionieren</strong> ist auf der Lagerortkarte aktiviert, und  </li>
+<li>Das Kontrollkästchen <strong>Kommissionierung erforderlich</strong> muss auf der Lagerortkarte aktiviert sein.  </li>
+<li>Die Felder <strong>Von Zone</strong> und <strong>Von Lagerplatz</strong> sind leer.  </li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li><p>Vervollständigen Sie einige der geholten Zeilen, um die Änderungen abzubilden, die Sie durchführen möchten. Für jeden Artikel, den Sie umlagern möchten, müssen Sie die Felder <strong>Artikelnr.</strong>, <strong>Von Lagerplatzcode</strong>, <strong>Nach Lagerplatzcode</strong> und <strong>Menge</strong> ausfüllen.  </p>
+</li>
+<li>Löschen Sie alle unvollständigen Zeilen, die Sie nur zu Informationszwecken verwendet haben.  </li>
+<li>Sobald die Lagerplatzumlagerungsarbeitsblattzeilen genau die Umlagerungen darstellen, die von dem Lagermitarbeiter ausgeführt werden sollen, wählen Sie die Aktionen <strong>Lagerplatzumlagerung erstellen</strong>, um die Anweisungen für den Mitarbeiter zu erzeugen.  </li>
+</ol>
+<h2 id="see-related-microsoft-training">Siehe verwandte <a href="https://learn.microsoft.com/de-de/training/modules/move-items/">Microsoft Schulungen</a></h2>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="warehouse-manage-warehouse.html">Logistik</a><br><a href="inventory-manage-inventory.html">Bestand</a><br><a href="warehouse-setup-warehouse.html">Einrichten von Warehouse Management</a><br><a href="assembly-assemble-items.html">Montageverwaltung</a><br><a href="design-details-warehouse-management.html">Designdetails: Warehouse Management</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

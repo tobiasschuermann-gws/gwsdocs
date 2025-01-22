@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Einkaufsgenehmigungsworkflow einrichten und verwenden </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Einkaufsgenehmigungsworkflow einrichten und verwenden ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="walkthrough-set-up-and-use-a-purchase-approval-workflow">Exemplarische Vorgehensweise: Einkaufsgenehmigungsworkflows einrichten und verwenden</h1>
+
+<p>Sie können den Genehmigungsprozesses für neuen oder geänderten Datensätze, z. B. Dokumente, Buch.-Blattzeilen und Debitorenkarten automatisieren, indem Sie Workflows mit Schritten für die entsprechenden Genehmigungen erstellen.</p>
+<p>Bevor Sie Genehmigungsworkflows erstellen, müssen Sie einen Genehmiger und einen Stellvertreter für jeden Genehmigungsbenutzer einrichten. Sie können außerdem die Grenzbeträge für Genehmigende festlegen, um zu bestimmen, für welche Verkaufs- und Einkaufsdatensätze sie Genehmigungen vornehmen dürfen. Genehmigungsanforderungen und andere Benachrichtigungen können als E-Mail oder interne Notiz gesendet werden. Für jede Genehmigungsbenutzereinrichtung können Sie angeben wann dieser Benachrichtigungen erhält.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Zusätzlich zur Workflowfunktionalität in Business Central ist die Power Automate-Integration möglich, um Workflows für Ereignisse in Business Central festzulegen. Beachten Sie, dass es zwar zwei verschiedene Workflowsysteme sind, aber eine mit Power Automate erstellte Flow-Vorlage der Liste der Workflow-Vorlagen in Business Central hinzugefügt wird. Weitere Informationen finden Sie unter <a href="across-how-use-financials-data-source-flow.html">Business Central in einem automatisierten Workflow nutzen</a>.  </p>
+</div>
+<p>Sie können Workflows festlegen und verwenden, die von verschiedenen Benutzern ausgeführte Geschäftsprozessaufgaben miteinander verbinden. Systemaufgaben, wie automatische Buchung, können als Schritte in Workflows berücksichtigt werden, vor oder nach Benutzeraufgaben. Die Anforderung oder Bewilligung von Genehmigungen zum Erstellen neuer Datensätze sind typische Workflowschritte. Erfahren Sie mehr unter <a href="across-workflow.html">Workflow</a>.  </p>
+<h2 id="about-this-walkthrough">Informationen zu dieser exemplarischen Vorgehensweise</h2>
+<p>Diese exemplarische Vorgehensweise ist ein Szenario, das die folgenden Aufgaben veranschaulicht:  </p>
+<ul>
+<li>Einrichten von Genehmigungsbenutzern  </li>
+<li>Benachrichtigungen für Genehmigungsbenutzer einrichten  </li>
+<li>Genehmigungsworkflow ändern und aktivieren  </li>
+<li>Genehmigung einer Einkaufsbestellung anfordern (als Christine)  </li>
+<li>Empfangen einer Benachrichtigung und anschließende Genehmigung (als Stephan)  </li>
+</ul>
+<h2 id="story">Hintergrund</h2>
+<p>Sean ist Superuser bei CRONUS und erstellt zwei Genehmigungsbenutzer. Der eine ist Christine, die einen Einkäufer darstellt. Der andere ist Sean selbst. Er ist der Genehmiger für Alicia. Sean gibt sich selbst unbegrenzten Rechte zur Genehmigung und legt fest, dass er Benachrichtigungen über eine interne Notiz bei einem entsprechendes Ereignis erhält. Als letztes erstellt erstellt Stephan den erforderlichen Genehmigungsworkflow als Kopie der vorhandenen Workflow-Vorlage <em>Workflow Einkaufsbestellungsgenehmigung</em>. Er übernimmt alle Ereignisbedingungen unverändert und aktiviert dann den Workflow.  </p>
+<p>Um den Genehmigungsworkflow zu testen, meldet sich Stefan zunächst bei Business Central als Christine an und beantragt dann die Genehmigung einer Bestellung. Sean meldet sich dann selbst an, sieht die Notiz auf seinem Rollencenter, folgt dem Link zur Genehmigungsanforderung für die Bestellung und genehmigt die Anforderung.  </p>
+<h2 id="users">Benutzer</h2>
+<p>Bevor Sie Genehmigungsbenutzer und deren Benachrichtigungsmethode einrichten können, müssen Sie sicherstellen, dass zwei Benutzer in Business Central: vorhanden sind. Ein Benutzer stellt Christine dar. Die andere Benutzer, Sie, stellt Stephan dar. Weitere Informationen finden Sie unter <a href="ui-how-users-permissions.html">Benutzer nach Lizenzen erstellen</a>.</p>
+<h3 id="set-up-approval-users">Genehmigungsbenutzer einrichten</h3>
+<p>Wenn Sie sich als Sie selbst angemeldet haben, richten Sie Alicia als Genehmigungsbenutzer ein, dessen Genehmigender Sie selbst sind. Richten Sie Ihre Genehmigungsrechte ein, und geben Sie an, wie und wann Sie über Genehmigungsanforderungen benachrichtigt werden.  </p>
+<h4 id="to-set-up-yourself-and-alicia-as-approval-users">So richten Sie sich selbst und Christine als Genehmigungsbenutzer ein</h4>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Genehmigungsbenutzereinrichtung</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li><p>Wählen Sie auf der Seite <strong>Genehmigungsbenutzereinrichtung</strong> die Aktion <strong>Neu</strong> aus.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Sie müssen einen Genehmiger einrichten, bevor Sie Benutzer einrichten können, die die Genehmigung dieses Genehmigers benötigen. Sie müssen sich selbst einrichten, bevor Sie Christine einrichten.  </p>
+</div>
+</li>
+<li><p>Richten Sie zwei Genehmigungsbenutzer ein, indem Sie die Felder aus der folgenden Tabelle ausfüllen.  </p>
+<table>
+<thead>
+<tr>
+<th>Benutzer ID</th>
+<th>Genehmiger-ID</th>
+<th>Unbegrenzte Einkaufsgenehmigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIE</td>
+<td></td>
+<td>Ausgewählt</td>
+</tr>
+<tr>
+<td>CHRISTINE</td>
+<td>SIE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h3 id="set-up-notifications">Benachrichtigungen einrichten</h3>
+<p>In dieser exemplarischen Vorgehensweise wird ein Benutzer über eine interne Notiz über die Genehmigung benachrichtigt. Die Genehmigungsbenachrichtigungen können auch per E-Mail gesendet werden, und Sie können einen Workflow-Antwortschritt hinzufügen, der den Absender benachrichtigt, wenn eine Anforderung genehmigt oder abgelehnt wird. Weitere Informationen erhalten Sie unter <a href="across-how-to-specify-when-and-how-to-receive-notifications.html">Festlegen, wann und wie Sie Workflow-Benachrichtigungen erhalten möchten</a>.</p>
+<h4 id="to-set-up-how-and-when-youre-notified">So legen Sie fest, wie und wann Sie benachrichtigt werden</h4>
+<ol>
+<li>Auf der Seite <strong>Genehmigungsbenutzereinrichtung</strong> wählen Sie die Zeile für sich und dann die <strong>Benachrichtigungseinrichtung</strong> Aktion aus.  </li>
+<li>Auf der Seite <strong>Benachrichtigungseinrichtung</strong> im Feld <strong>Benachrichtigungstyp</strong>, wählen Sie <strong>Genehmigung</strong> aus.  </li>
+<li>Wählen Sie im Feld <strong>Benachrichtigungsmethode</strong> die Option <strong>Hinweis</strong> aus.  </li>
+<li>Wählen Sie auf der Seite <strong>Benachrichtigungseinrichtung</strong> die Aktion <strong>Benachrichtigungsplan</strong> aus.  </li>
+<li>Wählen Sie auf der Seite <strong>Benachrichtigungsplan</strong> im Feld <strong>Wiederholung</strong> <strong>Sofort</strong>.  </li>
+</ol>
+<h2 id="create-the-approval-workflow">Genehmigungsworkflow erstellen</h2>
+<p>Erstellen Sie den Bestellungsgenehmigungsworkflow, indem Sie die Schritte aus der Vorlage <strong>Bestellungsgenehmigungsworkflow</strong> kopieren. Lassen Sie die vorhandenen Workflowschritte unverändert, und aktivieren Sie dann den Workflow.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Optional fügen Sie für Genehmigungsworkflows einen Workflow-Antwortschritt hinzu, um den Absender zu benachrichtigen, wenn die Anforderung genehmigt oder abgelehnt wurde. Weitere Informationen erhalten Sie unter <a href="across-how-to-specify-when-and-how-to-receive-notifications.html">Festlegen, wann und wie Sie Workflow-Benachrichtigungen erhalten möchten</a>.</p>
+</div>
+<h3 id="to-create-and-enable-a-purchase-order-approval-workflow">So erstellen und aktivieren Sie einen Einkaufsbestellungs-Genehmigungsworkflow</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Workflows</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie auf der Seite <strong>Arbeitsabläufe</strong> die Option <strong>Aktionen</strong>, <strong>Neu</strong> und dann die Aktion <strong>Neuer Workflow aus Vorlage</strong> aus.  </li>
+<li><p>Wählen Sie auf der Seite <strong>Workflow-Vorlage</strong> die Worklow-Vorlage <strong>Einkaufsbestellung-Genehmigungsworkflow</strong> aus.  </p>
+<p>Die Seite <strong>Workflow</strong> wird für einen neuen Workflow geöffnet, der alle Informationen der ausgewählten Vorlage enthält. Der Wert im Feld <strong>Code</strong> wird mit <strong>-01</strong> erweitert. Dies zeigt an, dass dies der erste Workflow ist, der aus der Vorlage <em>Bestellungsgenehmigungsworkflow</em> erstellt wurde.  </p>
+</li>
+<li>Aktivieren Sie in der Kopfzeile der Seite <strong>Workflow</strong> das Kontrollkästchen <strong>Aktiviert</strong>.  </li>
+</ol>
+<h2 id="use-the-approval-workflow">Genehmigungsworkflow verwenden</h2>
+<p>Verwenden Sie den neuen Workflow zur Genehmigung von Bestellungen, indem Sie sich zuerst bei Business Central als Alicia anmelden, um die Genehmigung einer Bestellung zu beantragen. Melden Sie sich dann als Sie selbst an, lesen Sie die Notiz im Rollencenter, folgen Sie dem Link zur Genehmigungsanfrage und genehmigen Sie die Anfrage.  </p>
+<h3 id="to-request-approval-of-a-purchase-order-as-alicia">So genehmigen Sie eine Einkaufsbestellung als Christine</h3>
+<ol>
+<li>Melden Sie sich als Alicia an.</li>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einkaufsbestellungen</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Zeile aus, um die <em>Bestellung 106001</em> zu öffnen.  </li>
+<li>Wählen Sie auf der Seite <strong>Einkaufsbestellung</strong> die Option <strong>Aktionen</strong>, <strong>Genehmigungsanforderung</strong> und anschließend die Aktion <strong>Genehmigungsanforderung senden</strong> aus.  </li>
+</ol>
+<p>Beachten Sie, dass sich der Wert im Feld <strong>Status</strong> zu <strong>Genehmigung ausstehend</strong> ändert.  </p>
+<h3 id="to-approve-the-purchase-order-as-sean">So genehmigen Sie die Einkaufsbestellung als Stephan</h3>
+<ol>
+<li>Melden Sie sich als Sean an.</li>
+<li>Wählen Sie im Rollencenter im Bereich <strong>Self Service</strong> die Option <strong>Anfragen zur Genehmigung</strong>.</li>
+<li>Markieren Sie auf der Seite <strong>Anfragen zur Genehmigung</strong> die Zeile über die Bestellung von Christine und wählen Sie dann die Aktion <strong>Genehmigen</strong>.  </li>
+</ol>
+<p>Der Wert im Feld <strong>Status</strong> auf der Einkaufsbestellung von Alicia ändert sich zu <strong>Freigegeben</strong>.  </p>
+<p>Sie haben jetzt einen einfachen Genehmigungsworkflow auf Grundlage die ersten beiden Schritte des <strong>Bestellungsgenehmigungs-Workflows</strong> eingerichtet und getestet. Sie können diesen Workflow sehr einfach erweitern, um Alicias Einkaufsbestellung automatisch zu buchen, wenn Sean sie genehmigt. Hierzu müssen Sie den <strong>Einkaufsrechnungs-Workflow</strong> aktivieren, sodass die Reaktion auf eine freigegebene Einkaufsrechnung darin besteht, diese zu buchen. Zuerst müssen Sie die Ereignisbedingung im ersten Workflowschritt aus (Einkauf ) <strong>Rechnung</strong> zu <strong>Auftrag</strong> ändern.  </p>
+<p>Die Basisversion von Business Central umfasst viele Workflowvorlagen für Szenarien, die durch den Anwendungscode unterstützt werden. Die meisten dieser Vorlagen sind Genehmigungsworkflows.  </p>
+<p>Sie definieren Workflowsvariationen, indem Sie die Felder in den Workflowzeilen über vordefinierte vom Anwendungscode unterstützten Listen mit Ereignissen und Reaktionen ausfüllen. Erfahren Sie mehr unter <a href="across-how-to-create-workflows.html">Workflows erstellen</a>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn ein Geschäftsszenario ein Workflowereignis oder eine Reaktion erfordert, das/die in der Standardversion nicht unterstützt wird, registrieren Sie sich bei Power Automate. Weitere Informationen finden Sie unter <a href="across-how-use-financials-data-source-flow.html">Business Central in Power Automate-Flows verwenden</a>. Alternativ <a href="https://go.microsoft.com/fwlink/?linkid=2081646">erhalten Sie eine App bei AppSource</a> oder arbeiten Sie mit einem Microsoft-Partner zusammen, um <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-walkthrough-workflow-events-responses">den Anwendungscode anzupassen</a>.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="across-how-to-set-up-approval-users.html">Genehmigungsbenutzer einrichten</a><br><a href="across-setting-up-workflow-notifications.html">Einrichten von Workflowbenachrichtigungen</a><br><a href="across-how-to-create-workflows.html">Genehmigungsworkflows erstellen</a><br><a href="across-how-use-approval-workflows.html">Artikelgenehmigungsworkflow verwenden</a><br><a href="across-workflow.html">Workflow</a><br><a href="across-how-use-financials-data-source-flow.html">Business Central in einem automatisierten Workflow verwenden</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

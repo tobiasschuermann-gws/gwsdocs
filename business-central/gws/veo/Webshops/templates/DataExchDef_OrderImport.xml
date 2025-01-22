@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+  <DataExchDef Code="SHOPWARE6 ORDER" Name="SHOPWARE6 Sales Order" Type="3" FileType="3" ReadingWritingCodeunit="1203" DataHandlingCodeunit="1214">
+    <DataExchLineDef LineType="1" Code="SALESHEADER" Name="SALESHEADER" ColumnCount="0" DataLineTag="/root">
+      <DataExchColumnDef ColumnNo="10000" Name="DocumentType" Show="false" DataType="0" Constant="1" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20000" Name="YourReference" Show="false" DataType="0" Description="/root/orderNumber" Path="/root/orderNumber" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20100" Name="OnlineSalesOrderNumber" Show="false" DataType="0" Description="/root/id" Path="/root/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="30000" Name="SellToCustNo" Show="false" DataType="0" Description="/root/orderCustomer/customerNumber" Path="/root/orderCustomer/customerId" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="30100" Name="SellToCustFirstName" Show="false" DataType="0" Description="/root/orderCustomer/firstName" Path="/root/orderCustomer/firstName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="30200" Name="SellToCustLastName" Show="false" DataType="0" Description="/root/orderCustomer/lastName" Path="/root/orderCustomer/lastName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40000" Name="BillToName" Show="false" DataType="0" Description="/root/addresses/company" Path="/root/addresses/company" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40010" Name="BillToName2" Show="false" DataType="0" Description="/root/addresses/company" Path="/root/addresses/company" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40020" Name="BillToFirstName" Show="false" DataType="0" Description="/root/addresses/firstName" Path="/root/addresses/firstName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40030" Name="BillToLastName" Show="false" DataType="0" Description="/root/addresses/lastName" Path="/root/addresses/lastName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40040" Name="BillToNameOrFirstLastName" Show="false" DataType="0" Constant="Dummy" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40050" Name="BillToName2OrFirstLastName" Show="false" DataType="0" Constant="Dummy" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40100" Name="BillToStreet" Show="false" DataType="0" Description="/root/addresses/street" Path="/root/addresses/street" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40200" Name="BillToCity" Show="false" DataType="0" Description="/root/addresses/city" Path="/root/addresses/city" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40300" Name="BillToAdditionalAddress" Show="false" DataType="0" Description="/root/addresses/additionalAddressLine1" Path="/root/addresses/additionalAddressLine1" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40400" Name="BillToVatID" Show="false" DataType="0" Description="/root/addresses/vatId" Path="/root/addresses/vatId" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40500" Name="BillToPostCode" Show="false" DataType="0" Description="/root/addresses/zipcode" Path="/root/addresses/zipcode" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40600" Name="BillToCountryISO" Show="false" DataType="0" Description="/root/addresses/country/iso" Path="/root/addresses/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50000" Name="ShipToName" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/company" Path="/root/deliveries/shippingOrderAddress/company" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50010" Name="ShipToName2" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/company" Path="/root/deliveries/shippingOrderAddress/company" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50020" Name="ShipToFirstName" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/firstName" Path="/root/deliveries/shippingOrderAddress/firstName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50030" Name="ShipToLastName" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/lastName" Path="/root/deliveries/shippingOrderAddress/lastName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50040" Name="ShipToNameOrFirstLastName" Show="false" DataType="0" Constant="Dummy" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50050" Name="ShipToName2OrFirstLastName" Show="false" DataType="0" Constant="Dummy" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50100" Name="ShipToStreet" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/street" Path="/root/deliveries/shippingOrderAddress/street" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50200" Name="ShipToCity" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/city" Path="/root/deliveries/shippingOrderAddress/city" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50300" Name="ShipToAdditionalAddress" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/additionalAddressLine1" Path="/root/deliveries/shippingOrderAddress/additionalAddressLine1" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50400" Name="ShipToVatID" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/vatId" Path="/root/deliveries/shippingOrderAddress/vatId" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50500" Name="ShipToPostCode" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/zipcode" Path="/root/deliveries/shippingOrderAddress/zipcode" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50600" Name="ShipToCountryISO" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/country/iso" Path="/root/deliveries/shippingOrderAddress/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="60000" Name="CustomerPostingGroup" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/country/iso" Path="/root/deliveries/shippingOrderAddress/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="70000" Name="GenBusPosingGroup" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/country/iso" Path="/root/deliveries/shippingOrderAddress/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="80000" Name="VATBusPostingGroup" Show="false" DataType="0" Description="/root/deliveries/shippingOrderAddress/country/iso" Path="/root/deliveries/shippingOrderAddress/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="90000" Name="NoSeriesCode" Show="false" DataType="0" Constant="" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchMapping TableId="1214" UseAsIntermediateTable="true" Name="" MappingCodeunit="70391256" PreMappingCodeunit="70391308">
+        <DataExchFieldMapping ColumnNo="10000" TargetTableID="36" TargetFieldID="1" />
+        <DataExchFieldMapping ColumnNo="20000" TargetTableID="36" TargetFieldID="11" />
+        <DataExchFieldMapping ColumnNo="30000" TargetTableID="36" TargetFieldID="2" />
+        <DataExchFieldMapping ColumnNo="40040" TargetTableID="36" TargetFieldID="5" />
+        <DataExchFieldMapping ColumnNo="40050" TargetTableID="36" TargetFieldID="6" />
+        <DataExchFieldMapping ColumnNo="40100" TargetTableID="36" TargetFieldID="7" />
+        <DataExchFieldMapping ColumnNo="40200" TargetTableID="36" TargetFieldID="9" />
+        <DataExchFieldMapping ColumnNo="40300" TargetTableID="36" TargetFieldID="8" />
+        <DataExchFieldMapping ColumnNo="40400" TargetTableID="36" TargetFieldID="70" />
+        <DataExchFieldMapping ColumnNo="40500" TargetTableID="36" TargetFieldID="85" />
+        <DataExchFieldMapping ColumnNo="40600" TargetTableID="36" TargetFieldID="87" />
+        <DataExchFieldMapping ColumnNo="50040" TargetTableID="36" TargetFieldID="13" />
+        <DataExchFieldMapping ColumnNo="50050" TargetTableID="36" TargetFieldID="14" />
+        <DataExchFieldMapping ColumnNo="50100" TargetTableID="36" TargetFieldID="15" />
+        <DataExchFieldMapping ColumnNo="50200" TargetTableID="36" TargetFieldID="17" />
+        <DataExchFieldMapping ColumnNo="50300" TargetTableID="36" TargetFieldID="16" />
+        <DataExchFieldMapping ColumnNo="50500" TargetTableID="36" TargetFieldID="91" />
+        <DataExchFieldMapping ColumnNo="50600" TargetTableID="36" TargetFieldID="93" />
+        <DataExchFieldMapping ColumnNo="60000" TargetTableID="36" TargetFieldID="31" />
+        <DataExchFieldMapping ColumnNo="70000" TargetTableID="36" TargetFieldID="74" />
+        <DataExchFieldMapping ColumnNo="80000" TargetTableID="36" TargetFieldID="116" />
+        <DataExchFieldMapping ColumnNo="90000" TargetTableID="36" TargetFieldID="107" />
+      </DataExchMapping>
+    </DataExchLineDef>
+    <DataExchLineDef LineType="0" Code="CUSTOMER" Name="CUSTOMER" ColumnCount="0" DataLineTag="/root/orderCustomer/customer" ParentCode="SALESHEADER">
+      <DataExchColumnDef ColumnNo="10000" Name="Name" Show="false" DataType="0" Description="/root/orderCustomer/customer/company" Path="/root/orderCustomer/customer/company" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="10100" Name="FirstName" Show="false" DataType="0" Description="/root/orderCustomer/customer/firstName" Path="/root/orderCustomer/customer/firstName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="10200" Name="LastName" Show="false" DataType="0" Description="/root/orderCustomer/customer/lastName" Path="/root/orderCustomer/customer/lastName" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="10300" Name="NameOrFirstLastName" Show="false" DataType="0" Constant="dummy" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="10400" Name="Name2OrFirstLastName" Show="false" DataType="0" Constant="dummy" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="10600" Name="Email" Show="false" DataType="0" Description="/root/orderCustomer/customer/email" Path="/root/orderCustomer/customer/email" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="10700" Name="CustomerId" Show="false" DataType="0" Description="/root/orderCustomer/customer/id" Path="/root/orderCustomer/customer/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20000" Name="Street" Show="false" DataType="0" Description="/root/orderCustomer/customer/street" Path="/root/orderCustomer/customer/street" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20100" Name="AdditionalAddressLine1" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/additionalAddressLine1" Path="/root/orderCustomer/customer/addresses/additionalAddressLine1" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20200" Name="CountryRegion" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/country/iso" Path="/root/orderCustomer/customer/addresses/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20300" Name="City" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/city" Path="/root/orderCustomer/customer/addresses/city" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20400" Name="PostCode" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/zipcode" Path="/root/orderCustomer/customer/addresses/zipcode" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20500" Name="PhoneNo" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/phoneNumber" Path="/root/orderCustomer/customer/addresses/phoneNumber" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20600" Name="CustomerPostingGroup" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/country/iso" Path="/root/orderCustomer/customer/addresses/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20700" Name="GenBusPostingGroup" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/country/iso" Path="/root/orderCustomer/customer/addresses/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20800" Name="VATRegistrationNo" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/vatId" Path="/root/orderCustomer/customer/addresses/vatId" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20900" Name="VATBusPostingGroup" Show="false" DataType="0" Description="/root/orderCustomer/customer/addresses/country/iso" Path="/root/orderCustomer/customer/addresses/country/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="30000" Name="PriceIncludingVAT" Show="false" DataType="0" Constant="1" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40000" Name="NoSeriesCode" Show="false" DataType="0" Constant="" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchMapping TableId="1214" UseAsIntermediateTable="true" Name="">
+        <DataExchFieldMapping ColumnNo="10300" TargetTableID="18" TargetFieldID="2" />
+        <DataExchFieldMapping ColumnNo="10400" TargetTableID="18" TargetFieldID="4" />
+        <DataExchFieldMapping ColumnNo="10600" TargetTableID="18" TargetFieldID="102" />
+        <DataExchFieldMapping ColumnNo="10700" TargetTableID="18" TargetFieldID="3" />
+        <DataExchFieldMapping ColumnNo="20000" TargetTableID="18" TargetFieldID="5" />
+        <DataExchFieldMapping ColumnNo="20100" TargetTableID="18" TargetFieldID="6" />
+        <DataExchFieldMapping ColumnNo="20200" TargetTableID="18" TargetFieldID="35" />
+        <DataExchFieldMapping ColumnNo="20300" TargetTableID="18" TargetFieldID="7" />
+        <DataExchFieldMapping ColumnNo="20400" TargetTableID="18" TargetFieldID="91" />
+        <DataExchFieldMapping ColumnNo="20500" TargetTableID="18" TargetFieldID="9" />
+        <DataExchFieldMapping ColumnNo="20600" TargetTableID="18" TargetFieldID="21" />
+        <DataExchFieldMapping ColumnNo="20700" TargetTableID="18" TargetFieldID="88" />
+        <DataExchFieldMapping ColumnNo="20800" TargetTableID="18" TargetFieldID="86" />
+        <DataExchFieldMapping ColumnNo="20900" TargetTableID="18" TargetFieldID="110" />
+        <DataExchFieldMapping ColumnNo="30000" TargetTableID="18" TargetFieldID="82" />
+        <DataExchFieldMapping ColumnNo="40000" TargetTableID="18" TargetFieldID="107" />
+      </DataExchMapping>
+    </DataExchLineDef>
+    <DataExchLineDef LineType="0" Code="SALESLINE" Name="SALESLINE" ColumnCount="0" DataLineTag="/root/lineItems" ParentCode="SALESHEADER">
+      <DataExchColumnDef ColumnNo="10000" Name="Type" Show="false" DataType="0" Constant="2" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20000" Name="ProductID" Show="false" DataType="0" Description="/root/lineItems/product/id" Path="/root/lineItems/product/id" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20100" Name="ProductNo" Show="false" DataType="0" Description="/root/lineItems/product/productNumber" Path="/root/lineItems/product/productNumber" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="20200" Name="ProductName" Show="false" DataType="0" Description="/root/lineItems/product/name" Path="/root/lineItems/product/name" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="30000" Name="Quantity" Show="false" DataType="0" Description="/root/lineItems/quantity" Path="/root/lineItems/quantity" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="30100" Name="UnitPrice" Show="false" DataType="0" Description="/root/lineItems/unitPrice" Path="/root/lineItems/unitPrice" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="40000" Name="DiscountPercentage" Show="false" DataType="0" Description="/root/lineItems/price/listPrice/percentage" Path="/root/lineItems/price/listPrice/percentage" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="50000" Name="QtyToInvoice" Show="false" DataType="0" Constant="0" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchColumnDef ColumnNo="60000" Name="QtyToShip" Show="false" DataType="0" Constant="0" TextPaddingRequired="false" Justification="0" UseNodeNameAsValue="false" />
+      <DataExchMapping TableId="1214" UseAsIntermediateTable="true" Name="">
+        <DataExchFieldMapping ColumnNo="10000" TargetTableID="37" TargetFieldID="5" />
+        <DataExchFieldMapping ColumnNo="20000" TargetTableID="37" TargetFieldID="6" />
+        <DataExchFieldMapping ColumnNo="20200" Optional="true" TargetTableID="37" TargetFieldID="11" />
+        <DataExchFieldMapping ColumnNo="30000" TargetTableID="37" TargetFieldID="15" />
+        <DataExchFieldMapping ColumnNo="30100" TargetTableID="37" TargetFieldID="22" />
+      </DataExchMapping>
+    </DataExchLineDef>
+  </DataExchDef>
+</root>

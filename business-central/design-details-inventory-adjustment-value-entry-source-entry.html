@@ -1,0 +1,954 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Buchungsdatum bei der Eingabe von Anpassungswerten im Vergleich zur Quelleingabe </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Buchungsdatum bei der Eingabe von Anpassungswerten im Vergleich zur Quelleingabe ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="posting-date-on-adjustment-value-entry-compared-to-the-source-entry">Buchungsdatum bei der Eingabe von Anpassungswerten im Vergleich zur Quelleingabe</h1>
+
+<p>Dieser Artikel vergleicht das Buchungsdatum auf dem Anpassungswert-Eintrag mit dem Buchungsdatum auf dem Eintrag, der die Ausführung des Batchauftrags Lagerreg. fakt. fakt. Artikel Zu-/Abschläge verursacht, insbesondere ein Szenario mit Aufwertung und ein Szenario mit Artikelzu-/abschlägen.</p>
+<p>Der Batchauftrag <strong>Kostenreg. fakt. Einst. Preise anpassen</strong> verarbeitet Ihre Daten je nach Szenario und Konfiguration von Business Central. In diesem Abschnitt beschreiben wir zwei separate Prozesse und zeigen für jeden die Art der Auswirkung, die der Batchauftrag Lagerreg. fakt. Einst. Preise auf die Daten hat.</p>
+<h2 id="revaluation-scenario">Szenario Neubewertung</h2>
+<h3 id="prerequisites">Voraussetzungen</h3>
+<p>Bitte geben Sie die folgenden Werte ein:</p>
+<p><strong>Lagerbestandseinrichtung</strong>:  </p>
+<ul>
+<li><p>Automatische Kostenbuchung = Ja  </p>
+</li>
+<li><p>Automatische Kostenregulierung = Immer  </p>
+</li>
+<li><p>Durchschnittliche Kalkulation kalkuliert. Typ = Element  </p>
+</li>
+<li><p>Durchschnittskostenperiode= Tag  </p>
+</li>
+</ul>
+<p><strong>Hauptbuchhaltungs-Einrichtung</strong>:  </p>
+<ul>
+<li><p>Zulassen Buchung von = am 1. Januar 2021  </p>
+</li>
+<li><p>Buchungen zugel. bis = Leer  </p>
+</li>
+</ul>
+<p><strong>Benutzer Einrichtung</strong>:  </p>
+<ul>
+<li><p>Zulassen Buchung von = 1. Dezember 2020  </p>
+</li>
+<li><p>Buchungen zugel. bis = Leer  </p>
+</li>
+</ul>
+<h3 id="to-test-the-scenario">So führen Sie ein Testszenario aus</h3>
+<p>Testen Sie dieses Szenario, indem Sie die folgenden Schritte ausführen.</p>
+<ol>
+<li><p>Erstellen Sie ein <strong>Element</strong> namens TEST mit den folgenden Werten:  </p>
+<ul>
+<li><p>Basiseinheit = PCS  </p>
+</li>
+<li><p>Kostenberechnungsmethode = Durchschnitt  </p>
+</li>
+<li><p>Wählen Sie Buchungsgruppen optional aus.  </p>
+</li>
+</ul>
+</li>
+<li><p>Öffnen Sie ein <strong>Element Journal</strong>, erstellen Sie dann eine neue Erfassung und buchen Sie eine Zeile wie folgt:  </p>
+<ul>
+<li><p>Buchungsdatum = 15. Dezember 2020  </p>
+</li>
+<li><p>Artikel = TEST  </p>
+</li>
+<li><p>Eink.-Posten ausgleichen = Einkauf  </p>
+</li>
+<li><p>Menge = 100  </p>
+</li>
+<li><p>Stückpreis = 10  </p>
+</li>
+</ul>
+</li>
+<li><p>Öffnen Sie ein <strong>Element Journal</strong>, erstellen Sie dann eine neue Erfassung und buchen Sie eine Zeile wie folgt:  </p>
+<ul>
+<li><p>Datum = 20. Dezember 2020  </p>
+</li>
+<li><p>Artikel = TEST  </p>
+</li>
+<li><p>Eingangsart = Negative Anpassung  </p>
+</li>
+<li><p>Menge = 2  </p>
+</li>
+</ul>
+</li>
+<li><p>Öffnen Sie ein <strong>Element Journal</strong>, erstellen Sie dann eine neue Erfassung und buchen Sie eine Zeile wie folgt:  </p>
+<ul>
+<li><p>Datum = 15. Januar 2021  </p>
+</li>
+<li><p>Artikel = TEST  </p>
+</li>
+<li><p>Buchungsart = Negative Berichtigung  </p>
+</li>
+<li><p>Menge = 3  </p>
+</li>
+</ul>
+</li>
+<li><p>Öffnen Sie ein <strong>Element Neubewertungs Buch.-Blatt</strong>, erstellen Sie eine neue Buchung und buchen Sie eine Zeile wie folgt:  </p>
+<ul>
+<li><p>Artikel = TEST  </p>
+</li>
+<li><p>Auf Eintrag anwenden = Einkaufsposten auswählen, der unter Schritt 2 gebucht wurde. Das Buchungsdatum der Neubewertung ist derselbe, wie der Posten, der angepasst wird.  </p>
+</li>
+<li><p>Einheitskosten (aufgewertet) = 40  </p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Die folgenden <strong>Artikelposten</strong> und <strong>Wertposten</strong> wurden gebucht:  </p>
+<p><strong>Artikelposten – Einkauf</strong>:  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Restmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>317</td>
+<td>TEST</td>
+<td>2020-12-15</td>
+<td>Einkauf</td>
+<td>T00001</td>
+<td>100</td>
+<td>4000</td>
+<td>95</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wertposten</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Artikelpostenart</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Postenmenge der Artikelnummer</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Gebuchte Lagerregulierung an G/L</th>
+<th>Ausgleich</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+<th>Herkunftscode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>376</td>
+<td>TEST</td>
+<td>2020-12-15</td>
+<td>317</td>
+<td>Einkauf</td>
+<td>Direkte Kosten</td>
+<td>T00001</td>
+<td>100</td>
+<td>1 000,00</td>
+<td>1 000,00</td>
+<td>Nein</td>
+<td>0</td>
+<td>ITEMNL</td>
+</tr>
+<tr>
+<td>379</td>
+<td>TEST</td>
+<td><strong>2020-12-15</strong></td>
+<td>317</td>
+<td>Einkauf</td>
+<td>Neubewertung</td>
+<td>T04002</td>
+<td>0</td>
+<td>3 000,00</td>
+<td>3 000,00</td>
+<td>Nein</td>
+<td>0</td>
+<td>REVALINL</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Artikelposten – Abgang, Schritt 3</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Eingabenr.</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Restmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>318</td>
+<td>TEST</td>
+<td>2020-12-20</td>
+<td>Abgang</td>
+<td>T00002</td>
+<td>-2</td>
+<td>-80</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wertposten</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Artikelpostenart</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Postenmenge der Artikelnummer</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Gebuchte Lagerregulierung an G/L</th>
+<th>Ausgleich</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+<th>Herkunftscode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>377</td>
+<td>TEST</td>
+<td>2020-12-20</td>
+<td>318</td>
+<td>Abgang</td>
+<td>Direkte Kosten</td>
+<td>T00002</td>
+<td>-2</td>
+<td>-20</td>
+<td>-20</td>
+<td>Nein</td>
+<td>0</td>
+<td>ITEMNL</td>
+</tr>
+<tr>
+<td>380</td>
+<td>TEST</td>
+<td><strong>2021-01-01</strong></td>
+<td>318</td>
+<td>Abgang</td>
+<td>Direkte Kosten</td>
+<td>T04002</td>
+<td>0</td>
+<td>-60</td>
+<td>-60</td>
+<td>Ja</td>
+<td>377</td>
+<td>INVTADAMT</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Artikelposten – Abgang, Schritt 4</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Eingabenr.</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Restmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>319</td>
+<td>TEST</td>
+<td>2021-01-15</td>
+<td>Abgang</td>
+<td>T00003</td>
+<td>-3</td>
+<td>-120</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wertposten</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Artikelpostenart</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Postenmenge der Artikelnummer</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Gebuchte Lagerregulierung an G/L</th>
+<th>Ausgleich</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+<th>Herkunftscode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>378</td>
+<td>TEST</td>
+<td>2021-01-15</td>
+<td>319</td>
+<td>Abgang</td>
+<td>Direkte Kosten</td>
+<td>T00003</td>
+<td>-3</td>
+<td>-30</td>
+<td>-30</td>
+<td>Nein</td>
+<td>0</td>
+<td>ITEMNL</td>
+</tr>
+<tr>
+<td>381</td>
+<td>TEST</td>
+<td><strong>2021-01-15</strong></td>
+<td>319</td>
+<td>Abgang</td>
+<td>Direkte Kosten</td>
+<td>T04003</td>
+<td>0</td>
+<td>-90</td>
+<td>-90</td>
+<td>Ja</td>
+<td>378</td>
+<td>INVTADAMT</td>
+</tr>
+</tbody>
+</table>
+<p>Der Batchauftrag <strong>Kostenreg. fakt. Einst. Preise anpassen</strong> hat eine Kostenänderung erkannt und die Negativen Anpassungen angepasst.  </p>
+<p><strong>Überprüfung Buchungsdatum des erstellten Ausgleichs-Wertposten:</strong> Der früheste zugelassene Buchungszeitraum, den die Stapelverarbeitung Lagerreg verknüpft, ist am 1. Januar 2021, wie in der Finanzbuchhaltungs-Einrichtung festgelegt.  </p>
+<p><strong>Negative Anpassung in Schritt 3:</strong> zugewiesenes Buchungsdatum ist am 1. Januar, wie von der Finanzbuchhaltung eingerichtet. Das Buchungsdatum des Werteintrags im Anpassungsumfang ist der 20. Dezember 2020. Gemäß der Finanzbuchhaltungs-Einrichtung liegt das Datum nicht im zulässigen Buchungsdatumsbereich. Daher werden die Buchungsdaten, die im Feld Buchungen zulassen in der Finanzbuchhaltungs-Einrichtung festgelegt sind, den Ausgleichs-Wertposten zugeordnet.  </p>
+<p><strong>Abgang in Schritt 4:</strong> weist Buchungsdatum 15. Januar auf. Der Wertposten im Bereich des Ausgleichs hat Buchungsdatum am 15. Januar, das innerhalb des Bereichs des zugelassenen Buchungszeitraums entsprechend der Finanzbuchhaltungseinrichtung ist.  </p>
+<p>Der Ausgleich, der für den Abgang in Schritt 3 geändert wird, verursacht Diskussionen. Das bevorzugte Buchungsdatum für den Ausgleichs-Wertposten wäre am 20. Dezember oder mindestens im Dezember während die Neubewertung eine Änderung im Lagerverbrauch verursacht, der im Dezember gebucht wurde.  </p>
+<p>Um die Anpassung der Negativen Anpassung in Schritt 3 im Dezember zu erreichen, muss in der Finanzbuchhaltungs-Einrichtung im Feld Buchungen zugel. ab ein Datum im Dezember angegeben werden.  </p>
+<h3 id="conclusion">Fazit</h3>
+<p>Mit den in diesem Szenario gewonnenen Erfahrungen sollten Sie bei der Überlegung, welche Einrichtung für einen zulässigen Buchungsdatumsbereich für eine Firma am besten geeignet ist, Folgendes in Betracht ziehen. Solange Sie zulassen, dass Änderungen des Bestandswertes in einer Periode gebucht werden, wie in diesem Fall im Dezember, sollte die Einrichtung, die die Firma für zulässige Buchungsdatumsbereiche verwendet, mit dieser Entscheidung übereinstimmen. Buchung von zulassen in der Finanzbuchhaltungs-Einrichtung, in diesem Fall der 1. Dezember, würde die Neubewertung ermöglichen, die im Dezember erfolgte und an betroffene ausgehenden Posten in derselben Periode weitergeleitet werden.  </p>
+<p>Die Benutzergruppen, die nicht erlaubt sind, um im Dezember gebucht zu werden, sondern im Januar, sind wahrscheinlich durch die Finanzbuchhaltungseinrichtung in diesem Szenario beschränkt und sollten stattdessen über die Benutzereinrichtung adressiert werden.  </p>
+<h2 id="item-charge-scenario">Szenario Artikel Zu-/Abschläge</h2>
+<h3 id="prerequisites-1">Voraussetzungen</h3>
+<p>Bitte geben Sie die folgenden Werte ein:</p>
+<p><strong>Lagerbestandseinrichtung</strong>:  </p>
+<ul>
+<li><p>Automatische Kostenbuchung = Ja  </p>
+</li>
+<li><p>Automatische Kostenregulierung = Immer  </p>
+</li>
+<li><p>Durchschnittliche Kalkulation kalkuliert. Typ = Element  </p>
+</li>
+<li><p>Durchschnittskostenperiode = Day  </p>
+</li>
+</ul>
+<p><strong>Hauptbuchhaltungs-Einrichtung</strong>:  </p>
+<ul>
+<li><p>Zulassen Buchung von = 1. Dezember 2020.  </p>
+</li>
+<li><p>Buchungen zugel. bis = Leer  </p>
+</li>
+</ul>
+<p><strong>Benutzer Einrichtung</strong>:  </p>
+<ul>
+<li><p>Buchungen zulassen ab = 1. Dezember 2020.  </p>
+</li>
+<li><p>Anlagenbuchungen zugel. bis = Leer  </p>
+</li>
+</ul>
+<h3 id="to-test-the-scenario-1">So testen Sie das Szenario</h3>
+<p>Testen Sie dieses Szenario, indem Sie die folgenden Schritte ausführen:</p>
+<ol>
+<li><p>Erstellen Sie einen <strong>Element</strong> Belastung mit den folgenden Werten:  </p>
+<ul>
+<li><p>Basiseinheit = PCS  </p>
+</li>
+<li><p>Lagerabgangsmethode = Durchschnitt  </p>
+</li>
+<li><p>Wählen Sie optionale Buchungsgruppen aus.  </p>
+</li>
+</ul>
+</li>
+<li><p>Erstellen Sie eine neue <strong>Bestellung</strong> mit den folgenden Werten:  </p>
+<ul>
+<li><p>Eink. von Kred.-Nr.: 10000  </p>
+</li>
+<li><p>Buchungsdatum = 15. Dezember 2020</p>
+</li>
+<li><p>Kred.-Rechnungsnr.: 1234  </p>
+<p>Wählen Sie in der Zeile Bestellung die folgenden Werte aus:  </p>
+</li>
+<li><p>Artikel = ABSCHLAG  </p>
+</li>
+<li><p>Menge = 1  </p>
+</li>
+<li><p>Direkte Einheitskosten = 100  </p>
+<p>Um den Schritt abzuschließen, buchen Sie den Beleg als eingegangen und in Rechnung gestellt.  </p>
+</li>
+</ul>
+</li>
+<li><p>Erstellen Sie einen neuen <strong>Verkaufsauftrag</strong> mit den folgenden Werten:  </p>
+<ul>
+<li><p>Verk. an Deb.-Nr.: 10000  </p>
+</li>
+<li><p>Buchungsdatum = 16. Dezember 2020  </p>
+<p>In der Zeile Verkaufsauftrag:  </p>
+</li>
+<li><p>Artikel = ABSCHLAG  </p>
+</li>
+<li><p>Menge = 1  </p>
+</li>
+<li><p>VK-Preis = 135  </p>
+<p>Um den Schritt abzuschließen, buchen Sie den Beleg als eingegangen und in Rechnung gestellt.  </p>
+</li>
+</ul>
+</li>
+<li><p>Geben Sie Werte für die Seite <strong>Hauptbuchhaltungs-Einrichtung</strong> ein:  </p>
+<ul>
+<li>Buchungen zugel. ab = 1. Januar 2021  </li>
+</ul>
+<ul>
+<li>Anlagenbuchungen zugel. bis = leer  </li>
+</ul>
+</li>
+<li><p>Erstellen Sie eine neue <strong>Bestellung</strong> mit den folgenden Werten:  </p>
+<ul>
+<li><p>Kreditor Nr. des Kaufs: 10000  </p>
+</li>
+<li><p>Buchungsdatum = 2. Januar 2021  </p>
+</li>
+<li><p>Kred.-Rechnungsnr.: 2345  </p>
+<p>In der Zeile Bestellung:  </p>
+</li>
+<li><p>Artikelkosten = FRACHT  </p>
+</li>
+<li><p>Menge = 1  </p>
+</li>
+<li><p>Direkte Einheitskosten = 3  </p>
+</li>
+<li><p>Weisen Sie die Artikel Zu-/Abschläge dem Kauf-Eingang aus Schritt 2 zu.  </p>
+<p>Um den Schritt abzuschließen, buchen Sie den Beleg als eingegangen und in Rechnung gestellt.  </p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Status Artikelposten des Einkaufsschritts 2</strong>:  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Restmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>324</td>
+<td>ABSCHLAG</td>
+<td>2020-12-15</td>
+<td>Einkauf</td>
+<td>107030</td>
+<td>1</td>
+<td>105</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wertposten</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Artikelpostenart</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Artikel Zu-/Abschlagsnr.</th>
+<th>Artikelpostenmenge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Gebuchte Lagerregulierung an G/L</th>
+<th>Ausgleich</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>397</td>
+<td>ABSCHLAG</td>
+<td>2020-12-15</td>
+<td>324</td>
+<td>Einkauf</td>
+<td>Direkte Kosten</td>
+<td>108029</td>
+<td></td>
+<td>1</td>
+<td>100</td>
+<td>100</td>
+<td>NEIN</td>
+<td>0</td>
+</tr>
+<tr>
+<td>399</td>
+<td>ABSCHLAG</td>
+<td>2021-01-02</td>
+<td>324</td>
+<td>Einkauf</td>
+<td>Direkte Kosten</td>
+<td>108009</td>
+<td>FRACHT</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>NEIN</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Status Artikelposten Verkauf</strong>:  </p>
+<table>
+<thead>
+<tr>
+<th>Eingabenr.</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Restmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>325</td>
+<td>ABSCHLAG</td>
+<td>2020-12-16</td>
+<td>Verkauf</td>
+<td>102035</td>
+<td>-1</td>
+<td>-105</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wertposten</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Artikelpostenart</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Artikel Zu-/Abschlagsnr.</th>
+<th>Artikelpostenmenge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Gebuchte Lagerregulierung an G/L</th>
+<th>Ausgleich</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>398</td>
+<td>ABSCHLAG</td>
+<td>2020-12-16</td>
+<td>325</td>
+<td>Verkauf</td>
+<td>Direkte Kosten</td>
+<td>109024</td>
+<td></td>
+<td>-1</td>
+<td>-100</td>
+<td>-100</td>
+<td>NEIN</td>
+<td>0</td>
+</tr>
+<tr>
+<td>400</td>
+<td>ABSCHLAG</td>
+<td>2021-01-01</td>
+<td>325</td>
+<td>Verkauf</td>
+<td>Direkte Kosten</td>
+<td>109024</td>
+<td></td>
+<td>0</td>
+<td>-3</td>
+<td>-3</td>
+<td>Ja</td>
+<td>398</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Am Arbeitstag, dem 3. Januar, trifft eine Einkaufsrechnung ein, die einen zusätzlichen Artikel Zu-/Abschlag zu dem in Schritt 2 getätigten Kauf enthält. Diese Rechnung hat das Belegdatum 30. Dezember und wird daher mit dem Buchungsdatum 30. Dezember 2020 gebucht.  </p>
+<p> Erstellen Sie eine neue <strong>Bestellung</strong> mit den folgenden Werten:  </p>
+<ul>
+<li><p>Kreditor Nr. des Kaufs: 10000  </p>
+</li>
+<li><p>Buchungsdatum = 30. Dezember 2020  </p>
+</li>
+<li><p>Kred.-Rechnungsnr.: 3456  </p>
+<p>Wählen Sie in der Zeile Bestellung die folgenden Werte aus:  </p>
+</li>
+<li><p>Artikel Zu-/Abschläge = JB-FREIGHT  </p>
+</li>
+<li><p>Menge = 1  </p>
+</li>
+<li><p>Direkte Einheitskosten = 2  </p>
+<p>Artikel Zu-/Abschläge dem Kaufbeleg aus Schritt 2 zuordnen  </p>
+<p>Um den Schritt abzuschließen, buchen Sie den Beleg als eingegangen und in Rechnung gestellt.  </p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Status Artikelposten des Einkaufs</strong>:  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Restmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>324</td>
+<td>ABSCHLAG</td>
+<td>2020-12-15</td>
+<td>Einkauf</td>
+<td>107030</td>
+<td>1</td>
+<td>105</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wertposten</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Eingabenr.</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Artikelpostenart</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Artikel Zu-/Abschlagsnr.</th>
+<th>Artikelpostenmenge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Gebuchte Lagerregulierung an G/L</th>
+<th>Ausgleich</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>397</td>
+<td>ABSCHLAG</td>
+<td>2020-12-15</td>
+<td>324</td>
+<td>Einkauf</td>
+<td>Direkte Kosten</td>
+<td>108029</td>
+<td></td>
+<td>1</td>
+<td>100</td>
+<td>100</td>
+<td>Nein</td>
+<td>0</td>
+</tr>
+<tr>
+<td>399</td>
+<td>ABSCHLAG</td>
+<td>2021-01-02</td>
+<td>324</td>
+<td>Einkauf</td>
+<td>Direkte Kosten</td>
+<td>108030</td>
+<td>FRACHT</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>Nein</td>
+<td>0</td>
+</tr>
+<tr>
+<td>401</td>
+<td>ABSCHLAG</td>
+<td><strong>2020-12-30</strong></td>
+<td>324</td>
+<td>Einkauf</td>
+<td>Direkte Kosten</td>
+<td>108031</td>
+<td>FRACHT</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+<td>Nein</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Status Artikelposten Verkauf</strong>:  </p>
+<table>
+<thead>
+<tr>
+<th>Postennummer</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Restmenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>325</td>
+<td>ABSCHLAG</td>
+<td>2020-12-16</td>
+<td>Verkauf</td>
+<td>102035</td>
+<td>-1</td>
+<td>-105</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wertposten</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Eingabenr.</th>
+<th>Artikelnr.</th>
+<th>Buchungsdatum</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Artikelpostenart</th>
+<th>Postenart</th>
+<th>Belegnummer</th>
+<th>Artikel Zu-/Abschlagsnr.</th>
+<th>Artikelpostenmenge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Gebuchte Lagerregulierung an G/L</th>
+<th>Ausgleich</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>398</td>
+<td>ABSCHLAG</td>
+<td>2020-12-16</td>
+<td>325</td>
+<td>Verkauf</td>
+<td>Direkte Kosten</td>
+<td>103024</td>
+<td></td>
+<td>-1</td>
+<td>-100</td>
+<td>-100</td>
+<td>Nein</td>
+<td>0</td>
+</tr>
+<tr>
+<td>400</td>
+<td>ABSCHLAG</td>
+<td>2021-01-01</td>
+<td>325</td>
+<td>Verkauf</td>
+<td>Direkte Kosten</td>
+<td>103024</td>
+<td></td>
+<td>0</td>
+<td>-3</td>
+<td>-3</td>
+<td>Ja</td>
+<td>398</td>
+</tr>
+<tr>
+<td>402</td>
+<td>ABSCHLAG</td>
+<td><strong>2021-01-01</strong></td>
+<td>325</td>
+<td>Verkauf</td>
+<td>Direkte Kosten</td>
+<td>103024</td>
+<td></td>
+<td>0</td>
+<td>-2</td>
+<td>-2</td>
+<td>Ja</td>
+<td>398</td>
+</tr>
+</tbody>
+</table>
+<p>Lager-Bewertungsbericht wird mit 31. Dezember 2020 gedruckt</p>
+<p><img src="media/helene/TechArticleAdjustcost13.png" alt="Inhalt des Bestandsbewertungsberichts." title="Inhalt des Berichts zur Inventarbewertung"></p>
+<p><strong>Zusammenfassung des Szenarios:</strong>  </p>
+<p>Das oben beschriebene Szenario endet mit einem Lager-Bewertungsbericht und zeigt Menge = 0 an, während der Wert = 2 beträgt. Der Artikelzuschlag, der in Schritt 6 gebucht wird, ist ein Teil des Lagerzugangswerts vom Dezember, wohingegen der Lagerabgang derselben Periode nicht berücksichtigt wird.  </p>
+<p>Der Finanzbuchhaltungs-Einrichtung angeben, Buchungen ab dem 1. Januar zuzulassen, war für den ersten Artikel-Zu/Abschlag gut. Die Kosten des Lagerzugangs und des Feldes Abgang wurden in derselben Periode erfasst. Für den zweiten Artikel-Zu-/Abschlag verursachte die Finanzbuchhaltungseinrichtung jedoch die Änderung im Lagerverbrauch, der in der Periode danach erkannt wurde.  </p>
+<p><strong>Schlussfolgerung:</strong>  </p>
+<p>Es ist eine Herausforderung, den Bestandsbewertungsbericht dazu zu bringen, Menge = 0 zu zeigen, während der Wert &lt;&gt; 0 ist. In diesem Fall ist es auch schwieriger, die optimalen Einstellungen auszudrücken, wenn die Einkaufsrechnungen am selben Tag eintreffen, aber unterschiedliche Zeiträume oder sogar Geschäftsjahre betreffen. Der Übergang zu einem neuen Geschäftsjahr erfordert in der Regel eine gewisse Planung, und dazu gehört auch die Einsicht in den Prozess Lagerreg. fakt. Einst. Preise, der die COGS erkennt.  </p>
+<p>In diesem Szenario könnte eine Option sein, die Finanzbuchhaltung so einzurichten, dass das Feld Buchung zulassen von ein Datum im Dezember für einige Tage mehr definiert und die Buchung des Zuschlages des ersten Artikelpostens zurückgestellt wird, um die Kosten für die vorherige Periode/das vorherige Finanzjahr für die Periode zu ermöglichen, um alle Kosten dort zuzuweisen, wo sie zuerst erkannt wurden und dann die erlaubten Buchungsdaten in die neue Periode des / Steuerjahrs zu übertragen. Die Kosten des ersten Artikelpostens mit Buchungsdatum am 2. Januar dann gebucht werden.  </p>
+<h2 id="see-also">Weitere Informationen</h2>
+<p><a href="design-details-inventory-adjustment-value-entry-posting-date.html">Design Details: Buchungsdatum bei der Eingabe von Anpassungswerten</a><br><a href="design-details-inventory-costing.html">Design Details: Kalkulation des Bestandes</a><br><a href="design-details-item-application.html">Gestaltungsdetails: Element Anwendung</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Vorschauversionen einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Vorschauversionen einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../TOC.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>Steigern Sie die Effizienz in Ihrem Lager mit genauen Echtzeitinformationen über Faktoren, die sich auf die verfügbaren Mengen auswirken können. Beispiel: </p>
+<ul>
+<li>Lagerbestände</li>
+<li>Lagerorte</li>
+<li>Verarbeitungsphasen</li>
+<li>Unter Quarantäne gestellte Elemente</li>
+<li>Reservierungen</li>
+</ul>
+<p>Informationen zur Artikelverfügbarkeit können Sie den folgenden Quelldokumenten entnehmen:</p>
+<ul>
+<li>Verkaufsaufträge</li>
+<li>Fertigungsaufträge</li>
+<li>Montageaufträge</li>
+<li>Aufträge</li>
+</ul>
+<p>Die Informationen berücksichtigen auch andere Faktoren, die die Verfügbarkeit beeinflussen. Zum Beispiel spezielle Lagerplätze, verschlossene Lagerplätze und Artikel, die nicht zur Kommissionierung verfügbar sind. Beispielsweise können Artikel reserviert sein oder auf Einlagerungs- oder Versandvorgänge warten. Auf der Seite <strong>Zusammenfassung der Kommissionierung</strong> können Sie die Elemente überprüfen, die Business Central nicht in die Kommissionierbelege aufgenommen und die erforderlichen Maßnahmen ergriffen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Für diese Funktion müssen Sie die Funktion <strong>Gezielte Einlagerung und Kommissionierung</strong> für die Standorte aktivieren, die Sie in Ihrem Kommissionierungsprozess verwenden.</p>
+</div>
+<h3 id="set-up-previews">Vorschauversionen einrichten</h3>
+<p>Um Details darüber zu erhalten, was kommissioniert wird und was nicht, aktivieren Sie den Schalter <strong>Zusammenfassung anzeigen (gesteuerte Einlagerung und Kommissionierung)</strong> auf den Anforderungsseiten <strong>Logistik Herk. - Beleg erst.</strong> oder <strong>Warenausgang - Kommiss. erst.</strong>.</p>
+<h3 id="determine-the-quantity-you-can-pick">Bestimmen Sie die Menge, die Sie auswählen können</h3>
+<p>Auf Zeilen auf der Seite <strong>Zusammenfassung der Lagerkommissionierung erstellen</strong> zeigt das Feld <strong>Bewegungsmenge (Basis)</strong> an, welche und wie viele Elemente vorhanden sind und Business Central versuchte zu entnehmen. Die Infobox <strong>Zusammenfassung</strong> bietet weitere Details.</p>
+<p>Für einfache Untersuchungen bietet die <strong>Entnehmbare Menge</strong> genügend Informationen geben. Das Feld zeigt an, wie viele Artikel verfügbar sind. Wenn die kommissionierbare Menge geringer ist als erwartet, untersuchen Sie den Lagerplätzeinhalt.</p>
+<p>Die <strong>Kommissionierbare Menge</strong> ist die maximale Menge, die Business Central für die Kommissionierung berücksichtigt werden kann. Diese Menge besteht aus Artikeln in kommissionierbaren Lagerplätzen. Die Menge schließt Mengen aus, die sich in gesperrten oder dedizierten Lagerplätzen befinden, oder Artikel, die in Lagerkommissionierbelegen kommissioniert werden. Wenn für den Artikel, den Sie kommissionieren möchten, eine Artikelverfolgung erforderlich ist, werden gesperrte Chargen- oder Seriennummern, die in kommissionierbaren Lagerplätzen gespeichert sind, von der kommissionierbaren Menge ausgeschlossen.</p>
+<p>Wenn die kommissionierbare Menge von der Menge in kommissionierbaren Lagerplätzen abweicht, liegt möglicherweise ein Problem vor. Durchsuchen Sie den Lagerplatzinhalt, um blockierte Lagerplätze oder Mengen in aktiven Dokumenten zu finden.</p>
+<p>Das Feld <strong>Menge im Lager</strong> zeigt die Gesamtmenge an, die Sie in Ihrem Lager vorfinden, wenn Sie eine physische Zählung durchführen. Von diesem Feld aus können Sie einen Drilldown zu den Lagerbucheinträgen durchführen. Wenn das Feld eine Menge anzeigt, die geringer ist als die Menge in der <strong>Menge in kommissionierbaren Lagerplätzen</strong>, liegt eine Abweichung zwischen Lager- und Bestandsmengen vor. Verwenden Sie in diesem Fall die Aktion <strong>Lageranpassung berechnen</strong> auf der Seite <strong>Artikelbuch.-Blatt</strong> und erstellen Sie dann die Lagerkommissionierung wieder.</p>
+<p>Das folgende Bild zeigt die maximale Menge, die für die Kommissionierung berücksichtigt wird.</p>
+<p>:::image type=&quot;content&quot; source=&quot;../media/pickable-qty.png&quot; alt-text=&quot;Maximale Menge, die für die Kommissionierung berücksichtigt wird.&quot;:::</p>
+<p><strong>Legende</strong></p>
+<table>
+<thead>
+<tr>
+<th>Brief</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>Lagerplätze mit Inhalt vom Typ Kommissionierung</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Lagerplätze mit Inhalt vom Typ „Auswahl“, die als „Dedizierte Lagerplätze“ markiert sind</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Lagerplätze mit Inhalt vom Typ „Auswahl“ in den aktiven Dokumenten (wie eine andere Auswahl)</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Lagerplätze mit Inhalt vom Typ „Kommissionieren“ mit Artikeln mit gesperrter Sendungsverfolgung</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Lagerplätze mit Inhalt der Art Pick mit gesperrtem Ausgang</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Andere Lagerplätze</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reservations">Reservierungen</h3>
+<p>Wenn für den kommissionierten Artikel Reservierungen vorhanden sind, wird die Berechnung fortgesetzt. Die Idee dahinter ist, dass der reservierte Bedarf eine höhere Priorität hat als der nicht reservierte Bedarf, was bedeutet, dass die Kommissionierung für den nicht reservierten Bedarf die spätere Kommissionierung für den reservierten Bedarf nicht verhindern sollte.</p>
+<p>Um zu überprüfen, ob Ihre Menge einen Bedarf decken kann, vergleichen Sie den Wert <strong>Auswählbare Menge</strong> in der <strong>Zusammenfassung</strong> Infobox mit dem Wert im Feld <strong>Bewegungsmenge (Basis)</strong> auf den Zeilen.</p>
+<p>Reservierungen finden Sie im Bereich <strong>Insgesamt reservierte Menge im Lager</strong>. Reservierte Mengen, die bereits kommissioniert wurden und zum Versand, zur Verwendung oder zum Verbrauch bereit sind, haben keinen Einfluss auf die Verfügbarkeit. Im Feld <strong>Reservierte Menge in Kommissionier-/Ausgangslagerplätzen</strong> wird diese Menge angezeigt.</p>
+<p>Das Feld <strong>Verfügbare Menge ohne Lieferungslagerplatz</strong> zeigt die verfügbare Menge an, mit Ausnahme der Mengen, für die Folgendes gilt:</p>
+<ul>
+<li>Sie sind bereits für den Versand ausgewählt.</li>
+<li>Sie befinden sich in gesperrten Artikelchargen oder Seriennummern.</li>
+<li>Sie liegen in verstopften Behältern.</li>
+<li>Sie liegen in dedizierten Lagerplätzen.</li>
+</ul>
+<p>Diese Mengen sind möglicherweise verfügbar, aber Sie können sie möglicherweise noch nicht auswählen. Sie könnten sich noch im Wareneingangs-, Lager- oder Qualitätssicherungsbereich befinden. Sie können sie in den Kommissionierbereich verschieben, indem Sie ein Einlagerungs- oder Umlagerungsarbeitsblatt bearbeiten.</p>
+<p>Der Unterschied zwischen <strong>Verfügbare Menge ohne Lieferungslagerplatz</strong> und der reservierten Menge im Lager ist die Menge verfügbar, die zur Entnahme verfügbar ist, ohne dass sich dies auf den reservierten Bestand auswirkt.</p>
+<p>Das folgende Bild veranschaulicht die Zuordnung der verfügbaren Menge zur reservierten Menge.</p>
+<p>:::image type=&quot;content&quot; source=&quot;../media/Warehouse_Reservation_Pick.png&quot; alt-text=&quot;Maximale Menge, die bei der Kommissionierung berücksichtigt wird, wenn eine Reservierung vorliegt.&quot;:::</p>
+<p><strong>Legende</strong></p>
+<table>
+<thead>
+<tr>
+<th>Brief</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>Zu kommissionierende Menge</td>
+</tr>
+<tr>
+<td>TR</td>
+<td>Insgesamt reservierte Menge im Lager.</td>
+</tr>
+<tr>
+<td>RS</td>
+<td>Reservierte Mengen, die bereits kommissioniert wurden und zum Versand, zur Verwendung oder zum Verbrauch bereit sind</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Verfügbare Menge ohne Lieferungslagerplatz</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Menge in dedizierten oder blockierten Lagerplätzen, blockierten Artikelchargen oder Seriennummern</td>
+</tr>
+</tbody>
+</table>
+<p>Auch wenn im Lager genügend verfügbare Menge vorhanden ist, um den Kommissionierungsbedarf vollständig zu decken, führt dies dazu, dass die gesamte reservierte Menge den Mengen in dedizierten oder gesperrten Lagerplätzen zugerechnet wird, was eine Kommissionierung für diesen Bedarf verhindert. Da reservierter Bedarf eine höhere Priorität hat, reduziert Business Central die zu kommissionierende Menge, um negative Auswirkungen auf den reservierten Bedarf, wie etwa die Unmöglichkeit der Kommissionierung, zu verhindern.</p>
+<h3 id="other-details">Sonstige Details</h3>
+<p>Wenn Artikel eine Artikelverfolgung erfordern, können Sie die Menge auch in gesperrten Chargen oder Seriennummern finden, was zu folgenden Reduzierungen führt:</p>
+<ul>
+<li>Die kommissionierbare Menge</li>
+<li>Verfügbare Menge, ohne den Transportplatz</li>
+<li>Die reservierte Menge im Lager </li>
+</ul>
+<p>Wenn Sie denselben Artikel für mehrere Quelldokumente oder -zeilen kommissionieren, was auch bei der Kommissionierung von Seriennummern der Fall ist, werden auch Informationen zu Kommissionierungen für andere Zeilen angezeigt, da dadurch die kommissionierbare Menge reduziert wird.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

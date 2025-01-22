@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Problembehandlung f&#252;r Verbindung </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Problembehandlung f&#252;r Verbindung ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="troubleshoot-connectivity-for-business-central">Problembehandlung der Konnektivität für Business Central</h1>
+
+<blockquote><p><strong>Geltet für:</strong> Business Central Online</p>
+<p>Diese Funktion befindet sich derzeit in der Vorschau. Die Funktionalität und die Belege können sich in späteren Versionen ändern. Wenn Sie auf der Grundlage Ihrer eigenen Erkenntnisse zur Dokumentation beitragen möchten, wählen Sie bitte <img src="media/github-edit-pencil.png" alt="Artikel in GitHub bearbeiten."> <strong>Bearbeiten</strong>, und schlagen Sie Änderungen vor. Dann werden wir uns das ansehen!</p>
+</blockquote>
+<p>Business Central Online enthält die Seite <strong>Problembehandlung Konnektivität</strong>, die Sie verwenden können, um Probleme mit Ihrer Verbindung zum Online-Dienst zu identifizieren. Es gibt mehrere Dinge, die die Konnektivität zu Business Central beeinflussen, wie die Firewall-Einstellungen Ihres Netzwerks oder die Konfiguration des Domänen-Namensdienstes. Auf der Seite können Sie eine Liste von Prüfungen ausführen, die allgemeine Probleme mit der Konnektivität von Business Central diagnostizieren. Sie können die Informationen verwenden, um zu versuchen, die Probleme selbst zu beheben, oder sie an Ihren Support-Mitarbeiter weitergeben.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Seite <strong>Problembehandlung der Konnektivität</strong> testet nicht die Leistung oder Zuverlässigkeit des Netzwerks, wie z. B. die Geschwindigkeit Ihrer Verbindung. Sie prüft nur die Konnektivität zu verschiedenen Ressourcen.</p>
+</div>
+<h2 id="start-the-connectivity-check">Starten Sie die Konnektivitätsprüfung</h2>
+<ol>
+<li>Öffnen Sie einen Internetbrowser.</li>
+<li><p>Geben Sie in der Adresse die URL ein, die Sie verwenden, um Business Central zu öffnen und fügen Sie am Ende <code>/connectivity</code> hinzu. </p>
+<p> Wenn Sie zum Beispiel <code>https://businesscentral.dynamics.com</code> verwenden, dann geben Sie ein:</p>
+<pre><code class="lang-http">https://businesscentral.dynamics.com/connectivity
+</code></pre><p> Oder, wenn die URL die Mandanten-ID enthält, z. B.  <code>https://businesscentral.dynamics.com/aaaabbbb-0000-cccc-1111-dddd2222eeee</code>, geben Sie Folgendes ein:</p>
+<pre><code class="lang-http">https://businesscentral.dynamics.com/aaaabbbb-0000-cccc-1111-dddd2222eeee/connectivity
+</code></pre></li>
+<li><p>Auf der Seite <strong>Problembehandlung Konnektivität</strong> wählen Sie <strong>Prüfung starten</strong>.</p>
+<p> Eine Reihe von Prüfungen wird ausgeführt, und das Ergebnis jeder Prüfung wird angezeigt:</p>
+<ul>
+<li><img src="media/connectivity-check.png" alt="Konnektivitätsprüfung erfolgreich."> zeigt an, dass die Prüfung erfolgreich war.</li>
+<li><img src="media/connectivity-failed.png" alt="Konnektivitätsprüfung fehlgeschlagen."> zeigt an, dass der Check fehlgeschlagen ist. Lesen Sie die Nachricht unterhalb des Checks für weitere Details.</li>
+<li><img src="media/connectivity-blocked.png" alt="Konnektivitätsprüfung wurde nicht ausgeführt."> zeigt an, dass die Prüfung nicht ausgeführt wurde, typischerweise wegen eines Fehlers bei einer früheren Prüfung. Lesen Sie die Nachricht unterhalb des Checks für weitere Details.</li>
+</ul>
+</li>
+<li><p>Um die Prüfung erneut auszuführen, wählen Sie <strong>Prüfung neu starten</strong>.</p>
+</li>
+</ol>
+<p>In den folgenden Abschnitten werden die ausgeführten Prüfungen erläutert und es werden einige Tipps zur Behebung von Problemen gegeben.</p>
+<h2 id="basic-internet-connectivity">Grundlegende Internet-Konnektivität</h2>
+<p>Überprüft, ob Sie eine Verbindung zum Internet haben, indem es prüft, ob Sie auf eine bekannte öffentliche Domäne zugreifen können, wie www.bing.com.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Was Sie versuchen sollten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ihr Browser unterstützt diese Prüfung nicht</td>
+<td>Öffnen Sie die Seite in einem unterstützten Browser, und versuchen Sie es erneut. Eine Liste der unterstützten Browser finden Sie unter <a href="product-requirements.html#browsers">Mindestanforderungen für die Verwendung von Business Central – Browser</a></td>
+</tr>
+<tr>
+<td>Der Server mit der folgenden URL konnte nicht angefunkt werden: {url}</td>
+<td>Überprüfen Sie die Firewall-Einstellungen.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cdn-content-delivery-network-resources-loading">CDN (Content Delivery Network)-Ressourcen werden geladen</h2>
+<p>Business Central verwendet Azure Content Delivery Network (CDN), um Ressourcen bereitzustellen, die zum Ausführen des Business Central Web-Clients erforderlich sind. Dieser Check prüft, ob die erforderlichen Ressourcen verfügbar und zugänglich sind, indem er die Business Central-Instanz im CDN anpingt.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Was Sie versuchen sollten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ihr Browser unterstützt diese Prüfung nicht</td>
+<td>Siehe <strong>Prüfung der grundlegenden Internet-Konnektivität</strong>.</td>
+</tr>
+<tr>
+<td>Der Server mit der folgenden URL konnte nicht angefunkt werden: {url}</td>
+<td>Überprüfen Sie die Firewall-Einstellungen.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="user-authentication">Benutzerauthentifizierung</h2>
+<p>Überprüft, ob sich der aktuelle Benutzende mit einem gültigen Business Central-Konto angemeldet hat.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Was Sie versuchen sollten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kein Benutzer ist derzeit authentifiziert</td>
+<td>Melden Sie sich bei Business Central mit einem gültigen Benutzernamen und Kennwort an.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="business-central-environments-discovery">Erkennung von Business Central-Umgebungen</h2>
+<p>Prüft, ob Business Central-Umgebungen für einen authentifizierten Benutzer verfügbar sind, und überprüft dann, ob der Benutzer in der Umgebung authentifiziert werden kann.</p>
+<!-- example: Your user name or password is incorrect, or you do not have a valid account.. Request duration: 332 milliseconds)-->
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Was Sie versuchen sollten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kein authentifizierter Benutzer, für den diese Prüfung durchgeführt werden soll</td>
+<td>Siehe die Prüfung <strong>Benutzerauthentifizierung</strong>.</td>
+</tr>
+<tr>
+<td>Es konnten keine verfügbaren Umgebungen für Ihr Konto abgerufen werden.</td>
+<td>Überprüfen Sie die Liste der verfügbaren Umgebungen im Business Central Admin Center.</td>
+</tr>
+<tr>
+<td>Ihr Benutzername oder Kennwort ist falsch oder Sie haben kein gültiges Konto.</td>
+<td>Überprüfen Sie, ob Sie sich mit dem richtigen Benutzernamen und Kennwort angemeldet haben.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="application-service-connectivity">Anwendungsdienstverbindung</h2>
+<p>Überprüft, ob der authentifizierte Benutzer eine Verbindung zu einer ermittelten Umgebung herstellen kann, normalerweise beginnend mit der Produktionsumgebung.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Was Sie versuchen sollten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kein authentifizierter Benutzer, für den diese Prüfung durchgeführt werden soll</td>
+<td>Siehe <strong>Benutzerauthentifizierung prüfen</strong>.</td>
+</tr>
+<tr>
+<td>Es konnten keine verfügbaren Umgebungen für Ihr Konto abgerufen werden.</td>
+<td>Siehe <strong>Ermittlung von Business Central Umgebungen</strong>.</td>
+</tr>
+<tr>
+<td>Keine Cluster-Adresse, für die diese Prüfung durchgeführt werden soll</td>
+<td>Überprüfen Sie die Liste der verfügbaren Umgebungen im Business Central Admin Center.</td>
+</tr>
+<tr>
+<td>Versionsendpunkt existiert nicht</td>
+<td>Überprüfen Sie die Liste der verfügbaren Umgebungen im Business Central Admin Center.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="web-server-connectivity">Webserver-Konnektivität</h2>
+<p>Überprüft, ob der authentifizierte Benutzer erfolgreich Verbindungen mit dem Webserver herstellen kann.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Was Sie versuchen sollten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kein authentifizierter Benutzer, für den diese Überprüfung durchgeführt werden soll</td>
+<td>Siehe <strong>Benutzerauthentifizierung prüfen</strong>.</td>
+</tr>
+<tr>
+<td>Es konnten keine verfügbaren Umgebungen für Ihr Konto abgerufen werden.</td>
+<td>Siehe <strong>Ermittlung von Business Central Umgebungen</strong>.</td>
+</tr>
+<tr>
+<td>Keine Cluster-Adresse, für die diese Prüfung durchgeführt werden soll</td>
+<td>Überprüfen Sie die Liste der verfügbaren Umgebungen im Business Central Admin Center.</td>
+</tr>
+<tr>
+<td>Fehler beim Herstellen einer Verbindung mit dem Webserver</td>
+<td>Leeren Sie den Cache und laden Sie die Seite neu.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="service-health-status">Dienststatus</h2>
+<p>Meldet den Dienstzustand von Business Central, indem nach gemeldeten Ausfällen gesucht wird.</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Was Sie versuchen sollten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kein authentifizierter Benutzer, für den diese Überprüfung durchgeführt werden soll</td>
+<td>Siehe <strong>Benutzerauthentifizierung prüfen</strong>.</td>
+</tr>
+<tr>
+<td>Leider ist Business Central vorübergehend nicht verfügbar. Versuchen Sie es später noch einmal.</td>
+<td>Versuchen Sie es später noch einmal.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="product-help-and-support.html">Ressourcen für Hilfe und Support</a><br><a href="setup.html">Übersicht der Aufgaben zum Festlegen von Business Central</a><br><a href="across-faq.yml">Häufig gestellte Fragen zur Verwendung von Business Central</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/administration/tenant-admin-center">Das Business Central Admin Center</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

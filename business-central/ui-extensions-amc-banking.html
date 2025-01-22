@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Verwenden der AMC Banking 365 Fundamentals-Erweiterung </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Verwenden der AMC Banking 365 Fundamentals-Erweiterung ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="use-the-amc-banking-365-fundamentals-extension">Verwenden Sie die AMC Banking 365 Fundamentals-Erweiterung</h1>
+
+<p>Die AMC Banking 365 Fundamentals-Erweiterung macht es einfacher und genauer, Daten an Ihre Banken zu senden. Die Erweiterung verbindet Business Central mit dem AMC Banking 365 Fundamentals for Microsoft Dynamics 365 Business Central-Dienst, der Bankdaten von Business Central in Formate konvertieren kann, die von über 600 Banken weltweit benötigt werden. Dies erleichtert z.B. die Übertragung von Zahlungen und Gutschriften an Lieferanten, indem Sie die Zahlungen auf Business Central eingeben und dann auf Ihre Bank hochladen. Die Formate können auch die Prozesse der Bankabstimmung glätten. Weitere Informationen finden Sie unter <a href="https://www.amcbanking.com/bc-fundamentals/">AMC Banking für Microsoft Dynamics 365 Business Central</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>AMC Banking hat zusätzliche Erweiterungen gebaut, die mit Business Central funktionieren. Dieses Thema beschreibt nur die grundlegende Erweiterung.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>In der generischen Version von Business Central  wird ein globaler Diensteanbieter eingerichtet und verbunden, der Bankdaten in das Dateiformat konvertiert, das Ihre Bank verlangt. In den nordamerikanischen Versionen kann derselbe Dienst verwendet werden, um Zahlungsdateien als Electronic Funds Transfer (EFT) zu senden, z.B. über das allgemein verwendete Automated Clearing House (ACH) Netzwerk, allerdings mit einem etwas anderen Verfahren.</p>
+</div>
+<h2 id="use-our-demonstration-account">Unser Demonstrationskonto verwenden</h2>
+<p>Business Central wird mit einem Demokonto geliefert, mit dem Sie die AMC Banking 365 Fundamentals-Erweiterung ausprobieren können. Wir bieten Standardeinstellungen für die Verbindung mit AMC Banking, die Angabe der Bankkonten, von denen die Daten in Business Central bezogen werden sollen, sowie einige Datenaustauschdefinitionen. Sie können die Verbindungseinstellungen auf der Seite <strong>AMC Banking Setup</strong> einsehen. Für Bankkonten bezieht die Erweiterung Werte in den Feldern <strong>Bankname</strong>, <strong>Überweisung Msg. Nr.</strong>, <strong>Kontoauszug Importformat</strong> und <strong>Zahlungsexportformat</strong> Felder auf Bankkontokarten.</p>
+<p>Wir stellen die Einstellungen zur Verfügung, aber um die Erweiterung auszuprobieren, müssen Sie die unterstützte Installationsanleitung ausführen, um sie anzuwenden. Um die Anleitung auszuführen, wählen Sie auf der Seite <strong>AMC Banking Setup</strong> die Aktion <strong>Unterstütztes Setup</strong>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Es gibt einige Einschränkungen für das Demo-Konto. Wenn Sie beispielsweise Zahlungen konvertieren, stimmt der Betrag in der konvertierten Datei nicht mit dem tatsächlichen Betrag überein. Stattdessen beträgt der Betrag immer fünf Einheiten der Währung, die Sie für Zahlungen verwenden.  </p>
+</div>
+<h2 id="setting-up-the-extension">Einrichten der Erweiterung</h2>
+<p>Der Einstieg in die Erweiterung ist mit wenigen Handgriffen erledigt, und eine unterstützte Installationsanleitung stellt die Verbindung her und schaltet die Erweiterung ein. Anleitung hilft Ihnen beispielsweise dabei, die Datenaustauschdefinitionen für den Export/Import von Kontoauszügen zu installieren und die für Überweisungsnachrichten verwendeten Nummernserien zu initiieren.  </p>
+<h3 id="to-set-up-the-required-permission-sets">So richten Sie die erforderlichen Berechtigungsgruppen ein</h3>
+<p>Bevor Personen diese Erweiterung verwenden können, muss Ihr Administrator die folgenden Berechtigungen kopieren, bearbeiten und die neuen Berechtigungen dann den Benutzern statt dem Original zuweisen:</p>
+<ul>
+<li><strong>D365 Basic</strong></li>
+<li><strong>D365 Team Member</strong></li>
+<li><strong>D365 Read</strong></li>
+<li><strong>Intelligente CloudBC</strong></li>
+</ul>
+<p>Weitere Informationen finden Sie unter <a href="ui-define-granular-permissions.html#copy-a-permission-set">Kopieren eines Berechtigungssatzes</a>.</p>
+<p>Erteilen Sie für jeden neuen Berechtigungssatz nur die Berechtigung <strong>Lesen</strong> für die <strong>AMC Banking Setup-Tabelle (20101)</strong>. Weitere Informationen finden Sie unter <a href="ui-define-granular-permissions.html#create-a-permission-set">Berechtigungen manuell erstellen oder ändern</a>.</p>
+<h3 id="to-connect-the-extension-to-amc-banking">So verbinden Sie die Erweiterung mit AMC Banking.</h3>
+<ol>
+<li>Besorgen Sie sich ein Modul und einen Serviceplan für AMC Banking. Um dies zu tun, besuchen Sie die Seite <a href="https://license.amcbanking.com/register">AMC Lizenz</a>.</li>
+<li>Wählen Sie in Business Central die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>AMC Banking Einrichtung</strong> ein und wählen Sie dann das zugehörige Link.  </li>
+<li>Wählen Sie auf der Seite <strong>AMC Banking Setup</strong> die Aktion <strong>Unterstütztes Setup</strong>.</li>
+<li>Schliessen Sie die Schritte im unterstützten Setup ab.</li>
+</ol>
+<h3 id="to-connect-bank-accounts-to-the-extension">So verbinden Sie Bankkonten mit der Erweiterung</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Bankkonten</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Öffnen Sie die Karte für das Bankkonto, das Sie mit dem Dienst verbinden möchten.</li>
+<li><p>Wählen Sie im Feld  <strong>Name</strong>  das von Ihrer Bank benötigte Format aus.  </p>
+<p>Die Formate sind so gefiltert, dass nur diejenigen angezeigt werden, die für das Land/die Region relevant sind, die für das Bankkonto angegeben ist.</p>
+</li>
+<li>Wählen Sie im Feld <strong>Überweisung Msg. Nr.</strong> die Nummernserie aus, die für Nachrichten, die Zahlungen begleiten, verwendet werden soll.</li>
+<li>Wählen Sie in den Feldern <strong>Kontoauszugsimportformat</strong> und <strong>Zahlungsexportformat</strong> die Datenaustauschdefinitionen, die Ihre Bank benötigt.</li>
+</ol>
+<h2 id="use-the-extension">Die Erweiterung verwenden</h2>
+<p>Die Verwendung dieser Erweiterung ist nur eine Frage des Exports von Daten auf der Seite <strong>Zahlungsjournale</strong> und des Hochladens auf den Webservice Ihrer Bank. Weitere Informationen finden Sie unter <a href="finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html">Zahlungen mit Bankdatenumstellung oder SEPA-Überweisung</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie müssen die Felder <strong>SWIFT Code</strong> und <strong>IBAN</strong> für jedes Bankkonto ausfüllen.</p>
+</div>
+<h3 id="to-export-data-and-submit-it-to-your-bank">So exportieren Sie Daten und übermitteln sie an Ihre Bank</h3>
+<div class="CAUTION"><h5>Achtung</h5><p>Wenn Sie Daten mithilfe der AMC Banking 365 Fundamentals-Erweiterung exportieren, werden einige Ihrer Geschäftsdaten dem Anbieter des Dienstes zugänglich gemacht. Der Dienstanbieter, AMC Consult A/S, ist für den Schutz dieser Daten verantwortlich. Weitere Informationen finden Sie unter <a href="https://go.microsoft.com/fwlink/?LinkId=510158">AMC-Datenschutzrichtlinie</a>.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Zahlungsausgangs Buch.-Blätter</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li><p>Erstellen Sie die Journalzeilen, die Sie exportieren möchten.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Denken Sie daran, für jede Zeile <strong>Elektronische Zahlung</strong> im Feld <strong>Bankzahlungsart</strong> zu wählen.</p>
+</div>
+</li>
+<li>Wählen Sie die Aktion <strong>Exportieren</strong> aus.</li>
+</ol>
+<h3 id="to-import-and-apply-the-converted-file">So importieren und wenden Sie die konvertierte Datei an</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Zahlungsausgangs Buch.-Blätter</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li><p>Wählen Sie die Aktion <strong>Banktransaktion importieren</strong> und dann die konvertierte Datei.  </p>
+<p>Business Central erstellt ein neues Zahlungsabgleichsjournal, das die Daten in der Datei enthält. Weitere Informationen finden Sie unter <a href="receivables-apply-payments-auto-reconcile-bank-accounts.html">Zahlungen automatisch vornehmen und Bankkonten abstimmen</a>.</p>
+</li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="ui-extensions.html">Anpassen von Business Central mithilfe von Erweiterungen</a><br><a href="ui-get-ready-business.html">Bereitschaft für die Geschäftsabwicklung</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

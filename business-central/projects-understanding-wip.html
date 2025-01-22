@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>WIP-Methoden zur Berechnung und Aufzeichnung des Projektfortschritts </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="WIP-Methoden zur Berechnung und Aufzeichnung des Projektfortschritts ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="understanding-wip-methods-in-project-management">WIP-Methoden im Projektmanagement verstehen</h1>
+
+<p>Im Laufe eines Projekts werden Material sowie Ressourcen und andere Aufwendungen verbraucht und müssen auf das Projekt gebucht werden. Umlaufbestand (WIP) ist eine Funktion, mit der Sie den finanziellen Wert von Projekten in der Finanzbuchhaltung schätzen können, solange die Projekte noch nicht abgeschlossen sind. In vielen Fällen werden die Aufwendungen für ein Projekt vor der Fakturierung eines Projekts gebucht. Wenn nur Ausgaben gebucht werden, ist Ihre Bilanz ungenau.</p>
+<p>Zum Überwachen des Werts in der Finanzbuchhaltung können Sie die WIP berechnen und den Wert in der Finanzbuchhaltung buchen. Weitere Informationen finden Sie unter <a href="projects-how-monitor-progress-performance.html">Überwachen des Projektfortschritts und der -leistung</a>.</p>
+<p>Standardmäßig werden die folgenden Methoden zur Berechnung und Aufzeichnung des Werts unfertiger Erzeugnisse unterstützt. Business Central </p>
+<table>
+<thead>
+<tr>
+<th>WIP-Methode</th>
+<th>Description</th>
+<th>Deklarierte Kosten</th>
+<th>Deklarierte Verkäufe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Einstandswert</td>
+<td>Erkennt Kosten, wenn dem Kunden eine Rechnung ausgestellt wird. Erkennt Umsätze auf Basis der fakturierten Umsätze.</td>
+<td>Einstandswert</td>
+<td>Vertrag (Rechnungspreis)</td>
+</tr>
+<tr>
+<td>Vertriebskosten</td>
+<td>Erkennt Kosten, wenn dem Kunden eine Rechnung ausgestellt wird. Erkennt Umsätze auf Basis der fakturierten Umsätze.</td>
+<td>Vertriebskosten</td>
+<td>Vertrag (fakturierter Preis)</td>
+</tr>
+<tr>
+<td>Verkaufswert</td>
+<td>Erkennt Kosten, sobald sie gemeldet werden. Erfasst Umsätze proportional zu den ausgewiesenen Kosten.</td>
+<td>Verbrauch (Einstandsbetrag)</td>
+<td>Verkaufswert</td>
+</tr>
+<tr>
+<td>Prozentsatz der Fertigung</td>
+<td>Erkennt Kosten, sobald sie gemeldet werden. Erfasst Umsätze proportional zu den ausgewiesenen Kosten.</td>
+<td>Verbrauch (Einstandsbetrag)</td>
+<td>Prozentsatz der Fertigung</td>
+</tr>
+<tr>
+<td>Abgeschl. Vertrag</td>
+<td>In die WIP-Berechnung fließen weder Umsätze noch Kosten ein. Bei einem abgeschlossenen Vertrag werden Umsatz und Kosten erst dann erfasst, wenn das Projekt abgeschlossen ist. Diese Option ist beispielsweise dann nützlich, wenn bei den Kosten- und Ertragsschätzungen für das Projekt große Unsicherheit besteht.</td>
+<td>Nach Abschluss</td>
+<td>Nach Abschluss</td>
+</tr>
+</tbody>
+</table>
+<p>Genaue Formeln und Hauptbuchtransaktionen werden durch die Auswahl in den Feldern  <a href="#recognized-cost"><strong>Anerkannte Kosten</strong></a>  und  <a href="#recognized-sales"><strong>Anerkannte Verkäufe</strong></a>  definiert.</p>
+<h2 id="create-a-project-wip-method">WIP-Methode für ein Projekt erstellen</h2>
+<p>Erstellen Sie eine Projekt-WIP-Methode, die den Bedarf Ihrer Organisation wiedergibt und legen Sie sie als Standard fest.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Nachdem Sie eine Methode zum Erstellen von WIP-Einträgen verwendet haben, können Sie die Methode nicht mehr ändern oder löschen.  </p>
+</div>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die das „Sie wünschen ...“-Feature öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol, geben Sie  <strong>Projekt-WIP-Methoden</strong> ein und wählen Sie dann das zugehörige verknüpfen aus.  </li>
+<li>Wählen Sie die Aktion  <strong>Neu</strong>, geben Sie die entsprechenden Werte für die Felder  <strong>Anerkannte Kosten</strong>  und  <strong>Anerkannte Umsätze</strong>  ein und füllen Sie dann die anderen Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.  </li>
+<li>Schließen Sie die Seite.</li>
+<li>Um diese Methode als Standard festzulegen, wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die Funktion „Wie möchten Sie weiter vorgehen“ öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie  <strong>Projekt-Setup</strong> ein und wählen Sie dann das zugehörige verknüpfen aus.  </li>
+<li>Wählen Sie im Feld <strong>WIP-Standardmethode</strong> die Methode aus der Liste aus.</li>
+</ol>
+<h3 id="recognized-cost">Anerkannte Kosten</h3>
+<table>
+<thead>
+<tr>
+<th>Anerkannte Kosten</th>
+<th>Anerkannte Kostenberechnungsformel</th>
+<th>Finanzbuchhaltungsposten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nach Abschluss</td>
+<td>0 (Null)</td>
+<td>Dt <strong>Konto für anerkannte Kosten</strong> Cr <strong>Konto für WIP-Kosten</strong> <br>Betrag: AnerkannteKosten </br><br>Dt <strong>Konto für WIP-Kosten</strong> Cr <strong>Konto für angewandte Projektkosten</strong> </br>Betrag: MAX[ErkannteKosten; Tatsächlich (Gesamtkosten)]</td>
+</tr>
+<tr>
+<td>Vertriebskosten</td>
+<td>Tatsächlich (Gesamtkosten) – Budget (Gesamtkosten) * Rechnungsbetrag %, wobei:<br> In Rechnung gestellt % = In Rechnung gestellt (Gesamtpreis) / In Rechnung zu stellen (Gesamtpreis)</br><br><strong>Hinweis:</strong> Diese Berechnung erfordert, dass der abrechenbare Betrag (Gesamtpreis) und das Budget (Gesamtkosten) für das gesamte Projekt korrekt eingegeben werden.</td>
+<td>Dt <strong>Konto für anerkannte Kosten</strong> Cr <strong>Konto für WIP-Kosten</strong> <br>Betrag: AnerkannteKosten </br><br>Dt <strong>Konto für WIP-Kosten</strong> Cr <strong>Konto für angewandte Projektkosten</strong> </br>Betrag: MAX[ErkannteKosten; Tatsächlich (Gesamtkosten)] <br>Dt <strong>Projektkosten-Anpassungskonto</strong> Cr <strong>WIP-Konto für aufgelaufene Kosten</strong> </br>Betrag: AnerkannteKosten – Tatsächliche (Gesamtkosten), wenn AnerkannteKosten &gt; Tatsächliche (Gesamtkosten)</td>
+</tr>
+<tr>
+<td>Einstandswert</td>
+<td>Tatsächlich (Gesamtkosten) – [Fertigstellung % – Rechnungsbetrag %] * Abrechenbarer (Gesamtpreis) * Budget-Kosten-Preis-Verhältnis, wobei: <br> BudgetCostPriceRatio = Budget (Gesamtkosten) / Budget (Gesamtpreis)</br>In Rechnung gestellt % = In Rechnung gestellt (Gesamtpreis) / In Rechnung zu stellen (Gesamtpreis)<br>Fertigstellungsgrad = Tatsächlich (Gesamtkosten)/Budget (Gesamtkosten)</br><br><strong>Hinweis:</strong> Für diese Berechnung müssen die abrechenbaren Beträge (Gesamtpreis), das Budget (Gesamtpreis) und das Budget (Gesamtkosten) für das gesamte Projekt korrekt eingegeben werden.</td>
+<td>Dt <strong>Konto für anerkannte Kosten</strong> Cr <strong>Konto für WIP-Kosten</strong> <br>Betrag: AnerkannteKosten</br><br>Dt <strong>Konto für WIP-Kosten</strong> Cr <strong>Konto für angewandte Projektkosten</strong> </br>Betrag: MAX[ErkannteKosten; Tatsächlich (Gesamtkosten)] <br>Dt <strong>Projektkosten-Anpassungskonto</strong> Cr <strong>WIP-Konto für aufgelaufene Kosten</strong> </br>Betrag: AnerkannteKosten – Tatsächliche (Gesamtkosten), wenn AnerkannteKosten &gt; Tatsächliche (Gesamtkosten)</td>
+</tr>
+<tr>
+<td>Vertrag (fakturierte Kosten)</td>
+<td>Fakturiert (Einstandsbetrag)</td>
+<td>Dt <strong>Konto für anerkannte Kosten</strong> Cr <strong>Konto für WIP-Kosten</strong> <br>Betrag: AnerkannteKosten </br><br> Dt <strong>Konto für WIP-Kosten</strong> Cr <strong>Konto für angewandte Projektkosten</strong> </br>Betrag: MAX[ErkannteKosten; Tatsächlich (Gesamtkosten)] <br>Dt <strong>Projektkosten-Anpassungskonto</strong> Cr <strong>WIP-Konto für aufgelaufene Kosten</strong> </br>Betrag: AnerkannteKosten – Tatsächliche (Gesamtkosten), wenn AnerkannteKosten &gt; Tatsächliche (Gesamtkosten)</td>
+</tr>
+<tr>
+<td>Verbrauch (Einstandsbetrag)</td>
+<td>Ist-Einstandsbetrag</td>
+<td>Dt <strong>Konto für anerkannte Kosten</strong> Cr <strong>Konto für WIP-Kosten</strong> <br>Betrag: AnerkannteKosten </br><br>Dt <strong>Konto für WIP-Kosten</strong> Cr <strong>Konto für angewandte Projektkosten</strong> </br>Betrag: MAX[ErkannteKosten; Tatsächlich (Gesamtkosten)]</td>
+</tr>
+</tbody>
+</table>
+<p>Wenn der Projektstatus auf „Abgeschlossen“ geändert wird, wird durch die  <strong>WIP berechnen</strong> Aufgabe die WIP-Transaktion rückgängig gemacht und stattdessen gebucht.</p>
+<p>Dt <strong>Konto für anerkannte Kosten</strong> Cr <strong>Konto für angewandte Projektkosten</strong>, Betrag: <strong>Tatsächlich (Gesamtkosten)</strong></p>
+<div class="NOTE"><h5>Hinweis</h5><p>Abhängig von der Auswahl im Feld  <strong>Verwendete WIP-Buchungsmethode</strong>  kann anstelle des  <strong>Kontos für Projektkosten</strong> das  <strong>Konto für angewendete Artikelkosten</strong>, das  <strong>Konto für angewendete Ressourcenkosten</strong>  oder das  <strong>Konto für angewendete Sachkosten</strong> verwendet werden. Weitere Informationen finden Sie unter  <a href="projects-how-setup-jobs.html#to-set-general-information-for-projects">Projektbuchungsgruppen</a>.</p>
+</div>
+<h3 id="recognized-sales">Anerkannte Verkäufe</h3>
+<table>
+<thead>
+<tr>
+<th>Deklarierte Verkäufe</th>
+<th>Anerkannte Formel zur Umsatzberechnung</th>
+<th>Finanzbuchhaltungsposten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nach Abschluss</td>
+<td>0 (Null)</td>
+<td>Dt <strong>WIP-Rechnungsverkaufskonto</strong> Cr <strong>Anerkanntes Verkaufskonto</strong> <br>Betrag: AnerkannterUmsatz</br><br>Dt <strong>Konto für angewandte Projektverkäufe</strong> Cr <strong>Konto für fakturierte WIP-Verkäufe</strong> </br>Betrag: Rechnungsbetrag (Gesamtpreis)</td>
+</tr>
+<tr>
+<td>Vertrag (fakturierter Preis)</td>
+<td>Fakturiert (Verkaufsbetrag)</td>
+<td>Dt <strong>WIP-Rechnungsverkaufskonto</strong> Cr <strong>Anerkanntes Verkaufskonto</strong> <br>Betrag: AnerkannterUmsatz</br><br>Dt <strong>Konto für angewandte Projektverkäufe</strong> Cr <strong>Konto für fakturierte WIP-Verkäufe</strong> </br>Betrag: Rechnungsbetrag (Gesamtpreis)</td>
+</tr>
+<tr>
+<td>Verbrauch (Einstandsbetrag)</td>
+<td>Ist-Einstandsbetrag</td>
+<td>Dt <strong>WIP-Rechnungsverkaufskonto</strong> Cr <strong>Anerkanntes Verkaufskonto</strong> <br>Betrag: AnerkannterUmsatz</br><br>Dt <strong>Konto für angewandte Projektverkäufe</strong> Cr <strong>Konto für fakturierte WIP-Verkäufe</strong> </br>Betrag: Rechnungsbetrag (Gesamtpreis)</td>
+</tr>
+<tr>
+<td>Prozentsatz der Fertigung</td>
+<td>MIN[Abrechnungsfähig (Gesamtpreis) * Fertigstellung %; Abrechnungsfähig (Gesamtpreis)], wobei:<br>Fertigstellungsgrad = Tatsächlich (Gesamtkosten)/Budget (Gesamtkosten)</br><br><strong>Hinweis:</strong> Diese Berechnung erfordert, dass der abrechenbare Betrag (Gesamtpreis) und das Budget (Gesamtkosten) für das gesamte Projekt korrekt eingegeben werden.</td>
+<td>Dt <strong>Konto für aufgelaufene WIP-Verkäufe</strong> Cr <strong>Konto für anerkannte Verkäufe</strong> <br>Betrag: AnerkannterUmsatz</br><br>Dt <strong>Konto für angewandte Projektverkäufe</strong> Cr <strong>Konto für fakturierte WIP-Verkäufe</strong> </br>Betrag: Rechnungsbetrag (Gesamtpreis)</td>
+</tr>
+<tr>
+<td>Verbrauch (Verkaufsbetrag)</td>
+<td>Ist-Verkaufsbetrag</td>
+<td>Dt <strong>WIP-Rechnungsverkaufskonto</strong> Cr <strong>Anerkanntes Verkaufskonto</strong> <br>Betrag: AnerkannterUmsatz </br><br>Dt <strong>Konto für angewandte Projektverkäufe</strong> Cr <strong>Konto für fakturierte WIP-Verkäufe</strong> </br>Betrag: MAX[Anerkannte Verkäufe; In Rechnung gestellt (Gesamtpreis)]<br>Dt <strong>Konto für aufgelaufene WIP-Verkäufe</strong> Cr <strong>Konto für Projektverkaufsanpassungen</strong> </br>Betrag: MAX[ErkannteVerkäufe; In Rechnung gestellt (Gesamtpreis)] – In Rechnung gestellt (Gesamtpreis)</td>
+</tr>
+<tr>
+<td>Verkaufswert</td>
+<td>Tatsächlich (Gesamtpreis) * Abrechenbarer (Gesamtpreis)/Budget (Gesamtpreis)<br><strong>Hinweis:</strong> Diese Berechnung erfordert, dass der abrechenbare Betrag (Gesamtpreis) und das Budget (Gesamtpreis) für das gesamte Projekt korrekt eingegeben werden.</td>
+<td>Dt <strong>WIP-Rechnungsverkaufskonto</strong> Cr <strong>Anerkanntes Verkaufskonto</strong> <br>Betrag: AnerkannterUmsatz</br><br>Dt <strong>Konto für angewandte Projektverkäufe</strong> Cr <strong>Konto für fakturierte WIP-Verkäufe</strong> </br>Betrag: MAX[Anerkannte Verkäufe; In Rechnung gestellt (Gesamtpreis)]<br>Dt <strong>Konto für aufgelaufene WIP-Verkäufe</strong> Cr <strong>Konto für Projektverkaufsanpassungen</strong> </br>Betrag: MAX[ErkannteVerkäufe; In Rechnung gestellt (Gesamtpreis)] – In Rechnung gestellt (Gesamtpreis)</td>
+</tr>
+</tbody>
+</table>
+<p>Wenn der Projektstatus auf „Abgeschlossen“ geändert wird, wird die WIP-Transaktion durch die  <strong>WIP berechnen</strong> Aufgabe rückgängig gemacht und stattdessen gebucht.</p>
+<p>Dt <strong>Konto für angewandte Projektverkäufe</strong> Cr <strong>Konto für anerkannte Verkäufe</strong>, Betrag: <strong>Rechnungsbetrag (Gesamtpreis)</strong></p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="projects-manage-projects.html">Projektmanagement</a><br><a href="finance.html">Finanzen</a><br><a href="purchasing-manage-purchasing.html">Einkauf</a><br><a href="sales-manage-sales.html">Verkauf</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

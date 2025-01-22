@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Produktionsst&#252;cklisten erstellen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Produktionsst&#252;cklisten erstellen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="create-production-boms">Produktionsstücklisten erstellen</h1>
+
+<p>In einer Fertigungsstückliste sind Stammdaten enthalten, mit denen die Komponenten und Unterbaugruppen beschrieben werden, die bei der Fertigung eines Artikels verwendet werden. Wenn Sie einen Fertigungsauftrag für einen übergeordneten Artikel erstellen, wird über die entsprechende Fertigungsstückliste die Berechnung des Materialbedarfs gesteuert, die auf der Seite <strong>Prod. Bestellkomponenten</strong> dargestellt wird.</p>
+<p>Business Central unterstützt auch Montagestücklisten. Verwenden Sie Montageaufträge, um Fertigprodukte aus Komponenten in einem Prozess herzustellen, der von einer oder mehreren Basisressourcen ausgeführt werden kann, die keine Maschinen oder Arbeitsplätze sind. Oder ein Prozess, der ohne Ressourcen abgeschlossen werden kann. Beispielsweise könnte ein Montagevorgang lauten, zwei Weinflaschen und ein Paket Kaffee zu kommissionieren und sie als Geschenkartikel zu verpacken. Weitere Informationen finden Sie unter <a href="inventory-how-work-BOMs.html#assembly-boms-or-production-boms">Montagestücklisten oder Fertigungsstücklisten</a>.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Die App <strong>Contoso Coffee Demodaten</strong> enthält Demonstrationsprodukte für eine Vielzahl von Produktionsstücklistenszenarien, die in einer Testumgebung verwendet werden können, auch während einer Testversion. Erfahren Sie, wie Sie Contoso Coffee Data festlegen und finden Sie exemplarische Vorgehensweisen für verschiedene Szenarien unter <a href="contoso-coffee/contoso-coffee-intro.html">Einführung in Contoso Coffee Demo Data</a>.</p>
+</div>
+<p>Bevor Sie einen Arbeitsplan erstellen können, müssen die folgenden Einrichtungen verfügbar sein:  </p>
+<ul>
+<li>Artikelkarten wurden für übergeordnete Artikel erstellt, die an der Fertigung teilnehmen. Weitere Informationen finden Sie unter <a href="inventory-how-register-new-items.html">Neue Artikel registrieren</a>.</li>
+<li>Die Ressourcen sind eingerichtet. Weitere Informationen finden Sie unter <a href="production-how-to-set-up-work-and-machine-centers.html">Einrichten von Arbeitsplatzgruppen und Arbeitsplätzen</a></li>
+</ul>
+<h2 id="to-create-a-production-bom">Erstellen Sie eine neue Fertigungsstückliste.</h2>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Produktionsstückliste</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.  </li>
+<li>Füllen Sie die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li><p>Wenn Sie die Fertigungsstückliste bearbeiten möchten, setzen Sie das Feld <strong>Status</strong> auf <strong>Neu</strong> oder <strong>In Entwicklung</strong>. Um den Arbeitsplan zu aktivieren, setzen Sie das Feld <strong>Status</strong> auf <strong>Zertifiziert</strong>.  </p>
+<p> So füllen Sie die Fertigungsstücklistenzeilen aus</p>
+</li>
+<li>Wählen Sie im Feld <strong>Art</strong> aus, ob es sich bei dem Artikel in der Fertigungsstücklistenzeile um einen normalen Artikel oder um eine Fertigungsstückliste handelt. In diesem Fall muss die Fertigungsstückliste bereits als zertifizierte Fertigungsstückliste vorhanden sein.  </li>
+<li>Geben Sie im Feld <strong>Nr.</strong> den zu verwendenden Artikel bzw. die zu verwendende Fertigungsstückliste, und wählen Sie sie aus (bzw. geben Sie sie im Feld ein).  </li>
+<li>Geben Sie im Feld <strong>Menge pro</strong> ein, wie viele Einheiten des Artikels zum übergeordneten Artikel gehören, z. B. 4 Räder für 1 Auto.  </li>
+<li><p>Im Feld <strong>Ausschuss %</strong> können Sie einen festen Prozentsatz für die Komponenten eingeben, die im Fertigungsvorgang voraussichtlich als Ausschuss anfallen. Sobald die Komponenten in einem freigegebenen Fertigungsauftrag verbraucht werden können, wird dieser Prozentsatz auf einem Produktionsprotokoll im Feld <strong>Verbrauchsmenge</strong> zur erwarteten Menge addiert. Weitere Informationen finden Sie unter <a href="production-how-to-register-consumption-and-output.html">Verbrauch und Ausgabe</a>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Der Ausschussprozentsatz steht für Komponenten, die während der Fertigung bei der Kommissionierung aus dem Lagerbestand als Ausschuss anfallen, wohingegen der Ausschussprozentsatz in Arbeitsgängen für die als Ausschuss anfallende Istmenge vor der Lageraufnahme steht.  </p>
+</div>
+</li>
+<li><p>Geben Sie im Feld <strong>Verbindungscode</strong> einen Code für die Verbindung der Komponente mit einem bestimmten Arbeitsgang ein. Weitere Informationen finden Sie unter <a href="production-how-to-create-routings.html#to-create-routing-links">So erstellen Sie einen Arbeitsplanlink</a>.</p>
+</li>
+<li>Wenn Sie aus einer vorhandenen Fertigungsstückliste Zeilen kopieren möchten, klicken Sie auf Aktionen, Funktion, <strong>Fertigungsstückliste kopieren</strong>, um vorhandene Zeilen auszuwählen.  </li>
+<li>Überprüfen Sie die Fertigungsstückliste.  </li>
+<li>Sie können die neue Fertigungsstückliste an die Karte des betreffenden übergeordneten Artikels anhängen. Weitere Informationen finden Sie unter <a href="inventory-how-register-new-items.html">Neue Artikel registrieren</a>.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Um den Einstandspreis einer Montage oder einer Montagestückliste zu berechnen, muss für den übergeordneten Artikel und seine Komponentenartikel die Lagerabgangsmethode <em>Standard</em> verwendet werden. Bei allen Ressourcen in der Montagestückliste wird ermittelt, ob Sie einen Einstandspreis haben, der auf der Ressourcenkarte definiert ist. Um den Einstandspreis für den Artikel über die Artikelkarte neu zu berechnen, wählen Sie die Aktion <strong>Produktion</strong> und wählen Sie dann <strong>Stückl. Einst.-Preis berechnen</strong> aus.  </p>
+</div>
+<h2 id="to-create-a-new-version-of-a-production-bom">Neue Versionen von Fertigungsstücklisten erzeugen</h2>
+<p>Verwenden Sie beispielsweise neue Versionen von Fertigungsstücklisten, wenn ein Artikel durch einen anderen Artikel ersetzt wird oder wenn ein Debitor eine spezielle Version des Produkts anfordert. Das Versionsprinzip ermöglicht die Verwaltung verschiedener Versionen einer Fertigungsstückliste. Die Struktur der Fertigungsstücklistenversion entspricht der Struktur der Fertigungsstückliste. Der grundsätzliche Unterschied besteht in der zeitlichen Gültigkeit der Versionen. Die Gültigkeit wird durch das Startdatum definiert.  </p>
+<p>Das Startdatum bestimmt den Start der Periode, in welcher die Version gültig ist. In allen anderen Fällen ist das Startdatum ein Filterkriterium für Berechnungen und Prüfungen. Die Fertigungsstücklistenversion ist gültig, bis die nächste Version aufgrund ihres Startdatums gültig wird.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Produktionsstückliste</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die zu kopierende Fertigungsstückliste, und wählen Sie die <strong>Versionen</strong> Aktion aus.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.  </li>
+<li>Füllen Sie die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li><p>Geben Sie im Feld <strong>Versionscode</strong> eine eindeutige Kennung der Version ein. Beliebige Kombinationen von Ziffern und Buchstaben können verwendet werden.  </p>
+<p> Die neu erstellte Version erhält automatisch den Status <strong>Neu</strong>.</p>
+</li>
+<li>Wenn die Stücklistenversion abgeschlossen ist wird der <strong>Status</strong> auf <strong>Zertifiziert</strong> festgelegt.  </li>
+</ol>
+<p>Die zeitliche Gültigkeit der Version wird durch das <strong>Startdatum</strong> bestimmt.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wählen Sie die Option <strong>Artikel</strong> in <strong>Art</strong>, um einen Artikel aus den Artikelstammdaten in Ihre Fertigungsstückliste zu übernehmen. Wenn der Artikel eine Fertigungsstückliste hat, wodurch das Feld <strong>Fert.-Stücklistennr.</strong> auf der Artikelkarte ausgefüllt wird, wird diese Fertigungsstückliste ebenfalls berücksichtigt.  </p>
+<p>Wählen Sie die Option <strong>Fertigungsstückliste</strong>, wenn Sie eine Phantomstückliste in der Zeile verwenden möchten.  </p>
+<p>Phantomstücklisten ermöglichen die Strukturierung des Produkts. Diese Fertigungsstückliste führt niemals zu einem Fertigprodukt, sondern wird ausschließlich zur Ermittlung des abhängigen Bedarfs verwendet. Phantomstücklisten haben keinen Eintrag in den Artikelstammdaten.</p>
+</div>
+<h2 id="quantity-calculation-formula-on-production-boms">Mengenberechnungsformel in Fertigungsstücklisten</h2>
+<p>Die Menge wird unter Berücksichtigung unterschiedlicher Dimensionen, die ebenfalls in die Zeilen Fertigungsstücklisten eingegeben werden, berechnet. Die Dimensionen beziehen sich auf eine Bestelleinheit des entsprechenden Artikels. Die Länge, Breite, Tiefe und das Gewicht können als Dimensionen eingegeben werden.  </p>
+<p>Die Spalten „Formel“, „Länge“, „Breite“, „Tiefe“ und „Gewicht“ werden nicht angezeigt, da sie nur von wenigen Anwendern benötigt werden. Wenn Sie die Berechnung der Menge verwenden wollen, dann müssen Sie diese Spalten einblenden.  </p>
+<p>Die Berechnungsformel definiert die Beziehung der einzelnen Komponenten. Die folgenden Optionen stehen als Formel zur Verfügung:  </p>
+<ul>
+<li><strong>Leer</strong> Keine Berücksichtigung der Dimensionen. (Menge = Komponentenmenge)  </li>
+<li><strong>Länge:</strong> Menge = Länge x Komponentenmenge  </li>
+<li><strong>Länge x Breite</strong> - Menge = Länge x Breite x Komponentenmenge  </li>
+<li><strong>Länge x Breite x Tiefe</strong> - Menge = Länge x Breite x Tiefe x Komponentenmenge  </li>
+<li><strong>Gewicht</strong>- Menge = Gewicht pro Komponentenmenge  </li>
+<li><strong>Feste Menge</strong> – Menge = Menge pro</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Die <strong>Feste Menge</strong>-Berechnungsformel stellt sicher, dass der Verbrauch einer Komponente unabhängig von Ausschuss oder Ausbringungsmengen gleich ist. Wenn das <strong>Berechnungsformel</strong>-Feld für Fertigungsauftragskomponenten auf <strong>Feste Menge</strong> eingestellt ist, ist der <strong>Erwartete Menge</strong>-Feldwert immer gleich dem <strong>Menge pro</strong>-Feld. Der in derselben Zeile definierte Ausschussprozentsatz wird ignoriert. Feste Menge wird vom <strong>Verfügbarkeit nach Stückliste</strong>-Prüfbericht berücksichtigt. Der Bericht zeigt den Artikel als Engpass an, wenn die verfügbare Menge geringer ist als die Menge im <strong>Menge pro übergeordnetem Element</strong>-Feld. Die Felder <strong>Festlegen als übergeord. Element möglich</strong> und <strong>Festlegen als übergeord. Artikel möglich</strong> sind immer leer, unabhängig von der verfügbaren Menge. Feste Menge wird auch in Berechnungen für Standardkosten einbezogen. Die Losgröße für den produzierten Artikel wirkt sich auf die Kosten aus, die einem Artikel zugeordnet werden.</p>
+</div>
+<h3 id="example">Beispiel</h3>
+<p>Eine Fertigungsstückliste erfordert 70 Metallteile mit den Dimensionen Länge = 0,20 m und Breite = 0,15 m. Geben Sie die Werte folgendermaßen ein: Formel = Länge x Breite, Länge = 20, Breite = 15, Komponentenmenge = 70.</p>
+<p>Die Menge ergibt sich aus: Menge pro Länge x Breite, dies ergibt, Menge = 70 x 0,20 m x 0,15 m = 2,1 m2.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="production-how-to-create-routings.html">Arbeitspläne erstellen</a><br><a href="inventory-item-variants.html">Produktvarianten verwalten</a><br><a href="contoso-coffee/manufacturing/variants.html">Exemplarische Vorgehensweise: Varianten</a><br><a href="production-configure-production-processes.html">Produktion einrichten</a><br><a href="production-manage-manufacturing.html">Produktion</a><br><a href="production-planning.html">Planung</a><br><a href="inventory-how-work-BOMs.html">Arbeiten mit Stücklisten</a><br><a href="assembly-how-work-assembly-boms.html">Arbeiten mit Montagestücklisten</a><br><a href="inventory-manage-inventory.html">Bestand</a><br><a href="purchasing-manage-purchasing.html">Einkauf</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

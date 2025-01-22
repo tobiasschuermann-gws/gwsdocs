@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Entwicklung validierter Lokalisierungs-Apps </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Entwicklung validierter Lokalisierungs-Apps ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="development-of-validated-localization-apps">Entwicklung validierter Lokalisierungs-Apps</h1>
+
+<p>Dieser Artikel beschreibt die Anforderungen und Leitlinien für die Entwicklung einer validierten Lokalisierungs-App für Business Central.</p>
+<h2 id="what-is-a-validated-localization-app">Was ist eine validierte Lokalisierungs-App?</h2>
+<p>Business Central ist <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json">weltweit in über 170 Märkten</a> verfügbar. Microsoft arbeitet in einer Reihe von Märkten mit ISV-Partnern zusammen, um Business Central mithilfe von Lokalisierungs-Apps zu lokalisieren, die auf <a href="https://go.microsoft.com/fwlink/?linkid=2081646">Microsoft AppSource</a> verfügbar sind. Für diese Regionen stehen eventuell Lokalisierungen über das bevorzugte Lokalisierungs-App-Programm zur Verfügung. Das bevorzugte Lokalisierungs-App-Programm erkennt jene Apps, die gemäß den spezifischen Qualitätsleitlinien von Microsoft erstellt wurden. ISV-Partner, die diese Programmvoraussetzungen und -leitlinien erfüllen, können im Wiederverkauf und für Kundschaft sowohl technisch als auch kommerziell Vorteile bieten.  </p>
+<p>In den folgenden Abschnitten finden Sie die Anforderungen und Leitlinien. Sie können sich das Programmteam wenden, wenn Sie an dem Programm teilnehmen möchten und die untenstehenden Anforderungen erfüllen. Sie erreichen uns über das <a href="mailto:d365bcloc@microsoft.com">Microsoft-Lokalisierungsteam</a>.   </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Die Business Central-Initiative für validierte Lokalisierungs-Apps wird derzeit als Pilotprogramm eingeführt. Die folgenden Anforderungen und Vorteile können sich je nach Feedback von Partnern und Kunden ändern.  </p>
+</div>
+<p>Apps im validierten Lokalisierungspilotprogramm enthalten eine Reihe von Funktionen, die lokale behördliche Anforderungen erfüllen und in eine der Kategorien auf der folgenden Liste fallen.  </p>
+<ul>
+<li><strong>Gesetzliche Anforderungen</strong>: lokale Funktionen, die Unternehmen dabei unterstützen, ihre gesetzlichen Anforderungen zu erfüllen, zum Beispiel im Hinblick auf Steuererklärungen, lokale E-Rechnungsformate, lokale GAAP-Vorgaben und andere gesetzliche Anforderungen.</li>
+<li><strong>Anforderung nationaler Standards</strong>: lokale Funktionalität, die lokale Standards berücksichtigt, wie etwa Adressformate, nationale Bankformate oder lokale Auslegungen globaler Standards.</li>
+<li><strong>Lokale Sprache</strong>: lokale Sprache in der Lokalisierungs-App, aber auch für eine Basis-App, wenn diese Sprache derzeit nicht auf der Liste der <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json">unterstützten Sprachen</a> steht.</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Lokale Marktbedürfnisse oder Branchenanforderungen sollten nicht in die bevorzugten Lokalisierungs-Apps aufgenommen werden. Wenn Apps diese Funktionen enthalten, können sie nicht als validierte Lokalisierungs-Apps zugelassen werden.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Lokale Funktionen wirken sich positiv auf die Produktivität der Geschäftsprozesse in einem Land aus und bieten Unternehmen dadurch einen höheren Mehrwert, sind jedoch aus gesetzlicher Sicht nicht erforderlich. So sollten etwa bestimmte Bank- und Zahlungsformate, Spesenabrechnungen, HR-Funktionen, Gehaltsabrechnungen und ähnliche kleinere oder größere sowie praktische, aber nicht notwendige Funktionen in anderen Apps umgesetzt werden. Wenn Apps diese Funktionen enthalten, werden sie nicht als validierte Lokalisierungs-Apps zugelassen.   </p>
+</div>
+<h2 id="validated-localization-app-business-requirements">Geschäftliche Anforderungen an validierte Lokalisierungs-Apps</h2>
+<ul>
+<li>Der Anbieter der validierten Lokalisierungs-App erfüllt alle Anforderungen an einen indirekten CSP-Anbieter.  </li>
+<li>Der Anbieter der validierten Lokalisierungs-App bringt mindestens in fünf Ländern/Regionen Angebote auf den Markt, die Dynamics 365 Business Central mit einer validierten Lokalisierungs-App bündeln. </li>
+<li>Der Anbieter der validierten Lokalisierungs-App verfügt über mindestens 10 Business Central-Onlinekunden mit Produktionsumgebungen, welche die validierte Lokalisierungs-App aktiv nutzen. </li>
+<li>Der Anbieter der validierten Lokalisierungs-App reicht jährlich einen Geschäftsplan beim V-Team des Programms ein. Hierzu gehören geplante Marketing- und Bereitschaftsaktivitäten zur Bewerbung des gebündelten Angebots gegenüber den indirekten CSP-Wiederverkäufern in den entsprechenden Ländern/Regionen. Der Plan kann zu Beginn jedes Quartals beim <a href="mailto:d365bcloc@microsoft.com">Microsoft-Lokalisierungsteam</a> eingereicht werden.  </li>
+<li>Validierte Lokalisierungs-Apps werden allen Kunden und Partnern zur Verfügung gestellt, die ihre Vorteile nutzen möchten.     </li>
+<li>Der Anbieter der validierten Lokalisierungs-App führt wiederkehrende Arbeitsstreams mit Microsoft durch.</li>
+</ul>
+<h2 id="validated-localization-app-functional-and-technical-requirements">Funktionale und technische Anforderungen an validierte Lokalisierungs-App</h2>
+<h3 id="functionality-requirements">Anforderungen an die Funktionalität</h3>
+<p>Die validierte Lokalisierungs-App muss nicht nur die technischen Anforderungen erfüllen, sondern auch mindestens den folgenden Produktumfang bieten:  </p>
+<ul>
+<li>Regionale gesetzliche Features:   <ul>
+<li>Gesetzliche Anforderungen.   </li>
+<li>Offiziell vorgeschriebene Features. </li>
+<li>Nur horizontale Features (nicht branchenspezifisch).  </li>
+<li>In den meisten Unternehmen einsetzbar.  </li>
+<li>Entspricht der folgenden Blaupause:   <ul>
+<li>Bereiche mit den häufigsten Gesetzesänderungen. </li>
+<li>Wird in Microsoft-Lokalisierungen bereits zur Lokalisierung nachverfolgt. </li>
+<li>Featurereferenzen: selten neu.  </li>
+<li>Keine anbieter-/bankspezifischen Formate, Gehaltsabrechnungen oder Ähnliches. </li>
+<li>Keine globalen Features, die nicht von Microsoft erstellt wurden. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Übersetzungen: <ul>
+<li>Übersetzung einer Lokalisierungs-App in lokale Sprachen. </li>
+<li>Übersetzung einer Basis-App in lokale Sprachen: Falls die Sprache noch nicht <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations?toc=/dynamics365/business-central/toc.json">unterstützt</a> wird.  </li>
+<li>Übersetzung der Dokumentation der Lokalisierungs-App in lokale Sprachen. </li>
+</ul>
+</li>
+<li>Obwohl beide Teil der Lokalisierung sind, wird empfohlen, nationale Standardfeatures (lokaler Teil) als separate Apps erstellt und nicht in dieselbe App wie die lokalen gesetzlichen Features integriert werden. </li>
+<li>Demodaten in der für den jeweiligen Markt geltenden Landessprache.   </li>
+<li>Alle Features müssen so gestaltet sein, dass die Benutzeroberfläche einfach zu handhaben bleibt. Beachten Sie, dass sie in erster Linie für den KMU-Markt bestimmt sind.  </li>
+<li>Entwickeln Sie keine neuen Features, wenn dieselben oder ähnliche Features bereits in der Basis-App vorliegen, z. B. elektronische Fakturierung, Prüfungsexporte, MwSt.-Features, Datenaustausch und andere, bei denen die meisten Funktionen in allen Ländern/Regionen gleich sind, es jedoch einige lokale Regeln oder Geschäftsformate gibt, bei denen es sich um Erweiterungen globaler Frameworks oder Formate handelt. Anstatt neue Features zu erstellen, erweitern Sie vorhandene.  </li>
+<li>Erstellen Sie Einrichtungsleitfäden (Assistenten) für Bereiche, deren Einrichtung komplex ist, um Benutzenden die Aktivierung und Entdeckung Ihrer Lokalisierungs-App zu erleichtern und ihnen zu helfen, eine angenehme Erfahrungen mit der ersten Verwendung dieser App zu machen.  </li>
+<li>Partner müssen für alle Aspekte ihrer Lokalisierung eine Funktionsdokumentation bereitstellen.  </li>
+</ul>
+<h3 id="technical-requirements">Technische Anforderungen</h3>
+<p>Im Folgenden finden Sie eine Liste der Anforderungen, die Sie erfüllen müssen, bevor Sie die validierte Lokalisierungs-App als Erweiterung zur Validierung einreichen können. Diese Liste ändert die <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-checklist-submission">technische Validierungsliste</a> nicht und erweitert die Anforderungen lediglich von diesem Ausgangspunkt aus.  </p>
+<ul>
+<li>Die Anbieter validierter Lokalisierungs-Apps müssen die validierte Lokalisierungs-App auf Grundlage der W1-Basis-App erstellen.  </li>
+<li>Die Anbieter validierter Lokalisierungs-Apps müssen die Lebenszyklus- und Supportrichtlinien von Microsoft einhalten.   </li>
+<li>Die obligatorische Testautomatisierung muss mindestens 80 % des Codes und alle Geschäftsprozesse abdecken, die sich durch die validierte Lokalisierungs-App ändern.  </li>
+<li>Die Anbieter validierter Lokalisierungs-Apps müssen ihre validierte Lokalisierungs-App vor der offiziellen Einführung einer neuen Version aktualisieren und/oder testen (mindestens mit dem RC vor der neuen Version), um sicherzustellen, dass keine Probleme vorliegen. </li>
+<li>Alle Objekte im Code der validierten Lokalisierungs-App müssen auf Englisch sein.   </li>
+<li>Die Anbieter validierter Lokalisierungs-Apps müssen die Microsoft-Richtlinien für veraltete Objekte und wichtige Änderungen sowie bewährte Methoden für die Abschaffung des AL-Codes befolgen.  </li>
+<li>Die Anbieter validierter Lokalisierungs-Apps sollten neue Ereignisse hinzufügen, wenn der Markt (anderen Implementierungspartnern oder Kundschaft) dies verlangt und sofern dies unter Beachtung der Richtlinien und Vorgehensweisen von Microsoft geschäftlich sinnvoll ist. Andernfalls müssen die Anbieter validierter Lokalisierungs-Apps auf derartige Anfragen begründen, warum die Hinzufügung aus geschäftlicher Sicht keinen Sinn ergibt. </li>
+<li>Die Anbieter validierter Lokalisierungs-Apps müssen schriftliche Testszenarien in englischer Sprache bereitstellen und Microsoft die Durchführung manueller Tests erlauben, falls dies von Microsoft verlangt wird.  </li>
+<li>Wenn eine validierte Lokalisierungs-App das Business Central-Datenmodell um neue Tabellen und/oder Felder erweitert, muss der Anbieter der validierten Lokalisierungs-App die Eigenschaft <strong>DataClassification</strong> korrekt festlegen.</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können auch eine Integration erstellen, wenn es Ihrer Meinung nach von Vorteile wäre, einige Funktionen außerhalb der Business Central-Umgebung zu platzieren und stattdessen die Verbindung zu Business Central beispielsweise über APIs oder Webdienste herzustellen.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-checklist-submission">Technische Validierung</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/readiness/readiness-develop-localization">Entwicklung einer Standardlokalisierungslösung</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/compliance/apptest-countries-and-translations">Verfügbarkeit nach Ländern/Regionen und unterstützte Sprachen</a><br><a href="about-localization.html">Was ist lokale Funktion in Dynamics 365 Business Central?</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/get-started/availability">Internationale Verfügbarkeit von Microsoft Dynamics 365</a><br><a href="compliance/compliance-overview.html">Compliance – Übersicht</a><br><a href="https://releaseplans.microsoft.com/availability-reports/?report=productgeoreport/">Geografische Verfügbarkeit für Dynamics 365</a>  </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

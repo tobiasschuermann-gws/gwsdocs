@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kreditorenzahlungen einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Kreditorenzahlungen einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../../index.html">
+                <img id="logo" class="svg" src="../../../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="kreditorenzahlungen-einrichten">Kreditorenzahlungen einrichten</h1>
+
+<p>Sie können in gevis ERP | VEO die Zahlung von Kreditorenrechnungen veranlassen. Hinterlegen Sie in der Kreditorenkarte den zutreffenden Zahlungsformcode und das Bankkonto des Kreditors. <br>
+Das Modul Continia OPplus365 erstellt Zahldateien im neuen SEPA-Format, das von allen Banken gelesen werden kann. Für Zahlvorgänge mit diesem Modul sind zusätzlich Empfängerinformationen in der OPplus Kreditorenkarte zu hinterlegen und eine Zahlungsbuchungsmatrix für SEPA einzurichten. </p>
+<h2 id="so-richten-sie-die-kreditorenzahlungen-in-der-kreditorenkarte-ein">So richten Sie die Kreditorenzahlungen in der Kreditorenkarte ein</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Dynamics 365 Business Central</strong> auf das Symbol <strong>Lupe</strong> <i class="fas fa-search" aria-hidden="true"></i>, geben Sie im Suchfeld <em>Kreditoren</em> ein und klicken Sie auf das übereinstimmende Suchergebnis.</li>
+<li>Öffnen Sie eine <strong>Kreditorenkarte</strong>.</li>
+<li>Klicken Sie im Inforegister <strong>Zahlungen</strong> in das Feld <strong>Zlg.-Bedingungscode</strong> und wählen Sie einen Code aus oder klicken Sie auf <strong>Neu</strong>, um einen neuen Datensatz anzulegen.</li>
+<li>Klicken in das Feld <strong>Zahlungsformcode</strong> und wählen Sie den Datensatz <em>Bank</em> aus.</li>
+<li>Klicken Sie in das Feld <strong>Bevorzugter Bankkontocode</strong> und wählen Sie einen Code aus.</li>
+</ol>
+<h3 id="so-legen-sie-ein-neues-bankkonto-für-den-kreditor-an">So legen Sie ein neues Bankkonto für den Kreditor an</h3>
+<ol>
+<li>Klicken Sie optional im Menüband auf die Schaltfläche <strong>Zugehörig</strong> &gt; <strong>Kreditor</strong> &gt; <strong>Sonstiges</strong> &gt; <strong>Bankkonten</strong>.</li>
+<li>Klicken Sie im Menüband auf die Schaltfläche <strong>Neu</strong>.</li>
+<li>Klicken Sie in das Feld <strong>Code</strong> und geben Sie einen Code für das Bankkonto des Kreditors ein.</li>
+<li>Klicken Sie in die restlichen Felder und geben Sie entsprechende Werte ein, um ein Bankkonto des Kreditors zu hinterlegen.</li>
+</ol>
+<h2 id="so-richten-sie-in-ihrer-bankkontokarte-eine-bankkontobuchungsgruppe-für-kreditorenzahlungen-ein">So richten Sie in Ihrer Bankkontokarte eine Bankkontobuchungsgruppe für Kreditorenzahlungen ein</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Dynamics 365 Business Central</strong> auf das Symbol <strong>Lupe</strong> <i class="fas fa-search" aria-hidden="true"></i>, geben Sie im Suchfeld <em>Bankkonten</em> ein und klicken Sie auf das übereinstimmende Suchergebnis.</li>
+<li>Öffenen Sie eine <strong>Bankkontokarte</strong>.</li>
+<li>Klicken Sie im Inforegister <strong>Buchung</strong> in das Feld <strong>Bankkontobuchungsgruppe</strong> und wählen Sie den Datensatz <em>BANK</em> aus.</li>
+</ol>
+<h2 id="so-richten-sie-die-opplus-kreditor-bankkontokarte-ein">So richten Sie die OPplus Kreditor Bankkontokarte ein</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Dynamics 365 Business Central</strong> auf das Symbol <strong>Lupe</strong> <i class="fas fa-search" aria-hidden="true"></i>, geben Sie im Suchfeld <em>OPplus Kreditor Bankkontokarte</em> ein und klicken Sie auf das übereinstimmende Suchergebnis.</li>
+<li>Geben Sie im Inforegister <strong>Transfer</strong> die Daten für das Bankkonto des Kreditors ein.</li>
+</ol>
+<h2 id="so-richten-sie-den-automatisieren-mailversand-für-die-kreditorenzahlungen-ein">So richten Sie den automatisieren Mailversand für die Kreditorenzahlungen ein</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Dynamics 365 Business Central</strong> auf das Symbol <strong>Lupe</strong> <i class="fas fa-search" aria-hidden="true"></i>, geben Sie im Suchfeld <em>Zgl. Export Einrichtung</em> ein und klicken Sie auf das übereinstimmende Suchergebnis.</li>
+<li>Geben Sie im Inforegister <strong>Avise</strong>, Gruppe <strong>Mailversand</strong> im Feld <strong>E-Mail Absender</strong> eine E-Mail Adresse ein.</li>
+<li>Klicken Sie in das Feld <strong>Mahnmethodencode für Avis-E-Mail-Text</strong> und wählen Sie die Option <em>Avis</em> aus.</li>
+<li>Klicken Sie in das Feld <strong>Avisversand Automatik</strong> und wählen Sie die Option <em>Nur E-Mail</em> aus.</li>
+</ol>
+<h2 id="so-hinterlegen-sie-empfängerinformationen-in-der-opplus-kreditorenkarte">So hinterlegen Sie Empfängerinformationen in der OPplus Kreditorenkarte</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Dynamics 365 Business Central</strong> auf das Symbol <strong>Lupe</strong> <i class="fas fa-search" aria-hidden="true"></i>, geben Sie im Suchfeld <em>OPplus Kreditorenkarte</em> ein und klicken Sie auf das übereinstimmende Suchergebnis.</li>
+<li>Klicken Sie im Inforegister <strong>Zlg. Export</strong> in das Feld <strong>Avisversandart</strong> und wählen Sie die Option <em>E-Mail</em> aus.</li>
+<li>Klicken Sie in das Feld <strong>Avisversandadresse</strong> und wählen Sie einen Datensatz aus.</li>
+</ol>
+<h2 id="so-richten-sie-eine-zahlungsbuchungsmatrix-für-sepa-ein">So richten Sie eine Zahlungsbuchungsmatrix für SEPA ein</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Dynamics 365 Business Central</strong> auf das Symbol <strong>Lupe</strong> <i class="fas fa-search" aria-hidden="true"></i>, geben Sie im Suchfeld <em>Zahlungsbuchungsmatrix</em> ein und klicken Sie auf das übereinstimmende Suchergebnis.</li>
+<li>Klicken Sie im Menüband auf die Schaltfläche <strong>Neu</strong>.</li>
+<li>Klicken Sie in das Feld <strong>Zahlungsartencode</strong> und wählen Sie den Datensatz <em>SEPA</em> aus.</li>
+<li>Klicken Sie in das Feld <strong>Bankkonto</strong> und wählen Sie ein Bankkonto aus.</li>
+<li>Klicken Sie in das Feld <strong>Buchungskontoart</strong> und wählen Sie die Option <em>Sachkonto</em> aus. </li>
+<li>Klicken Sie in das Feld <strong>Buchnungkontonr.</strong> und wählen Sie einen Datensatz aus.</li>
+<li>Geben Sie im Feld <strong>Kontoname</strong> eine Kurzbeschreibung ein (zum Beispiel <em>Geldtransit</em>). </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können für den Zahlungsartencode <em>SEPA</em> einen Avis-Text einrichten auf der Seite <strong>Zahlungsarten</strong>. Klicken Sie im Menüband <strong>Dynamics 365 Business Central</strong> auf das Symbol <strong>Lupe</strong> <i class="fas fa-search" aria-hidden="true"></i>, geben Sie im Suchfeld <em>Zahlungsarten</em> ein und klicken Sie auf das übereinstimmende Suchergebnis.
+Im Feld <strong>Text Verwendungszweck Kreditor</strong> können Sie einen entsprechenden Text eingeben.</p>
+</div>
+<h1 id="siehe-auch">Siehe auch</h1>
+<p><a href="https://docs.gws.ms/de-DE/geviserpveo/business-central/finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html">Zahlungen mit der AMC Banking 365 Fundamentals-Erweiterung oder per SEPA-Überweisung vornehmen</a><br>
+<a href="https://docs.gws.ms/de-DE/geviserpveo/business-central/receivables-apply-payments-auto-reconcile-bank-accounts.html">Zahlungen automatisch vornehmen und Bankkonten abstimmen</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../styles/main.js"></script>
+  </body>
+</html>

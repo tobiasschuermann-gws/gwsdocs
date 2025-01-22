@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Einrichten von Basislagern mit Vorgangsbereichen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Einrichten von Basislagern mit Vorgangsbereichen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-basic-warehouses-with-operations-areas">Basislager mit Vorgängen festlegen</h1>
+
+<p>Wenn in den Basislagerkonfigurationen interne Vorgangsbereiche wie Produktion oder Montage vorhanden sind, in denen Lagerplätze das Einrichtungsfeld <strong>Lagerplatz notwendig</strong> und möglicherweise die Einrichtungsfelder <strong>Kommissionierung erforderlich</strong> und <strong>Einlagerung erforderlich</strong> verwenden, können Sie die folgenden Basislagerbelege verwenden, um Ihre Lageraktivitäten für interne Vorgangsbereiche zu erfassen:  </p>
+<ul>
+<li>Seite <strong>Lagerbestandsumlagerung</strong>  </li>
+<li>Seite <strong>Lagerkommissionierung</strong>  </li>
+<li>Seite <strong>Lagereinlagerung</strong></li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Obwohl die Einstellungen <strong>Kommissionierung erforderlich</strong> und <strong>Einlagerung erforderlich</strong> genannt werden, können Sie weiterhin Wareneingänge und Lieferungen direkt aus den Quellgeschäftsunterlagen an Lagerorten, in denen Sie diese Kontrollkästchen aktivieren.  </p>
+</div>
+<p>Um diese Seiten mit internen Vorgängen zu verwenden, wie Komponenten zu kommissionieren und in die Produktion zu verschieben, sind, abhängig davon, wie viel Kontrolle Sie benötigen, alle oder einige der folgenden Einrichtungsschritte erforderlich:  </p>
+<ul>
+<li>Aktivieren Sie die Kommissionierungs-, Umlagerungs- und Einlagerungsbelege.  </li>
+<li>Definieren Sie Standardlagerplatzstrukturen für Komponenten und die Endartikel, die zu Arbeitsgangressourcen laufen und von diesen abgehen.  </li>
+<li>Erstellen Sie Lagerorte für den Zugang und den Abgang, die für spezielle Arbeitsgangressourcen dediziert sind, um zu verhindern, das Artikel für ausgehende Belege kommissioniert werden.</li>
+</ul>
+<p>Lagerfachcodes, die auf Lagerortkarten eingerichtet werden, definieren einen Standardlagerfluss für bestimmte Aktivitäten wie z. B. Komponenten in einer Montageabteilung. Mithilfe zusätzlicher Funktionen wird sichergestellt, dass Artikel, die in einem bestimmten Lagerfach platziert werden, nicht umgelagert oder für sonstige Aktivitäten entnommen werden können. Weitere Informationen finden Sie unter <a href="warehouse-how-to-set-up-basic-warehouses-with-operations-areas.html#to-create-dedicated-component-bins">So erstellen Sie festgelegte Komponentenlagerplätze</a>.</p>
+<p>Die folgenden Verfahren basieren auf dem Einrichten von grundlegenden Lageraktivitäten um eine Fertigungsstätte. Die Schritte sind für andere Arbeitsgangsbereiche, wie Montage, Servicemanagement und Projekte ähnlich.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Im folgenden Verfahren wird das Einrichtungsfeld <strong>Lagerplatz notwendig</strong> auf Lagerortkarten als Voraussetzung aktiviert, da dies als Grundlage für alle Logistikstufen gilt.  </p>
+</div>
+<h2 id="to-enable-inventory-documents-for-internal-operation-activities">Um den Inventurprozess für Aktivitäten des internen Arbeitsgangs ausführen</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Lagerorte</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Öffnen Sie die Lagerortkarte, die Sie einrichten möchten.  </li>
+<li>Aktivieren Sie im Inforegister <strong>Lager</strong> das Kontrollkästchen <strong>Einlagerung erforderlich</strong>, um anzugeben, dass ein Lagereinlagerungs- oder ein Lagerbestandsumlagerungsbeleg erstellt werden kann, wenn ein eingehender oder ein interner Herkunftsbeleg mit einem Lagerplatzcode freigegeben wird.  </li>
+<li>Aktivieren Sie das Kontrollkästchen <strong>Kommissionierung erforderlich</strong>, um anzugeben, dass ein Lagerkommissionierbeleg oder ein Lagerbestandsumlagerungsbeleg erstellt werden muss, wenn ein ausgehender oder ein interner Herkunftsbeleg mit einem Lagerplatzcode erstellt wird.  </li>
+</ol>
+<h2 id="to-define-a-default-bin-structure-in-the-production-area">Um eine Standardlagerplatzstruktur im Fertigungsbereich zu definieren</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Lagerorte</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Öffnen Sie den Lagerort, den Sie einrichten möchten.  </li>
+<li>Geben Sie im Inforegister <strong>Lagerplätze</strong> im Feld <strong>Off. Fert.-Ber.-Lagerpl.-Code</strong> den Code des Lagerorts im Fertigungsbereich mit einer Menge von Komponenten ein, die der Maschinist verbrauchen kann, ohne eine Lageraktivität anfordern zu müssen, um sie zum Lagerplatz zu bringen. Artikel, die an diesem Lagerplatz eingelagert werden, werden in der Regel eingerichtet zur automatischen Buchung. Das bedeutet, dass das Feld <strong>Buchungsmethode</strong> die Option <strong>Vorwärts</strong> oder <strong>Rückwärts</strong> enthält.  </li>
+<li><p>Geben Sie im Feld <strong>Fert.-Bereitst.-Lagerplatzcode</strong> den Code des Lagerplatzes im Fertigungsbereich an, wo Komponenten, die für die Fertigung an diesem Lagerplatz kommissioniert werden, standardmäßig platziert werden, bevor sie verbraucht werden können. Artikel, die an diesem Lagerplatz eingelagert werden, werden in der Regel eingerichtet zur manuellen Verbrauchsbuchung. Das bedeutet, dass das Feld <strong>Buchungsmethode</strong> <strong>Manuell</strong> oder <strong>Kommiss. + Vorwärts</strong> oder <strong>Kommiss. + Rückwärts</strong> für Kommissionierungen und Lagerbestandsumlagerungen enthält.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie Lagerkommissionierungen verwenden, definiert das Feld <strong>Lagerplatzcode</strong> in der Komponentenzeile eines Fertigungsauftrags den <em>Entnahme</em>-Lagerplatz, in dem die Anzahl der Komponenten bei Buchung des Verbrauchs verringert wird. Wenn Sie Lagerbestandsumlagerungen verwenden, definiert das Feld <strong>Lagerplatzcode</strong> in FA-Komponentenzeilen den <em>Einlagerungs</em>-Lagerplatz im Vorgangsbereich, in dem der Lagermitarbeiter die Komponenten platzieren muss.  </p>
+</div>
+</li>
+<li><p>Geben Sie im Inforegister <strong>Lagerplätze</strong> im Feld <strong>Fert.-Ausgangslagerplatzcode</strong> den Code des Lagerorts im Fertigungsbereich ein, von dem fertige Endartikel standardmäßig entnommen werden, sofern der Vorgang eine Lageraktivität beinhaltet. In den Basis-Lagerkonfigurationen wird die Aktivität als Lagereinlagerung oder Lagerbestandsumlagerung erfasst.  </p>
+</li>
+</ol>
+<p>Komponentenzeilen in Fertigungsaufträgen mit dem Vorgabe-Lagerplatzcode erfordern jetzt, dass mit der Methode &quot;Vorwärts&quot; geleerte Komponenten dort platziert werden. Jedoch können, bis die Komponenten von diesem Lagerplatz verbraucht sind, Komponenten von diesem Lagerplatz durch andere Bedarfsanforderungen kommissioniert oder verbraucht werden, weil sie weiterhin als verfügbare Lagerplatzinhalte gelten. Um sicherzustellen, dass der Lagerplatzinhalt nur für den Komponentenbedarf verfügbar ist, der diesen Fert.-Bereitst.-Lagerplatzcode verwendet, müssen Sie das Feld <strong>Dediziert</strong> der Zeile für diesen Lagerplatzcode auf der Seite <strong>Lagerplätze</strong> auswählen, das Sie über die Lagerortkarte öffnen.</p>
+<p>Dieses Flussdiagramm zeigt, wie das Feld <strong>Lagerplatzcode</strong> in FA-Komponentenzeilen entsprechend Ihrer Einrichtung ausgefüllt wird.  </p>
+<p><img src="media/binflow.png" alt="Flowdiagramm Lagerplatz." title="BinFlow"></p>
+<h2 id="to-define-a-default-bin-structure-in-the-assembly-area">Um eine Standardlagerplatzstruktur im Montagebereich zu definieren</h2>
+<p>Komponenten für Montageaufträge können nicht mit Lagerkommissionierungen kommissioniert oder gebucht werden. Verwenden Sie stattdessen die Seite <strong>Lagerbestandsumlagerung</strong>. Weitere Informationen unter <a href="warehouse-how-to-pick-for-production.html">Kommissionierung oder Umlagerung für Produktion, Montage oder Projekte in der Basislagerkonfiguration</a>.</p>
+<p>Bei der Kommissionierung und Lieferung von Verkaufszeilenmengen, die auftragsbezogen montiert werden, müssen Sie bestimmte Regeln einhalten, wenn sie die Lagerkommissionierzeilen erstellen. Weitere Informationen finden Sie im Abschnitt „Verwenden von Auftragsmontageartikeln in Lagerkommissionierungen“ in <a href="warehouse-how-to-pick-items-with-inventory-picks.html">Artikel mit Lagerkommissionierungen auswählen</a>.</p>
+<p>Weitere Informationen finden Sie unter <a href="assembly-assemble-items.html">Montageverwaltung</a>.</p>
+<h3 id="to-set-up-that-an-inventory-movement-is-automatically-created-when-the-inventory-pick-for-the-assembly-item-is-created">So richten Sie ein, dass eine Lagerbestandsumlagerung automatisch erstellt wird, wenn die Lagerkommissionierung für die Montageartikel erstellt wird.</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Montageeinrichtung</strong> ein und wählen Sie dann den entsprechenden Link.</li>
+<li>Wählen Sie das Kontrollkästchen <strong>Umlagerungen automatisch erstellen</strong>.</li>
+</ol>
+<h3 id="to-set-up-the-bin-in-the-assembly-area-where-components-are-placed-by-default-before-they-can-be-consumed-in-assembly">Um den Lagerplatz im Montagebereich einzurichten, wo Komponenten standardmäßig platziert werden, bevor sie bei der Montage verbraucht werden können.</h3>
+<p>Der Wert in diesem Feld wird automatisch in das Feld <strong>Lagerplatzcode</strong> in Montageauftragszeilen eingefügt, wenn dieser Lagerort in das Feld <strong>Lagerortcode</strong> in der Montageauftragszeile eingegeben wird.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lagerorte</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Öffnen Sie den Lagerort, den Sie festlegen möchten.</li>
+<li>Füllen Sie das Feld <strong>Mont.-Bereitst.-Lagerplatzcode</strong> aus.</li>
+</ol>
+<h3 id="to-set-up-the-bin-in-the-assembly-area-where-finished-assembly-items-are-posted-to-when-they-are-assembled-to-stock">Um den Lagerplatz im Montagebereich einzurichten, auf den fertige Montageartikel gebucht werden, wenn sie im Lager montiert werden.</h3>
+<p>Der Wert in diesem Feld wird automatisch in das Feld <strong>Lagerplatzcode</strong> in Montageauftragszeilenköpfen eingefügt, wenn dieser Lagerortcode in das Feld <strong>Lagerortcode</strong> in den Montageauftragszeilenkopf befüllt wird.</p>
+<p>Lagerplatzcodes, die auf Lagerortkarten eingerichtet werden, geben einen standardmäßigen Warenfluss für bestimmte Lageraktivitäten an, wie für den Verbrauch von Komponenten in einer Produktionsabteilung. Zusätzliche Funktionen sind vorhanden, um sicherzustellen, dass Artikel, die an einem Vorgabe-Lagerplatz platziert werden, durch andere Aktivitäten nicht umgelagert oder kommissioniert werden können.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Dieses Setup ist nur für Lagerorte möglich, für die das Feld Lagerplatz notwendig ausgewählt ist.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lagerorte</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Öffnen Sie den Lagerort, den Sie festlegen möchten.</li>
+<li>Füllen Sie das Feld <strong>Montage-Ausgangslagerplatzcode</strong> aus.</li>
+</ol>
+<h3 id="to-set-up-the-bin-where-finished-assembly-items-are-posted-to-when-they-are-assembled-to-a-linked-sales-order">Um den Lagerplatz einzurichten, auf den fertige Montageartikel gebucht werden, wenn sie entsprechend einem verknüpftem Auftrag montiert werden.</h3>
+<p>Von diesem Lagerplatz werden die Montageartikel sofort über eine Lagerkommissionierung geliefert, um den Verkaufsauftrag zu erfüllen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Dieses Feld kann nicht verwendet werden, wenn für den Lagerort die Verwendung der gesteuerten Kommissionierung und Einlagerung eingerichtet wurde.</p>
+</div>
+<p>Der Lagerplatzcode wird aus der Verkaufsauftragszeile in den Montageauftragskopf kopiert, um Fließbandarbeitern mitzuteilen, wo der Abgang platziert werden muss, um ihn zum Liefern vorzubereiten. Er wird ebenfalls in die Lagerkommissionierzeile kopiert, um den Lagermitarbeiter mitzuteilen, von die Lieferung entnommen werden soll.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Der Auftragsmontage-Ausgangslagerplatz ist immer leer. Wenn Sie eine Auftragsmontage-Verkaufszeile buchen, dann wird der Lagerplatzinhalt zuerst positiv mit dem Montageausstoß reguliert. Unmittelbar danach wird er mit der gelieferten Menge negativ reguliert.</p>
+</div>
+<p>Der Wert in diesem Feld wird automatisch in das Feld &quot;Lagerplatzcode&quot; in Verkaufsauftragszeilen eingefügt, die eine Menge im Feld <strong>Menge für Auftragsmontage</strong> enthalten, oder wenn das Feld <strong>Beschaffungsmethode</strong> des zu verkaufenden Artikels <strong>Auftragsmontage</strong> enthält.</p>
+<p>Wenn <strong>LP-Code f. Prog.fert.lief.</strong> leer ist, wird stattdessen das <strong>Montage-Ausgangslagerplatzcode</strong> Feld verwendet. Wenn beide Einrichtungsfelder leer sind, dann wird der zuletzt benutzte Lagerplatz mit Inhalt im Feld <strong>Lagerplatzcode</strong> in Verkaufsauftragszeilen verwendet.</p>
+<p>Der gleiche Lagerplatzcode wird wiederum in das Feld <strong>Lagerplatzcode</strong> der Lagerkommissionierzeile kopiert, die die Lieferung der Auftragsmontagemenge verwaltet. Weitere Informationen finden Sie im Abschnitt „Verwenden von Auftragsmontageartikeln in Lagerkommissionierungen“ in <a href="warehouse-how-to-pick-items-with-inventory-picks.html">Artikel mit Lagerkommissionierungen auswählen</a>.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lagerorte</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Öffnen Sie den Lagerort, den Sie festlegen möchten.</li>
+<li>Füllen Sie das Feld <strong>LP-Code f. Prog.fert.lief.</strong> aus.</li>
+</ol>
+<h2 id="to-create-dedicated-component-bins">So erstellen Sie dedizierte Komponentenlagerplätze</h2>
+<p>Sie können angeben, dass Mengen in einem Lagerplatz vor der Kommissionierung für andere Bedarfsposten als den Bedarf ihres aktuellen Zwecks geschützt werden.</p>
+<p>Mengen in Fert.-Bereitst.-Lagerplätzen/Fert.-Ausgangslagerplätzen können weiterhin reserviert werden. Entsprechend sind die Mengen in dedizierten Lagerplätzen im Feld <strong>Total verfügbare Menge</strong> auf der Seite <strong>Reservierung</strong> enthalten.</p>
+<p>Beispielsweise wird eine Arbeitsplatzgruppe mit einem Lagerplatzcode im Feld <strong>Fert.-Bereitst.-Lagerplatzcode</strong> eingerichtet. Komponentenzeilen in Fertigungsaufträgen mit diesem Lagerplatzcode erfordern, dass mit der Methode &quot;Vorwärts&quot; geleerte Komponenten dort platziert werden. Jedoch können, bis die Komponenten von diesem Lagerplatz verbraucht sind, Komponenten von diesem Lagerplatz durch andere Bedarfsanforderungen kommissioniert oder verbraucht werden, weil sie weiterhin als verfügbare Lagerplatzinhalte gelten. Um sicherzustellen, dass der Lagerplatzinhalt nur für den Komponentenbedarf verfügbar ist, der diesen Fert.-Bereitst.-Lagerplatzcode verwendet, müssen Sie das Feld <strong>Dediziert</strong> der Zeile für diesen Lagerplatzcode auf der Seite <strong>Lagerplätze</strong> auswählen, das Sie über die Lagerortkarte öffnen.</p>
+<p>Das Einrichten eines Fert.-Bereitst.-Lagerplatzes/Fert.-Ausgangslagerplatzes stellt ähnliche Funktionen für die Verwendung von Lagerplatzarten zur Verfügung, die nur in erweiterten Lagerfunktionen verfügbar sind. Weitere Informationen finden Sie unter <a href="warehouse-how-to-set-up-bin-types.html">Einrichten von Lagerplatzarten</a>.</p>
+<div class="CAUTION"><h5>Achtung</h5><p>Artikel in den Fert.-Bereitst.-Lagerplätzen/Fert.-Ausgangslagerplätzen werden nicht geschützt, wenn sie als Produktionskomponenten mit der Lagerkommissionierungsseite kommissioniert und verbraucht werden.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Lagerorte</strong> ein, und wählen Sie dann den entsprechenden Link. Wählen Sie die Lagerortkarte, die Sie aktualisieren möchten.  </li>
+<li>Wählen Sie die Aktion <strong>Lagerplätze</strong> aus.  </li>
+<li>Wählen Sie das Feld <strong>Dediziert</strong> für alle Lagerplätze aus, die für bestimmte interne Arbeitsgänge exklusiv verwendet werden sollen und an denen Mengen für diese Arbeitsgänge reserviert werden sollen, nachdem sie dort platziert wurden.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p> Der Lagerplatz muss leer sein, damit das Feld <strong>Dediziert</strong> ausgewählt oder gelöscht werden kann.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="design-details-warehouse-management.html">Lagerverwaltung – Übersicht</a>
+<a href="inventory-manage-inventory.html">Bestand</a><br><a href="warehouse-setup-warehouse.html">Einrichten von Warehouse Management</a><br><a href="assembly-assemble-items.html">Montageverwaltung</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

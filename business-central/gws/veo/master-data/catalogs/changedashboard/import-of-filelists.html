@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Import von Dateilisten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Import von Dateilisten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../../../index.html">
+                <img id="logo" class="svg" src="../../../../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="import-von-dateilisten">Import von Dateilisten</h1>
+
+<p>Im Änderungsdashboard importieren Sie Dateilisten als Rohdaten, die durch Transformationsregeln angepasst und in gevis ERP | VEO eingefügt werden. Die Daten werden beim Import auf Duplikate geprüft und aktualisiert. </p>
+<p>Sie können beim Bearbeiten eines Imports zwischen zwei Ansichten wechseln: </p>
+<ul>
+<li>Importkarte</li>
+<li>Baumansicht</li>
+</ul>
+<p>In beiden Ansichten haben Sie die Möglichkeit, importierte Daten zu korrigieren und den Vorgang abzuschließen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sollte in der Import Einrichtung die Aktion <em>Import, Prüfung und Übernahme</em> ausgewählt worden sein, werden die Daten nach dem Import automatisch geprüft und ins System übernommen. Weitere Informationen finden Sie unter <a href="https://docs.gws.ms/de-DE/geviserpveo/business-central/gws/veo/master-data/catalogs/changedashboard/changedashboard-setup.html">Änderungsdashboard einrichten</a>.</p>
+</div>
+<h2 id="so-importieren-sie-rohdaten">So importieren Sie Rohdaten</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Mandanten</strong> auf die Schaltfläche <strong>Stammdatenmanagement</strong> &gt; <strong>Listen</strong> &gt; <strong>Stammdaten - Import Vorgänge</strong>.</li>
+<li>Klicken Sie im Menüband der Seite <strong>Stammdaten - Import Vorgänge</strong> auf die Schaltfläche <strong>Importieren</strong>. </li>
+<li>Markieren Sie eine Import Einrichtung und bestätigen Sie mit <strong>OK</strong>. Die Rohdaten werden importiert. </li>
+<li>Klicken Sie im Dialogfenster <strong>Upload</strong> auf die Schaltfläche <strong>Wählen...</strong> und wählen Sie die Datei aus, die importiert werden soll. Ist in der Import Einrichtung im Feld <strong>Importdateiname</strong> ein Wert hinterlegt, erfolgt der Import automatisch. </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Ist der Import abgeschlossen, wird im Feld <strong>Status</strong> der Wert <em>Datei importiert</em> gesetzt und im Feld <strong>Anzahl Importzeilen</strong> die Anzahl der importierten Zeilen angezeigt. War der Import nicht erfolgreich ist im Feld <strong>Status</strong> der Wert <em>Fehler</em> gesetzt.</p>
+</div>
+<h2 id="so-öffnen-sie-eine-ansicht-direkt-nach-dem-import">So öffnen Sie eine Ansicht direkt nach dem Import</h2>
+<p>Sie haben zwei Möglichkeiten auf der Seite <strong>Stammdaten - Import Vorgänge</strong> eine Ansicht zu öffnen.</p>
+<p>Über das Feld <strong>Code</strong>:</p>
+<ul>
+<li>Klicken Sie in das Feld <strong>Code</strong> und bestätigen Sie im Dialogfenster die Transformation sowie die Prüfung der Daten mit <strong>Ja</strong>. Die Baumansicht wird geöffnet. </li>
+<li>klicken Sie in das Feld <strong>Code</strong> und dann im Dialogfenster auf die Schaltfläche <strong>Nein</strong>, wenn die Rohdaten noch nicht transformiert und geprüft werden sollen. Die Importkarte wird geöffnet.</li>
+</ul>
+<p>Über die Schaltfläche <strong>Zugehörig</strong>:</p>
+<ul>
+<li>Klicken Sie im Menüband auf die Schaltfläche <strong>Zugehörig</strong> &gt; <strong>Importübersicht</strong>, um die Importkarte zu öffnen. </li>
+<li>Klicken Sie im Menüband auf die Schaltfläche <strong>Zugehörig</strong> &gt; <strong>Artikelimportübersicht</strong>. Bestätigen Sie im Dialogfenster die Transformation sowie die Prüfung der Daten mit <strong>Ja</strong>, um die Baumansicht zu öffnen. Kicken Sie im Dialogfenster auf <strong>Nein</strong>, um die Importkarte zu öffnen.</li>
+</ul>
+<h2 id="so-schließen-sie-den-import-in-der-importkarte-ab">So schließen Sie den Import in der Importkarte ab</h2>
+<p>In der Importkarte können Sie sich die importierten Rohdaten in Form von Tabellen anzeigen lassen, einzelne Bearbeitungsschritte nachvollziehen und Fehler-Codes einsehen. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um die Importkarte zu öffnen, gehen Sie vor wie in <a href="#so-öffnen-sie-eine-ansicht-direkt-nach-dem-import">So öffnen Sie eine Ansicht direkt nach dem Import</a> oder wie in <a href="#so-wechseln-sie-in-eine-andere-ansicht">So wechseln Sie in eine andere Ansicht</a> beschrieben.</p>
+</div>
+<h3 id="so-übernehmen-sie-daten-in-der-importkarte">So übernehmen Sie Daten in der Importkarte</h3>
+<ol>
+<li><p>Öffnen Sie eine <strong>Importkarte</strong>.</p>
+<div class="NOTE"><h5>Hinweis</h5><ul>
+<li>Nach dem Import ist im Inforegister <strong>Allgemein</strong> im Feld Bearbeitungsfortschritt der Wert <em>1</em> gesetzt. </li>
+<li>Im Feld <strong>Anzahl der Rohdaten</strong> ist die Anzahl der Importzeilen eingetragen. Wenn Sie auf den Wert des Feldes klicken, können Sie die Rohdaten einsehen.</li>
+<li>Im Inforegister <strong>Importierte Artikeldaten</strong> ist in allen Feldern der Wert <em>0</em> gesetzt.</li>
+</ul>
+</div>
+</li>
+<li><p>Klicken Sie optional im Menüband auf die Schaltfläche <strong>Aktionen</strong> &gt; <strong>Transformieren</strong>, um das Datenmapping anzuwenden. </p>
+<div class="NOTE"><h5>Hinweis</h5><ul>
+<li>Nach dem Mapping ist im Inforegister <strong>Allgemein</strong> im Feld Bearbeitungsfortschritt der Wert <em>2</em> gesetzt. </li>
+<li>Im Inforegister <strong>Importierte Artikeldaten</strong> sind nun in allen Feldern Werte gesetzt für die Anzahl der gemappten Importzeilen. </li>
+</ul>
+</div>
+</li>
+<li><p>Klicken Sie im Menüband auf die Schaltfläche <strong>Feldänderungen prüfen</strong>. Noch nicht gemappte Zeilen werden gemappt und aktualisiert. Es werden nur noch Änderungen und komplett neue Zeilen berücksichtigt, sodass sich die Werte in den Feldern des Inforegisters <strong>Importierte Artikeldaten</strong> ändern können.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Im Inforegister <strong>Allgemein</strong> wird Ihnen im Feld <strong>Bearbeitungsfortschritt</strong> die Anzahl der Bearbeitungsschritte angezeigt, die bisher gestartet wurden. Klicken Sie in das Feld, um die Seite <strong>Änderungsdashboard - Import Tasks</strong> zu öffnen:</p>
+<ul>
+<li>Im Feld <strong>Aktion</strong> können Sie sehen, welche Bearbeitungsschritte bisher ausgeführt wurden. Es kann dort der Wert <em>Datei importiert</em>, <em>Daten geprüft</em> oder <em>Daten transformiert</em> gesetzt sein. </li>
+<li>Im Feld <strong>Status</strong> ist der Wert <em>Fertig</em> gesetzt für erfolgreich abgeschlossene Bearbeitungsschritte. War ein Bearbeitungsschritt nicht erfolgreich, ist dort der Wert <em>Fehler</em> gesetzt und zusätzlich wird im Feld <strong>Fehlermeldung</strong> ein Fehler-Code angezeigt.</li>
+</ul>
+</div>
+</li>
+<li>Klicken Sie im Inforegister <strong>Importierte Artikeldaten</strong> in ein Feld, um das Ergebnis der Prüfung zu sehen. Auf der Seite <strong>Änderungsdashboard - Artikelimporte</strong> sind jetzt für jeden Artikel zwei Zeilen angelegt. Im Feld <strong>Änderungsart</strong> ist in der ersten Zeile der Wert <em>Geändert</em> und in der zweiten Zeile der Wert <em>Aktuell im System</em> gesetzt. Werte, die aktualisiert und geändert wurden, erkennen Sie an der roten Schriftfarbe.</li>
+<li><p>Klicken Sie im Menüband auf die Schaltfläche <strong>Artikeldaten übernehmen</strong>. Alle Daten werden in die Tabellen von gevis ERP | VEO übernommen.   </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Im Inforegister <strong>Importierte Artikeldaten</strong> wird in den Feldern der Wert <em>0</em> gesetzt. Dort, wo der Wert nicht auf <em>0</em> gesetzt wurde, konnte die Übernahme nicht abgeschlossen werden. Zum Beispiel, wenn bei neuen Artikeln der passende Kreditor noch nicht angelegt ist.</p>
+</div>
+</li>
+</ol>
+<h3 id="so-korrigieren-und-selektieren-sie-daten-für-die-übernahme-in-der-importkarte">So korrigieren und selektieren Sie Daten für die Übernahme in der Importkarte</h3>
+<ol>
+<li>Klicken Sie im Inforegister <strong>Importierte Artikeldaten</strong> in ein Feld, um die Seite <strong>Änderungsdashboard - Artikelimporte</strong> zu öffnen.</li>
+<li>Klicken Sie im Menüband auf das Symbol Filter <i class="fa fa-filter" aria-hidden="true"></i>, um den Filterbereich einzublenden.</li>
+<li>Klicken Sie unter <strong>Liste filtern nach</strong> auf die Schaltfläche <strong>Filter…</strong> und wählen Sie über die Drop-Down-Liste <strong>Sichtbare Felder</strong>, welches Feld dem Filter hinzugefügt werden soll. Wählen Sie die Option <em>Änderungsart</em> aus und setzen Sie einen Haken für <em>Neu</em>. </li>
+<li>Klicken Sie im Menüband auf die Schaltfläche <strong>Liste bearbeiten</strong>.</li>
+<li>Klicken Sie in ein Feld und korrigieren Sie den Wert des Feldes.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><ul>
+<li>Sie können auf der Seite <strong>Änderungsdashboard - Artikelimporte</strong> bestimmte Daten für die Übernahme auswählen. Markieren Sie eine oder mehrere Zeilen und klicken Sie im Menüband auf die Schaltfläche <strong>Selektierte erstellen/aktualisieren</strong>.</li>
+<li>Sie haben auch die Möglichkeit, eine allgemeine Feldvoreinstellung für eine bestimmte Datenzeile zu ändern. Markieren Sie eine Zeile und klicken Sie auf die Schaltfläche <strong>Alle (de-)selektieren</strong>.</li>
+</ul>
+</div>
+<h2 id="so-schließen-sie-den-import-in-der-baumansicht-ab">So schließen Sie den Import in der Baumansicht ab</h2>
+<p>Wenn Sie die wichtigsten Informationen für eine größere Menge an importierten Artikeln prüfen, vergleichen oder korrigieren wollen, hilft Ihnen die Ansicht mit der Baumstruktur, den Überblick zu bewahren. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Baumstruktur können Sie erst öffnen, wenn die Daten nach dem Mapping sowohl transformiert als auch geprüft wurden. Um die Baumansicht zu öffnen, gehen Sie vor wie in <a href="#so-öffnen-sie-eine-ansicht-direkt-nach-dem-import">So öffnen Sie eine Ansicht direkt nach dem Import</a> oder wie in <a href="#so-wechseln-sie-in-eine-andere-ansicht">So wechseln Sie in eine andere Ansicht</a> beschrieben.</p>
+</div>
+<p>In der Baumansicht sind die Daten eines Artikels nicht in mehreren Tabellen aufgelistet. Sie werden dem Artikel in einer Baumstruktur zugeordnet: </p>
+<ul>
+<li>In der ersten Ebene wird der Artikellieferant oder die Artikelkategorie angezeigt. </li>
+<li>Auf der Ebene darunter wird unterschieden, ob es sich um geänderte oder neue Artikel handelt. </li>
+<li>In der Ebene darunter sind die Artikel gelistet. </li>
+<li>Für jeden geänderten und jeden neuen Artikel werden jeweils in der Ebene darunter die dazugehörigen Daten (zum Beispiel Einkaufspreis) angezeigt. </li>
+</ul>
+<h3 id="so-richten-sie-die-felder-für-die-baumansicht-ein">So richten Sie die Felder für die Baumansicht ein</h3>
+<p>Die Baumstruktur ist übersichtlich aufgebaut. Standardmäßig wird nur eine bestimmte Anzahl an Feldern angezeigt: <strong>Beschreibung</strong>, <strong>Beschreibung 2</strong>, <strong>Beschreibung 3</strong>, <strong>Verkaufspreis</strong> und <strong>Einkaufspreis</strong>. Sie können diese Einrichtung ändern und bei Bedarf weitere Felder hinzufügen.</p>
+<ol>
+<li>Klicken Sie im Menüband <strong>Mandanten</strong> auf die Schaltfläche <strong>Stammdatenmanagement</strong> &gt; <strong>Verwaltung</strong> &gt; <strong>Stammdaten - Import Ansicht Einrichtung</strong>.</li>
+<li>Klicken Sie im Inforegister <strong>Allgemein</strong> in das Feld <strong>Struktur</strong> und wählen Sie eine Option aus: <em>Artikellieferant</em> oder <em>Artikelkategorie</em>.</li>
+<li>Wählen Sie im Inforegister <strong>Ansicht Tabellen und Felder</strong> aus, welche Felder in der Baumstruktur dargestellt werden sollen. </li>
+<li>Klicken Sie optional in das Feld <strong>Schwellenwert %</strong> und geben Sie einen Wert ein (zum Beispiel für das Netto Gewicht eines Artikels). Der Schwellenwert (min. 0,01 %) gibt an, wann ein Wert in einem von Ihnen zuvor definierten Feld farbig (rot) dargestellt werden soll.</li>
+</ol>
+<h3 id="so-erweitern-oder-reduzieren-sie-die-ansicht-der-baumstruktur">So erweitern oder reduzieren Sie die Ansicht der Baumstruktur</h3>
+<p>Sie entscheiden, in welcher Detailtiefe die zugehörigen Daten gezeigt werden sollen:</p>
+<ul>
+<li><p>Wenn Sie die Ebene eines Artikellieferanten markieren und im Menüband auf die Schaltfläche <strong>Weitere Felder anzeigen</strong> klicken, werden alle Felder zu diesem Artikellieferanten angezeigt. </p>
+</li>
+<li><p>Wenn Sie einen Artikel markieren und im Menüband auf die Schaltfläche <strong>Weitere Felder anzeigen</strong> klicken, werden alle untergeordneten Daten zu diesem Artikel angezeigt (zum Beispiel Artikelrabattgruppe oder Netto Gewicht). </p>
+</li>
+<li><p>Sie haben zusätzlich die Möglichkeit, die importierten Daten anhand ihrer prozentualen Änderung zu durchsuchen. Klicken Sie im Menüband auf das Symbol <strong>Drop-Down</strong> <i class="fa fa-chevron-down" aria-hidden="true"></i> der Schaltfläche <strong>Suche</strong> und dann auf die Schaltfläche <strong>Suche prozentuale Änderung</strong>. So können Sie zum Beispiel die prozentuale Änderung für den Einkaufspreis anzeigen lassen.</p>
+</li>
+<li><p>Sie können für die Ansicht auch Filter setzen und nach einem Wert in den Feldern <strong>Alter Wert</strong> und <strong>Neuer Wert</strong> suchen.</p>
+<p>  Hier am Beispiel für die Werte <em>Artikel</em> und <em>Beschreibung</em>:</p>
+<ol>
+<li>Klicken Sie im Menüband auf die Schaltfläche <strong>Suche</strong>. </li>
+<li>Klicken Sie auf das Dreipunkt-Menü neben dem Feld <strong>Tabelle</strong>, markieren Sie den Wert <em>Artikel</em> und bestätigen Sie mit <strong>OK</strong>.</li>
+<li>Klicken Sie auf das Dreipunkt-Menü im Feld <strong>Feld</strong>, markieren Sie den Wert <em>Beschreibung</em> und bestätigen Sie mit <strong>OK</strong>.</li>
+<li><p>Bestätigen Sie die Einrichtung der Suche mit <strong>OK</strong>. <br>
+Sie sehen jetzt in der Baumstruktur für jeden Artikel im Feld <strong>Neuer Wert</strong> die neu importierte Beschreibung. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Filterung für die Suche können Sie wieder zurücksetzen. Klicken Sie hierfür im Menüband auf das Symbol <strong>Drop-Down</strong> <i class="fa fa-chevron-down" aria-hidden="true"></i> der Schaltfläche <strong>Suche</strong> und dann auf die Schaltfläche <strong>Suche löschen</strong>. </p>
+</div>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="so-korrigieren-sie-daten-in-der-baumansicht">So korrigieren Sie Daten in der Baumansicht</h3>
+<p>Angezeigt werden nur Artikeldaten, die noch nicht importiert wurden sowie alle Änderungen für bereits in gevis ERP | VEO vorhandene Artikel. Welche geänderten oder neuen Werte importiert wurden, erkennen Sie, wenn Sie die Einträge in den Feldern <strong>Alter Wert</strong> und <strong>Neuer Wert</strong> vergleichen.
+Sie können zum Beispiel die Beschreibung für einen importierten Artikel korrigieren, indem Sie in das Feld <strong>Neuer Wert</strong> klicken und die Korrektur für den importierten Wert vornehmen. Korrekturen können rückgängig und der Ursprung der Rohdaten wieder hergestellt werden, ohne erneut importieren zu müssen. </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Mit der Schaltfläche <strong>Aktionen</strong> &gt; <strong>Transformieren</strong> setzen Sie ALLE Änderungen für ALLE Artikel im Feld <strong>Neuer Wert</strong> zurück.</p>
+</div>
+<h3 id="so-übernehmen-sie-daten-in-der-baumansicht">So übernehmen Sie Daten in der Baumansicht</h3>
+<p>In der Baumansicht sehen Sie an den Haken im Feld <strong>Feld verwenden</strong>, welche Felder für die automatische Vorselektion voreingestellt sind. Wenn Sie für einen Artikel im Feld <strong>Artikel übernehmen</strong> einen Haken setzen, bestätigen Sie final, dass der Inhalt aller vorselektierten Felder für diesen Artikel übernommen wird.
+Für beide Felder gilt, dass beim Markieren eines übergeordneten Datensatzes alle darunterliegenden Daten ausgewählt werden.<br>
+Allerdings müssen nicht alle Artikel auf einmal übernommen werden: <br></p>
+<ul>
+<li>Setzen Sie im Feld <strong>Artikel übernehmen</strong> einen Haken für die Ebene <strong>Geändert</strong>, wenn alle geänderten Artikeldaten übernommen werden sollen. </li>
+<li>Setzen Sie alternativ oder zusätzlich im Feld <strong>Artikel Übernehmen</strong> einen Haken für die Ebene <strong>Neu</strong>, wenn alle neuen Artikeldaten importiert werden sollen.</li>
+<li>Wenn Sie feststellen, dass für einen Artikel zum Beispiel beim Einkaufspreis noch Erklärungsbedarf besteht, können Sie den ganzen Artikel oder zunächst nur den Einkaufspreis von der Übernahme ausschließen. Entfernen Sie im Feld <strong>Feld verwenden</strong> den Haken.</li>
+</ul>
+<p>Klicken Sie im Menüband auf die Schaltfläche <strong>Ausgewählte Artikeldaten übernehmen</strong>. Die importierten Daten werden übernommen und nicht mehr in der Baumstruktur angezeigt. </p>
+<h2 id="so-wechseln-sie-in-eine-andere-ansicht">So wechseln Sie in eine andere Ansicht</h2>
+<ul>
+<li>Klicken Sie im Menüband der Baumansicht auf die Schaltfläche <strong>Zugehörig</strong> &gt; <strong>Importübersicht</strong>, wenn Sie zur Importkarte wechseln wollen.</li>
+<li>Klicken Sie im Menüband der Importkarte auf die Schaltfläche <strong>Artikelimportübersicht</strong>, wenn Sie in die Baumansicht wechseln wollen.</li>
+</ul>
+<h2 id="so-sehen-sie-den-status-des-importvorgangs-ein">So sehen Sie den Status des Importvorgangs ein</h2>
+<ol>
+<li>Klicken Sie im Menüband <strong>Mandanten</strong> auf die Schaltfläche <strong>Stammdatenmanagement</strong> &gt; <strong>Listen</strong> &gt; <strong>Stammdaten - Import Vorgänge</strong>. </li>
+<li>Im Feld <strong>Status</strong> finden Sie den aktuellen Status der Importverarbeitung: <em>Datei importiert</em>, <em>Datei transformiert</em>, <em>Datei geprüft</em>, <em>Daten übernommen</em> oder <em>Daten teilweise übernommen</em>.</li>
+</ol>
+<h2 id="siehe-auch">Siehe auch</h2>
+<p><a href="https://docs.gws.ms/de-DE/geviserpveo/business-central/gws/veo/master-data/catalogs/changedashboard/changedashboard-setup.html">Änderungsdashboard einrichten</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../../../styles/main.js"></script>
+  </body>
+</html>

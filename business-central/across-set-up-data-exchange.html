@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Datenaustausch festlegen, um Dateien zu senden und zu empfangen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Datenaustausch festlegen, um Dateien zu senden und zu empfangen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="setting-up-data-exchange">Einrichten eines Datenaustauschs</h1>
+
+<p>Bevor Sie elektronische Belege senden und empfangen oder Bankdateien importieren und exportieren können, müssen Sie das Daten-Exchange-Framework einrichten, um die entsprechenden Dateien zu verarbeiten. Darüber hinaus müssen Sie verwandte Bereiche einrichten, wie z. B. die Kunden, an die Sie elektronische Rechnungen senden, oder die AMC Banking 365 Fundamentals-Erweiterung, wenn Sie den externen Dienstleister zur Konvertierung Ihrer Bankdateien nutzen. Weitere Informationen finden Sie unter <a href="across-data-exchange.html">Daten elektronisch austauschen</a>.  </p>
+<p> Wenn Business Central für den Datenaustausch mit externen Dateien eingerichtet wurde, können Benutzer die Einrichtung in allgemeinen Geschäftsaufgaben, wie Senden und Empfangen von elektronischen Belegen und Importieren und Exportieren von Bankdateien, verwenden.  </p>
+<p> Die folgende Tabelle beschreibt eine Reihe von Aufgaben mit Links zu den Themen, die sie beschreiben..  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Aufgabe</strong></th>
+<th><strong>Informationen</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Richten Sie den vorkonfigurierten Belegaustauschdienst für den Versand und den Empfang elektronischer Belege in Business Central ein.</td>
+<td><a href="across-how-to-set-up-a-document-exchange-service.html">So richten Sie einen Belegaustauschdienst ein</a></td>
+</tr>
+<tr>
+<td>Richten Sie den vorkonfigurierten OCR-Dienst so ein, dass PDF- oder Bilddateien in elektronische Belege umgewandelt werden, die in Business Central in Belegdatensätze konvertiert werden können.</td>
+<td><a href="across-how-setup-income-documents.html">Einrichten von eingehenden Belegen</a></td>
+</tr>
+<tr>
+<td>Richten Sie einen der beiden vorkonfigurierten Dienste für aktualisierte Wechselkurse so ein, dass auf der Seite <strong>Währungswechselkurse</strong> angezeigt werden.</td>
+<td><a href="finance-how-update-currencies.html">Währungswechselkurse aktualisieren</a></td>
+</tr>
+<tr>
+<td>Zuerst müssen Sie verschiedene Stammdaten einrichten, zum Beispiel Mandantendaten, Debitoren, Artikel und Einheiten, die auf die Zuordnungsdaten in Business Central Bezug nehmen</td>
+<td><a href="across-how-to-set-up-electronic-document-sending-and-receiving.html">Einrichten des Senden und Empfangen von elektronischen Belegen</a></td>
+</tr>
+<tr>
+<td>Richten Sie ein Bankkonto, einen Lieferanten und ein Zahlungsbuch für SEPA-Banküberweisung ein.</td>
+<td><a href="finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html#setting-up-sepa-credit-transfer">Einrichten von SEPA-Kreditübertragung</a></td>
+</tr>
+<tr>
+<td>Bereiten Sie Bankkonto-Formate, Zahlungsformen und Kundenvereinbarungen für das Lastschriftverfahren SEPA vor.</td>
+<td><a href="finance-collect-payments-with-sepa-direct-debit.html">Erfassen von Zahlungen per Lastschriftverfahren SEPA</a></td>
+</tr>
+<tr>
+<td>Richten sie die Benutzerauthentifizierung und die URL der AMC Banking 365 Fundamentals-Erweiterung ein, die erforderlich sind, um Bankdateien in das Format Ihrer Bank zu konvertieren.</td>
+<td><a href="ui-extensions-amc-banking.html">AMC Banking 365 Fundamentals-Erweiterung verwenden</a></td>
+</tr>
+<tr>
+<td>Richten Sie einen externen Dienst ein, der es Ihnen ermöglicht, Bankauszüge als Bankfeeds für Zahlungsausgleich und Bankabstimmung zu importieren.</td>
+<td><a href="bank-how-setup-bank-statement-service.html">Einrichten des Bankauszugservice</a></td>
+</tr>
+<tr>
+<td>Nachdem der Bankkontoauszugsdienst aktiviert ist, verknüpfen Sie Bankkonten in Business Central</td>
+<td><a href="bank-how-setup-bank-accounts.html">Bankkonten einrichten</a></td>
+</tr>
+<tr>
+<td>Richten Sie Datenexport für Intrastat-Berichte in Business Central ein.</td>
+<td><a href="finance-how-setup-report-intrastat.html">Intrastat-Berichte festlegen</a></td>
+</tr>
+<tr>
+<td>Bereiten Sie die Einrichtung einer neuen Datenaustauschdefinition für Datendateien oder Datenströme vor, indem Sie das Inforegister <strong>Spaltendefinitionen</strong> auf der Seite <strong>Exchange-Definitinen buchen</strong> mit dem XML-Schema der Datei vorab ausfüllen.</td>
+<td><a href="across-how-to-use-xml-schemas-to-prepare-data-exchange-definitions.html">Verwenden von XML-Schemata zur Vorbereitung der Datenaustauschdefinitionen</a></td>
+</tr>
+<tr>
+<td>Richten Sie das Datenaustauschframework so ein, dass Benutzer ein neues Einkaufsbelegformat empfangen, ein neues Verkaufsbelegformat senden, eine neue Bankdatei importieren oder andere Daten austauschen können.</td>
+<td><a href="across-how-to-set-up-data-exchange-definitions.html">Datenaustauschdefinitionen einrichten</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="across-data-exchange.html">Daten elektronisch austauschen</a><br><a href="across-income-documents.html">Eingehende Belege</a><br><a href="ui-across-business-areas.html">Allgemeine Geschäftsfunktionen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

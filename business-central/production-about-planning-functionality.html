@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Info zu Planungsfunktionen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Info zu Planungsfunktionen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="about-planning-functionality">Info zu Planungsfunktionen</h1>
+
+<p>Das Planungssystem berücksichtigt sämtliche Bedarfs- und Vorratsdaten, saldiert die Ergebnisse und erstellt Vorschläge zum Ausgleichen des Vorrats, damit der Bedarf erfüllt werden kann.  </p>
+<p>Weitere Informationen finden Sie unter <a href="design-details-supply-planning.html">Designdetails: Beschaffungsplanung</a>  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Für alle Felder, die in diesem Thema genannt werden, Lesen Sie die QuickInfo, um die Funktion zu erkennen. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</p>
+</div>
+<h2 id="supply-and-demand">Angebot und Nachfrage</h2>
+<p>Planung besteht aus zwei Elementen: Bedarf und Vorrat. Diese müssen ausgeglichen sein, um sicherzustellen, dass die Nachfrage gedeckt wird.  </p>
+<ul>
+<li>Ein Bedarf ist jede Art von Bruttobedarf, wie z.B. ein Verkaufsauftrag, ein Serviceauftrag, ein Komponentenbedarf für Montage- oder Fertigungsaufträge, ein Auslagerungstransport, ein Rahmenauftrag oder eine Prognose. Darüber hinaus gibt es weitere technische Arten von Nachfrage, wie z. B. eine negative Produktions- oder Bestellung, ein negativer Lagerbestand und eine Kaufrückgabe.  </li>
+<li>Vorrat bezieht sich auf jede Art von Beschaffung: beispielsweise Einkaufsbestellung, Montageauftrag, Fertigungsauftrag oder eingehende Umlagerung. Entsprechend kann es negative Verkaufs- oder Serviceaufträge, negativen Komponentenbedarf oder negative Verkaufsreklamationen geben – alle diese Elemente entsprechen ebenfalls einem Vorrat.  </li>
+</ul>
+<p>Außerdem hat das Planungssystem die Aufgabe sicherzustellen, dass der Lagerbestand nicht unnötig wächst. Im Fall eines abnehmenden Bedarfs wird das Planungssystem vorschlagen, dass vorhandene Ersatzaufträge zurückgestellt, mengenmäßig verringert oder storniert werden sollten.  </p>
+<h2 id="planning-calculation">Planungsberechnung</h2>
+<p>Das Planungssystem wird durch den erwarteten und den tatsächlichen Debitorenbedarf sowie die Wiederbeschaffungsparameter gesteuert. Ein Ausführen der Planungsberechnung bewirkt, dass die Anwendung bestimmte Aktionen (<a href="production-how-to-run-mps-and-mrp.html#action-messages">Ereignismeldungen</a>) vorschlägt, die sich auf mögliche Beschaffungen von Kreditoren, Umlagerungen zwischen Lagern oder die Fertigung beziehen. Wenn es bereits Ersatzaufträge gibt, könnten die vorgeschlagenen Aktionen so aussehen, dass die Aufträge vergrößert oder schneller erteilt werden sollen, damit den Bedarfsänderungen Rechnung getragen wird.  </p>
+<p>Die Basis der Planungsroutine findet sich in der Brutto-Netto-Berechnung. Die Nettobedarfe steuern die voraussichtlichen Freigabemengen, die anhand der Arbeitspläne (Produktionsartikel) oder der Vorlaufzeiten der Artikelkarten (Einkaufsartikel) geplant werden. Voraussichtliche Freigabemengen basieren auf der Planungsberechnung und werden durch die Parameter beeinflusst, die auf den einzelnen Artikelkarten festgelegt sind.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Das Planungssystem hängt davon ab, wie Ihre Organisation Standorte verwendet. Weitere Informationen finden Sie unter <a href="production-planning-with-without-locations.html">Planung mit/ohne Lagerortcodes</a>.</p>
+</div>
+<h2 id="planning-with-manual-transfer-orders">Planung mit manuellen Umlagerungsaufträgen</h2>
+<p>Im <strong>Beschaffungsmethode</strong> können Sie auf einer Lagerhaltungsdatenkarte das Planungssystem für die Erstellung von Umlagerungsaufträgen zum standortübergreifenden Ausgleichen von Angebot und Nachfrage eingerichtet werden.  </p>
+<p>Über solche automatischen Umlagerungsaufträge hinaus werden möglicherweise manchmal allgemeine Umlagerungen von Lagermengen an einen anderen Lagerort erforderlich, unabhängig von der vorhandenen Nachfrage. Zu diesem Zweck würde normalerweise manuell ein Umlagerungsauftrag für die umzulagernde Menge erstellt. Um sicherzustellen, dass das Planungssystem diese manuellen Umlagerungsauftrag nicht verändert, müssen Sie das Feld <strong>Planungsflexibilität</strong> in der /den Umlagerungszeile(n) auf Keine festlegen.  </p>
+<p>Wenn hingegen das Planungssystem die Mengen und Daten für Umlagerungsaufträge an die vorhandene Nachfrage anpassen soll, müssen Sie das Feld <strong>Planungsflexibilität</strong> auf den Standardwert Unbeschränkt festlegen.</p>
+<h2 id="planning-parameters">Planungsparameter</h2>
+<p>Die Planungsparameter steuern die Beschaffung (wann, wie viel und wie) anhand der verschiedenen Einstellungen auf den Artikelkarten (oder Lagerhaltungsdaten) sowie der Produktionseinrichtung.  </p>
+<p>Die folgenden Planungsparameter sind auf der Artikel- oder Lagerhaltungsdatenkarte vorhanden:  </p>
+<ul>
+<li>Toleranzperiode  </li>
+<li>Toleranzmenge  </li>
+<li>Wiederbeschaffungsverfahren  </li>
+<li>Minimalbestand</li>
+<li>Maximalbestand  </li>
+<li>Überlauflevel  </li>
+<li>Zeitrahmen  </li>
+<li>Loskumulierungsperiode  </li>
+<li>Neuplanungsperiode  </li>
+<li>Bestellmenge  </li>
+<li>Sicherh.-Zuschl. Beschaff.-Zt.  </li>
+<li>Sicherheitsbestand  </li>
+<li>Montagerichtlinie  </li>
+<li>Produktionsart  </li>
+</ul>
+<p>Die folgenden Auftragsmodifikationen sind auf der Artikel- oder Lagerhaltungsdatenkarte vorhanden:  </p>
+<ul>
+<li>Minimale Losgröße  </li>
+<li>Maximale Losgröße  </li>
+<li>Losgrößenrundungsfaktor  </li>
+</ul>
+<p>Zu den globalen Planungseinrichtungsfeldern auf der Seite <strong>Produktion Einrichtung</strong> gehören:  </p>
+<ul>
+<li>Dyn. Stückl.-Ebene berechnen  </li>
+<li>Aktuelle Bedarfsplanung  </li>
+<li>Absatzpl. pro Lagerort verw.  </li>
+<li>Vorg. Sich.-Zuschl. Besch.-Zt.  </li>
+<li>Leerer Überlauflevel  </li>
+<li>Prod.-Prog.Pl./Nettobed. komb.</li>
+<li>Komponenten von Lagerort  </li>
+<li>Standardtoleranzperiode  </li>
+<li>Standardtoleranzmenge  </li>
+</ul>
+<p>Weitere Informationen finden Sie unter <a href="design-details-planning-parameters.html">Designdetails: Planungsparameter</a>  </p>
+<h2 id="other-important-planning-fields">Andere wichtige Planungs-Felder</h2>
+<h3 id="planning-flexibility">Planungsflexibilität</h3>
+<p>In den meisten Beschaffungsaufträgen wie Fertigungsaufträge, können Sie <strong>Unbeschränkt</strong> oder <strong>Keine</strong> im Feld <strong>Planungsflexibilität</strong> auf den Zeilen auswählen.</p>
+<p>Gibt an, ob die durch die Fertigungsauftragszeile dargestellte Lieferung bei der Berechnung von Ereignismeldungen vom Planungssystem berücksichtigt wird.
+Enthält das Feld die Option <strong>Unbeschränkt</strong>, wird die Zeile beim Berechnen von Ereignismeldungen berücksichtigt. Wenn das Feld die Option <strong>Keine</strong> enthält, ist die Zeile unveränderlich und wird bei der Berechnung von Aktionsmeldungen nicht berücksichtigt.</p>
+<h3 id="warning">Warnung</h3>
+<p>Das Feld <strong>Warnung</strong> auf der <strong>Planungsarbeitsblatt</strong> Seite informiert Sie über jede mögliche Planungszeile, die für eine ungewöhnliche Situation mit einen Text erstellt wird, den der Benutzer klicken kann, um weitere Informationen anzuzeigen. Folgende Arten von Warnungen sind verfügbar:</p>
+<ul>
+<li>Notfall</li>
+<li>Ausnahme</li>
+<li>Achtung</li>
+</ul>
+<h3 id="emergency">Notfall</h3>
+<p>Die Warnung für einen Notfall wird in zwei Situationen angezeigt:</p>
+<ul>
+<li>Der Lagerbestand ist am geplanten Startdatum negativ.</li>
+<li>Es sind rückdatierte Beschaffungs- oder Bedarfsereignisse vorhanden.</li>
+</ul>
+<p>Wenn der Lagerbestand eines Artikels am geplanten Startdatum negativ ist, wird vom Planungssystem ein Notfallbeschaffungsauftrag für den negativen Bestand vorgeschlagen, der am geplanten Startdatum eingeht. Im Warnungstext werden das Startdatum und die Menge der Notfallbestellung angegeben.</p>
+<p>Belegzeilen mit Fälligkeitsdaten vor dem geplanten Startdatum werden in einem Notfallbeschaffungsauftrag für den Artikel zusammengefasst, der am geplanten Startdatum eingehen soll.</p>
+<h3 id="exception">Ausnahme</h3>
+<p>Die Ausnahmewarnung wird angezeigt, wenn der voraussichtlich verfügbare Lagerbestand den Sicherheitsbestand unterschreitet.</p>
+<p>Vom Planungssystem wird ein Beschaffungsauftrag vorgeschlagen, um den Bedarf am Fälligkeitsdatum zu decken. In der Warnung werden der Sicherheitsbestand des Artikels und das Datum angegeben, an dem er unterschritten wurde.</p>
+<p>Das Unterschreiten des Sicherheitsbestands gilt als Ausnahme, da dieser Zustand nicht eintreten sollte, wenn der Minimalbestand korrekt festgelegt wurde.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Der Vorrat in Planungszeilen mit Ausnahmewarnungen wird normalerweise nicht gemäß den Planungsparametern geändert. Stattdessen wird vom Planungssystem nur eine Beschaffung vorgeschlagen, um die genaue Bedarfsmenge zu decken. Sie können jedoch die Planung so festlegen, dass bestimmte Planungsparameter für Planungszeilen mit bestimmten Warnungen berücksichtigt werden können. Weitere Informationen finden Sie in der Beschreibung für das Feld <strong>Beachten Sie die Planungsparameter für Ausnahmewarnungen</strong> im Artikel <a href="production-how-to-run-mps-and-mrp.html">Führen Sie vollständige Planung, MPS oder MRP aus</a>.</p>
+</div>
+<h3 id="attention">Achtung</h3>
+<p>Die Achtungswarnung für einen Notfall wird in zwei Situationen angezeigt:</p>
+<ul>
+<li>Das geplante Startdatum liegt vor dem Arbeitsdatum.</li>
+<li>Die Planungszeile schlägt vor, eine freigegebene Bestellung oder einen freigegebenen Fertigungsauftrag zu ändern.</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>In Planzeilen mit Warnungen ist das Kontrollkästchen <strong>Ereignismeldung akzeptieren</strong> nicht aktiviert, da diese Zeilen vom Planer genauer untersucht werden sollen, bevor der Plan umgesetzt wird.</p>
+</div>
+<h2 id="planning-worksheets-and-requisition-worksheets">Planungs‑ und Anforderungsarbeitsblätter</h2>
+<p>Wie in <a href="production-planning.html">Planung</a> beschrieben können Sie für die meisten Planungsaktivitäten zwischen zwei Arbeitsblättern wählen, dem Planungsarbeitsblatt und dem Anforderungsarbeitsblatt. Die meisten Prozesse werden anhand des Planungsarbeitsblatts beschrieben. Es gibt jedoch einige Szenarien, in denen das Anforderungsarbeitsblatt bevorzugt wird.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie viele Zeilen in einem Buch.-Blatt. oder Lagerarbeitsblatt haben und die Aktion <strong>In Excel bearbeiten</strong> auf der Seite verfügbar ist, kann dies die Eingabe von Daten erleichtern. Sie können Änderungen an Datensätzen in Excel vornehmen und die Daten dann in Business Central aktualisieren. Weitere Informationen über die Aktion In Excel bearbeiten finden Sie unter <a href="across-work-with-excel.html#edit-in-excel">In Excel bearbeiten</a>. </p>
+</div>
+<h3 id="requisition-worksheet">Anforderungsarbeitsblatt</h3>
+<p>Auf der Seite <strong>Anforderungsarbeitsblatt</strong> sind die Artikel aufgelistet, die Sie bestellen möchten. Sie haben folgende Möglichkeiten, um die Artikel in das Arbeitsblatt einzugeben:</p>
+<ul>
+<li><p>Geben Sie die Artikel manuell in den Vorschlag ein, und füllen Sie die entsprechenden Felder aus.</p>
+</li>
+<li><p>Verwenden Sie die Stapelverarbeitung <strong>Planung berechnen</strong>. Diese berechnet eine Planung für Artikel und Lagerhaltungsdaten, die mit dem Dispositonsmethodencode <strong>Einkauf</strong> oder <strong>Umlagerung</strong> eingerichtet wurden. Wenn Sie diese Stapelverarbeitung verwenden, füllt die Anwendung automatisch das Feld <strong>Ereignismeldung</strong> mit einem Vorschlag, wie Sie die Artikel wiederbeschaffen können. Dabei kann es sich z. B. um die Erhöhung der Artikelmenge in einer bestehenden Bestellung oder um die Erstellung einer neuen Bestellung handeln.</p>
+</li>
+<li><p>Wenn Sie die Stapelverarbeitung <strong>Plan berechnen</strong> auf der Seite <strong>Planungsarbeitsblatt</strong> zur Berechnung eines Nachschubplans verwendet haben, können Sie die Stapelverarbeitung <strong>Ereignismeldung durchführen</strong> verwenden, um Bestell- und Umlagerungsvorschläge aus dem Planungsarbeitsblatt in das Anforderungsarbeitsblatt zu kopieren. Dies ist dann nützlich, wenn unterschiedliche Anwender für die Abwicklung der Fertigungsaufträge und Einkaufsbestellungen/Umlagerungsaufträge zuständig sind.</p>
+</li>
+<li><p>Sie können die Aktion <strong>Direktlieferung</strong> verwenden, um die Anforderungsarbeitsblattszeilen zu füllen. Diese Aktion verwendet die Stapelverarbeitung <strong>Aufträge holen</strong>, um die Verkaufsauftragszeilen zu ermitteln, die für eine Direktlieferung vorgesehen sind.</p>
+</li>
+<li><p>Sie können die Aktion <strong>Spezialauftrag</strong> verwenden, um die Anforderungsarbeitsblattszeilen zu füllen. Diese Aktion verwendet die Stapelverarbeitung <strong>Aufträge holen</strong>, um die Verkaufsauftragszeilen zu ermitteln, die für einen Spezialauftrag vorgesehen sind.</p>
+</li>
+</ul>
+<p>Bestellvorschlagszeilen enthalten detaillierte Informationen über die Artikel, die wiederbestellt werden müssen. Sie können die Zeilen bearbeiten und löschen, um Ihren Bestellvorschlag anzupassen, und Sie können die Zeilen auch mit der Stapelverarbeitung <strong>Ereignismeldung durchführen</strong> weiterverarbeiten. </p>
+<p>Einzelheiten zur Planung mit Standorten und Transfers finden Sie unter <a href="production-planning-with-without-locations.html">Planen mit oder ohne Standorte</a>.</p>
+<div class="TIP"><h5>Tipp</h5><p>Auf den Seiten <strong>Anforderungsarbeitsblatt</strong> oder <strong>Planungsarbeitsblatt</strong> können Sie die Zeilen organisieren, indem Sie nach einem Spaltennamen sortieren. Dies ist auf der Seite Planungsarbeitsblatt besonders nützlich, da sie für mehrstufige Produktionsaufträge verwendet werden kann. Standardmäßig werden Zeilen nach <strong>Art.-Nr.</strong> sortiert. Um Positionen für einen mehrstufigen Auftrag zu gruppieren, sortieren Sie nach <strong>Ref. Best.-Nr.</strong> Feld Auch <strong>MPS-Bestellung</strong> und <strong>Planungsebene</strong> können dabei helfen, die Hierarchie der Zeilen anzuzeigen.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="design-details-supply-planning.html">Designdetails: Beschaffungsplanung</a><br><a href="production-planning.html">Planung</a><br><a href="production-configure-production-processes.html">Produktion einrichten</a><br><a href="production-manage-manufacturing.html">Produktion</a><br><a href="inventory-manage-inventory.html">Bestand</a><br><a href="purchasing-manage-purchasing.html">Einkauf</a><br><a href="setup-best-practices-supply-planning.html">Bewährte Einrichtungsmethoden: Beschaffungsplanung</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

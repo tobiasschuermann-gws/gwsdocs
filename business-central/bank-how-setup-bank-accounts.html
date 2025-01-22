@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bankkonten einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bankkonten einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-bank-accounts">Bankkonten einrichten</h1>
+
+<p>Verwenden Sie Bankkonten in Business Central, um den Überblick über Ihre Bank-Transaktionen zu behalten. Konten können auf Ihre Mandantenwährung oder eine Fremdwährung lauten. Nachdem Sie Bankkonten eingerichtet haben, können Sie auch Schecks drucken. Bankkonten bieten außerdem Funktionen für <a href="receivables-apply-payments-auto-reconcile-bank-accounts.html">Zahlungsabgleich</a>, <a href="bank-how-reconcile-bank-accounts-separately.html">Bankabgleich</a> und den Import und Export von Bankdateien.</p>
+<p>Sie können Bankkonten in Transaktionen in der allgemeinen Erfassung einbeziehen. Jedes Bankkonto ist über die zugewiesene Buchungsgruppe für Bankkonten mit einem Konto im Kontenplan verknüpft. Die Verwendung eines Bankkontos in einer Zahlungstransaktion erstellt automatisch einen Eintrag sowohl auf dem Bankkonto als auch auf dem damit verbundenen Hauptbuch (Sachkonto).  </p>
+<p>Bankkonten funktionieren unterschiedlich, je nachdem, ob ein Währungscode angegeben ist:</p>
+<ul>
+<li><p>Wenn keine Währungscode angegeben ist, erfolgen alle Transaktionen auf dem Bankkonto erfolgen in der Mandantenwährung (MW) der aktuellen Firma. Wenn Sie eine Transaktion auf dem Konto in einer anderen Währung durchführen, werden die Beträge basierend auf den Wechselkursen in der LW auf das Konto gebucht. Alle Schecks, die von diesem Konto ausgestellt werden, müssen in der LW ausgestellt werden. Wenn das Bankkonto in einem Journal verwendet wird, verwendet die Buchungsblattzeile automatisch den leeren Währungscode.  </p>
+</li>
+<li><p>Wenn ein Währungscode angegeben wird, müssen alle Transaktionen auf diesem Konto und alle Schecks, die darüber ausgestellt werden, dieselbe Währung verwenden wie das Konto.</p>
+</li>
+</ul>
+<p>Sie können bei der Dateneingabe Zeit sparen, indem Sie ein Bankkonto als Standardkonto für die für das Konto angegebene Währung festlegen. Wenn Sie dies tun, wird das Konto den Verkaufs- und Dienstleistungsdokumenten zugeordnet, die diese Währung verwenden. Um das Konto als Standardkonto für Verkaufs- und Servicebelege festzulegen, aktivieren Sie auf der Seite <strong>Bankkontokarte</strong> den Umschalter <strong>Als Standard für Währung verwenden</strong>. Bei Bedarf können Sie ein anderes Konto auswählen, wenn Sie an einem Beleg arbeiten.</p>
+<p>Ein Bankkonto ist ein integraler Bestandteil von Business Central und spielt bei vielen anderen Funktionalitäten eine Rolle. Die folgende Illustration zeigt die wichtigsten Beziehungen:</p>
+<p><img src="media/Set-Up-Bank-Accounts/bank_account_relations.png" alt="Illustration der Bankkontobeziehungen."></p>
+<p>Die Erstellung eines Bankkontos führt dazu, dass es an allen in der Abbildung gezeigten Stellen verfügbar ist und auch im Sachkonto und auf der Seite <strong>Unternehmensdaten</strong> gespiegelt wird.</p>
+<p>Bankkonten werden häufig täglich überwacht, um sicherzustellen, dass alle neuen Zahlungen von Kunden so schnell wie möglich registriert werden. Durch die schnelle Registrierung von Zahlungen wird sichergestellt, dass der aktuelle Status eines Debitors in Business Central widergespiegelt wird. Wenn der Status der Debitorenzahlungen auf dem neuesten Stand gehalten wird, ersparen Sie Verkäufern, Buchhaltern und anderen Mitarbeitern unnötige Anrufe wegen überfälliger Rechnungen oder Lieferverzögerungen.  </p>
+<p><img src="media/Set-Up-Bank-Accounts/bank-payment-flow.png" alt="Abbildung der Bankzahlung."></p>
+<p>Eine weitere Aufgabe besteht darin, die Zahlungen der Lieferantenwährungen mit den realisierten Sätzen zu importieren, um sicherzustellen, dass der aktuelle Status der Lieferanten auf dem neuesten Stand ist. Mit der Funktionalität <a href="receivables-apply-payments-auto-reconcile-bank-accounts.html">Zahlungsabgleich</a> ist das am einfachsten zu bewerkstelligen. Im <strong>Zahlungsabstimmungs Buch.-Blatt</strong> können Sie Banktransaktionen direkt aus einer Online-Bankanwendung importieren und mehr oder weniger automatisch buchen. Das Journal identifiziert und bucht die folgenden Transaktionen automatisch:  </p>
+<ul>
+<li>Lastschriftzahlungen von Kunden  </li>
+<li>Debitoren-Zahlungen von einzelnen Rechnungen  </li>
+<li>Pauschalzahlungen von Kunden  </li>
+<li>Debitoren-Zahlungen in Fremdwährungen  </li>
+<li>Zahlungen von Kreditoren  </li>
+<li>Kreditorenzahlungen in Fremdwährung  </li>
+<li>Wiederkehrende Zahlungen von Kreditoren und Abonnements  </li>
+<li>Bankgebühren und Zinsen  </li>
+</ul>
+<p>Der Zahlungsabgleich sorgt für eine erhebliche Zeitersparnis bei der Buchung von ein- und ausgehenden Zahlungen. Allerdings gelten die Transaktionen auf dem Bankkonto in Business Central erst dann als 100 % korrekt, wenn Sie einen Bankabgleich ausführen.  </p>
+<p>Mit der Bankabstimmung stellen Sie sicher, dass das Bankkonto in Business Central mit dem externen Konto bei der Bank übereinstimmt.  </p>
+<p> <img src="media/Set-Up-Bank-Accounts/BankReconciliation.png" alt="Illustration der Bankkontoabstimmung."></p>
+<p>In der Abbildung stellt die linke Seite das Bankkonto in Business Central dar und die rechte Seite die Transaktionen, die von der Bank über die Online-Bankanwendung importiert wurden. Das Diagramm in der Mitte zeigt die Transaktionen von beiden Seiten, aus denen sich die Bankabstimmung zusammensetzt.</p>
+<p>Vom Bankkonto in Business Central sollten die meisten Transaktionen bei der physischen Bank bekannt sein. Zu den wenigen Ausnahmen gehören die folgenden Fälle:  </p>
+<ul>
+<li>In Business Central gebuchte Korrekturen  </li>
+<li>Ausgestellte Schecks, die nicht eingelöst werden</li>
+<li>Kreditorenzahlungen, die noch nicht von der Bank genehmigt wurden  </li>
+</ul>
+<p>Vom physischen Konto bei der Bank treffen immer wieder Transaktionen ein, die nicht im Zahlungsabstimmungs Buch.-Blatt ausgewiesen sind, wie beispielsweise die folgenden Transaktionen:  </p>
+<ul>
+<li>Neue Abonnements von Kreditoren  </li>
+<li>Debitoren-Zahlungen ohne Beschreibung</li>
+<li>Bankzinsen</li>
+<li>Bankgebühren</li>
+<li>Kreditkartenbelastungen, die noch nicht gemeldet wurden</li>
+</ul>
+<p>Je besser Sie die Informationen im Zahlungsabstimmungs-Buch.-Blatt zuordnen können, desto mehr Transaktionen werden automatisch gebucht und desto einfacher wird der periodische Bankabgleich.</p>
+<p>Das folgende Video zeigt die grundlegenden Schritte zum Festlegen eines Bankkontos in Business Central.</p>
+<p><br><br></p>
+<div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RE3Vhpl?rel=0" frameborder="0" allowfullscreen="true"></iframe></div>
+<div class="WARNING"><h5>Warnung</h5><p>Einige Felder können sensible Daten enthalten, wie z.B. die Felder <strong>BLZ</strong>, <strong>Bankkontonr.</strong>, <strong>SWIFT Code</strong>, und <strong>IBAN Code</strong>. Erfahren Sie mehr unter <a href="across-log-changes.html#monitor-sensitive-fields">Sensible Felder überwachen</a>.</p>
+</div>
+<h2 id="to-set-up-bank-accounts">Bankkonten einrichten:</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion 1." title="Wie möchten Sie weiter verfahren?"> öffnet. Symbol. Geben Sie <strong>Bankkonten</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie auf der Seite <strong>Bankkonten</strong> die Aktion <strong>Neu</strong> aus.</li>
+<li><p>Füllen Sie die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</p>
+<p> Ein Beispiel wäre das <strong>Bankkonto. Buchungsgruppe</strong>, das das Bankkonto mit dem zugrunde liegenden Sachkonto in der Bilanz verknüpft. Erfahren Sie mehr unter <a href="finance-posting-groups.html">Buchungsgruppen festlegen</a>.</p>
+</li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>Einige Felder sind ausgeblendet, bis Sie die Aktion <strong>Mehr anzeigen</strong> wählen, da sie in der Regel selten verwendet werden. Andere müssen durch Personalisierung hinzugefügt werden. Erfahren Sie mehr unter <a href="ui-personalization-user.html">Personalisieren Sie Ihren Arbeitsbereich</a>.</p>
+</div>
+<p>Sie können so viele Bankkonten erstellen, wie Sie für Ihr Unternehmen benötigen. Für jedes Bankkonto müssen Sie Informationen angeben, die das Bankkonto eindeutig identifizierbar machen. Zu diesen Informationen gehören die geografische Adresse der Bank, Nummernserien für verschiedene Arten von Transaktionen, wie z.B. Lastschriften und Überweisungen, die Währung, in der die Beträge angegeben werden, und Informationen, die für den Import von Bankauszügen verwendet werden. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</p>
+<!--
+The following table explains key fields.
+
+|Field|Description|  
+|---------------------------------|---------------------------------------|  
+|**General FastTab**||
+|No.|Specifies the number of the bank account, according to the specified number series. If the number series allow manual numbering, any alphanumeric code up to 20 characters can be used.|
+|Name|The Name of the bank holding the account.|
+|Bank Branch No.|Typically used to identify the bank branch in domestic payments, it's very often considered a sensitive field. Learn more at [Monitoring Sensitive Fields](across-log-changes.md#monitoring-sensitive-fields).|
+|Bank Account No.|Typically used to identify the bank account number in domestic payments, it's very often considered a sensitive field. Learn more at [Monitoring Sensitive Fields](across-log-changes.md#monitoring-sensitive-fields).|
+|Balance|Shows the bank account balance in the account currency.|
+|Balance (LCY)|Shows the bank account balance in the local currency (LCY).|
+|Our Contact Code|Specifies a code to identify the employee responsible for this bank account. The employee must be created in the **Salesperson/Purchaser** table.|
+|Blocked|Specifies the related record is blocked from being posted in transactions, for example the account is obsolete after a bank change.|
+|SEPA Direct Debit Exp. Format|Specifies the single euro payments area (SEPA) format of the bank file to be exported when you choose **Create Direct Debit File** on the **Direct Debit Collect. Entries** page. Learn more at [SEPA Direct Debit in Business Central](finance-collect-payments-with-sepa-direct-debit.md).|
+|Credit Transfer Msg. Nos.|Specifies the number series for bank instruction messages created with the export file you create from the **Direct Debit Collect. Entries** page. Learn more at [SEPA Direct Debit in Business Central](finance-collect-payments-with-sepa-direct-debit.md).|
+|Direct Debit Msg. Nos.|Specifies the number series to be used on the direct debit file you export for a direct debit collection entry on the **Direct Debit Collect. Entries** page. Learn more at [SEPA Direct Debit in Business Central](finance-collect-payments-with-sepa-direct-debit.md).|
+|Creditor No.|Specifies your company as the creditor in connection with payment collection from customers using SEPA direct debit. Learn more at [SEPA Direct Debit in Business Central](finance-collect-payments-with-sepa-direct-debit.md).|
+|Bank Clearing Standard|The national bank names register used for the sender bank account.|
+|Bank Clearing Code|Specifies the code for bank clearing required according to the format standard you selected in the **Bank Clearing Standard** field. The bank clearing code can be used as an alternative to SWIFT and IBAN to identify your bank as the sender of a bank transfer.|
+|Last Date Modified|Date of the latest modification of the bank account.|
+|**Payment Matching**||
+|Disable Automatic Payment Matching|Specifies whether or not to disable automatic payment matching after importing bank transactions for this bank account. Learn more at [Payment Reconciliation](receivables-apply-payments-auto-reconcile-bank-accounts.md).|
+|**Payment Match Tolerance**||
+|Match Tolerance Type|Specifies the tolerance the automatic payment application function will use to apply the *Amount Incl. Tolerance Matched* rule for this bank account. Read more in [Payment Reconciliation](receivables-apply-payments-auto-reconcile-bank-accounts.md).|
+|Match Tolerance Value|Specifies if the automatic payment application function will apply the *Amount Incl. Tolerance Matched* rule by percentage or amount. Learn more at [Payment Reconciliation](receivables-apply-payments-auto-reconcile-bank-accounts.md).|
+|**Hidden Fields**||
+|Search Name|Specifies an alternate name you can use to search for the record in question when you can't remember the value in the **Name** field.|
+|Min. Balance|Specifies a minimum balance for the bank account. This field is for information purposes only.|
+|Positive Pay Export Code|Specifies a code for the data exchange definition managing the export of positive-pay files. Learn more at [Export Positive Pay Files](finance-how-positive-pay.md).|
+|**Communication FastTab**||
+|Address|The address of the bank branch.|
+|Address 2|An additional address field for the bank branch.|
+|Post Code|The post code of the bank branch.|
+|City|The city of the bank branch.|
+|Country/Region Code|The country/region code of the bank branch.|
+|Phone No.|The phone number of the bank branch.|
+|Mobile Phone No.|The mobile phone number of the bank branch.|
+|Contact|The main contact in the bank branch. Additional contacts can be created in the **Contacts** module.|
+|Fax No.|The fax number of the bank branch.|
+|Email|The email address of the bank branch.|
+|Home Page|The home page address of the bank branch website.|
+|**Posting FastTab**||
+|Currency Code|Specifies the relevant currency code for the bank account. Applying a currency code to a bank account limits all transactions to only using the applied currency code. Leaving the currency code blank allows transactions in all currencies, however, the amount will eventually be converted to the LCY using the applied currency rate. Checks issued from this account follow the same rules.|
+|Last Check No.|The number of the latest check issued from this account.|
+|Transit No.|Specifies a bank identification number of your own choice.|
+|Last Statement No.|The number of the latest bank reconciliation posted to this account. Learn more at [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md).|
+|Last Payment Statement No.|The number of the latest payment reconciliation posted to this account. Learn more at [Payment Reconciliation](receivables-apply-payments-auto-reconcile-bank-accounts.md).|
+|Last Bank Statement|The ending balance of the last bank statement. Learn more at [Reconcile Bank Accounts](bank-how-reconcile-bank-accounts-separately.md).|
+|Bank Acc. Posting Group|Specifies a code for the bank account's posting group. The **Bank Acc. Posting Group** connects the bank account to the G/L account in the balance sheet.|
+|**Transfer**||
+|Transit No.|Specifies a bank identification number of your own choice.|
+|SWIFT Code|Specifies the international bank identifier (SWIFT) code of the bank in which you have account. The SWIFT code is very often considered a sensitive field. Learn more at [Monitoring Sensitive Fields](across-log-changes.md#monitoring-sensitive-fields).|
+|IBAN|Specifies the bank account's international bank account number (IBAN). The IBAN code is very often considered a sensitive field. Learn more at [Monitoring Sensitive Fields](across-log-changes.md#monitoring-sensitive-fields).|
+|Bank Statement Import Format|Specifies the format of the bank statement file imported into this bank account. This format is used in both the payment reconciliation journals and bank account reconciliations.|
+|Payment Export Format|Specifies the format of the bank file that is exported when you choose **Export Payments to File** on the **Payment Journal** page.|
+-->
+<h2 id="to-enter-an-opening-balance">So geben Sie einen Eröffnungssaldo ein</h2>
+<p>Um das Feld <strong>Saldo</strong> mit einem Eröffnungsbilanz auszufüllen, müssen Sie den Bankposten mit dem entsprechenden Betrag buchen. Sie buchen den Eintrag über eine Bankkontoabstimmung. Erfahren Sie mehr unter <a href="bank-how-reconcile-bank-accounts-separately.html">Bankkonten abstimmen</a>.<br>&gt;</p>
+<blockquote><p>Alternativ können Sie den Eröffnungssaldo als Teil der allgemeinen Datenerstellung in neuen Firmen implementieren, indem Sie die Anleitung <strong>Geschäftsdaten migrieren</strong> für die unterstützte Einrichtung verwenden. Weitere Informationen unter <a href="ui-get-ready-business.html">Bereitschaft für die Geschäftsabwicklung</a>.  </p>
+</blockquote>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Buchen Sie den Eröffnungssaldo nicht direkt in das Hauptbuch. Direkt in das Sachkonto gebuchte Einträge führen in der Regel dazu, dass Sie das Bankkonto nicht abstimmen können. Bei Bankkonten in Fremdwährung führt eine Direktbuchung dazu, dass sich die Differenzen häufen, wenn Sie mehr Bankabstimmungen buchen. Normalerweise buchen Sie den Eröffnungssaldo direkt auf das Bankkonto, und der Betrag landet auf dem Sachkonto. Alternativ können Sie ihn später aus dem Sachkonto stornieren, das Sie zum Ausgleich des Eröffnungssaldos des Hauptbuchs verwenden. In jedem Fall müssen Sie jede Direktbuchung auf das Sachkonto ausgleichen, bevor Sie mit der ersten Bankabstimmung beginnen &mdash; insbesondere wenn das Bankkonto auf eine Fremdwährung lautet.</p>
+</div>
+<h2 id="to-set-up-your-bank-account-for-import-or-export-of-bank-files">Um Ihre Bankkonten zum Importieren und Exportieren von Bankdateien einzurichten</h2>
+<p>Die Felder, die sich auf den Import und den Export von Bankfeeds und Dateien beziehen, befinden sich im Inforegister <strong>Transfer</strong> im Fenster <strong>Bankkontenkarte</strong>. Erfahren Sie mehr unter <a href="ui-extensions-amc-banking.html">Verwendung der Erweiterung AMC Banking 365 Fundamentals</a> und <a href="bank-how-setup-bank-statement-service.html">Einrichten des Dienstes Envestnet Yodlee Bank Feeds</a>.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 2." title="Wie möchten Sie weiter verfahren?"> Symbol, geben Sie <strong>Bankkonten</strong> ein und wählen Sie dann den entsprechenden Link.</li>
+<li>Öffnen Sie die Karte für das Bankkonto, für das Sie Bankdateien exportieren oder importieren möchten.</li>
+<li>Füllen Sie im Inforegister <strong>Übertrag</strong> die notwendigen Felder aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Verschiedene Dateiexportdienstleistungen und deren Formaten benötigen verschiedene Einrichtungswerte auf der Seite <strong>Bankkontokarte</strong> Wenn Sie die Datei exportieren, werden Sie auf falsche oder fehlende Einrichtungswerte hingewiesen. Lesen die Kurzbeschreibungen der Felder sorgfältig durch oder gehen Sie zu den entsprechenden Verfahrensthemen. Wenn Sie beispielsweise eine Zahlungsdatei für eine nordamerikanische elektronische Überweisung (EFT) exportieren, müssen sowohl die Felder <strong>Letzte Überweisungsmitteilung Nr.</strong> als auch <strong>Zustellungsnummer</strong> ausgefüllt werden. Erfahren Sie mehr unter <a href="finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html#exporting-payments-to-a-bank-file">Zahlungen in eine Bankdatei exportieren</a>.</p>
+</div>
+<p>Die Felder im Inforegister <strong>Transit</strong> auf dem Bankkonto dienen unterschiedlichen Zwecken, je nachdem, ob es sich um eine eingehende oder ausgehende Zahlung handelt.</p>
+<p>Die folgende Abbildung zeigt den Arbeitsplan von eingehenden Zahlungen. Die Nummern in der Beschreibung entsprechen den Nummern in der Abbildung.</p>
+<p>:::row:::
+    :::column:::</p>
+<ol>
+<li>Die Transaktionen werden vom Bankkonto entweder in einem menschenlesbaren .csv-Format oder im bankeigenen Format exportiert.</li>
+<li>Die Data Exchange Definition ordnet die Informationen in der Datei den Feldern in Business Central zu. Erfahren Sie mehr unter <a href="across-set-up-data-exchange.html">Set Up Data Exchange</a></li>
+<li>Die Einrichtung für Datenexport/-import definiert den Export oder Import und verweist auf die Datenaustauschdefinition.</li>
+<li>Das Importformat für Bankauszüge verknüpft die Einrichtung für den Import mit dem Bankkonto.</li>
+<li><p>Die Zahlungen werden über das <strong>Zahlungsausgangs Buch.-Blatt</strong> oder die <strong>Bankkontoabstimmung</strong> Seite importiert.</p>
+<p>:::column-end:::
+:::column:::</p>
+<pre><code> ![Illustration von Zahlungseingängen von der Bank auf Bankkonten.](media/Set-Up-Bank-Accounts/payments-in-and-out-1.png)
+</code></pre><p>:::column-end:::
+:::row-end:::</p>
+</li>
+</ol>
+<p>Eingehende Zahlungen werden immer über das <strong>Zahlungsabstimmungs Buch.-Blatt</strong> oder direkt in die <strong>Bankkontoabstimmung</strong> Seite importiert. Im Gegensatz dazu können ausgehende Zahlungen aus jedem Zahlungsausgangs Buch.-Blatt stammen. Die einzige Voraussetzung ist, dass das Feld <strong>Zahlungsexport zulassen</strong> im entsprechenden Batch des Zahlungsausgangs Buch.-Blatt markiert ist.</p>
+<p>Die folgende Abbildung zeigt den Arbeitsplan von ausgehenden Zahlungen. Die Nummern in der Beschreibung entsprechen den Nummern in der Abbildung.</p>
+<p>:::row:::
+    :::column:::</p>
+<ol>
+<li>Die Transaktionen werden in ein Zahlungsausgangs Buch.-Blatt eingefügt, das für den Export von Zahlungen in eine Datei vorbereitet wurde.</li>
+<li>Das Importformat für Bankauszüge verknüpft die Einrichtung für den Import mit dem Bankkonto.</li>
+<li>Die Einrichtung für Datenexport/-import definiert den Export oder Import und verweist auf die Datenaustauschdefinition.</li>
+<li>Die Data Exchange Definition ordnet die Informationen in der Datei den Feldern in Business Central zu. Mehr dazu erfahren Sie unter <a href="across-set-up-data-exchange.html">Data Exchange festlegen</a></li>
+<li><p>Die Zahlungen werden aus der Erfassung des Zahlungsausgangs Buch.-Blatt exportiert und in das Bankkonto importiert.</p>
+<p>:::column-end:::
+:::column:::</p>
+<pre><code>![Illustration von Zahlungen von Bankkonten, die an die Bank gesendet werden.](media/Set-Up-Bank-Accounts/payments-in-and-out-2.png)
+</code></pre><p>:::column-end:::
+:::row-end:::</p>
+</li>
+</ol>
+<h2 id="to-set-up-vendor-bank-accounts-for-export-of-bank-files">Um Ihre Bankkonten zum Importieren und Exportieren von Bankdateien einzurichten</h2>
+<p>Die Felder auf dem Inforegister <strong>Überweisung</strong> auf der Seite <strong>Kreditoren Bankkontonummer</strong> beziehen sich auf den Export von Bankfeeds und Dateien. Erfahren Sie mehr unter <a href="ui-extensions-amc-banking.html">Verwenden Sie die Erweiterung AMC Banking 365 Fundamentals</a> und <a href="finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html#exporting-payments-to-a-bank-file">Zahlungen in eine Bankdatei exportieren</a>.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Kreditoren</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Öffnen Sie die Karte für den Kreditor.</li>
+<li>Wählen Sie die <strong>Bankkonten</strong> Aktion aus.</li>
+<li>Wählen Sie aus der <strong>Liste der Kreditorenbankkonten</strong> das entsprechende Bankkonto aus, oder fügen Sie ein neues Bankkonto hinzu, indem Sie <strong>Neu</strong> auswählen.</li>
+<li>Füllen Sie auf der Seite <strong>Kreditoren-Bankkontokarte</strong> die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+</ol>
+<div class="TIP"><h5>Tipp</h5><p>Einige Felder sind ausgeblendet, bis Sie die Aktion <strong>Mehr anzeigen</strong> wählen, typischerweise weil sie selten verwendet werden. Andere müssen durch Personalisierung hinzugefügt werden. Weitere Informationen finden Sie unter <a href="ui-personalization-user.html">Personalisieren Sie Ihren Arbeitsbereich</a>.</p>
+</div>
+<div class="WARNING"><h5>Warnung</h5><p>Einige Felder auf dem Bankkonto des Kreditors enthalten sensible Geschäftsdaten, z. B. die Felder <strong>BLZ</strong>, <strong>Bankkontonr.</strong>, <strong>SWIFT Code</strong> und <strong>IBAN Code</strong>. Weitere Informationen zur Überwachung und Benachrichtigung, wenn ein Wert in diesen Feldern geändert wird, finden Sie unter <a href="across-log-changes.html#monitor-sensitive-fields">Sensible Felder überwachen</a>.</p>
+</div>
+<h2 id="changing-your-bank-account">Ändern Ihres Bankkontos</h2>
+<p>Um ein anderes Bankkonto für Ihr Unternehmen zu verwenden, müssen Sie das neue Bankkonto in Business Central erstellen. Wir empfehlen, dass Sie nicht einfach die Informationen über das derzeit verwendete Konto ersetzen, da dies zu falschen Daten führen kann. Zum Beispiel könnte Ihr Eröffnungssaldo falsch sein oder Ihr Bankfeed nicht mehr richtig funktionieren. Es ist wichtig, dass Sie das aktuelle und das neue Konto getrennt halten.</p>
+<p>Nachdem Sie das neue Bankkonto erstellt haben, sollten Sie auch eine neue Bankbuchungsgruppe erstellen und diese einem neuen Hauptbuch-Konto zuordnen. Sie können eine bestehende Bankbuchungsgruppe wiederverwenden und die Transaktionen werden auf dieselben Hauptbuch-Konten gebucht wie auf andere Bankkonten, die sich diese Buchungsgruppe teilen. Wir empfehlen jedoch, eine neue Bankbuchungsgruppe und ein neues Hauptbuchkonto zu erstellen, damit die Abstimmungen einfacher zu erledigen sind.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Denken Sie daran, dass die Bankkontoinformationen auf offenen Verkaufsrechnungen immer noch das ursprüngliche Bankkonto anzeigen. Dementsprechend werden Zahlungen wahrscheinlich immer noch auf dieses Konto gebucht. Wir empfehlen Ihnen, beide Konten nach der Änderung noch eine Zeit lang aktiv zu halten.</p>
+</div>
+<p>Um eine komprimiertere Ansicht Ihrer Geldkonten in der Finanzberichterstattung zu erhalten, verwenden Sie die <strong>Beginn-Summe</strong> und <strong>Ende-Summe</strong> Konten in Ihrem Kontenplan, die <strong>Summen</strong> Zeilen in Finanzberichten oder Sachkonto-Kategorien. Erfahren Sie mehr im Abschnitt <a href="bi.html">Business Intelligence und Financial Reporting</a>.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="bank-setup-banking.html">Einrichten von Banken</a><br><a href="finance-posting-groups.html">Einrichten von Buchungsgruppen</a><br><a href="bank-manage-bank-accounts.html">Abstimmen von Bankkonten</a><br><a href="bank-how-setup-bank-statement-service.html">Den Envestnet Yodlee Bank Feeds Service einrichten</a><br><a href="finance-collect-payments-with-sepa-direct-debit.html">SEPA-Lastschrift in Business Central</a><br><a href="finance-collect-payments-with-sepa-direct-debit.html#to-set-up-your-bank-account-for-sepa-direct-debit">Um Ihr Bankkonto für SEPA-Lastschrift festzulegen</a><br><a href="finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html#to-set-up-a-bank-account-for-sepa-credit-transfer">Um ein Bankkonto für SEPA-Überweisung festzulegen</a><br><a href="finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html">Zahlungen mit der Erweiterung AMC Banking 365 Fundamentals oder SEPA-Überweisung vornehmen</a><br><a href="receivables-apply-payments-auto-reconcile-bank-accounts.html">Zahlungsabstimmung</a><br><a href="finance-general-ledger.html">Verständnis der Fibu und des COA</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

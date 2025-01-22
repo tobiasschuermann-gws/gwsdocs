@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Die Bildanalyse-Erweiterung </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Die Bildanalyse-Erweiterung ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-image-analyzer-extension">Die Bildanalyse-Erweiterung</h1>
+
+<p>Die Bild-Analyser-Erweiterung verwendet die leistungsstarke Bildanalytik, die von der Computer Vision API für Azure Cognitive Services bereitgestellt wird, um Attribute in Bildern zu ermitteln, die Sie für Artikel und Kontaktpersonen importieren, sodass Sie sie einfach überprüfen und zuordnen können. Für Artikel können Attribute sein, ob der Artikel eine Tabelle oder ein Auto ist und und ob er rot oder blau ist. Für Personen können Attribute Geschlecht oder Alter sein.</p>
+<p>Bild-Analyser schlagen Attribute basierend auf Tags vor, die der Computer Vision API findet und einen Vertrauensbereich. Standardmäßig schlägt er Attribute vor, wenn mindestens zu 80% sichergestellt ist, dass das Attribut korrekt ist. Sie können einen anderen Vertrauensbereich festlegen, nach Bedarf. Um mehr darüber zu erfahren, wie die Kategorien und der Vertrauensbereich bestimmt wird, gehen Sie zu <a href="https://go.microsoft.com/fwlink/?linkid=851476">Computer Vision API</a>.  </p>
+<p>Bild-Analyzer ist kostenlos in Business Central, aber es gibt einen Grenzwert der Anzahl von Artikeln, die Sie für einen bestimmten Zeitraum auswerten können. Standardmäßig können Sie 100 Bilder pro Monat analysieren.</p>
+<p>Nachdem Sie die Erweiterung ausführten, wird der Bild-Analyzer ausgeführt, wenn Sie ein Bild einem Artikel oder einer Kontaktperson importieren. Sie finden die Attribute, den Vertrauensbereich und Details sofort und können sich entscheiden, was, jedes Attribut durchzuführen. Wenn Sie Bilder importierten, bevor Sie die Bild-Analyzer-Erweiterung aktiviert haben, müssen Sie zum Artikel oder zur Kontaktkarten wechseln und <strong>Bild analysieren</strong> auswählen.  </p>
+<h2 id="privacy-notice">Datenschutzhinweis</h2>
+<p>Diese Erweiterung verwendet die API des maschinellen Sehens von Azure Cognitive Services, die unterschiedliche Niveaus von Kompatibilitätsverpflichtungen als Business Central haben können. Wenn Sie die Bildanalysatorerweiterung aktivieren, werden zum Beispiel Debitorendaten als ein Kontaktbild oder ein Artikelbild die an API des maschinellen Sehens gesendet. Durch die Installation dieser Erweiterung stimmen Sie zu, dass diese begrenzte Reihe von Daten zur maschinellen API des Sehens gebucht werden kann. Beachten Sie, dass Sie die Bildanalysatorerweiterung deaktivieren und deinstallieren können, um die Verwendung dieser Funktionalität zu beenden. Weitere Informationen finden Sie unter <a href="https://go.microsoft.com/fwlink/?linkid=851463">Microsoft-Sicherheitscenter</a>.</p>
+<h2 id="requirements">Anforderungen</h2>
+<p>Es gibt mehrere Anforderungen für Bilder:</p>
+<ul>
+<li>Bildformate: JPEG, PNG, GIF, BMP  </li>
+<li>Maximale Dateigröße: Weniger als 4 MB  </li>
+<li>Bilddimensionen: Größer als 50 x 50 Pixel  </li>
+</ul>
+<h2 id="switch-on-the-image-analyzer-extension">Die Bildanalyse-Erweiterung einschalten</h2>
+<p>Die Bild-Analyser-Erweiterugn ist in Business Central integriert. Sie müssen sie nur einschalten.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Um die Bild-Analyzer-Erweiterung zu aktivieren, müssen Sie ein Administrator sein. Überprüfen, ob Sie dem Benutzerberechtigungssatz <strong>SUPER</strong> zugeordnet werden. Weitere Informationen finden Sie unter <a href="ui-define-granular-permissions.html">Berechtigungen an Benutzer und Gruppen zuweisen</a>.</p>
+</div>
+<p>Führen Sie einen der folgenden Schritte aus, um die Bild-Analyser-Erweiterung auszuführen:</p>
+<ul>
+<li>Öffnen Sie eine Kontaktkarte. In der Benachrichtigungsleiste wählen Sie <strong>Bild analysieren</strong> und führen Sie dann die Schritte im unterstützen Einrichtungshandbuch durch.  </li>
+<li><p>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Dienstverbindungen</strong> ein, und wählen Sie dann <strong>Bildanalyse Einrichtung</strong>. In der Benachrichtigungsleiste wählen Sie <strong>Bilder analysieren aktivieren</strong> und führen Sie dann die Schritte im unterstützen Einrichtungshandbuch durch.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Auf der Seite <strong>Bildanalyse-Einrichtung</strong> können Sie auch den Grad des Vertrauens für Attributvorschläge ändern. Wenn Sie beispielsweise einen höheren Prozentsatz an Vertrauen möchten, können Sie einen höheren Prozentsatz eingeben.</p>
+</div>
+</li>
+</ul>
+<h2 id="analyze-an-item-image">Bild eines Artikels analysieren</h2>
+<p>Die folgenden Schritte beschreiben, wie Sie ein Bild analysieren, das importiert wurde, bevor Sie die Erweiterung Bildanalyse aktiviert haben.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Elemente</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die entsprechende Projekte und wählen Sie dann die Aktion <strong>Bild analysieren</strong> aus.  </li>
+<li>Die Seite <strong>Bild-Analyse-Attribute</strong> zeigt die erkannten Attribute, den Vertrauensbereich und andere Details zum Attribut an. Verwenden Sie die Option <strong>Auszuführende Aktion</strong> aus, um die für das Attribut auszuführenden Aktionen festzulegen, oder wählen Sie <strong>Zur Artikelbeschreibung hinzufügen</strong> aus, um der Artikelbeschreibung den Namen des Attributs hinzuzufügen. Beispielsweise kann diese Aktion nützlich sein, um schnell Details hinzufügen.</li>
+</ol>
+<p>Das Feld  <strong>Auszuführende Aktion</strong> stellt die folgende Optionen zur Verfügung:</p>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Ignorieren</em></td>
+<td>Es werden keine Aktionen ausgeführt.</td>
+</tr>
+<tr>
+<td><em>Als Attribut verwenden</em></td>
+<td>Der Wert wird den Artikelattributen hinzugefügt. Erfahren Sie mehr unter <a href="inventory-how-work-item-attributes.html">Mit Artikelattributen arbeiten </a>.</td>
+</tr>
+<tr>
+<td><em>Als Kategorie verwenden</em></td>
+<td>Der ausgewählte Wert wird als Kategorie hinzugefügt. Erfahren Sie mehr unter <a href="inventory-how-categorize-items.html">Artikel kategorisieren</a>.</td>
+</tr>
+<tr>
+<td><em>Zur Blockliste hinzufügen</em></td>
+<td>Wenn die Analyse ein Attribut vorschlägt, das Sie nicht sehen möchten, können Sie das Attribut blockieren. Vorsicht walten lassen. Blockierte Attribute werden auch nicht für andere Artikel vorgeschlagen. Wenn Sie es bedauern, ein Attribut zu blockieren, wählen Sie <strong>Gesperrte Attribute anzeigen</strong> und löschen dann das Attribut aus der Liste.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p><strong>Artikelattribute</strong> zeigen standardmäßig Attribute an, deren <strong>Genauigkeitsbewertung</strong> über dem <strong>Schwellenwert Genauigkeitsbewertung in %</strong> liegt, der im <strong>Bildanalyse-Setup</strong> definiert ist. Um alle erkannten Attribute anzuzeigen, wählen Sie die Aktion <strong>Alle Attribute anzeigen</strong> aus.</p>
+</div>
+<h2 id="analyze-a-contact-person-picture">Bild einer Kontaktperson analysieren</h2>
+<p>Die folgenden Schritte beschreiben, wie Sie ein Bild analysieren, das importiert wurde, bevor Sie die Erweiterung Bildanalyse aktiviert haben.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kontakte</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die entsprechende Kontaktperson und wählen Sie dann die Aktion <strong>Bild analysieren</strong> aus.  </li>
+<li><p>Wählen Sie im Feld Inforegister <strong>Profilbefragung</strong> überprüfen Sie die Vorschläge und machen Sie Korrekturen nach Bedarf. Weitere Informationen erhalten Sie unter <a href="marketing-create-contact-profile-questionnaire.html">Verwenden Sie Profilbefragungen, um Geschäftskontakten zu klassieren</a>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Computer Vision API gibt folgende Attribute zurück:</p>
+<ul>
+<li><p><em>Alter</em></p>
+<p>  Ein geschätztes „visuelles Alter“ in Jahren. Es geht darum, wie alt eine Person aussieht, im Gegensatz zum tatsächlichen biologischen Alter.</p>
+</li>
+<li><p><em>Geschlecht</em></p>
+<p> Weiblich oder männlich</p>
+</li>
+</ul>
+<p>Die Computer Vision API gibt kein Konfidenzniveau für Alters- und Geschlechtsattribute zurück.</p>
+</div>
+</li>
+</ol>
+<h2 id="use-your-own-computer-vision-api-account">Ihr eigenes Computer Vision API-Konto verwenden</h2>
+<p>Sie können auch Ihr eigenes Konto für die Computer Vision API verwenden, beispielsweise wenn Sie mehr Bilder analysieren möchten als in der Standardintegration zulässig.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Bildanalyse-Einrichtung</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li><p>Geben Sie die <strong>API URI</strong> und die <strong>API Key</strong> ein, die Sie für die Computer Vision API erhalten.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie müssen am Ende <strong>/analyze</strong> API URIs hinzufügen hinzufügen, wenn nicht bereits vorhanden ist. Zum Beispiel: <code>https://cronus.api.cognitive.microsoft.com/vision/v2.0/analyze</code>.</p>
+</div>
+</li>
+</ol>
+<h2 id="see-how-many-analyses-you-have-left-in-the-current-period">Anzeigen, wie viele Analysen Sie in der laufenden Periode gelassen haben</h2>
+<p>Sie können die Anzahl Analysen anzeigen, die Sie durchgeführt haben, und wie viele Sie noch tun können, in der laufenden Periode.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Bildanalyse-Einrichtung</strong> ein, und wählen Sie dann den entsprechenden Link.</li>
+<li>Die Felder <strong>Grenzentyp</strong>, <strong>Grenzwert</strong> und <strong>Analye ausgeführt</strong> liefern die Verbrauchsdaten.  </li>
+</ol>
+<h2 id="stop-using-the-image-analyzer-extension">Verwendung der Bild-Analyzer-Erweiterung beenden</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Dienstverbindungen</strong> ein, und wählen Sie dann <strong>Bildanalyse Einrichtung</strong>.  </li>
+<li>Deaktivieren Sie das Feld <strong>Bild-Analyse aktivieren</strong>.  </li>
+</ol>
+<p>Sie können die Erweiterung auch vollständig deinstallieren. Sie können es jederzeit wieder von AppSource abrufen. Weitere Informationen finden Sie unter <a href="ui-extensions-install-uninstall.html#uninstall-an-app">Installieren und Deinstallieren von Erweiterungen in Business Central</a>.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="inventory-how-work-item-attributes.html">Arbeiten mit Artikelattributen</a><br><a href="inventory-how-categorize-items.html">Artikel kategorisieren</a><br><a href="marketing-create-contact-profile-questionnaire.html">Verwenden Sie Profilbefragungen, um Geschäftskontakten zu klassieren</a><br><a href="ui-extensions.html">Anpassen von Business Central über Erweiterungen</a><br><a href="ui-get-ready-business.html">Vorbereitung für die Geschäftstätigkeit</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

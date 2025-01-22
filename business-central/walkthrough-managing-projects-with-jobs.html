@@ -1,0 +1,769 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Exemplarische Vorgehensweise &#8211; Verwalten von Projekten mit Projekten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Exemplarische Vorgehensweise &#8211; Verwalten von Projekten mit Projekten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="walkthrough-managing-projects">Exemplarische Vorgehensweise: Verwalten von Projekten</h1>
+
+<!-- [!INCLUDE[complete_sample_data](includes/complete_sample_data.md)]   -->
+<p>In dieser exemplarischen Vorgehensweise erhalten Sie eine Einführung in die Projektmanagementfunktionen. Mit Projekten können Sie den Verbrauch der Ressourcen Ihres Unternehmens planen und die verschiedenen Kosten im Zusammenhang mit dem Einsatz von Ressourcen für ein bestimmtes Projekt verfolgen. Projekte beinhalten den Verbrauch von Mitarbeiterstunden, Maschinenstunden, Bestandsposten und andere Verbrauchsarten, die während des Projekts verfolgt werden können.  </p>
+<p>Diese exemplarische Vorgehensweise umfasst die Einrichtung eines neuen Projekts und die damit verbundenen Aufgaben:</p>
+<ul>
+<li>Festpreise verwenden</li>
+<li>Teilzahlungen durchführen</li>
+<li>Rechnungen aus Projekten buchen</li>
+<li>Projekte kopieren</li>
+</ul>
+<h2 id="about-this-walkthrough">Informationen zu dieser exemplarischen Vorgehensweise</h2>
+<p> In dieser exemplarischen Vorgehensweise werden folgende Aufgaben erläutert:  </p>
+<h3 id="setting-up-a-project">Projekt einrichten</h3>
+<p>Wenn die Budgetstruktur für Projekte eingerichtet ist, ist ein Projekt einfach zu erstellen. Diese exemplarische Vorgehensweise umfasst folgende Verfahren:  </p>
+<ul>
+<li>Projektaufgabenzeilen und Planungszeilen einrichten  </li>
+<li>Projektspezifische Preise für Artikel, Ressourcen und Sachkonten erstellen  </li>
+<li>Debitoren ein Projekt in Rechnung stellen  </li>
+</ul>
+<h3 id="handling-fixed-prices">Festpreise verwenden</h3>
+<p> Sie können Festpreise und die vorab mit Debitoren vereinbarten Preise für Services oder Waren verwendet werden. In dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  </p>
+<ul>
+<li>Vertrags- und Rechnungswerte ermitteln  </li>
+<li>Zusätzliche, nicht fakturierte Arbeit einplanen  </li>
+</ul>
+<h3 id="copying-a-project">Ein Projekt kopieren</h3>
+<p> In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie Sie ein Projekt ganz oder teilweise kopieren, um den manuellen Dateneingabeaufwand zu reduzieren und die Genauigkeit zu verbessern.</p>
+<ul>
+<li>Einen Teil eines Projekts in ein neues Projekt kopieren  </li>
+<li>Projektspezifische Preise kopieren  </li>
+<li>Projektplanzeilen kopieren  </li>
+</ul>
+<h3 id="making-payment-by-installment">Teilzahlungen anwenden</h3>
+<p> Wenn ein großes, kostspieliges Projekt über einen langen Zeitraum läuft, schließt der Debitor häufig mit dem Unternehmen eine Teilzahlungsvereinbarung ab. In diesem Szenario wird gezeigt, wie Sie Teilzahlungen und Versicherungen einrichten:  </p>
+<ul>
+<li>Teilzahlungen für ein Projekt erstellen  </li>
+<li>Teilzahlungen fakturieren  </li>
+<li>Den Verbrauch in einem Projekt abrechnen, das für Teilzahlungen eingerichtet ist  </li>
+</ul>
+<h2 id="roles">Rollen</h2>
+<p> Diese exemplarische Vorgehensweise umfasst Aufgaben für folgende Rollen:  </p>
+<ul>
+<li>Projekt-Manager  </li>
+<li>Projektteammitglied  </li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<p> Bevor Sie die Aufgaben in dieser Demonstration ausführen, müssen Sie die folgenden Schritte ausführen:  </p>
+<ul>
+<li>Installiere die CRONUS-Demonstrationsdatenbank.</li>
+<li>Erstellen Sie wie im folgenden Abschnitt beschrieben einige Beispieldaten.  </li>
+</ul>
+<h2 id="story">Hintergrund</h2>
+<p>Im Mittelpunkt dieser exemplarischen Vorgehensweise steht CRONUS, ein fiktives Design- und Beratungsunternehmen, das neue Infrastrukturen entwirft und einrichtet. Zum Beispiel Konferenzräume und Büros mit Möbeln, Zubehör und Speichereinheiten. Der Großteil der Arbeiten ist projektorientierter Natur. Prakash, ein Projektmanager bei CRONUS verwendet Projekte, um sich einen Überblick über die einzelnen laufenden Projekte zu verschaffen, die CRONUS gestartet und abgeschlossen hat. In der Regel ist es Prakash, der die Geschäfte mit Debitoren einrichtet und die Kerndaten des Projekts, d.h. Aufgaben- und Planungszeilen sowie Preise, in Business Central erfasst. Prakash findet, dass erstellen, verwalten, und Informationen prüfen einfach ist. Auch Prakash schätzt die Art, wie Business Central das Kopieren von Projekten sowie von Teilzahlungen ausführt.</p>
+<p> Katrin, ein Projektteammitglied, das Prakash unterstellt ist, ist für die tägliche Überwachung des Projekts zuständig. Tricia gibt die erledigte Arbeit der Techniker zu jeder Aufgabe ein und erfasst die verwendeten Artikel sowie die entstandenen Kosten.  </p>
+<h2 id="preparing-sample-data">Beispieldaten vorbereiten</h2>
+<p>Um sich für diese exemplarische Vorgehensweise vorzubereiten, müssen Sie Katrin als Ressource hinzufügen.  </p>
+<h3 id="to-prepare-the-sample-data">So bereiten Sie die Beispieldaten vor</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Ressourcen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die <strong>Neu</strong> Aktion aus, um eine neue Ressourcenkarte zu erstellen.  </li>
+<li><p>Geben Sie auf dem Inforegister <strong>Allgemein</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Nr.</strong>: <strong>Katrin</strong>  </li>
+<li><strong>Name</strong>: <strong>Katrin</strong>  </li>
+<li><strong>Art</strong>: <strong>Person</strong>  </li>
+</ul>
+</li>
+<li><p>Wählen Sie im Feld <strong>Basiseinheit</strong> die Option <strong>Neu</strong>, um die Seite <strong>Ressourceneinheit</strong> zu öffnen. Wählen Sie im Feld <strong>Code</strong> die Option <strong>Stunde</strong> aus.  </p>
+</li>
+<li><p>Geben Sie auf dem Inforegister <strong>Fakturierung</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>EK-Preis</strong>: <strong>5</strong>  </li>
+<li><strong>Kosten %%</strong>: <strong>4</strong>  </li>
+<li><strong>Einstandspreis</strong>: <strong>10</strong>  </li>
+<li><strong>Produktbuchungsgruppe</strong>: <strong>Services</strong>  </li>
+<li><strong>MwSt.-Produktbuchungsgruppe</strong>: <strong>25 %% MwSt.</strong>  </li>
+</ul>
+</li>
+<li><p>Schließen Sie die Seite.</p>
+</li>
+</ol>
+<p>Im folgenden Verfahren erstellen Sie eine Projektbuchungsblatt für Katrin, um deren Verbrauch zu buchen.  </p>
+<h3 id="to-create-a-project-journal-batch">So erstellen Sie einen Projektbuch.-Blattnamen</h3>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, welche die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Projekterfassungen</strong> ein und wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Wählen Sie auf der Seite <strong>Projekt Buchungsblattzeile</strong> das Feld <strong>Buch.-Blattname</strong> aus. Die Seite <strong>Projekt Buch.-Blattnamen</strong> wird geöffnet.  </li>
+<li><p>Wählen Sie auf der Registerkarte Start die Option <strong>Neu</strong> aus, um eine neue Zeile mit folgender Information zu erstellen.  </p>
+<ul>
+<li><strong>Name</strong>: <strong>Katrin</strong>  </li>
+<li><strong>Beschreibung</strong>: <strong>Katrin</strong>  </li>
+<li><strong>Nummernserie</strong>: <strong>PRJ-BCHBL</strong>  </li>
+</ul>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus, um die Änderungen zu speichern.</p>
+</li>
+</ol>
+<h2 id="setting-up-a-project-1">Projekt einrichten</h2>
+<p>In diesem Szenario hat CRONUS einen Vertrag mit einem Kunden, Progressive Home Furnishings, für den Entwurf eines Konferenz- und Speisesaals abgeschlossen. Der Debitor hat seinen Sitz in den USA, und für das Projekt ist spezielle Software erforderlich. Der Projektmanager trifft eine Vereinbarung mit dem Debitoren und erstellt ein Projekt für den Vertrag.  </p>
+<h3 id="to-set-up-a-project">So richten Sie ein Projekt ein</h3>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten"> und geben Sie <strong>Projekte</strong> ein. Wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Wählen Sie die <strong>Neu</strong> Aktion aus, um eine neue Ressourcenkarte zu erstellen.  </li>
+<li><p>Geben Sie auf dem Inforegister <strong>Allgemein</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Beschreibung</strong>: <strong>Beratung zur Einrichtung des Konferenzraums</strong>  </li>
+<li><strong>Rech. an Deb.-Nr.</strong>: <strong>01445544</strong>  </li>
+</ul>
+</li>
+<li><p>Geben Sie auf dem Inforegister <strong>Buchung</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Status</strong>: <strong>Planung</strong>  </li>
+<li><strong>Projektbuchungsgruppe</strong>: <strong>Einrichten</strong>  </li>
+<li><strong>WIP-Methode</strong>: <strong>Einstandswert</strong>  </li>
+</ul>
+</li>
+<li><p>Geben Sie auf dem Inforegister <strong>Dauer</strong> das heutige Datum in die Felder <strong>Startdatum</strong> und <strong>Enddatum</strong> ein. Diese Datumsangaben werden bei der Fakturierung des Projekts zur Währungsumrechnung verwendet.  </p>
+</li>
+<li><p>Stellen Sie auf dem Inforegister <strong>Außenhandel</strong> sicher, dass der Währungscode auf <strong>USD</strong> festgelegt ist. Wenn Sie im Feld <strong>Währungscode Rechnung</strong> die Option „USD“ auswählen, wird das Projekt in US-Dollar fakturiert und nur in der lokalen Währung von CRONUS geplant.  </p>
+<p>Sie können die Preise für Debitoren auf Pro-Projekt-Basis je nach Ihren Vereinbarungen anpassen. Im folgenden Verfahren gibt der Projekt-Manager Kosten für Katrins Zeit an, setzt den Preis für die benötigte Software fest und fügt in den Reisekosten hinzu, dass der Debitor zugestimmt hat, zu zahlen.  </p>
+</li>
+</ol>
+<h3 id="to-customize-pricing">Preise anpassen</h3>
+<ol>
+<li>Auf der <strong>Projektkarte</strong> wählen Sie die Aktion <strong>Ressource</strong> aus.  </li>
+<li><p>Geben Sie auf der Seite <strong>Projekt – Ressourcenpreise</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Code</strong>: <strong>Katrin</strong>  </li>
+<li><strong>VK-Preis</strong>: <strong>20</strong>  </li>
+</ul>
+</li>
+<li><p>Schließen Sie die Seite.  </p>
+</li>
+<li>Wählen Sie die Aktion <strong>Artikel</strong> aus.  </li>
+<li><p>Geben Sie auf der Seite <strong>Projektartikelpreise</strong> die folgenden Informationen und den folgenden angepassten Preis ein:  </p>
+<ol>
+<li><strong>Artikelnr.</strong>: <strong>80201 (Grafikprogramm)</strong>  </li>
+<li><strong>VK-Preis</strong>: <strong>200</strong>  </li>
+</ol>
+</li>
+<li><p>Schließen Sie die Seite.  </p>
+</li>
+<li>Wählen Sie die <strong>Sachkonto</strong> Aktion aus.  </li>
+<li><p>Geben Sie auf der Seite <strong>Projekt-Sachkontopreise</strong> die folgenden Werte sowie die Reisekosten ein, für die Sie mit dem Debitor vereinbart haben, dass er sie zuzüglich 25 Prozent übernimmt.  </p>
+<ol>
+<li><strong>Sachkonto</strong>: <strong>8430 (Reisekosten)</strong>  </li>
+<li><strong>Einstandspreis</strong>: <strong>1,25</strong>  </li>
+</ol>
+</li>
+<li><p>Schließen Sie die Seite.  </p>
+<p>Die letzten Schritte beim Einrichten eines Projekts bestehen darin, die Projektaufgaben und die Planungszeilen hinzufügen, die Teil jeder Aufgabe sind. Die Planungszeilen bestimmen, welche Posten dem Debitoren in Rechnung gestellt werden.  </p>
+</li>
+</ol>
+<h3 id="to-add-project-tasks">So fügen Sie Projektaufgaben hinzu</h3>
+<ol>
+<li>Auf der Karte <strong>Projekt</strong> für das neue Projekt, wählen Sie die Aktion <strong>Projektaufgabenzeilen</strong> aus.  </li>
+<li><p>In der folgenden Tabelle werden die Informationen beschrieben, die Sie in die Felder eingeben müssen.  </p>
+<table>
+<thead>
+<tr>
+<th>Projektaufgabennr.</th>
+<th>Description</th>
+<th>Projektaufgabentyp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1000</td>
+<td>Beratung zur Einrichtung des Raums</td>
+<td>Von-Summe</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>Beratungsgespräch mit dem Kunden</td>
+<td>Buchen</td>
+</tr>
+<tr>
+<td>1020</td>
+<td>Entwicklung</td>
+<td>Buchen</td>
+</tr>
+<tr>
+<td>1090</td>
+<td>Beratung insgesamt</td>
+<td>Bis-Summe</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Um anzuzeigen, dass einige Aufgaben Unterkategorien anderer Aufgaben sind, wählen Sie die Aktion <strong>Projektaufgaben einrücken</strong> aus.  </p>
+</li>
+</ol>
+<p>Eine Planungszeile kann von einer der folgenden Arten sein:  </p>
+<ul>
+<li><strong>Budget</strong>: Dem Plan hinzugefügt, aber noch nicht fakturiert.  </li>
+<li><strong>Fakturierbar</strong>: Fakturiert, aber noch nicht dem Plan hinzugefügt.  </li>
+<li><strong>Budgetiert und verrechenbar</strong>: Fakturiert und dem Plan hinzugefügt.  </li>
+</ul>
+<p>In dieser exemplarischen Vorgehensweise verwendet der Projektmanager <strong>Budgetiert und verrechenbar</strong>. Sie erstellen drei Planungszeilen für die Aufgabe 1010 und zwei Planungszeilen für die Aufgabe 1020.  </p>
+<h3 id="to-create-planning-lines">So erstellen Sie Planungszeilen</h3>
+<ol>
+<li>Wählen Sie die Zeile 1010 und dann die Aktion <strong>Projektplanzeilen</strong> aus.  </li>
+<li><p>Erstellen Sie Planungszeilen mit den folgenden Informationen:  </p>
+<table>
+<thead>
+<tr>
+<th>Zeile</th>
+<th>Zeilenart</th>
+<th>Planungsdatum</th>
+<th>Typ</th>
+<th>Anzahl</th>
+<th>Menge</th>
+<th>VK-Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sowohl budgetiert und verrechenbar</td>
+<td>(heutiges Datum)</td>
+<td>Ressource</td>
+<td>Katrin</td>
+<td>40</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sowohl budgetiert und verrechenbar</td>
+<td>(heutiges Datum)</td>
+<td>Ressource</td>
+<td>Thorsten</td>
+<td>40</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sowohl budgetiert und verrechenbar</td>
+<td>(heutiges Datum)</td>
+<td>Sachkonto</td>
+<td>8430 (Reise)</td>
+<td>2</td>
+<td>400</td>
+</tr>
+</tbody>
+</table>
+<p>  Schließen Sie die Seite. Die Summen werden auf der Seite <strong>Projektaufgabenzeilen</strong> aktualisiert.  </p>
+</li>
+<li><p>Wählen Sie die Zeile 1020 und dann die Aktion <strong>Projektplanzeilen</strong> aus. Geben Sie die folgenden Informationen ein:  </p>
+<table>
+<thead>
+<tr>
+<th>Auftrag</th>
+<th>Zeilenart</th>
+<th>Planungsdatum</th>
+<th>Typ</th>
+<th>Anzahl</th>
+<th>Menge</th>
+<th>VK-Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sowohl budgetiert und verrechenbar</td>
+<td>(heutiges Datum)</td>
+<td>Ressource</td>
+<td>Katrin</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sowohl budgetiert und verrechenbar</td>
+<td>(heutiges Datum)</td>
+<td>Artikel</td>
+<td>80201 (Grafikprogramm)</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Schließen Sie die Seite. Die Summen werden auf der Seite <strong>Projektaufgabenzeilen</strong> aktualisiert.  </p>
+</li>
+</ol>
+<h2 id="calculating-remaining-usage">Restverbrauch berechnen</h2>
+<p>Katrin, das Teamprojektmitglied, arbeitet seit einiger Zeit an dem Projekt und möchte ihre Stunden und ihren Verbrauch für das Projekt erfassen. Katrin hat nicht mehr gearbeitet, als vorab mit dem Debitoren vereinbart wurde. Katrin verwendet den Batchauftrag <strong>Restverbrauch berechnen</strong>, um den Restverbrauch in einem Projektbuchhaltungsblatt zu berechnen. Mithilfe der Stapelverarbeitung wird für jede Projektaufgabe die Differenz zwischen dem geplanten Verbrauch von Artikeln, Ressourcen und Aufwandssachposten und dem in Projektposten gebuchten tatsächlichen Verbrauch berechnet. Der Restverbrauch wird dann im Projektbuchungsblatt angezeigt und Tricia kann eine Buchung vornehmen.  </p>
+<h3 id="to-calculate-remaining-usage">So berechnen Sie den Restverbrauch</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Projekterfassungen</strong> ein und wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Öffnen Sie auf der Seite <strong>Projekt Buch.-Blatt</strong> im Feld <strong>Buch.-Blattname</strong> die Liste <strong>Projekt Buch.-Blattnamen</strong>. Wählen Sie den Projekt-Buchungsblattnamen <strong>Katrin</strong> aus.  </li>
+<li>Wächlen Sie im Aktionsbereich <strong>Restverbrauch</strong>.  </li>
+<li>Wählen Sie auf der Seite <strong>Restverbrauch für Projekt berechnen</strong> im Inforegister <strong>Projektaufgabe</strong> das <strong>Projektnr.</strong>- Feld aus und wählen Sie die Nummer des entsprechenden Projekts aus, in der Regel „Projekt J00010“.  </li>
+<li>Geben Sie auf dem Inforegister <strong>Optionen</strong> die Nummer <strong>PW00001</strong> in das Feld <strong>Belegnr.</strong> ein. Durch diese Informationen wird die zukünftige Nachverfolgung der Buchung vereinfacht.  </li>
+<li>Geben Sie als Buchungsdatum das heutige Datum ein.  </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong>. Diese Aktion generiert alle Projekt-Buchungsblattzeilen basierend auf den von Prakash erstellten Projekt-Buchungsblattzeilen.  </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus auf der Bestätigungsseite. Die generierten Zeilen werden dem Projekt-Buchungsblatt hinzugefügt.  </li>
+<li>Stellen Sie sicher, dass für alle Belegnummern J00001 angezeigt wird. Klicken Sie auf Aktionen, zeigen Sie auf <strong>Buchen</strong>, und klicken Sie dann auf Buchen. Wählen Sie <strong>Ja</strong>, um die Buchung zu bestätigen.  </li>
+</ol>
+<p>Die Zeilen werden gebucht.  </p>
+<h2 id="creating-and-posting-a-project-sales-invoice">Eine Projektverkaufsrechnung erstellen und buchen</h2>
+<p>Als Nächstes kann Katrin eine neue Rechnung für das gesamte Projekt oder für einen Teil eines Projekts erstellen. Tricia kann die Rechnung auch an eine andere Rechnung für denselben Debitoren und dasselbe Projekt anfügen. In diesem Fall fakturiert Tricia das gesamte Projekt, da es jetzt abgeschlossen ist.  </p>
+<h3 id="to-create-a-project-sales-invoice">So erstellen Sie eine Projektverkaufsrechnung</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> und geben Sie <strong>Projekte</strong> ein. Wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Wählen Sie das Projekt aus, das Sie zuvor erstellt haben, und wählen die <strong>Projektverkaufsrechnung erstellen</strong> Aktion aus.  </li>
+<li>Löschen Sie im Inforegister <strong>Projektaufgabe</strong> in <strong>Projektaufgabennr.</strong> alle Filter, um das Projekt zu fakturieren. Wählen Sie im Feld <strong>Projektnr.</strong> das relevante Projekt aus.  </li>
+<li>Geben Sie im Inforegister <strong>Optionen</strong> das Buchungsdatum ein, und definieren Sie, ob eine Rechnung pro Aufgabe oder eine einzige Rechnung für alle Aufgaben erstellt werden soll.  </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus, um die Rechnung zu erstellen, und wählen Sie dann die Schaltfläche <strong>OK</strong> auf der Bestätigungsseite.  </li>
+</ol>
+<p>Nachdem Tricia die Rechnung erstellt hat, ist sie beispielsweise im Rollencenter <strong>Kundenauftragsabwickler</strong> verfügbar.</p>
+<h3 id="to-post-a-new-sales-invoice">So buchen Sie eine neue Verkaufsrechnung</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Verkaufsrechnungen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Rechnung für die Debitorennummer 01445544. Die aus den Planungszeilen erfassten Informationen werden angezeigt.  </li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> aus. Wählen Sie <strong>Ja</strong>, um die Buchung zu bestätigen.  </li>
+</ol>
+<h3 id="to-view-the-posted-invoice">So zeigen Sie die gebuchte Rechnung an</h3>
+<ol>
+<li>Öffnen Sie das Projekt und dann die Aktion <strong>Projektplanzeilen</strong>.  </li>
+<li>Wählen Sie eine der fakturierten Planungszeilen aus, und wählen Sie auf der Registerkarte Start in der Gruppe Prozess die Option <strong>Verkaufsrechnung/Gutschrift</strong> aus.</li>
+<li>Auf der Seite <strong>Projektrechnungen</strong> wählen Sie die Aktion <strong>Verkaufsrechnungen/Gutschrift</strong> aus.  </li>
+</ol>
+<p>Tricia hat eine Frage zu den Preisen, Kosten und Gewinnen für dieses spezielle Projekt, daher greift sie über die Seite <strong>Statistik</strong> auf die Informationen zu.  </p>
+<h3 id="to-open-the-statistics-page">So öffnen Sie die Seite &quot;Statistik&quot;</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> und geben Sie <strong>Projekte</strong> ein. Wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Wählen Sie die Aktion <strong>Statistik</strong> aus. Sie können detaillierte Informationen über die Projektverkaufspreise, Kosten und Gewinne in lokalen und fremden Währungen anzeigen.  </li>
+<li>Wählen Sie die Schaltfläche <strong>Schließen</strong>, um die Seite <strong>Projektstatistik</strong> zu schließen.  </li>
+</ol>
+<h2 id="handling-fixed-prices-1">Festpreise verwenden</h2>
+<p>CRONUS wurde abgeschlossen, um Konferenzräume einrichten. Als Projekt-Manager benötigt Bernard einen umfassenden Überblick über die erforderlichen Aufgaben für das Projekt sowie die zugehörigen budgetierten und angefallenen Kosten für jede Aufgabe. Zudem möchte Prakash den vertraglich vereinbarten Verkaufsbetrag für das Projekt und den fakturierten Betrag ermitteln. Sie haben mit dem Debitoren Festpreise für das Projekt vereinbart.  </p>
+<h3 id="to-manage-fixed-pricing-in-projects">So verwalten Sie Festpreise in Projekten</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Was möchten Sie tun?"> und geben Sie <strong>Projekte</strong> ein. Wählen Sie dann den zugehörigen Link aus.  </li>
+<li>Wählen Sie die Projektnummer <strong>Guildford</strong>, und wählen Sie die <strong>Projektaufgabenzeilen</strong> Aktion aus.  </li>
+<li><p>Wählen Sie die Zeile 1120 aus, klicken Sie im Feld <strong>Budget (Einstandsbetrag)</strong> mit der rechten Maustaste auf den Betrag, und wählen Sie <strong>DrillDown</strong> aus.  </p>
+<p>  Beim Überprüfen der Projektplanungszeilen stellt Prakash fest, dass er Katrin in dieser Phase des Projekts für 30 Stunden benötigt. Prakash vereinbart einen Festpreis mit dem Debitoren.  </p>
+</li>
+<li><p>Auf der Seite <strong>Projektaufgabenzeilen</strong> wählen Sie die Zeile 1120 und dann die Aktion <strong>Projektplanzeilen</strong> aus. Erstellen Sie eine Planungszeile mit den folgenden Informationen:  </p>
+<table>
+<thead>
+<tr>
+<th>Zeile</th>
+<th>Zeilenart</th>
+<th>Typ</th>
+<th>Anzahl</th>
+<th>Menge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sowohl budgetiert und verrechenbar</td>
+<td>Ressource</td>
+<td>Katrin</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>  Schließen Sie die Seite.  </p>
+</li>
+<li>Klicken Sie mit der rechten Maustaste im Feld <strong>Budget (Einstandsbetrag)</strong>, und wählen Sie erneut <strong>Drilldown</strong> auf der Seite <strong>Projektaufgabenzeilen</strong> aus. Zeigen Sie die Änderungen am Plan an. Die 30 Stunden wurden dem Plan hinzugefügt.  </li>
+<li>Schließen Sie die Seiten.  </li>
+</ol>
+<p>Nachdem Katrin den Plan für diese Aufgabenzeile hinzugefügt wurde, arbeitet sie 25 Stunden an dem Projekt. Diese Stunden können im Projektbuchhaltungsblatt erfasst werden.  </p>
+<h3 id="to-enter-hours-in-a-project-journal">So erfassen Sie Stunden in einem Projektbuchhaltungsblatt</h3>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Projekterfassungen</strong> ein und wählen Sie dann den zugehörigen Link aus.  </li>
+<li><p>Geben Sie in einer neuen Zeile die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Zeilenart</strong>: <strong>(leer)</strong>  </li>
+<li><strong>Buchungsdatum</strong>: <strong>(heutiges Datum)</strong>  </li>
+<li><strong>Belegnr.</strong>: <strong>J00002</strong>  </li>
+<li><strong>Projektnr.</strong>: <strong>Bäderwelt</strong>  </li>
+<li><strong>Projektaufgabennr.</strong>: <strong>1120</strong>  </li>
+<li><strong>Art</strong>: <strong>Ressource</strong>  </li>
+<li><strong>Nr.</strong>: <strong>Katrin</strong>  </li>
+<li><strong>Menge</strong>: <strong>25</strong>  </li>
+</ul>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Buchen</strong> aus.  </p>
+<p>  Ein paar Tage später arbeitet Tricia weitere 10 Stunden im Job und hat insgesamt 35 Stunden gearbeitet. Da Sie nur 30 Stunden mit dem Debitoren vereinbart haben, werden dem Debitoren nur fünf dieser Stunden in Rechnung gestellt. Tricia fügt dem Zeitplan die anderen fünf Stunden hinzu.  </p>
+</li>
+<li><p>Wählen Sie auf der Seite <strong>Projekt Buch.-Blatt</strong> auf der Registerkarte Start die Option <strong>Restverbrauch berechnen</strong> aus.  </p>
+</li>
+<li><p>Geben auf der Seite <strong>Restverbrauch für Projekt berechnen</strong> im Inforegister <strong>Optionen</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Belegnr.</strong>: <strong>J00003</strong>  </li>
+<li><strong>Buchungsdatum</strong>: <strong>(heutiges Datum)</strong>  </li>
+</ul>
+</li>
+<li><p>Geben Sie im Inforegister <strong>Projektaufgabe</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Projektnr.</strong>: <strong>Bäderwelt</strong>  </li>
+<li><strong>Projektaufgabennr.</strong>: <strong>1120</strong>  </li>
+</ul>
+</li>
+<li><p>Klicken Sie auf die Schaltfläche <strong>OK</strong>, um die Berechnung auszuführen.</p>
+<p> Es gibt fünf Arbeitsstunden, die für Katrin bleiben. Das Feld <strong>Zeilenart</strong> ist leer; dies gibt an, dass nur der Verbrauch gebucht werden muss, da die Arbeit bereits geplant wurde.  </p>
+</li>
+<li><p>Erstellen Sie im <strong>Projekt Buch.-Blatt</strong> eine neue Zeile mit den folgenden Informationen. Prüfen Sie, ob beide Projektnummern Folgenummern der Nummern sind, die Sie bereits verwendet haben:  </p>
+<ul>
+<li><strong>Zeilenart</strong>: <strong>Budget</strong>  </li>
+<li><strong>Projektnr.</strong>: <strong>Bäderwelt</strong>  </li>
+<li><strong>Projektaufgabennr.</strong>: <strong>1120</strong>  </li>
+<li><strong>Art</strong>: <strong>Ressource</strong>  </li>
+<li><strong>Nr.</strong>: <strong>Katrin</strong>  </li>
+<li><p><strong>Menge</strong>: <strong>5</strong>  </p>
+<p>Wenn Sie die Zeilenart <strong>Budget</strong> verwenden, werden die geplanten Kosten und der Preis aktualisiert, ohne die dem Debitoren in Rechnung gestellten Einstandsbeträge und Preise aus dem Vertrag zu aktualisieren.  </p>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Buchen</strong> aus. Wählen Sie die Schaltfläche <strong>OK</strong>, um die Seite zu schließen.  </p>
+</li>
+<li>Öffnen Sie die Liste <strong>Projekte</strong>.  </li>
+<li><p>Wählen Sie das Projekt GUILDFORD und dann im Abschnitt <strong>Projektaufgabenzeilen</strong> Sie Zeile 1120 aus, und klicken Sie im Feld <strong>Budget (Gesamtkosten)</strong> mit der rechten Maustaste auf den Betrag. Wählen Sie <strong>DrillDown</strong> aus, um die Informationen anzuzeigen.  </p>
+<p> Sie können sehen, dass die Änderungen automatisch in der Zeile für die Projektaufgabennummer 1120 eingegeben wurden. Im Einstandsbetrag der geplanten Arbeit wurden dem Plan fünf weitere Arbeitsstunden von Katrin hinzugefügt.  </p>
+</li>
+<li><p>Klicken Sie auf die Schaltfläche <strong>Schließen</strong>, um die Seite zu schließen.  </p>
+</li>
+<li>Klicken Sie mit der rechten Maustaste auf den Betrag im Feld <strong>Vertrag (Einstandsbetrag)</strong>, und wählen Sie dann <strong>DrillDown</strong> aus, um die Informationen anzuzeigen.  </li>
+</ol>
+<p>Im Einstandsbetrag des Vertrags werden nur die ursprünglich im Vertrag festgesetzten 30 Stunden angezeigt, wie mit dem Debitoren vereinbart.  </p>
+<h2 id="copying-projects">Kopieren von Projekten</h2>
+<p>Bernard hat mit einem Kunden, Blütenhaus GmbH, einen Vertrag über die Einrichtung von zehn Konferenzräumen abgeschlossen. Da die Vereinbarung ähnelt einem früheren Projekt. Daher spart es Zeit, dieses frühere Projekt zu kopieren.  </p>
+<p>Auf der Seite <strong>Projekt kopieren</strong> können Sie das zu kopierende Projekt und die gewünschten Aufgabenzeilen auswählen.</p>
+<ul>
+<li>Kopieren Sie die Quellprojektposten, um Planungszeilen basierend auf der tatsächlichen Nutzung zu erstellen.</li>
+<li>Kopieren Sie die Planungszeilen des Quellprojekts, um die ursprünglichen Planungszeilen in das neue Projekt zu kopieren.</li>
+</ul>
+<p>Danach können Sie die für das neue Projekt relevanten Planungszeilen- oder Projektpostenarten auswählen und in den Kopiervorgang einschließen. Zum Schluss wählen Sie das Zielprojekt aus, und Sie legen fest, ob Preise und Mengen ebenfalls kopiert werden sollen.  </p>
+<h3 id="to-copy-a-project">So kopieren Sie ein Projekt</h3>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> und geben Sie <strong>Projekte</strong> ein. Wählen Sie dann den zugehörigen Link aus.  </li>
+<li><p>Wählen Sie die <strong>Neu</strong> Aktion aus, um ein neues Projekt zu erstellen. Geben Sie die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Beschreibung</strong>: <strong>Zehn Konferenzräume einrichten</strong>  </li>
+<li><strong>Rech. an Deb.-Nr.</strong>: <strong>20000</strong>  </li>
+</ul>
+</li>
+<li><p>Wählen Sie die Aktion <strong>Projektaufgaben kopieren aus</strong> aus.  </p>
+</li>
+<li><p>Geben Sie auf der Seite <strong>Projektaufgaben kopieren</strong> Folgendes ein:  </p>
+<ul>
+<li><strong>Projektnr.</strong>: <strong>Bäderwelt</strong>  </li>
+<li><strong>Projektaufgabennr. von</strong>: <strong>1000</strong>  </li>
+<li><strong>Herkunft</strong>: <strong>Projektplanzeilen</strong>  </li>
+<li><strong>Inkl. Planzeilenart</strong>: <strong>Budget + Fakturierbar</strong>  </li>
+<li><strong>Zu Projekt-Nr.</strong> <strong>Bäderwelt-Einstellung bis zu 10 Konferenzräume</strong>  </li>
+<li>Aktivieren Sie die Felder <strong>Dimensionen kopieren</strong> und <strong>Menge kopieren</strong>.  </li>
+</ul>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong>, um das Projekt zu kopieren und wählen Sie dann die Schaltfläche <strong>OK</strong>, um die Bestätigungsseite zu schließen.  </p>
+</li>
+</ol>
+<p>Indem Sie Preise, Projektaufgabenzeilen und Projektplanungszeilen für die beiden Projekte vergleichen, können Sie sehen, dass die Informationen erfolgreich kopiert wurden.  </p>
+<h2 id="making-payments-by-installments">Teilzahlungen anwenden</h2>
+<p>CRONUS hat gerade ein großes Projekt an Land gezogen, das über ein Jahr laufen wird. Da viele Ressourcen erforderlich sind, richtet der Projektmanager den Vertrag so ein, dass der Debitor eine Teilzahlung im Voraus, eine Teilzahlung nach der Hälfte des Projekts und schließlich die endgültige Zahlung nach Abschluss des Projekts leistet.  </p>
+<h3 id="to-set-up-a-new-account">So richten Sie ein neues Konto ein</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Kontenplan</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie auf der Seite <strong>Kontenplan</strong> auf der Registerkarte Start die Option <strong>Neu</strong>, um eine neue Karte zu erstellen.  </li>
+<li><p>Geben Sie auf der Karte <strong>Neues Sachkonto</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Nr.</strong>: <strong>40255</strong>  </li>
+<li><strong>Name</strong>: <strong>Projektbezahlung</strong>  </li>
+</ul>
+</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Buchung</strong> im Feld <strong>Produktbuchungsgruppe</strong> die Option <strong>Services</strong> aus. Schließen Sie die Seite.  </p>
+</li>
+<li>Wählen sie auf der Seite <strong>Kontenplan</strong> die Option <strong>Nr. - 40255 Projektbezahlung</strong> und auf der Registerkarte Start in der Gruppe Vorgang die Option <strong>Einrückung des Kontenplans</strong> aus. Wählen Sie <strong>Ja</strong> aus, um den Vorgang zu bestätigen.  </li>
+</ol>
+<p>In den folgenden Verfahren wird gezeigt, wie Sie ein neues Projekt erstellen, die Preisgestaltung festlegen und dann Teilzahlungen einrichten. In den Projektaufgabenzeilen können Sie spezifische Zeilen für die Teilzahlungen erstellen. Alle für das Projekt ausgeführten Arbeiten werden dem Plan hinzugefügt und in den Verbrauchszeilen erfasst. Für jede Zahlungsaufgabenzeile der Planungszeilen kann die Zeilenart auf <strong>Fakturierbar</strong> festgelegt werden, wodurch die Fakturierung für den Debitor erfolgt. Geben Sie für die Anzahlung eine neue Zeile ein. In der Verbrauchsaufgabenzeile können Sie die Informationen für die in diesem Projekt verwendeten Artikel und Ressourcen eingeben, z. B. Mitarbeiterstunden und für das Projekt verbrauchte Artikel. Der Plan wird dadurch entsprechend erhöht.  </p>
+<h3 id="to-make-a-payment-by-installment">So wenden Sie eine Teilzahlung an</h3>
+<ol>
+<li>Ein neues Projekt erstellen.  </li>
+<li><p>Geben Sie auf der neuen Karte <strong>Projekt</strong> die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Beschreibung</strong>: <strong>Neugestaltung des Empfangsbereichs</strong>  </li>
+<li><strong>Rech. an Deb.-Nr.</strong>: <strong>30000</strong>  </li>
+<li><strong>Projektbuchungsgruppe</strong>: <strong>Einrichten</strong>  </li>
+<li><strong>WIP-Methode</strong>: <strong>Einstandswert</strong>  </li>
+</ul>
+</li>
+<li><p>Wählen Sie auf der Projektkarte die Aktion <strong>Preise</strong> und dann die Aktion <strong>Ressource</strong> aus. Geben Sie die folgenden Informationen ein:  </p>
+<ul>
+<li><strong>Code</strong>: <strong>Katrin</strong>  </li>
+<li><p><strong>VK-Preis</strong>: <strong>10</strong>  </p>
+<p>Schließen Sie die Seite.  </p>
+</li>
+</ul>
+</li>
+<li><p>Fügen Sie auf der Karte <strong>Projekt</strong> im Abschnitt <strong>Aufgaben</strong> Projektaufgabenzeilen hinzu, wie in der folgenden Tabelle beschrieben:  </p>
+<table>
+<thead>
+<tr>
+<th>Auftrag</th>
+<th>Projektaufgabennr.</th>
+<th>Description</th>
+<th>Projektaufgabentyp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1000</td>
+<td>Zahlung - Anzahlung</td>
+<td>Buchen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2000</td>
+<td>Verbrauch</td>
+<td>Buchen</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3000</td>
+<td>Zahlung - Hälfte</td>
+<td>Buchen</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4000</td>
+<td>Zahlung - Abschluss</td>
+<td>Buchen</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie die Aufgabe 1000 und wählen Sie dann die Aktion <strong>Projektplanzeilen</strong> aus.  </p>
+</li>
+<li><p>Erstellen Sie eine Planungszeile mit den folgenden Informationen:  </p>
+<table>
+<thead>
+<tr>
+<th>Zeile</th>
+<th>Zeilenart</th>
+<th>Planungsdatum</th>
+<th>Typ</th>
+<th>Anzahl</th>
+<th>Menge</th>
+<th>VK-Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Fakturierbar</td>
+<td>(heutiges Datum)</td>
+<td>Sachkonto</td>
+<td>40255</td>
+<td>0</td>
+<td>5000</td>
+</tr>
+</tbody>
+</table>
+<p>  Schließen Sie die Seite.  </p>
+</li>
+<li><p>Wählen Sie die Aufgabe 2000 und wählen Sie dann die Aktion <strong>Projektplanzeilen</strong> aus.  </p>
+</li>
+<li><p>Erstellen Sie eine Planungszeile mit den folgenden Informationen:</p>
+<table>
+<thead>
+<tr>
+<th>Zeile</th>
+<th>Zeilenart</th>
+<th>Planungsdatum</th>
+<th>Typ</th>
+<th>Anzahl</th>
+<th>Menge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Budget</td>
+<td>(heutiges Datum)</td>
+<td>Ressource</td>
+<td>Katrin</td>
+<td>120</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Budget</td>
+<td>(heutiges Datum)</td>
+<td>Option</td>
+<td>70104</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>  Schließen Sie die Seite. Auf der Seite <strong>Projektaufgabenzeilen</strong> können Sie sehen, dass die Planbeträge aktualisiert wurden.  </p>
+</li>
+<li><p>Wählen Sie die Aufgabe 32000 und wählen Sie dann die Aktion <strong>Projektplanzeilen</strong> aus.  </p>
+</li>
+<li><p>Erstellen Sie eine Planungszeile mit den folgenden Informationen:</p>
+<table>
+<thead>
+<tr>
+<th>Zeile</th>
+<th>Zeilenart</th>
+<th>Planungsdatum</th>
+<th>Typ</th>
+<th>Anzahl</th>
+<th>Menge</th>
+<th>VK-Preis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Fakturierbar</td>
+<td>(ein zukünftiges Datum)</td>
+<td>Sachkonto</td>
+<td>40255</td>
+<td>1</td>
+<td>5000</td>
+</tr>
+</tbody>
+</table>
+<p> Schließen Sie die Seite.  </p>
+</li>
+<li><p>Erstellen Sie eine ähnliche Planungszeile für Projektaufgabe 4000.  </p>
+<p>Nachdem die Aufgaben- und Planungszeilen erfasst wurden, erstellt Bernard eine Rechnung für die erste Zahlung. Prakash verwendet dazu die Projektaufgabenzeilen, um sicherzustellen, dass die Rechnung nur die Zeilen für die erste Zahlung enthält. Der Verkaufsauftrag kann über die Planungszeilen oder die Aufgabenzeilen geöffnet werden.  </p>
+</li>
+</ol>
+<h3 id="to-create-an-invoice">So erstellen Sie eine Rechnung</h3>
+<ol>
+<li>Auf der Seite <strong>Projektaufgabenzeilen</strong> wählen Sie die Zeile 1000 und wählen die Aktion <strong>Verkaufsrechung erstellen</strong> aus.  </li>
+<li>Legen Sie auf der Seite <strong>Verkaufsrechnung erstellen</strong> das heutige Datum als Buchungsdatum fest, geben Sie <strong>&quot; Nach Aufgabe</strong> an, und wählen Sie die Schaltfläche <strong>OK</strong>, um eine Rechnung mit den Standardinformationen zu erstellen. Klicken Sie auf <strong>OK</strong>, um die Bestätigungsseite zu schließen.  </li>
+<li>Wählen Sie die Aktion <strong>Verkaufsrechnung/Gutschrift</strong>. Auf der Verkaufsrechnung können Sie sehen, dass die Rechnung nur die Anzahlung enthält. Diese Rechnung kann jetzt wie vereinbart an den Kunden gesendet werden.  </li>
+</ol>
+<h2 id="summary">Zusammenfassung</h2>
+<p>In dieser exemplarischen Vorgehensweise wurden Sie durch mehrere der grundlegenden Schritte für die Arbeit mit Projekten in Business Central geführt. Sie haben gelernt, wie ein neues Projekt erstellt, ein Projekt kopiert und Zahlungen verarbeitet werden. Sie haben auch eine Demonstration gesehen, wie Stunden verfolgt und Rechnungen erstellt werden.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p> <a href="walkthrough-business-process-walkthroughs.html">Exemplarische Vorgehensweisen für Geschäftsprozesse</a><br> <a href="projects-setup-projects.html">Einrichten des Projektmanagements</a><br> <a href="projects-how-use-resources.html">Ressourcen verwenden</a><br> <a href="projects-how-monitor-progress-performance.html">Überwachen des Status und der Leistung</a><br> <a href="projects-how-invoice-jobs.html">Projekte fakturieren</a><br> <a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

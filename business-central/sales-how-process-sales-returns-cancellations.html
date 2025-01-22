@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Retouren oder Stornierungen verarbeiten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Retouren oder Stornierungen verarbeiten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="process-sales-returns-or-cancellations">Retouren oder Stornierungen verarbeiten</h1>
+
+<p>Wenn Ihr Debitor Artikel zurückschicken oder Dienstleistungen löschen will, die Sie verkauft haben, können Sie eine Einkaufsgutschrift erstellen und buchen, die die angeforderte Änderung im Hinblick auf die ursprünglichen Einkaufsrechnung angibt. Um die korrekten Informationen der Verkaufsrechnungen einzubeziehen, können Sie folgende Aufgaben ausführen:  </p>
+<ul>
+<li>Erzeugen Sie die Verkaufsgutschrift direkt aus der gebuchten Verkaufsrechnung.</li>
+<li>Erstellen Sie eine neue Verkaufsgutschrift mit kopierten Rechnungsinformationen.</li>
+</ul>
+<p>Wenn Sie mehr Steuerelemente für den Rücklieferungsprozess benötigen, z.B. Lagerbelege für die Artikelabwicklung oder eine bessere Übersicht beim Empfang von Artikeln aus mehreren Verkaufsbelegen mit einer Rücklieferung, dann können Sie Verkaufsreklamationen erstellen. Eine Verkaufsreklamation löst automatisch die zugehörige Verkaufsgutschrift sowie andere Dokumente wie Verkaufsauftrag für Ersatzlieferungen aus, sofern erforderlich. Weitere Informationen finden Sie unter <a href="sales-how-process-sales-returns-orders.html">Verkaufsretourenaufträge verarbeiten</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn eine gebuchte Verkaufsrechnung noch nicht bezahlt wurde, können Sie die Funktionen <strong>Korrigieren</strong> oder <strong>Abbrechen</strong> auf der gebuchten Verkaufsrechnung verwenden, um die entsprechenden Transaktionen automatisch zu stornieren. Diese Funktionen arbeiten nur für nicht geleistete Rechnungen, und sie unterstützen nicht Teil-Reklamationen oder Kündigungen. Weitere Informationen finden Sie unter <a href="sales-how-correct-cancel-sales-invoice.html">Ändern oder löschen von unbezahlten Verkaufsrechnungen</a>.</p>
+</div>
+<p>Eine Rücklieferungs- oder eine Vergütung kann sich nur auf einige der Artikel oder der Services in der ursprünglichen Verkaufsrechnung beziehen. In diesem Fall müssen Sie Informationen in den Zeilen der Verkaufsgutschrift oder der Verkaufsreklamation bearbeiten. Wenn Sie die Verkaufsgutschrift oder Verkaufsreklamationen buchen, werden die Verkaufsbelege, die von Änderungen betroffen sind rückgängig gemacht und eine Rückerstattung für den Debitor wird erstellt. Weitere Informationen finden Sie unter <a href="payables-make-payments.html">Zahlungen durchführen</a>.  </p>
+<p>Die Gutschriftsbuchung stellt auch jegliche Artikel Zu-/Abschläge wieder her, die dem gebuchten Beleg zugewiesen wurden, sodass die Wertposten des Artikels wieder identisch sind, wie bevor der Artikel Zu-/Abschlag zugewiesen wurde.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Buchhaltungsaspekte von Retouren, wie z. B. die Zahlungen an Debitoren als Rückerstattung, wird als Buchhaltungsarbeit betrachtet und hier nicht beschrieben. Weitere Informationen finden Sie unter <a href="payables-manage-payables.html">Kreditoren verwalten</a>.</p>
+</div>
+<h2 id="to-create-a-sales-credit-memo-from-a-posted-sales-invoice">Erstellt eine neue Verkaufsgutschrift, um eine gebuchte Verkaufsrechnung zurückzusetzen.</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Gebuchte Verkaufsrechnungen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li><p>Wählen Sie auf der Seite <strong>Gebuchte Verkaufsrechnungen</strong> die gebuchte Verkaufsrechnung aus, die Sie stornieren möchten, wählen Sie die Aktion <strong>Stornieren</strong> und wählen Sie dann die Aktion <strong>Korrekturgutschrift erstellen</strong>.</p>
+<p> Der Verkaufsgutschriftskopf enthält einige Informationen aus der gebuchten Verkaufsrechnung. Sie können alle Felder bearbeiten, zum Beispiel mit neuen Daten, die die Rückholvereinbarung wiedergeben.  </p>
+</li>
+<li>Bearbeiten Sie Informationen über die Zeilen entsprechend der Vereinbarung, wie die Anzahl der zurückzuerstattenden Artikel oder der gutzuschreibende Betrag.</li>
+<li>Wählen Sie die Aktion <strong>Vorbereiten</strong> und wählen Sie dann die Aktion <strong>Buchungen anwenden</strong>.</li>
+<li><p>Auf der Seite <strong>Debitorenposten zuweisen</strong> wählen Sie die Zeile mit dem gebuchten Verkaufsbeleg, die Sie der Verkaufsgutschrift zuordnen möchten, und wählen Sie dann <strong>Zuweisungs-ID festlegen</strong> aus.</p>
+<p> Die Kennzeichnung der Verkaufsgutschrift wird im Feld <strong>Zuweisungs-ID</strong> angezeigt.</p>
+</li>
+<li><p>Geben Sie in jeder Zeile im Feld <strong>Anzuwendender Betrag</strong> den Betrag ein, den Sie ausgleichen möchten, wenn dieser kleiner ist als der ursprüngliche Betrag.  </p>
+<p> Im unteren Bereich der Seite <strong>Debitorenposten zuweisen</strong> können Sie den Gesamtbetrag sehen, um alle beteiligten Posten zu stornieren, nämlich wenn der Wert im Feld <strong>Saldo</strong> Null ist.</p>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Wenn Sie die Verkaufsgutschrift buchen, wird sie für die angegebenen gebuchten Verkaufsrechnungen angewandt.</p>
+<p> Nachdem Sie die erforderlichen Verkaufsgutschriftszeilen erstellt ober bearbeitet haben, und der Ausgleich einzelner oder mehrerer Posten angegeben wird, können Sie fortfahren, die Verkaufsgutschrift zu buchen.  </p>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong> und dann die Aktion <strong>Buchen und Senden</strong>.  </li>
+</ol>
+<p>Das Dialogfeld <strong>Buchungs- und Sendebestätigung</strong> wird geöffnet und zeigt die bevorzugte Sendemethode für den Debitor an. Sie können die Sendemethode ändern, indem Sie die Schaltfläche vom Feld <strong>Beleg senden an</strong> auswählen. Weitere Informationen finden Sie unter <a href="sales-how-setup-document-send-profiles.html">Einrichten von Sendeprofilen</a>.  </p>
+<p>Die gebuchten Verkaufsdokumente für die entsprechende Gutschrift werden nun storniert und eine Erstattung der Zahlung kann für den Debitor erstellt werden. Die Verkaufsgutschrift wird entfernt und durch einen neuen Beleg in der Liste der gebuchten Verkaufsgutschriften ersetzt.</p>
+<h2 id="to-create-a-sales-credit-memo-by-copying-a-posted-sales-invoice">Erstellt eine neue Verkaufsgutschrift, um eine gebuchte Verkaufsrechnung zurückzusetzen.</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Verkaufsgutschriften</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie <strong>Neu</strong>, um eine neue leere Verkaufsgutschrift zu öffnen.</li>
+<li>Geben Sie in das Feld <strong>Kundenname</strong> den Namen eines bestehenden Kunden ein.</li>
+<li>Wählen Sie die Aktion <strong>Vorbereiten</strong> und dann die Aktion <strong>Dokument kopieren</strong>.</li>
+<li>Wählen Sie auf der Seite <strong>Verkaufsbeleg kopieren</strong> im Feld <strong>Dokumenttyp</strong> <strong>Rechnung buchen</strong> aus.</li>
+<li>Wählen Sie das Feld <strong>Belegnummer</strong>, um die Seite <strong>Gebuchte Verkaufsrechnungen</strong> zu öffnen, und wählen Sie dann den Datensatz der gebuchten Verkaufsrechnungen aus, der Zeilen enthält, die Sie stornieren möchten.</li>
+<li>Wählen Sie das Kontrollkästchen <strong>Zeilen neu berechnen</strong>, wenn die kopierten gebuchten Verkaufsrechnungszeilen, mit einzelnen Änderungen im Artikelpreis und im Einstandspreis, aktualisiert werden sollen, da die Rechnung gebucht wurde.</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus. Die kopierten Rechnungszeilen werden in die Verkaufsgutschrift eingefügt.</li>
+<li>Schließen Sie die Verkaufsgutschrift ab, so wie dies unter <a href="sales-how-process-sales-returns-cancellations.html#to-create-a-sales-credit-memo-from-a-posted-sales-invoice">Erstellt eine neue Verkaufsgutschrift, um eine gebuchte Verkaufsrechnung zurückzusetzen</a> erklärt ist.</li>
+</ol>
+<h2 id="to-create-a-sales-allowance">So erstellen Sie einen Verkaufsrabatt</h2>
+<p>Sie können einem Debitoren eine Gutschrift mit einem Preisnachlass ausstellen, wenn der Debitor leicht beschädigte Artikel erhalten hat oder die Artikel zu spät geliefert wurden.<br>Sie können diesen herabgesetzten Preis als Zu-/Abschlag (Artikel) in einer Gutschrift oder einer Reklamation buchen und ihn der gebuchten Lieferung zuordnen. Nachfolgend wird es für eine Verkaufsreklamation erläutert, aber dieselben Schritte gelten für eine Verkaufsgutschrift.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Verkaufsgutschriften</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie <strong>Neu</strong>, um eine neue leere Verkaufsgutschrift zu öffnen.</li>
+<li>Füllen Sie den Kopf der Gutschrift mit den entsprechenden Informationen über den Debitor aus, dem Sie den Verkaufsrabatt gewähren möchten.  </li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> im Feld <strong>Art</strong> die Option <strong>Zu-/Abschlag (Artikel)</strong>.  </li>
+<li>Geben Sie im Feld <strong>Nr.</strong> den entsprechenden Chargenwert ein.<br>  Vielleicht möchten Sie eine spezielle Artikel Zu-/Abschlagsnummer erstellen, um Verkaufsrabatte abzudecken.  </li>
+<li>Geben Sie im Feld <strong>Menge</strong> den Wert <strong>1</strong> ein.  </li>
+<li>Geben Sie in das Feld <strong>Einheitspreis ohne MwSt.</strong> den Betrag für den Verkaufsrabatt ein.  </li>
+<li>Den Verkaufsrabatt können Sie als Zu-/Abschlag (Artikel) den Artikeln in der gebuchten Lieferung zuweisen. Weitere Informationen finden Sie untert <a href="payables-how-assign-item-charges.html">Verwenden von Artikelzuschlägen für zusätzliche Kosten</a>. Kehren Sie zur Seite <strong>Gutschrift</strong> zurück.  </li>
+</ol>
+<p>Wenn Sie die Verkaufsreklamation buchen, wird die Wiedereinlagerungsgebühr zu dem entsprechenden Betrag des Verkaufspostens addiert. Auf diese Art können Sie genaue Bestandbewertung führen.</p>
+<h2 id="to-combine-return-receipts">Sammelgutschrift für Reklamationen kombinieren</h2>
+<p>Sie können Rücksendungen zusammenfassen, wenn Ihr Debitor mehrere Artikel zurücksendet, die durch mehrere Verkaufsreklamationen abgedeckt werden.  </p>
+<p>Wenn Sie die Artikel in Ihrem Lager erhalten, buchen Sie die entsprechende Verkaufsreklamation als geliefert. Dadurch erzeugen Sie gebuchte Rücksendungen. Dies erstellt gebuchte Rücksendungen.  </p>
+<p>Wenn Sie bereit sind, an den Debitoren zu fakturieren, können Sie eine Verkaufsgutschrift anlegen und die gebuchten Rücksendungszeilen automatisch in diesen Beleg kopieren, anstatt jede Verkaufsreklamation einzeln zu fakturieren. Dann können Sie die Verkaufsgutschrift buchen und einfach alle offenen Verkaufsreklamationen auf einmal fakturieren.  </p>
+<p>Um Rücksendungen zusammenzufassen, muss das Kontrollkästchen <strong>Sammelversand</strong> auf der Seite <strong>Debitorenkarte</strong> aktiviert sein.  </p>
+<h3 id="to-manually-combine-return-receipts">So werden Rücksendungen manuell zusammengefasst:</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Verkaufsgutschriften</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.</li>
+<li>Füllen Sie im Inforegister <strong>Allgemein</strong> die notwendigen Felder aus.  </li>
+<li>Wählen Sie die <strong>Rücklieferzeilen abrufen</strong> Aktion aus.  </li>
+<li><p>Wählen Sie die Rücksendungszeilen aus, die Sie in die Gutschrift einschließen möchten:  </p>
+<ul>
+<li><p>Um alle Zeilen einzufügen, wählen Sie alle Zeilen aus, und wählen Sie die Schaltfläche <strong>OK</strong>.  </p>
+</li>
+<li><p>Um spezifische Zeilen einzufügen, wählen Sie die Zeilen aus, und wählen Sie die Schaltfläche <strong>OK</strong>.  </p>
+</li>
+</ul>
+</li>
+<li>Wenn Sie eine falsche Lieferzeile ausgewählt haben oder von vorn beginnen möchten, können Sie einfach die Zeilen in der Gutschrift löschen und die Funktion <strong>Rücksendungszeilen holen</strong> erneut ausführen.  </li>
+<li>Buchen Sie die Rechnung.  </li>
+</ol>
+<h3 id="to-automatically-combine-return-receipts">So werden Rücksendungen automatisch zusammengefasst</h3>
+<p>Sie können Rücksendungen automatisch zusammenfassen und haben zudem die Möglichkeit, Gutschriften automatisch zu buchen, indem Sie die Stapelverarbeitung <strong>Sammelgutschrift für Rekl.</strong> verwenden.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Sammelgutschrift für Rekl.</strong> ein und wählen Sie den zugehörigen Link.</li>
+<li>Auf der Seite <strong>Sammelgutschrift für Rekl.</strong> füllen Sie die Felder aus, um die relevanten Rücksendungen auszuwählen.</li>
+<li>Wählen Sie das Feld <strong>Gutschriften buchen</strong> aus. Wenn nicht, müssen Sie die ausgefüllten Einkaufsgutschriften manuell buchen.</li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </li>
+</ol>
+<h3 id="to-remove-a-received-and-invoiced-return-order">So werden eingegangene und fakturierte Reklamationen entfernt:</h3>
+<p>Wenn Rücksendungen auf diese Weise fakturiert werden, bleiben die Rücksendungsaufträge, von denen ausgehend die Rücksendungen gebucht werden, weiterhin bestehen, auch wenn sie vollständig geliefert und fakturiert wurden.  </p>
+<p>Wenn Rücksendungen in einer Gutschrift zusammengefasst und gebucht werden, wird für die gutgeschriebenen Zeilen eine gebuchte Verkaufsgutschrift erstellt. Das Feld <strong>Menge fakturiert</strong> auf der entstehenden Verkaufsreklamation wird ausgehend von der fakturierten Menge aktualisiert.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol, geben Sie <strong>Erledigte Verkaufsaufträge löschen</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie im Feld <strong>Kontonummer</strong> Filterfeld an, welche Verkaufsaufträge zu löschen sind.  </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong> aus.  </li>
+</ol>
+<p>Sie können die einzelnen Verkaufsaufträge auch manuell löschen.  </p>
+<h2 id="inventory-costing">Bestandskosten</h2>
+<p>Um die korrekte Lagerbewertung beizubehalten, möchten Sie üblicherweise zurückgegebene Artikel im Lager zum Einstandspreis, zum dem sie verkauft wurden und nicht mit dem aktuellen Einstandspreis einlagern. Dies wird als Einstandspreisrückverfolgung bezeichnet.</p>
+<p>Es gibt zwei Funktionen, mit denen Sie automatisch eine exakte Kalkulation vornehmen können:  </p>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Funktion <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong> auf der Seite <strong>Verkaufsreklamation</strong></td>
+<td>Kopiert Zeilen einer oder mehrerer gebuchter Verkaufsbelegzeilen, um den ursprünglichen Auftrag zu stornieren. Weitere Informationen finden Sie unter <a href="sales-how-process-sales-returns-orders.html#create-a-sales-return-order-based-on-one-or-more-posted-sales-documents">Erstellen eines Verkaufsreklamationsauftrags auf der Grundlage eines oder mehrerer gebuchter Belege</a>.</td>
+</tr>
+<tr>
+<td>Funktion <strong>Beleg kopieren</strong> auf den Seiten <strong>Verkaufsgutschrift</strong> und <strong>Verkaufsreklamation</strong></td>
+<td>Kopiert den Kopf und die Zeilen aus einem gebuchten Beleg, der storniert werden soll.<br><br> Erfordert, dass das Kontrollkästchen <strong>Einst.-Pr.-Rückverfolg. notw.</strong> auf der Seite <strong>Debitoren und Verkauf Einr.</strong> ausgewählt ist.</td>
+</tr>
+</tbody>
+</table>
+<p>Um exakte Einstandspreisstornierung manuell zuzuordnen, müssen Sie das Feld <strong>Ausgegl. von Artikelposten</strong> für alle Rückholbelegzeile Art wählen und dann die Nummer des ursprünglichen Verkaufspostens. Dies verknüpft die Verkaufsgutschrift oder Verkaufsreklamation mit dem ursprünglichen Verkaufsposten und stellt sicher, dass der Artikel mit dem ursprünglichen Einstandspreis bewertet wird.</p>
+<p>Weitere Informationen finden Sie unter <a href="design-details-inventory-costing.html">Designdetails: Bestandskosten</a>.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="sales-manage-sales.html">Verkauf</a><br><a href="sales-setup-sales.html">Einrichten von Verkäufen</a><br><a href="payables-manage-payables.html">Verwalten von Verbindlichkeiten</a><br><a href="ui-how-send-documents-email.html">Belege per E-Mail senden</a><br><a href="purchasing-how-process-purchase-returns-cancellations.html">Verarbeiten einer Einkaufsrücklieferung oder von Stornierungen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

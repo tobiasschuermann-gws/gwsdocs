@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Designdetails - Umlagerungen in Planung </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Designdetails - Umlagerungen in Planung ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-transfers-in-planning">Designdetails: Umlagerungen in der Planung</h1>
+
+<p>Umlagerungsaufträge sind ebenfalls eine Versorgungsquelle beim Arbeiten auf der Lagerhaltungsdatenebene. Wenn Sie &quot;Mehrere Lagerorte (Lager)&quot; verwenden, kann die Beschaffungsmethode auf Transfer festgelegt werden, damit der Lagerort aufgefüllt wird, indem Waren an einem anderen Lagerort übertragen werden. In einer Situation mit mehreren Lagern haben Sie möglicherweise eine Kette von Umlagerungen. Die Lieferung an den GRÜNEN Lagerort wird von GELB umgelagert, die Lieferung an den GELBEN Lagerort wird von ROT umgelagert und so weiter. Am Beginn der Kette steht ein Beschaffungssystem von <strong>Fertigungsauftrag</strong> oder <strong>Einkauf</strong>.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers1.png" alt="Beispiel für den Transfer Flow." title="Beispiel für den Umlagerungsfluss">  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>In diesem Artikel werden Namen von Standorten aus einer früheren Version des Demounternehmens in Business Central verwendet. Diese Namen werden nicht direkt den Standorten im aktuellen Demounternehmen zugeordnet. Wir empfehlen Ihnen, den Artikel zu verwenden, um mehr über Standorte zu erfahren, und nicht als schrittweise Anleitung zur Verwendung des Demounternehmens.</p>
+</div>
+<p>Vergleicht man die folgenden Situationen, wird deutlich, dass die Planungsaufgabe in letzterem komplex werden kann:</p>
+<ul>
+<li>Einem Angebotsauftrag steht ein Bedarfsauftrag direkt gegenüber</li>
+<li>Ein Verkaufsauftrag wird über eine Kette von SKU-Umlagerungen geliefert</li>
+</ul>
+<p>Wenn sich die Nachfrage ändert, kann dies einen Welleneffekt in der Kette verursachen. Alle Umlagerungsaufträge sowie der Kauf- und Produktionsauftrag am anderen Ende der Kette müssen aktualisiert werden, um Angebot und Nachfrage wieder ins Gleichgewicht zu bringen.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers2.png" alt="Beispiel für Vorrat/Nachfrage-Gleichgewicht bei Transfers." title="Beispiel für den Saldo zwischen Angebot und Nachfrage bei Umlagerungen">  </p>
+<h2 id="why-is-a-transfer-a-special-case">Warum ist eine Umlagerung ein spezieller Fall?</h2>
+<p>Umlagerungsaufträge ähneln anderen Aufträgen wie Einkaufs- und Fertigungsaufträge. Hinter den Kulissen sind sie jedoch vollkommen anders.  </p>
+<p>Ein Unterschied besteht darin, dass eine Umlagerungszeile sowohl Nachfrage als auch Angebot darstellt. Der ausgehende Teil, der versendet wird, ist Bedarf. Der eingehende Teil, der am neuen Lagerort eingeht, ist Vorrat an diesem Lagerort.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers3.png" alt="Inhalt der Seite Umlagerungsauftrag." title="Inhalt der Seite Umlagerungsauftrag">  </p>
+<p>Wenn Business Central die Zugangsseite der Umlagerung ändert, muss es eine ähnliche Änderung der Bedarfsseite vornehmen.  </p>
+<h2 id="transfers-are-dependent-demand">Umlagerungen sind abhängiger Bedarf</h2>
+<p>Die Bedarfs- und Angebotsbeziehung ähnelt Komponenten in Fertigungsauftragszeilen. Der Unterschied besteht darin, dass sich Komponenten in Fertigungsauftragszeilen auf der nächsten Planungsebene befinden und einen anderen Artikel haben. Die beiden Teile der Umlagerung befinden sich auf derselben Ebene für denselben Artikel.  </p>
+<p>Eine wichtige Ähnlichkeit besteht darin, dass Komponenten und Umlagerungen vom Bedarf abhängen. Der Bedarf von einer Umlagerungszeile wird von der Vorratsseite der Umlagerung bestimmt. Wenn sich der Vorrat ändert, wird die Nachfrage direkt beeinflusst.</p>
+<p>Außer wenn die Planungsflexibilität „Keine“ ist, sollte eine Umlagerungszeile nicht als unabhängiger Bedarf in der Planung behandelt werden.  </p>
+<p>Im Planungsverfahren sollte der Umlagerungsbedarf nur berücksichtigt werden, nachdem das Planungssystem die Bedarfsseite verarbeitet hat. Vor dieser Verarbeitung ist der tatsächliche Bedarf nicht bekannt. Bei Umlagerungsaufträgen ist die Reihenfolge der Änderungen wichtig.  </p>
+<h2 id="planning-sequence">Planungssequenz</h2>
+<p>Die folgende Abbildung zeigt ein Beispiel für eine Umlagerungskette.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers4.png" alt="Beispiel für einen einfachen Transfer Flow." title="Beispiel für einfachen Umlagerungsfluss">  </p>
+<p>In diesem Beispiel bestellt ein Debitor den Artikel an Lagerort GRÜN. Lagerort GRÜN wird durch Umlagerung vom Zentrallager ROT angegeben. Das zentrale Lager ROT wird durch Umlagerung von der Produktion zu Lagerort BLAU beliefert.  </p>
+<p>In diesem Beispiel beginnt das Planungssystem mit dem Debitorenbedarf und arbeitet sich zurück durch die Kette. Die Bedarfe und Vorräte werden an einem Lagerort gleichzeitig verarbeitet.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers5.png" alt="Nachschubplanung mit Transfers." title="Beschaffungsplanung mit Umlagerungen">  </p>
+<h2 id="transfer-level-code">Umlagerungsebenencode</h2>
+<p>Der Code der Umlagerungsebene der SKU bestimmt die Sequenz, in der das Planungssystem die Lagerorte verarbeitet.  </p>
+<p>Der Code der Umlagerungsebene ist ein internes Feld. Das Feld wird berechnet und in der SKU gespeichert, wenn Sie die SKU erstellen oder ändern. Die Berechnung läuft über alle SKUs für eine bestimmte Kombination aus Artikel und Artikelvariante. Die Berechnung verwendet den Lagerortcode und den Umlagerung-von-Code, um die Route zu bestimmen, die für die SKUs verwendet werden soll. Die Kalkulation stellt sicher, dass alle Bedarfe bearbeitet werden.  </p>
+<p>Der Umlagerungsebenencode ist 0 für SKUs mit einer Beschaffungsmethode Einkaufs- oder Fertigungsauftrag und -1 für die erste Umlagerungsebene, -2 für die zweite Umlagerungsebene usw. In dem Beispiel, das im vorherigen Abschnitt beschrieben wurde, würden die Ebenen daher -1 für ROT und -2 für GRÜN ein, wie in der folgenden Abbildung angezeigt.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers6.gif" alt="Inhalt der Seite SKU Karte." title="Inhalt der Lagerhaltungskarten-Seite">  </p>
+<p>Bei der Aktualisierung einer SKU, erkennt das Planungssystem, ob Beschaffungsmethoden für SKUs Zirkelverweisen aufweisen.  </p>
+<h2 id="planning-transfers-without-sku">Umlagerungen ohne SKU planen</h2>
+<p>Für weniger fortgeschrittene Lagereinrichtungen können Sie Lagerorte verwenden und manuelle Umlagerungen zwischen Lagerorten vornehmen, auch wenn Sie keine SKUs verwenden. Beispielsweise könnte die Umlagerung einen Kundenauftrag an diesem Lagerort abdecken. Das Planungssystem reagiert auf Änderungen im Bedarf.  </p>
+<p>Bei manuellen Übertragungen analysiert das Planungssystem Umlagerungsaufträge und plant dann die Reihenfolge, in der die Lagerorte verarbeitet werden. Intern verwendet das Planungssystem temporäre SKUs, die Ümlagerungslevelcodes haben.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers7.png" alt="Code der Transferebene." title="Umlagerungsebenencode">  </p>
+<p>Bei mehreren Umlagerungen zu einem Lagerort definiert der erste Umlagerungsauftrag die Planungsrichtung. Umlagerungen, die in die entgegengesetzte Richtung werden storniert.  </p>
+<h2 id="changing-quantity-with-reservations">Ändern der Menge mit Reservierungen</h2>
+<p>Beim Ändern der Mengen eines Vorrats berücksichtigt das Planungssystem Reservierungen. Die reservierte Menge stellt die untere Grenze dar, um wie viel das Angebot reduziert werden kann.  </p>
+<p>Wenn Sie die Menge in einer Umlagerungsauftragszeile ändern, denken Sie an die Untergrenze. Die Untergrenze ist die höchste reservierte Menge der ausgehenden und eingehenden Umlagerungszeilen.</p>
+<p>Beispielsweise ist eine Umlagerungsauftragszeile von 117 Stück für die folgenden Positionen reserviert:</p>
+<ul>
+<li>Eine Verkaufszeile von 46</li>
+<li>Eine Einkaufszeile von 24</li>
+</ul>
+<p>Auch wenn auf der Eingangsseite möglicherweise ein Überschuss vorhanden ist, können Sie die Umlagerungszeile nicht unter 46 reduzieren.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers8.png" alt="Reservierungen in der Transferplanung." title="Reservierungen in der Umlagerungsplanung">  </p>
+<h2 id="changing-quantity-in-a-transfer-chain">Ändern der Menge in einer Umlagerungskette</h2>
+<p>Hier ist ein Beispiel dafür, was passiert, wenn Sie eine Menge in einer Umlagerung ändern.</p>
+<p>Ausgangspunkt ist eine ausgeglichene Situation mit einer Umlagerungskette, die einen Verkaufsauftrag von 27 am Lagerort ROT beliefert. An Lagerort BLAU liegt eine entsprechende Bestellung vor. Beide Umlagerungen laufen über den Lagerort PINK. Es gibt zwei Umlagerungsaufträge: BLAU-PINK und PINK-ROT.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers9.png" alt="Änderung der Menge in der Transferplanung 1." title="Ändern der Menge in der Umlagerungsplanung 1">  </p>
+<p>Jetzt beschließt der Planer am Lagerort PINK, für den Einkauf zu reservieren.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers10.png" alt="Ändern der Menge in der Transferplanung 2." title="Ändern der Menge in der Umlagerungsplanung 2">  </p>
+<p>Die Reservierung bedeutet normalerweise, dass das Planungssystem den Einkaufsauftrag und den Umlagerungsbedarf ignoriert. Es gibt kein Problem, solange es Saldo gibt. Aber was passiert, wenn der ROTE Lagerort die Reihenfolge von 27 auf 22 ändert?  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers11.png" alt="Ändern der Menge in der Transferplanung 3." title="Ändern der Menge in der Umlagerungsplanung 3">  </p>
+<p>Wenn das Planungssystem erneut ausgeführt wird, sollte es überschüssigen Vorrat loswerden. Jedoch sperrt die Reservierung den Einkauf und die Umlagerung zu einer Menge von 27.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers12.png" alt="Änderung der Menge in der Transferplanung 4." title="Ändern der Menge in der Umlagerungsplanung 4">  </p>
+<p>Die ROSA-ROTE Umlagerung wird auf 22 reduziert. Der eingehende Teil der BLUE-PINK-Umlagerung ist nicht reserviert, der ausgehende Teil jedoch. Die Reservierung bedeutet, dass Sie die Menge nicht unter 27 reduzieren können.  </p>
+<h2 id="lead-time-calculation">Beschaffungszeit</h2>
+<p>Wenn das Fälligkeitsdatum eines Umlagerungsauftrags berechnet wird, werden verschiedene Arten von Beschaffungszeit berücksichtigt.  </p>
+<p>Die folgenden Durchlaufzeiten, die aktiv sind, wenn ein Umlagerungsauftrag geplant ist:  </p>
+<ul>
+<li>Ausgehende Lagerdurchlaufzeit  </li>
+<li>Transportzeit  </li>
+<li>Eingehende Lagerdurchlaufzeit  </li>
+</ul>
+<p>In der Planungszeile werden die folgenden Felder verwendet, um Informationen über die Berechnung bereitzustellen:  </p>
+<ul>
+<li>Umlagerungslieferungsdatum  </li>
+<li>Startdatum  </li>
+<li>Enddatum  </li>
+<li>Fälligkeitsdatum  </li>
+</ul>
+<p>Das Versanddatum der Umlagerungszeile wird im Feld <strong>Umlagerungsversanddatum</strong> angezeigt. Das Empfangsdatum der Umlagerungszeile wird im Feld <strong>Fälligkeitsdatum</strong> angezeigt.  </p>
+<p>Das Start- und Enddatum werden beschreiben die tatsächliche Transportperiode.  </p>
+<p>Die folgende Abbildung zeigt die Interpretation von Startdatum/-zeit und Enddatum/-zeit auf Planungszeilen im Zusammenhang für Umlagerungsaufträge.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers13.png" alt="Zentrale Datumszeitpunkte in der Transferplanung." title="Zentrale Datumsangaben und Uhrzeiten in der Umlagerungsplanung">  </p>
+<p>Das Beispiel zeigt die folgenden Berechnungen:  </p>
+<ul>
+<li>Warenausg.-Datum + Ausgehende Verarbeitung = Startdatum  </li>
+<li>Startzeit + Transportzeit = Endzeit  </li>
+<li>Enddatum + Eingehende Lagerdurchlaufzeit = Wareneingangsdatum  </li>
+</ul>
+<h2 id="safety-lead-time">Sicherheitsdurchlaufzeit</h2>
+<p>Das Feld <strong>Vorg. Sich.-Zuschl. Besch.-Zt.</strong> auf der Seite <strong>Fertigungseinrichtung</strong> und das zugehörige Feld <strong>Sicherh.-Zuschl. Beschaff.-Zt.</strong> auf der Seite <strong>Artikelkarte</strong> werden in der Berechnung eines Umlagerungsauftrags nicht berücksichtigt. Die Sicherheitsdurchlaufzeit beeinflusst jedoch den Gesamtplan. Die Sicherheitsdurchlaufzeit wirkt sich auf den Beschaffungsauftrag (Einkauf oder Produktion) am Anfang der Transportkette aus. Das ist der Punkt, an dem die Artikel an den Lagerort gebracht wurden, von dem sie umgelagert werden.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers14.png" alt="Elemente des Transferfälligkeitstermins." title="Elemente des Umlagerungsfälligkeitsdatums">  </p>
+<p>In der FA-Zeile gilt: Enddatum + Sicherheitszuschlag Beschaffungszeit + Eingehende Lagerdurchlaufzeit = Fälligkeitsdatum.  </p>
+<p>In der Bestellzeile gilt: Geplantes Wareneingangsdatum + Sicherheitszuschlag Beschaffungszeit + Eingehende Lagerdurchlaufzeit = Erwartetes Wareneingangsdatum.  </p>
+<h2 id="reschedule">Neu planen</h2>
+<p>Wenn Sie eine Umlagerungszeile neu planen, findet das Planungssystem den ausgehenden Teil und ändert das Datum/ die Zeit.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn eine Durchlaufzeit definiert ist, besteht eine Lücke zwischen Lieferung und Eingang. Die Durchlaufzeit kann aus mehr Elementen, wie Transportzeit und Lagerdurchlauf, bestehen. In einer Zeitachse geht das Planungssystem in der Zeit zurück, während es die Elemente ausgleicht.  </p>
+</div>
+<p><img src="media/nav_app_supply_planning_7_transfers15.png" alt="Änderung des Fälligkeitsdatums in der Transferplanung." title="Ändern des Fälligkeitsdatums in der Umlagerungsplanung">  </p>
+<p>Wenn Sie das Fälligkeitsdatum auf einer Umlagerungszeile ändern, die Beschaffungszeit berechnet werden, um die ausgehende Seite der Übertragung zu aktualisieren.  </p>
+<h2 id="serial-and-lot-numbers-in-transfer-chains">Serien und Chargennummern in Umlagerungsketten</h2>
+<p>Wenn der Bedarf Serien- oder Chargennummern verwendet und Sie das Planungsmodul ausführen, erstellt es Umlagerungsaufträge. Weitere Informationen zu diesem Konzept finden Sie unter Artikel-Attribute. Werden jedoch Serien- oder Chargennummern vom Bedarf entfernt, verwenden die Umlagerungsaufträge noch die Serien- oder Chargennummern und die Planung ignoriert sie (nicht gelöscht).  </p>
+<h2 id="order-to-order-links">Order-to-Order-Verbindungen</h2>
+<p>In diesem Beispiel wird die BLUE-SKU mit einem Wiederbeschaffungsverfahren <strong>Bestellung</strong> eingerichtet. Für die SKUs PINK und ROT gilt das <strong>Charge-für-Charge</strong>-Wiederbeschaffungsverfahren. Das Anlegen eines Kundenauftrags für 27 am Lagerort ROT führt zu einer Kette von Umbuchungen. Die letzte Umbuchung erfolgt am Lagerort BLAU und ist verbindlich reserviert. In diesem Beispiel sind die Reservierungen nicht harte Reservierungen, die vom Planer am PINK-Standort Lagerort erstellt wurden. Das Planungssystem erstellt die Bindungen. Die wichtige Unterschied besteht darin, dass das Planungssystem die letzteren ändern kann.  </p>
+<p><img src="media/nav_app_supply_planning_7_transfers16.png" alt="Auftrags-zu-Auftragsverknüpfungen in der Transferplanung." title="Auftrag-zu-Auftrag-Links in der Umlagerungsplanung">  </p>
+<p>Wenn der Bedarf von 27 zu 22 geändert wird, senkt das Planungssystem die Menge durch die Kette hindurch. Auch die verbindliche Reservierung reduziert sich.  </p>
+<h2 id="see-also">Weitere Informationen</h2>
+<p><a href="design-details-planning-parameters.html">Designdetails: Planungsparameter</a><br><a href="design-details-planning-assignment-table.html">Designdetails: Planungs-Zuordnungstabelle</a><br><a href="design-details-handling-reordering-policies.html">Entwurfsdetails: Handhabung von Richtlinien zur Wiederbestellung</a><br><a href="production-planning-with-without-locations.html">Designdetails: Planung mit oder ohne Lagerortcodes</a><br><a href="design-details-central-concepts-of-the-planning-system.html">Entwurfsdetails: Zentrale Konzepte des Planungssystems</a><br><a href="design-details-balancing-demand-and-supply.html">Designdetails: Ausgleich von Bedarf und Vorrat</a><br><a href="design-details-supply-planning.html">Designdetails: Vorratsplanung</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

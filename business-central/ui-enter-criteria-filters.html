@@ -1,0 +1,601 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sortieren, Durchsuchen und Filtern von Listen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Sortieren, Durchsuchen und Filtern von Listen ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="sorting-searching-and-filtering">Sortieren, Durchsuchen und Filtern</h1>
+
+<p>Es gibt mehrere Möglichkeiten, wie Sie das tun können und die dabei helfen, Datensätze in einer Liste oder einem Bericht oder XMLport zu scannen, zu suchen und einzugrenzen. Diese umfassen Sortierung, Suche und Filterung. Sie können einige oder alle davon gleichzeitig anwenden, um die Daten schnell zu finden oder zu analysieren.</p>
+<div class="TIP"><h5>Tipp</h5><p>Nutzen Sie kostenlose E-Learning-Inhalte über die Business Central-Benutzeroberfläche unter <a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central?WT.mc_id=dyn365bc_landingpage-docs">Microsoft Schulungen</a>.</p>
+</div>
+<p>Für Berichte und XML-Ports können Sie, wie bei Listen, Filter setzen, um abzugrenzen, welche Daten in den Bericht oder den XMLport aufgenommen werden sollen, aber Sie können nicht sortieren und suchen.</p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie Ihre Daten als Kacheln anzeigen, können Sie grundlegender Filterung verwenden und entsprechend suchen. Um alle festgelegten Funktionen zum Sortieren, Suchen und Filtern zu nutzen, wählen Sie das Symbol <img src="media/ui_show_as_list_icon.png" alt="Als Liste anzeigen" title="Als Listenpfeil links anzeigen">. Symbol, um die Datensätze als Liste anzuzeigen.</p>
+</div>
+<!--
+When you want to search for data, such as customer names, addresses, or product groups, you enter criteria. In search criteria, you can use all the numbers and letters that you normally use in the specific field. In addition, you can use special symbols to further filter the results. There are two ways to search: using the Quick Filter or column filters.
+-->
+<h2 id="sorting">Sortieren</h2>
+<p>Dank der Sortierfunktion können Sie sich schnell und einfach einen Überblick über Ihre Daten verschaffen. Wenn Sie beispielsweise über zahlreiche Debitorenkontakte verfügen, könnten Sie diese nach folgenden Kriterien sortieren: <strong>Debitorennummer</strong>, <strong>Währungscode</strong> oder <strong>Länder-/Regionencode</strong> um die gewünschte Übersicht zu erhalten.</p>
+<p>Um eine Liste zu sortieren, können Sie entweder:</p>
+<ul>
+<li>Einen Spaltenüberschriftstext auswählen, um zwischen aufsteigender und absteigender Reihenfolge umzuschalten, oder</li>
+<li>den Dropdown-Pfeil in der Spaltenüberschrift auswählen und dann die Aktion <strong>Aufsteigend</strong> oder <strong>Absteigend</strong> wählen.  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Sortierung wird nicht auf Bilder, BLOB-Felder und FlowFilter unterstützt, die keiner Tabelle angehören.  </p>
+</div>
+<h2 id="searching">Suchen</h2>
+<!--## Searching by using the Quick Filter -->
+<p>Oben auf jeder Listenseite befindet sich ein <img src="media/ui-search/search-list.png" alt="Suchliste." title="Symbol für die Suchliste"> <strong>Suche</strong>, die eine schnelle und einfache Möglichkeit bietet, die Datensätze in einer Liste zu reduzieren und nur die Datensätze anzuzeigen, die die Daten enthalten, an denen Sie interessiert sind.</p>
+<p>Zur Suche wählen Sie einfach die Aktion <strong>Suchen</strong> aus und geben dann im Feld den Text ein, nach dem Sie suchen. Sie können Buchstaben, Ziffern und andere Symbole eingeben.</p>
+<p>Im Allgemeinen versucht die Suche, Text in allen Feldern abzugleichen. Dabei wird nicht zwischen groß und klein geschriebene Zeichen unterschieden (d. h., die Groß-/Kleinschreibung wird nicht beachtet). Text an jeder Stelle im Feld (am Anfang, am Ende oder in der Mitte) wird durchsucht.</p>
+<div class="TIP"><h5>Tipp</h5><p>Sie können <kbd>F3</kbd> auswählen, um das Suchfeld zu aktivieren oder zu deaktivieren. Weitere Informationen finden Sie unter <a href="keyboard-shortcuts.html#KeyboardFilter">Einrichten von Tastenkombinationen</a>.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Suche stimmt nicht mit Werten in Bildern, BLOB-Feldern, FlowFiltern, FlowFields und anderen Feldern überein, die nicht Teil einer Tabelle sind.</p>
+</div>
+<h3 id="fine-tuning-the-search-with-filter-criteria">Feinabstimmung der Suche mit Filterkriterien</h3>
+<p>Sie können eine genauere Suche durchführen, indem Sie Filteroperatoren, Ausdrücke und Filtertoken verwenden. Im Gegensatz zur Filterung werden diese bei Verwendung im Suchfeld auf alle Felder angewendet, wodurch sie weniger effizient sind als die Filterung.</p>
+<ul>
+<li><p>Um nur Feldwerte zu finden, die dem gesamten Text und der Groß- und Kleinschreibung genau entsprechen, setzen Sie den Text in einfache Anführungszeichen <code>&#39;&#39;</code> (z. B. <code>&#39;man&#39;</code>).</p>
+</li>
+<li><p>Um nur Feldwerte zu finden, die mit einem bestimmten Text beginnen und der Groß- und Kleinschreibung entsprechen, setzen Sie <code>*</code> hinter den Text (z. B. <code>man*</code>).</p>
+</li>
+<li><p>Um nur Feldwerte zu finden, die mit einem bestimmten Text enden und der Groß- und Kleinschreibung entsprechen, setzen Sie <code>*</code> vor den Text (z. B. <code>*man</code>).</p>
+</li>
+<li><p>Bei der Anwendung von <code>&#39;&#39;</code> oder <code>*</code> wird die Groß-/Kleinschreibung berücksichtigt. Wenn bei der Suche die Groß-/Kleinschreibung nicht beachtet werden soll, setzten Sie ein <code>@</code> vor der Suchtext (zum Beispiel <code>@man*</code>).</p>
+</li>
+</ul>
+<p>Die folgende Tabelle enthält einige Beispiele, um zu erläutern, wie Sie die Suche verwenden können.</p>
+<table>
+<thead>
+<tr>
+<th>Suchkriterien</th>
+<th>Findet…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>man</code><br>oder <br><code>Man</code></td>
+<td>Alle Datensätze mit Feldern, die den Text <strong>man</strong> enthalten, unabhängig der Groß-/Kleinschreibung. Beispielsweise <strong>Mannheim</strong>, <strong>manuell</strong> oder <strong>Roman</strong>.</td>
+</tr>
+<tr>
+<td><code>&#39;Man&#39;</code></td>
+<td>Alle Datensätze mit Feldern, die nur den Text <strong>Man</strong> enthalten und die Groß-/Kleinschreibung beachten.</td>
+</tr>
+<tr>
+<td><code>Man*</code></td>
+<td>Alle Datensätze mit Feldern, die mit dem Text <b>Man</b> beginnen und die Groß-/Kleinschreibung beachten. Beispielsweise <strong>Mannheim</strong>, aber nicht <strong>manuell</strong> oder <strong>Roman</strong>.</td>
+</tr>
+<tr>
+<td><code>@Man*</code></td>
+<td>Alle Datensätze mit Feldern, die mit dem Text <strong>man</strong> beginnen, ungeachtet der Groß-/Kleinschreibung. Beispielsweise <strong>Mannheim</strong> und <strong>manuell</strong>, aber nicht <strong>Roman</strong>.</td>
+</tr>
+<tr>
+<td><code>@*man</code></td>
+<td>Alle Datensätze, die mit dem Text <strong>man</strong> enden, ungeachtet der Groß-/Kleinschreibung. Beispielsweise <strong>Roman</strong>, aber nicht <strong>Mannheim</strong> oder <strong>manuell</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="filtering">Filterung</h2>
+<p>Filterung bietet eine erweiterte und vielseitigere Art zum Steuern der in einer Liste, einem Bericht oder einem XMLport angezeigten Datensätze. Es gibt zwei wichtige Unterschiede zwischen Suchen und Filtern, wie in der folgenden Tabelle beschrieben wird.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Suchen</strong></th>
+<th><strong>Filterung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anwendbare Felder</strong></td>
+<td>Sucht in allen Feldern, die auf der Seite angezeigt werden.</td>
+<td>Filtert ein oder mehrere einzelne Felder, wählt aus jedem Feld in der Tabelle aus, einschließlich Feldern, die nicht auf der Seite angezeigt werden.</td>
+</tr>
+<tr>
+<td><strong>Zuordnung</strong></td>
+<td>Zeigt Datensätze mit Feldern an, die mit dem Suchtext übereinstimmen, ungeachtet der Groß-/Kleinschreibung oder der Position des Texts.</td>
+<td>Zeigt Datensätze an, in denen das Feld genau dem Filter entspricht und die Groß-/Kleinschreibung beachtet wird, es sei denn, spezielle Filtersymbole wurden eingegeben.</td>
+</tr>
+</tbody>
+</table>
+<p>Filterung ermöglicht es Ihnen, Datensätze für bestimmte Konten oder Debitoren, Daten, Beträge und weitere Informationen anzeigen, indem Filterkriterien angegeben werden. Nur Datensätze, die den Kriterien entsprechen, werden in der Liste angezeigt oder in den Bericht, den Stapeljob oder XMLport aufgenommen. Falls Sie Kriterien für mehrere Felder angeben, werden nur Datensätze angezeigt, die allen Kriterien entsprechen.</p>
+<p>Bei Listen werden die Filter in einem Filterbereich angezeigt, der beim Aktivieren links von der Liste angezeigt wird. Für Berichte, Stapeljobs und XML-Ports sind die Filter direkt auf der Anforderungsseite sichtbar.</p>
+<h3 id="filtering-with-option-fields">Filtern mit Optionsfeldern</h3>
+<p>Für normale Felder, die Daten, Einrichtungsdatum oder Geschäftsdaten enthalten, können Sie Filter festlegen, indem Sie Daten auswählen und Filterwerte eingeben. Mithilfe von Symbolen können Sie erweiterte Filterkriterien definieren. Informationen erhalten Sie unter <a href="ui-enter-criteria-filters.html#entering-filter-criteria">Eingeben von Filterkriterien</a></p>
+<p>Für Felder vom Typ <strong>Möglichkeit</strong> können Sie einen Filter jedoch nur festlegen, indem Sie eine oder mehrere Optionen aus einer Dropdown-Liste der verfügbaren Optionen auswählen. Ein Beispiel für ein Optionsfeld ist das <strong>Status</strong> Feld auf der <strong>Kundenaufträge</strong> Seite.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie mehrere Optionen als Filterwert auswählen, wird die Beziehung zwischen den Optionen als <em>ODER</em> definiert. Zum Beispiel, wenn Sie das Kontrollkästchen <strong>Öffnen</strong> und <strong>Freigegeben</strong> im <strong>Status</strong> Filterfeld auf der Seite <strong>Kundenaufträge</strong> auswählen, bedeutet dies, dass offene oder freigegebene Kundenaufträge angezeigt werden.</p>
+</div>
+<h3 id="setting-filters-on-lists">Festlegen von Filtern in Listen</h3>
+<p>In Listen legen Sie Filter mithilfe des Filterbereichs fest. Um den Filterbereich für eine Liste anzuzeigen, klicken Sie auf den Dropdown-Pfeil neben dem Namen der Seite und wählen Sie dann die <strong>Filterbereich anzeigen</strong> Aktion. Alternativ können Sie auch <kbd>UMSCHALT</kbd>+<kbd>F3</kbd> auswählen.</p>
+<p>Um den Filterbereich für eine Spalte in einer Liste anzuzeigen, klicken Sie auf den Dropdown-Pfeil neben dem Namen der Seite und wählen Sie dann die <strong>Filterbereich anzeigen</strong> Aktion. Alternativ können Sie auch <kbd>UMSCHALT</kbd>+<kbd>F3</kbd> auswählen. Das Filterfenster wird mit der ausgewählten Spalte geöffnet, die als Filterfeld im Fenster angezeigt wird im Abschnitt <strong>Liste filtern nach</strong>.</p>
+<p>Der Filterbereich enthält die aktuellen Filter für eine Liste und ermöglicht es Ihnen, Ihre eigenen benutzerdefinierten Filter für mehrere Felder festzulegen, indem Sie die Aktion <strong>+Filter</strong> auswählen.</p>
+<p> Ein Filterbereich wird in drei Abschnitten aufgeteilt: <strong>Ansichten</strong>, <strong>Liste filtern nach</strong> und <strong>Summen filtern nach</strong>:</p>
+<ul>
+<li><p><strong>Ansichten</strong></p>
+<p>Einige Listen enthalten den Abschnitt <strong>Ansichten</strong>. Ansichten sind Variationen der Liste, die mit Filtern vorkonfiguriert wurden. Sie können pro Liste beliebig viele Ansichten definieren und speichern. Die Ansichten stehen Ihnen auf jedem Gerät zur Verfügung, bei dem Sie sich anmelden. Weitere Informationen finden Sie unter <a href="ui-views.html">Speichern und personalisieren von Listenansichten</a>.</p>
+</li>
+<li><p><strong>Liste filtern nach</strong></p>
+<p>In diesem Abschnitt fügen Sie Filter für bestimmte Felder hinzu, um die Anzahl der angezeigten Datensätze zu verringern. Um einen Filter hinzuzufügen, wählen Sie die <strong>+ Filter</strong> Aktion. Wählen Sie dann den Namen des Felds, nach dem Sie die Liste filtern möchten, oder wählen Sie ein Feld aus der Dropdown-Liste aus.</p>
+</li>
+<li><p><strong>Summen filtern nach</strong></p>
+<p>Einige Listen, die berechnete Felder anzeigen, z. B. Beträge und Mengen, enthalten den Abschnitt <strong>Summen filtern nach</strong>, in dem Sie verschiedene Dimensionen anpassen können, die Berechnungen beeinflussen. Um einen Filter hinzuzufügen, wählen Sie die <strong>+ Filter</strong> Aktion. Wählen Sie dann den Namen des Felds, nach dem Sie die Liste filtern möchten, oder wählen Sie ein Feld aus der Dropdown-Liste aus.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Filter im Abschnitt <strong>Summen filtern nach</strong> werden im Seitenentwurf durch FlowFilter gesteuert. Technischer Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-flowfilter-overview">FlowFilter</a>.</p>
+</div>
+</li>
+</ul>
+<p>Sie können einen einfachen Filter direkt in einer Liste im Filterbereich festlegen, dh einen Filter, der nur Datensätze mit demselben Wert wie in der ausgewählten Zelle anzeigt. Um eine Zelle in einer Liste anzuzeigen, klicken Sie auf den Dropdown-Pfeil neben dem Namen der Seite und wählen Sie dann die <strong>Filter für diesen Wert anzeigen</strong> Aktion. Alternativ können Sie auch <kbd>Alt</kbd>+<kbd>F3</kbd> auswählen.</p>
+<h3 id="setting-filters-in-reports-batch-jobs-and-xmlports">Festlegen von Filtern in Berichten, Stapeljobs und XML-Ports</h3>
+<p>Für Berichte und XML-Ports sind die Filter direkt auf der Anforderungsseite sichtbar. Auf der Anforderungsseite werden die zuletzt verwendeten Filter entsprechend Ihrer Auswahl im Feld <strong>Verwenden Sie die Standardwerte von</strong> angezeigt. Weitere Informationen finden Sie unter <a href="ui-work-report.html#SavedSettings">Gespeicherte Einstellungen verwenden</a>.</p>
+<p>Der Abschnitt wesentlicher <strong>Filter</strong> zeigt die Standardfilterfelder an, mit denen Sie die Datensätze abgrenzen, die in den Bericht oder XMLport aufgenommen werden sollen. Um einen Filter hinzuzufügen, wählen Sie die <strong>+ Filter</strong> Aktion. Geben Sie dann den Namen des Felds ein, nach dem Sie die Liste filtern möchten, oder wählen Sie ein Feld aus der Dropdown-Liste aus.</p>
+<p>In dem <strong>Gesamtsummen filtern nach</strong> Abschnitt können Sie verschiedene Dimensionen anpassen, die die Berechnungen im Bericht oder XMLport beeinflussen. Um einen Filter hinzuzufügen, wählen Sie die <strong>+ Filter</strong> Aktion. Geben Sie dann den Namen des Felds ein, nach dem Sie die Liste filtern möchten, oder wählen Sie ein Feld aus der Dropdown-Liste aus.</p>
+<h2 id="entering-filter-criteria">Eingeben von Filterkriterien</h2>
+<p>Sowohl im Filterbereich als auch auf einer Anforderungsseite geben Sie Ihre Filterkriterien in das Feld unter dem Filterfeld ein.</p>
+<p>Die Art des Filter-Feldes, das Sie filtern, bestimmt, welche Kriterien Sie eingeben können. Beispielsweise können Sie in einem Feld mit festen Werte nur in diesen Werten filtern. Weitere Informationen über spezielle Filtersymbole finden Sie unter <a href="#FilterCriteria">Filterkriterien</a> und <a href="#FilterTokens">Filtertoken</a></p>
+<p>Spalten, die bereits über Filter verfügen, werden durch das Symbol <img src="media/ui-search/filter-icon.png" alt="Filter." title="Filtersymbol"> Symbol in der Spaltenüberschrift. Wählen Sie den Dropdownpfeil im Seitentitel und dann <strong>Filter löschen</strong>, um einen Filter zu entfernen.</p>
+<div class="TIP"><h5>Tipp</h5><p>Beschleunigen Sie die Suche und das Analysieren Ihrer Daten, indem Sie Kombinationen von Tastenkombinationen verwenden. Wählen Sie zum Beispiel ein Feld aus, verwenden Sie <kbd>UMSCHALT</kbd>+<kbd>ALT</kbd>+<kbd>F3</kbd>, um diesen Filter dem Filterbereich hinzuzufügen und verwenden Sie <kbd>STRG</kbd>+<kbd>EINGABETASTE</kbd>, um die Zeilen zurückzugeben, wählen Sie ein anderes Feld aus und verwenden Sie <kbd>ALT</kbd>+<kbd>F3</kbd>, um zu diesem Wert zu filtern. Weitere Informationen finden Sie unter <a href="keyboard-shortcuts.html#KeyboardFilter">Einrichten von Tastenkombinationen</a>.</p>
+</div>
+<h3 id="a-namefiltercriteria-afilter-criteria-and-operators"><a name="FilterCriteria"> </a>Filterkriterien und Operatoren</h3>
+<p>Beim Eingeben von Filterkriterien können alle Ziffern und Buchstaben verwendet werden, die auch normalerweise im Feld zulässig sind. Es gibt aber auch eine Reihe spezieller Symbole, die Sie als Operatoren verwenden können, um die Ergebnisse weiter zu filtern. In den folgenden Abschnitten werden diese Symbole und ihre Verwendung als Operatoren in Filtern beschrieben.</p>
+<div class="TIP"><h5>Tipp</h5><p>Weitere Informationen zum Filtern von Daten und Zeiten finden Sie unter <a href="ui-enter-date-ranges.html">Mit Kalenderdaten und -zeiten arbeiten</a>.</p>
+</div>
+<div class="IMPORTANT"><h5>Wichtig</h5><ul>
+<li><p>Es kann Situationen geben, in denen der Wert, nach dem Sie filtern möchten, ein Symbol enthält, das ein Operator ist. Weitere Informationen zum Umgang mit diesen Situationen finden Sie unter <a href="#symbols">Filtern nach Werten, die Symbole enthalten</a>.</p>
+</li>
+<li><p>Wenn ein Filter mehr als 200 Operatoren enthält, gruppiert das System einige Ausdrücke automatisch in Klammern <code>()</code> zum Zwecke der Verarbeitung. Dies hat keine Auswirkungen auf den Filter oder die Ergebnisse.  </p>
+</li>
+</ul>
+</div>
+<h4 id="-interval">(..) Intervall</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1100..2100</code></td>
+<td>Nummer 1100 bis 2100</td>
+</tr>
+<tr>
+<td><code>..2500</code></td>
+<td>Bis einschließlich 2500</td>
+</tr>
+<tr>
+<td><code>..12 31 00</code></td>
+<td>Datum bis und einschließlich 31.12.00</td>
+</tr>
+<tr>
+<td><code>Bicycle..Car</code></td>
+<td>Führt Fahrrad durch Auto, wenn lexiografisch geordnet</td>
+</tr>
+<tr>
+<td><code>P8..</code></td>
+<td>Daten zur Buchhaltungsperiode 8 und folgende</td>
+</tr>
+<tr>
+<td><code>..23</code></td>
+<td>Vom Anfangsdatum bis zum 23. (aktueller Monat, aktuelles Jahr, 23:59:59)</td>
+</tr>
+<tr>
+<td><code>23..</code></td>
+<td>Vom 23-des aktuellen Monats-des aktuellen Jahres 0:00:00 bis zum Ende der Zeit</td>
+</tr>
+<tr>
+<td><code>22..23</code></td>
+<td>Vom 22-des aktuellen Monats-aktuellen Jahres 0:00:00 bis zum 23-des aktuellen Monats-aktuellen Jahres 23:59:59</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie einen Ziffernblock verwenden, gibt die Dezimaltrenntaste möglicherweise ein anderes Zeichen als einen Punkt (.) aus. Um zu einem Punkt zu wechseln, wählen Sie die Tasten <kbd>Alt</kbd>+<kbd>Dezimaltrennzeichen</kbd> auf dem Ziffernblock. Wenn Sie zurückwechseln möchten, wählen Sie <kbd>Alt</kbd>+<kbd>Dezimaltrennzeichen</kbd> erneut. Weitere Informationen finden Sie unter <a href="ui-enter-data.html#decimal">Festlegen des Dezimaltrennzeichens, das von numerischen Tastaturen verwendet wird</a>.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn das Feld, nach dem Sie filtern, vom Typ „Text“ ist, wird die lexiografische Sortierung verwendet, um zu bestimmen, was im Intervall enthalten ist. Bei solchen Feldern, die zum Speichern von Ganzzahlen verwendet werden, kann dies zu dem (unerwarteten) Ergebnis führen, dass ein Filter für 10000..10042 auch die Werte 100000 und 1000042 enthält.</p>
+</div>
+<h4 id="124-eitheror">(&#124;) Entweder/oder</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`1200</td>
+<td>1300`</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-not-equal-to">(&lt;&gt;) Ungleich</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;&gt;0</code></td>
+<td>Alle Datensätze außer der Nummer Null<br><br> Die SQL Server-Option ermöglicht es Ihnen, dieses Symbol mit einem Platzhalterausdruck zu kombinieren. So wird beispielsweise mit „&lt;&gt;A*“ Text beschrieben, der nicht mit einem großen A beginnt.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-greater-than">(&gt;) Größer als</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;1200</code></td>
+<td>Datensatznummern größer als 1200</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-greater-than-or-equal-to">(&gt;=) Größer oder gleich</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;=1200</code></td>
+<td>Datensatznummern ab einschließlich 1200 aufwärts</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-less-than">(&lt;) Kleiner als</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;1200</code></td>
+<td>Datensatznummern kleiner als 1200</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-less-than-or-equal-to">(&lt;=) Kleiner oder gleich</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;=1200</code></td>
+<td>Datensatznummern kleiner als oder gleich 1200</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-and">(&amp;) Und</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;200&amp;&lt;1200</code></td>
+<td>Nummern größer 200 und Nummern kleiner 1200.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-an-exact-character-match">(&quot;) Eine genaue Zeichenübereinstimmung</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&#39;man&#39;</code></td>
+<td>Text, der genau mit <strong>Mann</strong> übereinstimmt und die Groß-/Kleinschreibung berücksichtigt.</td>
+</tr>
+<tr>
+<td><code>&#39;&#39;</code></td>
+<td>Text, der leer ist.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-case-insensitive">(@) Groß-/Kleinschreibung beachten</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@man*</code></td>
+<td>Text, der mit <strong>Mann</strong> beginnt und die Groß-/Kleinschreibung beachtet.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-an-indefinite-number-of-unknown-characters">(*) Beliebig viele unbekannte Zeichen</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*Co*</code></td>
+<td>Text, der die Zeichenfolge <strong>Co</strong> enthält und die Groß-/Kleinschreibung berücksichtigt.</td>
+</tr>
+<tr>
+<td><code>*Co</code></td>
+<td>Text, der mit <strong>Co</strong> endet und die Groß-/Kleinschreibung berücksichtigt.</td>
+</tr>
+<tr>
+<td><code>Co*</code></td>
+<td>Text, der mit <strong>Co</strong> beginnt und die Groß-/Kleinschreibung berücksichtigt.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-one-unknown-character">(?) Ein unbekannter Buchstabe</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Hans?n</code></td>
+<td>Text wie <strong>Hansen</strong> oder <strong>Hanson</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="combined-format-expressions">Kombinierte Formatausdrücke</h4>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`5999</td>
+<td>8100..8490`</td>
+</tr>
+<tr>
+<td>`..1299</td>
+<td>1400..`</td>
+</tr>
+<tr>
+<td><code>&gt;50&amp;&lt;100</code></td>
+<td>Alle Datensätze mit Nummern größer als 50 und kleiner als 100, d. h. mit Nummern zwischen 51 und 99.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="symbols">Nach Werten filtern, die Symbole enthalten</h3>
+<p>Es kann Fälle geben, in denen Feldwerte eines der folgenden Symbole enthalten:</p>
+<ul>
+<li>&amp;</li>
+<li>(</li>
+<li>)</li>
+<li>=</li>
+<li>&#124;</li>
+</ul>
+<p>Wenn Sie auf eines dieser Symbole filtern wollen, setzen Sie den Filterausdruck in einfache Anführungszeichen (<code>&#39;&lt;expression with symbol&gt;&#39;</code>). Wenn Sie beispielsweise Datensätzen filtern möchten, die mit dem Text <em>J &amp; V</em> beginnen, ist der Filterausdruck <code>&#39;J &amp; V*&#39;</code>.</p>
+<p>Diese Anforderung ist für andere Symbole nicht erforderlich.</p>
+<h3 id="a-namefiltertokens-afilter-tokens"><a name="FilterTokens"> </a>Filtertoken</h3>
+<p>Wenn Sie Filterkriterien eingeben, können Sie auch Begriffe mit besonderer Bedeutung eingeben, die Filtertoken genannt werden. Nachdem Sie das Token-Wort eingegeben haben, wird das Wort durch den Wert oder die Werte ersetzt, die es darstellt. Dadurch wird das Filtern einfacher, indem die Notwendigkeit verringert wird, auf andere Seiten zu navigieren, um dort Werte nachzuschlagen, die Sie Ihrem Filter hinzufügen möchten. In den folgenden Tabellen werden einige der Token beschreiben, die Sie als Filterkriterien eingeben können.</p>
+<div class="TIP"><h5>Tipp</h5><p>Ihre Organisation verwendet möglicherweise benutzerdefinierte Token. Informationen zum verfügbaren kompletten Token-Satz, oder zum Hinzufügen weiterer benutzerdefinierter Token erhalten Sie von Ihren Administrator. Technischer Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-adding-filter-tokens">Hinzufügen von Filter-Token</a>.</p>
+</div>
+<h4 id="me-or-user-records-assigned-to-you">(%me oder %user) Ihnen zugewiesene Datensätze</h4>
+<p>Verwenden Sie <code>%me</code> oder <code>%user</code>, wenn Sie Felder filtern, die die Benutzer-ID, wie das Feld <strong>Benutzer-ID zugewiesen</strong>, enthalten, um alle Datensätze anzuzeigen, die Ihnen zugeordnet werden.</p>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%me</code><br>oder<br><code>%user</code></td>
+<td>Datensätze, die Ihrem Benutzerkonto zugewiesen sind.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mycustomers-customers-in-my-customers">(%mycustomers) Debitoren in „Meine Debitoren“</h4>
+<p>Verwenden Sie <code>%mycustomers</code> im Feld Debitoren-<strong>Nr.</strong>, um alle Datensätze für Debitoren anzuzeigen, die in der Liste <strong>Meine Debitoren</strong> in Ihrem Rollencenter enthalten sind.</p>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%mycustomers</code></td>
+<td>Debitoren in <strong>Meine Debitoren</strong> in Ihrem Rollencenter.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="myitems-items-in-my-items">(%myitems) Artikel in &quot;Meine Artikel&quot;</h4>
+<p>Verwenden Sie <code>%myitems</code> im Feld Artikel-<strong>Nr.</strong>, um alle Datensätze für Artikel anzuzeigen, die in der Liste <strong>Meine Artikel</strong> in Ihrem Rollencenter enthalten sind.</p>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%myitems</code></td>
+<td>Artikel in <strong>Meine Artikel</strong> in Ihrem Rollencenter.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="myvendors-vendors-in-my-vendors">(%myvendors) in &quot;Meine Kreditoren&quot;</h4>
+<p>Verwenden Sie <code>%myvendors</code> im Feld Kreditoren-<strong>Nr.</strong>, um alle Datensätze für Kreditoren anzuzeigen, die in der Liste <strong>Meine Kreditoren</strong> in Ihrem Rollencenter enthalten sind.</p>
+<table>
+<thead>
+<tr>
+<th>Beispielausdruck</th>
+<th>Angezeigte Datensätze</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%myvendors</code></td>
+<td>Kreditoren in <strong>Meine Kreditoren</strong> in Ihrem Rollencenter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="ui-search-filter-faq.yml">Suchen und Filtern – Häufig gestellte Fragen</a><br><a href="ui-views.html">Listenansichten speichern und personalisieren</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

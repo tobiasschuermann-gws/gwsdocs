@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Artikeleintr&#228;ge entfernen und erneut anwenden </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Artikeleintr&#228;ge entfernen und erneut anwenden ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="remove-and-reapply-item-ledger-entries">Artikelposten entfernen und erneut ausgleichen</h1>
+
+<p>Sie können auf der Seite <strong>Ausgleichsarbeitsblatt</strong> bestimmte Artikelausgleichsposten, die bei Lagertransaktionen automatisch erstellt werden, anzeigen und manuell ändern.  </p>
+<p>Wenn Sie eine Transaktion buchen, in der Artikel in den oder aus dem Lagerbestand verschoben werden, wird ein Artikelausgleich zwischen jedem Lagerzugang und Lagerabgang erstellt. Diese Ausgleiche bestimmen die Richtung für die Kosten von den Waren, die in den Lagerbestand übernommen wurden, zu den Kosten der Waren, die aus dem Lagerbestand herausgenommen wurden. Wegen der Art, in der Einstandspreise berechnet werden, könnte ein fehlerhafter Artikelausgleich zu falschen Durchschnittskosten und zu falschen Einstandspreisen führen. Weitere Informationen finden Sie unter &quot;Designdetails: Artikelverfolgung&quot;.</p>
+<p>Der folgende Szenarios erfordern möglicherweise, dass Sie einen Ausgleich rückgängig machen oder Artikelposten erneut ausgleichen:</p>
+<ul>
+<li>Sie haben vergessen, einen festen Ausgleich vorzunehmen.</li>
+<li>Sie haben einen fehlerhaften festen Ausgleich vorgenommen.</li>
+<li>Sie müssen einen Artikel zurücknehmen, für den bereits ein Verkauf ausgeglichen wurde.</li>
+</ul>
+<p>Wenn möglich, verwenden Sie einen Beleg, um einen Artikelposten erneut auszugleichen. Wenn Sie beispielsweise eine Einkaufsreklamation für einen Artikel vornehmen müssen, für den bereits ein Verkauf ausgeglichen wurde, können Sie den erneuten Ausgleich vornehmen, indem Sie einfach den Einkaufsreklamationsbeleg in der Einkaufsreklamationszeile im Feld <strong>Ausgleich mit Artikelposten</strong> mit dem richtigen Ausgleich erstellen und buchen. Sie können die Funktion <strong>Gebuchte Belegzeilen zum Stornieren holen</strong> oder die Funktion <strong>Aus Beleg kopieren</strong> im Rückkaufsbeleg verwenden, um dies zu erleichtern. Wenn Sie den Beleg buchen, wird automatisch der Artikelposten erneut ausgeglichen. Weitere Informationen finden Sie unter <a href="purchasing-how-process-purchase-returns-cancellations.html">Einkaufsretouren verarbeiten oder Stornieren</a>.</p>
+<p>Wenn Ihnen für eine erneute Bewerbung kein Dokument zur Verfügung steht, etwa wenn Sie eine korrigierte Bewerbung korrigieren müssen, dann nutzen Sie die Seite  <strong>Arbeitsblatt zur Bewerbung</strong>  zum Korrigieren einer Bewerbung.</p>
+<div class="WARNING"><h5>Warnung</h5><p>Im Folgenden einige wichtige Überlegungen zur Arbeit mit dem Ausgleichsarbeitsblatt:</p>
+<ul>
+<li>Sie sollten Ausgleichsposten nicht über einen längeren Zeitraum ohne Ausgleich lassen, da andere Benutzer die Artikel erst bearbeiten können, wenn Sie die Ausgleichsposten erneut ausgeglichen oder die Seite <strong>Ausgleichsarbeitsblatt</strong> geschlossen haben. Benutzer, die versuchen, Aktionen auszuführen, die einen manuell nicht ausgeglichenen Ausgleichsposten betreffen, erhalten die folgende Fehlermeldung: &quot;Sie können diese Aktion nicht ausführen, da Posten für Artikel XXX im Ausgleichsarbeitsblatt vom Benutzer XXX aufgehoben wird. &quot;</li>
+<li>Sie sollten Artikelposten nur außerhalb der Kernarbeitszeiten erneut ausgleichen, um Konflikte mit anderen Benutzern zu vermeiden, die Transaktionen zu den gleichen Artikeln buchen.</li>
+<li>Wenn Sie den Ausgleichsarbeitsblatt schließen, führt Business Central eine Prüfung durch, um sicherzustellen, dass alle Posten ausgeglichen wurden. Wenn Sie beispielsweise einen Mengenausgleich entfernt, jedoch keinen neuen Ausgleich erstellt haben und den Ausgleichsarbeitsblatt dann schließen, wird ein neuer Ausgleich erzeugt. Dies trägt dazu bei, die Kosten intakt zu halten. Beim Entfernen eines festen Ausgleichs wird jedoch nicht automatisch ein neuer fester Ausgleich erstellt, wenn Sie den Ausgleichsarbeitsblatt schließen. Dies muss manuell erfolgen, indem Sie im Arbeitsblatt einen neuen Ausgleich erstellen.</li>
+<li>Es ist möglich, einen oder mehrere Ausgleiche gleichzeitig für einen Posten im Ausgleichsvorschlag zu entfernen. Da der Ausgleich von Posten jedoch den Satz der zum Ausgleich verfügbaren Posten beeinflusst, ist es nicht möglich, einen Ausgleich für mehr als einen Posten gleichzeitig zu erstellen.</li>
+<li>In der folgenden Situation kann über den Ausgleichsarbeitsblatt kein Ausgleich erfolgen: Wenn im Lager nicht genügend Menge zum Ausgleich vorhanden ist, kann über den Ausgleichsarbeitsblatt kein Ausgleich vorgenommen werden, wenn Sie versuchen, einen Lagerabgangsposten ohne Artikelverfolgungsinformationen mit einem Lagerzugangsposten mit Artikelverfolgungsinformationen auszugleichen.</li>
+</ul>
+</div>
+<h2 id="to-remove-an-item-application-by-using-the-application-worksheet">Artikelausgleich mit dem Ausgleichsarbeitsblatt entfernen</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten">. Symbol. Geben Sie <strong>Ausgleichsarbeitsblatt</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Die Seite <strong>Ausgleichsarbeitsblatt</strong> wird geöffnet und zeigt bestehende das Artikelposten für alle Artikel an.  </li>
+<li>Geben Sie im Inforegister <strong>Allgemein</strong> Filter ein, um die Suche nach dem Artikelposten, für den Sie den Ausgleich ändern möchten, zu erleichtern.  </li>
+<li>Wählen Sie den Artikelposten aus, und wählen Sie die Aktionen <strong>Ausgeglichene Posten</strong>. Die Seite <strong>Ausgeglichene Posten anzeigen – Ausgeglichene Posten</strong> wird geöffnet und zeigt den/die Artikelposten für den Ausgleich mit dem ausgewählten Posten an.  </li>
+<li>Wählen Sie den Artikelposten aus, für den Sie den Ausgleich entfernen möchten.  </li>
+<li>Wählen Sie die Aktion <strong>Ausgleich entfernen</strong> aus. Dadurch wird der Artikelausgleichsposten, der die beiden Artikelposten verknüpft, entfernt und auf der Seite <strong>Ausgleichsposten anzeigen - nicht ausgeglichene Posten</strong> verschoben.  </li>
+<li><p>Schließen Sie die Seite <strong>Ausgeglichene Posten anzeigen – Ausgeglichene Posten</strong>.  </p>
+<p>Das Feld  <strong>Restmenge</strong>  der beiden Artikelposten wird um die nicht ausgeglichene Menge erhöht. Der entfernte Artikelposten ist jetzt für den erneuten Ausgleich auf der Seite <strong>Ausgeglichene Posten anzeigen – Nicht ausgeglichene Posten</strong> verfügbar.  </p>
+</li>
+</ol>
+<div class="IMPORTANT"><h5>Wichtig</h5><p> Sie sollten Ausgleichsposten nicht über einen längeren Zeitraum ohne Ausgleich lassen, da andere Benutzer die Artikel erst bearbeiten können, wenn Sie die Ausgleichsposten erneut ausgeglichen oder die Seite <strong>Ausgleichsarbeitsblatt</strong> geschlossen haben. Die folgende Fehlermeldung wird angezeigt, wenn Sie versuchen, Aktionen auszuführen, die einen manuell nicht ausgeglichenen Ausgleichsposten betreffen:  </p>
+<p> <strong>Diese Aktion kann nicht ausgeführt werden, da der Artikel &lt;item> vom Benutzer &lt;user> im Ausgleichsarbeitsblatt aufgehoben wurde.</strong>  </p>
+</div>
+<h2 id="to-reapply-an-item-application-by-using-the-application-worksheet">Artikelausgleich mit dem Ausgleichsarbeitsblatt erneut ausgleichen</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 2." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Ausgleichsarbeitsblatt</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Die Seite <strong>Ausgleichsarbeitsblatt</strong> wird geöffnet und zeigt bestehende das Artikelposten für alle Artikel an.  </li>
+<li><p>Um Einträge, die seit dem Öffnen des Arbeitsblattes entfernt wurden, erneut zu übernehmen, markieren Sie den Eintrag des Positions-Ledgers, den Sie erneut übernehmen möchten, und wählen Sie dann die Aktion <strong>Erneut anwenden</strong>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Der erneute Ausgleich mit dem ursprünglichen Saldo erfolgt auch automatisch, wenn Sie die Seite <strong>Anwendungsarbeitsblatt</strong> schließen.  </p>
+</div>
+</li>
+<li>Wählen Sie zum Ausgleich eines verfügbaren offenen Artikelpostens mit einem anderen Posten den entsprechenden Artikelposten aus. Wählen Sie die Aktion <strong>Nicht ausgeglichene Posten</strong> aus. Die Seite <strong>Ausgleichsposten anzeigen - nicht ausgeglichene Posten</strong> wird geöffnet.  </li>
+<li><p>Wählen Sie einen oder mehrere Artikelposten aus, die Sie für den Posten auf der Seite <strong>Ausgleichsarbeitsblatt</strong> ausgewählten Posten auswählen, und wählen Sie die Schaltfläche <strong>OK</strong>.  </p>
+<p> Es wird ein Artikelausgleichsposten zwischen den beiden Artikelposten erstellt. Das Feld <strong>Restmenge</strong> der beiden Post wird jeweils um die für den Ausgleich verwendete Menge verringert.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn Sie einen Ausgleich ausgewählt haben, mit dem eine Endlosschleife in der Lagerregulierung erzeugt wird, wird der von Ihnen gewünschte Ausgleich nicht vorgenommen. Dies kommt in Fällen vor, in denen mit den ursprünglichen Posten ein negativer Lagerbestand erzeugt wurde. Der Ausgleich wird nicht vorgenommen. Daher müssen Sie einen anderen Posten für den Ausgleich auswählen.  </p>
+</div>
+</li>
+<li>Wenn in <strong>Lager Einrichtung</strong> das Feld <strong>Automatische Lagerregulierung</strong> auf <strong>Immer</strong> festgelegt ist, wird die Stapelverarbeitung für Kostenregulierung automatisch ausgeführt, nachdem Sie einen erneuten Ausgleich vorgenommen haben. Führen Sie andernfalls den Batchauftrag <strong>Lagerreg. fakt. Einst. Preise</strong> aus, um sicherzustellen, dass alle Kosten auf dem neuesten Stand sind.  </li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance-how-to-close-open-item-ledger-entries-resulting-from-fixed-application-in-the-item-journal.html">Schließen offener Artikelposten aus festem Ausgleich im Artikeljournal</a><br> <a href="purchasing-how-process-purchase-returns-cancellations.html">Retouren oder Stornierungen von Käufen verarbeiten</a><br> <a href="finance-manage-inventory-costs.html">Verwalten der Lagerregulierung</a><br> <a href="design-details-item-application.html">Designdetails: Artikelausgleich</a><br> <a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

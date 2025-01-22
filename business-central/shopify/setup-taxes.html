@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Steuern f&#252;r Shopify Verbindung einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Steuern f&#252;r Shopify Verbindung einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../TOC.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-taxes-for-the-shopify-connection">Steuern für die Shopify-Verbindung einrichten</h1>
+
+<p>In diesem Artikel untersuchen wir, wie verschiedene Einstellungen in Shopify sich auf die Storefront-Preise und Steuern auswirken, die dem Kunden angezeigt werden. Wir werden uns auch ansehen, wie man Business Central zur Unterstützung der Einstellungen in Shopify konfiguriert. Dieser Artikel ist nicht als umfassende Steueranleitung gedacht. Um mehr zu erfahren, wenden Sie sich an Ihre örtliche Steuerbehörde oder einen Steuerexperten.  </p>
+<p>Der Artikel geht davon aus, dass Sie beim Verkauf von Waren im In- oder Ausland steuerpflichtig sind.</p>
+<h2 id="if-you-sell-domestically">Wenn Sie im Inland verkaufen</h2>
+<p>Nachdem Sie Ihr Shopify konfiguriert haben, um Steuern in Ihrem Heimatland oder Ihrer Heimatregion zu erheben, können Sie entscheiden, wie Sie die Preise auf Ihrer Storefront anzeigen möchten.</p>
+<p>Sie geben an, ob die Steuern im Preis enthalten sind, indem Sie <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> umschalten in den <a href="https://www.shopify.com/admin/settings/taxes"><strong>Steuern und Zölle</strong></a>-Einstellungen in Ihrem <strong>Shopify Administrator</strong>.</p>
+<p>Der Umschalter ist normalerweise für die folgenden Länder/Regionen aktiviert:</p>
+<ul>
+<li>Australien</li>
+<li>Österreich</li>
+<li>Belgien</li>
+<li>Tschechische Republik</li>
+<li>Dänemark</li>
+<li>Finnland</li>
+<li>Frankreich</li>
+<li>Deutschland</li>
+<li>Island</li>
+<li>Italien</li>
+<li>Niederlande</li>
+<li>Neuseeland</li>
+<li>Norwegen</li>
+<li>Spanien</li>
+<li>Schweden</li>
+<li>Schweiz</li>
+<li>Vereinigtes Königreich</li>
+</ul>
+<p>In solchen Märkten enthält ein auf der Produktkarte definierter Preis von 100 EUR bereits die Mehrwertsteuer (MwSt.). Der Preis inklusive Mehrwertsteuer wird dem Kunden im Storefront und an der Kasse angezeigt.  </p>
+<p>In den USA und Kanada erwarten Kunden keine Preise inklusive Steuern, da die endgültige Steuer davon abhängt, wohin die Produkte geliefert werden. Da die Steuer an der Kasse hinzugerechnet wird, ist die Option  <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> normalerweise deaktiviert. In diesem Fall ist der für das Produkt Karte definierte Preis von $100 der Preis ohne Steuern. An der Kasse werden Steuern zum Preis hinzugefügt.</p>
+<p>Um das Szenario zu unterstützen, in dem <strong>Alle Preise inklusive Steuern</strong> ausgewählt ist, füllen Sie in Business Central die folgenden Felder im <strong>Shopify Shop aus Karte</strong> Seite:  </p>
+<ol>
+<li>Aktivieren Sie den Regelschalter <strong>Preise inklusive Mehrwertsteuer</strong> .  </li>
+<li>Geben Sie im Feld <strong>Umsatzsteuer-Geschäftsbuchungsgruppe</strong> die Buchungsgruppe an, die Sie für inländische Kunden verwenden.  </li>
+</ol>
+<p>Definieren Sie nun Artikelpreise im Feld <strong>Artikelkarte</strong> oder <strong>Verkaufspreisliste</strong>, mit oder ohne Steuer. Beim Export der Preise nach Shopify, Business Central ist die inländische Steuer im berechneten Preis enthalten und zeigt diesen Preis dann auf der Produktkarte in Shopify.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Diese Einstellungen wirken sich auf den Export von Preisen aus. Wenn Sie Bestellungen aus Shopify importieren, stammt die Einstellung für das Feld <strong>Preise inkl. MwSt.</strong> aus der <strong>Debitorenvorlage</strong> auf der Shopify Geschäftskarte oder der Debitorenvorlage pro Land/Region. Auch wenn Sie den Standardkunden für importierte Bestellungen verwenden, müssen Sie den <strong>Kundenvorlagencode</strong> eingeben.</p>
+</div>
+<h2 id="if-you-sell-internationally">Wenn Sie international verkaufen</h2>
+<p>In diesem Abschnitt untersuchen wir Einstellungen für Szenarien, in denen Sie Steuern erheben müssen, wenn Sie in ein anderes Land bzw. eine andre Region verkaufen, z. B. andere Länder/Regionen in der EU.</p>
+<p>Derzeit unterstützt die Erweiterung Shopify Connector nur den Export eines Preises. Shopify wendet automatisch lokale Steuern, Währungen und Rundungen an. Der Schalter <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> führt zu den Aktionen, die in den folgenden Unterabschnitten beschrieben werden.</p>
+<h3 id="all-prices-include-tax-is-selected">Alle Preise verstehen sich inklusive Mehrwertsteuer ist ausgewählt</h3>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Inlandsverkäufe</th>
+<th>Ausland/ausländische Region, in dem/der Sie Steuern erheben</th>
+<th>Ausland/ausländische Region, in dem/der Sie keine Steuern erheben</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angezeigter Preis in der Storefront</td>
+<td>1200</td>
+<td>1200</td>
+<td>1200</td>
+</tr>
+<tr>
+<td>Steuersatzprozentsatz</td>
+<td>20</td>
+<td>25</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Preis an der Kasse</td>
+<td>1200</td>
+<td>1200</td>
+<td>1200</td>
+</tr>
+</tbody>
+</table>
+<p>Der Preis für den Debitor bleibt unabhängig von seinem Standort intakt, aber Ihre Marge wird dann aufgrund der je nach Land/Region unterschiedlichen Steuersätze beeinflusst.</p>
+<h3 id="all-prices-include-tax-is-not-selected">Alle Preise verstehen sich inklusive Mehrwertsteuer ist nicht ausgewählt</h3>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Inlandsverkäufe</th>
+<th>Ausland, in dem Sie Steuern erheben</th>
+<th>Ausland, in dem Sie keine Steuern erheben</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angezeigter Preis in der Storefront</td>
+<td>1000</td>
+<td>1000</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Steuersatzprozentsatz</td>
+<td>20</td>
+<td>25</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Preis an der Kasse</td>
+<td>1200</td>
+<td>1250</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+<p>Shopify fügt lokale Steuern zu dem auf der Produktkarte definierten Preis hinzu, je nachdem, wohin die Waren geliefert werden.</p>
+<h2 id="dynamic-tax-inclusive-pricing">Dynamische Preise inklusive Steuern</h2>
+<p>Länder/Regionen haben unterschiedliche Anforderungen für die Einbeziehung von Steuern in die Preise. Wenn Sie möchten, dass die Preise automatisch Steuern enthalten, können Sie <a href="https://help.shopify.com/en/manual/markets/pricing/dynamic-tax-inclusive-pricing">Dynamische Preise inklusive Steuern</a> in Shopify aktivieren.</p>
+<p>Wählen Sie in Ihrem <strong>Shopify Admin</strong> <strong>Steuern basierend auf dem Land Ihres Debitors einschließen oder ausschließen</strong> im Abschnitt <strong>Andere Märkte – Präferenzen</strong> der Einstellungen <a href="https://www.shopify.com/admin/settings/markets"><strong>Märkte</strong></a>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Diese Einstellung wirkt sich nicht auf die Darstellung von Preisen auf Inlandsmärkten aus, die vom Umschalter <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> gesteuert wird.</p>
+</div>
+<h3 id="all-prices-include-tax-is-selected-1">Alle Preise verstehen sich inklusive Mehrwertsteuer ist ausgewählt</h3>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Inlandsverkäufe</th>
+<th>Ausland/ausländische Region, in dem die Steuer im Preis inbegriffen ist</th>
+<th>Ausland/ausländische Region, in dem die Steuer im Preis nicht inbegriffen ist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angezeigter Preis in der Storefront</td>
+<td>1200</td>
+<td>1250</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Steuersatzprozentsatz</td>
+<td>20</td>
+<td>25</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Preis an der Kasse</td>
+<td>1200</td>
+<td>1250</td>
+<td>1100</td>
+</tr>
+</tbody>
+</table>
+<p>Der Preis für jeden Kunden ändert sich je nach Standort.</p>
+<h3 id="all-prices-include-tax-is-not-selected-1">Alle Preise verstehen sich inklusive Mehrwertsteuer ist nicht ausgewählt</h3>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Inlandsverkäufe</th>
+<th>Ausland/ausländische Region, in dem die Steuer im Preis inbegriffen ist</th>
+<th>Ausland/ausländische Region, in dem die Steuer im Preis nicht inbegriffen ist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angezeigter Preis in der Storefront</td>
+<td>1000</td>
+<td>1250</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>Steuersatzprozentsatz</td>
+<td>20</td>
+<td>25</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Preis an der Kasse</td>
+<td>1200</td>
+<td>1250</td>
+<td>1100</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Der Schalter <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> ändert nicht, wie Preise internationalen Debitoren angezeigt werden.</p>
+</div>
+<h2 id="if-you-sell-to-eu-customers">Wenn Sie an EU-Debitoren verkaufen</h2>
+<p>Verschiedene EU-Länder/-Regionen haben unterschiedliche lokale Steuersätze. Wenn Sie jedoch in der EU ansässig sind und in andere EU-Länder/-Regionen verkaufen, können Sie in einigen Fällen Ihren lokalen Steuersatz verwenden.  </p>
+<p>In Ihrem <strong>Shopify Admin</strong> aktivieren Sie das Kontrollkästchen <strong>Mehrwertsteuer einbehalten</strong> im Abschnitt <strong>Europäische Union</strong> in den Einstellungen <a href="https://www.shopify.com/admin/settings/taxes"><strong>Steuern und Zölle</strong></a>.</p>
+<table>
+<thead>
+<tr>
+<th>MwSt. einbehalten</th>
+<th>MwSt.-Satz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ausnahmeregelung für Kleinstunternehmen</td>
+<td>Verwenden Sie Ihren inländischen Steuersatz für alle Verkäufe innerhalb der EU</td>
+</tr>
+<tr>
+<td>One-Stop-Shop oder länder-/regionsspezifische Registrierung</td>
+<td>Verwenden Sie den Mehrwertsteuersatz des Landes/der Region Ihres Debitors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="collect-vat-set-to-one-stop-shop-registration">Sammeln Sie die Mehrwertsteuer, die auf die One-Stop-Shop-Registrierung eingestellt ist</h3>
+<p>Im folgenden Beispiel ist der Schalter <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> aktiviert. Der Preis auf der Produktkarte ist auf <em>1200</em> gesetzt.</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Inlandsverkäufe</th>
+<th>Ausland/ausländische Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angezeigter Preis in der Storefront</td>
+<td>1200</td>
+<td>1250</td>
+</tr>
+<tr>
+<td>Steuersatzprozentsatz</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Preis an der Kasse</td>
+<td>1200</td>
+<td>1250</td>
+</tr>
+</tbody>
+</table>
+<p>Shopify verwendet bei der Berechnung der Endpreise den Steuersatz des jeweiligen Landes/der jeweiligen Region.</p>
+<h3 id="collect-vat-set-to-micro-business-exemption">MwSt. erheben ist auf Ausnahmeregelung für Kleinstunternehmen eingestellt</h3>
+<p>Im folgenden Beispiel ist der Schalter <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> aktiviert. Der Preis auf der Produktkarte ist auf <em>1200</em> gesetzt.</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Inlandsverkäufe</th>
+<th>Ausland/ausländische Region mit lokalem Steuersatz von 25 Prozent.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Angezeigter Preis in der Storefront</td>
+<td>1200</td>
+<td>1200</td>
+</tr>
+<tr>
+<td>Steuersatzprozentsatz</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Preis an der Kasse</td>
+<td>1200</td>
+<td>1200</td>
+</tr>
+</tbody>
+</table>
+<p>Shopify ignoriert bei der Berechnung der Endpreise den Steuersatz im Ausland/in der ausländischen Region und verwendet dafür den inländischen Steuersatz.</p>
+<h2 id="importing-shopify-orders-sold-to-international-customers">Importierender Shopify Bestellungen, die an internationale Debitoren verkauft wurden</h2>
+<p>Wenn Sie Steuern aus mehreren Ländern/Regionen erheben, müssen Sie höchstwahrscheinlich eine länder-/regionsspezifische Einstellung in Business Central festlegen. Es gibt einen Grund, warum diese Einstellung erforderlich ist. Wenn ein Verkaufsbelegs in Business Central, erstellt wird, berchnet Business Central Steuern, anstatt aus Shopify importierte Steuern wiederzuverwenden.</p>
+<p>Länder-/regionsspezifische Einstellungen werden auf der Seite <strong>Shopify Debitorenvorlage</strong> ausgewählt. Dort können Sie die <strong>Standarddebitorennr.</strong> definieren oder <strong>Debitorenvorlagennr.</strong> Stellen Sie in jedem Fall sicher, dass für den ausgewählten Debitoren oder die ausgewählte Vorlage die folgenden Felder ausgefüllt sind:</p>
+<ol>
+<li><strong>Allgemeine Geschäftsbuchungsgruppe</strong> (für ausländische Debitoren verwendet).</li>
+<li><strong>MwSt.-Geschäftsbuchungsgrp.</strong> (für ausländische Debitoren verwendet).</li>
+<li><strong>Preise inkl. MwSt</strong> (ausgerichtet auf die Einstellung auf der Shopify Seite):</li>
+</ol>
+<ul>
+<li>Wählen Sie <strong>Ja</strong> aus, wenn <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> aktiviert ist und <strong>Steuern basierend auf dem Land Ihres Debitoren einschließen oder ausschließen</strong> deaktiviert ist.</li>
+<li>Wählen Sie <strong>Nein</strong> aus, wenn <strong>Alle Preise verstehen sich inklusive Mehrwertsteuer</strong> deaktiviert ist und <strong>Steuern basierend auf dem Land Ihres Debitoren einschließen oder ausschließen</strong> deaktiviert ist.</li>
+<li>Wählen Sie <strong>Ja</strong> aus, wenn <strong>Steuern basierend auf dem Land Ihres Debitoren einschließen oder ausschließen</strong> aktiviert ist und das Land oder die Region in <a href="https://help.shopify.com/en/manual/markets/pricing/dynamic-tax-inclusive-pricing#tax-inclusive-versus-tax-exclusive-countries-and-regions">Steuerpflichtige Länder/Regionen</a> aufgeführt ist.</li>
+<li>Wählen Sie <strong>Nein</strong> aus, wenn <strong>Steuern basierend auf dem Land Ihres Debitoren einschließen oder ausschließen</strong> aktiviert ist und das Land oder die Region nicht unter <a href="https://help.shopify.com/en/manual/markets/pricing/dynamic-tax-inclusive-pricing#tax-inclusive-versus-tax-exclusive-countries-and-regions">Steuerpflichtige Länder/Regionen</a> aufgeführt ist.</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Einstellung des Feldes <strong>Preise inkl. MwSt</strong> stammt aus der Vorlage, nicht aus dem konkreten Debitoren. Deshalb ist es wichtig, dass die Debitorenvorlage definiert ist.</p>
+</div>
+<h2 id="other-tax-remarks">Sonstige Anmerkungen zu Steuern</h2>
+<p>Während die importierte Shopify-Bestellung Informationen zu Steuern enthält, werden die Steuern neu berechnet, wenn Sie den Verkaufsbeleg erstellen. Diese Neuberechnung bedeutet, dass es wichtig ist, dass die Einstellungen für Mehrwertsteuer/Steuern in Business Central richtig sind.</p>
+<ul>
+<li>Mehrere Produktsteuer- oder MwSt.-Steuersätze. Beispielsweise unterliegen einige Produktkategorien ermäßigten Steuersätzen. Sie können die <a href="https://help.shopify.com/en/manual/taxes/tax-overrides#create-a-manual-collection-for-products-that-need-a-tax-override">Steuerüberschreitung</a> Funktion in Shopify verwenden. Beim Importieren und Erstellen von Elementen in Business Central verwenden sie die Steuereinstellungen, die im Artikelvorlagencode in Shopify Shop eingegeben wurden. Bevor Sie Bestellungen mit solchen Artikeln importieren, müssen Sie die Umsatzsteuer-Produktbuchungsgruppe aktualisieren.  </li>
+<li>Adressabhängige Steuersätze. Verwenden Sie das Feld <strong>Steuergebiet Priorität</strong> zusammen mit der Tabelle <strong>Kundenvorlagen</strong>, um die Standardlogik zu überschreiben, die den <strong>Steuergebietscode</strong> im Verkaufsdokument ausfüllt. Das Feld <strong>Steuergebiet Priorität</strong> gibt die Priorität an, aus der die Funktion die Informationen über das Land oder die Region und den Staat oder die Provinz übernehmen soll. Dann wird der entsprechende Datensatz in den Kundenvorlagen Shopify identifiziert und die <strong>Steuerkennziffer</strong>, <strong>Steuerpflichtig</strong> und <strong>MwSt Bus. Buchungsgruppe</strong> werden verwendet, wenn ein Verkaufsbeleg erstellt wird.  </li>
+</ul>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="get-started.html">Einstieg mit dem Konnektor für Shopify</a>  </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Design-Details &#8211; Geb. Montageauftr&#228;ge Programmfertigung </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Design-Details &#8211; Geb. Montageauftr&#228;ge Programmfertigung ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-assembly-order-posting">Designdetails: Montageauftragsbuchung</h1>
+
+<p>Die Montageauftragsbuchung basiert auf demselben Prinzip wie das Buchen ähnlicher Aktivitäten von Verkaufsaufträgen und von Produktionsverbrauch/-aushabe. Die Prinzipien werden jedoch insofern kombiniert, als Montageaufträge ihre eigene Buchungsbenutzeroberfläche, wie für Verkaufsaufträge, haben, während die tatsächliche Postenbuchung im Hintergrund als direkte Artikel- und Ressourcen Buch.-Blattbuchung, wie für den Fertigungsverbrauch, Ausgabe und Kapazität geschieht.  </p>
+<p>Ähnlich wie bei der Fertigungsauftragsbuchung werden die verbrauchten Komponenten und die verwendeten Ressourcen konvertiert und als Montageartikel ausgegeben, wenn der Montageauftrag gebucht wird. Weitere Informationen finden Sie unter <a href="design-details-production-order-posting.html">Designdetails: Produktionsauftragsbuchung</a>. Der Kostenfluss für Montageaufträge ist jedoch weniger Komplex, insbesondere da die Buchung der Montagekosten nur einmal geschieht und daher keinen WIP-Bestand generiert.  </p>
+<p>Die folgenden Buch.-Blattbuchungen treten während der Montageauftragsbuchung auf:  </p>
+<ul>
+<li>Das Artikel Buch.-Blatt bucht die positiven Artikelposten, die Ausgabe des Montageartikels repräsentieren, aus dem Montageauftragskopf.  </li>
+<li>Das Artikel Buch.-Blatt bucht die negativen Artikelposten, die den Verbrauch von Montagekomponenten repräsentieren, aus Montageauftragszeilen.  </li>
+<li>Das Ressourcen-Buch.-Blatt bucht den Verbrauch von Montageressourcen (Zeiteinheiten) aus den Montageauftragszeilen.  </li>
+<li>Das Kapazitäts Buch.-Blatt bucht Wertposten bezüglich des Ressourcenverbrauchs, aus den Montageauftragszeilen.  </li>
+</ul>
+<p>Das folgende Diagramm zeigt die Struktur von Artikel- und Ressourcenposten, die aus der Montageauftragsbuchung resultieren.  </p>
+<p><img src="media/design_details_assembly_posting_1.png" alt="Element-, Ressourcen- und Kapazitäts-Sachkonto-Einträge, die aus der Buchung von Montageaufträgen resultieren." title="Element, Ressource und Kapazitätsposten, die sich aus der Montageauftragsbuchung ergeben">  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Arbeitsplätze und Arbeitsplatzgruppen sind enthalten, um zu veranschaulichen, dass Kapazitätsposten aus der Produktion sowie aus der Montage erstellt werden.  </p>
+</div>
+<p>Die folgenden Diagramm zeigt, wie Montagedaten bei der Buchung in Buchungsposten eingehen.  </p>
+<p><img src="media/design_details_assembly_posting_2.png" alt="Montagebezogener Entry Flow bei der Buchung." title="Montagebezogener Eintragsfluss beim Buchen">  </p>
+<h2 id="posting-sequence">Buchen der Sequenz</h2>
+<p>Die Buchung eines Montageauftrags erfolgt in der folgenden Reihenfolge:  </p>
+<ol>
+<li>Die Montageauftragszeilen werden gebucht.  </li>
+<li>Der Montageauftragskopf wird gebucht.  </li>
+</ol>
+<p>In der folgenden Tabelle wird die Aktionsfolge illustriert.  </p>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buchung initialisieren</td>
+<td>1. Führen Sie Vorprüfungen durch.<br>2. Fügen Sie die Buchungsnummer hinzu, und ändern Sie den Montageauftragskopf.<br>3. Geben Sie den Montageauftrag frei.</td>
+</tr>
+<tr>
+<td>Buchung</td>
+<td><ol><li>Erstellen Sie den gebuchten Montageauftragskopf.</li><li>Kommentarzeilen kopieren.</li><li>Beitragsmontageauftragszeilen (Verbrauch):<br><br> <ol><li>Erstellen Sie ein Statusfenster, um den Montageverbrauch zu berechnen.</li><li>Erhalten Sie die Restmenge, auf der die Artikel Buch.-Blattzeile basiert.</li><li>Setzen Sie die verbrauchten und die verbleibenden Mengen zurück.</li><li>Für Montageauftragszeilen des Typs Artikel:<br><br> <ol><li>Füllen Sie die Felder in der Buch.-Blattzeile aus.</li><li>Übertragen Sie Reservierungen die Artikel Buch.-Blattzeile.</li><li>Buchen Sie die Artikel Buch.-Blattzeilen, um die Artikelposten zu erstellen.</li><li>Erstellen Sie Logistik Buch.-Blattzeilen, und buchen Sie sie.</li></ol></li><li>Für Montageauftragszeilen des Typs Ressource:<br><br> <ol><li>Füllen Sie die Felder in der Buch.-Blattzeile aus.</li><li>Buchen des Artikels Buch.-Blattzeile. Dies erstellt Kapazitätsposten.</li><li>Erstellen und buchen Sie Ressourcen-Buch.-Blattzeilen.</li></ol></li><li>Übertragen Sie Feldwerte aus der Montageauftragszeile in eine neu erstellte gebuchte Montageauftragszeile.</li></ol></li><li>Buchen Sie den Montageauftragskop (Ausgang):<br><br> <ol><li>Füllen Sie die Felder in der Buch.-Blattzeile aus.</li><li>Übertragen Sie Reservierungen die Artikel Buch.-Blattzeile.</li><li>Buchen Sie die Artikel Buch.-Blattzeilen, um die Artikelposten zu erstellen.</li><li>Erstellen Sie Logistik Buch.-Blattzeilen, und buchen Sie sie.</li><li>Setzen Sie die Montagemengen und die verbleibenden Mengen zurück.</li></ol></li></ol></td>
+</tr>
+</tbody>
+</table>
+<div class="IMPORTANT"><h5>Wichtig</h5><p> Anders als für fertiggestellte Artikel, die zu den Soll-Kosten gebucht werden, wird Montageausstoß zu den Ist-Kosten gebucht.  </p>
+</div>
+<h2 id="cost-adjustment">Regulierung Kosten</h2>
+<p> Sobald ein Montageauftrag gebucht wird, in der Bedeutung, dass Komponenten (Material) und Ressourcen in einen neuen Artikel montiert werden, soll die Bestimmung der Ist-Kosten dieses Montageartikels und die Kosten des aktuellen Lagerstatus der betroffenen Komponenten möglich sein. Dies wird durch Weiterleitung von Kosten von den gebuchten Posten der Quelle (den Komponenten und Ressourcen) an die gebuchten Posten des Ziels (die Montageartikel) erreicht. Die Weiterleitung der Kosten wird ausgeführt, indem neue Posten berechnet und generiert werden; diese werden als Regulierungsposten bezeichnet und den Zielposten zugeordnet.  </p>
+<p> Die weiterzuleitenden Montagekosten werden mithilfe des Auftragsebenenerkennungsmechanismus erkannt. Informationen über andere Ausgleichserkennungsmechanismen, siehe <a href="design-details-cost-adjustment.html">Designdetails: Kostenanpassung</a>  </p>
+<h3 id="detecting-the-adjustment">Erkennen der Regulierung</h3>
+<p>Die Entdeckungsfunktion auf Auftragsebene wird in Konvertierungsszenarien, der Produktion und bei der Montage verwendet. Die Feldfunktionen funktionieren wie folgt:  </p>
+<ul>
+<li>Kostenregulierung wird erkannt, indem der Auftrag markiert wird, sobald eine Ressource oder ein Werkstoff als verbraucht/verwendet gebucht wird.  </li>
+<li>Die Kostenweiterleitung entsteht durch Anwenden der Kosten aus dem Werkstoff oder der Ressource auf die Ausstoßposten, die mit dem Auftrag verknüpft sind.  </li>
+</ul>
+<p>Die folgende Grafik zeigt die Regulierungspostenstruktur und die Regulierung der Montagekosten.  </p>
+<p><img src="media/design_details_assembly_posting_3.png" alt="Montagebezogener Entry Flow bei der Kalkulation." title="Montagebezogener Eintragsfluss beim Buchen">  </p>
+<h3 id="performing-the-adjustment">Preiskorrektur durchführen</h3>
+<p>Die Verteilung erkannter Regulierungen von Material- und Ressourcenkosten zu den Montageausgabeposten geschieht durch die Stapelverarbeitung <strong>Lagerreg. fakt. Einst. Preise</strong>. Enthält die Funktion „Mehrstufiger Ausgleich“, die aus den folgenden zwei Elementen besteht:  </p>
+<ul>
+<li>Nehmen Sie einen Montageauftrags-Ausgleich vor, welcher die Kosten aus dem Material- und Ressourcenverbrauch an den Montageausgangsposten weiterleitet. Zeilen 5 und 6 im nachstehenden Algorithmus sind dafür zuständig.  </li>
+<li>Nehmen Sie Ein-Niveau-Anpassungen vor, welche die Kosten für einzelne Artikel mithilfe ihrer Lagerabgangsmethode weiterleiten. Rubriken 9 und 10 im nachstehenden Algorithmus sind für dafür zuständig.  </li>
+</ul>
+<p><img src="media/design_details_assembly_posting_4.jpg" alt="Zusammenfassung des Algorithmus für die Kalkulation der Montagebuchung." title="Zusammenfassung des Kostenanpassungsalgorithmus für die Montagebuchung">  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Das Element „WIP-Regulierungen“ auf den Zeilen 7 und 8 ist für die Weiterleitung von Produktionsmaterial und Kapazitätsnutzung an die Ausgabe nicht abgeschlossener Fertigungsaufträge verantwortlich. Dies wird nicht verwendet, wenn Montageauftragskosten reguliert werden, da der Begriff WIP nicht auf Montage angewendet wird.  </p>
+</div>
+<p>Weitere Informationen darüber, wie Kosten aus der Montage und aus der Produktion in der Finanzbuchhaltung gebucht werden, finden Sie unter <a href="design-details-inventory-posting.html">Designdetails: Bestandesbuchung</a>.  </p>
+<h2 id="assembly-costs-are-always-actual">Montagekosten sind immer Ist-Kosten</h2>
+<p> Das Umlaufbestand- (WIP) Konzept gilt nicht in der Montageauftragsbuchung. Montagekosten werden nur als Ist-Kosten gebucht, nie als erwartete Kosten. Weitere Informationen finden Sie unter <a href="design-details-expected-cost-posting.html">Designdetails: Erwartete Kostenbuchung</a>.  </p>
+<p>Dies wird durch die folgende Datenstruktur ausgeführt.  </p>
+<ul>
+<li>Im Feld <strong>Art</strong> der Artikel Buch.-Blattzeilen in den Tabellen <strong>Kapazitätsposten</strong> und <strong>Wertposten</strong> Tabellen, wird <em>Ressource</em> verwendet, um Montageressourcenposten zu identifizieren.  </li>
+<li>Im Feld <strong>Artikelpostenart</strong> der Artikel Buch.-Blattzeilen, in den Tabellen <strong>Kapazitätsposten</strong> und <strong>Wertposten</strong> Tabellen, werden <em>Montageausgabe</em> und <em>Montageverbrauch</em> verwendet, um die Ausgabemontageartikelposten und verbrauchte Montagekomponentenposten zu identifizieren.  </li>
+</ul>
+<p>Darüber hinaus werden Produktbuchungsgruppen im Montageauftragskopf und in den Montageauftragszeilen standardmäßig wie folgt ausgefüllt.  </p>
+<table>
+<thead>
+<tr>
+<th>Einheit</th>
+<th>Typ</th>
+<th>Buchungsgruppe</th>
+<th>Gen. Produktbuchungsgruppe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Montageauftragskopf</td>
+<td>Artikel</td>
+<td>Lagerbuchungsgruppe</td>
+<td>Gen. Produktbuchungsgruppe</td>
+</tr>
+<tr>
+<td>Montageauftragszeile</td>
+<td>Artikel</td>
+<td>Lagerbuchungsgruppe</td>
+<td>Gen. Produktbuchungsgruppe</td>
+</tr>
+<tr>
+<td>Montageauftragszeile</td>
+<td>Ressource</td>
+<td></td>
+<td>Gen. Produktbuchungsgruppe</td>
+</tr>
+</tbody>
+</table>
+<p>Entsprechend werden nur Ist-Kosten in der Finanzbuchhaltung gebucht, und keine Interimskonten werden aus der Montageauftragsbuchung eingegeben. Weitere Informationen finden Sie unter <a href="design-details-accounts-in-the-general-ledger.html">Designdetails: Konten in der Finanzbuchhaltung</a>.  </p>
+<h2 id="assemble-to-order">Auftragsmontage</h2>
+<p>Der Artikelposten, der aus der Buchung eines Auftragsmontageverkaufs resultiert, wurde für den entsprechenden Artikelposten für die Montageausgabe fest angewendet. Entsprechend werden die Kosten eines Auftragsmontageverkaufs aus dem Montageauftrag abgeleitet, mit dem er verknüpft wurde.  </p>
+<p>Artikelposten des Typs Verkauf, die aus dem Buchen von Auftragsmontagemengen resultieren, werden mit <strong>Ja</strong> im Feld <strong>Auftragsmontage</strong> markiert.  </p>
+<p>Das Buchen von Verkaufsauftragszeilen, bei denen ein Teil eine Lagermenge und ein anderer Teil eine Auftragsmontagemenge darstellt, führt zu separaten Artikelposten, einer für die Lagermenge und einer für die Auftragsmontagemenge.  </p>
+<h3 id="posting-dates">Buchungsdaten</h3>
+<p>Allgemein werden die Buchungsdaten aus einem Verkaufsauftrag in den verknüpften Montage-Auftrag kopiert. Das Buchungsdatum im Montageauftrag wird automatisch aktualisiert, wenn Sie das Buchungsdatum im Verkaufsauftrag direkt oder indirekt ändern, z.B. wenn Sie das Buchungsdatum in der Lagerverladung, der Lagerkommissionierung oder als Teil einer Massenbuchung ändern.</p>
+<p>Sie können das Buchungsdatum im Montage-Auftrag manuell ändern. Es kann jedoch nicht später sein als das Buchungsdatum im verknüpften Verkaufsauftrag. Das System behält dieses Datum bei, es sei denn, Sie aktualisieren das Buchungsdatum im Kundenauftrag.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p> <a href="design-details-inventory-costing.html">Designdetails: Lagerkostenberechnung</a><br> <a href="design-details-production-order-posting.html">Designdetails: Fertigungsauftragsbuchung</a><br> <a href="design-details-costing-methods.html">Designdetails: Kostenberechnungsmethoden</a><br> <a href="finance-manage-inventory-costs.html">Verwalten der Bestandsregulierung</a><br> <a href="finance.html">Finanzen</a><br> <a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

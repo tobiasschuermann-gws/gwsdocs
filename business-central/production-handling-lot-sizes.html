@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Umgang mit Losgr&#246;&#223;en </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Umgang mit Losgr&#246;&#223;en ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="handling-lot-sizes-in-production">Umgang mit Losgrößen in der Produktion</h1>
+
+<p>In Bezug auf die Menge korreliert die Anzahl der Artikel, die Sie in einem Produktionsvorgang produzieren, möglicherweise nicht mit dem Verkauf. Sie können beispielsweise Hunderte von Artikeln in einem einzigen Los produzieren, aber jeden Artikel einzeln verkaufen. Wenn Sie Ihre Produktionswege und Stücklisten konfigurieren, sollten Sie einige Nuancen in Bezug auf die Losgrößen berücksichtigen. In diesem Thema wird beschrieben, wie sich Losgrößen auf Kostenberechnungen und Ressourcenplanung auswirken.</p>
+<h2 id="units-of-measure-in-production-bill-of-materials">Einheiten in der Stückliste</h2>
+<p>Obwohl Sie die Basiseinheit (UOM) für einen Artikel angeben, verwendet Ihre Stückliste möglicherweise eine andere UOM für das fertige Produkt. Beispielsweise könnte die Basis-Stückliste für einen Artikel PCS sein, Ihre Stückliste könnte jedoch eine Palette oder Tonne erfordern. Dies ist praktisch, wenn Ihre Maschinen oder Rohkomponenten die Menge bestimmen. Zum Beispiel möchten Sie wahrscheinlich kein einziges Muffin backen, da es schwierig ist, eine Portion eines Eies zu verwenden. Stattdessen backen Sie eine Menge Muffins, um den Abfall zu reduzieren. Weitere Informationen finden Sie unter <a href="production-how-to-create-production-boms.html">Erstellen von Montagestücklisten</a>.</p>
+<h2 id="lot-size-on-routing-lines">Losgröße auf Arbeitsgänge</h2>
+<p>Aus Routing-Sicht können Sie für Arbeitsgänge eine Losgröße angeben, um sie an die Kapazität der Maschinen anzupassen, die die Artikel produzieren. Die Bearbeitungszeit für Arbeitsgänge wird proportional zur Losgröße reduziert. </p>
+<p>Dies funktioniert gut, wenn die Menge in einem Fertigungsauftrag ein Faktor für die Losgröße auf der Route ist. Wenn Ihr Backblech beispielsweise 10 Muffins aufnehmen kann, sollten Sie 10, 20, 30 usw. backen und nicht 5 oder 15.  Dies ist viel weniger ein Problem, wenn Sie mit großen Mengen arbeiten.</p>
+<p>Die Losgröße ist auch in Fertigungsumgebungen beliebt, in denen die Ausgabe als Menge gemessen wird, die Sie während eines festgelegten Zeitraums herstellen können. Wenn beispielsweise das Volumen pro 9-Stunden-Schicht 25000 Kubikfuß beträgt, können Sie die Laufzeit auf 9 Stunden und die Losgröße auf 25000 einstellen.
+Die Fertigungsauftragsmenge wird weniger wichtig, da im Fertigungsauftrag die Laufzeit als Laufzeit/Losgröße berechnet wird, um die Laufzeit pro Stück zu erhalten.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Der in der Losgröße definierte Wert hat keinen Einfluss auf die im Feld <strong>Aufbauzeit</strong> des Arbeitsgangs definierte Zeit. Die Einrichtung wird nur einmal durchgeführt, selbst wenn mehrere Lose vorhanden sind. Zum Beispiel, damit Sie den Ofen für die zweite Menge Muffins nicht erwärmen müssen. Weitere Informationen finden Sie unter <a href="production-how-to-create-routings.html">Arbeitspläne erstellen</a>.</p>
+</div>
+<h2 id="lot-sizes-for-items-and-stockkeeping-units">Losgrößen für Artikel und Lagereinheiten</h2>
+<p>Für Arbeitspläne definierte Losgrößen stimmen nicht mit Losgrößen für Artikel oder Lagereinheiten überein. Diese Werte werden für einen anderen Zweck verwendet und wirken sich nicht auf die Produktionskapazität aus. </p>
+<h2 id="lot-size-on-item-and-stockkeeping-units">Losgröße für Artikel und Lagereinheiten</h2>
+<p>Bei Artikeln und Lagereinheiten haben Losgrößen folgende Auswirkungen auf die Kostenberechnung und die Lieferplanung:</p>
+<ul>
+<li>Wenn Sie <strong>Kosten inkl. Einrichtung</strong> für die Standardkostenberechnung auf der Seite <strong>Produktionseinrichtung</strong> aktivieren, werden die Kosten für die Einrichtung zu den Standardkosten addiert. Wenn Sie eine Losgröße angeben, werden die Einrichtungskosten für den Routing-Vorgang entsprechend einer Losgröße reduziert. Wenn Ihre auf der Artikelkarte festgelegte Losgröße beispielsweise 10 beträgt und das Erhitzen des Ofens 15 Minuten dauert, werden die Kosten für den Strom für die 10 Muffins als ungefähr 1,5 Minuten zugewiesen. </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Einrichtungskosten werden aus Sicht der Standardkosten- und Kapazitätszuweisung unterschiedlich behandelt. Wenn die produzierte Menge nicht mit der auf der Artikelkarte definierten Losgröße übereinstimmt, führt dies zu Abweichungen. Weitere Informationen finden Sie unter <a href="finance-manage-inventory-costs.html">Lagerbestandkosten verwalten</a>. <!--not sure that I got this part right seems to repeat the first example.--></p>
+</div>
+<p>Bei der Lieferplanung funktioniert die Losgrößeneinstellung für Artikel mit dem <strong>Standarddämpfer%</strong> auf der Seite <strong>Produktionseinrichtung</strong>. Business Central ignoriert Änderungen der Nachfrage, die unter dem Toleranzprozentsatz liegen, und erstellt keine Planungsvorschläge. Zum Beispiel ist 15 im Feld Standardtoleranz% angegeben, und wir haben einen Produktionsauftrag für 20 Muffins, um 20 Gäste zu verpflegen, aber ein Gast kann nicht teilnehmen. Business Central ignoriert den einzelnen nicht anwesenden Gast, da er nur 10% der auf dem Artikel definierten Losgröße 10 entspricht. Wenn es jedoch zwei Gäste nicht schaffen, Business Central wird vorgeschlagen, dass wir die Bestellmenge reduzieren, da zwei 20% der Losgröße entspricht. Weitere Informationen zur Planung finden Sie unter <a href="production-planning.html">Planung</a>.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="production-how-to-create-production-boms.html">Fertigungsauftrag erstellen</a><br><a href="production-how-to-use-the-manufacturing-batch-unit-of-measure.html">Arbeiten mit Produktionsgsloseinheiten</a>
+<a href="production-how-to-create-routings.html">Routings erstellen</a><br><a href="finance-manage-inventory-costs.html">Verwalten der Lagerregulierung</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

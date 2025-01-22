@@ -1,0 +1,748 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Designdetailsl- Artikelausgleich | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Designdetailsl- Artikelausgleich | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-item-application">Designdetails: Artikelausgleich</h1>
+
+<p>Wenn Sie eine Lagertransaktion buchen, wird die Mengenbuchung in den Artikelposten, die Wertbuchungen in den Wertposten erfasst. Weitere Informationen finden Sie unter <a href="design-details-inventory-posting.html">Designdetails: Planungsbuchung</a>.  </p>
+<p>Darüber hinaus wird ein Artikelausgleich erstellt, um den Kostenempfänger mit seiner Kostenquelle zu verknüpfen, damit eine Kostenweiterleitung entsprechend der Kostenmethode erfolgen kann. Weitere Informationen finden Sie unter <a href="design-details-costing-methods.html">Designdetails: Lagerabgangsmethoden</a>.  </p>
+<p>Business Central nimmt zwei Arten von Artikelausgleich vor.  </p>
+<table>
+<thead>
+<tr>
+<th>Anwendungstyp</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mengenausgleich</td>
+<td>Erstellt für alle Bestandstransaktionen</td>
+</tr>
+<tr>
+<td>Ausgleich Lagerwert reguliert</td>
+<td>Erstellt für eingehende Posten zusammen mit einem Mengenausgleich als Folge eines Benutzereingriffs in speziellen Prozessen.</td>
+</tr>
+</tbody>
+</table>
+<p>Artikelausgleiche können folgendermaßen vorgenommen werden.  </p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Description</th>
+<th>Anwendungstyp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automatisch</td>
+<td>Tritt als allgemeine Kosten entsprechend der Lagerabgangsmethode auf</td>
+<td>Mengenausgleich</td>
+</tr>
+<tr>
+<td>Fixiert</td>
+<td>Durch den Benutzer erstellt, wenn:<br><br> -   Verarbeiten von Rücklieferungen<br>-   Buchungskorrekturen<br>-   Mengenbuchungen rückgängig machen<br>-   Direktlieferung erstellen <strong>Hinweis</strong>  Der feste Ausgleich kann entweder manuell durch Eingabe einer Postennummer im Feld <strong>Ausgegl. von Artikelposten</strong> oder mithilfe einer Funktion durchgeführt werden, wie etwa <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong>.</td>
+<td>Mengenausgleich<br><br> Kostenanwendung <strong>Hinweis:</strong> Der Kostenausgleich tritt nur in eingehenden Transaktionen auf, bei denen das Feld <strong>Ausgegl. von Artikelposten</strong> ausgefüllt ist, um einen festen Ausgleich zu erstellen. Siehe die folgende Tabelle.</td>
+</tr>
+</tbody>
+</table>
+<p>Ob Mengen-Anwendungen oder Kostenanträge gemacht werden, hängt von der Richtung der Lagertransaktion und auch davon ab, ob der Artikelausgleich in Verbindung mit Systemprozessen automatisch gesetzt oder korrigiert wird.  </p>
+<p>Die nachstehende Tabelle zeigt, basierend auf den zentralen Ausgleichsfeldern auf Lagertransaktionzeilen, wie die Kosten je nach Transaktionsrichtung fließen. Gibt auch an, wann und warum der Artikelausgleich den Typ Menge oder Kosten hat.  </p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Ausgleich mit Artikelpostenfeld</th>
+<th>Ausgegl. von Artikelpostenfeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anwendung für ausgehenden Posten</td>
+<td>Der ausgehende Posten ruft die Kosten aus dem offenen eingehenden Posten ab.<br><br> <strong>Mengenausgleich</strong></td>
+<td>Nicht unterstützt</td>
+</tr>
+<tr>
+<td>Anwendung für eingehenden Posten</td>
+<td>Der eingehende Posten verschiebt die Kosten in den offenen ausgehenden Posten.<br><br> Der eingehende Posten ist die Kostenquelle.<br><br> <strong>Mengenausgleich</strong></td>
+<td>Der eingehende Posten ruft die Kosten aus dem ausgehenden Posten ab. <strong>Hinweis:</strong>  Wenn dieser festen Ausgleich vorgenommen wird, wird die eingehende Transaktion als Verkaufsreklamation verarbeitet. Daher bleibt der ausgeglichene ausgehende Posten offen. <br><br> Der eingehende Posten ist NICHT die Kostenquelle.<br><br> <strong>Ausgleich Lagerwert reguliert</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Eine Verkaufsreklamation gilt NICHT als Kostenquelle, wenn &quot;Fest&quot; angewendet wird.  </p>
+<p>Der Verkaufsposten bleibt offen, bis die tatsächliche Herkunft gebucht wird.  </p>
+</div>
+<p>In einem Artikelausgleichsposten werden folgende Informationen erfasst.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Artikelposten Lfd. Nr.</strong></td>
+<td>Die Nummer des Artikelpostens für die Transaktion, für die dieser Ausgleichsposten erstellt wird</td>
+</tr>
+<tr>
+<td><strong>Eingeh. Artikelposten Lfd. Nr.</strong></td>
+<td>Ausgeh. Artikelposten Lfd. Nr.: Die Artikelpostennummer des Lagereingangs, mit dem die Transaktion verknüpft werden soll (sofern möglich).</td>
+</tr>
+<tr>
+<td><strong>Ausgeh. Artikelposten Lfd. Nr.</strong></td>
+<td>Ausgeh. Artikelposten Lfd. Nr.: Die Artikelpostennummer des Lagerabgangs, mit dem die Transaktion verknüpft werden soll (sofern möglich).</td>
+</tr>
+<tr>
+<td><strong>Menge</strong></td>
+<td>Die zu erfassende Menge</td>
+</tr>
+<tr>
+<td><strong>Buchungsdatum</strong></td>
+<td>Das Buchungsdatum der Transaktion</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inventory-increase">Lagerzugänge</h2>
+<p>Wenn Sie einen Lagerzugang buchen, wird ein einfacher Artikelausgleichsposten erfasst, ohne dass ein Ausgleich für einen ausgehenden Posten vorgenommen wird.  </p>
+<h3 id="example">Beispiel</h3>
+<p>Die folgende Tabelle zeigt den Artikelausgleichsposten, der erstellt wird, wenn Sie eine Einkaufslieferung mit 10 Stück buchen.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Eingeh. Artikelposten Lfd. Nr.</th>
+<th>Ausgeh. Artikelposten Lfd. Nr.</th>
+<th>Menge</th>
+<th>Artikelposten Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>1</td>
+<td>0</td>
+<td>10</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="inventory-decrease">Lagerabgänge</h2>
+<p>Wenn Sie einen Lagerabgang buchen, wird ein Artikelausgleichsposten erfasst, der den Lagerbagang mit einem Lagerzugang verknüpft. Diese Verknüpfung wird erstellt, indem die Lagerabgangsmethode des Artikels verwendet wird. Für Artikel mit den Kostenberechnungsmethoden FIFO, Standard und Durchschnitt basiert die Verknüpfung auf dem FIFO-Prinzip. Die Bestandsminderung wird auf die Bestandserhöhung mit dem frühesten Buchungsdatum angewendet. Für Artikel mit der Kostenberechnungsmethode LIFO basiert die Verknüpfung auf dem LIFO-Prinzip. Die Bestandsminderung wird auf die Bestandserhöhung mit dem neuesten Buchungsdatum angewendet.  </p>
+<p>In der Tabelle <strong>Artikelposten</strong> enthält das Feld <strong>Restmenge die Menge</strong>, für die es noch keine Verknüpfung gibt. Wenn die Restmenge größer als 0 ist, wird das Kontrollkästchen <strong>Offen</strong> aktiviert.  </p>
+<h3 id="example-1">Beispiel</h3>
+<p>Das folgende Beispiel zeigt einen Artikelausgleichsposten, der erstellt wird, wenn Sie eine Verkaufslieferung buchen, die 5 Einheiten der Artikel umfasst, die im vorherigen Beispiel eingegangen sind. Der erste Artikelausgleichsposten ist der Einkaufseingang. Der zweite Ausgleichsposten ist die Verkaufslieferung.  </p>
+<p>Die folgende Tabelle zeigt die beiden Artikelausgleichsposten, die aus der Bestandserhöhung und der Bestandsminderung resultieren.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Eingeh. Artikelposten Lfd. Nr.</th>
+<th>Ausgeh. Artikelposten Lfd. Nr.</th>
+<th>Menge</th>
+<th>Artikelposten Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>1</td>
+<td>0</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr>
+<td>01-03-20</td>
+<td>1</td>
+<td>2</td>
+<td>-5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fixed-application">fester Ausgleich</h2>
+<p>Sie können einen festen Ausgleich vornehmen, wenn Sie angeben, dass die Kosten eines Lagerzugangs einem bestimmten Lagerabgang (oder umgekehrt) zugeordnet werden sollen. Der feste Ausgleich betrifft die verbleibenden Mengen der Posten , er kehrt aber auch die exakten Kosten des ursprünglichen Postens um, zu oder von dem Sie den Ausgleich durchführen.  </p>
+<p>Für einen festen Ausgleich verwenden Sie das Feld <strong>Ausgleich mit Lfd. Nr</strong>. oder <strong>Ausgegl. von Posten in den Belegzeilen</strong>, um den Artikelposten anzugeben, der mit der Transaktionszeile (oder ab dieser) verknüpft werden soll. Beispielsweise könnten Sie einen festen Ausgleich vornehmen, wenn Sie einen Kostenausgleich erstellen möchten, mit dem eine Verkaufsreklamation mit einer bestimmten Verkaufslieferung verknüpft werden soll, damit die Kosten der Verkaufslieferung exakt storniert werden. In diesem Fall ignoriert Business Central die Lagerabgangsmethode ignoriert und der Lagerabgang (oder Lagerzugang, wenn es sich um eine Verkaufsreklamation handelt) mit dem von Ihnen angegebenen Artikelposten verknüpft. Das Vornehmen eines festen Ausgleichs hat den Vorteil, dass die Kosten der ursprünglichen Transaktion an die neue Transaktion übergeben werden können.  </p>
+<h3 id="example--fixed-application-in-purchase-return">Beispiel – Fester Ausgleich in der Einkaufsreklamation</h3>
+<p>Das folgende Beispiel, das die Auswirkungen des festen Ausgleichs einer Einkaufsreklamation eines Artikels zeigt, der die FIFO-Kostenbewertungsmethode verwendet, basiert auf dem folgenden Szenario:  </p>
+<ol>
+<li>In Postennummer 1 bucht der Benutzer einen Einkauf zu den Kosten von MW 10,00.  </li>
+<li>In Postennummer 2 bucht der Benutzer einen Einkauf zu den Kosten von MW 20,00.  </li>
+<li>In Postennummer 3 bucht der Benutzer eine Einkaufsreklamation. Der Benutzer erstellt einen festen Ausgleich für den zweiten Verkauf, indem er die Artikelpostennummer im Feld <strong>Anwendung für Artikeleintrag</strong> in der Reklamationszeile eingibt.  </li>
+</ol>
+<p>Die folgende Tabelle zeigt Artikelposten an, die aus dem Szenario resultieren.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Buchungsdatum</strong></th>
+<th><strong>Artikelpostenart</strong></th>
+<th><strong>Menge</strong></th>
+<th><strong>Einstandsbetrag (tatsächl.)</strong></th>
+<th><strong>Artikelposten Lfd. Nr.</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-04-20</td>
+<td>Einkauf</td>
+<td>10</td>
+<td>10.00</td>
+<td>1</td>
+</tr>
+<tr>
+<td>01-05-20</td>
+<td>Einkauf</td>
+<td>10</td>
+<td>20.00</td>
+<td>2</td>
+</tr>
+<tr>
+<td>01-06-20</td>
+<td>Einkauf (Reklamation)</td>
+<td>-10</td>
+<td>-20.00</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Da ein fester Ausgleich aus der Einkaufsreklamation für den zweiten Einkaufsposten durchgeführt wird, werden die Artikel mit den richtigen Kosten zurückgegeben. Wenn der Benutzer nicht den festen Ausgleich ausgeführt hätte, dann wäre der zurückgegebene Artikel falsch mit MW 10,00 bewertet worden, da die Rückgabe gemäß dem FIFO-Prinzip auf den ersten Einkaufsposten angewendet worden wäre.  </p>
+<p>Die folgende Tabelle zeigt den Artikelausgleichsposten, der aus dem festen Ausgleich resultiert.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Eingeh. Artikelposten Lfd. Nr.</th>
+<th>Ausgeh. Artikelposten Lfd. Nr.</th>
+<th>Menge</th>
+<th>Artikelposten Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-06-20</td>
+<td>2</td>
+<td>3</td>
+<td>10</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Der Einstandsbetrag wird dann LCY 20.00, richtig mit der Einkaufsreklamation verknüpft.  </p>
+<h3 id="example--fixed-application-with-average-cost">Beispiel – Fester Ausgleich mit Durchschnittskosten</h3>
+<p>Das folgende Beispiel, das die Auswirkungen des festen Ausgleichs einer Einkaufsreklamation, basiert auf dem folgenden Szenario eines Artikels mit der Durchschnittskostenbewertungsmethode:  </p>
+<ol>
+<li>In Postennummer 1 und 2 bucht der Benutzer zwei Einkaufsrechnungen. Die zweite Rechnung hat den falschen EK-Preis von MW 1000,00.  </li>
+<li>Mit der Buchungsnummer 3 bucht der Benutzer eine Einkaufsgutschrift mit einem festen Ausgleich für den Einkaufsposten mit den falschen direkten Einheitskosten. Die Summe des Feldes <strong>Kostenbetrag (Ist)</strong> für die zwei fest ausgeglichenen Wertposten wird 0,00  </li>
+<li>In Postennummer 4 bucht der Benutzer eine andere Einkaufsrechnung mit dem korrekten Direkteinheitspreis von MW 100,00  </li>
+<li>In Postennummer 5 bucht der Benutzer eine Verkaufsrechnung.  </li>
+<li>Die Bestandsmenge ist 0, und der Bestandwert ist ebenfalls 0,00.  </li>
+</ol>
+<p>Die folgende Tabelle zeigt das Ergebnis des Szenarios auf die Wertposten des Artikels an.  </p>
+<p>Die folgende Tabelle zeigt das Ergebnis des Szenarios für die Wertposten des Artikels, nachdem die Buchung abgeschlossen und die Kostenanpassung durchgeführt wurde.</p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Artikelpostenart</th>
+<th>Bewertete Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Ausgleich mit Artikelposten</th>
+<th>Bew. z. Einst.-Pr. (durchschn.)</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Postennr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>200.00</td>
+<td></td>
+<td>Nein</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>1000.00</td>
+<td></td>
+<td>Nein</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>-1</td>
+<td>-1000</td>
+<td>2</td>
+<td>Nein</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>100.00</td>
+<td></td>
+<td>Nein</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Verkauf</td>
+<td>-2</td>
+<td>-300.00</td>
+<td></td>
+<td>Ja</td>
+<td>5</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Wenn der Benutzer nicht den festen Ausgleich zwischen der Einkaufsgutschrift und dem Einkauf mit dem falschen EK-Preis (Schritt 2 im vorherigen Szenario) eingerichtet hätte, dann würden die Kosten anders reguliert worden sein.  </p>
+<p>Die folgende Tabelle zeigt die Auswirkung auf die Wertposten des Artikels an, wenn Schritt 2 im vorherigen Szenario ohne einen festen Ausgleich ausgeführt wird.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Artikelpostenart</th>
+<th>Bewertete Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Bew. z. Einst.-Pr. (durchschn.)</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Postennummer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>200.00</td>
+<td>Nein</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>1000.00</td>
+<td>Nein</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>-1</td>
+<td>433,33</td>
+<td>Ja</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>100.00</td>
+<td>Nein</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Verkauf</td>
+<td>-2</td>
+<td>866,67</td>
+<td>Ja</td>
+<td>5</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>In Postennummer 3 wird der Wert im Feld <strong>Kostenbetrag (Ist)</strong> durch die Methode „Durchschnitt“ bewertet und enthält daher die fehlerhafte Buchung von 1000,00. Entsprechend ergibt sich -433,33, d.h. ein überhöhter Kostenbetrag. Die Berechnung lautet: 1300 / 3 = .-433,33.  </p>
+<p>In Postennummer 5 ist der Wert des -Felds <strong>Kostenbetrag (Ist)</strong> für diesen Posten aus dem gleichen Grund ebenfalls falsch.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn Sie einen festen Ausgleich für einen Lagerabgang eines Artikels erstellen, für den die Lagerabgangsmethode &quot;Durchschnitt&quot; festgelegt ist, wird dem Abgang nicht wie üblich der durchschnittliche Einstandspreis, sondern der von Ihnen angegebene Einstandspreis des Lagerzugangs zugeordnet. Dieser Lagerabgang wird damit nicht länger in die Berechnung des durchschnittlichen Einstandspreises einbezogen.  </p>
+</div>
+<h3 id="example--fixed-application-in-sales-return">Beispiel – Fester Ausgleich in der Verkaufsreklamation</h3>
+<p>Feste Ausgleiche sind ebenfalls sehr gut dafür geeignet, Kosten exakt umzukehren, etwa bei Verkaufsreklamationen.  </p>
+<p>Das folgende Beispiel, das zeigt, wie ein fester Ausgleich die genaue Kostenumkehrung sicherstellt, basiert auf dem folgenden Szenario:  </p>
+<ol>
+<li>Der Benutzer bucht eine Einkaufsrechnung.  </li>
+<li>Der Benutzer bucht eine Verkaufsrechnung.  </li>
+<li>Der Benutzer bucht eine Verkaufsgutschrift für den zurückgesendeten Artikel, der für den Verkaufsposten gilt, um die Kosten korrekt zu stornieren.  </li>
+<li>Frachtkosten, die mit der zuvor gebuchten Einkaufsbestellung verbunden sind, gehen ein. Der Benutzer bucht dies als Artikel Zu-/Abschlag.  </li>
+</ol>
+<p>Die folgende Tabelle zeigt das Ergebnis der Szenarioschritte 1 bis 3 für die Wertposten des Artikels an.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Artikelpostenart</th>
+<th>Bewertete Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Ausgegl. von Artikelposten</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Postennr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>1000.00</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>02-01-20</td>
+<td>Verkauf</td>
+<td>-1</td>
+<td>1000.00</td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>Verkauf (Gutschrift)</td>
+<td>1</td>
+<td>1000</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Die folgende Tabelle enthält den Wertposten,der aus Szenarioschritt 4, Buchung der Artikelkosten, resultiert.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Artikelpostenart</th>
+<th>Bewertete Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Ausgegl. von Artikelposten</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Postennr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>04-01-20</td>
+<td>(Artikel Zu-/Abschlag)</td>
+<td>1</td>
+<td>100.00</td>
+<td></td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Die folgende Tabelle zeigt die Auswirkung der exakten Kostenumkehrung der Wertposten des Artikels an.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Artikelpostenart</th>
+<th>Bewertete Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Ausgegl. von Artikelposten</th>
+<th>Artikelposten Lfd. Nr.</th>
+<th>Postennr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>1</td>
+<td>1000.00</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>02-01-20</td>
+<td>Verkauf</td>
+<td>-1</td>
+<td>1100.00</td>
+<td></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>Verkauf (Gutschrift)</td>
+<td>1</td>
+<td>1100.00</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>04-01-20</td>
+<td>(Artikel Zu-/Abschlag)</td>
+<td>1</td>
+<td>100.00</td>
+<td></td>
+<td>1</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Wenn Sie die Stapelverarbeitung <strong>Kostenanpassung Artikeleinträge</strong> ausführen, werden die erhöhten Kosten des Einkaufspostens aufgrund des Zu-/Abschlags (Artikelnummer) zum Verkaufsposten weitergeleitet (Postennummer 2). Der Verkaufsposten übergibt dann diese erhöhten Kosten an den Verkaufsgutschriftposten weiter (Postennummer 3). Das Endergebnis ist, dass die Kosten korrekt umgekehrt werden.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn Sie mit Retouren oder Gutschriften arbeiten und das Feld <strong>Einst.-Pr.-Rückverfolg. notw</strong> entweder auf der Seite <strong>Kreditoren &amp; Einkauf Einr.</strong> oder auf der Seite <strong>Debitoren &amp; Verkauf Einr.</strong> entsprechend Ihrer Situation eingerichtet haben, dann füllt Business Central automatisch die verschiedenen Eingabefelder der Anwendung aus, wenn Sie die Funktion <strong>Aus Dokument kopieren</strong> verwenden. Wenn Sie die Funktion <strong>Zu stornierende gebuchte Belegzeilen abrufen</strong> verwenden, werden diese Felder immer automatsich ausgefüllt.  </p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p> Wenn Sie eine Transaktion mit einem festen Ausgleich buchen und der Artikelposten, zu dem Sie verknüpfen, ist geschlossen (d. h. die Restmenge ist gleich 0), wird automatisch der alte Ausgleich zurückgenommen und erneut mit dem Artikelposten ausgeglichen, wobei der von Ihnen angegebene feste Ausgleich verwendet wird.  </p>
+</div>
+<h2 id="transfer-application">Umlagerungs-Anwendung</h2>
+<p>Wenn ein Artikel von einem Lagerort zu einem anderen innerhalb des Bestands übertragen wird, wird eine Anwendung zwischen den beiden Übergangsposten erstellt. Die Bewertung eines Übergangspostens hängt von der Lagerabgangsmethode ab. Für Artikel mit der Kostenberechnungsmethode Durchschnitt wird Bewertung mithilfe der durchschnittlichen Kosten in der Durchschnittskostenperiode erstellt, in der das Bewertungsdatum der Übertragung auftritt. Für Artikel mit anderen Kostenbewertungsmethoden wird die Bewertung durch Rückverfolgung zu den Kosten der ursprünglichen Bestandszunahme durchgeführt.  </p>
+<h3 id="example--average-costing-method">Beispiel - Durchschnittskostenberechnungsmethode</h3>
+<p>Das folgende Beispiel, das zeigt, wie Übergangsposten ausgeglichen werden, basiert auf dem folgenden Szenario für einen Artikel mit der Durchschnittskostenbewertungsmethode und der Durchschnittskostenperiode Tag.  </p>
+<ol>
+<li>Der Benutzer kauft den Artikel zu einem Preis von MW 10,00 ein.  </li>
+<li>Der Benutzer kauft den Artikel erneut zu einem Preis von MW 20,00 ein.  </li>
+<li>Der Benutzer lagert den Artikel von Lagerort OST zu WEST um.  </li>
+</ol>
+<p>Die folgende Tabelle zeigt die Auswirkung der Umlagerung auf die Wertposten des Artikels an.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Artikelpostenart</th>
+<th>Lagerortcode</th>
+<th>Bewertete Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Eingabenr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>OST</td>
+<td>1</td>
+<td>10,00</td>
+<td>1</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>OST</td>
+<td>1</td>
+<td>20,00</td>
+<td>2</td>
+</tr>
+<tr>
+<td>02-01-20</td>
+<td>Umlagerung</td>
+<td>OST</td>
+<td>-1</td>
+<td>15.00</td>
+<td>3</td>
+</tr>
+<tr>
+<td>02-01-20</td>
+<td>Umlagerung</td>
+<td>WEST</td>
+<td>1</td>
+<td>15.00</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example--standard-costing-method">Beispiel - Lagerabgangsmethode</h3>
+<p>Das folgende Beispiel, das zeigt, wie Übergangsposten ausgeglichen werden, basiert auf dem folgenden Szenario für einen Artikel mit der Standardkostenbewertungsmethode und der Durchschnittskostenperiode Tag.  </p>
+<ol>
+<li>Der Benutzer kauft den Artikel zu einem Standardpreis von MW 10,00 ein.  </li>
+<li>Der Benutzer überträgt den Artikel aus Lagerort OST zu WEST zu einem Einstandspreis (fest) von MW 12,00.  </li>
+</ol>
+<p>Die folgende Tabelle zeigt die Auswirkung der Umlagerung auf die Wertposten des Artikels an.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Artikelpostenart</th>
+<th>Lagerortcode</th>
+<th>Bewertete Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Eingabenr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>Einkauf</td>
+<td>OST</td>
+<td>1</td>
+<td>10,00</td>
+<td>1</td>
+</tr>
+<tr>
+<td>02-01-20</td>
+<td>Umlagerung</td>
+<td>OST</td>
+<td>-1</td>
+<td>10,00</td>
+<td>2</td>
+</tr>
+<tr>
+<td>02-01-20</td>
+<td>Umlagerung</td>
+<td>WEST</td>
+<td>1</td>
+<td>10,00</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Da der Wert des ursprünglichen Bestandszunahme MW 10,00 ist, wird die Übertragung zu diesen Kosten bewertet, nicht mit MW 12,00.  </p>
+<h2 id="reapplication">Erneuter Ausgleich</h2>
+<p>Wegen der Art, in der Einstandspreise berechnet werden, kann ein fehlerhafter Artikelausgleich zu falschen durchschnittlichen Einstandspreisen und zu falschen Einstandspreisen führen. Der folgenden Szenarien verursachen möglicherweise falsche Artikelausgleiche, was erfordert, dass Sie Artikelausgleiche annullieren und Artikelposten erneut ausgleichen:  </p>
+<ul>
+<li>Sie haben vergessen, einen festen Ausgleich vorzunehmen.  </li>
+<li>Sie haben einen fehlerhaften festen Ausgleich vorgenommen.  </li>
+<li>Sie möchten die erstellte Anwendung automatisch beim Buchen überschreiben, entsprechend der Lagerabgangsmethode des Artikels.  </li>
+<li>Sie müssen einen Artikel zurückliefern, für den bereits ein Verkauf manuell angewendet wurde, ohne die Funktion <strong>Zu stornierende Belegzeilen abrufen</strong> zu verwenden und daher die Anwendung annullieren.  </li>
+</ul>
+<p>Business Central bietet eine Funktion zum Analysieren und Korrigieren der Artikelausgleiche. Dieser Vorgang wird auf der Seite <strong>Arbeitsblatt anwenden</strong> ausgeführt.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="design-details-inventory-zero-level-open-item-ledger-entries.html">Designdetails: Bekannte Artikelanwendungsprobleme</a><br><a href="design-details-inventory-costing.html">Designdetails: Lagerkostenberechnung</a><br><a href="design-details-costing-methods.html">Designdetails: Kostenberechnungsmethoden</a><br><a href="design-details-average-cost.html">Designdetails: Durchschnittskosten</a><br><a href="design-details-cost-adjustment.html">Designdetails: Kostenregulierung</a><br><a href="finance-manage-inventory-costs.html">Verwalten der Bestandsregulierung</a><br><a href="finance.html">Finanzen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

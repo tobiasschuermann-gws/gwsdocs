@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Designdetails: Kostenberechnungsmethoden </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Designdetails: Kostenberechnungsmethoden ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-costing-methods">Designdetails: Kostenberechnungsmethoden</h1>
+
+<p>Die Lagerabgangsmethode legt fest, ob ein tatsächlicher oder ein budgetierter Wert gebucht und in der Berechnung des Einstandspreises verwendet werden soll. Zusammen mit dem Buchungsdatum und der -reihenfolge beeinflusst die Lagerabgangsmethode auch, wie der Kostenfluss aufgezeichnet wird.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können die Lagerabgangsmethode eines Artikels nicht ändern, wenn Artikelposten für den Artikel vorhanden sind. Weitere Informationen finden Sie unter <a href="design-details-changing-costing-methods.html">Enwurfsdetails: Die Lagerabgangsmethode für Artikel ändern</a>.</p>
+</div>
+<p>Die folgenden Methoden werden in Business Central unterstützt:  </p>
+<table>
+<thead>
+<tr>
+<th>Lagerabgangsmethode</th>
+<th>Beschreibung</th>
+<th>Anwendungsbeispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FIFO</td>
+<td>Der Einstandspreis eines Artikels ist der tatsächliche Wert jedes Eingangs des Artikels, nach der FIFO-Regel ausgewählt.<br><br> In der Lagerbewertung wird angenommen, dass die ersten Artikel, die im Lager platziert sind, zuerst verkauft werden.</td>
+<td>In Unternehmensumgebungen, in denen die Produktkosten stabil sind.<br><br> Wenn Preise steigen, zeigt die Bilanz größeren Wert. Das bedeutet, dass Steuerverbindlichkeiten zunehmen, aber die Bonität und die Möglichkeit, Bargeld zu borgen verbessert sich.<br><br> Verwendung für Artikel mit einem begrenzten Haltbarkeitsdatum, da die ältesten Waren verkauft werden müssen, bevor sie ihr Mindesthaltbarkeitsdatum überschreiten.</td>
+</tr>
+<tr>
+<td>LIFO</td>
+<td>Der Einstandspreis eines Artikels ist der tatsächliche Wert jedes Eingangs des Artikels, nach der LIFO-Regel ausgewählt.<br><br> In der Lagerbewertung wird angenommen, dass die letzten Artikel, die im Lager platziert sind, zuerst verkauft werden.</td>
+<td>Nicht zugelassen in vielen Ländern/Regionen, da es verwendet werden kann, um den Deckungsbeitrag zu drücken.<br><br> Wenn Preise steigen, reduziert sich der Wert in den GuV-Konten. Das bedeutet, dass Steuerverbindlichkeiten abnehmen, aber die Möglichkeit, Bargeld zu borgen verschlechtert sich.</td>
+</tr>
+<tr>
+<td>Durchschnitt</td>
+<td>Der Einstandspreis eines Artikels wird, wie der durchschnittliche Einstandspreis, an jedem Zeitpunkt nach einem Kauf berechnet.<br><br> Für die Lagerbestandsbewertung wird vorausgesetzt, dass alle Lagerbestände gleichzeitig verkauft werden.</td>
+<td>In Unternehmensumgebungen, in denen die Produktkosten nicht stabil sind.<br><br> Vorgehensweise bei gestapelten oder miteinander kombinierten Beständen, die nicht unterschieden werden können, wie z.B. bei Chemikalien.</td>
+</tr>
+<tr>
+<td>Spezifisch</td>
+<td>Der Einstandspreis eines Artikels sind die exakten Kosten, zu denen die bestimmte Einheit empfangen wurden.</td>
+<td>Verwendung in der Produktion oder Handel von einfach identifizierbaren Artikeln mit sehr hohen Einstandspreis.<br><br> Für Artikel, die Zu-/Abschlägen unterliegen.<br><br> Verwendung für Artikel mit Seriennummern.</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>Der Einstandspreis eines Artikels ist voreingestellt basierend auf vorkalkulierten Kosten.<br><br> Wenn die Ist-Kosten später realisiert werden, muss der Einstandspreis (fest) auf die Ist-Kosten durch Abweichungswerte reguliert werden.</td>
+<td>Wird verwendet, wo Kostenkontrolle kritisch ist.<br><br> In der wiederholenden Produktion zu verwenden, um die Kosten des Fertigungsmaterials, direkte Arbeit und Produktionsgemeinkosten zu bewerten.<br><br> Wird verwendet, wo es Kategorie und Mitarbeiter gibt, um die Vorgaben beizubehalten.</td>
+</tr>
+</tbody>
+</table>
+<p>Die folgenden Bild zeigt, wie Kosten für jede Kostenbewertungsmethode den Bestand durchlaufen.  </p>
+<p><img src="media/design_details_inventory_costing_7_costing_methods.png" alt="Kalkulationsmethoden visualisiert." title="Kalkulationsmethoden visualisiert">  </p>
+<p>Kostenberechnungsmethoden unterscheiden sich in der Art, wie sie Lagerabgänge bewerten und dahingehend, ob sie Ist-Kosten oder Standardkosten als Bewertungsbasis verwenden. Die verschiedenen Eigenschaften werden in der folgenden Tabelle beschrieben. (Die LIFO-Methode ist ausgeschlossen, da diese der FIFO-Methode ähnlich ist)  </p>
+<!--Old  table
+|Category|FIFO|Average|Standard|Specific|  
+|-|----------|-------------|--------------|--------------|  
+|General characteristic|Easy to understand|Based on period options: **Day**/**Week**/**Month**/**Quarter**/**Accounting Period**.<br /><br /> Can be calculated per item or per item/location/variant.|Easy to use, but requires qualified maintenance.|Requires item tracking on both inbound and outbound transaction.<br /><br /> Typically used for serialized items.|  
+|Application/Adjustment|Application keeps track of **the remaining quantity**.<br /><br /> Adjustment forwards costs according to quantity application.|Application keeps track of the **remaining quantity**.<br /><br /> Costs are calculated and forwarded per the **valuation date**.|Application keeps track of the **remaining quantity**.<br /><br /> Application is based on FIFO.|All applications are fixed.|  
+|Revaluation|Revalues invoiced quantity only.<br /><br /> Can be done per item or per item ledger entry.<br /><br /> Can be done backward in time.|Revalues invoiced quantity only.<br /><br /> Can be done per item only.<br /><br /> Can be done backward in time.|Revalues invoiced and un-invoiced quantities.<br /><br /> Can be done per item or per item ledger entry.<br /><br /> Can be done backward in time.|Revalues invoiced quantity only.<br /><br /> Can be done per item or per item ledger entry.<br /><br /> Can be done backward in time.|  
+|Miscellaneous|If you back-date an inventory decrease, then existing entries are NOT reapplied to provide a correct FIFO cost flow.|If you back-date an inventory increase or decrease, then the average cost is recalculated, and all affected entries are adjusted.<br /><br /> If you change the period or calculation type, then all affected entries must be adjusted.|Use the **Standard Worksheet** page to periodically update and roll up standard costs.<br /><br /> Is NOT supported per SKU.<br /><br /> No historic records exist for standard costs.|You can use specific item tracking without using the Specific costing method. Then the cost will NOT follow the lot number, but the cost assumption of the selected costing method.|  
+-->
+<!--Table flipped for slightly better readability -->
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Allgemeine Eigenschaft</th>
+<th>Anwendung/Regulierung</th>
+<th>Neubewertung</th>
+<th>Sonstiges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FIFO</strong></td>
+<td>Einfach zu verstehen</td>
+<td>Anwendung verfolgt <strong>die Restmenge</strong>.<br><br> Die Regulierung überträgt Kosten je nach Mengenanwendung vorwärts.</td>
+<td>Bewertet nur die fakturierte Menge neu.<br><br> Kann pro Artikel oder pro Artikelposten durchgeführt werden.<br><br> Kann rückwirkend geschehen.</td>
+<td>Wenn Sie eine Bestandsminderung zurückdatieren, werden bestehende Posten NICHT erneut ausgeglichen, um einen korrekten FIFO-Kostenfluss bereitzustellen.</td>
+</tr>
+<tr>
+<td><strong>Durchschnitt</strong></td>
+<td>Basierend auf Periodenoptionen: <strong>Tag</strong>/<strong>Woche</strong>/<strong>Monat</strong>/<strong>Quartal</strong>/<strong>Buchhaltungsperiode</strong>.<br><br> Kann pro Artikel oder pro Artikel/Lagerort/Variante berechnet werden.</td>
+<td>Anwendung verfolgt die <strong>Restmenge</strong>.<br><br> Kosten werden nach <strong>Bewertungsdatum</strong> berechnet und weitergeleitet.</td>
+<td>Bewertet nur die fakturierte Menge neu.<br><br> Kann nur pro Artikel durchgeführt werden.<br><br> Kann rückwirkend geschehen.</td>
+<td>Wenn Sie eine Bestandserhöhung oder -minderung zurückdatieren, werden die Durchschnittskosten erneut berechnet, und alle betroffenen Posten werden angepasst.<br><br> Wenn Sie die Periode oder Berechnungsart ändern, müssen alle betroffenen Posten reguliert werden.</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Bedienungsfreundlich, benötigt jedoch qualifizierte Wartung.</td>
+<td>Anwendung verfolgt die <strong>Restmenge</strong>.<br><br> Anwendung basiert auf &quot;FIFO&quot;.</td>
+<td>Bewertet fakturierte und nicht fakturierte Mengen neu.<br><br> Kann pro Artikel oder pro Artikelposten durchgeführt werden.<br><br> Kann rückwirkend geschehen.</td>
+<td>Verwenden Sie das <strong>Standardarbeitsblatt</strong>-Fenster, um Einstandspreise (fest) in regelmäßigen Abständen zu aktualisieren und der zu ermitteln.<br><br> Wird NICHT pro SKU unterstützt.<br><br> Keine historischen Datensätze für Einstandspreise vorhanden.</td>
+</tr>
+<tr>
+<td><strong>Spezifisch</strong></td>
+<td>Erfordert Artikelverfolgung auf der eingehenden und ausgehenden Transaktion.<br><br> Normalerweise verwendet für serialisierte Artikel.</td>
+<td>Alle Augleiche sind fest.</td>
+<td>Bewertet nur die fakturierte Menge neu.<br><br> Kann pro Artikel oder pro Artikelposten durchgeführt werden.<br><br> Kann rückwirkend geschehen.</td>
+<td>Sie können eine bestimmte Artikelverfolgung verwenden, ohne die bestimmte Lagerabgangsmethode zu verwenden. Die Kosten folgen nicht der Chargennummer, sondern der Kosten-Annahme der ausgewählten Bewertungsmethode.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Beispiel</h2>
+<p>Dieser Abschnitt nennt Beispiele, wie unterschiedliche Lagerabgangsmethoden sich auf den Lagerwert auswirken.  </p>
+<p>Die folgende Tabelle zeigt die Bestandserhöhungen und -minderungen, auf denen die Beispiele basieren.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Menge</th>
+<th>Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01-01-20</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>01-01-20</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>02-01-20</td>
+<td>-1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>-1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>04-01-20</td>
+<td>-1</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Die resultierende Menge im Bestand ist Null. Aus diesem Grund muss der Lagerwert, unabhängig von der Kostenberechnungsmethode, auch Null sein.  </p>
+</div>
+<h3 id="effect-of-costing-methods-on-valuing-inventory-increases">Auswirkungen der Kostenbewertungsmethoden auf die Bewertung von Lagerzugängen</h3>
+<p>Für Artikel mit Kostenberechnungsmethoden, die die Ist-Kosten als Bewertungsbasis verwenden (<strong>FIFO</strong>, <strong>LIFO</strong>, <strong>Durchschnitt</strong> oder <strong>Spezifisch</strong>) werden Bestandserhöhungen anhand der Anschaffungskosten des Artikels bewertet.  </p>
+<ul>
+<li><p><strong>Standard</strong>  </p>
+<p>  Bei der Lagerabgangsmethode <strong>Standard</strong> werden Lagerzugänge mit den aktuellen Standardkosten des Artikels bewertet.  </p>
+</li>
+</ul>
+<h4 id="standard">Standard</h4>
+<p>Bei der Lagerabgangsmethode <strong>Standard</strong> werden Lagerzugänge mit den aktuellen Standardkosten des Artikels bewertet.  </p>
+<h3 id="effect-of-costing-methods-on-valuing-inventory-decreases">Auswirkungen der Kostenbewertungsmethoden auf die Bewertung von Lagerabgängen</h3>
+<ul>
+<li><p><strong>FIFO</strong>  </p>
+<p>  Für Artikel mit der Kostenberechnungsmethode <strong>FIFO</strong> werden Artikel, die zuerst eingekauft wurden, immer zuerst verkauft (in diesem Beispiel die Postennummern 3, 2 und 1). Entsprechend gilt: Lagerabgänge werden durch den Wert des ersten Lagerzugangs bewertet.  </p>
+<p>   Lagerverbrauch wird mithilfe des Werts der ersten Bestandsdatenerfassungen berechnet.  </p>
+<p>   Die nachstehende Tabelle zeigt, wie Bestandsminderungen für die Kostenberechnungsmethode <strong>FIFO</strong> bewertet werden.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02-01-20</td>
+<td>-1</td>
+<td>-10.00</td>
+<td>4</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>-1</td>
+<td>-20.00</td>
+<td>5</td>
+</tr>
+<tr>
+<td>04-01-20</td>
+<td>-1</td>
+<td>-30.00</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>LIFO</strong>  </p>
+<p>  Für Artikel mit der Kostenberechnungsmethode <strong>LIFO</strong> werden Artikel, die zuletzt eingekauft wurden, immer zuerst verkauft (in diesem Beispiel die Postennummern 3, 2 und 1). Entsprechend gilt: Lagerabgänge werden durch den Wert des letzten Lagerzugangs bewertet.  </p>
+<p>   Lagerverbrauch wird mithilfe des Werts der neuesten Bestandsdatenerfassungen berechnet.  </p>
+<p>   Die nachstehende Tabelle zeigt, wie Bestandsminderungen für die Kostenberechnungsmethode <strong>LIFO</strong> bewertet werden.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02-01-20</td>
+<td>-1</td>
+<td>-30.00</td>
+<td>4</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>-1</td>
+<td>-20.00</td>
+<td>5</td>
+</tr>
+<tr>
+<td>04-01-20</td>
+<td>-1</td>
+<td>-10.00</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Durchschnitt</strong>  </p>
+<p>  Die Lagerabgangsmethode <strong>Durchschnitt</strong> bewertet einen Lagerabgang, indem sie den gewogenen Durchschnitt des verbleibenden Lagerbestandes zum Bewertungsdatum auf den Lagerabgang überträgt. Weitere Informationen finden Sie unter <a href="design-details-average-cost.html">Designdetails: Durchschnittliche Kosten</a>  </p>
+<p>   Die nachstehende Tabelle zeigt, wie Bestandsminderungen für die Kostenberechnungsmethode <strong>Durchschnitt</strong> bewertet werden.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02-01-20</td>
+<td>-1</td>
+<td>-20.00</td>
+<td>4</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>-1</td>
+<td>-20.00</td>
+<td>5</td>
+</tr>
+<tr>
+<td>04-01-20</td>
+<td>-1</td>
+<td>-20.00</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Standard</strong>  </p>
+<p>  Für Artikel mit der Kostenberechnungsmethode <strong>Standard</strong> werden Bestandserhöhungen ähnlich wie bei der Kostenberechnungsmethode <strong>FIFO</strong> bewertet, außer dass die Bewertung auf Standardkosten basiert, nicht auf den Ist-Kosten.  </p>
+<p>  Die nachstehende Tabelle zeigt, wie Bestandsminderungen für die Kostenberechnungsmethode <strong>Standard</strong> bewertet werden.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02-01-20</td>
+<td>-1</td>
+<td>-15.00</td>
+<td>4</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>-1</td>
+<td>-15.00</td>
+<td>5</td>
+</tr>
+<tr>
+<td>04-01-20</td>
+<td>-1</td>
+<td>-15.00</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Ausgewählt</strong>  </p>
+<p>  Die Lagerabgangsmethoden bringen die Annahme zum Ausdruck, dass die Kosten von Lagerzugängen zu Lagerabgängen fließen. Wenn genauere Informationen über den Kostenfluss vorliegen, können Sie diese Annahme jedoch überschreiben, indem Sie einen festen Ausgleich zwischen Posten erstellen. Eine feste Anwendung erstellt eine Verknüpfung zwischen einem Lagerabgang und einem bestimmten Lagerzugang und leitet den Kostenfluss entsprechend.  </p>
+<p>  Für Artikel, die die Kostenberechnungsmethode <strong>Spezifisch</strong> verwenden, werden Bestandsminderungen entsprechend der Bestandserhöhung bewertet, mit der sie durch den festen Ausgleich verknüpft sind.  </p>
+<p>  Die nachstehende Tabelle zeigt, wie Bestandsminderungen für die Kostenberechnungsmethode <strong>Spezifisch</strong> bewertet werden.  </p>
+<table>
+<thead>
+<tr>
+<th>Buchungsdatum</th>
+<th>Menge</th>
+<th>Einstandsbetrag (tatsächl.)</th>
+<th>Ausgleich mit Lfd. Nr.</th>
+<th>Lfd. Nr.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02-01-20</td>
+<td>-1</td>
+<td>-20.00</td>
+<td><strong>2</strong></td>
+<td>4</td>
+</tr>
+<tr>
+<td>03-01-20</td>
+<td>-1</td>
+<td>-10.00</td>
+<td><strong>1</strong></td>
+<td>5</td>
+</tr>
+<tr>
+<td>04-01-20</td>
+<td>-1</td>
+<td>-30.00</td>
+<td><strong>3</strong></td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="design-details-inventory-costing.html">Designdetails: Lagerbewertung</a><br><a href="design-details-variance.html">Designdetails: Abweichung</a><br><a href="design-details-average-cost.html">Designdetails: Einstandspreis</a><br><a href="design-details-item-application.html">Designdetails: Artikelausgleich</a><br><a href="finance-manage-inventory-costs.html">Verwalten der Bestandsregulierung</a><br><a href="finance.html">Finanzen</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a><br><a href="https://learn.microsoft.com/de-de/dynamics365/guidance/business-processes/glossary">Glossar der Begriffe in Dynamics 365-Geschäftsprozessen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

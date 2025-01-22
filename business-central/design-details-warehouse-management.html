@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lageraktivit&#228;ten verwalten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Lageraktivit&#228;ten verwalten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="warehouse-management-overview">Lagerverwaltung – Übersicht</h1>
+
+<p>Es gibt zwei Dinge, die für alle Unternehmen wichtig sind, die Waren physisch in ihr Lager ein- und auslagern:</p>
+<ul>
+<li>Sie haben einen Überblick über die Lagerbestände und die Platzierung der Artikel im Lager.</li>
+<li>Sie können Artikel schnell und genau empfangen, kommissionieren und versenden.</li>
+</ul>
+<p>Um Unternehmen dabei zu helfen, diese Dinge zu erreichen, fügen Lagerfunktionen in Business Central der Bestandsverwaltung die folgenden Funktionen hinzu:</p>
+<ul>
+<li>Lagerplätze</li>
+<li>Warenausgänge</li>
+<li>Lagerkommissionierungen</li>
+<li>Lagerplatzumlagerungsarbeitsblatt</li>
+</ul>
+<p>Implementieren Sie diese Funktionen in verschiedenen Kombinationen, um Ihre Lagerprozesse an Ihr Unternehmen anzupassen. Berücksichtigen Sie eine zunehmende Komplexität, wenn Ihr Unternehmen wächst und sich Ihre Prozesse ändern.</p>
+<h2 id="overview-of-different-configuration-options">Übersicht über verschiedene Konfigurationsmöglichkeiten</h2>
+<p>Sie können Lagerfunktionen auf verschiedene Weise konfigurieren. Es ist wichtig, Optionen zu wählen, die Ihre Prozesse verbessern, ohne Gemeinkosten zu verursachen. Die folgende Tabelle gibt einen Überblick über typische Konfigurationen für den Umgang mit physischen Gütern.</p>
+<table>
+<thead>
+<tr>
+<th>Komplexitätsebene</th>
+<th>Description</th>
+<th>Einstellungen</th>
+<th>Lagerplatzcode</th>
+<th>Beispiel für eingehenden Fluss</th>
+<th>Beispiel für den ausgehenden Fluss</th>
+<th>Beispiel für internen Fluss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keine dedizierte Lageraktivität.</td>
+<td>Buchung von Aufträgen und Journalen.</td>
+<td></td>
+<td>Optional. Gesteuert durch den Schalter <strong>Lagerplatzcode obligatorisch</strong>.</td>
+<td>Einkaufsbestellung</td>
+<td>Verkaufsauftrag</td>
+<td>Produktionsauftrag -&gt; FA-Verb. Buch.-Blatt</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>Konsolidierte Eingangs-/Versandbuchung für mehrere Bestellungen.</td>
+<td><strong>Wareneingang erforderlich</strong><br><strong>Warenausgang erforderlich</strong>.</td>
+<td>Optional. Gesteuert durch den Schalter Lagerplatzcode obligatorisch</td>
+<td>Bestellung(en) -&gt; Wareneingang</td>
+<td>Verkaufsauftrag -&gt; Warenausgangskopf</td>
+<td>Wie oben.</td>
+</tr>
+<tr>
+<td>Basis</td>
+<td>Auftrag für Auftrag</td>
+<td>Einkauf, Verkauf, Service und Transfer: Einlagerung oder Kommissionierung erforderlich. <br><br> Produktion, Montage, Projekte: Lagerkommissionierung, Lagerbewegung, Lagereinlagerung </br></br><strong>HINWEIS</strong>: An Standorten, an denen Sie diese Einstellungen aktiviert haben, können Sie weiterhin Wareneingänge, Lieferungen, Verbrauch und Ausgaben direkt aus den Quellbelegen buchen.</td>
+<td>Optional. Gesteuert durch den Schalter <strong>Lagerplatzcode obligatorisch</strong>.</td>
+<td>Einkaufsbestellung -&gt; Lagereinlagerung</td>
+<td>Verkaufsauftrag -&gt; Lagerkommissionierung</td>
+<td>Fertigungsauftrag -&gt; Lagerbestandkommissionierung</td>
+</tr>
+<tr>
+<td>Erweitert</td>
+<td>Konsolidierte Eingangs-/Versandbuchung für mehrere Bestellungen.<br><br>Konsolidierte Kommissionierungs-/Einlagerungsaktivitäten für mehrere Herkunftsbelege.</td>
+<td>Einkauf, Verkauf, Service &amp; Transfer: Empfang erforderlich + Einlagerung erforderlich,<br> Warenausgang erforderlich + Kommissionierung erforderlich</br><br> Produktion, Montage, Projekte: Lagerkommissionierung</td>
+<td>Optional. Gesteuert durch den Schalter Lagerplatzcode obligatorisch</td>
+<td>Bestellung(en) -&gt; Wareneingang -&gt; Einlagerung</td>
+<td>Verkaufsaufträge -&gt; Lagerlieferungen -&gt; Kommissionierungsarbeitsblatt -&gt; Kommissionierungen</td>
+<td>Fertigungsauftrag -&gt; Kommissionierungsarbeitsblatt -&gt; Kommissionierungen -&gt; FA-Verbrauchs Buch.-Blatt</td>
+</tr>
+<tr>
+<td>Erweitert</td>
+<td>Wie oben + Gezielte Kommissionierungs-/Einlagerungsaktivitäten</td>
+<td>Gezielte Kommissionierung und Einlagerung (abhängige Umschalter werden automatisch aktiviert)</td>
+<td>Obligatorisch</td>
+<td>Wie oben.</td>
+<td>Wie oben.</td>
+<td>Fertigungsauftrag -&gt; Kommissionierungsarbeitsblatt -&gt; Kommissionierungen FA-Verbrauchs Buch.-Blatt</td>
+</tr>
+</tbody>
+</table>
+<p>Die Komplexität steigt mit der Größe Ihrer Organisation und der Anzahl der beteiligten Abteilungen und Personen. Ein Prozess kann beispielsweise einfach sein, wenn dieselbe Person einen Verkaufsbeleg erstellt und bucht. Prozesse können auch komplexer sein und mehrere Schritte und Personen umfassen. Die folgenden Schritte sind ein Beispiel für einen komplexeren Prozess:</p>
+<ol>
+<li>Der Verarbeiter eines Auftrags erstellt einen Verkaufsauftrag.</li>
+<li>Ein Lagerleiter erstellt Kommissionierungsanweisungen.</li>
+<li>Ein Lagermitarbeiter schließt den Ablauf ab, indem er die Lagerlieferung bucht.</li>
+</ol>
+<p>Der Grad der Komplexität wird auch durch die Arten von Dokumenten beeinflusst, die Sie in Ihren Lageraktivitäten verwenden. Beispielsweise können Sie Wareneingangs- und Lagereinlagerungsbelege für Ihren Wareneingangsfluss, aber Bestandsentnahmebelege für Ihren Warenausgangsfluss verwenden.</p>
+<p>Ein weiterer Faktor, der sich auf die Komplexität auswirkt, ist die Darstellung Ihres physischen Lagers in Business Central. Weitere Informationen finden Sie unter <a href="#modeling-the-physical-warehouse">Modellierung des physischen Lagers</a>.</p>
+<h2 id="modeling-the-physical-warehouse">Modellierung des physischen Lagers</h2>
+<p>In Business Central haben Sie mehrere Möglichkeiten, den realen Aufbau Ihres Lagers darzustellen. Ihre Auswahl bestimmt, wie Sie mit Lagerfunktionen arbeiten.</p>
+<p>Bei der Platzierung von Artikeln kann es sich um Regale, Standorte oder Lagerplätze handeln, und es gibt Vor- und Nachteile für jede Option.</p>
+<h3 id="locations-and-bins">Lagerorte und Lagerplätze</h3>
+<p>Um physische Waren zu handhaben, müssen Sie mindestens einen Standort haben. Sie können mehrere Standorte oder Lagerplätze verwenden, um Ihre Lager- und Organisationsstruktur zu modellieren.</p>
+<p>Standorte sind in der Regel die bevorzugte Methode für die Organisation von Vorgängen, die über geografische Gebiete verteilt sind. In einigen Fällen möchten Sie jedoch möglicherweise mehrere Standorte erstellen, die sich am selben Ort befinden. Die Verwendung von Standorten hat folgende Vorteile:</p>
+<ul>
+<li>Gewähren Sie Zugriff über die Seiten <strong>Lagermitarbeiter</strong> und <strong>Verantwortungszentren</strong>.</li>
+<li>Definieren Sie Kalender, Arbeitspläne sowie eingehende und ausgehende Bearbeitungszeiten für die Datumsberechnung und -planung. Weitere Informationen unter <a href="production-about-planning-functionality.html">Info zu Planungsfunktionen</a>.</li>
+<li>Geben Sie Standarddimensionen an und verwenden Sie unterschiedliche Lagerbuchungseinstellungen.</li>
+<li>Richten Sie Planungsparameter ein. Erfahren Sie mehr unter <a href="production-about-planning-functionality.html#planning-parameters">Planungsparameter</a>.  </li>
+<li>Verwenden Sie für jeden Standort unterschiedliche Lagerfunktionen.</li>
+</ul>
+<h3 id="shelves-and-bins">Regale und Lagerplätze</h3>
+<p>Wenn Sie einen Artikel immer am selben Ort lagern, können Sie das Feld <strong>Regal-Nr.</strong> auf den Seiten <strong>Artikelkarte</strong> oder <strong>Lagerhaltungseinheitskarte</strong> verwenden. Dieses Feld kann ein grundlegendes manuelles Speichersystem in Umgebungen ohne Lagerplätze sein. Der Feldwert wird von der Artikelkarte in die Belegzeilen und Berichte kopiert, dient jedoch nur zur Information. Der Wert wird nicht in Lageraktivitäten oder Verfügbarkeitsberechnungen verwendet.</p>
+<p>Lagerplätze stellen die grundlegende Lagerstruktur dar und werden verwendet, um Vorschläge zur Einlagerung von Artikeln zu erstellen.</p>
+<ul>
+<li>Mindestens einen festen Lagerplatz für einen Artikel.</li>
+<li>Lagerplätze für bestimmte Vorgänge, z. B. ein Versandlagerplatz oder ein Produktionsausgabelagerplatz.</li>
+<li>Lagerplatzkapazitäts- und Gewichtsbeschränkungen (nur für gesteuerte Einlagerung und Kommissionierung).</li>
+<li>Lagerplatzbewertung (nur für gesteuerte Einlagerung und Kommissionierung).</li>
+</ul>
+<h2 id="typical-warehouse-workflow">Typischer Lagerablauf</h2>
+<p>Die folgende Tabelle beschreibt eine Reihe von Aufgaben mit Links zu den Artikeln, die sie beschreiben.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Bis</strong></th>
+<th><strong>Siehe</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verwenden Sie in einem einfachen Ablauf auf Auftrag-für-Auftrag-Basis eine Lagereinlagerung, um den Eingang von Artikeln an Standorten zu erfassen, einschließlich etwaiger Übereingänge. Oder verwenden Sie einen Wareneingang, wenn Sie mehrere Aufträge im Beleg zusammenfassen.</td>
+<td><a href="design-details-inbound-warehouse-flow.html">Eingehender Fluss</a></td>
+</tr>
+<tr>
+<td>Erfassen Sie den Versand von Artikeln von Lagerstandorten. Verwenden Sie auf Auftrag-zu-Auftrag-Basis eine Lagerkommissionierung. Oder verwenden Sie einen Warenausgang, wenn Sie mehrere Aufträge in der Versendung zusammenfassen.</td>
+<td><a href="design-details-outbound-warehouse-flow.html">Ausgehender Warenfluss</a></td>
+</tr>
+<tr>
+<td>Bearbeiten Sie Artikel innerhalb des Lagerstandorts. Zum Beispiel, wenn Sie Komponenten in die Produktion verschieben oder eine Inventur durchführen.</td>
+<td><a href="design-details-internal-warehouse-flows.html">Interne Flüsse</a></td>
+</tr>
+</tbody>
+</table>
+<p>Richten Sie die Lagerprozesse ein, die für Ihr Unternehmen geeignet sind. Weitere Informationen finden Sie unter <a href="warehouse-setup-warehouse.html">Einrichten von Warehouse Management</a>.</p>
+<h2 id="terminology-related-to-warehouse-management">Terminologie im Zusammenhang mit der Lagerverwaltung</h2>
+<h3 id="complexity-levels">Komplexitätsebenen</h3>
+<p>Wir verwenden die Begriffe „einfach“ und „fortgeschritten“, um zwischen Komplexitätsebenen zu unterscheiden. Diese einfache Unterscheidung umfasst mehrere Komplexitätsebenen in der Lagerorteinrichtung, wobei jede durch unterschiedliche Lagerdokumente unterstützt werden. Die erweiterte Ebene der Lagerhaltung wird als „gesteuertes Einlagern und Kommissionieren“ bezeichnet. Um die gesteuerte Einlagerung und Entnahme für einen Standort zu verwenden, aktivieren Sie die <strong>gesteuerte Einlagerung und Kommissionierung</strong> auf der <strong>Standortkarte</strong>-Seite.</p>
+<h3 id="warehouse-flows">Lagerabläufe</h3>
+<ul>
+<li>Eingehender Fluss - Artikel in den Lagerort einbringen und verfügbar machen, z.B. Einkäufe und eingehende Umlagerungen.</li>
+<li>Ausgehender Fluss – Artikel kommissionieren und an Kunden oder andere Standorte versenden.</li>
+<li>Interner Fluss – Artikel innerhalb eines Standorts bearbeiten. Beispiel: Komponenten in die Produktion verschieben oder eine Inventur durchführen.</li>
+</ul>
+<h3 id="basic-documents">Grundlegende Dokumente</h3>
+<p>Die folgenden Dokumente werden in grundlegenden Lagerabläufen verwendet.</p>
+<ul>
+<li>Lagereinlagerung</li>
+<li>Lagerkommissionierung</li>
+<li>Lagerbestandsumlagerung</li>
+<li>Artikel Buch.-Blatt</li>
+<li>Artikel Umlag. Buch.-Blatt</li>
+</ul>
+<h3 id="advanced-documents">Erweiterte Dokumente</h3>
+<p>Die folgenden Dokumente werden in erweiterten Lagerabläufen verwendet.</p>
+<ul>
+<li>Wareneingang</li>
+<li>Einlagerungsarbeitsblatt</li>
+<li>Einlagerung</li>
+<li>Kommissionierarbeitsblatt</li>
+<li>Kommissionierung</li>
+<li>Lagerplatzumlagerungsarbeitsblatt</li>
+<li>Lagerplatzumlagerung</li>
+<li>Interne Lagerkommissionierung</li>
+<li>Interne Einlagerungsanforderung</li>
+<li>Lagerplatz Erst.-Arbeitsblatt</li>
+<li>Lagerplatzinh. Erst.-Arbeitsblatt</li>
+<li>Logistik Artikel Buch.-Blatt</li>
+<li>Lagerartikelumlagerungs Buch.-Blatt</li>
+</ul>
+<h3 id="pages-and-settings">Seiten und Einstellungen</h3>
+<p>In diesem Abschnitt werden die Konzepte hinter den wichtigsten Seiten und Einstellungen für die Lagerhaltung beschrieben.</p>
+<h4 id="bins-and-bin-content">Lagerplätze und Lagerplatzinhalt</h4>
+<p>Ein Lagerplatz ist ein Speicherbehälter, der dafür ausgelegt ist, diskrete Teile aufzunehmen. Es ist die kleinste Containereinheit in Business Central. Artikelmengen in Lagerplätzen werden als <em>Lagerplatzinhalte</em> bezeichnet. Ein Lookup aus dem Feld <strong>Artikel</strong> oder aus Feld <strong>Lagerplatzcode</strong> auf jeder lagerbezogenen Belegzeile zeigt die berechnete Verfügbarkeit des Artikels am Lagerplatz an.  </p>
+<p>Lagerplatzinhalte können die Eigenschaft <strong>Fest</strong>, <strong>Dediziert</strong> oder <strong>Standard</strong> erhalten, um festzulegen, wie dir verwendet werden können. Lagerplätze mit keinen dieser Eigenschaften gelten als <em>chaotische</em> Lagerplätze.  </p>
+<p>Ein fester Lagerplatz enthält Artikel an, die dem Lagerplatzcode zugeordnet sind. Die feste Lagerplatzeigenschaft stellt sicher, dass der Lagerplatzinhalt auch dann nicht verschwindet, wenn der Lagerplatz geleert wird. Sie können den Lagerplatz erneut auswählen, sobald sein Inhalt aufgefüllt ist.  </p>
+<p>Ein dedizierter Lagerplatz enthält Lagerplatzinhalt, der nur für die dedizierte Ressource, kommissioniert werden kann, die den Lagerplatz verwendet. Zum Beispiel ein Maschinenzentrum. Anderer Nicht-Entnahmeinhalt, wie z.B. Mengen, die in einer Lieferungsbuchung ausgehend sind, können durch einen dedizierten Lagerplatz verbraucht werden. Nur Lagerplatzinhalt, der durch den Algorithmus <strong>Kommissionierung erstellen</strong> berücksichtigt wird, wird in einem dedizierten Lagerplatz geschützt.  </p>
+<p>Business Central verwendet die <strong>Standard</strong>-Lagerplatzeigenschaft, um Lagerplätze für Lageraktivitäten vorzuschlagen. An Lagerorten mit gesteuerter Einlagerung und Kommissionierung wird die Standardlagerplatzeigenschaft nicht verwendet. An Lagerorten, an denen Lagerplätze erforderlich sind, gibt die Eigenschaft an, wo Artikel bei eingehenden Flüssen zu platzieren sind. In ausgehenden Flüssen gibt die Eigenschaft an, wo Artikel entnommen werden sollen.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn ausgehende Artikel in mehrere Lagerplätze eingelagert werden, werden Artikel zuerst den nicht standardmäßigen Lagerplätzen entnommen, um diesen Lagerplatzinhalt zu leeren, und dann werden die anderen Artikel dem Standardlagerplatz entnommen.  </p>
+</div>
+<p>Sie können einen Vorgabelagerplatz pro Artikel pro Lagerort geben.  </p>
+<h4 id="bin-type">Lagerplatzart</h4>
+<p>Lagerplätze, die gesteuerte Einlagerung und Entnahme verwenden, können Lagerplatztypen verwenden. Lagerplatztypen steuern die Aktivitäten, die Sie für einen Lagerplatz zulassen. </p>
+<p>Die folgenden Lagerplatztypen sind verfügbar:  </p>
+<table>
+<thead>
+<tr>
+<th>Lagerplatzart</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EING</td>
+<td>Artikel, die empfangen, aber nicht eingelagert werden.</td>
+</tr>
+<tr>
+<td>AUSG</td>
+<td>Artikel, die für Warenausgangszeilen kommissioniert, aber nicht als Warenausgang gebucht wurden.</td>
+</tr>
+<tr>
+<td>EINLAG</td>
+<td>Normalerweise werden hier Artikel in großen Einheiten eingelagert, die jedoch nicht für die Kommissionierung verwendet werden soll. Diese Lagerplätze werden nicht für die Kommissionierung verwendet, weder für Produktionsaufträge noch für Lieferungen, sodass ihre Verwendung möglicherweise eingeschränkt ist. Diese Art von Lagerplatz ist nützlich, wenn Sie eine große Menge an Artikeln kaufen. Die Lagerplätze sollten immer einen niedrigen Lagerplatzrang haben, damit Artikel mit höherrangigen PUTPICK-Lagerplätzen zuerst eingelagert werden. Füllen Sie diese Art von Lagerplätzen regelmäßig auf, damit ihre Artikel in den Lagerplätzen des Typs PUTPICK oder PICK verfügbar sind.</td>
+</tr>
+<tr>
+<td>KOMMISS</td>
+<td>Nur für Kommissionierung zu verwendende Artikel. Sie können Bewegungen nur zur Auffüllung dieser Lagerplätze verwenden, nicht für Einlagerungen.</td>
+</tr>
+<tr>
+<td>EINLAGKOMM</td>
+<td>Artikel an Lagerplätzen, die für Einlagerung und Kommissionierung vorgeschlagen werden. Lagerplätze dieser Art haben wahrscheinlich unterschiedliche Lagerplatzprioritäten. Richten Sie Ihre Palettenlagerplätze mit geringerer Lagerplatzbewertung als normale Kommissionierungslagerplätze oder Lagerplätze in Ihren bevorzugten Kommissionierungsbereichen ein.</td>
+</tr>
+<tr>
+<td>QK</td>
+<td>Dieser Lagerplatz wird für einen Ausgleich von Lagerbestand verwendet, wenn Sie diesen Lagerplatz auf der Lagerortkarte im Feld <strong>Ausgleichlagerplatzcode</strong> angeben. Sie können Lagerplätze dieser Art auch für beschädigte Artikel und Artikel, die für Qualitätskontrollen verwendet werden, einrichten. Sie können Artikel in diese Art von Lagerplätzen umlagern, wenn Sie möchten, dass diese für den normalen Warenfluss nicht zugänglich sein sollen. <strong>HINWEIS:</strong>  Anders als alle anderen Lagerplatzarten hat die Lagerplatzart <strong>QK</strong> keine standardmäßig aktivierten Kontrollkästchen für die Behandlung. Inhalt, den Sie an einem QC-Lagerplatz platzieren, ist aus den Artikelströmen ausgeschlossen.</td>
+</tr>
+</tbody>
+</table>
+<p>Sie können Ihr Lager mit allen möglichen acht Lagerplatzarten betreiben oder Sie entscheiden sich, nur die Lagerplatzarten EING, EINLAGKOMM, AUSG und QK zu verwenden. Diese vier Lagerplatzarten ermöglichen der Anwendung, Vorschläge zu machen, um den Warenfluss zu unterstützen, und sie geben Ihnen die Möglichkeit, Abweichungen im Lagerbestand zu erfassen.
+Mit Ausnahme der Lagerplatztypen KOMMISSIONIERUNG, EINLAGKOMM und EINLAGERUNG definiert die Lagerplatzart die für einen Lagerplatz zulässige Aktivität. Beispiel: Sie können einen Lagerplatz des Typs EINGANG nur dazu verwenden, um Artikel zu empfangen oder zu kommissionieren.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie müssen Verschiebungen verwenden, um Artikel an EMPFANGS- und QC-Lagerplätze zu verschieben. Verwenden Sie Bewegungen, um auf ähnliche Weise Artikel aus VERSAND- und QC-Lagerplätzen zu verschieben.  </p>
+</div>
+<h4 id="bin-ranking">Lagerplatzpriorität</h4>
+<p>In der erweiterten Lagerhaltung können Sie automatisieren und optimieren, wie Artikel in Einlagerungs- und Kommissionierungsarbeitsblättern den gesammelt werden, indem Sie Lagerplätze bewerten. Artikel werden gemäß der Lagerplatzbewertungen für Kommissionierung und Einlagerung empfohlen.</p>
+<p>Die Einlagerungsabläufe werden nach Lagerplatzprioritäten optimiert , indem Lagerplätze mit höherer Bewertung vor Lagerplätzen mit niedriger Bewertung vorgeschlagen werden. Kommissionierungsabläufe schlagen Artikel mit höherer Lagerplatzbewertung aus Lagerplatzinhalt zuerst vor. Lagerplatzauffüllung schlägt Lagerplätze mit niedrigerem Rang vor Lagerplätzen mit höherem Rang vor.  </p>
+<p>Lagerplatzrang und Lagerplatzinhalt sind die grundlegenden Eigenschaften, die Lagermitarbeiter im Lager leiten.  </p>
+<h4 id="bin-setup">Lagerplatzeinrichtung</h4>
+<p>Bei der erweiterten Lagerhaltung können Sie die folgenden Kapazitätswerte angeben, um zu steuern, wie und in welchen Lagerplätzen Sie Artikel lagern:</p>
+<ul>
+<li>Menge</li>
+<li>Gesamtkubatur</li>
+<li>Gewichtung  </li>
+</ul>
+<p>Sie können Artikeln eine Basiseinheit (UOM) zuweisen. Eine Basiseinheit kann aus Stücken, Paletten, Litern, Gramm oder Kartons bestehen. Sie können auch größere Maßeinheit basierend auf Ihrer Basiseinheit erstellen. Wenn beispielsweise Stücke Ihre Basiseinheit sind, kann eine Palette 16 Stück entsprechen.  </p>
+<p>Wenn ein Artikel mehr als eine Maßeinheit hat, legen Sie die maximale Menge für jede Maßeinheit auf der Artikelkarte fest. Wenn Sie einen Artikel nach Stück und Paletten bearbeiten, muss das <strong>Maximale Menge</strong>-Feld auf der Seite <strong>Lagerplatz-Inhalt</strong> für diesen Artikel ebenfalls nach Stück und Paletten organisiert sein. Andernfalls wird die zulässige Menge für diesen Lagerplatz nicht korrekt berechnet.  </p>
+<p>Bevor Sie Kapazitätseinschränkungen für Lagerplatzinhalte an einem Lagerplatz einrichten, stellen Sie sicher, ob die Mengeneinheit und die Dimensionen des Artikels auf dem Artikel eingerichtet wurden.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie können mehrere Maßeinheiten nur an Standorten verwenden, die eine gesteuerte Einlagerung und Entnahme verwenden. In allen anderen Konfigurationen können Sie nur Lagerplatzinhalte in der Basiseinheit verwenden. In Transaktionen mit einer Maßeinheit, die größer als die Basiseinheit des Artikels ist, wird die Menge in die Basiseinheit umgewandelt.  </p>
+</div>
+<h4 id="zone">Servicegebiet</h4>
+<p>In der erweiterten Lagerhaltung können Lagerplätze in Zonen gruppiert werden, um den Workflow der Lageraktivitäten für Lagerorte zu verwalten.  </p>
+<p>Eine Zone kann eine empfangende Zone oder eine Lagerzone sein, und jede Zone kann aus einem oder mehreren Lagerplätzen bestehen.  </p>
+<p>Die meisten Eigenschaften, die einer Zone zugeordnet sind, werden Lagerplätzen zugeordnet, die aus dieser Zone erstellt werden.  </p>
+<h4 id="warehouse-class">Lagerklasse</h4>
+<p>In der erweiterten Lagerhaltung können Sie den folgenden Entitäten Lagerklassencodes zuweisen: </p>
+<ul>
+<li>Artikel</li>
+<li>Lagerplätze</li>
+<li>Zonen</li>
+</ul>
+<p>Warehouse-Klassen steuern, wo Artikel gelagert werden. Sie können eine Zone in mehrere Lagerklassen aufteilen. Beispielsweise lagern Sie Artikel möglicherweise in der empfangenden Zone als eingefroren, gefährlich oder einer anderen Klasse zugehörig.</p>
+<p>Wenn Sie mit Lagerklassen und standardmäßigen Empfangs-/Versandlagerplätzen arbeiten, müssen Sie die entsprechenden Lagerplätze im Wareneingang und in den Lieferzeilen manuell auswählen.  </p>
+<p>In eingehenden Flows wird der Klassencode nur auf eingehenden Zeilen hervorgehoben, auf denen der Artikelklassencode nicht dem standardmäßigen Wareneingangslagerplatz entspricht. Wenn die richtigen Standardlagerplätze nicht zugewiesen werden, kann die Menge nicht empfangen werden.  </p>
+<h4 id="location">Ort</h4>
+<p>Ein Lagerort ist eine physische Struktur oder ein Ort, an dem Bestand empfangen, gelagert und versandt wird. Ein Lagerort kann ein Lager, ein Servicefahrzeug, ein Ausstellungsraum, eine Fabrik oder ein Bereich in einer Fabrik sein. Bestand wird oft in Lagerplätzen und Zonen organisiert.</p>
+<h4 id="first-expired-first-out">Ausgang nach frühestem Ablaufdatum</h4>
+<p>Wenn Sie das Kontrollkästchen <strong>Gemäß FEFO kommissionieren</strong> im Inforegister <strong>Lagerplatzprüfung</strong> auf der Seite <strong>Lagerortkarte</strong> wählen, werden Artikel mit Artikelverfolgung entsprechend ihrem Ablaufdatum an dem Lagerort kommissioniert. Artikel mit den frühesten Ablaufdaten werden zuerst kommissioniert.  </p>
+<p>Lageraktivitäten in allen Kommissionierungs- und Umlagerungsdokumenten werden gemäß FEFO sortiert, es sei denn, der Artikel ist eine Serien- oder Chargennummer zugeordnet. Wenn ein Teil aber nicht die gesamte Menge auf der Zeile Chargen oder Seriennummern zugewiesen sind, wird die verbleibende Menge nach dem FEFO-Prinzip sortiert.  </p>
+<p>Bei der Kommissionierung über FEFO wählt die Anwendung Artikel auf der Grundlage des Ablaufdatums aus; das Ergebnis ist eine temporäre Artikelverfolgungsliste, die auf dem Ablaufdatum basiert. Weisen zwei Artikel dasselbe Ablaufdatum aus, wählt die Anwendung den Artikel mit der niedrigeren Chargen- oder Seriennummer zuerst aus. Sind die Chargen- oder Seriennummern identisch, wählt die Anwendung den Artikel aus, der zuerst ausgewählt wurde. Die Standardkriterien für die Auswahl der Artikel in Kommissionierungslagerplätzen, wie z. B. nach Lagerplatzpriorität und Gebindeanbruch, werden auf diese temporäre FEFO-Artikelverfolgungsliste angewendet.  </p>
+<p>Weitere Informationen finden Sie unter  <a href="warehouse-picking-by-fefo.html">Kommissionierung von Artikeln per FEFO aktivieren</a>.</p>
+<h4 id="put-away-template">Einlagerungsvorlage</h4>
+<p>Einlagerungsvorlagen geben einen Satz priorisierter Regeln an, die gelten,wenn Sie Einlagerungen erstellen. Beispielsweise kann eine Einlagerungsvorlage erfordern, dass Sie Artikel in einen Lagerplatz mit Lagerplatzinhalt legen, der dieselbe Maßeinheit hat. Wenn kein ähnlicher Lagerplatz mit ausreichender Kapazität gefunden werden kann, muss der Artikel an einen leeren Lagerplatz gelegt werden. Sie weisen eine Einlagerungsvorlage einem Artikel und einem Lagerort zu.  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="inventory-manage-inventory.html">Bestand</a><br><a href="warehouse-setup-warehouse.html">Einrichten von Warehouse Management</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<h2 id="includeprodshortincludesfreetrialmdmd">Starten Sie eine <a href="https://go.microsoft.com/fwlink/?linkid=847861">kostenlose Testversion!</a></h2>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

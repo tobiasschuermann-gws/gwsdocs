@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Daten von mehreren Firmen konsolidieren </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Daten von mehreren Firmen konsolidieren ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="consolidating-financial-data-from-multiple-companies">Konsolidieren von Finanzdaten aus mehreren Unternehmen</h1>
+
+<p>Einige Organisationen verwenden Business Central in mehreren Konzernmandanten oder juristischen Personen. Andere verwenden Business Central in Niederlassungen, die den übergeordneten Organisationen Bericht erstatten müssen. Business Central bietet Buchhaltern Tools, die ihnen helfen, Hauptbucheinträge von zwei oder mehr Unternehmen (Tochtergesellschaften) in ein konsolidiertes Unternehmen zu übertragen.  </p>
+<p>Jedes in eine Konsolidierung einbezogene Unternehmen wird als Konzernmandant bezeichnet. Die Gesellschaft, in der Sie die Daten zusammenfassen, wird als konsolidierte Gesellschaft bezeichnet.  </p>
+<p>Sie können Finanzdaten von Tochtergesellschaften in das konsolidierte Unternehmen übertragen, auch wenn die Tochtergesellschaften Business Central in unterschiedlichen Umgebungen verwenden. Weitere Informationen zum Herstellen einer Verbindung mit anderen Umgebungen finden Sie unter <a href="finance-consolidated-company-reporting-setup.html#busunit">Unternehmenskonsolidierung einrichten</a>.</p>
+<p>Wenn die Finanzauswertungen eines Konzernmandanten in einer anderen Währung als die des konsolidierten Unternehmen sind, müssen Sie Wechselkurse für die Konsolidierung einrichten. Weitere Informationen zu Wechselkursen für Konsolidierungen finden Sie unter <a href="finance-consolidated-company-reporting-setup.html#exchrates">Firmenkonsolidierung einrichten</a>.  </p>
+<p>Konsolidierungen können wie folgt und für Folgendes durchgeführt werden:  </p>
+<ul>
+<li>Die Mandanten, die verschiedene Kontenpläne haben.  </li>
+<li>Unternehmen, die verschiedene Geschäftsjahre und verschiedene Währungen verwenden.  </li>
+<li>Entweder den vollständigen Betrag oder einen angegebenen Prozentsatz der Finanzdaten eines bestimmten Mandanten.</li>
+<li>Mittels der Wechselkurse der anderen Währung in den einzelnen Sachkonten.</li>
+<li>Unternehmen in anderen Buchhaltungs- und Geschäftsführungsprogrammen.</li>
+<li>Unternehmen in verschiedenen Business Central-Umgebungen.</li>
+</ul>
+<p>Die Einrichtung des konsolidierten Unternehmens erfolgt auf die gleiche Weise wie die Einrichtung anderer Unternehmen. Der Kontenplan ist vom Kontenplan des Konzernmandanten unabhängig. Die Kontenpläne in den Geschäftsbereichen können voneinander abweichen. Weitere Informationen zum Einrichten einer Konsolidierung finden Sie unter <a href="finance-consolidated-company-reporting-setup.html">Unternehmenskonsolidierung einrichten</a>.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Die Konsolidierung von Finanzdaten kann insbesondere für unternehmensübergreifende Prozesse relevant sein. Weitere Informationen zu Intercompany-Funktionen finden Sie unter <a href="intercompany-manage.html">Intercompany-Transaktionen verwalten</a>.</p>
+</div>
+<h2 id="consolidate-data">Daten konsolidieren</h2>
+<p>Vor der Konsolidierung empfiehlt es sich, Ihre Daten zu testen, bevor Sie sie an das konsolidierte Unternehmen übertragen. Business Central So überprüfen Sie Unterschiede zwischen den Informationen in den Konzernmandanten und dem Konsolidierungsmandanten Beispielsweise ob Kontonummern oder Dimensionscodes abweichen. Korrigieren Sie alle Fehler, die Sie finden, bevor Sie den Bericht ausführen. Sie können die Datenbank prüfen oder, wenn Sie Daten einer XML-Datei importieren, die Datei.</p>
+<h3 id="test-the-data-before-you-consolidate">Prüfen von Datenbanken vor der Konsolidierung</h3>
+<ol>
+<li>Öffnen Sie den Konsolidierungsmandanten.  </li>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Konzernmandanten</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li><p>Testen Sie die Datei und die Datenbank wie folgt:  </p>
+<ul>
+<li>Um eine Datei zu testen, wählen Sie die <strong>Datei prüfen</strong> Aktion, geben Sie den Namen der Datei an zum Testen ein, und wählen Sie dann <strong>Drucken</strong> aus.  </li>
+<li>Um die Datenbank zu testen, wählen Sie <strong>Datenbank prüfen</strong>.  </li>
+</ul>
+</li>
+</ol>
+<h3 id="run-the-consolidation">Die Konsolidierung ausführen</h3>
+<p>Nachdem Sie Ihre Daten getestet haben, können Sie diese an den Konsolidierungsmandanten übertragen. Eine unterstützte Einrichtungsanleitung hilft Ihnen durch den Prozess.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie die Konsolidierung durchführen, können Sie die einzubeziehenden Unternehmen auswählen. Wenn Ihr konsolidiertes Unternehmen keinen Zugriff auf eine oder mehrere Tochtergesellschaften hat, können Sie im Leitfaden den Zugriff darauf gewähren.</p>
+</div>
+<ol>
+<li>Melden Sie sich im Konsolidierungsmandanten an.  </li>
+<li>Wählen Sie auf der Seite <strong>Konzernmandanten</strong> die Aktion <strong>Konsolidieren</strong> aus.  </li>
+<li>Füllen Sie die entsprechenden Felder aus.  </li>
+</ol>
+<h2 id="use-the-consolidated-trial-balance-report">Verwendet den Bericht Konsolidierte Rohbilanz</h2>
+<p>Der Bericht <strong>Konsolidierte Rohbilanz</strong> kann Ihnen einen Überblick über die allgemeine Finanzstärke Ihres Gesamtunternehmens geben. Der Bericht Sachposten kombiniert aus jedem Ihrer Mandanten in einem neuen Mandanten, den Sie erstellen, um die konsolidierten Daten zu berücksichtigen. Der Konsolidierungsmandant ist einfach ein Container für die konsolidierten Daten und hat keine Verbindung zu den aktuellen Geschäftsdaten. Die Unternehmen, die Sie im konsolidierten Unternehmen einschließen, wird zur <strong>Geschäftseinheit</strong> im Bericht. Wenn Sie vier Konzernmandanten oder weniger haben, können Sie auch den Bericht <strong>Konsolidierte Rohbilanz (4)</strong> verwenden.  </p>
+<p>Der Bericht zeigt eine Zeile für jedes Konto und folgt der Struktur des Kontenplans. Ein Konto wird nicht angezeigt, wenn alle Beträge in der Zeile Null sind. Der Bericht zeigt die folgenden Informationen für jedes Konto an:</p>
+<ul>
+<li>Die Kontonummer und der Kontoname des Kontos</li>
+<li>Die Summen für das konsolidierte Unternehmen und für jede Geschäftseinheit. Endsummen können entweder als Bewegung oder als Saldo zum Datum angezeigt werden.</li>
+<li>Die im Konsolidierungsmandanten durchgeführten Eliminierungen. Eliminierungen werden immer für eine Periode entsprechend dem Geschäftsjahr des Konsolidierungsmandanten angezeigt.</li>
+<li>Die Endsumme für den Konsolidierungsmandanten nach Durchführung der Eliminierungen. Sie wird entweder als Bewegung oder als Saldo zum Datum angezeigt.</li>
+</ul>
+<h2 id="eliminate-repeated-transactions">Wiederholte Transaktionen verhindern</h2>
+<p>Nachdem sämtliche Mandanten konsolidiert wurden, müssen Sie alle Transaktionen suchen, die in mehreren Mandanten einmal aufgezeichnet wurden, und dann Eliminierungsposten buchen, um sie zu entfernen. Durchführen der Konsolidierungseliminierungen ist ein manuelles Verfahren.  </p>
+<p>So verhindern Sie wiederholte Transaktionen:</p>
+<ol>
+<li>Suchen Sie Transaktionen, die eventuell korrigiert werden müssen, und geben Sie Fibu Buch.-Blattzeilen ein, um sie zu beseitigen.</li>
+<li>Führen Sie den Bericht <strong>Konsolidierungseliminierungen</strong> aus, um Ihnen zu helfen, die Auswirkungen der Fibu Buch.-Blattzeilen zu bewerten, bevor Sie buchen.</li>
+<li>Buchen Sie die Regulierungstransaktionen.</li>
+</ol>
+<p>Der <strong>G/L-Konsolidierungseliminierungen</strong>-Bericht zeigt eine vorläufige Probebilanz an, in der Sie die Folgen der Eliminierung von Buchungen simulieren können. Der Bericht vergleicht die Buchungen im Konsolidierungskreis mit den im Hauptbuch gebuchten Eliminierungen.</p>
+<p>Bevor ein Konzernmandant in dem Bericht berücksichtigt werden kann, muss er auf der Seite <strong>Konzernmandanten</strong> eingerichtet werden. Stellen Sie sicher, dass Sie den Schalter <strong>Konsolidieren</strong> aktivieren.</p>
+<p>Für jedes Konto wird eine eigenen Zeile entsprechend der Struktur im Kontenplan erstellt. Ein Konto wird nicht angezeigt, wenn alle Beträge in der Zeile Null sind. Der Bericht zeigt die folgenden Informationen für jedes Konto an:</p>
+<ul>
+<li>Kontonummer.</li>
+<li>Kontoname.</li>
+<li>Wenn Sie im Feld <strong>Konzernmandantencode</strong> auf der Anforderungsseite einen oder mehrere Konzernmandantencodes angegeben haben, wird für den Konsolidierungsmandanten eine Summe angezeigt, in der die gewählten Konzernmandanten und Eliminierungen nicht enthalten sind. Wenn Sie das Feld <strong>Konzernmandantencode</strong> nicht ausgefüllt haben, wird für den Konsolidierungsmandanten eine Summe angezeigt, in der nur die Eliminierungen nicht enthalten sind.</li>
+<li>Wenn Sie im Feld <strong>Konzernmandantencode</strong> auf der Anforderungsseite einen Konzernmandantencode angegeben haben, wird eine Summe für die importierten Posten des Konzernmandanten angezeigt. Wenn Sie das Feld <strong>Konzernmandantencode</strong> nicht ausgefüllt haben, wird eine Summe der gebuchten Eliminierungen des Konsolidierungsmandanten angezeigt.</li>
+<li>Die Endsumme für den Konsolidierungsmandanten mit allen Konzernmandanten und allen gebuchten Eliminierungen.</li>
+<li>Die im Konsolidierungsmandanten durchgeführten Eliminierungen. Das heißt, die Einträge im allgemeinen Journal, das auf der Anforderungsseite ausgewählt wird.</li>
+<li>Der aus dem Fibu Buch.-Blatt kopierte Buchungstext.</li>
+<li>Die Endsumme für den Konsolidierungsmandanten nach Durchführung der Eliminierungen, soweit diese gebucht wurden.</li>
+</ul>
+<h2 id="export-and-import-consolidated-data-between-databases">Konsolidierte Daten zwischen Datenbanken exportieren und importieren</h2>
+<p>Wenn sich Daten für einen Konzernmandant in einer anderen Datenbank befinden, können Sie eine manuelle dateibasierte Übertragung durchführen oder den Prozess mithilfe einer API automatisieren. Weitere Informationen zur API finden Sie unter <a href="#use-our-api-to-automatically-share-data-across-environments">Nutzen Sie unsere API, um Daten automatisch Umgebungsübergreifend auszutauschen</a>.</p>
+<p>In diesem Abschnitt wird der manuelle, dateibasierte Prozess beschrieben.</p>
+<p>Sie exportieren die Daten in eine Datei, bevor Sie sie in die Konsolidierung einbeziehen. Exportieren Sie jedes Unternehmen separat, indem Sie den Batchauftrag <strong>Konsolidierung exportieren</strong> verwenden.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Verwenden Sie denselben Prozess, um konsolidierte Daten zu exportieren, die Sie an Dynamics 365 Finance übermitteln müssen. Wenn es sich beispielsweise beim Konzernmandant um eine Tochtergesellschaft handelt und die Muttergesellschaft Dynamics 365 Finance verwendet.</p>
+</div>
+<p>Nachdem der Batchauftrag ausgeführt wurde, sind alle Posten in den einzelnen Sachkonten verarbeitet. Für jede Kombination aus ausgewählten Dimensionen und Datum wird der Inhalt des Felds <strong>Betrag</strong> der Posten summiert und exportiert. Die nächste Kombination der ausgewählten Dimensionen und des Datums mit derselben Kontonummer wird verarbeitet. Dann werden die Kombinationen in der nächsten Kontonummer verarbeitet und so weiter.  </p>
+<p>Die exportierten Posten enthalten die folgenden Felder: <strong>Kontonr.</strong>, <strong>Buchungsdatum</strong> und <strong>Betrag</strong>. Wenn auch Dimensionsdaten exportiert wurden, sind ebenfalls Dimensionscodes und Dimensionswerte enthalten.  </p>
+<ol>
+<li>Für jede exportierte Zeile wird, sofern die Summe des <strong>Betrag</strong>-Felds ein Sollbetrag ist, die im <strong>Konsol. Sollkonto</strong> des Konzernmandanten eingerichtete Kontonummer in die Zeile exportiert. Wenn die Summe ein Habenbetrag ist, wird die entsprechende Nummer im Feld <strong>Konsol. Habenkonto</strong> in die Zeile exportiert.  </li>
+<li>Das für jede exportierte Zeile verwendete Datum ist entweder das Enddatum der Periode oder, wenn die Übertragung täglich erfolgt, das genaue Berechnungsdatum.  </li>
+<li>Bei dem für den Posten exportierten Dimensionswert handelt es sich um den Dimensionswert des Konsolidierungsmandanten, der im Feld <strong>Konsolidierungscode</strong> für diesen Dimensionswert eingerichtet ist. Wurde im Feld <strong>Konsolidierungscode</strong> für diesen Dimensionswert kein Dimensionswert des Konsolidierungsmandanten eingerichtet, wird der Dimensionswert selbst in die Zeile exportiert.  </li>
+<li>Die XML-Dateien enthalten auch die Währungswechselkurse innerhalb der Konsolidierungsperiode. Diese Wechselkurse sind in einem eigenen Abschnitt zu Beginn der Datei aufgeführt.  </li>
+</ol>
+<h2 id="use-our-api-to-automatically-share-data-across-environments">Nutzen Sie unsere API, um Daten automatisch Umgebungsübergreifend auszutauschen</h2>
+<p>Business Central bietet eine API, mit der Sie den Prozess der Weitergabe von Finanzdaten von Konzernmandanten an das konsolidierte Unternehmen automatisieren können. Die API ist kostenlos nutzbar und einfach einzurichten. Sie können damit sogar Daten in Business Central-Umgebungen austauschen. Beispielsweise müssen Sie möglicherweise Umgebungsübergreifende Freigaben vornehmen, wenn sich Konzernmandanten nicht in denselben Azure-Regionen befinden. Weitere Informationen zur Verwendung der API zur Automatisierung des Konsolidierungsprozesses finden Sie unter <a href="finance-consolidated-company-reporting-setup.html#busunit">Unternehmenskonsolidierung einrichten</a>.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="finance-consolidated-company-reporting-setup.html">Mandantenkonsolidierung einrichten</a><br><a href="intercompany-manage.html">Intercompanytransaktionen verwalten</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a><br><a href="about-export-data.html">Exportieren Ihrer Geschäftsdaten nach Excel</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

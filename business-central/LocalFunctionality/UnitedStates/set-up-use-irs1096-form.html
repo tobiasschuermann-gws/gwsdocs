@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Set up and use the IRS 1096 form [US] </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Set up and use the IRS 1096 form [US] ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-and-use-the-irs-1096-form-in-the-us-version">Set up and use the IRS 1096 form in the US version</h1>
+
+<p>Form 1096 is used to transmit paper tax forms to the Internal Revenue Service (IRS) in the United States. This feature lets you run the Form 1096 report in Business Central and send it to the IRS, if necessary. The feature is only related to already transmitted paper 1099 forms.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Form 1096 reporting supports only the IRS codes that are supported for Form 1099 reporting in Business Central. If you add other IRS codes to lines on the Form 1096, the report doesn&#39;t include them.</p>
+</div>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>The IRS 1096 feature is compatible only with the <a href="set-up-use-irs1099-form.html">legacy 1099 functionality</a>, which lets you submit printed 1099 forms. The <a href="set-up-use-irs1099-form-v24.html">new IRS 1099 feature</a> supports only electronic submissions, and not printed forms, so the 1096 form isn&#39;t required and this feature isn&#39;t compatible with the IRS 1099 feature.</p>
+</div>
+<h2 id="enable-the-extension">Enable the extension</h2>
+<p>Form 1096 is an extension. After you install the extension in your environment you must enable it, as described in the following steps.</p>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>Feature management</strong>, and then choose the related link.</li>
+<li>Find <strong>Feature: Enable using Form 1096 to transmit paper Tax Forms to the IRS in the United States</strong> and in the <strong>Enabled for</strong> field, choose <strong>All Users</strong>.</li>
+<li>When you enable the feature, use the setup guide to set it up. The only information required is to specify the <strong>IRS 1096 Form No. Series</strong> to use. This number series is used to assign numbers for 1096 forms per certain period.</li>
+</ol>
+<p>If you didn&#39;t use the setup guide to configure <strong>IRS 1096 Form No. Series</strong>, you can do so on the <strong>Purchases &amp; Payables Setup</strong> page. Fill in the <strong>IRS 1096 Form No. Series</strong> field on the <strong>Number Series</strong> FastTab.</p>
+<p>Complete the following steps to set up more required fields for reporting.</p>
+<ol>
+<li>Select the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>Company Information</strong>, and then select the related link.</li>
+<li>To specify the EIN number to show on the report, on the <strong>Communication</strong> FastTab in the <strong>EIN Number</strong> field, enter the number you registered with IRS.  </li>
+<li>To specify who communicates with the IRS, in the <strong>IRS Contact No.</strong> field, select the employee responsible for this communication.  </li>
+</ol>
+<h2 id="to-create-a-new-1096-form">To create a new 1096 form</h2>
+<div class="NOTE"><h5>Hinweis</h5><p>The IRS 1096 report layout currently supports reporting for the year 2023.  </p>
+</div>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>1096 Forms</strong>, and then choose the related link.</li>
+<li>Choose the <strong>Create forms…</strong> action to create a new entry.</li>
+<li>In the <strong>Starting Date</strong> and <strong>Ending Date</strong> fields, specify a date range for the calculations. Vendor ledger entries with posting dates in this period are considered.</li>
+<li>If you want to replace existing forms with new forms, for example, if you made corrections, choose the <strong>Replace</strong> option. If you don&#39;t select this option, new forms are created and existing forms remain the same.</li>
+<li>After you create the new forms, choose <strong>OK</strong>. A confirmation displays the message, <strong>IRS 1096 forms have been created</strong>.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Business Central automatically creates a 1096 form for each of the IRS codes posted in vendor ledger entries during the period you defined.</p>
+</div>
+<p>You can open the forms to check their details make corrections if needed.</p>
+<p>The <strong>General</strong> FastTab contains the following information.</p>
+<ul>
+<li><strong>Starting Date</strong> - Specifies the starting date of the period specified for the form.</li>
+<li><strong>Ending Date</strong> - Specifies the ending date of the period specified for the form.</li>
+<li><strong>Status</strong> - Specifies the status of the form. Only released forms can be printed. Only opened forms can be changed.</li>
+<li><strong>IRS Code</strong> - Specifies the IRS code of the form.</li>
+<li><strong>Calculated Total Number of Forms</strong> - Specifies the total number of forms per period and IRS code calculated by the <strong>Create Forms</strong> action. You can&#39;t change this value.</li>
+<li><strong>Total Number of Forms</strong> - Specifies the number of forms used for printing the form. This value matches the calculated number of forms after you choose the <strong>Create Forms</strong> action. You can change this value.</li>
+<li><strong>Calculated Amount</strong> - Specifies the amount per period and IRS code calculated by the <strong>Create Forms</strong> action. You can&#39;t change this value.</li>
+<li><strong>Calculated Adjustment Amount</strong> - Specifies the adjustment amount per period and IRS code calculated by the <strong>Create Forms</strong> action.</li>
+<li><strong>Total Amount to Report</strong> - Specifies the adjustment amount per period and IRS code calculated by the <strong>Create Forms</strong> action.</li>
+</ul>
+<p>The lines contain the following information. Amounts are summarized per <strong>Vendors</strong> and <strong>IRS Codes</strong>.</p>
+<ul>
+<li><strong>IRS Code</strong> - Specifies the IRS code.</li>
+<li><strong>Vendor no.</strong> - Specifies the vendor number.</li>
+<li><strong>Calculated Amount</strong> - Specifies the amount per period and IRS code calculated by the <strong>Create Forms</strong> action. You can&#39;t change this value. You can check amounts in the <strong>Vendor Ledger Entries</strong> field for each record.</li>
+<li><strong>Calculated Adjustment Amount</strong> - Specifies the adjustment amount per period and IRS code calculated by the <strong>Create Forms</strong> action. You can check amounts in the <strong>IRS 1099 Adjustments</strong> field for each record.</li>
+<li><strong>Manually changed</strong> - Specifies that the line was changed manually. This field is marked automatically if a record is changed manually.</li>
+<li><strong>Amount</strong> - Specifies the amount used for printing the form. This value matches the calculated amount minus the calculated adjustment amount after choosing the <strong>Create Forms</strong> action. You can change this value. If you change this amount manually, the <strong>Manually changed</strong> field is marked.</li>
+</ul>
+<h2 id="to-make-corrections-in-a-1096-form">To make corrections in a 1096 form</h2>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>1096 Forms</strong>, and then choose the related link.</li>
+<li>Open the form you want to edit.</li>
+<li><p>If you want to update an amount:</p>
+<ul>
+<li>Locate the line you want to update and mark the <strong>Amount</strong> field.</li>
+<li>Enter the value you want to report. The <strong>Manually changed</strong> field is marked and the <strong>Total Amount to Report</strong> field on the header is updated.</li>
+</ul>
+</li>
+<li><p>If you want to add a new record, enter a new line, and fill in values you need for reporting in the <strong>IRS Code</strong>, <strong>Vendor no.</strong>, and <strong>Amount</strong> fields. The <strong>Total Amount to Report</strong> field on the header are updated.</p>
+</li>
+<li><p>In both of situations, when you make a change in the <strong>1096 Form</strong>, Business Central automatically fills in the following fields on the <strong>History</strong> FastTab:</p>
+<ul>
+<li><strong>Changed By</strong> - Specifies the ID of the last user who changed the form.</li>
+<li><strong>Changed Date-Time</strong> - Specifies the date and time when the last change was made in the form.</li>
+</ul>
+</li>
+</ol>
+<h2 id="to-print-the-1096-form">To print the 1096 form</h2>
+<ol>
+<li>Choose the <img src="../../media/ui-search/search_small.png" alt="Lightbulb that opens the Tell Me feature." title="Tell me what you want to do"> icon, enter <strong>1096 Forms</strong>, and then choose the related link.</li>
+<li>Open the form you want to print.</li>
+<li>If the status is <strong>Open</strong>, choose <strong>Release</strong> action to release the form and make it ready for printing.</li>
+<li>Choose <strong>Print</strong> actions to print the single form.</li>
+<li>If you didn&#39;t add the <strong>IRS Contact No.</strong> in the <strong>Company Information</strong>, enter details about the <strong>Person to contact</strong> on the request page, and then select <strong>Print</strong>.</li>
+<li><p>After you print, the following fields at the <strong>History</strong> FastTab are updated:</p>
+<ul>
+<li><strong>Printed by</strong> - Specifies the ID of the last user who printed the form.</li>
+<li><strong>Printed Date-Time</strong> - Specifies the date and time of the last time that the form was printed.</li>
+<li><strong>Printed</strong> - Specifies that the form was printed.</li>
+</ul>
+</li>
+</ol>
+<h2 id="see-also">See also</h2>
+<p><a href="set-up-use-irs1099-form.html">Set Up and Use the IRS 1099 Form</a><br><a href="united-states-local-functionality.html">United States Local Functionality</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

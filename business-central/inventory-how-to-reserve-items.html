@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>So reservieren Sie Artikel </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="So reservieren Sie Artikel ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="reserve-items">Artikel reservieren</h1>
+
+<p>Reservieren Sie Lager oder eingehenden Artikel für Verkaufsaufträge, Bestellungen, Montageaufträge, Umlagerungsaufträge oder Fertigungsaufträge. Sie können Artikel auch in Lager oder eingehenden in Zeilen der offenen Belegzeile reservieren. Sie tun dies auf der Seite <strong>Reservierung</strong>.</p>
+<p>Jede Zeile, die Sie zum Reservieren der Artikel auf der Seite <strong>Reservierung</strong> öffnen, beinhaltet Informationen zu der Art der Zeile (Verkauf, Einkauf, Buchungsblatt) oder der Postenart. Die Zeilen zeigen an, wie viele Artikel von jeder Art von Zeile oder Posten für die Reservierung verfügbar sind.</p>
+<div class="TIP"><h5>Tipp</h5><p>Basierend auf den Mengen, die Sie im Lagerbestand reserviert haben, zeigt Business Central einen Status der Dokumente an, sodass Sie schnell über den nächsten Schritt informiert sind. Beispielsweise um anzugeben, dass Sie einen Kundenauftrag versenden oder mit der Arbeit an einem Projekt, einer Montage oder einem Produktionsauftrag beginnen können. Der Status trägt auch dazu bei, das Risiko versehentlicher Teillieferungen oder Verzögerungen aufgrund fehlender Bestände für Produktions- und Montageaufträge zu verringern.</p>
+<p>Das Feld <strong>Reserviert aus Bestand</strong> kann Ihnen helfen zu verstehen, ob Sie für eine bestimmte Bestellung oder Bestellposition versenden oder kommissionieren können. Für Positionen ist das Feld „Reserviert aus Bestand“ in Infoboxen verfügbar. Um auf die Informationen zur gesamten Bestellung zuzugreifen, befindet sich das Feld auf der Seite <strong>Statistiken</strong>.</p>
+</div>
+<h2 id="reserve-items-for-sales">Sie Artikel für Verkäufe reservieren</h2>
+<p>Nachfolgend wird erläutert, wie Entscheidungsträger als Artikel aus einem Verkaufsauftrag reserviert werden. Die Schritte sind gleich für Einkaufs-, Service-, Umlagerungs- und Montageaufträge.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet" title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Verkaufsaufträge</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie den Verkaufsauftrag.</li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> das Feld <strong>Reservieren</strong> aus. Die Seite <strong>Reservierung</strong> wird geöffnet.  </li>
+<li>Wählen Sie in die Zeile, aus der Sie Artikel reservieren möchten.  </li>
+<li><p>Wählen Sie eine der folgenden Optionen aus.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Funktion</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Autom. reservieren</strong></td>
+<td>Um die Artikel in dem Fenster <strong>Reservierung</strong> automatisch zu reservieren.</td>
+</tr>
+<tr>
+<td><strong>Von aktueller Zeile reservieren</strong></td>
+<td>Um die Artikel aus dem Beleg in der Zeile zu reservieren, die Sie ausgewählt haben.</td>
+</tr>
+<tr>
+<td><strong>Reservierung der aktuellen Zeile stornieren</strong></td>
+<td>Um die Reservierung der Artikel in dem Beleg und in der Zeile, die Sie ausgewählt haben, zu stornieren.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Falls für den Verkaufsauftrag Artikelverfolgungszeilen vorhanden sind, führt das Reservierungssystem spezielle Schritte durch: Weitere Informationen hierzu finden Sie im Abschnitt <a href="inventory-how-to-reserve-items.html#reserve-a-specific-serial-or-lot-number">So reservieren Sie eine bestimmte Serien- oder Chargennummer</a>.  </p>
+</div>
+<h2 id="reserve-an-item-for-a-production-order-line">Artikel für FA-Zeilen reservieren</h2>
+<p>Sie können Artikel für Erstellungsaufträge reservieren. Sie müssen zwischen Produktionsauftragszeilen, d.h. übergeordnete Artikel und Produktionsauftragskomponenten unterscheiden.</p>
+<p>Im folgenden Verfahren wird ein fest geplanter Fertigungsauftrag verwendet.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Firm Planned Prod. Auftrag</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie den fest geplanten Produktionsauftrag, den Sie für übergeordnete Artikel reservieren möchten.  </li>
+<li>Wählen Sie die entsprechende FA-Zeilennummer aus.  </li>
+<li>Wählen Sie auf der Registerkarte  <strong>Zeilen</strong>  in der Gruppe  <strong>Funktionen</strong>  die Aktion  <strong>Reservieren</strong>  aus.</li>
+<li>Markieren Sie auf der Seite  <strong>Reservierung</strong>  die Verkaufszeile und die Auftragszeile und wählen Sie dann die Aktion  <strong>Aus aktueller Zeile reservieren</strong> .  </li>
+</ol>
+<p>Die Menge, die Sie im fest geplanten Fertigungsauftrag eingetragen haben, ist reserviert.</p>
+<h2 id="reserve-items-for-production-order-components">Artikel für FA-Komponenten reservieren</h2>
+<p>Sie können Artikel für Erstellungsaufträge reservieren. Sie müssen zwischen Produktionsauftragszeilen, d.h. übergeordnete Artikel und Produktionsauftragskomponenten unterscheiden.</p>
+<p>Im folgenden Verfahren wird ein fest geplanter Fertigungsauftrag verwendet.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Wie möchten Sie weiter verfahren"> Symbol. Geben Sie <strong>Firm Planned Prod. Auftrag</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Öffnen Sie den fest geplanten FA, für den Sie Komponentenartikel reservieren möchten.  </li>
+<li>Wählen Sie die entsprechende FA-Zeilennummer aus.  </li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> die Option <strong>Zeile</strong> und dann <strong>Posten</strong> aus.  </li>
+<li>Wählen Sie die entsprechende Komponentenzeile aus.  </li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> das Feld <strong>Reservieren</strong> aus.  </li>
+<li>Wählen Sie auf der Seite <strong>Resevierung</strong> eine Zeile und wählen <strong>Aus aktueller Zeile reservieren</strong> aus.  </li>
+</ol>
+<p>Die Menge, die Sie in der fest geplanten Fertigungskomponentenzeile eingetragen haben, ist nun reserviert.</p>
+<h2 id="reserve-items-in-bulk">Reservieren Sie Artikel in großen Mengen</h2>
+<p>Verwenden Sie die Seite <strong>Reservierungsarbeitsblatt</strong>, um eingehende Waren in großen Mengen zu reservieren und zuzuordnen. Mithilfe von Massenreservierungen können Sie beispielsweise sicherstellen, dass für Ihre Verkaufs- und Produktionsaufträge Mengen verfügbar sind. Sie können mehrere Chargen für unterschiedliche Zwecke haben. Beispielsweise können Sie Produktionsaufträge wöchentlich zuweisen, diese jedoch täglich für den Verkauf reservieren.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Reservierungsarbeitsblatt</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion  <strong>Nachfrage abrufen</strong>  aus. Die Seite  <strong>Anfrage zur Reservierung abrufen</strong>  wird geöffnet.</li>
+<li>Geben Sie auf der Seite  <strong>Zu reservierenden Bedarf abrufen</strong>  die Art des Bedarfs an, den Sie aus dem verfügbaren Bestand reservieren möchten.</li>
+<li>Füllen Sie die Filter nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li>Optional: Um die Elemente sofort zuzuordnen, wählen Sie die Aktion <strong>Zuordnen</strong>.</li>
+<li><p>Wählen Sie auf der Seite <strong>Zuordnungsrichtlinie</strong> eine Richtlinie für jeden Schritt aus.</p>
+<table>
+<thead>
+<tr>
+<th>Zuordnungsrichtlinie</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grundlegend (keine Konflikte)</td>
+<td>Weist einem Bedarf Bestand zu, wenn keine Konflikte vorliegen und der Bedarf vollständig gedeckt werden kann. Beispiel: Sie haben Kundenauftrag A mit einer Menge von 10 und einen Auftrag mit einer Menge von 7. Wenn Sie 20 Stück auf Lager haben, erhalten beide Bedarfe die volle Menge. Wenn Ihr Bestand 12 beträgt, wird kein Bestand zugeteilt. Sie müssen die Menge manuell zuteilen.</td>
+</tr>
+<tr>
+<td>Zu gleichen Teilen</td>
+<td>Verteilt den verfügbaren Bestand gleichmäßig auf die Nachfrage. Beispiel: Sie haben einen Kundenauftrag mit einer Menge von 10 und einen Auftrag mit einer Menge von 7. Wenn Ihr Lagerbestand 20 beträgt, erhalten beide Bedarfe die volle Menge. Wenn Ihr Bestand 12 beträgt, erhalten beide Nachfragen 6.</td>
+</tr>
+<tr>
+<td>Nach Debitorenpriorität</td>
+<td>Verteilung basierend auf dem Feld <strong>Priorität</strong> auf der Seite <strong>Debitorenkarte</strong>. Bei geringen Lagerbeständen beliefert Business Central zuerst die Kundschaft mit höherer Priorität.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Um alle Zeilen zu reservieren, bei denen <strong>Akzeptieren</strong> aktiviert ist, wählen Sie die Aktion <strong>Reservierung vornehmen</strong> aus.</p>
+</li>
+</ol>
+<h2 id="change-a-reservation">Reservierung ändern</h2>
+<p>Sie können eine Artikelreservierung ändern.</p>
+<ol>
+<li>Von der Belegzeile, aus der Sie im Inforegister <strong>Zeilen</strong> reserviert haben, wählen Sie die <strong>Reservieren</strong> Aktion aus.  </li>
+<li>Auf der Seite <strong>Reservierung</strong> wählen Sie die <strong>Reservierungsposten</strong> Aktion aus.</li>
+<li>Klicken Sie auf der Seite <strong>Reservierungseinträge</strong> auf <strong>Menge</strong> aktualisieren auf der Zeile, die Sie ändern möchten.</li>
+<li>Bestätigen Sie die nachfolgende Meldung, indem Sie die Schaltfläche <strong>OK</strong> auswählen.</li>
+</ol>
+<h2 id="cancel-a-reservation">Reservierung stornieren</h2>
+<p>Sie können eine Artikelreservierung abbrechen.</p>
+<ol>
+<li>Von der Belegzeile, aus der Sie im Inforegister <strong>Zeilen</strong> reserviert haben, wählen Sie die <strong>Reservieren</strong> Aktion aus.  </li>
+<li>Wählen Sie auf der Seite  <strong>Reservierung</strong>  die Aktion  <strong>Reservierungseinträge</strong>  auf dem Inforegister  <strong>Zeilen</strong>  aus.  </li>
+<li>Auf der Seite <strong>Reservierung</strong> wählen Sie die <strong>Reservierungsposten stornieren</strong> Aktion aus.  </li>
+<li>Bestätigen Sie die nachfolgende Meldung, indem Sie die Schaltfläche <strong>OK</strong> auswählen.  </li>
+</ol>
+<h2 id="reserve-a-specific-serial-or-lot-number">Bestimmte Serien- oder Chargennummer reservieren</h2>
+<p>Aus ausgehenden Dokumenten für Artikel mit Artikelverfolgung, wie Verkaufsaufträge oder Listen mit Fertigungskomponenten, können Sie bestimmte Serien- oder Chargennummern reservieren. Die Reservierung bestimmter Serien- oder Chargennummern kann beispielsweise in den folgenden Situationen nützlich sein:</p>
+<ul>
+<li>Wenn Sie Produktionskomponenten aus einer bestimmten Charge benötigen, um die Konsistenz mit früheren Produktionschargen sicherzustellen.</li>
+<li>Weil ein Kunde eine bestimmte Seriennummer angefordert hat. </li>
+</ul>
+<p>Weitere Informationen finden Sie unter <a href="inventory-how-work-item-tracking.html">Arbeiten mit Serien- und Chargennummern</a>.</p>
+<p>Dieses Vorgehen wird als spezifische Reservierung bezeichnet, weil Sie von der Menge des Artikels X reservieren, die zu Charge X gehört. Wenn Sie dagegen nur von der Menge des Artikels X reservieren, handelt es sich lediglich um eine normale, nicht spezifische Reservierung. Weitere Informationen unter <a href="design-details-item-tracking-and-reservations.html">Designdetails – Artikelverfolgung und Reservierungen</a></p>
+<p>Das folgende Verfahren basiert auf einer Auftragsabwicklung.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Verkaufsaufträge</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Erstellen Sie eine Verkaufsauftragszeile für einen Artikel mit Artikelverfolgung.  </li>
+<li>Weisen Sie dann der Verkaufsauftragszeile Serien- und Chargennummern zu. Weitere Informationen finden Sie unter <a href="inventory-how-work-item-tracking.html">Arbeiten mit Serien- und Chargennummern</a>.</li>
+<li>Auf der Verkaufsauftragszeile wählen Sie die Aktion <strong>Reservieren</strong> aus.  </li>
+<li>Wählen Sie die Schaltfläche <strong>Ja</strong>, um bestimmte Serien- oder Chargennummern zu reservieren.  </li>
+<li>Wählen Sie auf der Seite <strong>Artikelnachverfolgungsliste</strong> die Serien- und Chargennummernkombination aus, die Sie zugewiesen haben.  </li>
+<li>Wählen Sie die Schaltfläche <strong>OK</strong>, um die Seite <strong>Reservationen</strong> zu öffnen, in dem nur der Bedarf angezeigt wird, der mit der angegebenen Artikelverfolgungsnummer verbunden ist. Bei nicht-spezifischen Reservierungen für eine der Artikelverfolgungsnummern, die Sie in dieser Zeile angegeben haben, werden Sie über die Menge informiert, die bereits reserviert wurde.  </li>
+<li>Klicken Sie auf die Aktionen <strong>Automatisch Reservieren</strong> oder <strong>Aus aktueller Zeile reservieren</strong>, um die Reservierung für die speziellen Artikelverfolgungsnummern zu erstellen.</li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="inventory-manage-inventory.html">Bestand</a><br><a href="design-details-reservation-order-tracking-and-action-messaging.html">Designdetails: Reservierung, Auftragsnachverfolgung und Aktionsmeldungen</a><br><a href="design-details-item-tracking-and-reservations.html">Designdetails: Artikelverfolgung und Reservierungen</a><br><a href="inventory-how-work-item-tracking.html">Arbeiten mit Seriennummern und Chargennummern</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

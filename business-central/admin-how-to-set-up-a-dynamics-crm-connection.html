@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mit Microsoft Dataverse verbinden </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Mit Microsoft Dataverse verbinden ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="connect-to-microsoft-dataverse">Mit Microsoft Dataverse verbinden</h1>
+
+<!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE[azure-ad-to-microsoft-entra-id](~/../shared-content/shared/azure-ad-to-microsoft-entra-id.md)]
+
+: Couldn&#39;t find file ../shared-content/shared/azure-ad-to-microsoft-entra-id.md. -->[!INCLUDE[azure-ad-to-microsoft-entra-id](~/../shared-content/shared/azure-ad-to-microsoft-entra-id.md)]
+
+<!--END ERROR INCLUDE --><p>In diesem Artikel wird beschrieben, wie Sie eine Verbindung zwischen Business Central und Dataverse einrichten. Typischerweise stellen Unternehmen die Verbindung her, um Daten mit einer anderen Dynamics 365-Geschäftsanwendung, z. B. Dynamics 365 Sales, zu integrieren und zu synchronisieren.  </p>
+<h2 id="before-you-start">Bevor Sie beginnen</h2>
+<p>Sie müssen einige Informationen bereithalten, bevor Sie die Verbindung herstellen:  </p>
+<ul>
+<li>Die URL für die Dataverse-Umgebung, mit der Sie eine Verbindung herstellen möchten. Wenn Sie die unterstützte Anleitung zur <strong>Dataverse-Verbindungseinrichtung</strong> zum Herstellen der Verbindung verwenden, werden wir Ihre Umgebungen ermitteln. Sie können auch die URL einer anderen Umgebung in Ihrem Mandanten eingeben.  </li>
+<li>Der Benutzername und das Passwort eines Kontos, das über Administratorberechtigungen in Business Central und Dataverse verfügt.  </li>
+<li>Wenn Sie eine lokale Business Central 2020 Veröffentlichungszyklus 1, Version 16.5 haben, lesen Sie den Artikel zu <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/upgrade/known-issues#wrong-net-assemblies-for-external-connected-services">Einige bekannte Probleme</a>. Sie müssen die beschriebene Problemumgehung ausführen, bevor Sie eine Verbindung zu Dataverse herstellen können.</li>
+<li>Die lokalen Währungen, die jedes Unternehmen verwendet. Business Central-Unternehmen können sich mit einer Dataverse-Umgebung verbinden, die eine andere Basiswährung als ihre Landeswährung hat. Weitere Informationen zum Umgang mit der Einrichtung mehrerer Währungen finden Sie unter <a href="#allow-for-different-currencies">Für verschiedene Währungen zulassen</a>.</li>
+</ul>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Ihre Dataverse-Umgebung darf sich nicht im Administrationsmodus befinden. Der Administrationsmodus führt dazu, dass die Verbindung fehlschlägt, da das Integrationsbenutzerkonto für die Verbindung keine Administratorrechte besitzt. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/power-platform/admin/admin-mode">Verwaltungsmodus</a>.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Diese Schritte beschreiben das Verfahren in Business Central online.
+Wenn Sie Business Central lokal und nicht das Microsoft Entra Konto verwenden, um die Verbindung mit Dataverse herzustellen, müssen Sie außerdem einen Benutzernamen und ein Kennwort eines Benutzerkontos für die Integration angeben. Dieses Konto wird als „Integrationsbenutzer“-Konto bezeichnet. Wenn Sie ein Microsoft Entra-Konto verwenden, ist das Integrationsbenutzerkonto weder erforderlich noch wird es angezeigt. Der Integrationsbenutzer wird automatisch eingerichtet und benötigt keine Lizenz.</p>
+</div>
+<h2 id="link-your-business-central-and-dataverse-environments">Ihre Business Central- und Dataverse-Umgebungen verknüpfen</h2>
+<p>Unternehmen möchten ihre Daten innerhalb ihrer Datenschutzgrenzen sicher aufbewahren, insbesondere wenn ihre betriebswirtschaftliche Anwendung in andere Apps integriert ist. Durch die Verknüpfung von Business Central- und Dataverse-Umgebungen erfüllen Sie nicht nur diese Anforderungen, sondern bieten Ihren Administrierenden auch eine einfachere Möglichkeit, Ihre Integrationen mit anderen Dynamics 365-Apps zu erstellen und zu verwalten.</p>
+<p>Im Business Central Admin Center können Sie Ihre Business Central-Umgebung mit Ihrer Dataverse-Umgebung verknüpfen. Business Central kann die Informationen aus dem Link verwenden, um die Integration mit anderen Dynamics 365-Apps, wie etwa Sales und Field Service, einfacher und sicherer zu gestalten. Beispielsweise ist die verknüpfte Dataverse-Umgebungs-URL standardmäßig auf der Seite <strong>Dataverse-Verbindungseinrichtung</strong> verfügbar und wenn Sie die Anleitung für die unterstützte <strong>Dataverse-Verbindungseinrichtung</strong> ausführen.</p>
+<h2 id="allow-for-different-currencies">Für verschiedene Währungen zulassen</h2>
+<p>Business Central-Unternehmen können sich mit einer Dataverse-Umgebung verbinden, die eine andere Basiswährung als ihre Landeswährung hat.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Für die Synchronisierung mehrerer Währungen ist eine unidirektionale Synchronisierung von Business Central bis Dataverse erforderlich.</p>
+</div>
+<p>Um mehr über die Basiswährung in Dataverse zu erfahren, gehen Sie zu <a href="https://learn.microsoft.com/de-de/powerapps/developer/data-platform/transaction-currency-currency-entity">Entität der Transaktionswährung (Währung)</a>. </p>
+<p>Um mehr über die Währungen in Business Central zu erfahren, gehen Sie zu <a href="finance-currencies.html">Währungen in Business Central</a>.</p>
+<p>Um unterschiedliche Währungen zu ermöglichen, stellen Sie vor dem Herstellen einer Verbindung sicher, dass Sie die folgenden Einstellungen angegeben haben:</p>
+<ul>
+<li>Die Einstellung der Basistransaktionswährung in Dataverse hat den Währungscode, der auf der Seite <strong>Währungen</strong> in Business Central angegeben ist.</li>
+<li>Für die Währung Business Central ist auf der Seite <strong>Währungswechselkurse</strong> mindestens ein Wechselkurs angegeben.</li>
+</ul>
+<p>Wenn Sie die Verbindung zu Dataverse aktivieren, fügt Business Central seine Hauswährung der <strong>Währung</strong>-Entität in Dataverse hinzu. Die lokale Währung verwendet den Wechselkurs aus dem Feld <strong>Währungsfaktor</strong> auf der Seite <strong>Währungswechselkurse</strong>.</p>
+<p>Da die Währungssynchronisierung unidirektional von Business Central an Dataverse erfolgt, werden Geldbeträge wie folgt konvertiert und synchronisiert:</p>
+<ul>
+<li>Beträge in der Dataverse Basiswährung werden basierend auf dem letzten synchronisierten Wechselkurs von Business Central in die Business Central lokale Währung umgerechnet.</li>
+<li>Beträge in der Business Central lokalen Währung werden mit der Business Central lokalen Währung in einer der anderen (nicht Basis-)Währungen in Dataverse synchronisiert.</li>
+</ul>
+<h2 id="set-up-a-connection-to-">Verbindung zu Dataverse einrichten</h2>
+<p>Für alle anderen Authentifizierungsarten als die Microsoft 365-Authentifizierung legen Sie Ihre Verbindung auf der Seite <strong>Dataverse Verbindungseinrichtung</strong> auf Dataverse fest. Für die Microsoft 365-Authentifizierung empfehlen wir Ihnen, die Anleitung <strong>Dataverse Verbindungseinrichtung</strong> zur unterstützten Einrichtung zu verwenden. Der Leitfaden erleichtert die Einrichtung der Verbindung und die Festlegung erweiterter Funktionen, wie z. B. Personenbesitz und Erstsynchronisierung.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Während der Einrichtung der Verbindung mit Dataverse wird der Administrator aufgefordert, der registrierten Azure-Anwendung mit dem Namen Business Central Integration für Dataverse zu erteilen:</p>
+<ul>
+<li>Die Berechtigung <strong>Auf Dataverse zugreifen</strong> ist erforderlich, damit Business Central im Namen des Administrators automatisch einen nicht lizenzierten, nicht interaktiven Benutzer der Anwendung Business Central Integration erstellen, diesem Benutzer Sicherheitsrollen zuweisen und Business Central Integration Solution für Dataverse bereitstellen kann. Diese Berechtigung wird nur einmal beim Einrichten der Verbindung mit Dataverse verwendet.  </li>
+<li>Die Berechtigung <strong>Vollzugriff auf Dynamics 365 Business Central</strong> ist erforderlich, damit automatisch erstellte Benutzer der Anwendung Business Central Integration auf Business Central-Daten zugreifen können, die synchronisiert werden.  </li>
+<li>Die Berechtigung <strong>Anmelden und Ihr Profil lesen</strong> ist erforderlich, um zu überprüfen, ob dem Benutzer, der sich anmeldet, tatsächlich die Sicherheitsrolle „Systemadministrator“ in Dataverse zugewiesen ist.  </li>
+</ul>
+<p>Durch die Einwilligung im Namen der Organisation berechtigt der Administrator die registrierte Azure-Anwendung mit dem Namen Business Central Integration für Dataverse, Daten mit automatisch erstellten Anmeldeinformationen des Benutzers der Anwendung Business Central zu synchronisieren.</p>
+</div>
+<h3 id="to-use-the-dataverse-connection-setup-assisted-setup-guide">So verwenden Sie die Dataverse Anleitung zur unterstützten Einrichtung</h3>
+<p>Die Anleitung zur unterstützten Einrichtung für die Verbindung von Dataverse kann Ihnen helfen, die Verbindung einfacher herzustelle und Sie kann Ihnen sogar beim Ausführen einer ersten Synchronisierung helfen. Wenn Sie die anfängliche Synchronisierung ausführen möchten, überprüft Business Central die Daten in beiden Anwendungen und gibt Empfehlungen für die anfängliche Synchronisierung. Die folgende Tabelle beschreibt die Empfehlungen.</p>
+<table>
+<thead>
+<tr>
+<th>Empfehlung</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vollständige Synchronisierung</strong></td>
+<td>Daten existieren nur in Business Central oder nur in Dataverse. Die Empfehlung lautet, alle Daten des Dienstes, der sie hat, mit dem anderen Dienst zu synchronisieren.</td>
+</tr>
+<tr>
+<td><strong>Keine Synchronisation</strong></td>
+<td>Daten sind in beiden Anwendungen vorhanden, und eine vollständige Synchronisierung würde die Daten duplizieren. Die Empfehlung ist, Datensätze zu koppeln.</td>
+</tr>
+<tr>
+<td><strong>Abhängigkeit nicht erfüllt</strong></td>
+<td>Daten sind in beiden Anwendungen vorhanden, aber die Zeile oder Tabelle kann nicht synchronisiert werden, da dies von einer Zeile oder Tabelle abhängt, für die die Empfehlung Keine Synchronisierung gilt. Wenn beispielsweise Kunden nicht synchronisiert werden können, können auch Daten für Kontakte, die von den Kundendaten abhängen, nicht synchronisiert werden.</td>
+</tr>
+</tbody>
+</table>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>In der Regel verwenden Sie die vollständige Synchronisierung nur, wenn Sie die Anwendungen zum ersten Mal integrieren, und nur eine Anwendung enthält Daten. Eine vollständige Synchronisierung kann in einer Demonstrationsumgebung hilfreich sein, da in jeder Anwendung automatisch Datensätze erstellt und gekoppelt werden, wodurch die Arbeit mit synchronisierten Daten beschleunigt wird. Sie sollten die vollständige Synchronisierung jedoch nur ausführen, wenn Sie eine Zeile in Business Central für jede Zeile in Dataverse für die Tabellenzuordnungen möchten. Andernfalls kann das Ergebnis doppelte Datensätze sein.</p>
+</div>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Unterstützte Einrichtung</strong> ein, und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie <strong>Eine Verbindung zu Microsoft Dataverse</strong> einrichten, um das Leitfaden für das unterstützte Setup zu starten.</li>
+<li>Füllen Sie die Felder nach Bedarf aus.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie nicht aufgefordert werden, sich mit Ihrem Administratorkonto anzumelden, liegt dies wahrscheinlich daran, dass die Popups blockiert sind. Erlauben Sie Popups von <code>https://login.microsoftonline.com</code>, um sich anzumelden.</p>
+</div>
+<h3 id="to-create-or-maintain-the-connection-manually">So erstellen oder pflegen Sie den Link manuell</h3>
+<p>Die folgende Prozedur beschreibt, wie die Verbindung auf der Seite <strong>Dataverse Verbindungs-Einrichtung</strong> manuell eingerichtet wird. Auf der Seite <strong>Dataverse-Verbindungseinrichtung</strong> verwalten Sie die Integrationseinstellungen.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Dataverse Einrichtung der Verbindung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li><p>Geben Sie die folgenden Informationen über die Verbindung von Business Central mit Dataverse ein.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Umgebungs-URL</strong></td>
+<td>Wenn Sie Umgebungen in Dataverse besitzen, werden wir diese für Sie finden, wenn Sie den Einrichtungsleitfaden ausführen. Wenn Sie eine Verbindung zu einer anderen Umgebung in einem anderen Mandanten herstellen möchten, können Sie die Administrator-Zugangsdaten für die Umgebung eingeben, und wir werden diese ermitteln.</td>
+</tr>
+<tr>
+<td><strong>Aktiviert</strong></td>
+<td>Beginnen Sie mit der Verwendung der Integration. Wenn Sie die Verbindung nicht sofort aktivieren, werden die Verbindungseinstellungen gespeichert, aber Benutzer können nicht von Business Central aus auf Dataverse-Daten zugreifen. Sie können zu dieser Seite zurückkehren und die Verbindung später aktivieren.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wählen Sie im Feld <strong>Eigentümermodell</strong> aus, ob Sie möchten, dass eine Team-Tabelle in Dataverse neue Datensätze oder ein oder mehrere bestimmte Benutzer besitzen soll. Wenn Sie <strong>Person</strong> wählen, müssen Sie jeden Benutzer angeben. Wenn Sie <strong>Team</strong> wählen, wird die Standard-Geschäftseinheit im Feld <strong>Gekoppelte Geschäftseinheit</strong> angezeigt.</p>
+ <!--Need to verify the details in this table, are these specific to Sales maybe?  IK: No they are not and no longer relevant 
+ Enter the following advanced settings.-->
+
+ <!-- |Field|Description|
+ |-----|-----|
+ |**[!INCLUDE[prod_short](includes/prod_short.md)] Users Must Map to CDS Users**|If you're using the Person ownership model, specify whether [!INCLUDE[prod_short](includes/prod_short.md)] user accounts must have a matching user accounts in [!INCLUDE[cds_long_md](includes/cds_long_md.md)]. The **Microsoft 365 Authentication Email** of the [!INCLUDE[prod_short](includes/prod_short.md)] user must be the same as the **Primary Email** of the [!INCLUDE[crm_md](includes/crm_md.md)] user.<br /><br /> If you set the value to **Yes**, [!INCLUDE[prod_short](includes/prod_short.md)] users who don't have a matching [!INCLUDE[crm_md](includes/crm_md.md)] user account won't have [!INCLUDE[prod_short](includes/prod_short.md)] integration capabilities in the user interface. Access to [!INCLUDE[crm_md](includes/crm_md.md)] data directly from [!INCLUDE[prod_short](includes/prod_short.md)] is done on behalf of the [!INCLUDE[crm_md](includes/crm_md.md)] user account.<br /><br /> If you set the value to **No**, all [!INCLUDE[prod_short](includes/prod_short.md)] users will have [!INCLUDE[crm_md](includes/crm_md.md)] integration capabilities in the user interface. Access to [!INCLUDE[crm_md](includes/crm_md.md)] data is done on behalf of the [!INCLUDE[crm_md](includes/crm_md.md)] connection (integration) user.|
+ |**Current Business Central Salesperson is Mapped to a User**|Indicates whether your user account is mapped to an account in [!INCLUDE[crm_md](includes/crm_md.md)] double check the name of this field|--></li>
+<li><p>Um die Verbindungseinstellungen zu testen, wählen Sie <strong>Verbindung</strong>, und dann <strong>Verbindung testen</strong>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn keine Datenverschlüsselung in Business Central aktiviert ist, werden Sie gefragt, ob sie diese aktivieren möchten. Um Datenverschlüsselung zu aktivieren, wählen Sie <strong>Ja</strong> aus, und stellen Sie die erforderlichen Informationen bereit. Anderenfalls wählen Sie <strong>Nein</strong> aus. Sie können die Datenverschlüsselung später aktivieren. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-encrypting-data">Verschlüsseln von Daten in Dynamics 365 Business Central</a> in der Hilfe für Entwickler und die Verwaltung.  </p>
+</div>
+</li>
+<li>Wenn die Dataverse-Synchronisierung nicht bereits eingerichtet ist, werden Sie gefragt, ob Sie die Standardsynchronisierungskonfiguration verwenden möchten. Abhängig davon, ob Sie Datensätze in Dataverse und Business Central angepasst bleiben sollen, wählen Sie <strong>Ja</strong> oder <strong>Nein</strong> aus.</li>
+</ol>
+<!--
+## <a name="show-me-the-process"></a>Show Me the Process
+
+The following video shows the steps to connect [!INCLUDE[prod_short](includes/prod_short.md)] and [!INCLUDE[cds_long_md](includes/cds_long_md.md)]. <br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ArlP]
+
+-->
+<h2 id="customize-the-match-based-coupling">Kopplung basierend auf Übereinstimmung anpassen</h2>
+<p>Ab dem Veröffentlichungszyklus 2 im Jahr 2021 kann ein Administrtator Kriterien zum Koppeln von Datensätzen auf der Grundlage von Übereinstimmungen eingeben. Sie können den Algorithmus für den Abgleich von Datensätzen an den folgenden Stellen in Business Central starten:</p>
+<ul>
+<li><p>Listenseiten, die Datensätze anzeigen, die mit Dataverse synchronisiert sind, wie z.B. die Seiten Kunden und Artikel.  </p>
+<p>  Markieren Sie mehrere Datensätze und wählen Sie dann die Aktion <strong>Bezogen</strong>, wählen Sie <strong>Dataverse</strong>, wählen Sie <strong>Koppeln</strong> und dann <strong>Abgleichsbasiertes Koppeln</strong>.</p>
+<p>  Wenn Sie den abgleichsbasierten Kopplungsprozess von einer Stammdatenliste aus starten, wird ein Kopplungsauftrag nach der Festlegung der Kopplungskriterien geplant.  </p>
+</li>
+<li><p>Die <strong>Dataverse Full Synch. Überprüfung</strong> Seite.  </p>
+<p>  Wenn der Vollsynchronisationsprozess nicht gekoppelte Datensätze in Business Central und in Dataverse erkennt, wird der Link <strong>Kopplungskriterien auswählen</strong> für die entsprechende Integrationstabelle angezeigt.  </p>
+<p>  Sie können den Prozess <strong>Vollständige Synchronisierung ausführen</strong> auf den Seiten <strong>Dataverse-Verbindungseinrichtung</strong> und <strong>Dynamics 365-Verbindungseinrichtung</strong> starten. Sie können ihn auch in der unterstützten Einrichtungsanleitung <strong>Verbindung zu Dataverse einrichten</strong> starten, wenn Sie die Einrichtung abgeschlossen haben.  </p>
+<p>  Wenn Sie den abgleichsbasierten Kopplungsprozess auf der Seite <strong>Bewertung der vollständigen Dataverse-Synchronisierung</strong> starten, wird nach Abschluss der Einrichtung ein Kopplungsauftrag geplant.  </p>
+</li>
+<li><p>Die Liste <strong>Integrationstabellenzuordnungen</strong>.  </p>
+<p>  Markieren Sie eine Zuordnung, wählen Sie die Aktion <strong>Koppeln</strong> und dann <strong>Abgleichsbasierte Kopplung</strong>.</p>
+<p>  Wenn Sie den abgleichsbasierten Kopplungsprozess über eine Integrationstabellenzuordnung starten, wird ein Kopplungsauftrag für alle nicht gekoppelten Datensätze in der Zuordnung ausgeführt. Sie können auch nicht gekoppelte Datensätze aus der Liste auswählen, um das Projekt nur für diese Datensätze auszuführen.</p>
+</li>
+</ul>
+<p>In allen drei Fällen öffnet sich die Seite <strong>Kopplungskriterien auswählen</strong>, auf der Sie die entsprechenden Kopplungskriterien festlegen können. Auf dieser Seite können Sie die Kopplung mit den folgenden Aufgaben anpassen:</p>
+<ul>
+<li><p>Wählen Sie die Felder aus, die für den Abgleich der Business Central-Datensätz mit Dataverse-Entitäten verwendet werden sollen. Sie können festlegen, ob beim Abgleich zwischen Groß- und Kleinschreibung unterschieden werden soll.  </p>
+</li>
+<li><p>Geben Sie an, ob nach dem Koppeln von Datensätzen eine Synchronisierung erfolgen soll. Wenn Datensätze eine bidirektionale Zuordnung verwenden, können Sie auch festlegen, was geschieht, wenn Konflikte auf der Seite <strong>Aktualisierungskonflikte auflösen</strong> aufgelistet sind.  </p>
+</li>
+<li><p>Legen Sie die Reihenfolge fest, in der die Datensätze durchsucht werden, indem Sie eine <em>Übereinstimmungspriorität</em> für die entsprechenden Zuordnungsfelder angeben. Business Central sucht basierend auf dem Wert im Feld <strong>Übereinstimmungspriorität</strong> in aufsteigender Reihenfolge nach einer Übereinstimmung. Ein leerer Wert im Feld <strong>Übereinstimmungspriorität</strong> ist gleich der Priorität 0, bei der es sich um die höchste Priorität handelt. Felder mit der Priorität 0 werden zuerst berücksichtigt.  </p>
+</li>
+<li><p>Legen Sie fest, ob eine neue Entitätsinstanz in Dataverse erstellt werden soll, falls anhand der Abgleichskriterien keine eindeutige, ungekoppelte Übereinstimmung gefunden werden kann. Um diese Funktionalität zu aktivieren, wählen Sie die Aktion <strong>Neu erstellen, wenn keine Übereinstimmung gefunden werden kann</strong>.  </p>
+</li>
+</ul>
+<h3 id="view-the-results-of-the-coupling-job">Anzeigen der Ergebnisse des Kopplungsauftrags</h3>
+<p>Um die Ergebnisse des Kopplungsauftrags anzuzeigen, öffnen Sie die Seite <strong>Integrationstabellenzuordnungen</strong>, wählen Sie die entsprechende Zuordnung aus, wählen Sie die Aktion <strong>Kopplung</strong> und dann die Aktion <strong>Protokoll des Kopplungsauftrags</strong>.  </p>
+<p>Wenn Datensätze nicht gekoppelt werden konnten, können Sie den Wert in der Spalte <strong>Fehler</strong> auswählen, um eine Liste mit Fehlern zu öffnen, die den Grund für deren Auftreten beschreiben.  </p>
+<p>Die Kopplung schlägt in der Regel aus folgenden Gründen fehl:</p>
+<ul>
+<li><p>Es wurden keine passenden Kriterien definiert</p>
+<p>  Führen Sie die abgleichsbasierte Kopplung erneut aus, aber denken Sie daran, Kopplungskriterien zu definieren.</p>
+</li>
+<li><p>Für die in den Abgleichskriterien angegebenen Felder wurde keine Übereinstimmung gefunden.</p>
+<p>  Wiederholen Sie die Kopplung mit verschiedenen Feldern.</p>
+</li>
+<li><p>Für mehrere Datensätze wurden basierend auf den in den Abgleichskriterien angegebenen Feldern mehrere Übereinstimmungen gefunden.  </p>
+<p>  Wiederholen Sie die Kopplung mit verschiedenen Feldern.</p>
+</li>
+<li><p>Es wurde eine Übereinstimmung gefunden, aber der Datensatz ist bereits mit einem Datensatz in Business Central gekoppelt.  </p>
+<p>  Wiederholen Sie die Kopplung mit verschiedenen Feldern, oder untersuchen Sie, warum die Dataverse-Entität mit dem Datensatz in Business Central gekoppelt ist.</p>
+</li>
+</ul>
+<div class="TIP"><h5>Tipp</h5><p>Damit Sie sich einen Überblick über den Fortschritt der Kopplung verschaffen können, zeigt das Feld <strong>Gekoppelt mit Dataverse</strong> an, ob ein Datensatz mit einer Dataverse-Entität gekoppelt ist. Sie können die Liste der zu synchronisierenden Datensätze mit dem Feld <strong>Gekoppelt mit Dataverse</strong> filtern.</p>
+</div>
+<h2 id="upgrade-connections-from-business-central-online-to-use-certificate-based-authentication">Verbindungen von Business Central Online zur Verwendung der zertifikatsbasierten Authentifizierung upgraden</h2>
+<div class="NOTE"><h5>Hinweis</h5><p>Dieser Abschnitt ist nur für Business Central Online-Mandanten relevant, die von Microsoft gehostet werden. Online-Mandanten, die von ISVs gehostet werden, und lokale Installationen sind davon nicht betroffen.</p>
+</div>
+<p>Im April 2022 wird der Office365-Authentifizierungstyp (Benutzername/Kennwort) nicht mehr von Dataverse unterstützt. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-dataverse">Abkündigung des Office365-Authentifizierungstyps</a>. Außerdem wird im März 2022 die Verwendung der Client-Geheimnis-basierten Service-to-Service-Authentifizierung für Online-Mandanten von Business Central nicht mehr unterstützt. Sie müssen die zertifikatsbasierten Service-to-Service-Authentifizierung für Verbindungen mit Dataverse verwenden. Business Central Online-Mandanten, die von ISVs gehostet werden, und lokale Installationen können weiterhin den geheimen Clientschlüssel für die Authentifizierung verwenden.</p>
+<p>Um eine Unterbrechung der Integrationen zu vermeiden, <em>müssen Sie die Verbindung auf die Verwendung der zertifikatsbasierten Authentifizierung umstellen</em>. Obwohl die Umstellung für März 2022 geplant ist, empfehlen wir Ihnen dringend, das Upgrade so bald wie möglich durchzuführen. Die folgenden Schritte beschreiben, wie Sie ein Upgrade auf zertifikatsbasierte Authentifizierung durchführen. </p>
+<h3 id="to-upgrade-your-business-central-online-connection-to-use-certificate-based-authentication">So aktualisieren Sie Ihre Business Central Online-Verbindung, um die zertifikatsbasierte Authentifizierung zu verwenden</h3>
+<ol>
+<li>Je nachdem, ob Sie mit Dynamics 365 Sales integriert sind, führen Sie einen der folgenden Schritte aus:<ul>
+<li>Wenn ja, öffnen Sie die Seite <strong>Microsoft Dynamics 365 Verbindungseinrichtung</strong>.</li>
+<li>Wenn nicht, öffnen Sie die Seite <strong>Dataverse Einrichtung der Verbindung</strong>.</li>
+</ul>
+</li>
+<li>Wählen Sie <strong>Verbindung</strong> und dann <strong>Zertifikatsauthentifizierung verwenden</strong>, um die Verbindung auf die Verwendung einer zertifikatsbasierten Authentifizierung umzustellen.</li>
+<li>Melden Sie sich mit den Anmeldeinformationen des Administrators für Dataverse an. Die Anmeldung sollte weniger als eine Minute dauern.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Sie müssen diese Schritte in jeder Business Central-Umgebung wiederholen, einschließlich der Produktions- und Sandbox-Umgebungen, und in jeder Firma, in der Sie eine Verbindung zu Dataverse haben.</p>
+</div>
+<h2 id="connecting-on-premises-versions">Verbinden von lokalen Versionen</h2>
+<p>Sie müssen einige Informationen auf der Seite <strong>Dataverse-Verbindungseinrichtung</strong> eingeben, um Business Central vor Ort mit Dataverse zu verbinden.</p>
+<p>Um eine Verbindung mit einem Microsoft Entra-Konto herzustellen, müssen Sie eine Anwendung als Microsoft Entra-ID registrieren. Sie müssen die Anwendungs-ID, das Geheimnis des Schlüsseltresors und die Umleitungs-URL angeben. Die Umleitungs-URL ist bereits ausgefüllt und sollte für die meisten Installationen funktionieren. Sie müssen Ihre Installation für die Verwendung von HTTPS einrichten. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/deployment/configure-ssl-web-client-connection">Konfigurieren von SSL zum Sichern der Business Central Web Client-Verbindung</a>. Wenn Sie Ihren Server für eine andere Homepage einrichten, können Sie die URL jederzeit ändern. Der geheime Clientschlüssel wird als verschlüsselte Zeichenfolge in Ihrer Datenbank gespeichert. </p>
+<h3 id="to-register-an-application-in-microsoft-entra-id-for-connecting-from-business-central-to-dataverse">So registrieren Sie eine Anwendung in Microsoft Entra-ID, um eine Verbindung mit Dataverse über Business Central herzustellen</h3>
+<p>Bei den folgenden Schritten wird davon ausgegangen, dass Sie Microsoft Entra-ID verwenden, um Identitäten und den Zugriff zu verwalten. Weitere Informationen zum Registrieren einer Anwendung in Microsoft Entra-ID finden Sie unter <a href="https://learn.microsoft.com/de-de/azure/active-directory/develop/quickstart-register-app">Schnellstart: Anwendung bei der Microsoft-Identitätsplattform registrieren</a>. </p>
+<ol>
+<li>Wählen Sie im Navigationsbereich von Azure-Portal unter <strong>Verwalten</strong> die Option <strong>Authentifizierung</strong> aus.  </li>
+<li>Fügen Sie unter <strong>URLs umleiten</strong> die Umleitungs-URL hinzu, die auf der Seite <strong>Dataverse-Verbindungseinrichtung</strong> in Business Central vorgeschlagen wird.</li>
+<li>Wählen Sie unter <strong>Verwalten</strong> die Option <strong>API-Berechtigungen</strong> aus.</li>
+<li><p>Wählen Sie unter <strong>Konfigurierte Berechtigungen</strong> die Option <strong>Berechtigung hinzufügen</strong> aus, und fügen Sie anschließen der Registerkarte <strong>Microsoft APIs</strong> delegierte Berechtigungen hinzu:</p>
+<ul>
+<li>Fügen Sie für Business Central die <strong>Financials.ReadWrite.All</strong>-Berechtigungen hinzu.</li>
+<li><p>Fügen Sie für Dynamics CRM die <strong>user_impersonation</strong>-Berechtigungen hinzu.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Der Name der Dynamics CRM-API kann sich ändern.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie unter <strong>Verwalten</strong> die Option <strong>Zertifikate &amp; Geheimnisse</strong> aus, und erstellen Sie dann einen neuen geheimen Schlüssel für Ihre App. Sie verwenden den geheimen Schlüssel in Business Central, im Feld <strong>Geheimer Clientschlüssel</strong> auf der Seite <strong>Dataverse-Verbindungseinrichtung</strong>, oder Sie speichern ihn in einem sicheren Speicher und stellen ihn in einem Ereignisabonnenten bereit, wie weiter oben in diesem Thema beschrieben.</p>
+</li>
+<li>Wählen Sie <strong>Übersicht</strong> aus, und suchen Sie dann den Wert <strong>Anwendungs-(Client-)ID</strong>. Diese ID ist die Client-ID Ihrer Anwendung. Sie müssen sie auf der Seite <strong>Dataverse-Verbindungseinrichtung</strong> im Feld <strong>Client-ID</strong> eingeben oder in einem sicheren Speicher speichern und in einem Ereignisabonnenten bereitstellen.</li>
+<li>Geben Sie in Business Central auf der Seite <strong>Dataverse-Verbindungseinrichtung</strong> im Feld <strong>Umgebungs-URL</strong> die URL für Ihre Dataverse-Umgebung ein.</li>
+<li>Aktivieren Sie das Kontrollkästchen <strong>Aktiviert</strong>, um die Verbindung mit Dataverse zu aktivieren.</li>
+<li><p>Melden Sie sich mit Ihrem Administratorkonto für Microsoft Entra-ID an (dieses Konto muss eine gültige Lizenz für Dataverse haben und ein Administrator in Ihrer Dataverse-Umgebung sein). Nachdem Sie sich angemeldet haben, werden Sie aufgefordert, Ihrer registrierten Anwendung zu erlauben, sich im Namen der Organisation bei Dataverse anzumelden. Sie müssen Ihre Zustimmung geben, um die Einrichtung abzuschließen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie nicht aufgefordert werden, sich mit Ihrem Administratorkonto anzumelden, liegt dies wahrscheinlich daran, dass Popups blockiert sind. Erlauben Sie Popups von <code>https://login.microsoftonline.com</code>, um sich anzumelden.</p>
+</div>
+</li>
+</ol>
+<h3 id="to-disconnect-from-">So trennen Sie Dataverse</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Dataverse Einrichtung der Verbindung</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Schalten Sie auf der Seite <strong>Dataverse Verbindungseinrichtung</strong> die Umschaltung auf <strong>Aktiviert</strong>.  </li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="admin-how-to-view-synchronization-status.html">Den Status einer Synchronisierung anzeigen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Genehmigungsworkflow erstellen, um Aufgaben zu verbinden </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Genehmigungsworkflow erstellen, um Aufgaben zu verbinden ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="create-workflows-to-connect-tasks-in-business-processes">Workflows erstellen, um Aufgaben in Geschäftsprozessen zu verbinden</h1>
+
+<p>Sie können Workflows erstellen, die Aufgaben in Geschäftsprozessen verbinden, die von verschiedenen Benutzern ausgeführt werden. Sie können Systemaufgaben, wie automatische Buchung, als Schritte in Workflows aufnehmen, die vor oder nach Benutzeraufgaben erfolgen. Die Anforderung oder Bewilligung von Genehmigungen zum Erstellen neuer Datensätze sind typische Workflowschritte.  </p>
+<p>Auf der Seite <strong>Workflow</strong> können Sie einen Workflow erstellen, indem Sie die Schritte in den Zeilen auflisten. Jeder Schritt besteht aus einem Trigger und einer Antwort:</p>
+<ul>
+<li>Ein Ereignis, das die Bedingungen angibt, die den Workflow starten.</li>
+<li>Eine Workflowantwort, die definiert, was der Workflow tut.</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn ein Geschäftsszenario ein Workflowereignis oder eine Reaktion erfordert, das/die in der Standardversion nicht unterstützt wird, registrieren Sie sich bei Power Automate. Weitere Informationen finden Sie unter <a href="across-how-use-financials-data-source-flow.html">Business Central in Power Automate-Flows verwenden</a>. Alternativ <a href="https://go.microsoft.com/fwlink/?linkid=2081646">erhalten Sie eine App bei AppSource</a> oder arbeiten Sie mit einem Microsoft-Partner zusammen, um <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-walkthrough-workflow-events-responses">den Anwendungscode anzupassen</a>.</p>
+</div>
+<p>Wenn Sie Workflows erstellen, können Sie die Schritte aus bestehenden Workflows oder aus Workflowvorlagen kopieren. Workflowvorlagen sind nicht bearbeitbare Workflows, die Business Central bereitstellt. Die Kennung für Workflowvorlagen hat das Präfix „MS-“, z. B. in „MS-PIW“. Weitere Informationen unter <a href="across-how-to-create-workflows-from-workflow-templates.html">Erstellen von Workflows aus Workflowvorlagen</a>.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Alle Benachrichtigungen über Workflowschritte werden über eine Aufgabenwarteschlange gesendet. Stellen Sie sicher, dass die Auftragswarteschlange Ihre geschäftlichen Anforderungen widerspiegelt. Weitere Informationen finden Sie unter <a href="admin-job-queues-schedule-tasks.html">Aufgabenwarteschlangen zum Planen von Aufgaben verwenden</a>.  </p>
+</div>
+<p>:::image type=&quot;content&quot; source=&quot;media/Workflows/workflow-example.png&quot; alt-text=&quot;Abbildung eines Workflow-Beispiels.&quot;:::</p>
+<p>Ein Workflow ist in drei Abschnitte unterteilt:</p>
+<ol>
+<li><strong>Wenn Ereignis</strong><br>Hierbei wird der Trigger ausgewählt.<br>Beispiele für Auslöser:<ul>
+<li>Ein Stammdatensatz wird geändert</li>
+<li>eine Buchungsblattzeile wird erstellt</li>
+<li>Ein eingehender Beleg wird erstellt oder freigegeben</li>
+<li>Die Genehmigung eines Belegs wird genehmigt</li>
+</ul>
+</li>
+<li><strong>Bei Bedingung</strong><br><strong>Bedingungen</strong> bezieht sich auf das Ereignis und ermöglicht das Erstellen von Filtern, um zu entscheiden, wie der Workflow fortgesetzt wird.</li>
+<li><strong>Dann Antwort</strong><br><strong>Antworten</strong> legen die nächsten Schritte im Workflow fest.</li>
+</ol>
+<p>Die Optionen für Ereignisse und Antworten sind systemdefiniert. Um neue Optionen hinzuzufügen, müssen Sie eine Erweiterung entwickeln.</p>
+<h2 id="to-create-a-workflow">So erstellen Sie einen Workflow</h2>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol. Geben Sie <strong>Workflows</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>. Die Seite <strong>Workflow</strong> wird geöffnet.  </li>
+<li>Geben Sie im Feld <strong>Code</strong> maximal 20 Zeichen ein, um den Workflow zu identifizieren.  </li>
+<li>Um den Workflow von einer Workflowvorlage zu erstellen, wählen Sie auf der Seite <strong>Workflows</strong> die Aktion <strong>Neuen Workflow aus Vorlage erstellen</strong>. Weitere Informationen unter <a href="across-how-to-create-workflows-from-workflow-templates.html">Erstellen von Workflows aus Workflowvorlagen</a>.  </li>
+<li>Beschreiben Sie den Workflow im Feld <strong>Beschreibung</strong>.  </li>
+<li>Im Feld <strong>Kategorie</strong> legen Sie fest, in welche Kategorie der Workflow gehört.  </li>
+<li><p>Geben Sie im Feld <strong>Wenn Ereignis</strong> das Ereignis an, das auftreten muss, um den Workflowschritt zu starten.  </p>
+<p>Wenn Sie das Feld auswählen, führt die Seite <strong>Workflowereignisse</strong> alle verfügbaren Workflowereignisse auf.  </p>
+</li>
+<li><p>Geben Sie im Feld <strong>Bei Bedingung</strong> eine oder mehrere Bedingungen fest, die erfüllt sein müssen, bevor das Ereignis im Feld <strong>Wenn-Ereigniss</strong> auftreten kann.  </p>
+<p>Wenn Sie das Feld auswählen, werden auf der Seite <strong>Ereignisbedingungen</strong> Filterfelder aufgelistet, die Bedingungen für das Ereignis sein können. Sie können bei Bedarf neue Filterfelder hinzufügen.  </p>
+<p>Wenn es sich bei dem Workflowereignis um die Änderung eines bestimmten Felds in einem Datensatz handelt, verwenden Sie die Seite <strong>Ereignisbedingungen</strong> und wählen Sie das Feld und die Art der Änderung aus.  </p>
+<ol>
+<li>Um eine Feldänderung für das Ereignis festzulegen, wählen Sie auf der Seite <strong>Ereignisbedingungen</strong> im Feld <strong>Feld</strong> das Feld aus, das sich ändert.  </li>
+<li>Geben Sie im Feld <strong>Operator</strong> entweder <strong>Verringert</strong>, <strong>Erhöht</strong> oder <strong>Geändert</strong> aus.  </li>
+</ol>
+</li>
+<li><p>Geben Sie im Feld <strong>Dann Antwort</strong> die Antwort an, die beim Auftreten des Workflowereignisses folgt.  </p>
+<p>Wenn Sie das Feld auswählen, führt die Seite <strong>Workflowantworten</strong> alle verfügbaren Workflowantworten und Antwortoptionen auf.  </p>
+</li>
+<li><p>Geben Sie im Inforegister <strong>Optionen für die ausgewählte Reaktion</strong> die Optionen für die Workflowantwort an, indem Sie in die folgenden Felder Werte eingeben:  </p>
+<ol>
+<li>Um Optionen für eine Workflowantwort inkl. des Sendens einer Benachrichtigung festzulegen, füllen Sie die Felder wie in der folgenden Tabelle beschrieben aus.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Diese Felder variieren je nach ausgewählter Antwort.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Absender benachrichtigen</strong></td>
+<td>Geben Sie an, ob der Genehmigungsanfordernde anstatt des Genehmigungsanforderungsempfangenden benachrichtigt werden soll. Wenn Sie das Kontrollkästchen aktivieren, wird das Feld <strong>Benutzer-ID des Empfangenden</strong> deaktiviert, da stattdessen der Anfordernde der Genehmigung, der Absendenden, benachrichtigt wird. Der Name der Workflowreaktion ändert sich entsprechend zu <strong>Benachrichtigung erstellen für &lt;Absender&gt;</strong>. Wenn das Kontrollkästchen nicht aktiviert ist, lautet der Name der Workflowantwort <strong>Benachrichtigung erstellen für &lt;Benutzende&gt;</strong>.</td>
+</tr>
+<tr>
+<td><strong>Benutzer-ID des Empfängers</strong></td>
+<td>Geben Sie den Benutzer an, an den Benachrichtigung gesendet werden muss. <strong>Hinweis</strong>: Diese Option ist nur für Workflow-Antworten mit einem Platzhalter für einen bestimmten Benutzer verfügbar. Für Workflowantworten ohne Platzhalter für Benutzer, wird der Benachrichtigungsempfänger in der Regel von der <strong>Genehmigungsbenutzereinrichtung</strong> definiert.</td>
+</tr>
+<tr>
+<td><strong>Benachrichtigungseintragstyp</strong></td>
+<td>Geben Sie einen Trigger für die Workflowbenachrichtigung an. Der Trigger kann eine Datensatzänderung, eine Genehmigungsanfrage oder ein überschrittenes Fälligkeitsdatum sein.</td>
+</tr>
+<tr>
+<td><strong>Zielseite für Link</strong></td>
+<td>Geben Sie die Seite an, die der Link in der Benachrichtigung öffnet. Die Seite muss dieselbe Quellentabelle wie der betreffende Datensatz aufweisen.</td>
+</tr>
+<tr>
+<td><strong>Benutzerdefinierter Link</strong></td>
+<td>Geben Sie die URL eines Links an, der zusätzlich zum Link zur Seite in die Benachrichtigung aufgenommen wird.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>Um Optionen für eine Workflowantwort inkl. des Erstellens von einer Genehmigungsanforderung festzulegen, füllen Sie die Felder wie in der folgenden Tabelle beschrieben aus.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fälligkeitsdatumsformel</strong></td>
+<td>Geben Sie die Anzahl der Tage an, die der Genehmigende hat, um die Anfrage zu lösen. Die Frist beginnt mit der Absendung der Anforderung.</td>
+</tr>
+<tr>
+<td><strong>Delegieren nach</strong></td>
+<td>Geben Sie an, ob und wann eine Anforderung für fällige Genehmigung automatisch an den Stellvertretenden delegiert wird. Sie können eine automatische Delegierung ein, zwei oder fünf Tage nach der Anforderung der Genehmigung auswählen.</td>
+</tr>
+<tr>
+<td><strong>Genehmigertyp</strong></td>
+<td>Geben Sie an, wer gemäß der Einrichtung von Genehmigungsbenutzern und von Workflowbenutzern der Genehmiger ist. Wenn das Feld auf <strong>Verkäufer/Einkäufer</strong> festgelegt ist, bestimmt der Benutzende, der im Feld <strong>Verk.-/Einkäufercode</strong> auf der Seite <strong>Genehmigungsbenutzereinrichtung</strong> den Genehmigenden. Es werden dann entsprechend des Werts im Feld <strong>Einschränkungsart Genehmiger</strong> Genehmigungsanforderungsposten erstellt. Erfahren Sie mehr unter <a href="across-how-to-set-up-workflow-users.html">Genehmigungsbenutzer einrichten</a>.</td>
+</tr>
+<tr>
+<td><strong>Bestätigungsmeldung anzeigen</strong></td>
+<td>Geben Sie an, ob nach Beantragung einer Genehmigung durch Benutzende eine Bestätigungsmeldung angezeigt werden soll.</td>
+</tr>
+<tr>
+<td><strong>Einschränkungsart Genehmiger</strong></td>
+<td>Legen Sie die Auswirkung von Einschränkungen für Genehmigende fest. Eine Genehmigungseinschränkung eines Genehmigenden muss über dem Wert der Anforderung liegen. Folgende Optionen sind verfügbar: <ol><li><strong>Genehmigerkette</strong> legt fest, dass Genehmigungsanforderungseinträge für alle Genehmigenden des Antragstellers bis einschließlich des ersten qualifizierten Genehmigers erstellt werden</li><li><strong>Direkter Genehmiger</strong> legt fest, dass ein Genehmigungsanforderungseintrag nur für den unmittelbaren Genehmiger des Anforderers erstellt wird, unabhängig vom Genehmigungslimit des Genehmigers.</li><li><strong>Erster qualifizierter Genehmigender</strong> gibt an, dass ein Eintrag für eine Genehmigungsanforderung nur für den ersten Genehmigenden des Anfordernden erstellt wird.</li><li><strong>Bestimmter Genehmiger</strong> gibt an, dass Sie den im Feld <strong>Genehmiger-ID</strong> ausgewählten Benutzer benachrichtigen.</li></ol></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Um Optionen für eine Workflowantwort inklusive des Erstellens von Buchungsbeiblattzeilen festzulegen, füllen Sie die Felder wie in der folgenden Tabelle beschrieben aus.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fibu Buch.-Blattvorlagenname</strong></td>
+<td>Geben Sie den Namen der Buch.-Blattvorlage an, in der die angegebenen Buch.-Blattzeilen erstellt werden.</td>
+</tr>
+<tr>
+<td><strong>Fibu Buch.-Blattname</strong></td>
+<td>Geben Sie den Namen des Buch.-Blattname an, in den die angegebenen Buch.-Blattzeilen erstellt werden.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</li>
+<li><p>Wählen Sie die Schaltflächen <strong>Einrückung vergrößern</strong> und <strong>Einrückung verkleinern</strong>, um den Namen des Ereignisses im Feld <strong>Wann</strong> einzurücken, um die Position des Schritts im Workflow zu definieren.  </p>
+<ol>
+<li>Rücken Sie das Ereignis unter dem Namen des vorherigen Schritts ein, um anzuzeigen, dass es sich um den nächsten Schritt handelt.  </li>
+<li>Geben Sie an, dass der Schritt einer von mehreren alternativen Schritten ist, die abhängig von seiner Bedingung beginnen können, indem Sie den Ereignisnamen wie bei den anderen alternativen Schritte setzen. Sortieren Sie solche optionalen Schritte entsprechend der Priorität, indem Sie zuerst den wichtigsten Schritt setzen.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p> Sie können den Einzug eines Schrittes nur ändern, wenn er keinen folgenden Schritt hat.  </p>
+</div>
+</li>
+<li><p>Wiederholen Sie die Schritte 7 bis 11, um weitere Workflowschritte vor oder nach dem Schritt, den Sie erstellt haben, hinzuzufügen.  </p>
+</li>
+<li>Aktivieren Sie das Kontrollkästchen <strong>Aktiviert</strong>, um anzugeben, dass der Workflow startet, wenn das Ereignis vom Typ <strong>Einstiegspunkt</strong> auftritt. Erfahren Sie mehr unter <a href="across-use-workflows.html">Workflows verwenden</a>.  </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Aktivieren Sie einen Workflow erst, wenn Sie sicher sind, dass er bereit ist.  </p>
+</div>
+<div class="TIP"><h5>Tipp</h5><p>Um die Beziehungen zwischen Tabellen zu erkunden, die in Workflows verwendet werden, wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet." title="Wie möchten Sie weiter verfahren?"> Symbol, und geben Sie dann <strong>Workflow – Tabellenbeziehungen</strong> ein.  </p>
+</div>
+<h2 id="example-of-creating-a-new-workflow-using-existing-events">Beispiel für das Erstellen eines neuen Workflows unter Verwendung vorhandener Ereignisse</h2>
+<p>Das folgende Beispiel erstellt einen neuen Workflow, um den Namen eines Kreditors zu ändern:</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Workflows</strong> ein, und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>. Die Seite <strong>Workflow</strong> wird geöffnet.</li>
+<li><p>Füllen Sie im Workflow-Abschnitt die Felder wie in der folgenden Tabelle beschrieben aus.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td><strong>VENDAPN-01</strong></td>
+</tr>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td><strong>Genehmigung der Änderung des Kreditorennamens</strong></td>
+</tr>
+<tr>
+<td><strong>Kategorie</strong></td>
+<td><strong>PURCH</strong></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Um den ersten Workflow-Schritt zu erstellen, gehen Sie wie folgt vor.</p>
+<ol>
+<li>Geben Sie im Feld <strong>Wann Ereignis</strong> an: <em>Ein Datensatz des Kreditors wird geändert</em>.  </li>
+<li>Im Feld <strong>Bei Bedingung</strong> wählen Sie das Wort <strong>Immer</strong>. Wählen Sie dann auf der Seite <strong>Ereignisbedingungen</strong> den Link <strong>Bedingung hinzufügen, wenn sich ein Feldwert ändert</strong>, und wählen Sie dann das Feld <strong>Name</strong>. Das Ergebnis dieses Schritts ist, dass die Bedingung als <em>Name ist geändert</em> lautet.  </li>
+<li>Wählen Sie im Feld <strong>Dann Antwort</strong> den Link <strong>Antwort auswählen</strong> aus. Wählen Sie dann auf der Seite <strong>Workflow-Antworten</strong> im Feld <strong>Antwort wählen</strong> die Antwort <strong>Den Wert des Feldes &lt;Field> im Datensatz zurücksetzen und die Änderung speichern</strong>. Geben Sie dann im Abschnitt <strong>Optionen für die ausgewählte Antwort</strong> das Feld <strong>Name</strong> an.  </li>
+<li>Wählen Sie den Link <strong>Weitere Antworten hinzufügen</strong> und fügen Sie dann einen Eintrag für die Antwort <strong>Erstellen Sie eine Genehmigungsanfrage für den Datensatz unter Verwendung der Genehmiger-Typen &lt;%1&gt; und &lt;%2&gt;</strong>.  </li>
+<li>Ändern Sie im Abschnitt <strong>Optionen für die ausgewählte Antwort</strong> für die neue Antwort das Feld <strong>Genehmigungstyp</strong> in <strong>Workflow-Benutzergruppe</strong>. Geben Sie dann im Feld <strong>Workflow-Benutzergruppe</strong> die Benutzergruppe an. Erfahren Sie mehr unter <a href="across-how-to-set-up-approval-users.html">Genehmigungsbenutzer einrichten</a>.  </li>
+<li>Fügen Sie eine dritte Antwort hinzu, <strong>Senden Sie eine Genehmigungsanfrage für den Datensatz und erstellen Sie eine Benachrichtigung</strong>.  </li>
+<li>Fügen Sie eine vierte Antwort <strong>Nachricht „%1“ anzeigen</strong> hinzu. Geben Sie dann im Abschnitt <strong>Optionen für die ausgewählte Antwort</strong> im Feld <strong>Nachricht</strong> <strong>Eine Genehmigungsanforderung wurde gesendet</strong> aus.  </li>
+<li>Wählen Sie die <strong>OK</strong> aus, um zum Workflow-Schritt zurückzukehren.  </li>
+</ol>
+</li>
+<li><p>Fügen Sie in der nächsten Zeile einen neuen Workflowschritt für das Ereignis <strong>Eine Genehmigungsanforderung wird genehmigt</strong> hinzu.</p>
+<ol>
+<li>Geben Sie im Feld <strong>Wann Ereignis</strong> an: <strong>Ein Genehmigungsantrag wird genehmigt</strong>.  </li>
+<li>Wählen Sie das Zeilenmenü und wählen Sie dann <strong>Einzug vergrößern</strong>.  </li>
+<li>Wählen Sie im Feld <strong>Bei Bedingung</strong> <strong>Immer</strong> aus. Geben Sie dann im Feld <strong>Anstehende Genehmigungen</strong> <strong>0</strong> an. Die Bedingung wird als <strong>Anstehende Genehmigungen:0</strong> gelesen, um anzuzeigen, dass für die Anforderung nicht mehr Genehmigende notwendig sind.  </li>
+<li>Wählen Sie im Feld <strong>Dann Antwort</strong> den Link <strong>Antwort auswählen</strong> aus. Wählen Sie dann auf der Seite <strong>Workflow-Antworten</strong> im Feld <strong>Antwort auswählen</strong> die Antwort <strong>Genehmigungsanfrage für den Datensatz senden und eine Benachrichtigung erstellen</strong>.  </li>
+<li>Wählen Sie <strong>OK</strong> aus.  </li>
+</ol>
+</li>
+<li><p>Fügen Sie in der nächsten Zeile einen zweiten Workflow-Schritt für das Ereignis <strong>Ein Genehmigungsantrag wird genehmigt</strong> hinzu.  </p>
+<ol>
+<li>Geben Sie im Feld <strong>Wann Ereignis</strong> an: <strong>Ein Genehmigungsantrag wird genehmigt</strong>.</li>
+<li>Wählen Sie im Feld <strong>Bei Bedingung</strong> <strong>Immer</strong> aus. Geben Sie dann im Feld <strong>Anstehende Genehmigungen</strong> <strong>&gt;0</strong> an. Die Bedingung wird als <strong>Anstehende Genehmigungen:0</strong> gelesen, um anzuzeigen, dass dies nicht der letzte Genehmigende ist.  </li>
+<li>Wählen Sie im Feld <strong>Dann Antwort</strong> den Link <strong>Antwort auswählen</strong> aus. Wählen Sie dann auf der Seite <strong>Workflow-Antworten</strong> im Feld <strong>Antwort auswählen</strong> die Antwort <strong>Genehmigungsanfrage für den Datensatz senden und eine Benachrichtigung erstellen</strong>.  </li>
+<li>Wählen Sie <strong>OK</strong> aus.  </li>
+</ol>
+</li>
+<li><p>Fügen Sie in der nächsten Zeile einen Workflow-Schritt für das Ereignis <strong>Ein Genehmigungsantrag wird delegiert</strong> hinzu.  </p>
+<ol>
+<li>Geben Sie im Feld <strong>Wann-Ereignis</strong> <strong>Ein Genehmigungsantrag wird genehmigt</strong> an.  </li>
+<li>Im Feld <strong>Bei Bedingung</strong> lassen Sie den Wert auf <strong>Immer</strong>.  </li>
+<li>Wählen Sie im Feld <strong>Dann Antwort</strong> den Link <strong>Antwort auswählen</strong> aus. Wählen Sie dann auf der Seite <strong>Workflow-Antworten</strong> im Feld <strong>Antwort auswählen</strong> die Antwort <strong>Genehmigungsanfrage für den Datensatz senden und eine Benachrichtigung erstellen</strong>.  </li>
+<li>Wählen Sie <strong>OK</strong> aus.  </li>
+</ol>
+</li>
+<li><p>Fügen Sie in der nächsten Zeile einen zweiten Workflow-Schritt für das Ereignis <strong>Ein Genehmigungsantrag wird abgelehnt</strong> hinzu.  </p>
+<ol>
+<li>Geben Sie im Feld <strong>Wann Ereignis</strong> an: <strong>Ein Genehmigungsantrag wird abgelehnt</strong>.  </li>
+<li>Im Feld <strong>Bei Bedingung</strong> lassen Sie den Wert auf <strong>Immer</strong>.  </li>
+<li>Wählen Sie im Feld <strong>Dann Antwort</strong> den Link <strong>Antwort auswählen</strong> aus. Wählen Sie dann auf der <strong>Workflow-Antworten</strong> Seite im Feld <strong>Antwort auswählen</strong> die Antwort <strong>Verwerfen Sie die neuen Werte</strong>.  </li>
+<li>Wählen Sie den Link <strong>Weitere Antworten hinzufügen</strong> und fügen Sie dann einen Eintrag für die Antwort <strong>Die Genehmigungsanfrage für den Datensatz ablehnen und eine Benachrichtigung erstellen</strong> hinzu</li>
+<li>Wählen Sie <strong>OK</strong> aus.  </li>
+</ol>
+</li>
+<li>Aktivieren Sie das Kontrollkästchen <strong>Aktiviert</strong>, um den Workflow zu aktivieren.  </li>
+</ol>
+<p>Die folgende Abbildung gibt einen Überblick über das Ergebnis dieses Vorgangs.  </p>
+<p>:::image type=&quot;content&quot; source=&quot;media/Workflows/workflow-example-2.png&quot; alt-text=&quot;Abbildung des Workflows zur Genehmigung des Namens des Kreditors.&quot;:::</p>
+<p>Testen Sie als nächstes den Workflow, indem Sie eine vorhandene Kreditorkarte öffnen und ihren Namen ändern. Überprüfen Sie, ob nach der Änderung des Kreditorennamens ein Genehmigungsantrag gesendet wird.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="across-how-to-create-workflows-from-workflow-templates.html">Workflows aus Workflowvorlagen erstellen</a><br><a href="across-how-to-set-up-approval-users.html">Genehmigungsbenutzer einrichten</a><br><a href="across-setting-up-workflow-notifications.html">Einrichten von Genehmigungs-Workflowbenachrichtigungen</a><br><a href="across-how-to-view-archived-workflow-step-instances.html">Archivierte Workflowschritt-Instanzen anzeigen</a><br><a href="across-how-to-delete-workflows.html">Artikelgenehmigungsworkflow löschen</a><br><a href="walkthrough-setting-up-and-using-a-purchase-approval-workflow.html">Beispielhafte Vorgehensweise: Einrichten und Verwenden eines Workflows zur Genehmigung von Käufen</a><br><a href="across-set-up-workflows.html">Genehmigungsworkflows einrichten</a><br><a href="across-use-workflows.html">Artikelgenehmigungsworkflow verwenden</a><br><a href="across-workflow.html">Workflow</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

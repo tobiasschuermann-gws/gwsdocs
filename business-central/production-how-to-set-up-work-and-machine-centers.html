@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Arbeitspl&#228;tze und Arbeitsplatzgruppen einrichten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Arbeitspl&#228;tze und Arbeitsplatzgruppen einrichten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-work-centers-and-machine-centers">Arbeitsplätze und Arbeitsplatzgruppen einrichten</h1>
+
+<p>Business Central unterscheidet zwischen drei verschiedenen Arten von Kapazitätseinheiten, die hierarchisch angeordnet sind, wobei jede Ebene die untergeordneten Ebenen enthält.  </p>
+<p>Die oberste Ebene ist die Abteilung. Arbeitsplatzgruppen werden den Abteilungen zugeordnet. Jede Arbeitsplatzgruppe gehört zu einer Abteilung.</p>
+<p>Sie können Arbeitsplatzgruppen unterschiedliche Arbeitsplätze zuweisen. Ein Arbeitsplatz kann nur zu einer Arbeitsplatzgruppe gehören.  </p>
+<p>Die geplante Kapazität einer Arbeitsplatzgruppe besteht aus der Verfügbarkeit der entsprechenden Arbeitsplätze und der geplanten Verfügbarkeit der Arbeitsplatzgruppe. Die geplante Verfügbarkeit der Abteilung ist die Summe aller Verfügbarkeiten der entsprechenden Arbeitsplätze und Arbeitsplatzgruppen. Die Verfügbarkeit wird in Kalenderposten gespeichert.  </p>
+<div class="IMPORTANT"><h5>Wichtig</h5><p>Bevor Sie anfangen oder Arbeitsplätze einrichten, müssen Sie Betriebskalender einrichten. Weitere Informationen finden Sie unter <a href="production-how-to-create-work-center-calendars.html">Erstellen von Betriebskalendern</a>.</p>
+</div>
+<h2 id="to-set-up-a-work-center">Um Arbeitsplatzgruppen einzurichten:</h2>
+<p>In den nachfolgenden Schritten wird beschrieben, wie ein alternativer Arbeitsplatzkalender eingerichtet wird. Die Schritte, um ein Arbeitsplatzkalenders einzurichten außer für das <strong>Arbeitsplatz-Einrichtung</strong> Inforegister.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Arbeitsplatzgruppen</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong> aus.  </li>
+<li>Füllen Sie die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li>Wählen Sie im Feld <strong>Abteilungscode</strong> die übergeordnete Ebene, unter der sich die Arbeitsplatzgruppe befindet, sofern relevant. Wählen Sie aus der Dropdown-Liste die Aktion <strong>Neu</strong> aus.  </li>
+<li>Wählen Sie im Feld <strong>Alternativer Arbeitsplatz</strong> den Arbeitsplatz aus, der verwendet werden soll, wenn dieser Arbeitsplatz nicht verfügbar ist oder wenn der Bedarf seine Kapazität übersteigt. Der alternative Arbeitsplatz dient nur zur Information und wird nicht automatisch in die Planungsprozesse einbezogen.</li>
+<li>Wählen Sie das Feld <strong>Gesperrt</strong> aus, wenn Sie verhindern möchten, dass die Arbeitsplatzgruppe bei einer Verarbeitung verwendet wird. Das bedeutet, dass die Ausgabe für einen Artikel nicht gebucht werden kann, der für die Arbeitsplatzgruppe gefertigt wird. Weitere Informationen finden Sie unter <a href="production-how-to-post-output-quantity.html">Erstellen von Montagestücklisten</a>.</li>
+<li>Geben Sie im Feld <strong>EK-Preis</strong> die Kosten der Fertigung einer Einheit in dieser Arbeitsplatzgruppe ein, ausschließlich aller anderen Kostenelemente. Diese Kosten werden häufig als <em>direkte Arbeitskosten</em> bezeichnet.  </li>
+<li>Geben Sie im Feld <strong>Kosten %</strong> die Gesamtkosten des Einsatzes der Arbeitsplatzgruppe als Prozentsatz des EK-Preises ein. Dieser prozentuale Betrag wird in der Berechnung des Einstandspreises zum EK-Preis addiert.  </li>
+<li><p>Geben Sie im Feld <strong>Gemeinkostensatz</strong> die nicht mit dem eigentlichen Betrieb verbundenen Kosten für die Arbeitsplatzgruppe (z. B. Wartungsausgaben) als absoluten Betrag ein.  </p>
+<p> Das Feld <strong>Einstandspreis</strong> enthält den berechneten Einstandspreis für die Fertigung einer Einheit in der Arbeitsplatzgruppe, wobei alle Kostenelemente berücksichtigt sind.  </p>
+<p> Einstandspreis = EK-Preis + (EK-Preis x Kosten %) + Gemeinkostensatz.  </p>
+</li>
+<li><p>Legen Sie im Feld <strong>Einstandspreisberechnung</strong> fest, ob dem Einstandspreis die benötigte Zeitspanne oder die Anzahl der gefertigten Einheiten zugrunde gelegt werden soll.  </p>
+</li>
+<li>Markieren Sie das Feld <strong>Spezifische Stückkosten</strong>, wenn Sie die Stückkosten des Arbeitsplatzes in der Arbeitsplanzeile, in der er verwendet wird, definieren möchten. Diese Einstellung kann sich bei Arbeitsgängen mit abweichenden Kapazitätskosten, die normalerweise in dieser Arbeitsplatzgruppe verarbeitet werden, als relevant erweisen.  </li>
+<li><p>Wählen Sie im Feld <strong>Buchungsmethode</strong> aus, ob die Ausgabe in dieser Arbeitsplatzgruppe manuell oder automatisch mit einer der folgenden Methoden berechnet und gebucht werden soll.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Manuell</strong></td>
+<td>Verwendete Zeit, Ausgabe und Ausschuss werden manuell im Ausgabe- oder Produktionsjournal gebucht.</td>
+</tr>
+<tr>
+<td><strong>&quot;Vorwärts&quot;</strong></td>
+<td>Die Ausgabe wird automatisch gebucht, wenn Sie den Fertigungsauftrag freigeben.</td>
+</tr>
+<tr>
+<td><strong>Rückwärts:</strong></td>
+<td>Die Ausgabe wird automatisch gebucht, wenn Sie den Fertigungsauftrag fertiggestellt haben.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Gegebenenfalls kann die hier ausgewählte Buchungsmethode für einzelne Arbeitsgänge überschrieben werden, indem die Einstellungen für Arbeitsgänge geändert wird.</p>
+</div>
+</li>
+<li><p>Geben Sie im Feld <strong>Einheitencode</strong> die Zeiteinheit ein, die bei der Kostenberechnung und der Kapazitätsplanung der Arbeitsplatzgruppe zugrunde gelegt werden soll.
+Um regelmäßig den Verbrauch erfassen zu können, müssen Sie zunächst die Buchungsmethode einrichten. Die Einheiten, die Sie eingeben, sind Basiseinheiten. Die Bearbeitungszeit wird z. B. in Stunden und Minuten gemessen.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie „Tage“ verwenden, bedenken Sie, dass ein Tag 24 Stunden hat und kein Acht-Stunden-Arbeitstag ist.</p>
+</div>
+</li>
+<li><p>Geben Sie im Feld <strong>Kapazität</strong> an, ob in der Arbeitsplatzgruppe mehrere Personen bzw. Maschinen gleichzeitig eingesetzt werden. Wenn die Funktion „Arbeitsplatz“ nicht in Business Central enthalten ist, muss in diesem Feld der Wert <strong>1</strong> festgelegt sein.  </p>
+</li>
+<li>Geben Sie im Feld <strong>Effektivität</strong> an, wie hoch die tatsächliche Effektivität der Arbeitsplatzgruppe prozentual hinsichtlich der erwarteten Standardeffektivität ist. Wenn Sie <strong>100</strong> eingeben, bedeutet dies, dass die Isteffektivität der Arbeitsplatzgruppe mit der Standardeffektivität übereinstimmt.  </li>
+<li>Aktivieren Sie <strong>Konsolidierter Kalender</strong>, wenn Sie auch Arbeitsplätze verwenden. Diese Einstlelung stellt sicher, dass Kalenderposten oben aus den Arbeitsplatzkalendern ermittelt werden.  </li>
+<li>Wählen Sie im Feld <strong>Betriebskalender</strong> einen Einkaufskalender. Weitere Informationen finden Sie unter <a href="production-how-to-create-work-center-calendars.html">Erstellen von Betriebskalendern</a>.  </li>
+<li>Geben Sie im Feld <strong>Warteschlangenzeit</strong> eine feste Zeitspanne an, die ablaufen muss, bevor die zugewiesenen Arbeiten in dieser Arbeitsplatzgruppe begonnen werden können. </li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Verwenden Sie Warteschlangenzeiten, um einen Puffer zwischen dem Eintreffen einer Komponente auf einer Maschine oder einem Arbeitsplatz und dem tatsächlichen Start des Vorgangs bereitzustellen. Beispielsweise wird ein Teil um 10:00 Uhr an ein Maschinenzentrum geliefert, die Montage an der Maschine dauert jedoch eine Stunde, sodass der Vorgang erst um 11.00 Uhr beginnt. Um diese Stunde zu berücksichtigen, würde die Wartezeit eine Stunde betragen. Der Wert des Feldes <strong>Warteschlangenzeit</strong> der speziellen Arbeitsplatzkarte oder Arbeitsplatzgruppenkarte plus die Summe der Werte in den Feldern <strong>Einrichtungszeit</strong>, <strong>Ausführungszeit</strong>, <strong>Wartezeit</strong> und <strong>Transportzeit</strong> der Arbeitsgänge des Artikels ergeben zusammen die Produktionsdurchlaufzeit des Artikels. Dies trägt zu genauen Gesamtproduktionszeiten bei.  </p>
+</div>
+<h2 id="considerations-about-capacity">Überlegungen zur Kapazität</h2>
+<p>Die für Arbeits- und Maschinenzentren vorgegebene Kapazität und Effizienz wirken sich nicht nur auf die verfügbare Kapazität aus. Die Werte wirken sich auch auf die Gesamtproduktionszeit aus, die sich aus der Rüstzeit und der Laufzeit zusammensetzt, die beide auf der Routinglinie definiert werden.  </p>
+<p>Wenn Sie einer Arbeit oder einem Arbeitsplatz einen Arbeitsgang zuordnen, berechnet Business Central Folgendes:</p>
+<ul>
+<li>Wie viel Kapazität wird benötigt</li>
+<li>Wie lange es dauert, bis der Vorgang abgeschlossen ist  </li>
+</ul>
+<h3 id="run-time">Bearbeitungszeit</h3>
+<p>Zur Berechnung der Laufzeit vergibt das System genau die Zeit, die im Feld <strong>Laufzeit</strong> der Routinglinie angegeben ist. Effizienz und Kapazität wirken sich nicht auf die zugewiesene Zeit aus. Wenn die Laufzeit beispielsweise auf 2 Stunden festgelegt ist, beträgt die zugewiesene Zeit 2 Stunden, unabhängig von den Werten in den Feldern Effizienz und Kapazität im Arbeitsplatz.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die in den Berechnungen verwendete Kapazität ist der minimale Wert zwischen der Kapazität, die im Arbeitsplatz oder Maschinenzentrum definiert ist, und der gleichzeitigen Kapazität, die für die Arbeitsplanlinie definiert ist. Wenn ein Arbeitsplatz eine Kapazität von 100 hat, die gleichzeitige Kapazität für die Arbeitsplanzeile jedoch 2 beträgt, dann wird <em>2</em> in den Berechnungen verwendet.</p>
+</div>
+<p>Die <em>Dauer</em> einer Operation hingegen berücksichtigt sowohl die Effizienz als auch die Kapazität. Dauer wird berechnet als <em>Laufzeit / Effizienz / Kapazität</em>. Die folgende Liste zeigt einige Beispiele für die Berechnung der Dauer für die gleiche Laufzeit, die für die Routinglinie mit 2 Stunden definiert ist:</p>
+<ul>
+<li>Effizienz 80 % bedeutet, dass Sie 2,5 Stunden statt zwei Stunden benötigen  </li>
+<li><p>Eine Effizienz von 200 % bedeutet, dass Sie die Arbeit in einer Stunde erledigen können. Sie können das Loch doppelt so schnell graben, wenn Sie einen Bagger haben, der doppelt so groß ist wie der kleinere.  </p>
+<p>  Das gleiche Ergebnis können Sie erzielen, wenn Sie statt einem großen Bagger zwei kleinere verwenden. Verwenden Sie <em>2</em> als Kapazität und <em>100 %</em> als Effizienz.  </p>
+</li>
+</ul>
+<p>Die fraktionale Kapazität ist knifflig. Wir werden es später in diesem Artikel besprechen. </p>
+<h3 id="setup-time">Rüstzeit</h3>
+<p>Die Zeitzuteilung für die Rüstzeit ist abhängig von der Kapazität und wird berechnet als <em>Einrichtungszeit * Kapazität</em>. Wenn die Kapazität beispielsweise auf <em>2</em> eingestellt ist, verdoppelt sich Ihre zugewiesene Rüstzeit, da Sie für den Betrieb zwei Maschinen einrichten müssen.  </p>
+<p><em>Dauer</em> der Rüstzeit ist effizienzabhängig und berechnet sich als <em>Einrichtungszeit / Effizienz</em>. </p>
+<ul>
+<li>Eine Effizienz von 80 % bedeutet, dass Sie 2,5 Stunden statt zwei Stunden für die Einrichtung benötigen.  </li>
+<li>Eine Effizienz von 200 % bedeutet, dass Sie die Einrichtung in 1 Stunde statt in 2 Stunden abschließen können, die in der Routinglinie definiert sind.  </li>
+</ul>
+<p>Die fraktionale Kapazität wird nur in bestimmten Fällen verwendet.</p>
+<h3 id="work-center-processing-multiple-orders-simultaneously">Arbeitsplatz, der mehrere Aufträge gleichzeitig bearbeitet</h3>
+<p>Nehmen wir als Beispiel eine Lackierkabine. Sie hat die gleiche Einrichtung und Laufzeit für jedes verarbeitete Los. Jedes Los kann jedoch mehrere Einzelaufträge enthalten, die gleichzeitig bemalt werden.  </p>
+<p>In diesem Fall werden die den Aufträgen zugeordneten Kosten durch die Rüstzeit und die gleichzeitige Kapazität verwaltet. Wir empfehlen, in den Arbeitsplanpositionen keine Laufzeit zu verwenden.  </p>
+<p>Die zugewiesene Rüstzeit für jeden einzelnen Auftrag erfolgt in umgekehrter Reihenfolge der Anzahl gleichzeitig ausgeführter Aufträge (Mengen). Hier sind einige weitere Beispiele für die Berechnung der Rüstzeit, wenn diese als zwei Stunden für die Routinglinie definiert ist:</p>
+<ul>
+<li><p>Bei zwei Aufträgen sollte die gleichzeitige Kapazität in der Routinglinie auf 0,5 gesetzt werden.</p>
+<p>  Daher beträgt die zugewiesene Kapazität jeweils eine Stunde, die Dauer für jeden Auftrag jedoch zwei Stunden.</p>
+</li>
+<li><p>Bei zwei Aufträgen mit einer Menge von eins bzw. vier beträgt die gleichzeitige Kapazität für die Leitlinie des ersten Auftrags 0,2 und 0,8 für den zweiten.  </p>
+<p>  Dadurch beträgt die zugeteilte Kapazität für den ersten Auftrag 24 Minuten und für den zweiten 96 Minuten. Die Dauer für beide Bestellungen bleibt zwei Stunden.  </p>
+</li>
+</ul>
+<p>In beiden Fällen beträgt die zugewiesene Gesamtzeit für alle Bestellungen zwei Stunden.</p>
+<h3 id="efficient-resource-can-dedicate-only-part-of-their-work-date-to-productive-work">Effiziente Ressourcen können nur einen Teil ihrer Arbeitszeit der produktiven Arbeit widmen</h3>
+<div class="NOTE"><h5>Hinweis</h5><p>Dies ist kein empfohlenes Szenario. Wir empfehlen, stattdessen Effizienz zu verwenden. </p>
+</div>
+<p>Einer Ihrer Arbeitsplätze repräsentiert einen erfahrenen Arbeiter, der mit 100 % Effizienz an Aufgaben arbeitet. Aber sie können nur 50 % ihrer Arbeitszeit mit Aufgaben verbringen, weil sie die restliche Zeit administrative Aufgaben lösen. Während dieser Arbeiter in der Lage ist, eine zweistündige Aufgabe in genau zwei Stunden zu erledigen, müssen Sie im Durchschnitt weitere zwei Stunden warten, während die Person andere Aufgaben erledigt.  </p>
+<p>Die zugewiesene Laufzeit beträgt zwei Stunden und die Dauer beträgt vier Stunden.  </p>
+<p>Verwenden Sie für solche Szenarien keine Rüstzeit, da Business Central nur 50 % der Zeit zuweist. Wenn die Einrichtungszeit auf <em>2</em> eingestellt ist, beträgt die zugewiesene Einrichtungszeit eine Stunde und die Dauer beträgt zwei Stunden.</p>
+<h3 id="consolidated-calendar">Konsolidierter Kalender</h3>
+<p>Wenn das Feld <strong>Konsolidierter Kalender</strong> ausgewählt ist, hat der Arbeitsplatz keine eigene Kapazität. Stattdessen entspricht seine Kapazität der Summe der Kapazitäten aller Bearbeitungszentren, die dem Arbeitsplatz zugeordnet sind.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die Effizienz des Bearbeitungszentrums wird auf die Kapazität des Arbeitsplatzes umgerechnet.</p>
+</div>
+<p>Wenn Sie beispielsweise über zwei Arbeitsplätze mit einer Effizienz von 80 bzw. 70 verfügen, enthält der konsolidierte Kalendereintrag Folgendes:</p>
+<ul>
+<li>Ein Wirkungsgrad von 100</li>
+<li>Eine Kapazität von 1,5</li>
+<li>Eine Gesamtkapazität von 12 Stunden (Acht-Stunden-Schicht * 1,5 Kapazität).</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Verwenden Sie das Feld <strong>Konsolidierter Kalender</strong>, wenn Sie Ihre Arbeitspläne so strukturieren, dass Produktionsvorgänge auf Maschinenzentrumsebene und nicht auf Arbeitsplatzebene geplant werden. Wenn Sie den Kalender konsolidieren, werden die Seite <strong>Arbeitsplatzbelastung</strong> und Berichte zu einer Übersicht über die Gesamtbelastung in allen Bearbeitungszentren, die dem Arbeitsplatz zugeordnet sind.</p>
+</div>
+<h3 id="example---different-machine-centers-assigned-to-a-work-center">Beispiel – Unterschiedliche Arbeitsplätze, die einer Arbeitsplatzgruppe zugewiesen sind</h3>
+<p>Es ist wichtig zu planen, welche Kapazitätsarten die Gesamtkapazität ergeben, wenn Sie Arbeitsplatzgruppen und Arbeitsplätze einrichten.</p>
+<p>Wenn unterschiedliche Arbeitsplätze (zum Beispiel 210 Packtisch 1, 310 Lackierkabine ...) einer Arbeitsplatzgruppe zugeordnet sind, ist die Betrachtung der einzelnen Kapazitäten entscheidend, da der Ausfall eines einzelnen Arbeitsplatzes den gesamten Fertigungsprozess unterbrechen kann. Die Arbeitsplatzgruppen können entsprechend ihrer Kapazität eingegeben werden, sie werden jedoch nicht in die Planung mit aufgenommen. Wenn Sie <strong>Konsolidierter Kalender</strong> deaktivieren, wird nur die Kapazität der Arbeitsplatzgruppe bei der Planung zugewiesen. Die Arbeitsplatzkapazität wird ausgeschlossen.</p>
+<p>Wenn Sie jedoch identische Arbeitsplätze (wie zum Beispiel 210 Packtisch 1 und 220 Packtisch 2) in einer Arbeitsplatzgruppe kombinieren, können Sie die Arbeitsplatzgruppe als Summe der ihr zugeordneten Arbeitsplätze betrachten. Daher wird die Arbeitsplatzgruppe selbst mit der Kapazität Null geführt. Wenn sie <strong>Konsolidierter Kalender</strong> aktivieren, wird die gemeinsame Kapazität der Arbeitsplatzgruppe zugewiesen.</p>
+<p>Wenn die Kapazität von Arbeitsplätzen keinen Beitrag zur Gesamtkapazität leisten soll, geben Sie im Feld <strong>Effizienz</strong> den Wert <strong>0</strong> ein.</p>
+<h2 id="to-set-up-a-capacity-constrained-machine-or-work-center">So wird ein in der Kapazität eingeschränkter Arbeitsplatz oder Arbeitsplatzgruppe eingerichtet</h2>
+<p>Sie müssen die Produktionsressourcen einrichten, die Sie als kritisch betrachten, damit diese nur eine Auslastung bis zu einer Kapazitätsgrenze annimmt, anstelle der Standardeinstellung ohne Kapazitätsgrenze, die andere Produktionsressourcen annehmen. Eine Ressource mit eingeschränkter Kapazität kann eine Arbeitsplatzgruppe oder ein Arbeitsplatz sein, der ein Engpass ist und dessen Auslastung Sie deshalb begrenzen möchten.</p>
+<p>Business Central unterstützt keine ausführliche Fertigungsbereichssteuerung. Planung einer durchführbaren Nutzung von Ressourcen durch Bereitstellung eines Rohschnittzeitplans, jedoch keine automatische Erstellung und Verwaltung von detaillierten Plänen, die auf Prioritäten oder Optimierungsregeln basieren.</p>
+<p>Auf der Seite <strong>Kapazitätsbeschränkte Ressourcen</strong> Sie eine Einrichtung erstellen, um eine Überlastung der Ressourcen zu verhindern. Diese Einrichtung kann auch sicherzustellen, dass Kapazität nicht unzugewiesen bleibt, wenn dies die Durchlaufzeit eines Produktionsauftrags verlängern könnte. Im Feld <strong>Toleranz (% der gesamten Kapazität)</strong> können Sie eine Toleranzperiode zu Ressourcen hinzufügen, um die Aufspaltung von Arbeitsgängen zu minimieren. Diese Einstellung ermöglicht es dem System, die Last auf den letztmöglichen Tag zu planen, indem der kritischen Lastprozentsatz leicht überschritten wird. Das Überschreiten des Auslastungsprozentsatzes kann die Anzahl der aufgeteilten Vorgänge verringern.</p>
+<p>Wenn Sie eine Planung mit eingeschränkter Kapazität durchführen, stellt Business Central sicher, dass Ressourcen nicht oberhalb ihrer definierten Kapazität (Grenzbelastung) geladen werden. Es weist jeden Arbeitsgang dem nächsten verfügbaren Zeitfenster zu. Wenn das Zeitfenster nicht ausreicht, um den gesamten Arbeitsgang abzuschließen, wird der Arbeitsgang in mindestens zwei Teile im nächsten verfügbaren Zeitfenster aufgeteilt.</p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Begrenzte Kapazitäten</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.</li>
+<li>Füllen Sie die Felder je nach Bedarf aus.</li>
+</ol>
+<div class="NOTE"><h5>Hinweis</h5><p>Vorgänge auf Arbeitsplätzen oder Arbeitsplätzen, die als eingeschränkte Ressourcen eingerichtet wurden, werden immer seriell geplant. Diese Planung bedeutet, dass, wenn eine eingeschränkte Ressource über mehrere Kapazitäten verfügt, diese Kapazitäten nacheinander geplant werden müssen. Sie können sie nicht parallel planen, wie dies der Fall wäre, wenn die Arbeitsplatzgruppe oder der Arbeitsplatz nicht als eingeschränkte Ressource eingerichtet wäre. Bei einer eingeschränkten Ressource ist das Feld <strong>Kapazität</strong> der Arbeitsplatzgruppe oder des Arbeitsplatzes größer als <strong>1</strong>.</p>
+<p>Im Falle der Teilung des Arbeitsgangs wird die Rüstzeit nur einmal zugeordnet, da davon ausgegangen wird, dass einige manuelle Ausgleiche vorgenommen werden, um den Plan zu optimieren.</p>
+</div>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="production-how-to-create-work-center-calendars.html">Einkaufskalender einrichten</a><br><a href="production-configure-production-processes.html">Produktion einrichten</a><br><a href="production-manage-manufacturing.html">Fertigung</a><br><a href="production-planning.html">Planung</a><br><a href="inventory-manage-inventory.html">Bestand</a><br><a href="purchasing-manage-purchasing.html">Einkauf</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

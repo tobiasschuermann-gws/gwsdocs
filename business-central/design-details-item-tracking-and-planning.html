@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Entwurfsdetails &#8211; Artikelverfolgung und Planung | Microsoft Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Entwurfsdetails &#8211; Artikelverfolgung und Planung | Microsoft Docs ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="design-details-item-tracking-and-planning">Entwurfsdetails: Artikelverfolgung und Planung</h1>
+
+<p>Da sie im Reservierungssystem gespeichert werden, werden Artikelverfolgungsnummern vollständig mit Auftragsnachverfolgungsdatensätzen abgestimmt. Dies bedeutet, dass Artikel mit Auftragsnachverfolgungsdatensätzen Artikelnachverfolgungsnummern zugeordnet werden können. Andererseits können Artikel, die Artikelverfolgungsnummern haben, zu Auftragsnachverfolgungsdatensätzen werden. Weitere Informationen finden Sie unter <a href="design-details-item-tracking-design.html">Designdetails: Artikelverfolgungsdesign</a>.</p>
+<p>Weitere Informationen zu den integrierten Systemen finden Sie unter <a href="design-details-reservation-order-tracking-and-action-messaging.html">Designdetails: Reservierungen, Auftragsnachverfolgung und Aktionsmeldungen</a>.</p>
+<p>Da die Auftragsnachverfolgung sich nur auf bestimmte Artikelausgleiche bezieht, gilt die Koordination mit Artikelverfolgungsnummern nur für Artikel, die zur Verwendung einer bestimmten Artikelverfolgung eingerichtet wurden. Dies wird durch die Felder <strong>Seriennr.-spezifische Verf.</strong> und <strong>Chargennr.-spezifische Verf.</strong> auf der Artikelkarte festgelegt, die Folgendes angeben:</p>
+<ul>
+<li>Der Artikel muss eine Seriennummer oder Chargennummer tragen, wenn er gebucht wird.</li>
+<li>Der Artikel muss dieselbe Seriennummer oder Chargennummer anwenden, wenn er als ausgehend gebucht wird.</li>
+</ul>
+<p>In Anlehnung an Standardangebot-/-nachfrage-Ausgleichsprinzipien gleichen das Planungssystem und die zugehörige Auftragsnachverfolgungsfunktion nur Angebot und Nachfrage mit Artikelverfolgungsnummern ab, wenn der jeweilige Artikel eine spezifische Artikelverfolgung benutzt. In allen anderen Fällen ignorieren die Planungs- und Auftragsverfolgungsfunktionen Artikelverfolgungsnummern, wenn sie das Prinzip Vorrat zur Nachfragedeckung oder Nachfragedeckung für den Vorrat anwenden. Weiter Informationen finden Sie unter <a href="design-details-reservation-order-tracking-and-action-messaging.html">Designdetails: Reservierung, Auftragsnachverfolgung und Aktionsmeldungen</a></p>
+<p>Wenn beispielsweise die Auftragsnachverfolgung für einen bestimmten Artikel aktiv ist, bedeutet dies, dass Datensätze für den Artikel bereits in der Tabelle <strong>Reservierungsposten</strong> vorhanden sind, die der Kern des Reservierungssystems ist, bevor die Artikelverfolgungsnummern definiert sind. Daher gelten die folgenden Kopplungseinschränkungen für die Artikelverfolgungsnummern, um eine Auftragsnachverfolgung durchzuführen:</p>
+<ul>
+<li>Bedarf mit einer Seriennummer oder einer Chargennummer kann nur Vorrat mit derselben Seriennummer oder Chargennummer abdecken.</li>
+<li>Bedarf ohne Seriennummer oder Chargennummer kann Vorrat mit oder ohne Seriennummer oder Chargennummer abdecken.</li>
+</ul>
+<p>Abgesehen von ihren Auswirkungen auf die dynamische Auftragsnachverfolgung beeinflussen die Artikelnachverfolgungs-Kopplungseinschränkungen das Planungssystem nicht erheblich.</p>
+<p>Auf der Zugangsseite wird eine Serien- oder Chargennummer normalerweise nicht direkt vor dem Buchen eines Auftrags eingegeben, wie z. B. eine Einkaufslieferung in das Lager. Wenn eine Serien- oder Chargennummer auf der Bedarfsseite, etwa auf einem Verkaufsauftrag, eingegeben wird, ist diese Serien- oder Chargennummer bereits im Lagerbestand. Entsprechend sind Artikelverfolgungsnummern in der Regel kein Problem in der Beschaffungsplanung.</p>
+<p>Für Artikel, die eine bestimmte Artikelverfolgung verwenden, müssen alle Bedarfe mit Serien- oder Chargennummern durch entsprechenden Vorrat abgeglichen werden. In den meisten Fällen ist es nicht sinnvoll, eine bestimmte Serien- oder Chargennummer neu zu sortieren; daher wird die Planung von Einkaufs- oder Produktionsvorräten wahrscheinlich nicht beeinflusst. Wenn Artikel aus einem Lagerort in einen anderen übertragen werden, ist es jedoch wahrscheinlich, dass die Übertragung spezifisch für eine bestimmte Charge ist, sodass Planungsübertragungsvorräte durch die spezifische Kopplungseinschränkung beeinflusst werden.</p>
+<p>Weitere Informationen finden Sie unter <a href="design-details-transfers-in-planning.html">Designdetails: Übertragung in der Planung</a></p>
+<h2 id="balancing-demand-and-supply">Ausgleich von Angebot und Nachfrage</h2>
+<p>Wenn ein Artikel eine bestimmte Artikelverfolgung erfordert, dann wird ein Auftragsnachverfolgungslink aus allen Verfolgungsbedarfen des Artikels zu allen entsprechenden Artikelverfolgungsvorräten erstellt, mit der einzigen Einschränkung, dass der Vorrat vor dem Bedarf kommen muss. Wenn unter diesen Umständen kein Artikelverfolgungsvorrat gefunden werden kann, der dem nachverfolgungsspezifischen Bedarf des Artikels entspricht, wird sofort neuer Nachverfolgungsvorrat ohne Berücksichtigung der Bestellmenge, Planungsparameter oder Neuplanung für vorhandenen Vorrat derselben Serien- oder Chargennummer erstellt.</p>
+<p>Wenn Artikelverfolgungsnummern auf der Bedarfsseite oder auf der Vorratsseite zugewiesen werden, ohne dass eine bestimmte Artikelverfolgung erforderlich ist, dann wird ein Auftragsnachverfolgungslink von dem Bedarf zu diesem Vorrat erstellt, basierend auf dem passendsten Timing und der geeignetsten Menge, wie im normalen Ausgleichsverfahren. Die angegebene Artikelverfolgungsnummer geht in den Auftragsnachverfolgungsdatensatz in der gleichen Weise ein, wie eine angegebene Artikelnachverfolgungsmenge ein Ende des Auftragsnachverfolgungslinks definiert. Das bedeutet, dass die Artikelverfolgungsnummer, die eingetragen wird, beibehalten wird, während sie auch Teil des Bedarfsverursacherdatensatzes ist.</p>
+<p>Wenn Artikelverfolgungsnummern auf der Vorratsseite zugeordnet werden, ohne dass eine bestimmte Artikelverfolgung erforderlich ist, wird dieser Vorrat als vom Planungssystem korrigiert betrachtet. Größenanpassungen oder Neuplanungen werden nicht für diesen Vorrat vorgeschlagen, doch wird dieser berücksichtigt, wenn das Planungssystem versucht, dem Bruttobedarf zu genügen.</p>
+<p>Weitere Informationen finden Sie unter <a href="design-details-balancing-demand-and-supply.html">Designdetails: Ausgleich von Bedarf und Vorrat</a>  </p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="design-details-item-tracking-design.html">Designdetails: Artikelverfolgungsdesign</a><br><a href="design-details-balancing-demand-and-supply.html">Designdetails: Ausgleich von Nachfrage und Angebot</a><br><a href="design-details-reservation-order-tracking-and-action-messaging.html">Designdetails: Reservierung, Auftragsnachverfolgung und Aktionsmeldungen</a><br><a href="design-details-supply-planning.html">Designdetails: Vorratsplanung</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Anlagen verwalten </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Anlagen verwalten ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="maintain-fixed-assets">Anlagen verwalten</h1>
+
+<p>Instandhaltungskosten sind Betriebsausgaben für Maßnahmen zur Erhaltung des Zustands Ihrer Anlagen. Im Gegensatz zu Kapitalerhöhungen erhöht die Instandhaltung nicht den Wert Ihrer Anlagen.</p>
+<p>Bei jedem Service, der für eine Anlage durchgeführt wird, werden die entsprechenden Daten wie Servicedatum, Kreditorennummer und Telefonnummer der Wartungsfirma erfasst. Sie geben Wartungsinformationen auf mehreren Seiten ein:</p>
+<ul>
+<li>Anlagenkarte</li>
+<li>Bestellung</li>
+<li>Einkaufsrechnung</li>
+<li>Anlagen-Fibu Buch.-Blatt</li>
+</ul>
+<p>Die Indexierung wird verwendet, um die Werte allgemeinen Preisänderungen anzupassen. Verwenden Sie die Aktion <strong>Anlagen indexieren</strong>, um Wartungskosten neu zu berechnen.</p>
+<h2 id="record-a-maintenance-cost-directly-on-a-fixed-asset">Wartungskosten für eine Anlage direkt erfassen</h2>
+<p>Jedes Mal, wenn eine Wartung ausgeführt wurde, wie z. B. ein Servicebesuch, können Sie diese auf der Seite <strong>Wartungsregistrierung</strong> erfassen.  </p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Anlagen</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie die Anlage aus, für die Sie die Wartung übernehmen möchten und wählen Sie dann die Aktion <strong>Wartungsregistrierung</strong> aus.</li>
+<li>Füllen Sie auf der Seite <strong>Wartungsregistrierung</strong> die Felder nach Bedarf aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.  </li>
+</ol>
+<h2 id="post-maintenance-costs-from-a-fixed-asset-gl-journal">Wartungskosten aus einem Anlagen Fibu Buch.-Blatt buchen</h2>
+<ol>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, welche die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Afa-Buch Übersicht</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Wählen Sie das AfA-Buch aus, das der Anlage zugewiesen ist, und wählen Sie dann die Aktion <strong>Bearbeiten</strong> aus.</li>
+<li>Stellen Sie auf der Seite <strong>AfA-Buchkarte</strong> sicher, dass das Kontrollkästchen <strong>Wartung</strong> nicht aktiviert ist, damit Sie keine Wartungskosten im Sachkonto buchen.</li>
+<li>Wählen Sie das <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Anlagen Fibu Buch.-Blätter</strong> ein, und wählen Sie dann den zugehörigen Link.  </li>
+<li>Erstellen Sie eine ursprüngliche Buch.-Blattzeile und füllen Sie die notwendigen Felder aus.</li>
+<li>Wählen Sie im Feld <strong>Anlagenbuchungsart</strong> die <strong>Wartung</strong>.</li>
+<li><p>Wählen Sie die Aktion <strong>Anlagengegenkonto einfügen</strong>. Eine zweite Buch.-Blattzeile wird für das Gegenkonto erstellt, das für die Buchung einer Wartung eingerichtet wird.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Schritt 7 funktioniert nur, wenn Sie Folgendes eingerichtet haben: Auf der Seite <strong>Anlagenbuchungsgruppenkarte</strong> der Buchungsgruppe der Anlage enthält das Feld <strong>Kto. Wartung</strong> das Sollkonto im Sachkonto und das Feld <strong>Gegenkto. Wartung</strong> enthält das Sachkonto, auf das die Gegenposten für Zuschreibungen gebucht werden sollen. Weitere Informationen finden Sie unter <a href="fa-how-setup-general.html#to-set-up-fixed-asset-posting-groups">So richten Sie Anlagenbuchungsgruppen ein</a>.</p>
+</div>
+</li>
+<li>Wählen Sie die Aktion <strong>Buchen</strong>.</li>
+</ol>
+<h2 id="record-maintenance-cost-from-a-purchase-invoice">Wartungskosten aus einer Einkaufsrechnung erfassen</h2>
+<p>Anhand der folgenden Schritte wird beschreiben, wie Sie Wartungskosten für eine Anlage aus einer Einkaufsrechnung erfassen. Die Schritte sind für eine Bestellung ähnlich.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Einkaufsrechnungen</strong> ein, und wählen Sie dann den zugehörigen Link.</li>
+<li>Füllen Sie im Inforegister <strong>Allgemein</strong> die notwendigen Felder aus. Fahren Sie über ein Feld, um eine Kurzbeschreibung zu lesen.</li>
+<li>Wählen Sie auf dem Inforegister <strong>Zeilen</strong> im Feld <strong>Art</strong> die Option <strong>Anlage</strong> aus.</li>
+<li>Wählen Sie im Feld <strong>Nr.</strong> die Anlage aus, und geben Sie dann die Menge und die Kosten an.</li>
+<li>Wählen Sie im Feld <strong>Anlagenbuchungsart</strong> die Option <strong>Wartung</strong> aus.</li>
+<li>Buchen Sie die Einkaufsrechnung.</li>
+</ol>
+<h2 id="follow-up-on-service-visits">Servicebesuche verfolgen</h2>
+<p>Sie können den Bericht <strong>Wartung – Nächster Service</strong> drucken, um die Anlagen aufzulisten, die die ein Service geplant ist. Sie können diesen Bericht auch verwenden, wenn Sie das Feld <strong>Nächstes Servicedatum</strong> auf den Anlagenkarten aktualisieren möchten.  </p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> aus Symbol. Geben Sie <strong>Wartung Nächste Wartung</strong> ein und wählen Sie dann den zugehörigen Link.  </li>
+<li>Füllen Sie die Felder <strong>Startdatum</strong> und <strong>Enddatum</strong> aus.  </li>
+<li>Wählen Sie die Schaltfläche <strong>Drucken</strong> oder <strong>Vorschau</strong>.</li>
+</ol>
+<h2 id="monitor-maintenance-costs">Wartungskosten überwachen</h2>
+<p>Sie können Statistiken anzeigen, um die Wartungskosten zu überwachen.  </p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Anlagen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Anlage aus, für die Sie die Wartungskosten anzeigen möchten und wählen Sie dann die Aktion <strong>AfA-Bücher</strong> aus.</li>
+<li>Wählen Sie auf der Seite <strong>Anlagen-AfA-Bücher</strong> das relevante Anlagen-AfA-Buch aus, und dann die Aktion <strong>Statistik</strong>.</li>
+<li>Klicken Sie zum Öffnen auf der Seite <strong>Anlagenstatistik</strong> auf das Feld <strong>Wartung</strong>.</li>
+</ol>
+<p>Verwenden Sie die Seite <strong>Wartungsposten</strong>, um die Posten anzuzeigen, aus denen sich der Betrag im Feld <strong>Wartung</strong> zusammensetzt.</p>
+<h2 id="view-or-print-maintenance-costs-for-multiple-fixed-assets">Wartungskosten für mehrere Anlagen anzeigen oder drucken</h2>
+<p>Im Bericht <strong>Wartungsanalyse</strong> können Sie auswählen, ob Wartungen basierend auf ein, zwei oder drei Wartungscodes für ein bestimmtes Datum oder ein Datumsintervall überprüft werden sollen. Der Bericht kann die Gesamtsumme für alle ausgewählten Anlagen oder eine Summe für jede einzelne Anlage anzeigen.</p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Wartungsanalyse</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Füllen Sie die Felder nach Bedarf aus.</li>
+<li>Wählen Sie die Schaltfläche <strong>Drucken</strong> oder <strong>Vorschau</strong>.</li>
+</ol>
+<h2 id="view-maintenance-ledger-entries">Wartungsposten anzeigen</h2>
+<p>Sie können ausserdem die Wartungskosten erkunden, wenn Sie die Wartungsposten anzeigen.  </p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Anlagen</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Wählen Sie die Anlage aus, für die Sie die Posten anzeigen möchten und wählen Sie dann die Aktion <strong>AfA-Bücher</strong> aus.</li>
+<li>Wählen Sie auf der Seite <strong>Anlagen-AfA-Bücher</strong> das relevante Anlagen-AfA-Buch aus, und dann die Aktion <strong>Wartungsposten</strong>.</li>
+</ol>
+<h2 id="view-or-print-maintenance-ledger-entries-for-multiple-fixed-assets">Wartungsposten für mehrere Anlagen anzeigen oder drucken</h2>
+<p>Sie können im Bericht <strong>Wartungsdetails</strong> Wartungsposten für eine oder mehrere Anlagen anzeigen oder drucken.  </p>
+<ol>
+<li>Wählen Sie das Symbol <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Sie wünschen ...“-Funktion öffnet" title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Wartungsdetails</strong> ein und wählen Sie dann den zugehörigen Link.</li>
+<li>Füllen Sie die Felder nach Bedarf aus.</li>
+<li>Wählen Sie die Schaltfläche <strong>Drucken</strong> oder <strong>Vorschau</strong>.</li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="fa-manage.html">Anlagen</a><br><a href="fa-setup.html">Einrichten von Anlagen</a><br><a href="finance.html">Finanzen</a><br><a href="ui-get-ready-business.html">Bereitschaft für die Geschäftsabwicklung</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Arbeiten mit Excel-Layouts </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Arbeiten mit Excel-Layouts ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="working-with-microsoft-excel-layouts">Arbeiten mit Microsoft Excel-Layouts</h1>
+
+<p>Microsoft Excel-Berichtslayouts basieren auf Excel-Arbeitsmappen (.xlsx-Dateien). Damit können Sie Berichte erstellen, die vertraute Excel-Funktionen zum Zusammenfassen, Analysieren und Präsentieren von Daten wie Formeln, PivotTables und PivotCharts verwenden.</p>
+<p><img src="media/excel-layout-2.png" alt="Zeigt ein Beispiel für ein Excel-Layout."></p>
+<p>In diesem Artikel werden einige der wichtigsten Dinge erläutert, die Sie wissen müssen, um mit Excel-Layouts zu beginnen.</p>
+<h2 id="why-use-excel-layouts">Gründe für die Verwendung von Excel-Layouts</h2>
+<p>Vorteile der Verwendung von Excel-Layouts:</p>
+<ul>
+<li>Interaktive Berichte mit Visualisierungen wie Slicern erstellen.</li>
+<li>Rohdaten aus dem Berichtsdataset anzeigen, um besser zu verstehen, wie der Bericht funktioniert und woher die Daten zu visuellen Elementen stammen.</li>
+<li>Integrierte Microsoft Office-Funktionen verwenden, um gerenderte Berichte nachzubearbeiten, z. B.:<ul>
+<li><a href="https://support.microsoft.com/office/protect-a-worksheet-3179efdb-1285-4d49-a9c3-f4ca36276de6">Schutz der Arbeitsblätter</a></li>
+<li><a href="https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9">Anwenden von Vertraulichkeitsbezeichnungen</a></li>
+<li><a href="https://support.microsoft.com/office/insert-comments-and-notes-in-excel-65f504d8-160b-4a05-ac30-46fbd5227a52">Hinzufügen von Kommentaren und Notizen</a></li>
+<li><a href="https://support.microsoft.com/office/introduction-to-what-if-analysis-22bffa5f-e891-4acc-bf7a-e4645c446fb4">Prognose und Analyse</a></li>
+</ul>
+</li>
+<li>Verwenden Sie installierte Add-Ins und App-Integrationen wie Power Automate-Flows oder OneDrive.</li>
+</ul>
+<div class="TIP"><h5>Tipp</h5><p>Wenn die OneDrive-Integration eingerichtet ist und Sie einen Bericht mit einem Excel-Layout ausführen, wird die Excel-Arbeitsmappendatei nach OneDrive kopiert und dann in Excel Online geöffnet. Weitere Informationen finden Sie unter <a href="across-onedrive-overview.html#save-excel-workbooks-and-report-files-in-onedrive">Excel-Arbeitsmappen und Berichtsdateien in OneDrive speichern</a></p>
+</div>
+<h2 id="get-started">Erste Schritte</h2>
+<p>Es müssen im Wesentlichen zwei Aufgaben erledigt werden, um ein Excel-Layout in einem Bericht einzurichten:</p>
+<ol>
+<li>Erstellen Sie die neue Excel-Layoutdatei.</li>
+<li>Fügen Sie dem Bericht das neue Layout hinzu.</li>
+</ol>
+<h2 id="task-1-create-the-excel-layout-file">Aufgabe 1: Erstellen der Excel-Layoutdatei</h2>
+<p>Es gibt drei Möglichkeiten, eine Excel-Layoutdatei für einen Bericht zu erstellen.</p>
+<div class="tabGroup" id="tabgroup_i8cqC4jI8K">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_i8cqC4jI8K_any-report" role="tab" aria-controls="tabpanel_i8cqC4jI8K_any-report" data-tab="any-report" tabindex="0" aria-selected="true">Aus einem beliebigen Bericht</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_i8cqC4jI8K_other-layout" role="tab" aria-controls="tabpanel_i8cqC4jI8K_other-layout" data-tab="other-layout" tabindex="-1">Aus einem anderen Excel-Berichtslayout</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_i8cqC4jI8K_from-code" role="tab" aria-controls="tabpanel_i8cqC4jI8K_from-code" data-tab="from-code" tabindex="-1">Aus AL-Code</a>
+</li>
+</ul>
+<section id="tabpanel_i8cqC4jI8K_any-report" role="tabpanel" data-tab="any-report">
+<p>Befolgen Sie die folgenden Schritte, um ein Excel-Layout aus einem beliebigen Bericht zu erstellen, unabhängig vom aktuellen Layouttyp. Das Excel-Layout enthält das erforderliche <strong>Daten</strong>-Blatt und die notwendige Tabelle, ein <strong>Metadaten melden</strong>-Blatt und sonst nichts.</p>
+<ol>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 0." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Berichtslayouts</strong> ein und wählen Sie dann den zugehörigen Link.</p>
+<p>Die Seite <strong>Berichtslayout</strong> erscheint und alle aktuell verfügbaren Layouts für alle Berichte werden angezeigt.</p>
+</li>
+</ol>
+<ol>
+<li>Wählen Sie auf der Seite <strong>Berichtslayouts</strong> wählen Sie ein beliebiges Layout für den Bericht und dann die <strong>Bericht ausführen</strong>-Aktion aus.</li>
+<li><p>Wählen Sie auf der Berichtsanforderungsseite <strong>Senden an</strong> &gt; <strong>Microsoft Excel-Dokument (nur Daten)</strong> &gt; <strong>OK</strong> aus.</p>
+<p>In diesem Schritt wird eine Excel-Arbeitsmappe heruntergeladen, die das Berichtsdataset enthält.</p>
+</li>
+<li>Öffnen Sie die heruntergeladene Datei in Excel, nehmen Sie die Änderungen vor und speichern Sie die Datei.</li>
+</ol>
+</section>
+<section id="tabpanel_i8cqC4jI8K_other-layout" role="tabpanel" data-tab="other-layout" aria-hidden="true" hidden="hidden">
+<p>Wenn für einen Bericht bereits ein Excel-Layout vorhanden ist, verwenden Sie das vorhandene Layout als Ausgangspunkt. Es gibt zwei Ansätze, um eine Kopie des Layouts zu erhalten. Sie können entweder das vorhandene Layout aus der <strong>Berichtslayouts</strong>-Seite exportieren oder laden das Layout von der Anforderungsseite des Berichts herunterladen. Bei beiden Möglichkeiten wird eine Excel-Layoutdatei heruntergeladen, die alle Blätter der vorhandenen Datei enthält. Der Unterschied besteht darin, dass wenn Sie es von der Anforderungsseite herunterladen, das Layout tatsächliche Daten enthält. (Die Daten sind nicht erforderlich, aber sie helfen bei der Gestaltung des Layouts.)</p>
+<h4 id="approach-1-export-the-layout-from-the-report-layouts-page">Ansatz 1: Exportieren des Layouts aus der <strong>Berichtslayouts</strong>-Seite</h4>
+<ol>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 0." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Berichtslayouts</strong> ein und wählen Sie dann den zugehörigen Link.</p>
+<p>Die Seite <strong>Berichtslayout</strong> erscheint und alle aktuell verfügbaren Layouts für alle Berichte werden angezeigt.</p>
+</li>
+</ol>
+<ol>
+<li>Wählen Sie das Excel-Layout aus der Liste und dann die <strong>Layout exportieren</strong>-Aktion oben auf der Seite aus.</li>
+<li>Öffnen Sie die Datei in Excel, nehmen Sie die Änderungen vor und speichern Sie die Datei.</li>
+</ol>
+<h4 id="approach-2-download-the-layout-from-the-reports-request-page">Ansatz 2: Das Layout von der Anforderungsseite des Berichts herunterladen</h4>
+<ol>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 0." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Berichtslayouts</strong> ein und wählen Sie dann den zugehörigen Link.</p>
+<p>Die Seite <strong>Berichtslayout</strong> erscheint und alle aktuell verfügbaren Layouts für alle Berichte werden angezeigt.</p>
+</li>
+</ol>
+<ol>
+<li>Wählen Sie auf der Seite <strong>Berichtslayouts</strong> wählen Sie ein beliebiges Layout für den Bericht und dann die <strong>Bericht ausführen</strong>-Aktion aus.</li>
+<li>Wählen Sie auf der Berichtsanforderungsseite <strong>Herunterladen</strong> aus.</li>
+<li>Öffnen Sie die Datei in Excel, nehmen Sie die Änderungen vor und speichern Sie die Datei.</li>
+</ol>
+</section>
+<section id="tabpanel_i8cqC4jI8K_from-code" role="tabpanel" data-tab="from-code" aria-hidden="true" hidden="hidden">
+<p>Dies ist die fortschrittlichste Methode zum Erstellen eines Excel-Berichtslayouts. Da Kenntnisse des AL-Codes erfordert, richtet sie sich an Programmierer. Die Excel-Layouts sind bei diesem Ansatz Teil eines Erweiterungspakets, das Sie installieren. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-howto-excel-report-layout">Erstellen eines Excel-Layoutberichts</a> in der Hilfe für Entwickler und IT Pro.</p>
+</section>
+</div>
+<h2 id="task-2-add-the-excel-layout-to-the-report">Aufgabe 2: Den Excel-Layout dem Bericht hinzufügen</h2>
+<p>Sobald Sie die Excel-Layoutdatei haben, besteht die nächste Aufgabe darin, sie als neues Layout für den Bericht hinzuzufügen.</p>
+<ol>
+<li><p>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 0." title="Sagen Sie mir, was Sie tun möchten"> Symbol. Geben Sie <strong>Berichtslayouts</strong> ein und wählen Sie dann den zugehörigen Link.</p>
+<p>Die Seite <strong>Berichtslayout</strong> erscheint und alle aktuell verfügbaren Layouts für alle Berichte werden angezeigt.</p>
+</li>
+</ol>
+<ol>
+<li>Wählen Sie <strong>Neues Layout</strong> aus.</li>
+<li>Legen Sie die <strong>Berichts-ID</strong> auf <em>Bericht</em> fest.</li>
+<li>Geben Sie einen Namen in <strong>Layout-Name</strong> ein.</li>
+<li>Legen Sie <strong>Formatoptionen</strong> auf <strong>Excel</strong> fest.</li>
+<li><p>Wählen Sie <strong>OK</strong> aus. Führen Sie dann einen der folgenden Schritte aus, um die Layoutdatei für den Bericht zu erstellen:</p>
+<ul>
+<li>Ziehen Sie die Datei aus dem Datei-Explorer auf Ihrem Gerät in das Dialogfeld.</li>
+<li>Wählen Sie die Verknüpfung <strong>Klicken Sie hier zum Durchsuchen</strong>, suchen Sie die Datei und klicken Sie dann auf die Schaltfläche <strong>Öffnen</strong> .</li>
+</ul>
+<p>Die ausgewählte Datei wird in das Layout hochgeladen und die Seite <strong>Berichtslayouts</strong> wird geöffnet.</p>
+</li>
+<li>Wenn Sie sehen möchten, wie der Bericht mit dem neuen Layout aussieht, wählen Sie das Layout in der Liste und dann <strong>Bericht ausführen</strong> aus.</li>
+</ol>
+<!--
+
+**Data** sheet
+  - An Excel layout must contain a sheet named **Data**.
+  - The **Data** sheet must include a table named **Data**.
+
+**Data** table
+  - The **Data** sheet must include a table named **Data**.
+  - The table must have at least one column and can only include columns that are also in the report dataset.
+  - The table must start in the first cell **A1** of the **Data** sheet.
+
+3. Report metadata 
+-->
+<h2 id="understanding-excel-layouts">Grundlagen von Excel-Layouts</h2>
+<p>Es gibt einige Dinge, die Sie wissen oder berücksichtigen sollten, wenn Sie mit dem Erstellen oder Ändern von Excel-Layouts beginnen. Jedes Excel-Layout muss zwei Elemente enthalten: ein <strong>Daten</strong>-Blatt und eine <strong>Daten</strong>-Tabelle. Diese Elemente bilden die Grundlage des Layouts, indem Sie die Geschäftsdaten aus Business Central definieren, mit denen Sie arbeiten können. Sie können sich das <strong>Daten</strong>-Blatt als eine Art Vertrag zwischen dem Layout und den Geschäftsdaten vorstellen. Sie verwenden diese Daten als Quelle für Berechnungen und Visualisierungen, die Sie auf anderen Blättern präsentieren möchten.</p>
+<p>Es gibt einige spezifische Anforderungen an die Struktur der Excel-Arbeitsmappe. Wenn die Anforderungen nicht erfüllt sind, werden Sie Probleme haben, das Layout zu verwenden. Das folgende Diagramm und die Tabelle skizzieren die Elemente eines Excel-Layouts und die Anforderungen.</p>
+<p><a href="media/excel-layout-callouts-2.png#lightbox"><img src="media/excel-layout-callouts-2.png" alt="Zeigt die unterschiedlichen Elemente eines Excel-Layouts."></a></p>
+<table>
+<thead>
+<tr>
+<th>Anzahl</th>
+<th>Element</th>
+<th>Description</th>
+<th>Notwendig</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Daten</strong>-Blatt</td>
+<td><ul><li>Muss den Namen <strong>Daten</strong> haben.</li><li>Kann nur eine Tabelle enthalten, und die Tabelle muss den Namen <strong>Daten</strong> haben.</li></ul></td>
+<td><img src="media/check.png" alt="Ist notwendig"></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Daten</strong>-Tabelle</td>
+<td><ul><li>Muss den Namen <strong>Daten</strong> haben.</li><li>Muss mindestens eine Spalte haben.</li><li>Kann nur Spalten einschließen, die sich im Berichtsdatensatz befinden.</li><li>Muss in der ersten Zelle <strong>A1</strong> des <strong>Daten</strong>-Blatts beginnen.</li></ul></td>
+<td><img src="media/check.png" alt="Ist notwendig"></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Präsentationsblätter</td>
+<td><ul><li>Werden verwendet, um Daten zu präsentieren.</li><li>Daten stammen aus dem <strong>Daten</strong>-Blatt. </li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Metadaten melden</strong>-Blatt</td>
+<td><ul><li>Wird automatisch eingefügt, wenn das Layout durch Exportieren eines anderen Berichts als Excel erstellt wurde.</li><li>Enthält allgemeine Informationen zum Bericht.</li><li>Kann gelöscht werden.</li></ul></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Zusammenfassend ist dies, was Sie auf dem <strong>Daten</strong>-Blatt tun sollten und was nicht:</p>
+<ul>
+<li>Ändern Sie nicht die Namen von <strong>Daten</strong>-Blatt, <strong>Daten</strong>-Tabelle oder Spalten.</li>
+<li>Sie können Spalten löschen oder ausblenden.</li>
+<li>Fügen Sie keine Spalten hinzu, es sei denn, sie sind im Berichtsdatensatz enthalten.</li>
+<li>Sie können die Blätter in beliebiger Reihenfolge platzieren, wobei das <strong>Daten</strong>blatt zuerst oder zuletzt sein kann.</li>
+</ul>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="https://learn.microsoft.com/de-de/dynamics365/business-central/dev-itpro/developer/devenv-howto-excel-report-layout?toc=/dynamics365/business-central/toc.json">Erstellen eines Excel-Layoutberichts (Entwicklerdokumentation)</a><br><a href="ui-manage-report-layouts.html">Verwalten von Berichtslayouts</a><br><a href="ui-how-change-layout-currently-used-report.html">Ändern Sie das aktuelle Berichtslayout</a><br><a href="ui-how-import-and-export-report-layout.html">Ein benutzerdefiniertes Berichts- oder Beleglayout importieren oder exportieren (veraltet)</a><br><a href="report-analyze-excel.html">Berichtsdaten mit Excel analysieren</a><br><a href="ui-work-report.html">Arbeiten mit Berichten</a><br><a href="ui-work-product.html">Arbeiten mit Business Central</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

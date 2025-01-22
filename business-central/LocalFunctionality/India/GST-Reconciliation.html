@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>GST Reconciliation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="GST Reconciliation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../../../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../../../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../../../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../../../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../TOC.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="gst-reconciliation">GST Reconciliation</h1>
+
+<p>This topic explains the setups and process of GST reconciliation.</p>
+<h2 id="overview">Overview</h2>
+<ul>
+<li>Line wise details of all invoices, supplementary invoices, debit notes and credit notes issued by a vendor or supplier towards Outward supplies made during a month shall be reported in GSTR-1 by 10th of the succeeding month.</li>
+<li>Sales uploaded by the supplier or vendor in GSTR-1 are auto-reflected in GSTR-2A and GSTR-2 of the buyer as Inward supplies. For example, if the buyer purchases goods or services from 100 vendors in a month, the details of all such purchases will be reflected in GSTR-2A &amp; GSTR-2 of the buyer, provided all 100 vendors have uploaded their sales in GSTR-1.</li>
+<li>Purchase transactions posted in the system for preceding month shall be reconciled with the supplier-uploaded information in GSTR-2A. However, there may be certain discrepancies between the two, due to the following reasons:<ul>
+<li>Supplier or suppliers have ignored to upload invoice details in their GSTR-1</li>
+<li>Supplier entered wrong GSTIN of the buyer</li>
+<li>Omission of entering any invoice by the buyer</li>
+<li>Invoice No. &amp; Date, Tax Amounts may have wrongly entered by the buyer in there books of account.</li>
+</ul>
+</li>
+<li>The buyer can add, modify and delete the auto-populated information in GSTR-2. Such information is made available to supplier in GSTR-1A. The supplier can accept or reject the modifications made by the buyer and supplier’s GSTR-1 shall stand amended to the extent of modifications accepted.</li>
+<li>Buyer can avail credit with respect to invoice lines matched with the information in GSTR-2A. Though buyer can avail mismatched credit on a provisional basis, the same will get auto-reversed, if the supplier fails to upload invoices.</li>
+<li>To summarize, Reconciliation feature is required to:<ul>
+<li>Identify the purchase transactions, which are matched or unmatched with GSTR-2A. </li>
+<li>To ascertain the modifications required to be made in GSTR-2 and follow up the supplier to accept the same</li>
+<li>Monitor unmatched transaction lines, if credit is availed on a provisional basis.</li>
+</ul>
+</li>
+<li>Purchases as per the books of account of buyer shall be matched with the supplier-uploaded information in GSTR-2A,  every month before uploading GSTR-2 by the buyer.</li>
+</ul>
+<h2 id="to-set-up-gst-component-mapping-reconciliation">To set up GST component mapping reconciliation.</h2>
+<ul>
+<li><p>Mapping GST reconciliation fields with GST components is a pre-requisite for GST Reconciliation. Unless it is done, reconciliation can not happen in the system.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>GST Component Mapping Recon.</strong>, and then choose the related link.</li>
+<li><p>Fill in the fields as described in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GST Component Code</strong></td>
+<td>Specifies the different components of GST.</td>
+</tr>
+<tr>
+<td><strong>GST Reconciliation Field No.</strong></td>
+<td>Specifies the relevant reconciliation field against the component.</td>
+</tr>
+<tr>
+<td><strong>GST Reconciliation Field Name</strong></td>
+<td>Specifies the description of the reconciliation field.</td>
+</tr>
+<tr>
+<td><strong>ISD Ledger Field No.</strong></td>
+<td>Specifies the relevant input service distribution field against the component.</td>
+</tr>
+<tr>
+<td><strong>ISD Ledger Field Name</strong></td>
+<td>Specifies the description of the input service distribution field.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="gst-reconciliation-process">GST reconciliation process</h2>
+<ul>
+<li><p>Reconciliation feature enables the user to reconcile the posted purchase transactions with GSTR-2A downloaded from GSTN portal.</p>
+<ol>
+<li>Choose the <img src="image/search_small.png" alt="Search for Page or Report." title="Search for Page or Report icon"> icon, enter <strong>GST Reconciliation List.</strong>, and then choose the related link, and click <strong>New</strong> to create a new reconciliation document.</li>
+<li>Select relevant GST registration number in <strong>GSTIN No.</strong> field for which reconciliation needs to be done. <strong>Month</strong>, <strong>Year</strong>, <strong>Posting Date</strong> fields should not be blank.</li>
+<li><strong>GST Recon. Tolerance</strong> field will be updated with the value mentioned on <strong>General Ledger Setup</strong>.</li>
+<li><strong>Input Service Distributor</strong> field will be marked true if the GSTIN is assigned for input service distribution location.</li>
+<li>Click on Action on the ribbon -&gt; Functions -&gt; Import GSTR-2A, choose the relevant file and the data will be updated in <strong>Periodic GSTR-2A Data</strong>.</li>
+<li>Click on <strong>Fill GST Reconciliation</strong> and the posted GST transactions will be populated in <strong>GST Reconciliation Lines</strong>.</li>
+</ol>
+</li>
+<li><p>Purchase Transactions with Vendor Type – Unregistered, Imports and Composite are excluded from Reconciliation. [This is due to the reason that unregistered and import vendors are not registered with GSTN authorities and hence will not upload their supplies in GSTR-1. Hence the same are not reflected in GSTR-2]</p>
+</li>
+<li>Invoice having multiple lines are clubbed together and shown as one line in GST Reconciliation feature i.e. Total Taxable amount and Tax Amounts (CGST, SGST, IGST).</li>
+<li>Periodic GSTR-2A can be downloaded in Excel or XML format. The following fields in GSTR-2A are matched with GST Reconciliation lines<ul>
+<li>External Document No.</li>
+<li>Tax Amounts (IGST, CGST, SGST)</li>
+<li>Vendor Invoice Date</li>
+<li>GSTIN of the Supplier</li>
+<li>Document Date</li>
+</ul>
+</li>
+<li>GSTR-2A can be downloaded and reconciled with existing GST Reconciliation lines multiple times, but posting can be done only once in a month.</li>
+<li>For a given month, GST Reconciliation includes lines pertaining to purchase transactions (Registered Vendor including Reverse Charge) posted during the month and the lines, which are posted and unmatched during the previous months.</li>
+<li>GST Reconciliation lines shown in GST Reconciliation page are coming from following transactions:<ul>
+<li>Registered Vendor (Including Reverse Charge Posting Group)</li>
+<li>Sub-Contracting Invoices (Registered Vendor)</li>
+<li>Service Transfers </li>
+<li>Transfer Orders</li>
+</ul>
+</li>
+<li>GST Reconciliation Lines shown in the selected month are having purchase transaction (Invoice &amp; Credit Memo) till the End Date for selected month.</li>
+<li>Once the GST Reconciliation lines are posted, system will not generate any accounting entries. &#39;Reconciled&#39;, &#39;Reconciliation Month&#39; and &#39;Reconciliation Year&#39; will be updated in Detailed GST Ledger Entries. GST Reconciliation lines with status &#39;Reconciled&#39; will not be considered again for reconciliation.</li>
+</ul>
+<h2 id="see-also">See Also</h2>
+<p><a href="GST-E-Way-Bill.html">GST E-Way Bill</a></p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

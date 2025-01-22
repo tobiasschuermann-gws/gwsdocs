@@ -1,0 +1,619 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Elektronischen Datenaustausch definieren </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Elektronischen Datenaustausch definieren ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="set-up-data-exchange-definitions">Datenaustauschdefinitionen einrichten</h1>
+
+<p>Sie können Business Central festlegen, um Daten in bestimmten Tabellen mit Daten in externen Dateien auszutauschen. Zum Beispiel, um elektronische Belege zu senden und zu empfangen, Bankdaten oder andere Daten wie Gehaltsabrechnungen und Artikelkataloge zu importieren und zu exportieren. Erfahren Sie mehr unter <a href="across-data-exchange.html">Elektronischer Datenaustausch</a>.  </p>
+<p>Um eine Datenaustauschdefinition für eine Datendatei oder einen Datenstrom zu erstellen, können Sie das zugehörige XML-Schema verwenden, um zu definieren, welche Datenelemente auf der Registerkarte <strong>Spaltendefinitionen</strong> enthalten sein sollen. Weitere Informationen finden Sie unter Schritt 6 im Abschnitt <a href="across-how-to-set-up-data-exchange-definitions.html#to-describe-the-formatting-of-lines-and-columns-in-the-file">Die Formatierung der Zeilen und Spalten in der Datei beschreiben</a>. Mehr dazu erfahren Sie unter <a href="across-how-to-use-xml-schemas-to-prepare-data-exchange-definitions.html">Verwenden Sie XML-Schemata zur Vorbereitung von Datenaustauschdefinitionen</a>.  </p>
+<p>Normalerweise legen Sie die Datenaustauschdefinitionen auf der Seite <strong>Datenaustauschdefinition</strong> fest. Für die Aktualisierung von Wechselkursen ist es jedoch schneller, einen Währungsumtausch-Service zu verwenden. Erfahren Sie mehr unter <a href="finance-how-update-currencies.html#set-up-a-currency-exchange-rate-service">Update Currency Exchange Rates</a>.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn die Datei, die konvertiert wird, im XML-Format vorliegt, sollte der Begriff <em>„Spalte“</em> in diesem Artikel als <em>„XML-Element, das Daten enthält“</em> interpretiert werden.  </p>
+</div>
+<p>Dieser Artikel enthält die folgenden Verfahren:  </p>
+<ul>
+<li>Erstellen Sie eine Datenaustauschdefinition.</li>
+<li>Exportieren Sie eine Datenaustauschdefinition als XML-Datei zur Verwendung durch andere.</li>
+<li>Importieren Sie eine XML-Datei für eine bestehende Datenaustauschdefinition.</li>
+</ul>
+<h2 id="create-a-data-exchange-definition">Erstellen Sie eine Datenaustauschdefinition</h2>
+<p>Das Erstellen einer Datenaustauschdefinition beinhaltet zwei Aufgaben:  </p>
+<ol>
+<li>Auf der Seite <strong>Datenaustauschdefinition</strong> beschreiben Sie die Formatierung aus Zeilen und Spalten in der Datei. Erfahren Sie mehr im Abschnitt <a href="#formatlinescolumns">Sie beschreiben die Formatierung von Zeilen und Spalten in der Datei</a>.  </li>
+<li>Auf der Seite <strong>Wechselkurszuordnungs</strong> ordnen Sie Spalten in der Datendatei Feldern in Business Central zu. Erfahren Sie mehr im Abschnitt <a href="#mapfields">So ordnen Sie Spalten in der Datendatei den Feldern im Abschnitt Business Central</a> zu.  </li>
+</ol>
+<h3 id="to-describe-the-formatting-of-lines-and-columns-in-the-file">&lt;a name=formatlinescolumns&gt;Um die Formatierung von Zeilen und Spalten in der Datei zu beschreiben</h3>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion 1." title="Sagen Sie mir, was Sie tun möchten"> öffnet. Symbol, geben Sie <strong>Datenaustauschdefinitionen</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie die Aktion <strong>Neu</strong>.  </li>
+<li><p>Im Inforegister <strong>Allgemein</strong> beschreiben Sie die Datenaustauschdefinition und den Datentyp, indem Sie die Felder wie in der folgenden Tabelle beschrieben ausfüllen.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code</strong></td>
+<td>Geben Sie einen Code zur Identifizierung der Datenaustauschdefinition ein.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Geben Sie einen Namen für die Datenaustauschdefinition ein.</td>
+</tr>
+<tr>
+<td><strong>Dateityp</strong></td>
+<td>Geben Sie an, für welche Art von Datei die Datenaustauschdefinition verwendet wird. Sie können zwischen vier Dateitypen auswählen:<br><br> -   <strong>XML</strong>: Geschichtete Zeichenfolgen des Inhalts und des Aufschlags, die von Tags, die die Funktion angeben, umgeben sind.<br>-   <strong>Variabler Text</strong>: Die Datensätze haben eine variable Länge und sind durch ein Zeichen, wie z.B. ein Komma oder semi-colon oder einen Doppelpunkt, getrennt. Auch bekannt als <em>begrenzte Datei</em>.<br>-   <strong>Fester Text</strong>: Die Datensätze haben die gleiche Länge und stehen in einer separaten Zeile, auch bekannt als <em>Datei mit fester Breite</em>.<br>- <strong>Json</strong>: Geschichtete Zeichenfolgen des Inhalts in JavaScript.</td>
+</tr>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Geben Sie an, für welche Art von Geschäftstätigkeit die Datenaustauschdefinition verwendet wird, zum Beispiel <strong>Zahlungsexport</strong>.</td>
+</tr>
+<tr>
+<td><strong>Codeunit zur Datenverarbeitung</strong></td>
+<td>Geben Sie die Codeunit an, die Daten in und aus Tabellen in Business Central überträgt.</td>
+</tr>
+<tr>
+<td><strong>Überprüfungs-Codeunit</strong></td>
+<td>Geben Sie die Codeunit an, die verwendet wird, um Daten gegen vordefinierte Geschäftsregeln zu validieren.</td>
+</tr>
+<tr>
+<td><strong>Lese-/Schreibe-Codeunit</strong></td>
+<td>Geben Sie die Codeunit an, die importierte Daten vor der Zuordnung und exportierte Daten nach der Zuordnung verarbeitet.</td>
+</tr>
+<tr>
+<td><strong>Lesen/Schreiben von XMLport</strong></td>
+<td>Geben Sie die XMLport an, durch die eine importierte Datendatei oder ein Dienst vor der Zuordnung eintritt und durch die die exportierten Daten nach der Zuordnung wieder austreten, wenn sie in eine Datendatei oder einen Dienst geschrieben werden.</td>
+</tr>
+<tr>
+<td><strong>Codeunit zur externen Datenverarbeitung</strong></td>
+<td>Geben Sie die Codeunit an, die externe Daten in und aus dem Daten-Exchange-Framework überträgt.</td>
+</tr>
+<tr>
+<td><strong>Benutzerfeedback-Codeunit</strong></td>
+<td>Geben Sie die Codeunit an, die nach dem Zuordnen verschiedene Bereinigungen ausführt, wie das Markieren von exportierten Zeilen und das Löschen temporärer Datensätze.</td>
+</tr>
+<tr>
+<td><strong>Dateiverschlüsselung</strong></td>
+<td>Geben Sie die Codierung der Datei an. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+<tr>
+<td><strong>Spaltentrennzeichen</strong></td>
+<td>Geben Sie an, wie Spalten in der Datendatei getrennt werden, wenn die Datei den Typ <strong>Variabler Text</strong> hat.</td>
+</tr>
+<tr>
+<td><strong>Kopfzeilen</strong></td>
+<td>Geben Sie an, wie viele Kopfzeilen in der Datei vorhanden sind.<br><br> Diese Einstellung sorgt dafür, dass die Kopfdaten nicht importiert werden. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+<tr>
+<td><strong>Kopfzeilentag</strong></td>
+<td>Wenn eine Kopfzeile an verschiedenen Positionen in der Datei vorhanden ist, geben Sie den Text der ersten Spalte in der Kopfzeile ein.<br><br> Mit dieser Option stellen Sie sicher, dass die Kopfdaten nicht importiert werden. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+<tr>
+<td><strong>Fußzeilentag</strong></td>
+<td>Wenn eine Fußzeile an verschiedenen Positionen in der Datei vorhanden ist, geben Sie den Text der ersten Spalte in der Fußzeile ein.<br><br> Mit dieser Option stellen Sie sicher, dass die Fußzeilendaten nicht importiert werden. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP"><h5>Tipp</h5><p>Um zu sehen, welche Codeunits Microsoft in vorhandenen Definitionen im Standardprodukt verwendet, sehen Sie sich die drei <strong>Codeunit</strong>-Felder auf der Seite <strong>Feldzuordnung</strong> unter dem <strong>Allgemein</strong> Inforegister für jede Definition an.  </p>
+</div>
+</li>
+<li><p>Im Inforegister <strong>Zeilendefinitionen</strong> beschreiben Sie das Formatieren der Zeilen in der Datendatei, indem Sie die Felder wie in der folgenden Tabelle beschrieben ausfüllen.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Für den Import von Bankauszügen erstellen Sie nur eine Zeile für das einzelne Format der Bankkontoauszugsdatei, die Sie importieren möchten.  </p>
+<p>Für den Export von Zahlungen können Sie eine Zeile für jede Zahlungsart erstellen, die Sie exportieren möchten. In diesem Fall zeigt das Inforegister <strong>Spaltendefinitionen</strong> verschiedene Spalten für jede Zahlungsart an.  </p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zeilentyp</strong></td>
+<td>Gibt die Art der Zeile in der Datei an.</td>
+</tr>
+<tr>
+<td><strong>Code</strong></td>
+<td>Geben Sie einen Code zur Identifizierung der Zeile in der Datei ein.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Geben Sie einen Namen ein, der die Zeile in der Datei beschreibt.</td>
+</tr>
+<tr>
+<td><strong>Anzahl Spalten</strong></td>
+<td>Geben Sie an, wie viele Spalten die Zeile in der Datendatei hat. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+<tr>
+<td><strong>Datenzeilen-Tag</strong></td>
+<td>Geben Sie die Position im entsprechenden XML-Schema des Elements an, die den Hauptposten der Datendatei darstellt. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+<tr>
+<td><strong>Namespace</strong></td>
+<td>Geben Sie den Namespace an, der in der Datei erwartet wird, um die Namespaceprüfung zu aktivieren. Sie können dieses Kontrollkästchen leer lassen, wenn Sie Namespaceprüfung nicht aktivieren möchten.</td>
+</tr>
+<tr>
+<td><strong>Übergeordneter Code</strong></td>
+<td>Geben Sie den übergeordneten Code der Zeile an, wie er im Feld <strong>Code</strong> angezeigt wird, wenn die Einrichtung des Datenaustauschs für Dateien mit übergeordneten und untergeordneten Elementen erfolgt, z.B. für einen Dokumentenkopf und Zeilen.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wiederholen Sie Schritt 4, um eine Zeile für jede Dateidatenart zu erstellen, die Sie exportieren möchten.  </p>
+<p>  Beschreiben Sie dann das Formatieren der Spalten in der Datendatei, indem Sie die Felder im Inforegister <strong>Spaltendefinitionen</strong> ausfüllen, wie in Schritt 8 beschrieben. Sie können eine Strukturdatei, z. B. eine .xsd-Datei, für die Datendatei verwenden, um das Inforegister mit den entsprechenden Elementen vorauszufüllen. Mehr dazu erfahren Sie unter <a href="across-how-to-use-xml-schemas-to-prepare-data-exchange-definitions.html">Verwenden Sie XML-Schemata zur Vorbereitung von Datenaustauschdefinitionen</a>.</p>
+</li>
+<li><p>Wählen Sie auf dem Inforegister <strong>Spaltendefinitionen</strong> die Aktion <strong>Dateistruktur abrufen</strong>.  </p>
+</li>
+<li>Wählen Sie auf der Seite <strong>Dateistruktur abrufen</strong> die entsprechende Strukturdatei und wählen Sie dann <strong>OK</strong>. Die Zeilen im Inforegister <strong>Spaltendefinitionen</strong> werden entsprechend der Struktur der Datendatei ausgefüllt.  </li>
+<li><p>Füllen Sie im Inforegister <strong>Spaltendefinitionen</strong> die Felder gemäß der Beschreibung in der folgenden Tabelle aus oder bearbeiten Sie sie.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spaltennr.</strong></td>
+<td>Geben Sie die Nummer an, die die Position der Spalte in der Zeile der Datei angibt.<br><br> Für XML-Dateien geben Sie die Nummer an, die den Elementtyp in der Datei widergespiegelt, die die Daten enthält.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Geben Sie den Namen der Spalte an.<br><br> Für XML-Dateien geben Sie die Markierung an, die die auszutauschenden Daten markiert.</td>
+</tr>
+<tr>
+<td><strong>Datentyp</strong></td>
+<td>Geben Sie an, ob die auszutauschenden Daten den Typ <strong>Text</strong>, <strong>Datum</strong> oder <strong>Dezimal</strong> haben.</td>
+</tr>
+<tr>
+<td><strong>Datenformat</strong></td>
+<td>Geben Sie das Format der Daten an, sofern vorhanden. Beispielsweise <strong>MM-tt-jjjj</strong>, wenn der Datentyp <strong>Datum</strong> ist. <strong>Hinweis:</strong> Für den Export geben Sie das Datenformat gemäß Business Central an. Für den Import geben Sie das Datenformat entsprechend .Net Framework an. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dotnet/standard/base-types/standard-date-and-time-format-strings">Standard Datums- und Zeitformatstrings</a>.</td>
+</tr>
+<tr>
+<td><strong>Datenformatierungskultur</strong></td>
+<td>Geben Sie das regionale Datenformat an, falls vorhanden. Beispielsweise <strong>en-US</strong>, wenn der Datentyp <strong>Dezimal</strong> ist, um sicherzustellen, dass ein Komma als Dezimaltrennzeichen verwendet wird, entsprechend dem US-Format. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/dotnet/standard/base-types/standard-date-and-time-format-strings">Standard Datums- und Zeitformatstrings</a>. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+<tr>
+<td><strong>Länge</strong></td>
+<td>Geben Sie die Länge der Zeile mit fester Breite an, die diese Spalte enthält, wenn die Datendatei den Typ <strong>Fester Text</strong> hat.</td>
+</tr>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td>Gibt eine Beschreibung der Spalte zu Informationszwecken an.</td>
+</tr>
+<tr>
+<td><strong>Pfad</strong></td>
+<td>Geben Sie die Position des Elements im zugehörigen XML-Schema an.</td>
+</tr>
+<tr>
+<td><strong>Kennzeichen mit negativem Zeichen</strong></td>
+<td>Geben Sie den Wert ein, der in der Datendatei verwendet wird, um negative Beträge in Datendateien zu identifizieren, die keine negativen Vorzeichen enthalten können. Diese Identifikationsnummer wird verwendet, um die identifizierten Beträge während des Imports auf negative Vorzeichen zurückzusetzen. <strong>Hinweis:</strong> Dieses Feld ist nur für den Import relevant.</td>
+</tr>
+<tr>
+<td><strong>Konstanten</strong></td>
+<td>Geben Sie alle Daten an, die Sie in dieser Spalte exportieren möchten, wie etwa zusätzliche Informationen über die Zahlungsart. <strong>Hinweis:</strong> Dieses Feld ist nur für den Export relevant.</td>
+</tr>
+<tr>
+<td><strong>Textauffüllung erforderlich</strong></td>
+<td>Geben Sie an, dass die Daten Textauffüllungen enthalten müssen.</td>
+</tr>
+<tr>
+<td><strong>Auffüllzeichen</strong></td>
+<td>Geben Sie das Zeichen für die Textauffüllung an.</td>
+</tr>
+<tr>
+<td><strong>Ausrichtung</strong></td>
+<td>Geben Sie an, ob die Spaltenausrichtung links oder rechts ist.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wiederholen Sie Schritt 8 für jede Spalte oder jedes XML-Element in der Datendatei, die/das Daten hat, die Sie mit Business Central austauschen möchten.  </p>
+</li>
+</ol>
+<p>Der nächste Schritt bei der Erstellung einer Datenaustauschdefinition besteht darin, zu entscheiden, welche Spalten oder XML-Elemente welchen Feldern in Business Central zugeordnet werden sollen.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Die spezielle Zuordnung hängt vom Geschäftszweck der Datendatei ab, die ausgetauscht werden soll, sowie von lokalen Variationen. Selbst der SEPA-Bankstandard verfügt über lokale Variationen. Business Central Stützimport von SEPA Bankkontoauszug CAMT archiviert Out-of-the-Box. Dies wird durch den <strong>SEPA CAMT</strong>-Datenaustausch-Definitionsdatensatzcode auf der Seite <strong>Datenaustauschdefintion</strong> angezeigt. Informationen über die bestimmte Feldzuordnung dieser SEPA CAMT Unterstützung, siehe. <a href="across-field-mapping-when-importing-sepa-camt-files.html">Feld-Zuordnung, wenn sie SEPA CAMT Dateien importieren</a>.  </p>
+</div>
+<h3 id="to-map-columns-in-the-data-file-to-fields-in-">&lt;a name=mapfields&gt;Zur Zuordnung von Spalten in der Datendatei zu Feldern in Business Central</h3>
+<div class="TIP"><h5>Tipp</h5><p>Manchmal sind die Werte in den Feldern, die Sie zuordnen möchten, unterschiedlich. In einer App für Unternehmen lautet der Sprachcode für die Vereinigten Staaten zum Beispiel „U.S.“, in einer anderen jedoch „US.“ Das heißt, Sie müssen den Wert beim Datenaustausch umwandeln. Dies geschieht durch Transformationsregeln, die Sie für die Felder definieren. Erfahren Sie mehr unter <a href="across-how-to-set-up-data-exchange-definitions.html#transformation-rules">Transformationsregeln</a>.</p>
+</div>
+<p>Sie können auch nach einem beliebigen Feld gruppieren, den Schlüsselindex zum Sortieren der Ergebnisse verwenden und die neuen Transformationstypen <strong>Rundung</strong> und <strong>Feldsuche</strong> verwenden.</p>
+<ol>
+<li>Wählen Sie im Inforegister <strong>Zeilendefinitionen</strong> die Zeile aus, für die Sie Spalten zu Feldern zuordnen möchten, und wählen Sie dann <strong>Feldzuordnung</strong>. Die Seite <strong>Datenaustauschzuordnung</strong> wird geöffnet.  </li>
+<li><p>Spezifizieren Sie im Inforegister <strong>Allgemein</strong> die Zuordnungen, indem Sie die Felder gemäß der Beschreibung in der folgenden Tabelle ausfüllen.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabellen-ID</strong></td>
+<td>Geben Sie die Tabelle an, die die Felder enthält, zu oder aus denen Daten entsprechend der Zuordnung ausgetauscht werden.</td>
+</tr>
+<tr>
+<td><strong>Als Zwischentabelle verwenden</strong></td>
+<td>Gibt an, dass die im Feld <strong>Tabellen-ID</strong> ausgewählte Tabelle eine Zwischentabelle ist, in der die importierten Daten vor der Zuordnung zur Zieltabelle gespeichert werden.<br><br> In der Regel verwenden Sie eine vorläufige Tabelle, wenn die Datenaustauschdefinition elektronische Belege in Business Central importiert und umwandelt. Beispielsweise lassen sich Belege wie Lieferantenrechnungen in Einkaufsrechnungen umwandeln. Erfahren Sie mehr unter <a href="across-data-exchange.html">Elektronischer Datenaustausch</a>.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Geben Sie einen Namen für den Zuordnungssetup ein.</td>
+</tr>
+<tr>
+<td><strong>Schlüsselindex</strong></td>
+<td>Geben Sie den Schlüsselindex an, um die Quelldatensätze vor dem Exportieren zu sortieren.</td>
+</tr>
+<tr>
+<td><strong>Vorabzuordnungs-Codeunit</strong></td>
+<td>Geben Sie die Codeunit an, die die Zuordnung zwischen Feldern in Business Central und externen Daten vorbereitet.</td>
+</tr>
+<tr>
+<td><strong>Zuordnungs-Codeunit</strong></td>
+<td>Geben Sie die Codeunit an, die verwendet wird, um die angegebenen Spalten oder XML-Datenelemente den Feldern in Business Central zuzuordnen.</td>
+</tr>
+<tr>
+<td><strong>Codeunit für die Zuordnung im Nachhinein</strong></td>
+<td>Geben Sie die Codeunit an, die die Zuordnung zwischen Feldern in Business Central und externen Daten vervollständigt. <strong>Hinweis</strong>: Wenn Sie die Funktion der AMC Banking 365 Fundamentals-Erweiterung verwenden, wandelt codeunit exportierte Daten aus Business Central in ein für den Export bereitstehendes generisches Format um. Für den Import konvertiert die Codeunit externe Daten zu einem für den Import zu Business Central geeigneten Format.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Geben Sie auf der Registerkarte <strong>Feldzuordnung</strong> an, welche Spalten welchen Feldern in Business Central zugeordnet werden sollen, indem Sie die Felder wie in den folgenden Tabellen beschrieben ausfüllen, je nachdem, ob das Feld <strong>Als Zwischentabelle verwenden</strong> aktiviert wurde oder nicht.  </p>
+<ul>
+<li><p>Wenn das Feld <strong>Als Zwischentabelle verwenden</strong> deaktiviert ist:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spaltennr.</strong></td>
+<td>Geben Sie an, für welche Spalte in der Datendatei Sie eine Zuordnung definieren möchten.<br><br> Sie können nur Spalten auswählen, die auf dem Inforegister <strong>Spaltendefinitionen</strong> auf der Seite <strong>Datenaustauschdefinitionen</strong> durch Zeilen dargestellt werden.</td>
+</tr>
+<tr>
+<td><strong>Spaltenbeschriftung</strong></td>
+<td>Geben Sie die Beschriftung der Spalte in der externen Datei an, die dem Feld im Feld <strong>Zieltabellen-ID</strong> zugeordnet wird, wenn Sie eine Zwischentabelle für den Datenimport verwenden.</td>
+</tr>
+<tr>
+<td><strong>Feld-ID</strong></td>
+<td>Geben Sie an, welchem Feld die Spalte im Feld <strong>Spaltennr.</strong> zugeordnet ist. Feldkarten zu.<br><br> Sie können nur aus Feldern auswählen, die in der Tabelle existieren, die Sie im Feld <strong>Tabellen-ID</strong> auf der Registerkarte <strong>Allgemein</strong> angegeben haben.</td>
+</tr>
+<tr>
+<td><strong>Feldbeschriftung</strong></td>
+<td>Geben Sie die Beschriftung des Feldes in der externen Datei an, das dem Feld im Feld <strong>Zieltabellen-ID</strong> zugeordnet ist, wenn Sie eine Zwischentabelle für den Datenimport verwenden.</td>
+</tr>
+<tr>
+<td><strong>Optional</strong></td>
+<td>Geben Sie an, ob die Zuordnung übersprungen werden soll, wenn das Feld leer ist. Wenn Sie diese Option nicht wählen, wird ein Exportfehler auftreten, wenn das Feld leer ist.</td>
+</tr>
+<tr>
+<td><strong>Transformationsregel</strong></td>
+<td>Geben Sie die Regel an, die importierten Text in einen unterstützten Wert umwandelt, bevor er einem bestimmten Feld zugeordnet werden kann. Wenn Sie in diesem Feld einen Wert auswählen, wird derselbe Wert in das Feld <strong>Transformationsregel</strong> im Feld <strong>Datenexch. Feld Zuordnung Buf.</strong> Tabelle und umgekehrt. Weitere Informationen zum Anwenden von Transformationsregeln finden Sie unter <a href="#transformation-rules">Transformationsregeln</a>.</td>
+</tr>
+<tr>
+<td><strong>Wert überschreiben</strong></td>
+<td>Geben Sie an, dass der aktuelle Wert durch den neuen Wert überschrieben werden kann.</td>
+</tr>
+<tr>
+<td><strong>Priorität</strong></td>
+<td>Geben Sie die Reihenfolge an, in der die Zuordnungen der Felder verarbeitet werden müssen. Die Zuordnung des Feldes mit der höchsten Prioritätsnummer wird zuerst verarbeitet.</td>
+</tr>
+<tr>
+<td><strong>Multiplikator</strong></td>
+<td>Geben Sie einen Multiplikator an, der auf numerische Daten, einschließlich negativer Werte, angewendet wird.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Wenn die Option <strong>Als Zwischentabelle verwenden</strong> aktiviert ist:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spaltennr.</strong></td>
+<td>Geben Sie an, für welche Spalte in der Datendatei Sie eine Zuordnung definieren möchten.<br><br> Sie können nur Spalten auswählen, die auf dem Inforegister <strong>Spaltendefinitionen</strong> auf der Seite <strong>Datenaustauschdefinitionen</strong> durch Zeilen dargestellt werden.</td>
+</tr>
+<tr>
+<td><strong>Spaltenbeschriftung</strong></td>
+<td>Geben Sie die Beschriftung der Spalte in der externen Datei an, die dem Feld im Feld <strong>Zieltabellen-ID</strong> zugeordnet wird, wenn Sie eine Zwischentabelle für den Datenimport verwenden.</td>
+</tr>
+<tr>
+<td><strong>Zieltabellen-ID</strong></td>
+<td>Gibt die Tabelle an, der der Wert im Feld <strong>Spaltenbezeichnung</strong> zugeordnet wird, wenn eine Zwischentabelle für den Datenimport verwendet wird.</td>
+</tr>
+<tr>
+<td><strong>Tabellenbeschriftung</strong></td>
+<td>Gibt den Namen der Tabelle im Feld <strong>Zieltabellen-ID</strong> an, die die Tabelle ist, der der Wert im Feld <strong>Spaltenbezeichnung</strong> zugeordnet wird, wenn eine Zwischentabelle für den Datenimport verwendet wird.</td>
+</tr>
+<tr>
+<td><strong>Zielfeld-ID</strong></td>
+<td>Gibt das Feld in der Zieltabelle an, der der Wert im Feld <strong>Spaltenbezeichnung</strong> zugeordnet wird, wenn eine Zwischentabelle für den Datenimport verwendet wird.</td>
+</tr>
+<tr>
+<td><strong>Feldbeschriftung</strong></td>
+<td>Gibt den Namen des Felds in der Zieltabelle an, der der Wert im Feld <strong>Spaltenbezeichnung</strong> zugeordnet wird, wenn eine Zwischentabelle für den Datenimport verwendet wird.</td>
+</tr>
+<tr>
+<td><strong>Nur überprüfen</strong></td>
+<td>Legen Sie fest, dass die Zuordnung von Elementen zu Feldern nicht zur Konvertierung von Daten, sondern nur zur Validierung von Daten verwendet wird.</td>
+</tr>
+<tr>
+<td><strong>Transformationsregel</strong></td>
+<td>Geben Sie die Regel an, die importierten Text in einen unterstützten Wert umwandelt, bevor er einem bestimmten Feld zugeordnet werden kann. Wenn Sie in diesem Feld einen Wert auswählen, wird derselbe Wert in das Feld <strong>Transformationsregel</strong> im Feld <strong>Datenexch. Feld Zuordnung Buf.</strong> Tabelle und umgekehrt. Weitere Informationen zum Anwenden von Transformationsregeln finden Sie unter <a href="#transformation-rules">Transformationsregeln</a>.</td>
+</tr>
+<tr>
+<td><strong>Priorität</strong></td>
+<td>Geben Sie die Reihenfolge an, in der die Zuordnungen der Felder verarbeitet werden müssen. Die Zuordnung des Feldes mit der höchsten Prioritätsnummer wird zuerst verarbeitet.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li><p>Geben Sie im Inforegister <strong>Feldgruppierung</strong> Regeln an, die Sie zum Gruppieren Ihrer Felder verwenden möchten, wenn Sie die Datei erstellen, indem Sie die Felder wie in der folgenden Tabelle beschrieben ausfüllen.  </p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Feld-ID</strong></td>
+<td>Geben Sie die Nummer des Felds in der externen Datei an, das für die Gruppierung verwendet wird, und dass der Benutzer dieses Feld festlegen muss.</td>
+</tr>
+<tr>
+<td><strong>Feldbeschriftung</strong></td>
+<td>Geben Sie die Beschriftung des Felds in der externen Datei an, das für die Gruppierung verwendet wird.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="transformation-rules">Transformationsregeln</h2>
+<p>Wenn die Werte in den Feldern, die Sie zuordnen, unterschiedlich sind, müssen Sie Transformationsregeln für Datenaustauschdefinitionen verwenden, um sie anzugleichen. Sie definieren Transformationsregeln für Datenaustauschdefinitionen, indem Sie eine vorhandene Definition öffnen oder eine neue Definition erstellen, dann auf dem Inforegister <strong>Zeilendefinitionen</strong> die Option <strong>Verwalten</strong>, und dann <strong>Feldzuordnung</strong> wählen. Vordefinierte Regeln werden bereitgestellt, aber Sie können auch eigene Regeln erstellen. In der folgenden Tabelle werden die Transformationstypen beschrieben, die Sie ausführen können.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Großbuchstaben</strong></td>
+<td>Großschreibung aller Buchstaben.</td>
+</tr>
+<tr>
+<td><strong>Kleinbuchstaben</strong></td>
+<td>Kleinschreibung aller Buchstaben.</td>
+</tr>
+<tr>
+<td><strong>Titelschreibung</strong></td>
+<td>Großschreibung des ersten Buchstabens jedes Wortes.</td>
+</tr>
+<tr>
+<td><strong>Kürzen</strong></td>
+<td>Leerzeichen vor und nach dem Wert entfernen.</td>
+</tr>
+<tr>
+<td><strong>Unterzeichenfolge</strong></td>
+<td>Transformation eines bestimmten Teilwerts. Um anzugeben, wo die Umwandlung gestartet werden soll, wählen Sie entweder eine <strong>Startposition</strong> oder einen <strong>Starttext</strong>. Die Startposition ist eine Zahl, die das erste umzuwandelnde Zeichen darstellt. Der Anfangstext ist der Buchstabe unmittelbar vor dem zu ersetzenden Buchstaben. Wenn Sie mit dem ersten Buchstaben des Werts beginnen möchten, verwenden Sie stattdessen eine Startposition. Um festzulegen, wo die Umwandlung gestoppt werden soll, wählen Sie entweder <strong>Länge</strong>, d.h. die Anzahl der zu ersetzenden Zeichen, oder <strong>Endtext</strong>, d.h. das Zeichen, das unmittelbar nach dem letzten umzuwandelnden Zeichen steht.</td>
+</tr>
+<tr>
+<td><strong>Ersetzen</strong></td>
+<td>Suchen Sie einen Wert und ersetzen Sie ihn durch einen anderen. Diese Umwandlung ist nützlich, um einfache Werte zu ersetzen, z.B. ein bestimmtes Wort.</td>
+</tr>
+<tr>
+<td><strong>Regulärer Ausdruck – Ersetzen</strong></td>
+<td>Verwenden Sie einen regulären Ausdruck als Teil einer Such- und Ersetzungsoperation. Diese Umwandlung ist nützlich, um mehrere oder komplexere Werte zu ersetzen.</td>
+</tr>
+<tr>
+<td><strong>Nicht alphanumerische Zeichen entfernen</strong></td>
+<td>Löschen Sie Zeichen, die keine Buchstaben oder Zahlen sind, z. B. Symbole oder Sonderzeichen.</td>
+</tr>
+<tr>
+<td><strong>Datumsformatierung</strong></td>
+<td>Geben Sie an, wie Datumsangaben angezeigt werden sollen. Beispielsweise können Sie TT-MM-JJJJ in JJJJ-MM-TT umwandeln.</td>
+</tr>
+<tr>
+<td><strong>Dezimalformatierung</strong></td>
+<td>Definieren Sie Regeln für die Dezimalstelle und die Rundungsgenauigkeit.</td>
+</tr>
+<tr>
+<td><strong>Regulärer Ausdruck - Übereinstimmen</strong></td>
+<td>Verwenden Sie einen regulären Ausdruck, um einen oder mehrere Werte zu finden. Diese Regel ist vergleichbar mit den Optionen <strong>Substring</strong> und <strong>Regelmäßiger Ausdruck - Ersetzen</strong>.</td>
+</tr>
+<tr>
+<td><strong>Benutzerdefiniert</strong></td>
+<td>Diese Transformationsregel ist eine erweiterte Option, die die Unterstützung eines Entwicklers erfordert. Sie aktiviert ein Integrationsereignis, das Sie abonnieren können, wenn Sie Ihren eigenen Transformationscode verwenden möchten. Wenn Sie Entwickler sind und diese Option verwenden möchten, wechseln Sie zu <a href="#tip-for-developers-example-of-the-custom-option">Tipp für Entwickler: Beispiel für die benutzerdefinierte Option</a>.</td>
+</tr>
+<tr>
+<td><strong>Datums- und Uhrzeitformatierung</strong></td>
+<td>Legen Sie fest, wie das aktuelle Datum und die Tageszeit angezeigt werden sollen.</td>
+</tr>
+<tr>
+<td><strong>Feldsuche</strong></td>
+<td>Verwenden Sie Felder aus verschiedenen Tabellen. Um sie verwenden zu können, müssen Sie einige Regeln befolgen. Verwenden Sie zunächst <strong>Tabellen-ID</strong>, um die ID der Tabelle anzugeben, die den Datensatz für die Feldsuche enthält. Geben Sie dann im Feld <strong>Quellfeld-ID</strong> die ID des Felds an, das den Datensatz für die Feldsuche enthält. Geben Sie schließlich im Feld <strong>Zielfeld-ID</strong> die ID des Felds an, um den Datensatz für die Feldsuche zu finden. Verwenden Sie optional das Feld <strong>Feldsuchregel</strong>, um den Typ der Feldsuche anzugeben. Für das <strong>Ziel</strong>-Feld wird der Wert aus der <strong>Zielfeld-ID</strong> verwendet, auch wenn sie leer ist. Für das Feld <strong>Ursprung, wenn Ziel leer ist</strong> wird der ursprüngliche Wert verwendet, wenn das Ziel leer ist.</td>
+</tr>
+<tr>
+<td><strong>Runden</strong></td>
+<td>Runden Sie den Wert in diesem Feld nach einigen zusätzlichen Regeln. Geben Sie zunächst im Feld <strong>Präzision</strong> eine Rundungsgenauigkeit an. Dann im Feld <strong>Richtung</strong> geben Sie die Rundungsrichtung an.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Hinweis</h5><p>Erfahren Sie mehr über die Formatierung von Datum und Uhrzeit unter <a href="https://learn.microsoft.com/de-de/dotnet/standard/base-types/standard-date-and-time-format-strings">Standard-Strings für die Formatierung von Datum und Uhrzeit</a>.</p>
+</div>
+<h3 id="tip-for-developers-example-of-the-custom-option">Tipp für Entwickler: Beispiel für die angepasste Option</h3>
+<p>Das folgende Beispiel zeigt, wie Sie Ihren eigenen Transformationscode implementieren.</p>
+<pre><code class="lang-AL">codeunit 60100 &quot;Hello World&quot;
+{
+    [EventSubscriber(ObjectType::Table, Database::&quot;Transformation Rule&quot;, &#39;OnTransformation&#39;, &#39;&#39;, false, false)]
+    procedure OnTransformation(TransformationCode: Code[20]; InputText: Text; var OutputText: Text)
+    begin
+        if TransformationCode = &#39;CUST&#39; then
+            OutputText := InputText + &#39; testing&#39;;
+    end;
+}
+</code></pre><p>Nachdem Sie Ihre Regeln definiert haben, können Sie sie testen. Geben Sie im Inforegister <strong>Test</strong> ein Beispiel für einen Wert ein, den Sie umwandeln möchten, und überprüfen Sie dann die Ergebnisse, indem Sie <strong>Aktualisieren</strong> wählen.</p>
+<h2 id="export-a-data-exchange-definition-as-an-xml-file-for-use-by-others">Exportieren einer Datenaustauschdefinition als XML-Datei zur Verwendung durch andere</h2>
+<p>Nachdem Sie die Datenaustauschdefinition für eine bestimmte Datendatei erstellt haben, können Sie die Datenaustauschdefinition als XML-Datei exportieren, die Sie importieren können. Diese Aufgabe wird in der folgenden Prozedur beschrieben.  </p>
+<ol>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 1." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Datenaustauschdefinitionen</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie die Datenaustauschdefinition aus, die Sie exportieren möchten.  </li>
+<li>Wählen Sie die <strong>Datenaustauschdefinition exportieren</strong> Aktion aus.  </li>
+<li><p>Speichern Sie die XML-Datei, die die Datenaustauschdefinition darstellt, an einem entsprechenden Ort.  </p>
+<p> Wenn eine Datenaustauschdefinition bereits erstellt wurde, müssen Sie nur die XML-Datei in das Daten-Exchange-Framework importieren. Diese Aufgabe wird in der folgenden Prozedur beschrieben.  </p>
+</li>
+</ol>
+<h2 id="import-an-existing-data-exchange-definition">Importieren einer bestehenden Datenaustauschdefinition</h2>
+<ol>
+<li>Speichern Sie die XML-Datei, die die Datenaustauschdefinition darstellt, an einem entsprechenden Ort.  </li>
+<li>Wählen Sie die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet 1." title="Sagen Sie mir, was Sie tun möchten"> Symbol, geben Sie <strong>Datenaustauschdefinitionen</strong> ein und wählen Sie dann den entsprechenden Link.  </li>
+<li>Wählen Sie die <strong>Datenaustauschdefinition importieren</strong> Aktion aus.  </li>
+<li>Wählen Sie die Datei aus, die Sie in Schritt 1 gespeichert haben.  </li>
+</ol>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="across-set-up-data-exchange.html">Datenaustausch einrichten</a><br><a href="across-how-to-set-up-electronic-document-sending-and-receiving.html">Einrichten von Senden und Empfangen von elektronischen Belegen</a><br><a href="finance-collect-payments-with-sepa-direct-debit.html">Erfassen von Zahlungen per Lastschriftverfahren SEPA</a><br><a href="finance-make-payments-with-bank-data-conversion-service-or-sepa-credit-transfer.html">Zahlungen mit der AMC Banking 365 Fundamentals-Erweiterung oder per SEPA-Überweisung vornehmen</a><br><a href="across-income-documents.html">Eingehende Belege</a><br><a href="ui-across-business-areas.html">Allgemeine Geschäftsfunktionen</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>C5-Datenmigrationserweiterung verwenden | Microsoft-Dokumentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="C5-Datenmigrationserweiterung verwenden | Microsoft-Dokumentation ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../business-central/gws/images/erpsystemicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <!-- fontawesome added>>> -->
+    <link rel="stylesheet" href="../styles/fontawesome.min.css">
+    <link rel="stylesheet" href="../styles/solid.min.css">
+    <!-- <<<fontawesome added -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- ownscript added>>> -->
+    <link rel="stylesheet" href="../styles/main2.css">
+    <!-- <<<ownscript added -->
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="TOC.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <script type="text/javascript">
+    var origin = window.location.origin;
+    if (window.location.href.indexOf("de-DE") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</br>Weitere Informationen zu Cookies erhalten Sie in unserer <a id="privacyPolicy">Datenschutzerklärung</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/de-DE/privacyPolicy.html";  
+    }
+    if (window.location.href.indexOf("en-US") > 0) {
+    document.write('<div class="cookie-banner" id="cookie-banner" style="display: none"><p>In order to optimize our website for you and to continuously improve it, we use cookies. By continuing to use the Website, you consent to the use of cookies.</br>For more information about cookies, please see our <a id="privacyPolicy">Privacy Policy</a>.</p><button class="close">OK</button></div>');
+    document.getElementById("privacyPolicy").href= origin + "/en-US/privacyPolicy.html";   
+    }
+    </script>
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../business-central/gws/images/gwslogo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Suche" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Suchergebnisse f&#252;r <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="Erste" data-prev="Vorherige" data-next="N&#228;chste" data-last="Letzte"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Inhaltsverzeichnis ein-/ausblenden</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-c5-data-migration-extension">Die C5-Datenmigrationserweiterung</h1>
+
+<p>Verwenden Sie diese Erweiterung, um Debitoren, Kreditoren, Artikel und Sachkonten von Microsoft Dynamics C5 2012 zu Business Central zu migrieren. Sie können historische Posten für Sachkonten auch migrieren.</p>
+<div class="NOTE"><h5>Hinweis</h5><p>Der Mandant darf in Business Central keine Daten in enthalten. Nachdem Sie mit der Migration begonnen haben, erstellen Sie keine Debitoren, Kreditoren, Artikel oder Konten, bis die Migration beendet wurde.</p>
+</div>
+<h2 id="what-data-is-migrated">Welche Daten werden migriert?</h2>
+<p>Die folgenden Daten werden für jede Einheit migriert:</p>
+<h3 id="customers">Debitoren</h3>
+<ul>
+<li>Kontakte  </li>
+<li>Ort</li>
+<li>Land</li>
+<li>Debitoren-Dimensionen (Abteilung, Kostenträger, Kostenstelle)</li>
+<li>Lieferbedingung</li>
+<li>Verkäufer</li>
+<li>Zahlungsbedingungen</li>
+<li>Zahlungsform</li>
+<li>Debitorenpreisgruppe</li>
+<li>Debitorenrechnungsrabatt</li>
+</ul>
+<p>Wenn Sie Konten migrieren, werden auch die folgenden Daten migriert:</p>
+<ul>
+<li>Debitorenbuchungsgruppe</li>
+<li>Fibu Buch.-Blattname</li>
+<li>Migrieren Sie offene Debitorenposten (Debitorenbucheinträge)</li>
+</ul>
+<h3 id="vendors">Kreditoren</h3>
+<ul>
+<li>Kontakte</li>
+<li>Ort</li>
+<li>Land</li>
+<li>Debitoren-Dimensionen (Abteilung, Kostenträger, Kostenstelle)</li>
+<li>Rechnungsrabatt</li>
+<li>Lieferbedingung</li>
+<li>Einkäufer</li>
+<li>Zahlungsbedingungen</li>
+<li>Zahlungsform</li>
+<li>Kreditorenrechnungsrabatte</li>
+</ul>
+<p>Wenn Sie Konten migrieren, werden auch die folgenden Daten migriert:</p>
+<ul>
+<li>Kreditorenbuchungsgruppe</li>
+<li>Fibu Buch.-Blattname</li>
+<li>Öffnen Sie das Fenster Transaktionen (Kreditorenposten)</li>
+</ul>
+<h3 id="items">Artikel</h3>
+<ul>
+<li>Ort</li>
+<li>Land</li>
+<li>Element-Dimensionen (Abteilung, Kostenträger, Kostenstelle)</li>
+<li>VK-Zeilenrabatte</li>
+<li>Debitorenrabattgruppen</li>
+<li>Artikelrabattgruppen</li>
+<li>Verkaufspreis</li>
+<li>Zollposition</li>
+<li>Einheiten</li>
+<li>Artikelverfolgungscode</li>
+<li>Debitorenpreisgruppe</li>
+<li>Montagestücklisten</li>
+</ul>
+<p>Wenn Sie Konten migrieren, werden auch die folgenden Daten migriert:</p>
+<ul>
+<li>Lagerbuchungseinrichtung</li>
+<li>Buchungsmatrix Einrichtung</li>
+<li>Artikel Buch.-Blattname</li>
+<li>Öffnen Sie das Fenster Transaktionen (Artikel Kreditorenposten)</li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn es offene Transaktionen gibt, die Fremdwährungen verwenden, werden die Wechselkurse für alle Währungen auch migriert. Andere Wechselkurse werden nicht migriert.</p>
+</div>
+<h3 id="chart-of-accounts">Kontenplan</h3>
+<ul>
+<li>Standard-Dimensionen (Abteilung, Kostenträger, Kostenstelle)  </li>
+<li>Historische Transaktionen  </li>
+</ul>
+<div class="NOTE"><h5>Hinweis</h5><p>Historische Transaktionen werden so gut unterschiedlich behandelt. Wenn Sie Daten migrieren, setzen Sie einen <strong>Aktuelle Periode</strong> Parameter. Dieser Parameter gibt an, wie Ihre Transaktionen verarbeitet werden. Transaktionen nach diesem Datum werden einzeln migriert. Transaktionen vor diesem Zeitpunkt werden pro Konto aggregiert und migriert als einzelner Betrag. Nehmen wir an, es gibt Transaktionen 2015, 2016, 2017 und 2018 und Sie definieren 1. Januar 2017 im aktuellen Periodenfeld. Für jedes Konto sind Beträge für Transaktionen an oder vor dem 31. Dezember 2106, in einer eigenen Fibu Buch.-Blattzeile für jedes Sachkonto aggregiert. Alle Transaktionen nach diesem Datum werden einzeln migriert.</p>
+</div>
+<h2 id="file-size-requirements">Dateigrößen-Anforderungen</h2>
+<p>Die maximale Dateigröße, die Sie zu Business Central hochladen können, ist 150 MB. Wenn die Datei, die Sie aus C5 exportieren, größer ist, erwägen Sie, Daten in mehreren Dateien zu migrieren. Beispielsweise exportieren Sie ein oder zwei Arten von Entitäten aus C5, beispielsweise Debitoren und Kreditoren, in eine Datei, und exportieren Sie dann Elemente in eine andere Datei usw. Sie können Dateien einzelnen in Business Central importieren.</p>
+<h2 id="to-migrate-data">Um Daten zu migrieren</h2>
+<p>Es gibt nur einige wenige Schritte, um die Daten aus C5 zu exportieren und sie in Business Central zu importieren:  </p>
+<ol>
+<li>In C5 verwenden Sie die Funktion <strong>Datenbank exportieren</strong>, um die Daten zu exportieren. Senden Sie dann den Exportordner an einen komprimierten (gezippten) Ordner.  </li>
+<li>Wählen Sie in Business Central die <img src="media/ui-search/search_small.png" alt="Glühbirne, die die „Wie möchten Sie weiter verfahren“-Funktion öffnet." title="Was möchten Sie tun?"> Symbol. Geben Sie <strong>Datenmigration</strong> ein, und wählen Sie dann <strong>Datenmigration</strong>.  </li>
+<li>Schliessen Sie die Schritte im unterstützten Setup ab. Stellen Sie sicher, dass Sie <strong>Importieren aus Microsoft Dynamics C5 2012</strong> als die Datenquelle auswählen.  </li>
+</ol>
+<h2 id="viewing-the-status-of-the-migration">Status der Migration anzeigen</h2>
+<p>Verwenden Sie die Seite <strong>Datenmigrations-Übersicht</strong>, um den Erfolg der Migration zu überwachen. Die Seite zeigt Informationen wie die Anzahl von Einheiten, die migriert wurde, den Status der Migration und die Anzahl der Artikel an, die migriert wurden und ob sie erfolgreich war. Sie zeigt auch die Anzahl von Fehlern, Sie können überprüfen, was schief ging und macht es wenn möglich einfach, zur Einheit zu gehen und das Problem zu lösen. Weitere Informationen finden Sie im nächsten Abschnitt dieses Artikels.  </p>
+<div class="NOTE"><h5>Hinweis</h5><p>Während Sie auf die Ergebnisse der Migration warten, müssen Sie die Seite aktualisieren, um die Ergebnisse anzuzeigen.</p>
+</div>
+<h2 id="how-to-avoid-double-posting">Wie Sie Doppel-Buchung vermeiden</h2>
+<p>Um Doppelbuchungen in der Finanzbuchhaltung zu vermeiden, werden folgende Gegenkonten für offene Transaktionen verwendet:  </p>
+<ul>
+<li>Für Kreditoren verwenden wir das A-/P-Konto in der Kreditorenbuchungsgruppe.  </li>
+<li>Für Debitore verwenden wir das A-/P-Konto in der Debitorenbuchungsgruppe.  </li>
+<li>Für Artikel erstellen wir eine Buchungsmatrix, bei der im Korrekturkonto das Konto jenes ist, das als Lagerkonto in der Lagerbuchungseinrichtung angegeben ist.  </li>
+</ul>
+<h2 id="correcting-errors">Nachbesserung</h2>
+<p>Falls etwas schief geht und ein Fehler auftritt, zeigt das Feld <strong>Status</strong> <strong>Abgeschlossen mit Fehlern</strong> an und das Feld <strong>Fehlerzahl</strong> zeigt an, wie viele es sind. Um eine Liste der Fehler anzuzeigen, können Sie die Seite öffnen indem Sie <strong>Datenmigrations-Fehler</strong> auswählen:  </p>
+<ul>
+<li>Die Nummer im Feld <strong>Fehlerzahl</strong> für die Einheit.  </li>
+<li>Die Einheit und dann die Aktion <strong>Fehler anzeigen</strong>.  </li>
+</ul>
+<p>Um auf der Seite <strong>Datenmigrations-Fehler</strong> einen Fehler zu korrigieren, können Sie eine Fehlermeldung auswählen, und dann <strong>Datensatz bearbeiten</strong> auswählen, um die Daten für die migrierte Einheit anzuzeigen. Wenn Sie mehrere Fehler beheben müssen, können Sie <strong>Stapelfehlerkorrektur</strong> auswählen, um auf die Einheiten in einer Liste zu bearbeiten. Sie müssen immer noch einzelne Datensätze öffnen, wenn der Fehler durch einen entsprechenden Posten verursacht wurde. Beispielsweise wird ein Kreditor nicht migriert, wenn die E-Mail-Adresse einer Kontaktperson ein ungültiges Format hat.</p>
+<p>Nachdem Sie eines oder mehrere Fehler korrigiert haben, können Sie <strong>Migrieren von</strong> wählen, um nur die Einheiten zu migrieren, die Sie korrigierten, ohne die Migration vollständig erneut durchführen zu müssen.  </p>
+<div class="TIP"><h5>Tipp</h5><p>Wenn Sie mehr als einen Fehler korrigiert haben, können Sie die Funktion <strong>Weitere auswählen</strong> verwenden, um mehrere Zeilen auszuwählen, um diese zu migrieren. Wenn es Fehler gibt, die nicht zur Korrektur wichtig sind, können Sie diese auswählen und dann <strong>Auswahl überspringen</strong> auswählen.</p>
+</div>
+<div class="NOTE"><h5>Hinweis</h5><p>Wenn Sie Artikel haben, die in der Stückliste enthalten sind, müssen Sie diese mehrmals migrieren, wenn der ursprüngliche Artikel nicht vor den Varianten erstellt wird, auf die sie verweist. Wenn eine Artikelvariante zuerst erzeugt wird, kann die Referenz zum ursprünglichen Artikel eine Fehlermeldung verursachen.  </p>
+</div>
+<h2 id="verifying-data-after-migrating">Prüfen von Daten nach dem Migrieren</h2>
+<p>Wenn Sie sicherstellen möchten, dass Ihre Daten ordnungsgemäß migriert werden, können Sie die nächste Seiten in C5 und in Business Centralanzeigen.</p>
+<table>
+<thead>
+<tr>
+<th>Microsoft Dynamics C5 2012</th>
+<th>Dynamics 365 Business Central</th>
+<th>Zu verwendender Batchauftrag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debitoreneinträge</td>
+<td>Fibu Buch.-Blätter</td>
+<td>CUSTMIGR</td>
+</tr>
+<tr>
+<td>Kreditoreneinträge</td>
+<td>Fibu Buch.-Blätter</td>
+<td>VENDMIGR</td>
+</tr>
+<tr>
+<td>Artikelposten</td>
+<td>Artikel Buch.-Blätter</td>
+<td>ITEMMIGR</td>
+</tr>
+<tr>
+<td>Sachposten</td>
+<td>Fibu Buch.-Blätter</td>
+<td>GLACMIGR</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stopping-data-migration">Datenmigration anhalten</h2>
+<p>Sie können Datenmigration unterbrechen, indem Sie <strong>Automatisches Beenden alle Migrationen</strong> auswählen. Wenn Sie dies tun, werden alle offenen Migrationen beendet.</p>
+<h2 id="see-also">Siehe auch</h2>
+<p><a href="ui-extensions.html">Anpassen von Business Central mithilfe von Erweiterungen</a><br><a href="ui-get-ready-business.html">Bereitschaft für die Geschäftsabwicklung</a>  </p>
+<p><a href="https://learn.microsoft.com/de-de/training/dynamics365/business-central">Kostenlose E-Learning-Module für Business Central finden Sie hier</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In diesem Artikel</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Zur&#252;ck nach oben</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
